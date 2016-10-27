@@ -111,9 +111,9 @@ Padilla~\cite{Padilla2011} performed a detailed one dimensional numerical heat t
 
 To understand the thermal performance of the collector and identify the heat losses from the collector, Mohamad~\cite{Mohamad2014} analyzed the temperature variation of the working fluid, tube and glass along the collector.
 
-Guo~\cite{Guo2016} investigated the energy efficiency and exergy efficiency of the parabolic trough collector. The result shown that there exists an optimal mass flow rate of working fluid for exergy efficiency, and the thermal efficiency and exergy efficiency have opposite changing tendencies under some conditions.
+Guo~\cite{JiangfengGuo2016-1} investigated the energy efficiency and exergy efficiency of the parabolic trough collector. The result shown that there exists an optimal mass flow rate of working fluid for exergy efficiency, and the thermal efficiency and exergy efficiency have opposite changing tendencies under some conditions.
 
-Guo~\cite{Guo2016} implemented a multi-parameter optimization of parabolic trough solar receiver based on genetic algorithm where Exergy and thermal efficiencies were employed as objective function.
+Guo~\cite{JiangfengGuo2016-2} implemented a multi-parameter optimization of parabolic trough solar receiver based on genetic algorithm where Exergy and thermal efficiencies were employed as objective function.
 
 Padilla~\cite{Padilla2014} performed a comprehensive exergy balance of a parablic trough collector based on the previous heat transfer model~\cite{Padilla2011}. The results shown that inlet temperature of heat transfer fluid, solar irradiance, and vacuum in annulus have a significant effect on the thermal and exergetic performance, but the effect of wind speed and mass flow rate of heat transfer fluid is negligible. It was obtained that inlet temperature of heat transfer fluid cannot be optimized to achieve simultaneously maximum thermal and exergetic efficiency because they exhibit opposite trends. Finally, it was found that the highest exergy destruction is due to the heat transfer between the sun and the absorber while for exergy losses is due to optical error.
 
@@ -126,6 +126,8 @@ AlSulaiman~\cite{AlSulaiman2014} presented the exergy analysis of selected therm
 Hachicha~\cite{Hachicha2013} presented a detailed numerical heat transfer model based on the finite volume method for the parabolic trough collector.  This model is based on finite volume method and ray trace techniques and takes into account the finite size of the Sun.  The model is thoroughly validated with results from the literature and it shows a good agreement with experimental and analytical results.
 
 Ashouri~\cite{Ashouri2015} coupled a small scale parabolic trough collector and a thermal storage tank along with an auxiliary heater to a Kalina cycle to study the performance of the system throughout the year, both thermodynamically and economically.
+
+Guo~\cite{SuGuo2016} developed a nonlinear distribution parameter model to model the dynamic behaviors of direct steam generation parabolic trough collector loops under either full or partial solar irradiance disturbance.
 
 \section{Solar Parabolic dish}\label{sec:pd}
 \section{Solar Tower}\label{sec:st}
@@ -165,167 +167,186 @@ Object oriented method is used for system modeling.
 \chapter{Conclusions}
 
 
-测试测试测试测试测试测试测试测试测试测试测试测试。
-\footnote{\label{footnote:1}脚注}
+%测试测试测试测试测试测试测试测试测试测试测试测试。
+%\footnote{\label{footnote:1}脚注}
+%
+%\section{字体}
+%
+%普通\textbf{粗体}\emph{斜体}
+%
+%\hei{黑体}\kai{楷体}\fangsong{仿宋}
+%
+%\section{公式}
+%
+%单个公式，公式引用：\autoref{eq:1}。
+%\begin{equation}
+% c^2 = a^2 + b^2 \label{eq:1}
+%\end{equation}
+%\nomenclature{$c$}{long side}
+%
+%多个公式，公式引用：\autoref{eq:2}，\autoref{eq:3}。
+%
+%\begin{subequations}
+%\begin{equation}
+%  F = ma \label{eq:2}
+%\end{equation}
+%\begin{equation}
+%  E = mc^2 \label{eq:3}
+%\end{equation}
+%\end{subequations}
+%
+%\section{罗列环境}
+%
+%\begin{enumerate}
+%    \item 第一层\label{item:1}
+%    \item 第一层
+%    \begin{enumerate}
+%        \item 第二层\label{item:2}
+%        \item 第二层
+%        \begin{enumerate}
+%            \item 第三层\label{item:3}
+%            \item 第三层
+%        \end{enumerate}
+%    \end{enumerate}
+%\end{enumerate}
+%
+%\begin{description}
+%    \item[解释环境]  解释内容
+%\end{description}
+%
+%\chapter{其他格式测试}
+%
+%\section{代码环境}
+%
+%\begin{lstlisting}[language=python]
+%import os
+%
+%def main():
+%    '''
+%    doc here
+%    '''
+%    print 'hello, world' # Abc
+%    print 'hello, 中文' # 中文
+%\end{lstlisting}
+%
+%\section{定律证明环境}
+%
+%\begin{definition}\label{def:1}
+%这是一个定义。
+%\end{definition}
+%\begin{proposition}\label{proposition:1}
+%这是一个命题。
+%\end{proposition}
+%\begin{axiom}\label{axiom:1}
+%这是一个公理。
+%\end{axiom}
+%\begin{lemma}\label{lemma:1}
+%这是一个引理。
+%\end{lemma}
+%\begin{theorem}\label{theorem:1}
+%这是一个定理。
+%\end{theorem}
+%\begin{proof}\label{proof:1}
+%这是一个证明。
+%\end{proof}
+%
+%\section{算法环境}
+%
+%\begin{algorithm}[H]
+%\SetAlgoLined
+%\KwData{this text}
+%\KwResult{how to write algorithm with \LaTeX2e }
+%initialization\;\label{alg_line:1}
+%\While{not at end of this document}{
+%read current\;
+%\eIf{understand}{
+%go to next section\;
+%current section becomes this one\;
+%}{
+%go back to the beginning of current section\;
+%}
+%}
+%\caption{How to write algorithms}\label{alg:1}
+%\end{algorithm}
+%
+%\section{表格}
+%表格见\autoref{tab:1}。
+%
+%\begin{table}[!h]
+%\centering
+%\caption{一个表格}\label{tab:1}
+%\begin{tabular}{|c|c|}
+%\hline
+%a & b \\
+%\hline
+%c & d \\
+%\hline
+%\end{tabular}
+%\end{table}
+%\section{图片}
+%图片见\autoref{fig:1}。图片格式支持eps，png，pdf等。多个图片见\autoref{fig:2}，分开引用：\autoref{fig:2-1}，\autoref{fig:2-2}。
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[width=.4\textwidth]{fig/fig-example.pdf}
+%\caption{一个图片}\label{fig:1}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%\centering
+%  \begin{subfigure}[b]{0.3\textwidth}
+%  \includegraphics[width=\textwidth]{fig/fig-example.pdf}
+%  \caption{图片1}\label{fig:2-1}
+%  \end{subfigure}
+%  ~
+%  \begin{subfigure}[b]{0.3\textwidth}
+%  \includegraphics[width=\textwidth]{fig/fig-example.pdf}
+%  \caption{图片2}\label{fig:2-2}
+%  \end{subfigure}
+%\caption{多个图片}\label{fig:2}
+%\end{figure}
+%
+%\section{参考文献示例}
+%这是一篇中文参考文献\cite{Padilla2011}；这是一篇英文参考文献\cite{Padilla2011}；同时引用\cite{Padilla2011}。
+%
+%\section[\textbackslash{}autoref 测试]{\texttt{\textbackslash{}autoref} 测试}
+%
+%\begin{description}
+%  \item[公式] \autoref{eq:1}
+%  \item[脚注] \autoref{footnote:1}
+%  \item[项] \autoref{item:1},\autoref{item:2},\autoref{item:3}
+%  \item[图] \autoref{fig:1}
+%  \item[表] \autoref{tab:1}
+%  \item[附录] \autoref{appendix:1}
+%  \item[章] \autoref{chapter:Introduction}
+%  \item[小节] \autoref{sec:pt},\autoref{sec:pd},\autoref{sec:st}
+%  \item[算法] \autoref{alg:1},\autoref{alg_line:1}
+%  \item[证明环境] \autoref{def:1},\autoref{proposition:1},\autoref{axiom:1},\autoref{lemma:1},\autoref{theorem:1},\autoref{proof:1}
+%\end{description}
+%
+%\backmatter
+%
+%\begin{ack}
+%致谢正文。
+%\end{ack}
+%
+%\bibliography{bib/bibliography.bib}
+%
+%\appendix
+%
+%\begin{publications}
+%    \item 论文1
+%    \item 论文2
+%\end{publications}
+%
+%\chapter{这是一个附录}\label{appendix:1}
+%附录正文。
 
-\section{字体}
-
-普通\textbf{粗体}\emph{斜体}
-
-\hei{黑体}\kai{楷体}\fangsong{仿宋}
-
-\section{公式}
-
-单个公式，公式引用：\autoref{eq:1}。
-\begin{equation}
- c^2 = a^2 + b^2 \label{eq:1}
-\end{equation}
-\nomenclature{$c$}{long side}
-
-多个公式，公式引用：\autoref{eq:2}，\autoref{eq:3}。
-
-\begin{subequations}
-\begin{equation}
-  F = ma \label{eq:2}
-\end{equation}
-\begin{equation}
-  E = mc^2 \label{eq:3}
-\end{equation}
-\end{subequations}
-
-\section{罗列环境}
-
-\begin{enumerate}
-    \item 第一层\label{item:1}
-    \item 第一层
-    \begin{enumerate}
-        \item 第二层\label{item:2}
-        \item 第二层
-        \begin{enumerate}
-            \item 第三层\label{item:3}
-            \item 第三层
-        \end{enumerate}
-    \end{enumerate}
-\end{enumerate}
-
-\begin{description}
-    \item[解释环境]  解释内容
-\end{description}
-
-\chapter{其他格式测试}
-
-\section{代码环境}
-
-\begin{lstlisting}[language=python]
-import os
-
-def main():
-    '''
-    doc here
-    '''
-    print 'hello, world' # Abc
-    print 'hello, 中文' # 中文
-\end{lstlisting}
-
-\section{定律证明环境}
-
-\begin{definition}\label{def:1}
-这是一个定义。
-\end{definition}
-\begin{proposition}\label{proposition:1}
-这是一个命题。
-\end{proposition}
-\begin{axiom}\label{axiom:1}
-这是一个公理。
-\end{axiom}
-\begin{lemma}\label{lemma:1}
-这是一个引理。
-\end{lemma}
-\begin{theorem}\label{theorem:1}
-这是一个定理。
-\end{theorem}
-\begin{proof}\label{proof:1}
-这是一个证明。
-\end{proof}
-
-\section{算法环境}
-
-\begin{algorithm}[H]
-\SetAlgoLined
-\KwData{this text}
-\KwResult{how to write algorithm with \LaTeX2e }
-initialization\;\label{alg_line:1}
-\While{not at end of this document}{
-read current\;
-\eIf{understand}{
-go to next section\;
-current section becomes this one\;
-}{
-go back to the beginning of current section\;
-}
-}
-\caption{How to write algorithms}\label{alg:1}
-\end{algorithm}
-
-\section{表格}
-表格见\autoref{tab:1}。
-
-\begin{table}[!h]
-\centering
-\caption{一个表格}\label{tab:1}
-\begin{tabular}{|c|c|}
-\hline
-a & b \\
-\hline
-c & d \\
-\hline
-\end{tabular}
-\end{table}
-\section{图片}
-图片见\autoref{fig:1}。图片格式支持eps，png，pdf等。多个图片见\autoref{fig:2}，分开引用：\autoref{fig:2-1}，\autoref{fig:2-2}。
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=.4\textwidth]{fig/fig-example.pdf}
-\caption{一个图片}\label{fig:1}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-  \begin{subfigure}[b]{0.3\textwidth}
-  \includegraphics[width=\textwidth]{fig/fig-example.pdf}
-  \caption{图片1}\label{fig:2-1}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[b]{0.3\textwidth}
-  \includegraphics[width=\textwidth]{fig/fig-example.pdf}
-  \caption{图片2}\label{fig:2-2}
-  \end{subfigure}
-\caption{多个图片}\label{fig:2}
-\end{figure}
-
-\section{参考文献示例}
-这是一篇中文参考文献\cite{Padilla2011}；这是一篇英文参考文献\cite{Padilla2011}；同时引用\cite{Padilla2011}。
-
-\section[\textbackslash{}autoref 测试]{\texttt{\textbackslash{}autoref} 测试}
-
-\begin{description}
-  \item[公式] \autoref{eq:1}
-  \item[脚注] \autoref{footnote:1}
-  \item[项] \autoref{item:1},\autoref{item:2},\autoref{item:3}
-  \item[图] \autoref{fig:1}
-  \item[表] \autoref{tab:1}
-  \item[附录] \autoref{appendix:1}
-  \item[章] \autoref{chapter:Introduction}
-  \item[小节] \autoref{sec:pt},\autoref{sec:pd},\autoref{sec:st}
-  \item[算法] \autoref{alg:1},\autoref{alg_line:1}
-  \item[证明环境] \autoref{def:1},\autoref{proposition:1},\autoref{axiom:1},\autoref{lemma:1},\autoref{theorem:1},\autoref{proof:1}
-\end{description}
 
 \backmatter
 
 \begin{ack}
-致谢正文。
+  This is the acknowledgement part.
 \end{ack}
 
 \bibliography{bib/bibliography.bib}
@@ -333,13 +354,19 @@ c & d \\
 \appendix
 
 \begin{publications}
-    \item 论文1
-    \item 论文2
+
+  \item Zhang Cheng, Kun Wang. International Conference on Power Engineering: ICOPE 2013: FEA simulation on the alignment of the shafts of three-fulcrum turbine.
+  \item Performance comparison of new and traditional arrangements of a dish-Stirling system
+	\item A multi-stage exergy-loss reduction system for solar parabolic trough power plants
+	\item Cascade system using both trough system and dish system for power generation
+
+  \item A solar thermal cascade system, No. 201610806296.5
+  \item A flow control method used in a multi-stage heating system, No. 201610805604.2
+
 \end{publications}
 
-\chapter{这是一个附录}\label{appendix:1}
-附录正文。
-
+\chapter{B Fomula}\label{appendix:2}
+  The is the content of the Appendix B
 
 \end{document}
 

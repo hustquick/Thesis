@@ -44,17 +44,19 @@
 %%  Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%  Right brace   \}     Tilde         \~}
 \documentclass[format=draft,language=english,degree=phd]{hustthesis}
-\usepackage{nomencl, epigraph}
+\usepackage{nomencl, epigraph, booktabs}
 \renewcommand{\nomgroup}[1]{
 %\ifthenelse{\equal{#1}{A}}{\item[\textbf{Roman Symbols}]}{%
 \ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Symbols}]}{%
 \ifthenelse{\equal{#1}{C}}{\item[\textbf{Abbreviations}]}{%
+\ifthenelse{\equal{#1}{U}}{\item[\textbf{Superscripts}]}{%
 \ifthenelse{\equal{#1}{S}}{\item[\textbf{Subscripts}]}{%
 \ifthenelse{\equal{#1}{Z}}{\item[\textbf{Mathematical Symbols}]}
 %}% matches mathematical symbols
-}% matches Subscripts
-}% matches Abbreviations
 }% matches Greek Symbols
+}% matches Abbreviations
+}% matches Superscripts
+}% matches Subscripts
 }% matches Roman Symbols
 \makenomenclature
 
@@ -109,7 +111,7 @@ Parabolic trough solar technology is the most proven and lowest cost large-scale
 
 Figure~\ref{fig:pt} shows a parabolic trough product made by Alpha-E.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=.7\textwidth]{fig/ParabolicTrough.png}
 \caption{Alpha-Trough-350, a parabolic trough product made by Alpha-E}\label{fig:pt}
@@ -141,7 +143,7 @@ Ashouri~\cite{Ashouri2015} coupled a small scale parabolic trough collector and 
 
 Guo~\cite{SuGuo2016} developed a nonlinear distribution parameter model to model the dynamic behaviors of direct steam generation parabolic trough collector loops under either full or partial solar irradiance disturbance.
 
-Bader\cite{Bader2015} developed a numerical model of a tubular vavity-receiver that uses air as the heat transfer fluid. Four different receiver configurations are considered, with smooth or V-corrugated absorber tube and single- or double-glazed aperture window. The different types of energy loss by the collector have been quantified, and the temperature distribution inside the receiver has been studied. The pumping power required to pump the HTF through the receiver has been determined for a 200 m long collector row.
+Bader~\cite{Bader2015} developed a numerical model of a tubular vavity-receiver that uses air as the heat transfer fluid. Four different receiver configurations are considered, with smooth or V-corrugated absorber tube and single- or double-glazed aperture window. The different types of energy loss by the collector have been quantified, and the temperature distribution inside the receiver has been studied. The pumping power required to pump the HTF through the receiver has been determined for a 200 m long collector row.
 
 Good~\cite{Good2015} proposed solar trough concentrators using air as heat transfer fluid at operating temperatures exceeding 600$^\circ$C. It consists of an array of helically coiled absorber tubes contained side-by-side within an insulated groove having a rectangular windowed opening. Secondary concentrating optics are incorporated to boost the geometric concentration ratio to 97$\times$.
 
@@ -169,8 +171,19 @@ Xu~\cite{Xu2014} presented a method to compensate the end loss effect of PTC. An
 Liu~\cite{Liu2012} developed a mathematical model of PTC using the least squares support vector machine (LSSVM) method. Numerical simulations are implemented to evaluate the feasibility and efficiency of the LSSVM method, where the sample data derived from the experiment and the simulation results of two solar collector systems with 30 m$^2$ and 600 m$^2$ solar fields, and the complicated relationship between the solar collector efficiency and the solar flux, the flow rate and the inlet temperature of the heat transfer fluid (HTF) is extracted.
 \nomenclature[C]{LSSVM}{Least squares support vector machine}
 
-
 \section{Solar Parabolic dish}\label{sec:pd}
+
+One of the main goals of the BIOSTIRLING-4SKA project, funded by the European Commission, is the development of a hybrid Dish-Stirling system based on a hybrid solar-gas receiver, which has been designed by the Swedish company Cleanergy.~\cite{Blazquez2016}
+
+Craig~\cite{Craig2016} proposed two types of cooking sections of the solar parabolic dish system: the spiral hot plate copper tube and the heat pipe plate. A conical cavity of copper tubes were put on the focus of the collectors to collect heat and the heat is stored inside an insulated tank which acts both as storage and cooking plate. The use of heat pipes to transfer heat between the oil storage and the cooking pot was compared to the use of a direct natural syphon principle which is achieved using copper tubes in spiral form like electric stove. An accurate theoretical analysis for the heat pipe cooker was achieved by solving the boiling and vaporization in the evaporator side and then balancing it with the condensation and liquid-vapour interaction in the condenser part while correct heat transfer, pressure and height balancing was calculated in the second experiment. The results show and compare the cooking time, boiling characteristics, overall utilisation efficiencies and necessary comparison between the two system and other existing systems.
+
+Flux distribution of the receiver is simulated successfully by Mao~\cite{Mao2014} using MCRT method. The impacts of incident solar irradiation, aspect ratio (the ratio of the receiver height to the receiver diameter), and system error on the radiation flux of the receiver are investigated.
+\nomenclature[C]{MCRT}{Monte Carlo Ray Tracing}
+
+Mawire~\cite{Mawire2014}
+
+An experimental setup to investigate the thermal performance of a cylindrical cavity receiver for an SK-14 parabolic dish concentrator is presented in this technical note. The thermal performance is evaluated using energy and exergy analyses. The receiver exergy rates and efficiencies are found to be appreciably smaller than the receiver energy rates and efficiencies. The exergy factor parameter is also proposed for quantifying the thermal performance. The exergy factor is found to be high under conditions of high solar radiation and under high operating temperatures. The heat loss factor of the receiver is determined to be around 4.6 W/K. An optical efficiency of around 52% for parabolic dish system is determined under high solar radiation conditions. This experimental setup can be used as teaching tool for people with little or no knowledge about solar dish concentrators due its simplicity and the basic mathematical formulations applied. Different types of receivers and different types of deep focal region parabolic dishes can also be tested with the experimental setup.
+
 \section{Solar Tower}\label{sec:st}
 \section{Rankine Cycle}\label{sec:rc}
 \section{Stirling Engine}\label{sec:se}
@@ -201,188 +214,37 @@ Object oriented method is used for system modeling.
 
 \section{Energy Cascade Utilization}
 
+
+\begin{table}[htbp]
+  \centering
+	\caption{Parameters of SEA models}
+	\begin{tabular}{cc}
+		\toprule
+		Parameters	&	Value\\
+		\midrule
+		$s_{se}$	&	20 Hz\\
+		$U_hA_h$	&	180 W/K\\
+		$U_cA_c$	&	180 W/K\\
+		$n_{se}$	&	6\\
+		$q_{m,h}$	&	0.3 kg/s\\
+		$q_{m,c}$	&	0.3 kg/s\\
+		%$T_{i,h}$	&	1000 K\\
+		%$T_{i,c}$	&	300 K\\
+		$P_{i,h}$	&	5$\times$10$^5$ Pa\\
+        $P_{i,c}$	&	5$\times$10$^5$ Pa\\
+		\bottomrule
+	\end{tabular}
+	\label{tab:parameters}
+\end{table}
+\nomenclature{$s$}{Speed of Stirling enine, Hz}
+\nomenclature[S]{$se$}{Stirling engine}
+\nomenclature[U]{$'$}{Separate system}
+
 \section{Stirling Engine Array}
 
 \section{Steam Generators}
 
 \chapter{Conclusions}
-
-
-%测试测试测试测试测试测试测试测试测试测试测试测试。
-%\footnote{\label{footnote:1}脚注}
-%
-%\section{字体}
-%
-%普通\textbf{粗体}\emph{斜体}
-%
-%\hei{黑体}\kai{楷体}\fangsong{仿宋}
-%
-%\section{公式}
-%
-%单个公式，公式引用：\autoref{eq:1}。
-%\begin{equation}
-% c^2 = a^2 + b^2 \label{eq:1}
-%\end{equation}
-%\nomenclature{$c$}{long side}
-%
-%多个公式，公式引用：\autoref{eq:2}，\autoref{eq:3}。
-%
-%\begin{subequations}
-%\begin{equation}
-%  F = ma \label{eq:2}
-%\end{equation}
-%\begin{equation}
-%  E = mc^2 \label{eq:3}
-%\end{equation}
-%\end{subequations}
-%
-%\section{罗列环境}
-%
-%\begin{enumerate}
-%    \item 第一层\label{item:1}
-%    \item 第一层
-%    \begin{enumerate}
-%        \item 第二层\label{item:2}
-%        \item 第二层
-%        \begin{enumerate}
-%            \item 第三层\label{item:3}
-%            \item 第三层
-%        \end{enumerate}
-%    \end{enumerate}
-%\end{enumerate}
-%
-%\begin{description}
-%    \item[解释环境]  解释内容
-%\end{description}
-%
-%\chapter{其他格式测试}
-%
-%\section{代码环境}
-%
-%\begin{lstlisting}[language=python]
-%import os
-%
-%def main():
-%    '''
-%    doc here
-%    '''
-%    print 'hello, world' # Abc
-%    print 'hello, 中文' # 中文
-%\end{lstlisting}
-%
-%\section{定律证明环境}
-%
-%\begin{definition}\label{def:1}
-%这是一个定义。
-%\end{definition}
-%\begin{proposition}\label{proposition:1}
-%这是一个命题。
-%\end{proposition}
-%\begin{axiom}\label{axiom:1}
-%这是一个公理。
-%\end{axiom}
-%\begin{lemma}\label{lemma:1}
-%这是一个引理。
-%\end{lemma}
-%\begin{theorem}\label{theorem:1}
-%这是一个定理。
-%\end{theorem}
-%\begin{proof}\label{proof:1}
-%这是一个证明。
-%\end{proof}
-%
-%\section{算法环境}
-%
-%\begin{algorithm}[H]
-%\SetAlgoLined
-%\KwData{this text}
-%\KwResult{how to write algorithm with \LaTeX2e }
-%initialization\;\label{alg_line:1}
-%\While{not at end of this document}{
-%read current\;
-%\eIf{understand}{
-%go to next section\;
-%current section becomes this one\;
-%}{
-%go back to the beginning of current section\;
-%}
-%}
-%\caption{How to write algorithms}\label{alg:1}
-%\end{algorithm}
-%
-%\section{表格}
-%表格见\autoref{tab:1}。
-%
-%\begin{table}[!h]
-%\centering
-%\caption{一个表格}\label{tab:1}
-%\begin{tabular}{|c|c|}
-%\hline
-%a & b \\
-%\hline
-%c & d \\
-%\hline
-%\end{tabular}
-%\end{table}
-%\section{图片}
-%图片见\autoref{fig:1}。图片格式支持eps，png，pdf等。多个图片见\autoref{fig:2}，分开引用：\autoref{fig:2-1}，\autoref{fig:2-2}。
-%
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[width=.4\textwidth]{fig/fig-example.pdf}
-%\caption{一个图片}\label{fig:1}
-%\end{figure}
-%
-%\begin{figure}[!h]
-%\centering
-%  \begin{subfigure}[b]{0.3\textwidth}
-%  \includegraphics[width=\textwidth]{fig/fig-example.pdf}
-%  \caption{图片1}\label{fig:2-1}
-%  \end{subfigure}
-%  ~
-%  \begin{subfigure}[b]{0.3\textwidth}
-%  \includegraphics[width=\textwidth]{fig/fig-example.pdf}
-%  \caption{图片2}\label{fig:2-2}
-%  \end{subfigure}
-%\caption{多个图片}\label{fig:2}
-%\end{figure}
-%
-%\section{参考文献示例}
-%这是一篇中文参考文献\cite{Padilla2011}；这是一篇英文参考文献\cite{Padilla2011}；同时引用\cite{Padilla2011}。
-%
-%\section[\textbackslash{}autoref 测试]{\texttt{\textbackslash{}autoref} 测试}
-%
-%\begin{description}
-%  \item[公式] \autoref{eq:1}
-%  \item[脚注] \autoref{footnote:1}
-%  \item[项] \autoref{item:1},\autoref{item:2},\autoref{item:3}
-%  \item[图] \autoref{fig:1}
-%  \item[表] \autoref{tab:1}
-%  \item[附录] \autoref{appendix:1}
-%  \item[章] \autoref{chapter:Introduction}
-%  \item[小节] \autoref{sec:pt},\autoref{sec:pd},\autoref{sec:st}
-%  \item[算法] \autoref{alg:1},\autoref{alg_line:1}
-%  \item[证明环境] \autoref{def:1},\autoref{proposition:1},\autoref{axiom:1},\autoref{lemma:1},\autoref{theorem:1},\autoref{proof:1}
-%\end{description}
-%
-%\backmatter
-%
-%\begin{ack}
-%致谢正文。
-%\end{ack}
-%
-%\bibliography{bib/bibliography.bib}
-%
-%\appendix
-%
-%\begin{publications}
-%    \item 论文1
-%    \item 论文2
-%\end{publications}
-%
-%\chapter{这是一个附录}\label{appendix:1}
-%附录正文。
-
 
 \backmatter
 

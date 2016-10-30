@@ -3,7 +3,7 @@
  \nomgroup{A}
 
   \item [{$s$}]\begingroup Speed of Stirling enine, Hz\nomeqref {3.0}
-		\nompageref{8}
+		\nompageref{9}
 
  \nomgroup{C}
 
@@ -12,11 +12,11 @@
   \item [{CCHP}]\begingroup Combined cooling, heating and power\nomeqref {1.0}
 		\nompageref{4}
   \item [{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {1.0}
-		\nompageref{3}
+		\nompageref{4}
   \item [{DSG}]\begingroup Direct Steam Generation\nomeqref {1.0}
 		\nompageref{4}
   \item [{HTF}]\begingroup Heat Transfer Fluid\nomeqref {1.0}
-		\nompageref{3}
+		\nompageref{4}
   \item [{LM}]\begingroup Levenberge Marguardt\nomeqref {1.0}
 		\nompageref{3}
   \item [{LSSVM}]\begingroup Least squares support vector machine\nomeqref {1.0}
@@ -24,7 +24,7 @@
   \item [{MCRT}]\begingroup Monte Carlo Ray Tracing\nomeqref {1.0}
 		\nompageref{5}
   \item [{ORC}]\begingroup Organic Rankine Cycle\nomeqref {1.0}
-		\nompageref{2}
+		\nompageref{3}
   \item [{PCG}]\begingroup Pola-Ribiere Conjugate Gradient\nomeqref {1.0}
 		\nompageref{3}
   \item [{PTC}]\begingroup Parabolic Trough Collector\nomeqref {1.0}
@@ -36,15 +36,15 @@
   \item [{SNL}]\begingroup Sandia National Laboratory\nomeqref {1.0}
 		\nompageref{1}
   \item [{SRC}]\begingroup Steam Rankine Cycle\nomeqref {1.0}
-		\nompageref{2}
+		\nompageref{3}
 
  \nomgroup{S}
 
   \item [{$se$}]\begingroup Stirling engine\nomeqref {3.0}
-		\nompageref{8}
+		\nompageref{9}
 
  \nomgroup{U}
 
-  \item [{$'$}]\begingroup Separate system\nomeqref {3.0}\nompageref{8}
+  \item [{$'$}]\begingroup Separate system\nomeqref {3.0}\nompageref{9}
 
 \end{thenomenclature}

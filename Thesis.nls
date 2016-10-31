@@ -13,6 +13,8 @@
 		\nompageref{4}
   \item [{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {1.0}
 		\nompageref{4}
+  \item [{CRTEn}]\begingroup Reseach and Technologies Centre of Energy in Borj Cedria\nomeqref {1.0}
+		\nompageref{6}
   \item [{DSG}]\begingroup Direct Steam Generation\nomeqref {1.0}
 		\nompageref{4}
   \item [{HTF}]\begingroup Heat Transfer Fluid\nomeqref {1.0}
@@ -35,6 +37,8 @@
 		\nompageref{3}
   \item [{SNL}]\begingroup Sandia National Laboratory\nomeqref {1.0}
 		\nompageref{1}
+  \item [{SPC}]\begingroup Solar parabolic concentrator\nomeqref {1.0}
+		\nompageref{6}
   \item [{SRC}]\begingroup Steam Rankine Cycle\nomeqref {1.0}
 		\nompageref{3}
 

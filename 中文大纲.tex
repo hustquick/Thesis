@@ -1,7 +1,5 @@
 \immediate\write18{makeindex Thesis.nlo -s nomencl.ist -o Thesis.nls}
 %%
-%% This is file `hustthesis-zh-example.tex',
-%% generated with the docstrip utility.
 %%
 %% The original source files were:
 %%
@@ -68,7 +66,8 @@
 \major
 {热能工程}{Thermal Engineering}
 \supervisor
-{高伟\hspace{0.5em}教授\hspace{1em} Inmaculada Arauzo\hspace{0.5em}教授\hspace{1em} \newline 张燕平\hspace{0.5em}}{Prof. Gao Wei \newline Prof. Inmaculada Arauzo \newline Assistant Prof. Zhang Yanping}
+{高伟\hspace{0.2em}教授\hspace{1em}Inmaculada Arauzo\hspace{0.2em}教授\hspace{1em}}{Prof. Gao Wei \newline Prof. Inmaculada Arauzo}
+\asssupervisor{张燕平\hspace{0.2em}副教授}{Assistant Prof. Zhang Yanping}
 \date{2017}{6}{1}
 
 \zhabstract{
@@ -77,21 +76,21 @@
     本课题以国家国际合作项目专项“太阳能梯级集热发电系统关键技术合作研究”为背景，目标是研究太阳能光热发电装置，利用各种传统型式的太阳能光热发电系统的优缺点以及热力特性，提出并组建、优化太阳能梯级集热发电系统，为探索出可大规模低成本利用太阳能的光热发电技术提供新的方案。主要研究内容和结论包括：
     %本课题通过建立各部件的机理模型，利用热力学原理，选择合理的拓扑结构，组建太阳能光热梯级集热发电系统，并建立系统的模型，针对不同的优化目标选择优化参数进行优化，最终得到低成本高效率的太阳能光热梯级发电方案，为实现高效率太阳能极热发电和大规模低成本应用提供技术支持。
 
-    首先，针对太阳能光热梯级集热发电系统的各部件建立机理模型。依据目标对象的运行机理，根据物理平衡方程，对系统中的各部件，尤其是系统中的关键部件，建立起数学模型。各部件的数学模型是经由经典理论或是大量实验数据验证的模型，是组建光热梯级集热发电系统模型的基础。各部件模型使用MATLAB语言编写，采用面向对象的方法，保证了各部件之间既具有独立性又具有关联性。
+    首先，针对太阳能光热梯级集热发电系统的各部件建立机理模型。依据目标对象的运行机理，根据物理平衡方程，对系统中的各部件，尤其是系统中的关键部件，如集热器、蒸汽产生系统、汽轮机、斯特林机等，建立起数学模型。各部件的数学模型是经由经典理论或是大量实验数据验证的模型，是组建光热梯级集热发电系统模型的基础。各部件模型使用MATLAB语言编写，采用面向对象的方法，保证了各部件之间既具有独立性又具有关联性。
 
     其次，提出太阳能光热梯级集热发电系统的拓扑结构。通过热力特性分析，结合系统中各部件的工作特点，合理布局太阳能光热梯级集热发电系统，利用不同热功循环实现不同品位的能量的梯级利用。合理的梯级发电系统方案才能充分利用发电系统的机理模型，为创建低成本高效率的太阳能光热梯级发电系统提供基础。选择合理的梯级发电方案需要针对各组件的机理模型，组建多种可行的梯级集热系统拓扑结构。通过系统评估、参数选取、初步计算、方案比较，确定了几种具有代表性的太阳能光热梯级发电系统方案。
 
-    再次，组建太阳能光热梯级集热发电系统模型。利用建立好的系统中各部件的模型，组建梯级集热发电系统模型。
+    再次，组建太阳能光热梯级集热发电系统模型。根据所选择的太阳能光热梯级发电系统方案，基于建立好的系统中各部件的模型，利用面向对象语言的继承、组合、多态等特点，组建起梯级集热发电系统模型。研究系统在外部及内部因素的耦合作用下主要参数及性能指标的变化规律，掌握其变化机理，建立其性能特性的计算方法。经过组建部件，设置参数，编译环境，完成了各系统方案的系统组建工作。各系统模型的计算结果可以以单个对象的方式方便地查看系统中各个部件的关键参数。
 
-    再次，模拟并优化太阳能光热梯级集热发电系统模型。
+    然后，模拟并优化太阳能光热梯级集热发电系统模型。在太阳能光热梯级发电系统性能特性研究的基础上，对系统进行流程优化、结构重构。具体地，通过对系统的蒸汽发生系统进行分析，提出了分阶段加热方法，有效降低了蒸汽发生系统中换热过程中产生的㶲损，进而可以提高整个系统的效率。分析了斯特林机组的排列方式对机组效率的影响，提出了斯特林机组最佳的排列方式。
 
-    最后，分析太阳能光热梯级集热发电系统模型。
+    最后，优化太阳能光热梯级集热发电系统的运行参数。针对特定结构方案和运行模式，以梯级发电系统的性能参数和经济指标为目标函数，选择合理的可调节参数，确立各种约束条件，利用现代优化方法，如基因算法、蚁群算法，完成系统的参数优化分析，以及对于独立系统的对比分析。分析结果表明，太阳能光热梯级集热发电系统在一定的参数条件下，相比其对应的独立系统，具有更高的总体光电转换效率。
 }
 \zhkeywords{槽式集热器，碟式集热器，朗肯循环，斯特林循环，斯特林机组，梯级发电}
 
 \enabstract
 {
-    With the increasing awareness of problem of fossil energy consumption and environmental pollution, solar energy as a renewable energy, which has the advantages as widely spreeded, huge amount, inexhaustible, no pollution, has received much attention by many countries and been regarded as the greated potential candidate of the fossil energy. Concentrated solar thermal power generation is another form of power generation technology except solar photovoltaic power generation. Compared to solar photovoltaic, solar thermal power is gaining more attention for its advantages as smooth power generation, good grid compatibility, easy to combinate with existing fossil power plant.
+    With the increasing awareness of the problem of fossil energy consumption and environmental pollution, solar energy as a renewable energy, which has the advantages as widely spreeded, huge amount, inexhaustible, no pollution, has received much attention by many countries and been regarded as the greated potential candidate of the fossil energy. Concentrated solar thermal power generation is another form of power generation technology except solar photovoltaic power generation. Compared to solar photovoltaic, solar thermal power is gaining more attention for its advantages as smooth power generation, good grid compatibility, easy to combinate with existing fossil power plant.
 
     The project of this research is an international cooperation program 'Collaborative research on key technologies to produce electricity by cascade utilization solar thermal energy'. The objective of the project is to investigate the key scientific problems related to solar heat collector in high temperature, cascade utilization solar thermal energy with high efficiency, system integration and optimizaition to develop the prototype system.
 }
@@ -118,33 +117,34 @@
 \section{布雷顿循环}\label{bc}
 \section{研究目标}\label{sec:3}
 
-\chapter{系统设计}
-
-\section{系统结构}
-\section{系统建模}
+\chapter{系统中各部件的建模}
 Object oriented method is used for system modeling.
 %\subsection{Solar Field}
-\subsection{槽式聚光集热器建模}
-\subsection{碟式聚光集热器建模}
-\subsubsection{碟式聚光镜}
-\subsubsection{碟式集热器}
-\subsection{蒸汽发生器}
-\subsection{发电系统}
-\subsection{凝汽器}
-\subsection{除氧器}
-\subsection{斯特林机}
-\subsection{蓄热系统}
+\section{槽式聚光集热器建模}
+\section{碟式聚光集热器建模}
+\subsection{碟式聚光镜}
+\subsection{碟式集热器}
+\section{蒸汽发生系统}
+\section{发电系统}
+\section{凝汽器}
+\section{除氧器}
+\section{斯特林机}
+\section{蓄热系统}
 
-
-\chapter{系统分析}
-
+\chapter{系统拓扑结构的选择}
 \section{能量梯级收集}
-
 \section{能量梯级利用}
 
-\section{斯特林机组}
+\chapter{梯级系统的组建}
 
-\section{蒸汽生产系统}
+\chapter{梯级系统的优化}
+
+
+\section{斯特林机组}
+\section{蒸汽发生系统}
+
+\chapter{系统模拟和优化}
+
 
 \chapter{结论}
 
@@ -155,20 +155,27 @@ Object oriented method is used for system modeling.
 \end{ack}
 
 \bibliography{bib/bibliography.bib}
+%\begin{thebibliography}
+%\end{thebibliography}
 
 \appendix
 
-\begin{publications}
-  \item Zhang Cheng, Kun Wang. International Conference on Power Engineering: ICOPE 2013: FEA simulation on the alignment of the shafts of three-fulcrum turbine.
+\chapter{攻读博士学位期间发表的论文及其它成果}
+论文
+\begin{enumerate}
+  \item Zhang Cheng, Kun Wang. International Conference on Power Engineering: ICOPE 2013: FEA simulation on the alignment of the shafts of three-fulcrum turbine
   \item Performance comparison of new and traditional arrangements of a dish-Stirling system
 	\item A multi-stage exergy-loss reduction system for solar parabolic trough power plants
 	\item Cascade system using both trough system and dish system for power generation
+\end{enumerate}
 
+专利
+\begin{enumerate}
   \item A solar thermal cascade system, No. 201610806296.5
   \item A flow control method used in a multi-stage heating system, No. 201610805604.2
-\end{publications}
+\end{enumerate}
 
-\chapter{Formulae}\label{appendix:2}
+\chapter{攻读博士学位期间参加的科研工作}\label{appendix:2}
   The is the content of the Appendix B
 
 \end{document}

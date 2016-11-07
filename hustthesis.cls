@@ -47,6 +47,7 @@
 %%  Right brace   \}     Tilde         \~}
 \RequirePackage{ifthen}
 \RequirePackage{xkeyval}
+\RequirePackage{makecell}
 \newif\ifHUST@finalformat
 \HUST@finalformattrue
 \DeclareOptionX{format}[final]{
@@ -209,7 +210,7 @@
   plainpages=false,
   pdfpagelabels=true,
   pdfstartview={XYZ null null 1},
-  pdfinfo={Template.Info={hustthesis.cls v1.1 2013/07/01, Copyright (C) 2013-2014 by Xu Cheng 2014 by hust-latex, https://github.com/hust-latex/hustthesis}}
+  pdfinfo={Template.Info={hustthesis.cls v1.2 2016/11/04, Copyright (C) 2015-2016 by hustquick 2016 by hust-latex, https://github.com/hust-latex/hustthesis}}
 }
 \RequirePackage{amsmath,amssymb,amsfonts}
 \RequirePackage[amsmath,amsthm,thmmarks,hyperref,thref]{ntheorem}
@@ -426,11 +427,11 @@
 \def\HUST@stunotitle{学号}
 \def\HUST@schoolcodetitle{学校代码}
 \def\HUST@secrettile{密级}
-\def\HUST@zhauthortitle{{学}\hfill{位}\hfill{申}\hfill{请}\hfill{人}}
-\def\HUST@zhmajortitle{{学}\hfill{科}\hfill{专}\hfill{业}}
-\def\HUST@zhsupervisortitle{{指}\hfill{导}\hfill{教}\hfill{师}}
-\def\HUST@zhasssupervisortitle{{副}\hfill{指}\hfill{导}\hfill{教}\hfill{师}}
-\def\HUST@zhdatetitle{{答}\hfill{辩}\hfill{日}\hfill{期}}
+\def\HUST@zhauthortitle{{学}\hfill{位}\hfill{申}\hfill{请}\hfill{人}：}
+\def\HUST@zhmajortitle{{学}\hfill{科}\hfill{专}\hfill{业}：}
+\def\HUST@zhsupervisortitle{{指}\hfill{导}\hfill{教}\hfill{师}：}
+\def\HUST@zhasssupervisortitle{{副}\hfill{指}\hfill{导}\hfill{教}\hfill{师}：}
+\def\HUST@zhdatetitle{{答}\hfill{辩}\hfill{日}\hfill{期}：}
 
 \def\HUST@enauthortitle{Student}
 \def\HUST@enmajortitle{Major}
@@ -744,10 +745,13 @@
     \fontsize{18pt}{27.0pt}\selectfont
     \setlength{\extrarowheight}{0pt}
     \TurnOffTabFontSetting
-    \begin{tabular}{p{5em}@{{：\hspace{1em}}}l}
+    \begin{tabular}[t]{l@{{\hspace{1em}}}l}
+    %\begin{tabular}{l@{~:~}p{18em}}
     \HUST@zhauthortitle       & {\HUST@zhauthor} \\
     \HUST@zhmajortitle      & {\HUST@zhmajor} \\
     \HUST@zhsupervisortitle & {\HUST@zhsupervisor} \\
+    & {Inmaculada Arauzo教授}\\
+    & {张燕平\hspace{0.2em}副教授}\\
     \ifthenelse{\equal{\HUST@zhasssupervisor}{}}{}{
       \HUST@zhasssupervisortitle & {\HUST@zhasssupervisor} \\
     }
@@ -876,7 +880,7 @@
 \def\HUST@zhabstractpage{
   \chapter*{\HUST@zhabstractname}
   \begingroup
-  \fontsize{10.5pt}{13.7pt}\selectfont
+  \fontsize{12pt}{13.7pt}\selectfont
   \HUST@zhabstract \par
   \vskip 1.2ex
   \noindent\hei{\HUST@zhkeywordstitle}\hspace{.8em} \HUST@zhkeywords
@@ -885,7 +889,7 @@
 \def\HUST@enabstractpage{
   \chapter*{\textsf{\HUST@enabstractname}}
   \begingroup
-  \fontsize{10.5pt}{13.7pt}\selectfont
+  \fontsize{12pt}{13.7pt}\selectfont
   \HUST@enabstract \par
   \vskip 1.2ex
   \noindent\textbf{\HUST@enkeywordstitle}\hspace{.8em} \HUST@enkeywords
@@ -921,7 +925,7 @@
   \addcontentsline{toc}{chapter}{\HUST@acknamenospace}
   \chapter*{\HUST@ackname}
   \begingroup
-  \fontsize{10.5pt}{13.7pt}\selectfont
+  \fontsize{12pt}{13.7pt}\selectfont
 }{
   \endgroup
 }
@@ -935,7 +939,7 @@
     \chapter*{\HUST@publicationtitle}
   \fi
   \begin{enumerate}[labelindent=0pt,label={[\arabic*]},itemsep=0.5ex]
-  \fontsize{10.5pt}{10.5pt}\selectfont
+  \fontsize{12pt}{12pt}\selectfont
 }{
   \end{enumerate}
 }

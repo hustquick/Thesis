@@ -62,23 +62,23 @@
 \schoolcode{10487}
 \title{太阳能光热梯级发电系统设计\\及其特性研究}{Cascade solar thermal power system design and research of the key features}
 \author
-{张成}{Zhang Cheng}
+{张成}{Cheng Zhang}
 \major
 {热能工程}{Thermal Engineering}
 \supervisor
-{高伟\hspace{0.2em}教授\hspace{1em}Inmaculada Arauzo\hspace{0.2em}教授\hspace{1em}}{Prof. Gao Wei \newline Prof. Inmaculada Arauzo}
-\asssupervisor{张燕平\hspace{0.2em}副教授}{Assistant Prof. Zhang Yanping}
+{高伟\hspace{0.2em}教授}{Prof. Wei Gao \newline Prof. Inmaculada Arauzo \newline Associate Prof. Yanping Zhang}
+%\asssupervisor{张燕平\hspace{0.2em}副教授}{Associate Prof. Yanping Zhang}
 \date{2017}{6}{1}
 
 \zhabstract{
-    随着化石能源的消耗和环境问题的凸显，太阳能作为一种新能源，具有分布广泛、总量巨大、取之不竭、无污染的特点，越来越受到世界各国的重视，被广泛认为是未来最有潜力替代传统化石能源的清洁能源。在发电领域，太阳能光热发电是除了太阳能光伏发电之外的另一种发电形式，与光伏发电相比，光热发电因具有发电平稳，电网兼容性友好，易于与现有化石燃料电厂组合等优点而受到越来越多的关注。已经商业应用的太阳能光热发电技术分为槽式集热发电、碟式集热发电和塔式集热发电三种。三种发电技术各有优缺点，槽式集热发电应用最广，成本较低，但效率也较低，碟式集热发电规模较小，多用于分布式发电，塔式集热发电规模较大，成本较高，目前处于快速发展阶段。
+    随着化石能源的消耗和环境问题的凸显，太阳能作为一种新能源，具有分布广泛、总量巨大、取之不竭、无污染的特点，越来越受到世界各国的重视，被广泛认为是未来最有潜力替代传统化石能源的清洁能源。在发电领域，太阳能光热发电是除了太阳能光伏发电之外的另一种发电形式，与光伏发电相比，光热发电因具有发电平稳，电网兼容性友好，易于与现有化石燃料电厂组合等优点而受到越来越多的关注。已经商业应用的太阳能光热发电技术分为槽式集热发电、碟式集热发电和塔式集热发电三种。三种发电技术各有优缺点：槽式集热发电应用最广，成本较低，但效率也较低；碟式集热发电规模较小，多用于分布式发电；塔式集热发电规模较大，成本较高，目前处于快速发展阶段。综合利用现有发电技术的优缺点，在能量梯级收集和能量梯级利用的思想上，提出采用多种集热发电方式的梯级系统，是实现低成本大规模太阳能光热发电的一种新颖的可行的技术方案。
 
     本课题以国家国际合作项目专项“太阳能梯级集热发电系统关键技术合作研究”为背景，目标是研究太阳能光热发电装置，利用各种传统型式的太阳能光热发电系统的优缺点以及热力特性，提出并组建、优化太阳能梯级集热发电系统，为探索出可大规模低成本利用太阳能的光热发电技术提供新的方案。主要研究内容和结论包括：
     %本课题通过建立各部件的机理模型，利用热力学原理，选择合理的拓扑结构，组建太阳能光热梯级集热发电系统，并建立系统的模型，针对不同的优化目标选择优化参数进行优化，最终得到低成本高效率的太阳能光热梯级发电方案，为实现高效率太阳能极热发电和大规模低成本应用提供技术支持。
 
-    首先，针对太阳能光热梯级集热发电系统的各部件建立机理模型。依据目标对象的运行机理，根据物理平衡方程，对系统中的各部件，尤其是系统中的关键部件，如集热器、蒸汽产生系统、汽轮机、斯特林机等，建立起数学模型。各部件的数学模型是经由经典理论或是大量实验数据验证的模型，是组建光热梯级集热发电系统模型的基础。各部件模型使用MATLAB语言编写，采用面向对象的方法，保证了各部件之间既具有独立性又具有关联性。
+    首先，针对太阳能光热梯级集热发电系统的各部件建立机理模型。依据目标对象的运行机理，根据物理平衡方程，对系统中的各部件，尤其是系统中的关键部件，如集热器、蒸汽产生系统、汽轮机、斯特林机等，建立起数学模型。各部件的数学模型是经由经典理论或是大量实验数据验证的模型，是组建光热梯级集热发电系统模型的基础。对于槽式集热器的集热管和碟式集热器的集热器，建立了热损失模型；对于斯特林机，基于合理的简化和假设，推导出了基于等温传热的斯特林机模型。各部件模型使用MATLAB语言编写，采用面向对象的方法，充分利用了继承、多态等特性，保证了各部件之间既具有独立性又具有关联性。
 
-    其次，提出太阳能光热梯级集热发电系统的拓扑结构。通过热力特性分析，结合系统中各部件的工作特点，合理布局太阳能光热梯级集热发电系统，利用不同热功循环实现不同品位的能量的梯级利用。合理的梯级发电系统方案才能充分利用发电系统的机理模型，为创建低成本高效率的太阳能光热梯级发电系统提供基础。选择合理的梯级发电方案需要针对各组件的机理模型，组建多种可行的梯级集热系统拓扑结构。通过系统评估、参数选取、初步计算、方案比较，确定了几种具有代表性的太阳能光热梯级发电系统方案。
+    其次，提出太阳能光热梯级集热发电系统的拓扑结构。通过热力特性分析，结合系统中各部件的工作特点，合理布局太阳能光热梯级集热发电系统，利用不同热功循环实现不同品位的能量的梯级利用。合理的梯级发电系统方案才能充分利用发电系统的机理模型，为创建低成本高效率的太阳能光热梯级发电系统提供基础。本文针对各组件的机理模型，组建了多种可行的梯级集热系统拓扑结构。经过系统评估、参数选取、初步计算、方案比较，确定了两种具有代表性的太阳能光热梯级发电系统方案。
 
     再次，组建太阳能光热梯级集热发电系统模型。根据所选择的太阳能光热梯级发电系统方案，基于建立好的系统中各部件的模型，利用面向对象语言的继承、组合、多态等特点，组建起梯级集热发电系统模型。研究系统在外部及内部因素的耦合作用下主要参数及性能指标的变化规律，掌握其变化机理，建立其性能特性的计算方法。经过组建部件，设置参数，编译环境，完成了各系统方案的系统组建工作。各系统模型的计算结果可以以单个对象的方式方便地查看系统中各个部件的关键参数。
 
@@ -90,9 +90,9 @@
 
 \enabstract
 {
-    With the increasing awareness of the problem of fossil energy consumption and environmental pollution, solar energy as a renewable energy, which has the advantages as widely spreeded, huge amount, inexhaustible, no pollution, has received much attention by many countries and been regarded as the greated potential candidate of the fossil energy. Concentrated solar thermal power generation is another form of power generation technology except solar photovoltaic power generation. Compared to solar photovoltaic, solar thermal power is gaining more attention for its advantages as smooth power generation, good grid compatibility, easy to combinate with existing fossil power plant.
+    %With the increasing awareness of the problem of fossil energy consumption and environmental pollution, solar energy as a renewable energy, which has the advantages as widely spreeded, huge amount, inexhaustible, no pollution, has received much attention by many countries and been regarded as the greated potential candidate of the fossil energy. Concentrated solar thermal power generation is another form of power generation technology except solar photovoltaic power generation. Compared to solar photovoltaic, solar thermal power is gaining more attention for its advantages as smooth power generation, good grid compatibility, easy to combinate with existing fossil power plant.
 
-    The project of this research is an international cooperation program 'Collaborative research on key technologies to produce electricity by cascade utilization solar thermal energy'. The objective of the project is to investigate the key scientific problems related to solar heat collector in high temperature, cascade utilization solar thermal energy with high efficiency, system integration and optimizaition to develop the prototype system.
+    %The project of this research is an international cooperation program 'Collaborative research on key technologies to produce electricity by cascade utilization solar thermal energy'. The objective of the project is to investigate the key scientific problems related to solar heat collector in high temperature, cascade utilization solar thermal energy with high efficiency, system integration and optimizaition to develop the prototype system.
 }
 \enkeywords
 {Parabolic trough collector, Parabolic dish collector, Rankine cycle, Stirling cycle, Stirling engine array, cascade powering}
@@ -108,16 +108,18 @@
 \listoftables
 \mainmatter
 
-\chapter{背景}\label{chapter:Introduction}
-\section{槽式光热发电}\label{sec:pt}
-\section{碟式光热发电}\label{sec:pd}
-\section{塔式光热发电}\label{sec:st}
-\section{朗肯循环}\label{sec:rc}
-\section{斯特林机}\label{sec:se}
-\section{布雷顿循环}\label{bc}
-\section{研究目标}\label{sec:3}
+\chapter{绪论}\label{chapter:Introduction}
+\section{研究背景及意义}
+\section{研究现状}
+\subsection{槽式光热发电}\label{sec:pt}
+\subsection{碟式光热发电}\label{sec:pd}
+\subsection{塔式光热发电}\label{sec:st}
+\subsection{朗肯循环}\label{sec:rc}
+\subsection{斯特林循环}\label{sec:se}
+\subsection{布雷顿循环}\label{bc}
+\section{研究内容}\label{sec:3}
 
-\chapter{系统中各部件的建模}
+\chapter{系统部件机理模型}
 Object oriented method is used for system modeling.
 %\subsection{Solar Field}
 \section{槽式聚光集热器建模}
@@ -131,22 +133,26 @@ Object oriented method is used for system modeling.
 \section{斯特林机}
 \section{蓄热系统}
 
-\chapter{系统拓扑结构的选择}
+\chapter{系统拓扑结构}
 \section{能量梯级收集}
 \section{能量梯级利用}
+\section{能量梯级利用的选择}
 
 \chapter{梯级系统的组建}
 
 \chapter{梯级系统的优化}
-
-
-\section{斯特林机组}
+\section{斯特林机组排列方式}
 \section{蒸汽发生系统}
 
 \chapter{系统模拟和优化}
+\section{系统模拟计算}
+\subsection{系统参数选择}
 
 
-\chapter{结论}
+\chapter{总结与展望}
+\section{全文总结}
+\section{本文主要创新点}
+\section{未来研究展望}
 
 \backmatter
 

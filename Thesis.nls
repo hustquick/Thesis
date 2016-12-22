@@ -2,8 +2,63 @@
 
  \nomgroup{A}
 
+  \item [{$A$}]\begingroup heat transfer area (m$^2$)\nomeqref {3.25}
+		\nompageref{26}
+  \item [{$c_p$}]\begingroup specific heat at constant pressure (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)\nomeqref {3.25}
+		\nompageref{26}
+  \item [{$c_v$}]\begingroup specific heat at constant volume (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)\nomeqref {3.6}
+		\nompageref{19}
+  \item [{$e$}]\begingroup regenerator effectiveness\nomeqref {3.0}
+		\nompageref{17}
+  \item [{$J$}]\begingroup annular gap cylinder displacer (m)\nomeqref {3.20}
+		\nompageref{21}
+  \item [{$K$}]\begingroup dead volume factor\nomeqref {3.1}
+		\nompageref{18}
+  \item [{$k$}]\begingroup specific heat ratio ($c_p/c_v$), thermal conductivity ($\mathrm{W\cdot m^{-1}\cdot K^{-1}}$)\nomeqref {3.6}
+		\nompageref{19}
+  \item [{$m$}]\begingroup mass of working fluid in Stirling engine (kg)\nomeqref {3.2}
+		\nompageref{18}
+  \item [{$n_{se}$}]\begingroup number of Stirling engine in SEA\nomeqref {3.30}
+		\nompageref{27}
+  \item [{$P$}]\begingroup power of Stirling engine (W)\nomeqref {3.8}
+		\nompageref{19}
+  \item [{$p$}]\begingroup pressure (Pa)\nomeqref {3.13}\nompageref{20}
+  \item [{$Q$}]\begingroup absorbed heat (J)\nomeqref {3.8}
+		\nompageref{19}
+  \item [{$q_m$}]\begingroup mass flow rate (kg$\cdot$s$^{-1}$)\nomeqref {3.25}
+		\nompageref{26}
+  \item [{$R$}]\begingroup gas constant (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)\nomeqref {3.2}
+		\nompageref{18}
   \item [{$s$}]\begingroup Speed of Stirling enine, Hz\nomeqref {3.0}
-		\nompageref{9}
+		\nompageref{11}
+  \item [{$s_{se}$}]\begingroup speed of Stirling engine (Hz)\nomeqref {3.8}
+		\nompageref{19}
+  \item [{$T_H$}]\begingroup working fluid temperature in the hot space (K)\nomeqref {3.0}
+		\nompageref{17}
+  \item [{$T_L$}]\begingroup working fluid temperature in the cold space (K)\nomeqref {3.0}
+		\nompageref{17}
+  \item [{$T_R$}]\begingroup effective working fluid temperature in regenerator (K)\nomeqref {3.0}
+		\nompageref{17}
+  \item [{$T_w$}]\begingroup wall temperature (K)\nomeqref {3.25}
+		\nompageref{26}
+  \item [{$U$}]\begingroup overall heat transfer coefficient (W$\cdot$m$^{-2}\cdot$K$^{-1}$)\nomeqref {3.25}
+		\nompageref{26}
+  \item [{$V_C$}]\begingroup compression volume (m$^3$)\nomeqref {3.2}
+		\nompageref{18}
+  \item [{$V_D$}]\begingroup total dead volume (m$^3$)\nomeqref {3.0}
+		\nompageref{18}
+  \item [{$V_E$}]\begingroup expansion volume (m$^3$)\nomeqref {3.2}
+		\nompageref{18}
+  \item [{$V_{DC}$}]\begingroup cold space dead volume (m$^3$)\nomeqref {3.0}
+		\nompageref{18}
+  \item [{$V_{DH}$}]\begingroup hot space dead volume (m$^3$)\nomeqref {3.0}
+		\nompageref{18}
+  \item [{$V_{DR}$}]\begingroup regenerator dead volume (m$^3$)\nomeqref {3.0}
+		\nompageref{18}
+  \item [{$W$}]\begingroup output work (J)\nomeqref {3.4}
+		\nompageref{19}
+  \item [{$Z$}]\begingroup displacer stroke (m)\nomeqref {3.20}
+		\nompageref{21}
 
  \nomgroup{C}
 
@@ -35,6 +90,8 @@
 		\nompageref{3}
   \item [{SCG}]\begingroup Scaled Conjugate Gradient\nomeqref {1.0}
 		\nompageref{3}
+  \item [{SEA}]\begingroup Stirling engine array\nomeqref {3.0}
+		\nompageref{12}
   \item [{SNL}]\begingroup Sandia National Laboratory\nomeqref {1.0}
 		\nompageref{1}
   \item [{SPC}]\begingroup Solar parabolic concentrator\nomeqref {1.0}
@@ -42,13 +99,32 @@
   \item [{SRC}]\begingroup Steam Rankine Cycle\nomeqref {1.0}
 		\nompageref{3}
 
+ \nomgroup{G}
+
+  \item [{$\gamma_H$}]\begingroup space ratio in process 12\nomeqref {3.3}
+		\nompageref{19}
+  \item [{$\gamma_L$}]\begingroup space ratio in process 34\nomeqref {3.3}
+		\nompageref{19}
+  \item [{$\mu$}]\begingroup dynamic viscosity ($\mathrm{kg\cdot m^{-1}\cdot s^{-1}}$)\nomeqref {3.11}
+		\nompageref{20}
+
  \nomgroup{S}
 
+  \item [{$c$}]\begingroup cooling fluid\nomeqref {3.26}\nompageref{26}
+  \item [{$cw$}]\begingroup cooler wall\nomeqref {3.10}\nompageref{19}
+  \item [{$h$}]\begingroup heating fluid\nomeqref {3.26}\nompageref{26}
+  \item [{$hw$}]\begingroup heater wall\nomeqref {3.9}\nompageref{19}
+  \item [{$i$}]\begingroup inlet\nomeqref {3.25}\nompageref{26}
+  \item [{$o$}]\begingroup outlet\nomeqref {3.25}\nompageref{26}
+  \item [{$p$}]\begingroup piston\nomeqref {3.20}\nompageref{21}
+  \item [{$r$}]\begingroup regenerator\nomeqref {3.19}\nompageref{21}
   \item [{$se$}]\begingroup Stirling engine\nomeqref {3.0}
-		\nompageref{9}
+		\nompageref{11}
+  \item [{$th$}]\begingroup theoretical\nomeqref {3.4}\nompageref{19}
 
  \nomgroup{U}
 
-  \item [{$'$}]\begingroup Separate system\nomeqref {3.0}\nompageref{9}
+  \item [{$'$}]\begingroup Separate system\nomeqref {3.0}
+		\nompageref{11}
 
 \end{thenomenclature}

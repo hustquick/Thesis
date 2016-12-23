@@ -7,7 +7,7 @@
   \item [{$c_p$}]\begingroup specific heat at constant pressure (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)\nomeqref {3.25}
 		\nompageref{26}
   \item [{$c_v$}]\begingroup specific heat at constant volume (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)\nomeqref {3.6}
-		\nompageref{19}
+		\nompageref{18}
   \item [{$e$}]\begingroup regenerator effectiveness\nomeqref {3.0}
 		\nompageref{17}
   \item [{$J$}]\begingroup annular gap cylinder displacer (m)\nomeqref {3.20}
@@ -15,7 +15,7 @@
   \item [{$K$}]\begingroup dead volume factor\nomeqref {3.1}
 		\nompageref{18}
   \item [{$k$}]\begingroup specific heat ratio ($c_p/c_v$), thermal conductivity ($\mathrm{W\cdot m^{-1}\cdot K^{-1}}$)\nomeqref {3.6}
-		\nompageref{19}
+		\nompageref{18}
   \item [{$m$}]\begingroup mass of working fluid in Stirling engine (kg)\nomeqref {3.2}
 		\nompageref{18}
   \item [{$n_{se}$}]\begingroup number of Stirling engine in SEA\nomeqref {3.30}
@@ -29,8 +29,6 @@
 		\nompageref{26}
   \item [{$R$}]\begingroup gas constant (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)\nomeqref {3.2}
 		\nompageref{18}
-  \item [{$s$}]\begingroup Speed of Stirling enine, Hz\nomeqref {3.0}
-		\nompageref{11}
   \item [{$s_{se}$}]\begingroup speed of Stirling engine (Hz)\nomeqref {3.8}
 		\nompageref{19}
   \item [{$T_H$}]\begingroup working fluid temperature in the hot space (K)\nomeqref {3.0}
@@ -56,7 +54,7 @@
   \item [{$V_{DR}$}]\begingroup regenerator dead volume (m$^3$)\nomeqref {3.0}
 		\nompageref{18}
   \item [{$W$}]\begingroup output work (J)\nomeqref {3.4}
-		\nompageref{19}
+		\nompageref{18}
   \item [{$Z$}]\begingroup displacer stroke (m)\nomeqref {3.20}
 		\nompageref{21}
 
@@ -91,7 +89,7 @@
   \item [{SCG}]\begingroup Scaled Conjugate Gradient\nomeqref {1.0}
 		\nompageref{3}
   \item [{SEA}]\begingroup Stirling engine array\nomeqref {3.0}
-		\nompageref{12}
+		\nompageref{11}
   \item [{SNL}]\begingroup Sandia National Laboratory\nomeqref {1.0}
 		\nompageref{1}
   \item [{SPC}]\begingroup Solar parabolic concentrator\nomeqref {1.0}
@@ -102,11 +100,11 @@
  \nomgroup{G}
 
   \item [{$\gamma_H$}]\begingroup space ratio in process 12\nomeqref {3.3}
-		\nompageref{19}
+		\nompageref{18}
   \item [{$\gamma_L$}]\begingroup space ratio in process 34\nomeqref {3.3}
-		\nompageref{19}
+		\nompageref{18}
   \item [{$\mu$}]\begingroup dynamic viscosity ($\mathrm{kg\cdot m^{-1}\cdot s^{-1}}$)\nomeqref {3.11}
-		\nompageref{20}
+		\nompageref{19}
 
  \nomgroup{S}
 
@@ -118,13 +116,6 @@
   \item [{$o$}]\begingroup outlet\nomeqref {3.25}\nompageref{26}
   \item [{$p$}]\begingroup piston\nomeqref {3.20}\nompageref{21}
   \item [{$r$}]\begingroup regenerator\nomeqref {3.19}\nompageref{21}
-  \item [{$se$}]\begingroup Stirling engine\nomeqref {3.0}
-		\nompageref{11}
-  \item [{$th$}]\begingroup theoretical\nomeqref {3.4}\nompageref{19}
-
- \nomgroup{U}
-
-  \item [{$'$}]\begingroup Separate system\nomeqref {3.0}
-		\nompageref{11}
+  \item [{$th$}]\begingroup theoretical\nomeqref {3.4}\nompageref{18}
 
 \end{thenomenclature}

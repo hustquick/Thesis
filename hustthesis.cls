@@ -47,6 +47,7 @@
 %%  Right brace   \}     Tilde         \~}
 \RequirePackage{ifthen}
 \RequirePackage{xkeyval}
+\RequirePackage{makecell}
 \newif\ifHUST@finalformat
 \HUST@finalformattrue
 \DeclareOptionX{format}[final]{
@@ -209,7 +210,7 @@
   plainpages=false,
   pdfpagelabels=true,
   pdfstartview={XYZ null null 1},
-  pdfinfo={Template.Info={hustthesis.cls v1.1 2013/07/01, Copyright (C) 2013-2014 by Xu Cheng 2014 by hust-latex, https://github.com/hust-latex/hustthesis}}
+  pdfinfo={Template.Info={hustthesis.cls v1.2 2016/11/04, Copyright (C) 2015-2016 by hustquick 2016 by hust-latex, https://github.com/hust-latex/hustthesis}}
 }
 \RequirePackage{amsmath,amssymb,amsfonts}
 \RequirePackage[amsmath,amsthm,thmmarks,hyperref,thref]{ntheorem}
@@ -426,11 +427,11 @@
 \def\HUST@stunotitle{学号}
 \def\HUST@schoolcodetitle{学校代码}
 \def\HUST@secrettile{密级}
-\def\HUST@zhauthortitle{{学}\hfill{位}\hfill{申}\hfill{请}\hfill{人}}
-\def\HUST@zhmajortitle{{学}\hfill{科}\hfill{专}\hfill{业}}
-\def\HUST@zhsupervisortitle{{指}\hfill{导}\hfill{教}\hfill{师}}
-\def\HUST@zhasssupervisortitle{{副}\hfill{指}\hfill{导}\hfill{教}\hfill{师}}
-\def\HUST@zhdatetitle{{答}\hfill{辩}\hfill{日}\hfill{期}}
+\def\HUST@zhauthortitle{{学}\hfill{位}\hfill{申}\hfill{请}\hfill{人}：}
+\def\HUST@zhmajortitle{{学}\hfill{科}\hfill{专}\hfill{业}：}
+\def\HUST@zhsupervisortitle{{指}\hfill{导}\hfill{教}\hfill{师}：}
+\def\HUST@zhasssupervisortitle{{副}\hfill{指}\hfill{导}\hfill{教}\hfill{师}：}
+\def\HUST@zhdatetitle{{答}\hfill{辩}\hfill{日}\hfill{期}：}
 
 \def\HUST@enauthortitle{Student}
 \def\HUST@enmajortitle{Major}
@@ -623,7 +624,7 @@
     \bfseries
     \HEI
     \centering
-    \fontsize{18pt}{23.4pt}\selectfont
+    \fontsize{17.28pt}{23.4pt}\selectfont
   }
   {
     \ifthenelse{\equal{\HUST@language}{chinese}}
@@ -633,8 +634,8 @@
   {1em}
   {}
 \titlespacing*{\chapter}{0pt}{0pt}{20pt}
-\titleformat*{\section}{\bfseries\HEI\fontsize{16pt}{20.8pt}\selectfont}
-\titlespacing*{\section}{0pt}{18pt}{6pt}
+\titleformat*{\section}{\bfseries\HEI\fontsize{17.28pt}{20.8pt}\selectfont}
+\titlespacing*{\section}{0pt}{17.28pt}{6pt}
 \titleformat*{\subsection}{\bfseries\HEI\fontsize{14pt}{18.2pt}\selectfont}
 \titlespacing*{\subsection}{0pt}{12pt}{6pt}
 \titleformat*{\subsubsection}{\bfseries\HEI\fontsize{13pt}{16.9pt}\selectfont}
@@ -728,7 +729,7 @@
   \parbox[t][6cm][t]{\textwidth}{
     \vspace{1.0cm}
     \begin{center}
-    \includegraphics[scale=1.1]{fig/hust-title.pdf}\\[0.8cm]
+    \includegraphics[scale=1.1]{fig/hust-title.png}\\[0.8cm]
     \ziju{10bp}{\fontsize{42pt}{54.6pt}\selectfont\HEI\HUST@zhapplyname}
     \end{center}
   }
@@ -741,13 +742,16 @@
   \parbox[t][7.4cm][t]{\textwidth}{
     \vspace{1.2cm}
     \begin{center}
-    \fontsize{18pt}{27.0pt}\selectfont
+    \fontsize{17.28pt}{27.0pt}\selectfont
     \setlength{\extrarowheight}{0pt}
     \TurnOffTabFontSetting
-    \begin{tabular}{p{5em}@{{：\hspace{1em}}}l}
+    \begin{tabular}[t]{l@{{\hspace{1em}}}l}
+    %\begin{tabular}{l@{~:~}p{18em}}
     \HUST@zhauthortitle       & {\HUST@zhauthor} \\
     \HUST@zhmajortitle      & {\HUST@zhmajor} \\
     \HUST@zhsupervisortitle & {\HUST@zhsupervisor} \\
+    & {Inmaculada Arauzo教授}\\
+    & {张燕平\hspace{0.2em}副教授}\\
     \ifthenelse{\equal{\HUST@zhasssupervisor}{}}{}{
       \HUST@zhasssupervisortitle & {\HUST@zhasssupervisor} \\
     }
@@ -762,20 +766,20 @@
   \begin{center}
     \parbox[t][4.5cm][t]{.9\textwidth}{
       \begin{center}
-        \fontsize{16pt}{17.6pt}\selectfont
+        \fontsize{17.28pt}{17.6pt}\selectfont
         \HUST@enapplyname
       \end{center}
     }
     \parbox[t][5.7cm][t]{\textwidth}{
       \begin{center}
-        \fontsize{18pt}{23.4pt}\selectfont
+        \fontsize{17.28pt}{23.4pt}\selectfont
         \textbf{\textsf{\HUST@entitle}}
       \end{center}
     }
     \parbox[t][5cm][t]{.8\textwidth}{
       \begin{center}
       \setlength{\extrarowheight}{5pt}
-      \fontsize{16pt}{24.0pt}\selectfont
+      \fontsize{17.28pt}{24.0pt}\selectfont
       \TurnOffTabFontSetting
       \begin{tabular}{l@{~:~}p{18em}}
         \HUST@enauthortitle     & {\HUST@enauthor} \\
@@ -800,7 +804,7 @@
   \end{center}
 }
 \def\HUST@authorization{
-  \centerline{\fontsize{16pt}{20.8pt}\selectfont \HEI \HUST@originaldeclare}
+  \centerline{\fontsize{17.28pt}{20.8pt}\selectfont \HEI \HUST@originaldeclare}
   \vspace{1cm}
   {
     \fontsize{12pt}{24.0pt}\selectfont
@@ -817,7 +821,7 @@
     \TurnOnTabFontSetting
   }
   \\[1.9cm]
-  \centerline{\fontsize{16pt}{20.8pt}\selectfont \HEI \HUST@authtitle}
+  \centerline{\fontsize{17.28pt}{20.8pt}\selectfont \HEI \HUST@authtitle}
   \\[1cm]
   {
     \fontsize{12pt}{24.0pt}\selectfont
@@ -876,7 +880,7 @@
 \def\HUST@zhabstractpage{
   \chapter*{\HUST@zhabstractname}
   \begingroup
-  \fontsize{10.5pt}{13.7pt}\selectfont
+  \fontsize{12pt}{13.7pt}\selectfont
   \HUST@zhabstract \par
   \vskip 1.2ex
   \noindent\hei{\HUST@zhkeywordstitle}\hspace{.8em} \HUST@zhkeywords
@@ -885,7 +889,7 @@
 \def\HUST@enabstractpage{
   \chapter*{\textsf{\HUST@enabstractname}}
   \begingroup
-  \fontsize{10.5pt}{13.7pt}\selectfont
+  \fontsize{12pt}{13.7pt}\selectfont
   \HUST@enabstract \par
   \vskip 1.2ex
   \noindent\textbf{\HUST@enkeywordstitle}\hspace{.8em} \HUST@enkeywords
@@ -921,7 +925,7 @@
   \addcontentsline{toc}{chapter}{\HUST@acknamenospace}
   \chapter*{\HUST@ackname}
   \begingroup
-  \fontsize{10.5pt}{13.7pt}\selectfont
+  \fontsize{12pt}{13.7pt}\selectfont
 }{
   \endgroup
 }
@@ -935,7 +939,7 @@
     \chapter*{\HUST@publicationtitle}
   \fi
   \begin{enumerate}[labelindent=0pt,label={[\arabic*]},itemsep=0.5ex]
-  \fontsize{10.5pt}{10.5pt}\selectfont
+  \fontsize{12pt}{12pt}\selectfont
 }{
   \end{enumerate}
 }
@@ -946,7 +950,7 @@
   \phantomsection
   \addcontentsline{toc}{chapter}{\bibname}
   \begingroup
-  \fontsize{10.5pt}{10.5pt}\selectfont
+  \fontsize{10.95pt}{10.95pt}\selectfont
   \setlength\bibsep{0.5ex}
   \HUST@bibliography{#1}
   \endgroup
@@ -968,7 +972,7 @@
   {
     \bfseries\HEI
     \centering
-    \fontsize{18pt}{23.4pt}\selectfont
+    \fontsize{17.28pt}{23.4pt}\selectfont
   }
   {\appendixname\,\thechapter}
   {1em}

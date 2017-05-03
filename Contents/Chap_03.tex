@@ -1,16 +1,288 @@
 \chapter{System modeling}
+系统采用自底向上的方法
+
+An EES (Engineering Equation Solver) model was developed to investigate the characteristics of the cascade system. 
+%The cascade system is developed in several blocks. These blocks are made of circuits with efficiency calculations. 
+Three circuits, air circuit, water circuit and oil circuit, were developed with some specific state parameters in some key components. Energy-based models of these key components were created on the basis of their thermodynamic behavior, heat transfer and the second law.
+The following parts introduce models of some key components.
+
+
 \section{Component modeling}
 \subsection{Parabolic trough collector}
+
+此部分需要细化
+
+LUZ solar collector LS-3 is used as the trough collector.
+%For a trough collector, 
+The heat flux to the outer surface of the receiver can be obtained by $q^{''}=I_rw_{tc}\eta_{opt,0}K(\phi)F_{e}/P$, where $P=\pi{}d_o$, $K(\phi)$ is the incidence angle modifier, $\eta_{opt,0} = \rho \gamma \tau \alpha_{abs}$
+is peak optical efficiency (optical efficiency with an incidence angle of 0).
+\nomenclature{$K$}{Incidence angle modifier of trough collector}
+%\nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
+
+Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length of the collector, and the heat transfer correlation in~\ref{sec:CTCHTHT} can be used.
+\nomenclature{$U$}{Overall heat transfer coefficient, W/(m$^2\cdot$K)}
+\nomenclature{$q^{''}$}{Heat flux, W/m$^2$}
+
+\begin{equation}
+	\frac{T_{o}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})PL}{\dot{m}c_{p}})\label{eq:CTCHF}
+\end{equation}
+
+Since the $Nu$ number in the pipe is very large (about $1\times10^4$), small temperature difference exists between the absorber and oil. So $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero\cite{Romero2007}. The length $L$ required to get the required number of trough collectors in a row can be obtained from Equation (\ref{eq:CTCHF}).
+
 \subsection{Parabolic dish collector}
 \subsubsection{Parabolic dish reflector}
+
+此部分需要细化
+
+A dish reflector product of SES (Stirling Energy System) is used in this cascade system, and its key parameters are listed in Table~\ref{tab:dc}. 
+
+\begin{table}[htbp]
+	\caption{Key parameters of the dish collector}
+	\begin{center}
+	\begin{tabular}{cccccc}
+		\toprule
+		Parameter		&	Value	&	Parameter		&	Value	&	Parameter		&	Value\\
+		\midrule
+		$d_{cav}$	&	$0.46\,\mathrm{m}$	&	$\epsilon_{insu}$	&	0.6	&	$\theta_{dc}$	&	45$^\circ$\\
+		$\delta_{insu}$	&	$0.075\,\mathrm{m}$	&	$\alpha_{cav}$	&	0.87	&	$\gamma$	&	0.97\\
+		$dep_{cav}$	&	$0.23\,\mathrm{m}$	&	$\delta_a$		&	$0.005\,\mathrm{m}$	&	$\eta_{shading}$	&	0.95\\
+		$d_{ap}$	&	$0.184\,\mathrm{m}$	&	$d_{i,1}$	&	$0.07\,\mathrm{m}$	&	$\rho$	&	0.91\\
+		$\lambda_{insu}$	&	$0.06\,\mathrm{W/(m\cdot K)}$	&	$A_{dc}$	&	$87.7\,\mathrm{m^2}$	&	\\		
+		\bottomrule
+	\end{tabular}
+	\end{center}
+	\label{tab:dc}
+\end{table}
+\nomenclature[G]{$\delta$}{Thickness, m}
+\nomenclature[S]{$insu$}{insulating layer}
+%\nomenclature[G]{$\delta_{insu}$}{Thickness of receiver insulating layer, m}
+\nomenclature{$dep$}{Depth, m}
+\nomenclature{$d$}{Diameter, m}
+\nomenclature[G]{$\lambda$}{Thermal conductivity, $\mathrm{W/(m\cdot K)}$}
+\nomenclature[G]{$\epsilon$}{Emissivity}
+%\nomenclature[G]{$\lambda_{insu}$}{Thermal conductivity of receiver insulating layer, $\mathrm{W/(m\cdot K)}$}
+%\nomenclature[G]{$\epsilon_{insu}$}{Emissivity of reciver insulating layer}
+%\nomenclature[G]{$\delta_{a}$}{Thickness of air tube in volumetric receiver, m}
+%\nomenclature{$d_{i,1}$}{Inner diameter of air tube, m}
+\nomenclature[G]{$\theta_{dc}$}{Dish aperture angle (0$^{\circ}$ is horizontal, 90$^{\circ}$ is vertically down)}
+\nomenclature[G]{$\gamma$}{Intercept factor; compression ratio}
+\nomenclature[G]{$\eta_{shading}$}{Shading factor}
+\nomenclature[G]{$\rho$}{Reflectivity}
+\nomenclature{$A_{se,1}$}{Heat transfer area of Stirling engine at air side, m$^2$}
+\nomenclature{$A_{se,2}$}{Heat transfer area of Stirling engine at water side, m$^2$}
+\nomenclature{$k$}{Specific heat ratio}
+%\nomenclature[G]{$\gamma_{se}$}{Compression ratio of Stirling engine}
+\nomenclature{$n_g$}{Amount of working gas in each Stirling engine, mol}
+\nomenclature{$n_{se}$}{Number of Stirling engines in the Stirling engine array}
+
 \subsubsection{Parabolic dish receiver}
+
+此部分需要细化
+
+The dish receiver model concerns the losses include: collector losses due to mirror reflectivity, receiver intercept losses, losses due to shading, and thermal losses. Thermal losses take the largest portion of all those losses, which are due to conduction, convection and radiation. Figure~\ref{fig:thermal-lose} shows the thermal network of dish receiver, which concerns the losses:
+\begin{itemize}
+	\item Radiation losses reflected off of the receiver cavity surfaces and out of the receiver through the aperture. ($q_{rad,reflect}$)
+	\item Conductive losses through the receiver insulating layer. ($q_{cond,tot}$)
+	\item Free convection from the cavity in the absence of wind. ($q_{conv,free}$)
+	\item Forced convection in the presence of wind. ($q_{conv,forced}$)
+	\item Emission losses due to thermal radiation emitted from the receiver aperture. ($q_{rad,emit}$)
+\end{itemize}
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.7\columnwidth]{./fig/thermalLosses.pdf}
+	\caption{Thermal network of dish receiver}
+	\label{fig:thermal-lose}
+\end{center}
+\end{figure}
+
+$q_{dc,1}$ can be written as
+\begin{equation}
+	q_{dc,1}=h_{dc,1}A_{dc,1}\Delta{}T_{ln,Drec,1}
+\end{equation}
+\nomenclature{$A_{dc,1}$}{Heat transfer area of dish receiver between tube and air, m$^2$}
+
+where
+
+\begin{equation}
+	h_{dc,1}=Nu_{tube}\lambda_{dc,1}/d_{i,1}
+\end{equation}
+\nomenclature{$Nu$}{Nusselt number}
+
+\begin{equation}
+	Nu_{tube}=c_rNu_{tube}^{'}
+\end{equation}
+\nomenclature{$c_r$}{Heat transfer correction factor of coiled tube of volumetric receiver}
+
+For helical spiral pipe, multiplier $c_r$ based on curvature ratio can be written as~\cite{Pablo2008}
+
+\begin{equation}
+	c_{r}=1+3.5\frac{d_{i,1}}{d_{cav}-d_{i,1}-2\delta_{a}}
+\end{equation}
+
+$Nu_{tube}^{'}$ is the Nusselt number of straight circular tube, which can be obtained by~\cite{Serth2007}
+
+\begin{equation}
+	Nu_{tube}^{'}= 0.027Re_{tube}^{0.8}Pr_{tube}^{1/3}(\mu_{tube}/\mu_{tube,w})^{0.14}
+\end{equation}
+\nomenclature{$Pr$}{Prandtl number}
+\nomenclature{$Re$}{Reynolds number}
+\nomenclature[G]{$\mu$}{Viscosity, kg/(m$\cdot$s)}
+\nomenclature[S]{$w$}{Tube wall}
+
+\begin{equation}
+	c_{r}=1+3.5\frac{d_{i,1}}{d_{cav}-d_{i,1}-2\delta_{a}}
+\end{equation}
+
+and $\Delta{}T_{ln,Drec,1}$ can be written as
+
+\begin{equation}
+	\Delta{}T_{ln,Drec,1}=\frac{(T_{cav}-T_{dc,i})-(T_{cav}-T_{dc,o})}{\ln\dfrac{T_{cav}-T_{dc,i}}{T_{cav}-T_{dc,o}}}
+\end{equation}
+
+To get $q_{dc,1}$, $T_{cav}$ is required. As shown in Figure~\ref{fig:thermal-lose}, we need to solve the thermal network.
+
+\begin{equation}
+\begin{aligned}
+	q_{in} = q_{rad,reflect}+q_{dc,1}+q_{cond,tot}+q_{conv,tot}+
+	\\q_{rad,emit}\label{eq:q_in sum}
+\end{aligned}
+\end{equation}
+\nomenclature{$q_{in}$}{Solar energy launched into dish receiver aperture, W}
+\nomenclature{$q_{rad,reflect}$}{Reflected radiation by volumetric receiver, W}
+\nomenclature{$q_{dc,1}$}{Energy absorbed by air in the dish collector}
+\nomenclature{$q_{cond,tot}$}{Total conduction loss}
+\nomenclature{$q_{conv,tot}$}{Total convection loss}
+\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver}
+
+
+$q_{in}$ and $\eta_{dc}$ can be obtained by
+\nomenclature[G]{$\eta$}{Thermal efficiency}
+
+\begin{equation}
+	q_{in}=I_r\cdot A_{dc}\gamma\eta_{shading}\rho
+	\label{eq:q_in}
+\end{equation}
+
+\begin{equation}
+	\eta_{dc}=q_{dc,1}/\left(I_r\cdot A_{dc}\right)
+	\label{eq:eta_dc}
+\end{equation}
+
+Other losses are presented as followed.
+
+\begin{itemize}
+
+\item Reflected loss of dish receiver
+
+To determine the reflected loss of the cavity surfaces of the dish receiver $q_{rad,reflect}$, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[S]{$eff$}{Effective parameter of the dish receiver cavity} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity~\cite{Duffie2013}. Sandra National Laboratories gave an estimate value of the absorptance of the cavity surface $\alpha_{cav}$ of an existing Stirling dish receiver to be 0.87~\cite{Hogan1994}. To achieve higher effective absorptance, a smaller ratio of the two surface area should be used. But the ratio is constrained by the concentration ratio of the receiver.
+
+\begin{equation}
+	\alpha_{eff}=\dfrac{\alpha_{cav}}{\alpha_{cav}+\left(1-\alpha_{cav}\right)\left(A_{ap}/A_{cav}\right)}
+	\label{eq:alpha_eff}
+\end{equation}
+\nomenclature[G]{$\alpha$}{Absorptance}
+\nomenclature[S]{$ap$}{Aperture of the dish receiver}
+\nomenclature[S]{$cav$}{Cavity of the dish receiver}
+
+\begin{equation}
+	q_{rad,reflect}=q_{in}(1-\alpha_{eff})
+\end{equation}
+
+\item Conduction loss of dish receiver
+
+Conduction loss of dish receiver $q_{cond,tot}$ equals to the different two parts: convection loss from the insulating layer to the atmosphere $q_{cond,conv}$ and radiation loss from the insulating layer to the atmosphere $q_{cond,rad}$. Both of the two parts are related to the temperature of insulating layer $T_{insu}$.
+\nomenclature{$T_{insu}$}{Temperature of insulating outside layer, K}
+
+\begin{equation}
+	q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\ln\dfrac{d_{cav}+2\delta_{insu}}{d_{cav}}/(2\pi\lambda_{insu}dep_{cav})}
+\end{equation}
+\begin{equation}
+\begin{split}
+	q_{cond,conv}=h_{insu}A_{insu}(T_{insu}-T_{amb})
+	\\=\dfrac{k_{insu}Nu_{insu}A_{insu}(T_{insu}-T_{amb})}{d_{cav}+2\delta_{insu}}
+\end{split}
+\end{equation}
+\nomenclature{$k_{insu}$}{Thermal conductivity of air at the temperature of outside insulating layer, W/(m$\cdot$K)}
+
+where $Nu_{insu}$ can be obtained by the correlation for flow over a circular cylinder.~\cite{Churchill1977}
+
+\begin{equation}
+	q_{cond,rad}=\epsilon_{insu}A_{insu}\sigma(T_{insu}^4 - T_{amb}^4)
+\end{equation}
+And
+\begin{equation}
+	q_{cond,tot}=q_{cond,conv}+q_{cond,rad}
+\end{equation}
+
+\item Convection loss of dish receiver
+
+Ma~\cite{Ma1993} conducted tests to determine the free convection losses from the receiver for alternative setups, and the data were consistent with Stine and McDonald's free convection correlation. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the total of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
+
+\begin{equation}
+	q_{con,tot} = (h_{free} + h_{forced})A_{cav}(T_{cav}-T_{amb})
+\end{equation}
+
+
+where $h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$, $\overline{d_{cav}}=d_{cav}-2d_i-4 \delta_a$.
+\nomenclature{$\overline{d_{cav}}$}{Effective diameter of the cavity, m}
+\nomenclature{$d_i$}{Inner diameter of trough receiver, m}$d_{i}=0.066\,$m
+
+Wu~\cite{Wu2010} present a comprehensive review and systematic summarization of convection heat loss from cavity receiver in parabolic dish solar thermal power system. And we choose the correlation presented by Leibfried~\cite{Leibfried1995}. This correlation gives an extended model of Koenig~\cite{Koenig1981} and Stine~\cite{Stine1994} with better results.
+
+For forced convection loss, side-on wind convection loss model given by Ma~\cite{Ma1993}, which is independent of the aperture orientation, is used
+
+\begin{equation}
+	h_{forced}=0.1967v^{1.849}
+\end{equation}
+
+\end{itemize}
+
 \subsection{Stirling engine}
+
+Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=6\,\mathrm{m^2}$, $A_{se,2}=6\,\mathrm{m^2}$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times{}10^{-2}\,\mathrm{mol}$, $s_{se}=10\,\mathrm{s^{-1}}$.
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.4\columnwidth]{./fig/stirlingEngineArray}
+	\caption{Layout of Stirling engines}
+	\label{fig:Layout of Stirling engines}
+\end{center}
+\end{figure}
+
+Depending on the direction of heating and cooling flows, there are two possible flow types: parallel flow and counterflow. 
+%Figure~\ref{fig:ParallelFlow} and 
+Figure~\ref{fig:CounterFlow} show the heat transfer diagrams of the two flow types.
+%: \nomenclature{$n_1$}{Number of columns of the Stirling engine array} $n_1$ is chosen to be 10 and can be optimized later.
+
+\noindent \begin{figure}[htbp]
+\centering
+	\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Parallel.pdf}
+	\caption{Parallel flow}\label{fig:ParallelFlow}
+	\end{subfigure}
+	~
+\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Counter.pdf}
+	\caption{Counterflow}\label{fig:CounterFlow}
+	\end{subfigure}
+	\caption{Heat transfer diagram of parallel flow and counterflow}
+\end{figure}
+
+By solving above equations, efficiency of the Stirling engine array $\eta_{sea}$ can be obtained by $\eta_{sea}=1-\dfrac{\dot{m}_{2}(h_{2,o,n_1}-h_{2,i,1})}{\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})}$,
+power of each Stirling engine in column $x$, $P_{se,x}=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}$, and power of the Stirling engine array $P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})$.
+
+
 \subsection{Other parts}
 \subsubsection{Steam generating system}
+The steam generating system can be divided into preheater, generator, superheater. They are all heat exchangers. 
+
 \subsubsection{Power generating system}
+
 \subsubsection{Condenser}
+
 \subsubsection{Deaerator}
-\subsubsection{Thermal storage system}
+%\subsubsection{Thermal storage system}
 \section{Component connection}
 \section{Determination of state parameters}
 \section{Steam generating system}

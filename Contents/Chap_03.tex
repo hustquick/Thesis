@@ -8,9 +8,9 @@ The following parts introduce models of some key components.
 \section{Component modeling}
 \subsection{Parabolic trough collector}
 
-此部分需要细化
+%此部分需要细化
 
-Parabolic trough collector is consist of reflector and receiver. The reflector (mirror) reflects direct solar radiation and concentrates it onto a receiver tube located in the focal line of the parabola. The receiver is typically a metal absorber tube with high absorption rate coating. An outer glass tube is used outside the absorber tube to reduce thermal losses and the space between the absorber tube and the glass tube is usually drawn into a vacuum to further reduce the thermal losses.
+Parabolic trough collector consists of a reflector and a receiver. The reflector (mirror) reflects direct solar radiation and concentrates it onto a receiver tube located in the focal line of the parabola. The receiver is typically a metal absorber tube with high absorption rate coating. An outer glass tube is used outside the absorber tube to reduce thermal losses and the space between the absorber tube and the glass tube is usually drawn into a vacuum to further reduce the thermal losses.
 
 Optical loss exists in the reflection process due to optical efficiency terms. The reflection terms can be listed as bellow~\cite{Price2002}:
 
@@ -31,7 +31,7 @@ The equation was determined from trough collector testing conducted at SNL~\cite
   K(\theta) = \cos\theta+0.000884\theta-0.00005369\theta^2
 \end{equation}
 
-The optical losses are associated with five parameters:
+The optical losses are associated with five parameters (see fig.~\ref{fig:ParabolicTrough}):
 
 \begin{itemize}
   \item Reflectivity, $\rho$: only a fraction of the incident radiation is reflected towards the receiver. The fraction is determined by the reflector type and dirt condition. Reflectivity of commercial parabolic trough mirrors can be assumed to be 0.9 for washed mirrors. 
@@ -41,6 +41,12 @@ The optical losses are associated with five parameters:
   \item Soiling factor, $F_e$: because of the dirt on reflectors will reduce the reflectivity, it needs to concern the soiling factor. The soiling factor $F_e$ takes into account the progressive soiling of mirrors and glass tubes after washing.
 \end{itemize}
 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.4\textwidth]{fig/ParametersOfParablicDish.pdf}
+\caption{Some of the optical parameters of a parabolic trough}\label{fig:ParabolicTrough}
+\end{figure}
+
 The energy pass through the glass tube to the receiver can be obtained by
 
 \begin{equation}
@@ -48,38 +54,60 @@ The energy pass through the glass tube to the receiver can be obtained by
 \end{equation}
 
 The solar energy absorbed by the absorber occurs very close to the outer surface, to simplify the absorption process, it is treated as a uniform heat flux $q''$.
+\nomenclature{$q''$}{Heat flux}
 
 \begin{equation}
   q''= \frac{P}{\pi d_o L_{tc}} = \frac{I_r w_{tc} \rho \gamma \tau F_e K(\theta)}{\pi d_o}
 \end{equation}
+%
+%Yilmaz et al~\cite{Yilmaz2014} 
+%
+%LUZ solar collector LS-3 is used as the trough collector.
+%%For a trough collector, 
+%The heat flux to the outer surface of the receiver can be obtained by $q''=I_rw_{tc}\eta_{opt,0}K(\phi)F_{e}/P$, where $P=\pi{}d_o$, $K(\phi)$ is the incidence angle modifier, $\eta_{opt,0} = \rho \gamma \tau \alpha_{abs}$
+%is peak optical efficiency (optical efficiency with an incidence angle of 0).
+%\nomenclature{$K$}{Incidence angle modifier of trough collector}
+%%\nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
 
-
-
-Yilmaz et al~\cite{Yilmaz2014} 
-
-LUZ solar collector LS-3 is used as the trough collector.
-%For a trough collector, 
-The heat flux to the outer surface of the receiver can be obtained by $q^{''}=I_rw_{tc}\eta_{opt,0}K(\phi)F_{e}/P$, where $P=\pi{}d_o$, $K(\phi)$ is the incidence angle modifier, $\eta_{opt,0} = \rho \gamma \tau \alpha_{abs}$
-is peak optical efficiency (optical efficiency with an incidence angle of 0).
-\nomenclature{$K$}{Incidence angle modifier of trough collector}
-%\nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
-
-Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length of the collector, and the heat transfer correlation in~\ref{sec:CTCHTHT} can be used.
+Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length of the collector, and the heat transfer correlation in Appendix ~\ref{cha:CTCHFHX} can be used. Figure~\ref{fig:Pipe} shows the schematic diagram of the thermal analysis of the absorber pipe.
 \nomenclature{$U$}{Overall heat transfer coefficient, W/(m$^2\cdot$K)}
-\nomenclature{$q^{''}$}{Heat flux, W/m$^2$}
+\nomenclature{$q''$}{Heat flux, W/m$^2$}
 
 \begin{equation}
-	\frac{T_{o}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})PL}{\dot{m}c_{p}})\label{eq:CTCHF}
+	\frac{T_{o}-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})PL}{\dot{m}c_{p}})\label{eq:CTCHF}
 \end{equation}
 
-Since the $Nu$ number in the pipe is very large (about $1\times10^4$), small temperature difference exists between the absorber and oil. So $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero\cite{Romero2007}. The length $L$ required to get the required number of trough collectors in a row can be obtained from Equation (\ref{eq:CTCHF}).
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/Pipe.pdf}
+\caption{Schematic diagram of the absorber pipe}\label{fig:Pipe}
+\end{figure}
+
+
+Since the Nusselt number $Nu$ in the pipe is very large (about $1\times10^4$), small temperature difference exists between the absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero~\cite{Romero2007}. The length $L$ required to get the required number of trough collectors in a row can be obtained from Equation (\ref{eq:CTCHF}).
 
 \subsection{Parabolic dish collector}
-\subsubsection{Parabolic dish reflector}
 
-此部分需要细化
+Parabolic dish collector consists of a reflector and a receiver. The reflector (mirror) tracks the sun to reflect direct solar radiation and concentrates it onto a receiver located at the focal point of the reflector. Two axes tracking system needs to be applied for the reflector to continuously follow the daily path of the sun.
 
-A dish reflector product of SES (Stirling Energy System) is used in this cascade system, and its key parameters are listed in Table~\ref{tab:dc}. 
+In a traditional dish-Stirling system, a Stirling engine is located at the focal point. The Stirling engine has a receiver to absorb the thermal energy from the concentrated sunlights. The receiver consists of an aperture and an absorber. The aperture in a Stirling receiver is located at the focal point of the reflector to reduce the radiation and convection losses. The absorber absorbs the solar radiation and transfers the thermal energy to the working gas of the Stirling engine. An electrical generator, directly connected to the crankshaft of the engine, converts the mechanical energy into electricity. 
+
+In the proposed cascade system, a volumetric receiver is located on the focal point. Spiral tube is located in the receiver to absorb the concentrated solar energy. Air (or nitrogen, is used as the heat transfer fluid) flows trough the tube to transfer the absorbed energy as the heat source of Stirling engine(s).
+
+The reflector is a key element of the systems. The curved reflective surface can be manufactured by attached segments, by individual facets or by a stretched membranes shaped by a continuous plenum. In all cases, the curved surface should be coated or covered by aluminum or silver reflectors. 
+Two different methods~\cite{Adkins1987} are applied for the sun tracking systems:
+\begin{itemize}
+  \item Azimuth elevation tracking by an orientation sensor or by calculated coordinates of the sun performed by the local control.
+  \item Polar tracking, where the concentrator rotates about an axis parallel to the earth’s axis rotation.
+\end{itemize}
+
+A dish reflector product of SES (Stirling Energy System) is used in this cascade system, and its key parameters can be found in Table~\ref{tab:dc}. The structure of the receiver is shown in fig.~\ref{fig:dishReceiver}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/DishReceiver.pdf}
+\caption{The structure of the dish receiver}\label{fig:dishReceiver}
+\end{figure}
 
 \begin{table}[htbp]
 	\caption{Key parameters of the dish collector}
@@ -120,16 +148,12 @@ A dish reflector product of SES (Stirling Energy System) is used in this cascade
 \nomenclature{$n_g$}{Amount of working gas in each Stirling engine, mol}
 \nomenclature{$n_{se}$}{Number of Stirling engines in the Stirling engine array}
 
-\subsubsection{Parabolic dish receiver}
-
-此部分需要细化
-
 The dish receiver model concerns the losses include: collector losses due to mirror reflectivity, receiver intercept losses, losses due to shading, and thermal losses. Thermal losses take the largest portion of all those losses, which are due to conduction, convection and radiation. Figure~\ref{fig:thermal-lose} shows the thermal network of dish receiver, which concerns the losses:
 \begin{itemize}
-	\item Radiation losses reflected off of the receiver cavity surfaces and out of the receiver through the aperture. ($q_{rad,reflect}$)
+	\item Radiation losses reflected off of the receiver cavity surfaces and out of the receiver through the aperture. ($q_{rad,ref}$)
 	\item Conductive losses through the receiver insulating layer. ($q_{cond,tot}$)
 	\item Free convection from the cavity in the absence of wind. ($q_{conv,free}$)
-	\item Forced convection in the presence of wind. ($q_{conv,forced}$)
+	\item Forced convection in the presence of wind. ($q_{conv,forc}$)
 	\item Emission losses due to thermal radiation emitted from the receiver aperture. ($q_{rad,emit}$)
 \end{itemize}
 
@@ -141,279 +165,158 @@ The dish receiver model concerns the losses include: collector losses due to mir
 \end{center}
 \end{figure}
 
-$q_{dc,1}$ can be written as
-\begin{equation}
-	q_{dc,1}=h_{dc,1}A_{dc,1}\Delta{}T_{ln,Drec,1}
+To solve the thermal network in fig.~\ref{fig:thermal-lose}, correlations and relationships of the heat fluxes should be clear.
+
+\begin{enumerate}
+  \item \emph{Inlet energy from the reflector, $q_i$}
+  
+  To simplify the model, influences made by receiver blocking and imperfection track are ignored.
+  
+  \begin{equation}\label{eq:q_i}
+      q_i = I_r A_{dc} \gamma \eta_{shading} \rho
+  \end{equation}
+  
+  In equation~\ref{eq:q_i}, $\gamma$ is the intercept factor, $\eta_{shading}$ is the shading factor between different collectors, $\rho$ is the reflectivity of the reflector.
+  \item \emph{Heat exchange between the HTF and the dish absorber, $q_{dr,1}$}
+  
+  The heat transfer process between the HTF and the dish absorber is simplified to a heat exchange process of a flow in a uniform temperature heat pipe. So $q_{dr,1}$ can be written as
+  
+  \begin{equation}\label{eq:q_dr_1}
+      q_{dr,1} = h_{dr,1}A_{dr,1}\Delta T_{ln,dr,1}
+  \end{equation}
+  \nomenclature{$A_{dr,1}$}{Heat transfer area of dish receiver between tube and air, $\mathrm{m^2}$}
+  
+  where
+  
+  \begin{equation}
+      h_{dr,1} = Nu_{tube}\lambda_{dr,1} / d_{i,1}
 \end{equation}
-\nomenclature{$A_{dc,1}$}{Heat transfer area of dish receiver between tube and air, m$^2$}
-
-where
-
 \begin{equation}
-	h_{dc,1}=Nu_{tube}\lambda_{dc,1}/d_{i,1}
+      Nu_{tube} = c_r Nu'_{tube}
 \end{equation}
-\nomenclature{$Nu$}{Nusselt number}
+    \nomenclature{$Nu$}{Nusselt number}
+    \nomenclature{$c_r$}{Heat transfer correction factor of coiled tube of volumetric receiver}
 
-\begin{equation}
-	Nu_{tube}=c_rNu_{tube}^{'}
-\end{equation}
-\nomenclature{$c_r$}{Heat transfer correction factor of coiled tube of volumetric receiver}
-
-For helical spiral pipe, multiplier $c_r$ based on curvature ratio can be written as~\cite{Pablo2008}
+    For helical spiral pipe, multiplier $c_r$ based on curvature ratio can be written as~\cite{Pablo2008}
 
 \begin{equation}
 	c_{r}=1+3.5\frac{d_{i,1}}{d_{cav}-d_{i,1}-2\delta_{a}}
 \end{equation}
 
-$Nu_{tube}^{'}$ is the Nusselt number of straight circular tube, which can be obtained by~\cite{Serth2007}
+$Nu'_{tube}$ is the Nusselt number of straight circular tube, which can be obtained by~\cite{Serth2007}
 
 \begin{equation}
-	Nu_{tube}^{'}= 0.027Re_{tube}^{0.8}Pr_{tube}^{1/3}(\mu_{tube}/\mu_{tube,w})^{0.14}
+	Nu'_{tube}= 0.027Re_{tube}^{0.8}Pr_{tube}^{1/3}(\mu_{tube}/\mu_{tube,w})^{0.14}
 \end{equation}
 \nomenclature{$Pr$}{Prandtl number}
 \nomenclature{$Re$}{Reynolds number}
 \nomenclature[G]{$\mu$}{Viscosity, kg/(m$\cdot$s)}
 \nomenclature[S]{$w$}{Tube wall}
 
+and the logarithmic mean temperature difference $\Delta{}T_{ln,dr,1}$ can be written as
+
 \begin{equation}
-	c_{r}=1+3.5\frac{d_{i,1}}{d_{cav}-d_{i,1}-2\delta_{a}}
+	\Delta{}T_{ln,dr,1}=\frac{(T_{cav}-T_{dc,i})-(T_{cav}-T_{dc,o})}{\ln\dfrac{T_{cav}-T_{dc,i}}{T_{cav}-T_{dc,o}}}
 \end{equation}
 
-and $\Delta{}T_{ln,Drec,1}$ can be written as
 
-\begin{equation}
-	\Delta{}T_{ln,Drec,1}=\frac{(T_{cav}-T_{dc,i})-(T_{cav}-T_{dc,o})}{\ln\dfrac{T_{cav}-T_{dc,i}}{T_{cav}-T_{dc,o}}}
+  \item \emph{Radiation losses reflected off the receiver, $q_{rad,ref}$}
+  
+  \begin{equation}
+    q_{rad,ref}=(1-\alpha_{eff})q_{i}
 \end{equation}
 
-To get $q_{dc,1}$, $T_{cav}$ is required. As shown in Figure~\ref{fig:thermal-lose}, we need to solve the thermal network.
+    where $\alpha_{eff}$ is the effective absorptivity of the receiver.
+    
+    \begin{equation}
+    \alpha_{eff}=\frac{\alpha_{cav}}{\alpha_{cav}+(1-\alpha_{cav})\dfrac{A_{ap}}{A_{cav}}}
+    \end{equation}
+    
+    $\alpha_{cav}$ is the absorptivity of the cavity, $A_{cav}$ is the cavity area, $A{ap}$ is the aperture area.
+  \item \emph{Conductive losses through the receiver insulating layer, $q_{cond,tot}$}
+  
+  \begin{equation}
+q_{cond,tot}=2\pi\lambda_{insu}dep_{cav}\dfrac{T_{cav}-T_{insu}}{\ln((d_{cav}+2\delta_{insu})/d_{cav})}
+    \end{equation}
+    
+    where $T_{cav}$ is the temperature of the cavity wall, $T_{insu}$
+is outside temperature of the insulation wall.
 
-\begin{equation}
-\begin{aligned}
-	q_{in} = q_{rad,reflect}+q_{dc,1}+q_{cond,tot}+q_{conv,tot}+
-	\\q_{rad,emit}\label{eq:q_in sum}
-\end{aligned}
-\end{equation}
-\nomenclature{$q_{in}$}{Solar energy launched into dish receiver aperture, W}
-\nomenclature{$q_{rad,reflect}$}{Reflected radiation by volumetric receiver, W}
-\nomenclature{$q_{dc,1}$}{Energy absorbed by air in the dish collector}
-\nomenclature{$q_{cond,tot}$}{Total conduction loss}
-\nomenclature{$q_{conv,tot}$}{Total convection loss}
-\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver}
-
-
-$q_{in}$ and $\eta_{dc}$ can be obtained by
-\nomenclature[G]{$\eta$}{Thermal efficiency}
-
-\begin{equation}
-	q_{in}=I_r\cdot A_{dc}\gamma\eta_{shading}\rho
-	\label{eq:q_in}
-\end{equation}
-
-\begin{equation}
-	\eta_{dc}=q_{dc,1}/\left(I_r\cdot A_{dc}\right)
-	\label{eq:eta_dc}
-\end{equation}
-
-Other losses are presented as followed.
-
-\begin{itemize}
-
-\item Reflected loss of dish receiver
-
-To determine the reflected loss of the cavity surfaces of the dish receiver $q_{rad,reflect}$, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[S]{$eff$}{Effective parameter of the dish receiver cavity} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity~\cite{Duffie2013}. Sandra National Laboratories gave an estimate value of the absorptance of the cavity surface $\alpha_{cav}$ of an existing Stirling dish receiver to be 0.87~\cite{Hogan1994}. To achieve higher effective absorptance, a smaller ratio of the two surface area should be used. But the ratio is constrained by the concentration ratio of the receiver.
-
-\begin{equation}
-	\alpha_{eff}=\dfrac{\alpha_{cav}}{\alpha_{cav}+\left(1-\alpha_{cav}\right)\left(A_{ap}/A_{cav}\right)}
-	\label{eq:alpha_eff}
-\end{equation}
-\nomenclature[G]{$\alpha$}{Absorptance}
-\nomenclature[S]{$ap$}{Aperture of the dish receiver}
-\nomenclature[S]{$cav$}{Cavity of the dish receiver}
-
-\begin{equation}
-	q_{rad,reflect}=q_{in}(1-\alpha_{eff})
-\end{equation}
-
-\item Conduction loss of dish receiver
-
-Conduction loss of dish receiver $q_{cond,tot}$ equals to the different two parts: convection loss from the insulating layer to the atmosphere $q_{cond,conv}$ and radiation loss from the insulating layer to the atmosphere $q_{cond,rad}$. Both of the two parts are related to the temperature of insulating layer $T_{insu}$.
-\nomenclature{$T_{insu}$}{Temperature of insulating outside layer, K}
-
-\begin{equation}
-	q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\ln\dfrac{d_{cav}+2\delta_{insu}}{d_{cav}}/(2\pi\lambda_{insu}dep_{cav})}
-\end{equation}
-\begin{equation}
-\begin{split}
+  \item \emph{Convection losses from the receiver insulating layer, $q_{cond,conv}$}
+  
+  \begin{equation}
+%\begin{split}
 	q_{cond,conv}=h_{insu}A_{insu}(T_{insu}-T_{amb})
-	\\=\dfrac{k_{insu}Nu_{insu}A_{insu}(T_{insu}-T_{amb})}{d_{cav}+2\delta_{insu}}
-\end{split}
+	=\dfrac{k_{insu}Nu_{insu}A_{insu}(T_{insu}-T_{amb})}{d_{cav}+2\delta_{insu}}
+%\end{split}
 \end{equation}
 \nomenclature{$k_{insu}$}{Thermal conductivity of air at the temperature of outside insulating layer, W/(m$\cdot$K)}
 
 where $Nu_{insu}$ can be obtained by the correlation for flow over a circular cylinder.~\cite{Churchill1977}
 
-\begin{equation}
+  \item \emph{Radiation losses from the receiver insulating layer, $q_{cond,rad}$}
+  
+  \begin{equation}
 	q_{cond,rad}=\epsilon_{insu}A_{insu}\sigma(T_{insu}^4 - T_{amb}^4)
 \end{equation}
-And
-\begin{equation}
-	q_{cond,tot}=q_{cond,conv}+q_{cond,rad}
-\end{equation}
 
-\item Convection loss of dish receiver
-
-Ma~\cite{Ma1993} conducted tests to determine the free convection losses from the receiver for alternative setups, and the data were consistent with Stine and McDonald's free convection correlation. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the total of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
-
-\begin{equation}
-	q_{con,tot} = (h_{free} + h_{forced})A_{cav}(T_{cav}-T_{amb})
+  \item \emph{Free convection from the cavity in the absence of wind, $q_{conv,free}$}
+  
+  Ma~\cite{Ma1993} conducted tests to determine the free convection losses from the receiver for alternative setups, and the data were consistent with Stine and McDonald's free convection correlation. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the total of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
+  
+  \begin{equation}
+	q_{conv,free} = h_{free}A_{cav}(T_{cav}-T_{amb})
 \end{equation}
 
 
-where $h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$, $\overline{d_{cav}}=d_{cav}-2d_i-4 \delta_a$.
+where $h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$, $\overline{d_{cav}}$ is the effective diameter of the cavity, $\overline{d_{cav}}=d_{cav}-2d_i-4 \delta_a$.
 \nomenclature{$\overline{d_{cav}}$}{Effective diameter of the cavity, m}
 \nomenclature{$d_i$}{Inner diameter of trough receiver, m}$d_{i}=0.066\,$m
+  
+  \item \emph{Force convection from the cavity in the presence of wind, $q_{conv,forc}$}
+  
+  \begin{equation}
+	q_{conv,forc} = h_{forc}A_{cav}(T_{cav}-T_{amb})
+\end{equation}
 
-Wu~\cite{Wu2010} present a comprehensive review and systematic summarization of convection heat loss from cavity receiver in parabolic dish solar thermal power system. And we choose the correlation presented by Leibfried~\cite{Leibfried1995}. This correlation gives an extended model of Koenig~\cite{Koenig1981} and Stine~\cite{Stine1994} with better results.
+    Wu~\cite{Wu2010} present a comprehensive review and systematic summarization of convection heat loss from cavity receiver in parabolic dish solar thermal power system. And we choose the correlation presented by Leibfried~\cite{Leibfried1995}. This correlation gives an extended model of Koenig~\cite{Koenig1981} and Stine~\cite{Stine1994} with better results.
 
 For forced convection loss, side-on wind convection loss model given by Ma~\cite{Ma1993}, which is independent of the aperture orientation, is used
 
 \begin{equation}
-	h_{forced}=0.1967v^{1.849}
+	h_{forc}=0.1967v_{wind}^{1.849}
 \end{equation}
 
-\end{itemize}
+  \item \emph{Emission losses due to thermal radiation emitted from the receiver aperture, $q_{rad,emit}$}
+  
+  The emissivity is set equal to the effective absorptivity of the cavity (gray body),
+\begin{equation}
+    \epsilon_{cav}=\alpha_{eff}
+\end{equation}
+\begin{equation}
+    q_{rad,emit}=\epsilon_{cav}A_{ap}\sigma(T_{cav}^{4}-T_{amb}^{4})
+\end{equation}
+\end{enumerate}
 
-\subsection{Stirling engine}
+From fig~\ref{fig:thermal-lose}, it can be found that
 
-Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=6\,\mathrm{m^2}$, $A_{se,2}=6\,\mathrm{m^2}$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times{}10^{-2}\,\mathrm{mol}$, $s_{se}=10\,\mathrm{s^{-1}}$.
+\begin{equation}
+  q_{dr,1} = q_i - q_{rad,ref}
+\end{equation}
 
-\noindent \begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width = 0.4\columnwidth]{./fig/stirlingEngineArray}
-	\caption{Layout of Stirling engines}
-	\label{fig:Layout of Stirling engines}
-\end{center}
-\end{figure}
+\begin{equation}
+  q_{dr,1} = q_{cond,tot} + q_{conv,free} + q_{conv,forc}+q_{rad,emit}
+\end{equation}
 
-Depending on the direction of heating and cooling flows, there are two possible flow types: parallel flow and counterflow. 
-%Figure~\ref{fig:ParallelFlow} and 
-Figure~\ref{fig:CounterFlow} show the heat transfer diagrams of the two flow types.
-%: \nomenclature{$n_1$}{Number of columns of the Stirling engine array} $n_1$ is chosen to be 10 and can be optimized later.
+\begin{equation}
+  q_{cond,tot} = q_{cond,conv}+q_{cond,rad}
+\end{equation}
 
-\noindent \begin{figure}[htbp]
-\centering
-	\begin{subfigure}[b]{0.4\columnwidth}
-	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Parallel.pdf}
-	\caption{Parallel flow}\label{fig:ParallelFlow}
-	\end{subfigure}
-	~
-\begin{subfigure}[b]{0.4\columnwidth}
-	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Counter.pdf}
-	\caption{Counterflow}\label{fig:CounterFlow}
-	\end{subfigure}
-	\caption{Heat transfer diagram of parallel flow and counterflow}
-\end{figure}
+So the temperature nodes in the thermal network can be solved by these equations.
 
-By solving above equations, efficiency of the Stirling engine array $\eta_{sea}$ can be obtained by $\eta_{sea}=1-\dfrac{\dot{m}_{2}(h_{2,o,n_1}-h_{2,i,1})}{\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})}$,
-power of each Stirling engine in column $x$, $P_{se,x}=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}$, and power of the Stirling engine array $P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})$.
+$q_{dr,1}$ can be obtained by Equation~\ref{eq:q_dr_1}.
 
-
-\subsection{Other parts}
-\subsubsection{Steam generating system}
-The steam generating system can be divided into preheater, generator, superheater. They are all heat exchangers. 
-
-\subsubsection{Power generating system}
-
-\subsubsection{Condenser}
-
-\subsubsection{Deaerator}
-%\subsubsection{Thermal storage system}
-\section{Component connection}
-\section{Determination of state parameters}
-\section{Steam generating system}
-\section{Steam extraction and regeneration system}
-\section{Stirling engine array}
-
-\section{Introduction}
-%The Stirling engine was invented in 1816, however, its practical use was largely confined to low power domestic applications for over a century due to its small capacity~\cite{Formosa2010}.
-With the emphasis on energy and environmental impact, recently gaining attention is focused on Stirling engine for its high efficiency, low maintenance requirement, flexibility on energy sources, no pollution, low explosion risk. Due to its closed cycle, it can use almost any heat source, which makes it compatible with alternative and renewable energy sources.
-
-The Stirling engine is widely used on solar dish system, known as dish-Stirling system. In a traditional dish-Stirling system, each Stirling engines is put on the focus of a parabolic dish to use the heat collected by the dish receiver for power generation. However, solar dish systems are not widely applied yet for its small capacity. Its capacity is mainly constrained by two factors: dish collector size and Stirling engine size. The dish size is limited for the cost and difficulty of production of large mirrors. The Stirling engine size is limited for its low power-to-weight ratio. The tracking feature of dish collector limits the weight of engine on the focal point. Besides, the size of engine is limited for it overlaps part of the collector.
-
-This paper presents new arrangements for dish-Stirling system demonstrated in Figure~\ref{fig:Dish_SEA} to solve the limitations. Stirling engines are put on the ground as a Stirling engine array (SEA). Heat collected by multiple dish collectors, or other types of collectors, or combination of different types of collectors, even heat from different heat sources is supplied to the SEA. Since the engines are static installations on the ground where space and weight are not at a premium any more, they can reach higher capacities. They can be connected in a different connection type and their performance may be improved compared to the traditional arrangement in which they are put on the focal points of each dish collector separately.
-
-%The Stirling engine is widely used on solar dish system, in which it is put on the focus of parabolic dish to use the heat collected by the dish receiver for power generation. However, solar dish systems are not widely applied yet for its small capacity. Its capacity is mainly constrained by two factors: dish collector size and Stirling engine size. The dish size is limited for the cost and difficulty of production of large mirrors. The Stirling engine size is limited for its low power-to-weight ratio. The tracking feature of dish collector limits the weight of engine on the focal point. Besides, the size of engine is limited for it will overlap part of the collector. This paper presents a solution demonstrated in Figure~\ref{fig:Dish_SEA}. Heat collected by multiple dish collectors, or other types of collectors, or combination of different types of collectors, even heat from different heat sources can be used for a Stirling engine array (SEA). Stirling engines are put on the ground as static installations where space and weight are not at a premium any more. The engines can reach higher capacities, they can be connected in a different connection type and their performance may be improved.
-\nomenclature[C]{SEA}{Stirling engine array}
-
-\noindent \begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/Dish_SEA}
-	\caption{New arrangement of dish-Stirling system}
-	\label{fig:Dish_SEA}
-\end{center}
-\end{figure}
-
-Great attention has focused on the application using parabolic dish to collect heat. Some researchers investigated the impact of various parameters on the optical and thermal performance of the solar dish receivers using Monte Carlo Ray Tracing Method (MCRTM) and/or numerical modeling methods~\cite{Cheng2013,Mao2014,Wang2010,Wang2013,Zhu2015,Sha2016,Daabo2016}. Some researchers considered the applications with different ways to use the collected heat. Loni et al.~\cite{Loni2016} considered a system using parabolic dish for an organic Rankine cycle. In the proposed system, thermal oil is used as the working fluid to transport the collected heat for the organic Rankine cycle. Wang et al.~\cite{Wang2014} proposed an inverse design method for a cavity receiver used in solar dish Brayton system. Craig et al.~\cite{Craig2016} evaluated a parabolic dish tubular receiver used in a dish Brayton cycle. An approach for incorporating a complex geometry like a tubular receiver generated using CFD software into SolTrace was developed. Aichmayer et al.~\cite{Aichmayer2015} presented a hybrid solar micro gas-turbine system integrating volumetric solar dish receiver. Concerning the solar dish receiver integration, both pressurized and atmospheric configurations have been considered. Lovegrove et al.~\cite{Lovegrove2004} presented an idea of using parabolic dish array to provide heat for ammonia based thermochemical energy storage. In this regard, using parabolic dishes to provide heat for SEA is applicable.
-
-A large number of studies have been done on Stirling engine analysis. To describe a Stirling engine's behavior precisely is a difficult task due to the various losses and irreversibilities in the engine.
-%Recent investigations~\cite{Tlili2006,Li2016} have found that these losses and irreversibilities in the thermodynamic cycle have significant importance in predicting the performance of Stirling engines.
-Researchers have done a lot of work to build a precise Stirling engine model. Different models of Stirling engines were developed using empirical~\cite{Senft1998,Costea1999,Prieto2003,Organ2013,Kongtragool2005,Thombare2008}, analytical~\cite{Ohtomo1995,Rogdakis2004,Kongtragool2006,Puech2011,Formosa2010,Shazly2014,Cullen2011,Ahmadi2013,Ahmadi2013b,Tursunbaev2007} and numerical methods~\cite{Urieli1984,Ni2016,Jia2016,Strauss2010,Abbas2014,Araoz2015,Babaelahi2015,Barreto2017,Wu1998,Li2011,Hosseinzade2015}.
-
-Among these methods, numerical methods obtain the most accurate models. Urieli and Berchowitz~\cite{Urieli1984} proposed an adiabatic model of Stirling engine considering some irreversible effects such as non-ideal heat transfer processes and pressure drop effect using numerical methods. The model is known as Simple model. Many researchers developed more accurate models based on the Simple model by using alternative methods or including more loss mechanisms.
-Ni et al.~\cite{Ni2016} proposed an improved Simple analytical model which considers the influence mechanism of rotary speed, pressure and working gas in the view of heat/power losses for Stirling engine performance.
-Jia et al.~\cite{Jia2016} developed a numerical model of free-piston engine generator. The dynamic equations have been linearized to simplify the model to a one-degree forced vibration system with various damping. The solving time of the proposed fast response model can be significantly reduced comparing to previous numerical models.
-Strauss and Dobson~\cite{Strauss2010} proposed an alternative method to calculate the regeneration heat loss and pumping losses, which is more suitable for preliminary engine design and optimization, known as Simple II model.
-Abbas~\cite{Abbas2014} considered the effects of non-ideal regeneration, shuttle loss and heat conduction losses based on Simple model.
-Araoz et al.~\cite{Araoz2015} developed a rigorous Stirling engine model with adiabatic working spaces, isothermal heat exchangers. It considers dead volumes, and imperfect regeneration, mechanical pumping losses due to friction, limited heat transfer and thermal losses on the heat exchangers. The model is suitable for different engine configurations ($\alpha$, $\beta$ and $\gamma$ engines).
-Babaelahi and Syyaadi~\cite{Babaelahi2015} proposed a new numerical thermal model based on polytropic expansion/compression processes. Differential equations in the expansion/compression processes were modified to polytropic processes in the new model. New model shows a better performance prediction compared with previous models.
-
-With the development of finite-time thermodynamics, many researchers studied the the finite-time thermodynamic performance of the Stirling engine. This analysis can also be used in the case of irreversible machines further considering the internal irreversibilities of a Stirling engine such as friction, pressure drop and entropy generation~\cite{Barreto2017}.
-Wu et al.~\cite{Wu1998} developed a numerical model considering finite-time effect to find out the relationship between the net power output and thermal efficiency of the engine.
-Li et al.~\cite{Li2011} developed a mathematical model of a high temperature differential dish-Stirling system with finite-time thermodynamics. Finite-rate heat transfer, regenerative heat losses, conductive thermal bridging losses and finite regeneration processes of the Stirling engine were considered in the model.
-Hosseinzade~\cite{Hosseinzade2015} presented a new closed-form thermal model for the thermal simulation of Stirling engines based on the combination of polytropic analysis of expansion/compression processes and the concept of finite speed thermodynamics.
-Instead of finite-time method, Ahmadi et al.~\cite{Ahmadi2016b} proposed a finite-speed thermodynamic analysis based on the first law of thermodynamics for a closed system with finite speed and the direct method. The effects of heat source temperature, regenerating effectiveness, volumetric ratio, piston stroke as well as rotational speed are included in the analysis.
-Chen et al.~\cite{Chen2007} developed a heat-engine cycle model using finite-time thermodynamics. The model, considered the losses due to heat-resistance, heat leaks and internal irreversibility, is applicable for generalized irreversible universal steady-flow heat-engine cycles.
-%Cullen~\cite{Cullen2011} developed a theoretical Stirling engine model by using decoupled engine configuration in which working space swept volume, volume variation, phase angle and dead space ratio are controlled via a black-box electronic controller.
-
-%Thombare~\cite{Thombare2008} presented a detailed review of the past methods and techniques used for engine analysis. Analysis of heat transfer phenomenon in the engine was also included in the review. Formosa~\cite{Formosa2010} developed an analytical model to predict the periodic steady operation under isothermal assumption and simplified heat transfer model. The model was validated using the experimental data of the General Motor GPU-3 Stirling engine prototype. Ohtomo~\cite{Ohtomo1995} proposed a simple graphic vector analysis method for the first-order estimation of the theoretical performance of Stirling engine with Schmidt assumption and, for simplicity, approximates all volume and pressure fluctuations as sinusoidal. Rogdakis~\cite{Rogdakis2004} used a linearization technique of the dynamic balance equations to predict the thermodynamic conditions for stable operation of free piston Stirling engines. Costea~\cite{Costea1999} considered the effects of both internal and external irreversibilities of the cycle. According to his research, the real cycle efficiency is approximately half the ideal cycle efficiency when the engine is operated at the optimum temperature. Araoz~\cite{Araoz2015} investigated the possible causes that limited the performance of a Stirling engine. Based on a second order Stirling engine model developed and validated previously, he implemented an analysis with the integration of thermodynamics, and the thermal and mechanical interactions of kinematic Stirling engines. Wu~\cite{Wu1998} built a model of Stirling engine with heat transfer and imperfect regeneration irreversibilities and derived the relationship between net power output and thermal efficiency by the model. Puech~\cite{Puech2011} and Kongtragool~\cite{Kongtragool2006} considered the influence of dead volume and imperfect regeneration on Stirling engine. An isothermal model was used to analyze the net work and the heat stored in the regenerator during a complete cycle. An analytical expression to estimate the improvement due to the regenerator has been proposed including the combined effects of dead volume and imperfect regeneration.  Formosa~\cite{Formosa2011} developed and validated an analytical thermodynamic model which encompasses the effectiveness and the flaws of the heat exchangers and the regenerator.
-
-On the other side of the researches, multi-objective optimization algorithms were used considering multi-variables to obtain a better performance was paid for attention by numbers of researchers recently~\cite{Ahmadi2016,Li2016b,Patel2016,Luo2016}.
-Ahmadi et al.~\cite{Ahmadi2016} performed the thermodynamic analysis of solar dish Stirling engine based on the finite-time thermodynamics. Then the NSGA-II algorithm was applied. Three objectives, thermal efficiency, entransy loss rate and power output, were set as the objectives and three well known decision making methods have been employed in the algorithm.
-Li et al.~\cite{Li2016b} developed a multi-objective optimization model of a solar energy powered gamma type Stirling engine using Finite Physical Dimensions Thermodynamics (FPDT) method by multi-objective criteria. Genetic algorithm was used to get the Pareto frontier, and optimum points were obtained using the decision different making methods. Results show that total thermal conductance, hot temperature, stroke and diameter ratios can be improved.
-Patel and Savsani~\cite{Patel2016} developed a strategy for multi-objective optimization for Stirling engines using TS-TLBO (tutorial training and self learning inspired teaching-learning-based optimization) algorithm. An application example with eleven decision variables and three objectives are considered.
-Luo et al.~\cite{Luo2016} proposed a multiple optimization method that combines multiple optimization algorithms including differential evolution, genetic algorithm and adaptive simulated annealing. The optimization considers five decision variables, including engine frequency, mean effective pressure, temperature of heating source, number of wires in regenerator matrix, and the wire diameter of regenerator for maximum efficiency and output power.
-
-
-%There are multiple connection types for Stirling engines in an SEA, and the connection type will change the heating and cooling fluid properties, such as flow rate and temperature, of each Stirling engine in an SEA, which can affect the efficiency of each Stirling engine. So the same Stirling engines with the same heating and cooling fluid may produce different amount of work with different thermal efficiencies depending on their connection types.
-
-However, the literature review indicates that the analysis of arrangements of Stirling engines, classification and performance of the SEA, has not been reported till now. In this regard, this paper investigated the connection types of SEA and its influence on SEA performance. Connection types of SEA were classified and 5 basic connection types were put forward. According to Organ's theory~\cite{Organ1997}, one equivalent analytical Stirling engine model always exists for different types ($\alpha$ type, $\beta$ type and $\gamma$ type) of engines. To find out the influence of connection type of SEA and to avoid falling into the problem of developing specific Stirling engine model, a Stirling engine model based on some assumptions and simplifications was developed. This model was evaluated using experimental data of the General Motor GPU-3 Stirling engine prototype. Imperfect regeneration and some irreversibilities were considered. Heat transfer analysis of Stirling engine with heating and cooling fluids was also included. SEA models of different connection types were built depending on the engine model. Impacts of different parameters on the performance of these models were analyzed.
-
-\section{Connection types of SEA}
-For a single Stirling engine, the heat transfer processes between fluids and engine are independent and irrelevant with the direction of the flows, which means the efficiency and power are not affected by the direction of fluids. However, for an SEA, the connection type will affect the temperature profiles through the array and the specific work production, both of which will determine the efficiency and power of the SEA. It is practically significant to investigate the influence of connection type of an SEA on its performance. Then it is essential to classify the SEAs based on the connection type.
-
-5 basic connection types of SEA were summarized according to the direction-irrelevant feature of Stirling engine, as shown in Figure~\ref{fig:SEA}. Type 1 is parallel flow, Type 2 is serial flows in the same order, Type 3 is serial flows in the reverse order, Type 4 is heating fluid in serial flow and cooling fluid in parallel flow and Type 5 is heating fluid in parallel flow and cooling fluid in serial flow.
-
-\noindent \begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/BasicSEA}
-	\caption{5 basic connection types of SEA}
-	\label{fig:SEA}
-\end{center}
-\end{figure}
-
-All other connection types are the combination of these 5 basic connection types. For instance, an SEA in Figure~\ref{fig:SEA_eg} is the combination of Type 2 and Type 4.
-%Besides, in the tradition form of solar dish system, Stirling engines are put on the focus points of the dish collectors, which can be considered as a particular case of Type 1.
-
-\noindent \begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/SEA_eg}
-	\caption{An instance of connection type of an SEA}
-	\label{fig:SEA_eg}
-\end{center}
-\end{figure}
-
-\section{Thermodynamic analysis of Stirling engine}
-\subsection{Stirling engine model\label{sec:StirlingEngineModel}}
+\subsection{Stirling engine\label{sec:StirlingEngineModel}}
 \subsubsection{Theoretical Stirling cycle}
 In a Stirling cycle, there are two isothermal processes that exchange heat with heating and cooling fluids, two isochoric processes that exchange heat with regenerator. In Figure~\ref{fig:StirlingCycle}, the heat absorbed by regenerator in process 4-1 is reused in process 2-3, but only able to heat the working gas from 2 to 3' due to the imperfect regeneration. $e$ is defined as the regenerator effectiveness\cite{Formosa2010,Juhasz2010}, $e=\frac{T_R-T_L}{T_H-T_L}$, where $T_H$ is the temperature in the hot space, $T_L$ is the temperature in the cold space, $T_R$ is the effective working fluid temperature in the regenerator.
 \nomenclature{$e$}{regenerator effectiveness}
@@ -665,7 +568,7 @@ Efficiency of the Stirling engine
 \end{equation}
 
 
-\subsection{Model validation}
+\subsubsection{Model validation}
 
 Evaluation of the developed thermal model was performed by considering the GPU-3 Stirling engine as a case study. Design specifications of the GPU-3 Stirling engine are indicated in Table~\ref{tab:GPU3parameters}. The thermal efficiency and power of the proposed Stirling engine model was compared with previous thermal models and experimental data as shown in Table~\ref{tab:EfficiencyComparison} and Table~\ref{tab:PowerComparison}.
 
@@ -792,7 +695,7 @@ Table~\ref{tab:EfficiencyComparison} and~\ref{tab:PowerComparison} indicate that
 
 However, there is still some discrepancy between the the simulation results of proposed model and the experimental data. In the future researches, more accurate models of Stirling engine may be developed by considering other irreversibilities such as heat loss to the environment, gas spring hysteresis, and etc. It is worth pointing that there are more accurate Stirling engine models. For example, polytropic simulation models of Stirling engine show higher accuracy than our proposed model~\cite{Hosseinzade2015, Babaelahi2015}. However, the model needs more costly calculations and the polytropic indexes are engine-specific.
 
-\subsection{Heat transfer between the engine and the fluids}
+\subsubsection{Heat transfer between the engine and the fluids}
 
 For a Stirling engine thermal process, the wall temperatures of the heater and cooler are considered to be uniform and constant. The heat transferred between the wall and the fluids is
 %with heating and cooling fluids, the heat exchange processes are considered to be isothermal processes.
@@ -863,6 +766,135 @@ Heat transferred from Stirling engine to cooling fluid in a cycle
 %%Equation~\ref{Eq:T_h},~\ref{Eq:T_c},~\ref{Eq:q_h} and~\ref{Eq:q_c}
 %Equation~\ref{Eq:T_h}-\ref{Eq:q_c}
 %. Then $\eta$ and $P$ can be obtained by Equation~\ref{Eq:eta} and~\ref{Eq:P}. This means the performance of a given Stirling engine can be inquired by the input/output parameters of heating/cooling fluids.
+
+\subsection{Other parts}
+\subsubsection{Steam generating system}
+The steam generating system can be divided into preheater, generator, superheater. They are all heat exchangers. 
+
+\subsubsection{Power generating system}
+
+\subsubsection{Condenser}
+
+\subsubsection{Deaerator}
+%\subsubsection{Thermal storage system}
+\section{Component connection}
+\section{Determination of state parameters}
+\section{Steam generating system}
+\section{Steam extraction and regeneration system}
+\section{Stirling engine array}
+
+Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=6\,\mathrm{m^2}$, $A_{se,2}=6\,\mathrm{m^2}$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times{}10^{-2}\,\mathrm{mol}$, $s_{se}=10\,\mathrm{s^{-1}}$.
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.4\columnwidth]{./fig/stirlingEngineArray}
+	\caption{Layout of Stirling engines}
+	\label{fig:Layout of Stirling engines}
+\end{center}
+\end{figure}
+
+Depending on the direction of heating and cooling flows, there are two possible flow types: parallel flow and counterflow. 
+%Figure~\ref{fig:ParallelFlow} and 
+Figure~\ref{fig:CounterFlow} show the heat transfer diagrams of the two flow types.
+%: \nomenclature{$n_1$}{Number of columns of the Stirling engine array} $n_1$ is chosen to be 10 and can be optimized later.
+
+\noindent \begin{figure}[htbp]
+\centering
+	\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Parallel.pdf}
+	\caption{Parallel flow}\label{fig:ParallelFlow}
+	\end{subfigure}
+	~
+\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Counter.pdf}
+	\caption{Counterflow}\label{fig:CounterFlow}
+	\end{subfigure}
+	\caption{Heat transfer diagram of parallel flow and counterflow}
+\end{figure}
+
+By solving above equations, efficiency of the Stirling engine array $\eta_{sea}$ can be obtained by $\eta_{sea}=1-\dfrac{\dot{m}_{2}(h_{2,o,n_1}-h_{2,i,1})}{\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})}$,
+power of each Stirling engine in column $x$, $P_{se,x}=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}$, and power of the Stirling engine array $P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})$.
+
+\section{Introduction}
+%The Stirling engine was invented in 1816, however, its practical use was largely confined to low power domestic applications for over a century due to its small capacity~\cite{Formosa2010}.
+With the emphasis on energy and environmental impact, recently gaining attention is focused on Stirling engine for its high efficiency, low maintenance requirement, flexibility on energy sources, no pollution, low explosion risk. Due to its closed cycle, it can use almost any heat source, which makes it compatible with alternative and renewable energy sources.
+
+The Stirling engine is widely used on solar dish system, known as dish-Stirling system. In a traditional dish-Stirling system, each Stirling engines is put on the focus of a parabolic dish to use the heat collected by the dish receiver for power generation. However, solar dish systems are not widely applied yet for its small capacity. Its capacity is mainly constrained by two factors: dish collector size and Stirling engine size. The dish size is limited for the cost and difficulty of production of large mirrors. The Stirling engine size is limited for its low power-to-weight ratio. The tracking feature of dish collector limits the weight of engine on the focal point. Besides, the size of engine is limited for it overlaps part of the collector.
+
+This paper presents new arrangements for dish-Stirling system demonstrated in Figure~\ref{fig:Dish_SEA} to solve the limitations. Stirling engines are put on the ground as a Stirling engine array (SEA). Heat collected by multiple dish collectors, or other types of collectors, or combination of different types of collectors, even heat from different heat sources is supplied to the SEA. Since the engines are static installations on the ground where space and weight are not at a premium any more, they can reach higher capacities. They can be connected in a different connection type and their performance may be improved compared to the traditional arrangement in which they are put on the focal points of each dish collector separately.
+
+%The Stirling engine is widely used on solar dish system, in which it is put on the focus of parabolic dish to use the heat collected by the dish receiver for power generation. However, solar dish systems are not widely applied yet for its small capacity. Its capacity is mainly constrained by two factors: dish collector size and Stirling engine size. The dish size is limited for the cost and difficulty of production of large mirrors. The Stirling engine size is limited for its low power-to-weight ratio. The tracking feature of dish collector limits the weight of engine on the focal point. Besides, the size of engine is limited for it will overlap part of the collector. This paper presents a solution demonstrated in Figure~\ref{fig:Dish_SEA}. Heat collected by multiple dish collectors, or other types of collectors, or combination of different types of collectors, even heat from different heat sources can be used for a Stirling engine array (SEA). Stirling engines are put on the ground as static installations where space and weight are not at a premium any more. The engines can reach higher capacities, they can be connected in a different connection type and their performance may be improved.
+\nomenclature[C]{SEA}{Stirling engine array}
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.7\columnwidth]{./fig/Dish_SEA}
+	\caption{New arrangement of dish-Stirling system}
+	\label{fig:Dish_SEA}
+\end{center}
+\end{figure}
+
+Great attention has focused on the application using parabolic dish to collect heat. Some researchers investigated the impact of various parameters on the optical and thermal performance of the solar dish receivers using Monte Carlo Ray Tracing Method (MCRTM) and/or numerical modeling methods~\cite{Cheng2013,Mao2014,Wang2010,Wang2013,Zhu2015,Sha2016,Daabo2016}. Some researchers considered the applications with different ways to use the collected heat. Loni et al.~\cite{Loni2016} considered a system using parabolic dish for an organic Rankine cycle. In the proposed system, thermal oil is used as the working fluid to transport the collected heat for the organic Rankine cycle. Wang et al.~\cite{Wang2014} proposed an inverse design method for a cavity receiver used in solar dish Brayton system. Craig et al.~\cite{Craig2016} evaluated a parabolic dish tubular receiver used in a dish Brayton cycle. An approach for incorporating a complex geometry like a tubular receiver generated using CFD software into SolTrace was developed. Aichmayer et al.~\cite{Aichmayer2015} presented a hybrid solar micro gas-turbine system integrating volumetric solar dish receiver. Concerning the solar dish receiver integration, both pressurized and atmospheric configurations have been considered. Lovegrove et al.~\cite{Lovegrove2004} presented an idea of using parabolic dish array to provide heat for ammonia based thermochemical energy storage. In this regard, using parabolic dishes to provide heat for SEA is applicable.
+
+A large number of studies have been done on Stirling engine analysis. To describe a Stirling engine's behavior precisely is a difficult task due to the various losses and irreversibilities in the engine.
+%Recent investigations~\cite{Tlili2006,Li2016} have found that these losses and irreversibilities in the thermodynamic cycle have significant importance in predicting the performance of Stirling engines.
+Researchers have done a lot of work to build a precise Stirling engine model. Different models of Stirling engines were developed using empirical~\cite{Senft1998,Costea1999,Prieto2003,Organ2013,Kongtragool2005,Thombare2008}, analytical~\cite{Ohtomo1995,Rogdakis2004,Kongtragool2006,Puech2011,Formosa2010,Shazly2014,Cullen2011,Ahmadi2013,Ahmadi2013b,Tursunbaev2007} and numerical methods~\cite{Urieli1984,Ni2016,Jia2016,Strauss2010,Abbas2014,Araoz2015,Babaelahi2015,Barreto2017,Wu1998,Li2011,Hosseinzade2015}.
+
+Among these methods, numerical methods obtain the most accurate models. Urieli and Berchowitz~\cite{Urieli1984} proposed an adiabatic model of Stirling engine considering some irreversible effects such as non-ideal heat transfer processes and pressure drop effect using numerical methods. The model is known as Simple model. Many researchers developed more accurate models based on the Simple model by using alternative methods or including more loss mechanisms.
+Ni et al.~\cite{Ni2016} proposed an improved Simple analytical model which considers the influence mechanism of rotary speed, pressure and working gas in the view of heat/power losses for Stirling engine performance.
+Jia et al.~\cite{Jia2016} developed a numerical model of free-piston engine generator. The dynamic equations have been linearized to simplify the model to a one-degree forced vibration system with various damping. The solving time of the proposed fast response model can be significantly reduced comparing to previous numerical models.
+Strauss and Dobson~\cite{Strauss2010} proposed an alternative method to calculate the regeneration heat loss and pumping losses, which is more suitable for preliminary engine design and optimization, known as Simple II model.
+Abbas~\cite{Abbas2014} considered the effects of non-ideal regeneration, shuttle loss and heat conduction losses based on Simple model.
+Araoz et al.~\cite{Araoz2015} developed a rigorous Stirling engine model with adiabatic working spaces, isothermal heat exchangers. It considers dead volumes, and imperfect regeneration, mechanical pumping losses due to friction, limited heat transfer and thermal losses on the heat exchangers. The model is suitable for different engine configurations ($\alpha$, $\beta$ and $\gamma$ engines).
+Babaelahi and Syyaadi~\cite{Babaelahi2015} proposed a new numerical thermal model based on polytropic expansion/compression processes. Differential equations in the expansion/compression processes were modified to polytropic processes in the new model. New model shows a better performance prediction compared with previous models.
+
+With the development of finite-time thermodynamics, many researchers studied the the finite-time thermodynamic performance of the Stirling engine. This analysis can also be used in the case of irreversible machines further considering the internal irreversibilities of a Stirling engine such as friction, pressure drop and entropy generation~\cite{Barreto2017}.
+Wu et al.~\cite{Wu1998} developed a numerical model considering finite-time effect to find out the relationship between the net power output and thermal efficiency of the engine.
+Li et al.~\cite{Li2011} developed a mathematical model of a high temperature differential dish-Stirling system with finite-time thermodynamics. Finite-rate heat transfer, regenerative heat losses, conductive thermal bridging losses and finite regeneration processes of the Stirling engine were considered in the model.
+Hosseinzade~\cite{Hosseinzade2015} presented a new closed-form thermal model for the thermal simulation of Stirling engines based on the combination of polytropic analysis of expansion/compression processes and the concept of finite speed thermodynamics.
+Instead of finite-time method, Ahmadi et al.~\cite{Ahmadi2016b} proposed a finite-speed thermodynamic analysis based on the first law of thermodynamics for a closed system with finite speed and the direct method. The effects of heat source temperature, regenerating effectiveness, volumetric ratio, piston stroke as well as rotational speed are included in the analysis.
+Chen et al.~\cite{Chen2007} developed a heat-engine cycle model using finite-time thermodynamics. The model, considered the losses due to heat-resistance, heat leaks and internal irreversibility, is applicable for generalized irreversible universal steady-flow heat-engine cycles.
+%Cullen~\cite{Cullen2011} developed a theoretical Stirling engine model by using decoupled engine configuration in which working space swept volume, volume variation, phase angle and dead space ratio are controlled via a black-box electronic controller.
+
+%Thombare~\cite{Thombare2008} presented a detailed review of the past methods and techniques used for engine analysis. Analysis of heat transfer phenomenon in the engine was also included in the review. Formosa~\cite{Formosa2010} developed an analytical model to predict the periodic steady operation under isothermal assumption and simplified heat transfer model. The model was validated using the experimental data of the General Motor GPU-3 Stirling engine prototype. Ohtomo~\cite{Ohtomo1995} proposed a simple graphic vector analysis method for the first-order estimation of the theoretical performance of Stirling engine with Schmidt assumption and, for simplicity, approximates all volume and pressure fluctuations as sinusoidal. Rogdakis~\cite{Rogdakis2004} used a linearization technique of the dynamic balance equations to predict the thermodynamic conditions for stable operation of free piston Stirling engines. Costea~\cite{Costea1999} considered the effects of both internal and external irreversibilities of the cycle. According to his research, the real cycle efficiency is approximately half the ideal cycle efficiency when the engine is operated at the optimum temperature. Araoz~\cite{Araoz2015} investigated the possible causes that limited the performance of a Stirling engine. Based on a second order Stirling engine model developed and validated previously, he implemented an analysis with the integration of thermodynamics, and the thermal and mechanical interactions of kinematic Stirling engines. Wu~\cite{Wu1998} built a model of Stirling engine with heat transfer and imperfect regeneration irreversibilities and derived the relationship between net power output and thermal efficiency by the model. Puech~\cite{Puech2011} and Kongtragool~\cite{Kongtragool2006} considered the influence of dead volume and imperfect regeneration on Stirling engine. An isothermal model was used to analyze the net work and the heat stored in the regenerator during a complete cycle. An analytical expression to estimate the improvement due to the regenerator has been proposed including the combined effects of dead volume and imperfect regeneration.  Formosa~\cite{Formosa2011} developed and validated an analytical thermodynamic model which encompasses the effectiveness and the flaws of the heat exchangers and the regenerator.
+
+On the other side of the researches, multi-objective optimization algorithms were used considering multi-variables to obtain a better performance was paid for attention by numbers of researchers recently~\cite{Ahmadi2016,Li2016b,Patel2016,Luo2016}.
+Ahmadi et al.~\cite{Ahmadi2016} performed the thermodynamic analysis of solar dish Stirling engine based on the finite-time thermodynamics. Then the NSGA-II algorithm was applied. Three objectives, thermal efficiency, entransy loss rate and power output, were set as the objectives and three well known decision making methods have been employed in the algorithm.
+Li et al.~\cite{Li2016b} developed a multi-objective optimization model of a solar energy powered gamma type Stirling engine using Finite Physical Dimensions Thermodynamics (FPDT) method by multi-objective criteria. Genetic algorithm was used to get the Pareto frontier, and optimum points were obtained using the decision different making methods. Results show that total thermal conductance, hot temperature, stroke and diameter ratios can be improved.
+Patel and Savsani~\cite{Patel2016} developed a strategy for multi-objective optimization for Stirling engines using TS-TLBO (tutorial training and self learning inspired teaching-learning-based optimization) algorithm. An application example with eleven decision variables and three objectives are considered.
+Luo et al.~\cite{Luo2016} proposed a multiple optimization method that combines multiple optimization algorithms including differential evolution, genetic algorithm and adaptive simulated annealing. The optimization considers five decision variables, including engine frequency, mean effective pressure, temperature of heating source, number of wires in regenerator matrix, and the wire diameter of regenerator for maximum efficiency and output power.
+
+
+%There are multiple connection types for Stirling engines in an SEA, and the connection type will change the heating and cooling fluid properties, such as flow rate and temperature, of each Stirling engine in an SEA, which can affect the efficiency of each Stirling engine. So the same Stirling engines with the same heating and cooling fluid may produce different amount of work with different thermal efficiencies depending on their connection types.
+
+However, the literature review indicates that the analysis of arrangements of Stirling engines, classification and performance of the SEA, has not been reported till now. In this regard, this paper investigated the connection types of SEA and its influence on SEA performance. Connection types of SEA were classified and 5 basic connection types were put forward. According to Organ's theory~\cite{Organ1997}, one equivalent analytical Stirling engine model always exists for different types ($\alpha$ type, $\beta$ type and $\gamma$ type) of engines. To find out the influence of connection type of SEA and to avoid falling into the problem of developing specific Stirling engine model, a Stirling engine model based on some assumptions and simplifications was developed. This model was evaluated using experimental data of the General Motor GPU-3 Stirling engine prototype. Imperfect regeneration and some irreversibilities were considered. Heat transfer analysis of Stirling engine with heating and cooling fluids was also included. SEA models of different connection types were built depending on the engine model. Impacts of different parameters on the performance of these models were analyzed.
+
+\section{Connection types of SEA}
+For a single Stirling engine, the heat transfer processes between fluids and engine are independent and irrelevant with the direction of the flows, which means the efficiency and power are not affected by the direction of fluids. However, for an SEA, the connection type will affect the temperature profiles through the array and the specific work production, both of which will determine the efficiency and power of the SEA. It is practically significant to investigate the influence of connection type of an SEA on its performance. Then it is essential to classify the SEAs based on the connection type.
+
+5 basic connection types of SEA were summarized according to the direction-irrelevant feature of Stirling engine, as shown in Figure~\ref{fig:SEA}. Type 1 is parallel flow, Type 2 is serial flows in the same order, Type 3 is serial flows in the reverse order, Type 4 is heating fluid in serial flow and cooling fluid in parallel flow and Type 5 is heating fluid in parallel flow and cooling fluid in serial flow.
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.7\columnwidth]{./fig/BasicSEA}
+	\caption{5 basic connection types of SEA}
+	\label{fig:SEA}
+\end{center}
+\end{figure}
+
+All other connection types are the combination of these 5 basic connection types. For instance, an SEA in Figure~\ref{fig:SEA_eg} is the combination of Type 2 and Type 4.
+%Besides, in the tradition form of solar dish system, Stirling engines are put on the focus points of the dish collectors, which can be considered as a particular case of Type 1.
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.7\columnwidth]{./fig/SEA_eg}
+	\caption{An instance of connection type of an SEA}
+	\label{fig:SEA_eg}
+\end{center}
+\end{figure}
+
+\section{Thermodynamic analysis of Stirling engine}
+
 
 \section{Modeling of the SEAs}
 

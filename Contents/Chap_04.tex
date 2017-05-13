@@ -8,7 +8,7 @@ Five basic connection types of SEA were summarized according to the direction-ir
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/BasicSEA}
+	\includegraphics[width = 0.7\columnwidth]{fig/BasicSEA}
 	\caption{Five basic connection types of SEA}
 	\label{fig:SEA}
 \end{center}
@@ -16,457 +16,457 @@ Five basic connection types of SEA were summarized according to the direction-ir
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/SEA_eg}
+	\includegraphics[width = 0.7\columnwidth]{fig/SEA_eg}
 	\caption{An instance of connection type of an SEA}
 	\label{fig:SEA_eg}
 \end{center}
 \end{figure}
 
-\section{Thermodynamic analysis of Stirling engine}
-\subsection{Stirling engine model\label{sec:StirlingEngineModel}}
-\subsubsection{Theoretical Stirling cycle}
-In a Stirling cycle, there are two isothermal processes that exchange heat with heating and cooling fluids, two isochoric processes that exchange heat with regenerator. Figure~\ref{fig:StirlingCycle} shows the schematic of a Stirling cycle, process 1-2 and process 3-4 are the two isothermal processes, process 2-3 and process 4-1 are the two isochoric processes. The heat absorbed by regenerator in process 4-1 is reused in process 2-3, but only able to heat the working gas from 2 to 3' due to the imperfect regeneration. $e$ is defined as the regenerator effectiveness for the imperfect regeneration~\cite{Formosa2010}, $e=\frac{T_R-T_L}{T_H-T_L}$, where $T_H$ is the temperature in the hot space, $T_L$ is the temperature in the cold space, $T_R$ is the effective working fluid temperature in the regenerator.
-\nomenclature{$e$}{regenerator effectiveness}
-\nomenclature{$T_R$}{effective working fluid temperature in regenerator (K)}
-\nomenclature{$T_L$}{working fluid temperature in the cold space (K)}
-\nomenclature{$T_H$}{working fluid temperature in the hot space (K)}
-
-\noindent \begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/StirlingCycle}
-	\caption{$T$-$s$ diagram of a Stirling cycle}
-	\label{fig:StirlingCycle}
-\end{center}
-\end{figure}
-
-In order to obtain a simplified analytical model, several simplifications were made:
-
-\begin{itemize}
-\item The working gas in Stirling engines obeys the idea gas law. 
-\item No heat loss to the environment for Stirling engines.
-\item Overall heat transfer coefficients of the fluids are constant.
-\item A symmetrical regenerator behavior is assumed~\cite{Formosa2010} so that a simple effectiveness can be obtain by $T_{R}=\frac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$.
-\end{itemize}
-
-To consider internal irreversibilities in Stirling cycle made by dead volumes, as described in~\cite{Duan2014}, total dead volume $V_D$ is divided into heater dead volume $V_{DH}$, regenerator dead volume $V_{DR}$ and cooler dead volume $V_{DC}$. There exists a factor $K$ to describe the dead volumes under different temperatures. $K$ is relevant with temperatures in the process and regenerator effectiveness.
-\nomenclature{$V_D$}{total dead volume (m$^3$)}
-\nomenclature{$V_{DH}$}{hot space dead volume (m$^3$)}
-\nomenclature{$V_{DR}$}{regenerator dead volume (m$^3$)}
-\nomenclature{$V_{DC}$}{cold space dead volume (m$^3$)}
-
-\begin{equation}
-	K = \frac{V_{DH}}{T_H} + \frac{V_{DR}}{T_R} + \frac{V_{DC}}{T_L}
-\end{equation}
-\nomenclature{$K$}{dead volume factor}
-
-For the isothermal compression process 1-2, the output work
-
-\begin{equation}
-	W_{12} = \int^{V_E}_{V_E+V_C}{p_{12}dV}=-mRT_L\ln{\frac{V_E+V_C+KT_L}{V_E+KT_L}}
-\end{equation}
-%\nomenclature{$W_{12}$}{output work in process 1-2 (J)}
-\nomenclature{$V_E$}{expansion volume (m$^3$)}
-\nomenclature{$V_C$}{compression volume (m$^3$)}
-\nomenclature{$m$}{mass of working fluid in Stirling engine (kg)}
-\nomenclature{$R$}{gas constant (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
-
-For the isothermal expansion process 3-4, the output work
-
-\begin{equation}
-	W_{34} = \int^{V_E+V_C}_{V_E}{p_{34}dV}=mRT_H\ln{\frac{V_E+V_C+KT_H}{V_E+KT_H}}
-\end{equation}
-%\nomenclature{$W_{34}$}{output work in process 3-4 (J)}
-
-Define $\gamma_H = \frac{V_E+V_C+KT_H}{V_E+KT_H}$, and $\gamma_L = \frac{V_E+V_C+KT_L}{V_E+KT_L}$, so in a cycle, the theoretical output work
-\nomenclature[G]{$\gamma_H$}{space ratio in process 12}
-\nomenclature[G]{$\gamma_L$}{space ratio in process 34}
-
-\begin{equation}
-	W_{th} = W_{12} + W_{34} = mR(T_H\ln\gamma_H - T_L\ln\gamma_L)
-\end{equation}
-\nomenclature{$W$}{output work (J)}
-\nomenclature[S]{$th$}{theoretical}
-
-For the isochoric heating process 3'-3, the absorbed heat
-
-\begin{equation}
-	\begin{split}
-		Q_{3^{'}3} = nc_v(T_H-T_R)
-%		\\=n(1-e)c_v(T_H-T_L)
-		=\frac{1-e}{k-1}mR(T_H-T_L)
-	\end{split}
-\end{equation}
-
-%\nomenclature{$Q_{3^{'}3}$}{heat absorbed in process $3^{'}3$ (J)}
-%\nomenclature{$M$}{Mole mass of the working fluid in Stirling engine (kg/mol)}
-\nomenclature{$c_v$}{specific heat at constant volume (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
-\nomenclature{$k$}{specific heat ratio ($c_p/c_v$), thermal conductivity ($\mathrm{W\cdot m^{-1}\cdot K^{-1}}$)}
-
-For the isothermal expansion process 3-4, the absorbed heat
-
-\begin{equation}
-	Q_{34} = W_{34} = mRT_H\ln\gamma_H
-\end{equation}
-%\nomenclature{$Q_{34}$}{heat absorbed in process 3-4 (J)}
-
-In a cycle, the theoretical absorbed heat
-
-\begin{equation}
-	Q_{th} = Q_{3^{'}3} + Q_{34} = \frac{1-e}{k-1}mR(T_H-T_L) + mRT_H\ln\gamma_H
-\end{equation}
-\nomenclature{$Q$}{absorbed heat (J)}
-
-%The Stirling cycle efficiency
-
-%\begin{equation}
-%	\eta = \frac{W}{Q} = \frac{T_H\ln\gamma_H - T_L\ln\gamma_L}{T_H\ln\gamma_H + \frac{1-e}{k-1}(T_H-T_L)}
-%	\label{Eq:eta}
-%\end{equation}
-%\nomenclature[G]{$\eta$}{efficiency of a Stirling engine}
+%\section{Thermodynamic analysis of Stirling engine}
+%\subsection{Stirling engine model}\label{sec:StirlingEngineModel}
+%\subsubsection{Theoretical Stirling cycle}
+%In a Stirling cycle, there are two isothermal processes that exchange heat with heating and cooling fluids, two isochoric processes that exchange heat with regenerator. Figure~\ref{fig:StirlingCycle} shows the schematic of a Stirling cycle, process 1-2 and process 3-4 are the two isothermal processes, process 2-3 and process 4-1 are the two isochoric processes. The heat absorbed by regenerator in process 4-1 is reused in process 2-3, but only able to heat the working gas from 2 to 3' due to the imperfect regeneration. $e$ is defined as the regenerator effectiveness for the imperfect regeneration~\cite{Formosa2010}, $e=\frac{T_R-T_L}{T_H-T_L}$, where $T_H$ is the temperature in the hot space, $T_L$ is the temperature in the cold space, $T_R$ is the effective working fluid temperature in the regenerator.
+%\nomenclature{$e$}{regenerator effectiveness}
+%\nomenclature{$T_R$}{effective working fluid temperature in regenerator (K)}
+%\nomenclature{$T_L$}{working fluid temperature in the cold space (K)}
+%\nomenclature{$T_H$}{working fluid temperature in the hot space (K)}
 %
-%and the output power
-%
-%\begin{equation}
-%	P = {W}s_{se} = mRs_{se}(T_H\ln\gamma_H - T_L\ln\gamma_L)
-%	\label{Eq:P}
-%\end{equation}
-\nomenclature{$P$}{power of Stirling engine (W)}
-\nomenclature{$s_{se}$}{speed of Stirling engine (Hz)}
-
-%In order to describe quantitatively the effect of the internal dissipation of the working fluid on the performance (efficiency and power) of Stirling engine, the cycle irreversibility parameter, $R_S$, is defined as~\cite{Kaushik2003}:
-%\nomenclature{$R_S$}{cycle irreversibility parameter}
-%
-%\begin{equation}
-%	R_S = \frac{\ln\gamma_H}{\ln\gamma_L} = \frac{s_4 - s_3}{s_1 - s_2}
-%\end{equation}
-%\nomenclature{$s$}{specific entropy (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
-%
-%If the internal processes are reversible, $R_S = 1$, Equation~\ref{Eq:eta} becomes the same as described in~\cite{Stine1994}:
-%
-%\begin{equation}
-%	\eta = \frac{T_H - T_L}{T_H + \frac{1-e}{k-1}\cdot\frac{T_H-T_L}{\ln\gamma}}
-%\end{equation}
-%\nomenclature[G]{$\gamma$}{compression ratio}
-
-%It can be found from Equation~\ref{Eq:eta} and~\ref{Eq:P} that 
-%given the properties of a Stirling engine, its efficiency and power can be obtained by known $T_H$ and $T_L$.
-
-\subsubsection{Irreversibilities and losses}
-
-\begin{enumerate}
-\item Non-ideal heat transfer effect
-
-Because of non-ideal heater and cooler, the working fluid temperature ($T_{H}$, $T_L$) in these two heat exchangers is less/higher than the wall temperature ($T_{hw}$, $T_{cw}$), respectively. And $T_{H}$ and $T_{L}$ can be corrected by the wall temperatures as follows:
-
-\begin{equation}
-	T_H = T_{hw} - \frac{Qs_{se}}{h_hA_{hw}}
-	\label{eq:T_H}
-\end{equation}
-\nomenclature[S]{$hw$}{heater wall}
-
-\begin{equation}
-	T_L = T_{cw} + \frac{(Q-W)s_{se}}{h_cA_{cw}}
-	\label{eq:T_L}
-\end{equation}
-\nomenclature[S]{$cw$}{cooler wall}
-
-The heat transfer coefficient can be obtained using the following correlation~\cite{Babaelahi2015}:
-
-\begin{equation}
-	h_{h,c} = \frac{\mu c_pf_{Re}}{2D_{h,c}Pr_{h,c}}
-\end{equation}
-\nomenclature[G]{$\mu$}{dynamic viscosity ($\mathrm{kg\cdot m^{-1}\cdot s^{-1}}$)}
-
-where $f_{Re}$ is a Reynolds friction factor defined as:
-
-\begin{equation}
-	f_{Re} = 0.0791{Re_{h,c}}^{0.75}
-\end{equation}
-
-$Re_{h,c}$, $Pr_{h,c}$ and $D_{h,c}$ are Reynolds number, Prandtl number and hydraulic diameter of the heater/cooler exchanger.
-
-\item Effect of pressure drop
-
-Pressure drops in the heat exchangers cause power losses of the Stirling engine. The pressure drops can be obtained by~\cite{Urieli1984}:
-
-\begin{equation}
-	\Delta p = -\frac{2f_{Re}\mu u V}{d^2A}
-\end{equation}
-\nomenclature{$p$}{pressure (Pa)}
-
-where $u$ is the working gas speed, $V$ is volume, $A$ is flow cross-section area.
-
-The net power loss of the Stirling engine due to pressure drop of the heat exchangers can be evaluated by:
-
-\begin{equation}
-	W_{pd} = \oint\underset{i = E,C}{\sum}(\Delta p_{i}\frac{dV_i}{d\theta})d\theta
-\end{equation}
-
-\item Effect of finite speed of piston and mechanical friction
-
-Due to the finite speed of piston, the pressure on the piston surface is different from the pressure of expansion and compression spaces. It has been demonstrated that the pressure on the piston surface in the expansion process is less than the mean pressure in the expansion space. Similarly, the pressure on the piston surface in the compression process is greater than the mean pressure in the compression space. This means the output work is less than the theoretical value. Besides, The output work also reduces due to mechanical friction. The output work loss due to finite speed of piston and mechanical friction can be obtained as follows~\cite{Babaelahi2015}:
-
-\begin{equation}
-	W_{fs} = \oint p(\pm\frac{au_p}{c}\pm\frac{\Delta p_f}{p})dV
-\end{equation}
-
-where the sign (+) is used in the compression space, and the sign (-) is used in the expansion space. $p$ is the mean pressure in the compression/expansion space, $u_p$ is velocity of the piston, $c$ is the average speed of molecules and $\Delta p_f$ is the pressure loss due to mechanical friction. $\Delta p_f$, $a$ and $c$ can be obtained by~\cite{Heywood1988}:
-
-\begin{equation}
-	\Delta p_f = 0.97+0.009s_{se}
-\end{equation}
-\begin{equation}
-	a = \sqrt{3k}
-\end{equation}
-\begin{equation}
-	c = \sqrt{3RT}
-\end{equation}
-
-\item Energy losses due to internal conduction
-
-The temperature differs from the heater and cooler, heat losses from heater to cooler exists due to internal conduction through the walls of regenerator.~\cite{Strauss2010} The internal conduction loss in a cycle can be obtained by follows:
-
-\begin{equation}
-	Q_{id} = \frac{k_rA_r}{L_rs_{se}}(T_{hw} - T_{cw})
-\end{equation}
-
-where, $k_r$, $A_r$ and $L_r$ denote the regenerator matrix conductivity, regenerator length, and regenerator conductive area respectively.
-\nomenclature[S]{$r$}{regenerator}
-
-\item Energy losses due to shuttle conduction
-
-The displacer shuttles between the expansion and compression space. It absorbs heat during the hot end of its stroke and releases it during the cold end of its stroke. This heat loss can be estimated as~\cite{Timoumi2008}:
-
-\begin{equation}
-	Q_{sc} = 0.4\frac{Z^2k_pD_p}{JL_ds_{se}}(T_{H} - T_{L})
-\end{equation}
-
-where, $Z$, $k_p$, $D_p$, $J$ and $L_d$ denote the displacer stroke, piston thermal conductivity, displacer diameter, gap between the displacer and the cylinder, and length of the displacer respectively.
-\nomenclature{$Z$}{displacer stroke (m)}
-\nomenclature{$J$}{annular gap cylinder displacer (m)}
-\nomenclature[S]{$p$}{piston}
-
-\end{enumerate}
-
-So, in a Stirling engine, the total absorbed heat in a cycle
-
-\begin{equation}
-	Q = Q_{th} + Q_{id} + Q_{sc}
-\end{equation}
-
-the output work
-
-\begin{equation}
-	W = W_{th} - W_{pd} - W_{fs}
-\end{equation}
-
-Power of the Stirling engine
-
-\begin{equation}
-	P = Ws_{se}
-	\label{Eq:P}
-\end{equation}
-
-Efficiency of the Stirling engine
-
-\begin{equation}
-	\eta = W/Q
-	\label{Eq:eta}
-\end{equation}
-
-
-\subsection{Model validation~\label{sec:modelValidation}}
-
-Evaluation of the developed thermal model was performed by considering the GPU-3 Stirling engine as a case study. Design specifications of the GPU-3 Stirling engine are indicated in Table~\ref{tab:GPU3parameters}. The thermal efficiency and power of the proposed Stirling engine model was compared with previous thermal models and experimental data as shown in Table~\ref{tab:EfficiencyComparison} and Table~\ref{tab:PowerComparison}.
-
-\begin{table*}[htbp]\footnotesize
-	\caption{Design specifications of the GPU-3 Stirling engine~\cite{Babaelahi2015,Martini1983}}
-	\begin{center}
-	\begin{tabular}{ll}
-		\toprule
-		Parameter				&	Value\\
-		\midrule
-		Engine type					&	$\beta$\\
-		Working gas			&	Helium\\
-		Mass of the working gas	&	1.136\,g\\
-		\emph{Heater}			&\\
-		Number of tubes		&	40\\
-		Tube external diameter	&	4.83$\times10^{-3}\,\mathrm{m}$\\
-		Tube internal diameter	&	3.02$\times10^{-3}\,\mathrm{m}$\\
-		Tube length (cylinder side)&	0.1164\,m\\
-		Tube length (regenerator side)		&	0.1289\,m\\
-		\emph{Cooler}			&\\
-		Number of tubes		&	312\\
-		Tube external diameter	&	1.59$\times10^{-3}\,\mathrm{m}$\\
-		Tube internal diameter	&	1.09$\times10^{-3}\,\mathrm{m}$\\
-		Average tube length		&	4.61$\times10^{-2}\,\mathrm{m}$\\
-		\emph{Regenerator}		&\\
-		Number of regenerator	&	8\\
-		Regenerator internal diameter	&	2.26$\times10^{-2}\,\mathrm{m}$\\
-		Regenerator length		&	2.26$\times10^{-2}\,\mathrm{m}$\\
-		Diameter of regenerator tube	&	4$\times10^{-5}\,\mathrm{m}$\\
-		Material				&	Stainless steel\\
-		\emph{Volume}			&\\
-		Swept Vol. (expansion/compression)	&	120.82/114.13\,$\mathrm{cm}^3$\\
-		Clearance Vol. (expansion/compression)	&	30.52/28.68\,$\mathrm{cm}^3$\\
-		Dead Vol. (heater/cooler/regenerator)	&	70.28/13.18/50.55\,$\mathrm{cm}^3$\\
-		\bottomrule
-	\end{tabular}
-	\end{center}
-	\label{tab:GPU3parameters}
-\end{table*}
-
-
-\begin{table*}[htbp]\footnotesize
-	\caption{Thermal efficiency of the proposed model, previous thermal models and experimental data(at $T_{hw}=922\,\mathrm{K}$ and $T_{cw}=288\,\mathrm{K}$)}
-	\begin{center}
-	\begin{tabular}{cccccccccccc}
-		\toprule
-		\multirow{7}{0.5in}{\tabincell{l}{Rotation\\speed\\(Hz)}}	&	\multirow{7}{0.5in}{Mean effective pressure (MPa)}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Thermal efficiency predicted by the simple analysis (variable Pr~\cite{Urieli1984})}}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Thermal efficiency predicted by the adiabatic analysis (simple II~\cite{Strauss2010})}}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Thermal efficiency predicted by the proposed Stirling Engine model}}	&	\multirow{4}{*}{\tabincell{l}{Experimental\\efficiency~\cite{Babaelahi2015}}}\\
-		\\
-		\\
-		\\
-		\cline{3-12}
-		&&\multirow{3}{*}{\tabincell{c}{Value\\(\%)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Value\\(\%)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Value\\(\%)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Actual\\value\\(\%)}}\\
-		\\
-		\\
-		\midrule
-		16.67	&\multirow{6}{*}{2.76}	&38.72	&18.22	&\multirow{6}{*}{17.90}	&32.48	&11.98	&\multirow{6}{*}{12.85}	&28.16	&7.66	&\multirow{6}{*}{12.10}	&20.50\\
-		25.00	&&36.16	&15.46	&&31.21	&10.51	&&27.75	&7.05	&&20.70\\
-		33.33	&&33.79	&15.79	&&29.45	&11.45	&&27.43	&9.43	&&18.00\\
-		41.67	&&31.48	&16.28	&&27.45	&12.25	&&27.17	&11.97	&&15.20\\
-		50.00	&&29.12	&17.32	&&25.21	&13.41	&&26.94	&15.14	&&11.80\\
-		58.33	&&29.74	&24.34	&&22.89	&17.49	&&26.74	&21.34	&&5.40\\
-		\midrule
-		25.00	&\multirow{5}{*}{4.14}	&35.65	&10.85	&\multirow{5}{*}{11.46}	&32.29	&7.49	&\multirow{5}{*}{8.28}	&27.29	&2.49	&\multirow{5}{*}{6.65}	&24.80\\
-		33.33	&&33.52	&9.62	&&30.40	&6.50	&&26.94	&3.04	&&23.90\\
-		41.67	&&31.48	&10.18	&&28.39	&7.09	&&26.65	&5.35	&&21.30\\
-		50.00	&&29.45	&11.25	&&26.33	&8.13	&&26.39	&8.19	&&18.20\\
-		58.33	&&27.40	&15.40	&&24.21	&12.21	&&26.17	&14.17	&&12.00\\
-		\midrule
-		41.67	&\multirow{3}{*}{5.52}	&31.20	&8.70	&\multirow{3}{*}{10.82}	&28.59	&6.09	&\multirow{3}{*}{8.11}	&26.24	&3.74	&\multirow{3}{*}{7.48}	&22.50\\
-		50.00	&&29.33	&10.53	&&26.62	&7.82	&&25.97	&7.17	&&18.80\\
-		58.33	&&27.44	&13.24	&&24.62	&10.42	&&25.73	&11.53	&&14.20\\
-		\midrule
-		50.00	&\multirow{2}{*}{6.90}	&29.07	&10.37	&\multirow{2}{*}{11.73}	&26.61	&7.91	&\multirow{2}{*}{9.19}	&25.62	&6.92	&\multirow{2}{*}{9.05}		&18.70\\
-		58.33	&&27.29	&13.09	&&24.67	&10.47	&&25.37	&11.17	&&14.20\\
-		\bottomrule
-	\end{tabular}
-	\end{center}
-	\label{tab:EfficiencyComparison}
-\end{table*}
-
-\begin{table*}[htbp]\footnotesize
-	\caption{Output power of the proposed model, previous thermal models and experimental data(at $T_{hw}=922\,\mathrm{K}$ and $T_{cw}=288\,\mathrm{K}$)}
-	\begin{center}
-	\begin{tabular}{cccccccccccc}
-		\toprule
-		\multirow{7}{0.5in}{\tabincell{l}{Rotation\\speed\\(Hz)}}	&	\multirow{7}{0.5in}{Mean effective pressure (MPa)}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Output power predicted by the simple analysis (variable Pr~\cite{Urieli1984})}}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Output power predicted by the adiabatic analysis (simple II~\cite{Strauss2010})}}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Output power predicted by the proposed Stirling Engine model}}	&	\multirow{4}{*}{\tabincell{l}{Experimental\\output\\power\\(kW)~\cite{Babaelahi2015}}}\\
-		\\
-		\\
-		\\
-		\cline{3-12}
-		&&\multirow{3}{*}{\tabincell{c}{Value\\(kW)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Value\\(kW)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Value\\(kW)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Actual\\value\\(kW)}}\\
-		\\
-		\\
-		\midrule
-		16.67	&\multirow{6}{*}{2.76}	&1.796	&119.02	&\multirow{6}{*}{272.03}	&1.772	&116.10	&\multirow{6}{*}{254.71}	&0.861	&4.98	&\multirow{6}{*}{104.84}	&0.82\\
-		25.00	&&2.555	&128.13	&&2.500	&123.21	&&1.253	&11.88	&&1.12\\
-		33.33	&&3.215	&165.70	&&3.117	&157.60	&&1.632	&34.88	&&1.21\\
-		41.67	&&3.769	&211.49	&&3.615	&198.76	&&2.001	&65.37	&&1.21\\
-		50.00	&&4.195	&303.37	&&3.973	&282.08	&&2.362	&127.12	&&1.04\\
-		58.33	&&4.505	&704.46	&&4.203	&650.54	&&2.715	&384.82	&&0.56\\
-		\midrule
-		25.00	&\multirow{5}{*}{4.14}	&3.844	&114.75	&\multirow{5}{*}{259.70}	&3.761	&110.11	&\multirow{5}{*}{158.41}	&1.818	&1.56	&\multirow{5}{*}{39.83}	&1.79\\
-		33.33	&&4.856	&120.73	&&4.708	&114.00	&&2.362	&7.36	&&2.20\\
-		41.67	&&5.734	&136.94	&&5.501	&127.31	&&2.890	&19.42	&&2.42\\
-		50.00	&&6.462	&174.98	&&6.126	&160.68	&&3.405	&44.89	&&2.35\\
-		58.33	&&7.030	&306.36	&&6.573	&279.94	&&3.908	&125.90	&&1.73\\
-		\midrule
-		41.67	&\multirow{3}{*}{5.52}	&7.645	&133.08	&\multirow{3}{*}{180.02}	&7.334	&123.60	&\multirow{3}{*}{164.91}	&3.742	&14.09	&\multirow{3}{*}{43.68}	&3.28\\
-		50.00	&&8.655	&163.87	&&8.206	&150.18	&&4.401	&34.18	&&3.28\\
-		58.33	&&9.470	&243.12	&&8.858	&220.94	&&5.045	&82.79	&&2.76\\
-		\midrule
-		50.00	&\multirow{2}{*}{6.90}	&10.788	&174.50	&\multirow{2}{*}{287.04}	&10.223	&160.13	&\multirow{2}{*}{263.63}	&5.362	&36.44	&\multirow{2}{*}{97.75}		&3.93\\
-		58.33	&&11.840	&399.58	&&11.071	&367.13	&&6.140	&159.07	&&2.37\\
-		\bottomrule
-	\end{tabular}
-	\end{center}
-	\label{tab:PowerComparison}
-\end{table*}
-
-It can be found that the proposed model has much better agreement with the experimental results than previous thermal models at various rotation speeds and mean effective pressures. It is required to mention that in all thermal models both power $W$ and input heat $Q$ were determined by the thermal process of heat transfer between the wall and working gas. In the proposed model, $W$ and $Q$ are obtained by Equation~\ref{eq:T_H} and~\ref{eq:T_L}. Therefore, all the three parameters $W$, $Q$ and $\eta$ are determined by the thermal model and input parameters to the model. These input parameters include heater, cooler, mean effective pressure, type of working gas and geometrical specification of the engine.
-
-Table~\ref{tab:EfficiencyComparison} and~\ref{tab:PowerComparison} indicate that when mean effective pressure of the engine increases from $2.76\,\mathrm{MPa}$ to $6.90\,\mathrm{MPa}$, best performance (efficiency and power) prediction of the proposed model exists. When rotation speed increases from $16.67\,\mathrm{Hz}$ to $58.33\,\mathrm{Hz}$, error in prediction of performance of the proposed model increases. The proposed model may have the best performance prediction at a low rotation speed, with mean effective pressure between $4.14\,\mathrm{MPa}$ and $5.52\,\mathrm{MPa}$.
-
-However, there is still some discrepancy between the simulation results of proposed model and the experimental data. In the future researches, more accurate models of Stirling engine may be developed by considering other irreversibilities such as heat loss to the environment, gas spring hysteresis, and etc. It is worth pointing that there are more accurate Stirling engine models. For example, polytropic simulation models of Stirling engine show higher accuracy than our proposed model~\cite{Hosseinzade2015, Babaelahi2015}. However, the model needs more costly calculations and the polytropic indexes are engine-specific.
-
-\subsection{Heat transfer between the engine and the fluids}
-
-For a Stirling engine thermal process, the wall temperatures of the heater and cooler are considered to be uniform and constant. The heat transferred between the wall and the fluids is
-%with heating and cooling fluids, the heat exchange processes are considered to be isothermal processes.
-%%For an isothermal process in Figure~\ref{fig:ConstTempHX}, transferred heat equals to fluid's enthalpy rise: 
-%For an isothermal process, transferred heat equals to fluid's enthalpy rise: 
-
-\begin{equation}
-	(T_w-T)UdA = q_mc_pdT
-\end{equation}
-\nomenclature{$q_m$}{mass flow rate (kg$\cdot$s$^{-1}$)}
-\nomenclature{$c_p$}{specific heat at constant pressure (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
-\nomenclature{$T_w$}{wall temperature (K)}
-\nomenclature{$U$}{overall heat transfer coefficient (W$\cdot$m$^{-2}\cdot$K$^{-1}$)}
-\nomenclature{$A$}{heat transfer area (m$^2$)}
-
-with $T(0)=T_i$, $T(A)=T_o$,
-\nomenclature[S]{$i$}{inlet}
-\nomenclature[S]{$o$}{outlet}
-
-\begin{equation}
-	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{q_mc_p})
-\end{equation}
-
 %\noindent \begin{figure}[htbp]
 %\begin{center}
-%	\includegraphics[width = 0.3\columnwidth]{./graphics/ConstTempHX}
-%	\caption{Diagram of heat transfer to a constant temperature heat source}
-%	\label{fig:ConstTempHX}
+%	\includegraphics[width = 0.7\columnwidth]{fig/StirlingCycle}
+%	\caption{$T$-$s$ diagram of a Stirling cycle}
+%	\label{fig:StirlingCycle}
 %\end{center}
 %\end{figure}
-
-%So
+%
+%In order to obtain a simplified analytical model, several simplifications were made:
+%
+%\begin{itemize}
+%\item The working gas in Stirling engines obeys the idea gas law. 
+%\item No heat loss to the environment for Stirling engines.
+%\item Overall heat transfer coefficients of the fluids are constant.
+%\item A symmetrical regenerator behavior is assumed~\cite{Formosa2010} so that a simple effectiveness can be obtain by $T_{R}=\frac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$.
+%\end{itemize}
+%
+%To consider internal irreversibilities in Stirling cycle made by dead volumes, as described in~\cite{Duan2014}, total dead volume $V_D$ is divided into heater dead volume $V_{DH}$, regenerator dead volume $V_{DR}$ and cooler dead volume $V_{DC}$. There exists a factor $K$ to describe the dead volumes under different temperatures. $K$ is relevant with temperatures in the process and regenerator effectiveness.
+%\nomenclature{$V_D$}{total dead volume (m$^3$)}
+%\nomenclature{$V_{DH}$}{hot space dead volume (m$^3$)}
+%\nomenclature{$V_{DR}$}{regenerator dead volume (m$^3$)}
+%\nomenclature{$V_{DC}$}{cold space dead volume (m$^3$)}
 %
 %\begin{equation}
-%	\frac{dT}{dA}=-\frac{U}{q_mc_p}(T-T_c)
+%	K = \frac{V_{DH}}{T_H} + \frac{V_{DR}}{T_R} + \frac{V_{DC}}{T_L}
+%\end{equation}
+%\nomenclature{$K$}{dead volume factor}
+%
+%For the isothermal compression process 1-2, the output work
+%
+%\begin{equation}
+%	W_{12} = \int^{V_E}_{V_E+V_C}{p_{12}dV}=-mRT_L\ln{\frac{V_E+V_C+KT_L}{V_E+KT_L}}
+%\end{equation}
+%%\nomenclature{$W_{12}$}{output work in process 1-2 (J)}
+%\nomenclature{$V_E$}{expansion volume (m$^3$)}
+%\nomenclature{$V_C$}{compression volume (m$^3$)}
+%\nomenclature{$m$}{mass of working fluid in Stirling engine (kg)}
+%\nomenclature{$R$}{gas constant (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
+%
+%For the isothermal expansion process 3-4, the output work
+%
+%\begin{equation}
+%	W_{34} = \int^{V_E+V_C}_{V_E}{p_{34}dV}=mRT_H\ln{\frac{V_E+V_C+KT_H}{V_E+KT_H}}
+%\end{equation}
+%%\nomenclature{$W_{34}$}{output work in process 3-4 (J)}
+%
+%Define $\gamma_H = \frac{V_E+V_C+KT_H}{V_E+KT_H}$, and $\gamma_L = \frac{V_E+V_C+KT_L}{V_E+KT_L}$, so in a cycle, the theoretical output work
+%\nomenclature[G]{$\gamma_H$}{space ratio in process 12}
+%\nomenclature[G]{$\gamma_L$}{space ratio in process 34}
+%
+%\begin{equation}
+%	W_{th} = W_{12} + W_{34} = mR(T_H\ln\gamma_H - T_L\ln\gamma_L)
+%\end{equation}
+%\nomenclature{$W$}{output work (J)}
+%\nomenclature[S]{$th$}{theoretical}
+%
+%For the isochoric heating process 3'-3, the absorbed heat
+%
+%\begin{equation}
+%	\begin{split}
+%		Q_{3^{'}3} = nc_v(T_H-T_R)
+%%		\\=n(1-e)c_v(T_H-T_L)
+%		=\frac{1-e}{k-1}mR(T_H-T_L)
+%	\end{split}
 %\end{equation}
 %
-
-For a Stirling engine, $T_{hw}$ or $T_{cw}$ can be used to substitute $T_w$ to get the relationships between $T_{i,h}$, $T_{o,h}$ and $T_{hw}$, or $T_{i,c}$, $T_{o,c}$ and $T_{cw}$ respectively.
-\nomenclature[S]{$h$}{heating fluid}
-\nomenclature[S]{$c$}{cooling fluid}
-
-\begin{equation}
-	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{q_{m,h}c_{p,h}})
-	\label{Eq:T_h}
-\end{equation}
-
-\begin{equation}
-	\frac{T_{o,c}-T_{cw}}{T_{i,c}-T_{cw}}=\exp(-\frac{U_cA_c}{q_{m,c}c_{p,c}})
-	\label{Eq:T_c}
-\end{equation}
-
-Heat transferred from heating fluid to Stirling engine in a cycle
-
-\begin{equation}
-	q_{m,h}c_{p,h}(T_{i,h}-T_{o,h})/s_{se} = Q
-	\label{Eq:q_h}
-\end{equation}
-
-Heat transferred from Stirling engine to cooling fluid in a cycle
-
-\begin{equation}
-	q_{m,c}c_{p,c}(T_{o,c}-T_{i,c})/s_{se} = Q - W
-	\label{Eq:q_c}
-\end{equation}
+%%\nomenclature{$Q_{3^{'}3}$}{heat absorbed in process $3^{'}3$ (J)}
+%%\nomenclature{$M$}{Mole mass of the working fluid in Stirling engine (kg/mol)}
+%\nomenclature{$c_v$}{specific heat at constant volume (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
+%\nomenclature{$k$}{specific heat ratio ($c_p/c_v$), thermal conductivity ($\mathrm{W\cdot m^{-1}\cdot K^{-1}}$)}
+%
+%For the isothermal expansion process 3-4, the absorbed heat
+%
+%\begin{equation}
+%	Q_{34} = W_{34} = mRT_H\ln\gamma_H
+%\end{equation}
+%%\nomenclature{$Q_{34}$}{heat absorbed in process 3-4 (J)}
+%
+%In a cycle, the theoretical absorbed heat
+%
+%\begin{equation}
+%	Q_{th} = Q_{3^{'}3} + Q_{34} = \frac{1-e}{k-1}mR(T_H-T_L) + mRT_H\ln\gamma_H
+%\end{equation}
+%\nomenclature{$Q$}{absorbed heat (J)}
+%
+%%The Stirling cycle efficiency
+%
+%%\begin{equation}
+%%	\eta = \frac{W}{Q} = \frac{T_H\ln\gamma_H - T_L\ln\gamma_L}{T_H\ln\gamma_H + \frac{1-e}{k-1}(T_H-T_L)}
+%%	\label{Eq:eta}
+%%\end{equation}
+%%\nomenclature[G]{$\eta$}{efficiency of a Stirling engine}
+%%
+%%and the output power
+%%
+%%\begin{equation}
+%%	P = {W}s_{se} = mRs_{se}(T_H\ln\gamma_H - T_L\ln\gamma_L)
+%%	\label{Eq:P}
+%%\end{equation}
+%\nomenclature{$P$}{power of Stirling engine (W)}
+%\nomenclature{$s_{se}$}{speed of Stirling engine (Hz)}
+%
+%%In order to describe quantitatively the effect of the internal dissipation of the working fluid on the performance (efficiency and power) of Stirling engine, the cycle irreversibility parameter, $R_S$, is defined as~\cite{Kaushik2003}:
+%%\nomenclature{$R_S$}{cycle irreversibility parameter}
+%%
+%%\begin{equation}
+%%	R_S = \frac{\ln\gamma_H}{\ln\gamma_L} = \frac{s_4 - s_3}{s_1 - s_2}
+%%\end{equation}
+%%\nomenclature{$s$}{specific entropy (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
+%%
+%%If the internal processes are reversible, $R_S = 1$, Equation~\ref{Eq:eta} becomes the same as described in~\cite{Stine1994}:
+%%
+%%\begin{equation}
+%%	\eta = \frac{T_H - T_L}{T_H + \frac{1-e}{k-1}\cdot\frac{T_H-T_L}{\ln\gamma}}
+%%\end{equation}
+%%\nomenclature[G]{$\gamma$}{compression ratio}
+%
+%%It can be found from Equation~\ref{Eq:eta} and~\ref{Eq:P} that 
+%%given the properties of a Stirling engine, its efficiency and power can be obtained by known $T_H$ and $T_L$.
+%
+%\subsubsection{Irreversibilities and losses}
+%
+%\begin{enumerate}
+%\item Non-ideal heat transfer effect
+%
+%Because of non-ideal heater and cooler, the working fluid temperature ($T_{H}$, $T_L$) in these two heat exchangers is less/higher than the wall temperature ($T_{hw}$, $T_{cw}$), respectively. And $T_{H}$ and $T_{L}$ can be corrected by the wall temperatures as follows:
+%
+%\begin{equation}
+%	T_H = T_{hw} - \frac{Qs_{se}}{h_hA_{hw}}
+%	\label{eq:T_H}
+%\end{equation}
+%\nomenclature[S]{$hw$}{heater wall}
+%
+%\begin{equation}
+%	T_L = T_{cw} + \frac{(Q-W)s_{se}}{h_cA_{cw}}
+%	\label{eq:T_L}
+%\end{equation}
+%\nomenclature[S]{$cw$}{cooler wall}
+%
+%The heat transfer coefficient can be obtained using the following correlation~\cite{Babaelahi2015}:
+%
+%\begin{equation}
+%	h_{h,c} = \frac{\mu c_pf_{Re}}{2D_{h,c}Pr_{h,c}}
+%\end{equation}
+%\nomenclature[G]{$\mu$}{dynamic viscosity ($\mathrm{kg\cdot m^{-1}\cdot s^{-1}}$)}
+%
+%where $f_{Re}$ is a Reynolds friction factor defined as:
+%
+%\begin{equation}
+%	f_{Re} = 0.0791{Re_{h,c}}^{0.75}
+%\end{equation}
+%
+%$Re_{h,c}$, $Pr_{h,c}$ and $D_{h,c}$ are Reynolds number, Prandtl number and hydraulic diameter of the heater/cooler exchanger.
+%
+%\item Effect of pressure drop
+%
+%Pressure drops in the heat exchangers cause power losses of the Stirling engine. The pressure drops can be obtained by~\cite{Urieli1984}:
+%
+%\begin{equation}
+%	\Delta p = -\frac{2f_{Re}\mu u V}{d^2A}
+%\end{equation}
+%\nomenclature{$p$}{pressure (Pa)}
+%
+%where $u$ is the working gas speed, $V$ is volume, $A$ is flow cross-section area.
+%
+%The net power loss of the Stirling engine due to pressure drop of the heat exchangers can be evaluated by:
+%
+%\begin{equation}
+%	W_{pd} = \oint\underset{i = E,C}{\sum}(\Delta p_{i}\frac{dV_i}{d\theta})d\theta
+%\end{equation}
+%
+%\item Effect of finite speed of piston and mechanical friction
+%
+%Due to the finite speed of piston, the pressure on the piston surface is different from the pressure of expansion and compression spaces. It has been demonstrated that the pressure on the piston surface in the expansion process is less than the mean pressure in the expansion space. Similarly, the pressure on the piston surface in the compression process is greater than the mean pressure in the compression space. This means the output work is less than the theoretical value. Besides, The output work also reduces due to mechanical friction. The output work loss due to finite speed of piston and mechanical friction can be obtained as follows~\cite{Babaelahi2015}:
+%
+%\begin{equation}
+%	W_{fs} = \oint p(\pm\frac{au_p}{c}\pm\frac{\Delta p_f}{p})dV
+%\end{equation}
+%
+%where the sign (+) is used in the compression space, and the sign (-) is used in the expansion space. $p$ is the mean pressure in the compression/expansion space, $u_p$ is velocity of the piston, $c$ is the average speed of molecules and $\Delta p_f$ is the pressure loss due to mechanical friction. $\Delta p_f$, $a$ and $c$ can be obtained by~\cite{Heywood1988}:
+%
+%\begin{equation}
+%	\Delta p_f = 0.97+0.009s_{se}
+%\end{equation}
+%\begin{equation}
+%	a = \sqrt{3k}
+%\end{equation}
+%\begin{equation}
+%	c = \sqrt{3RT}
+%\end{equation}
+%
+%\item Energy losses due to internal conduction
+%
+%The temperature differs from the heater and cooler, heat losses from heater to cooler exists due to internal conduction through the walls of regenerator.~\cite{Strauss2010} The internal conduction loss in a cycle can be obtained by follows:
+%
+%\begin{equation}
+%	Q_{id} = \frac{k_rA_r}{L_rs_{se}}(T_{hw} - T_{cw})
+%\end{equation}
+%
+%where, $k_r$, $A_r$ and $L_r$ denote the regenerator matrix conductivity, regenerator length, and regenerator conductive area respectively.
+%\nomenclature[S]{$r$}{regenerator}
+%
+%\item Energy losses due to shuttle conduction
+%
+%The displacer shuttles between the expansion and compression space. It absorbs heat during the hot end of its stroke and releases it during the cold end of its stroke. This heat loss can be estimated as~\cite{Timoumi2008}:
+%
+%\begin{equation}
+%	Q_{sc} = 0.4\frac{Z^2k_pD_p}{JL_ds_{se}}(T_{H} - T_{L})
+%\end{equation}
+%
+%where, $Z$, $k_p$, $D_p$, $J$ and $L_d$ denote the displacer stroke, piston thermal conductivity, displacer diameter, gap between the displacer and the cylinder, and length of the displacer respectively.
+%\nomenclature{$Z$}{displacer stroke (m)}
+%\nomenclature{$J$}{annular gap cylinder displacer (m)}
+%\nomenclature[S]{$p$}{piston}
+%
+%\end{enumerate}
+%
+%So, in a Stirling engine, the total absorbed heat in a cycle
+%
+%\begin{equation}
+%	Q = Q_{th} + Q_{id} + Q_{sc}
+%\end{equation}
+%
+%the output work
+%
+%\begin{equation}
+%	W = W_{th} - W_{pd} - W_{fs}
+%\end{equation}
+%
+%Power of the Stirling engine
+%
+%\begin{equation}
+%	P = Ws_{se}
+%	\label{Eq:P}
+%\end{equation}
+%
+%Efficiency of the Stirling engine
+%
+%\begin{equation}
+%	\eta = W/Q
+%	\label{Eq:eta}
+%\end{equation}
+%
+%
+%\subsection{Model validation}~\label{sec:modelValidation}
+%
+%Evaluation of the developed thermal model was performed by considering the GPU-3 Stirling engine as a case study. Design specifications of the GPU-3 Stirling engine are indicated in Table~\ref{tab:GPU3parameters}. The thermal efficiency and power of the proposed Stirling engine model was compared with previous thermal models and experimental data as shown in Table~\ref{tab:EfficiencyComparison} and Table~\ref{tab:PowerComparison}.
+%
+%\begin{table*}[htbp]\footnotesize
+%	\caption{Design specifications of the GPU-3 Stirling engine~\cite{Babaelahi2015,Martini1983}}
+%	\begin{center}
+%	\begin{tabular}{ll}
+%		\toprule
+%		Parameter				&	Value\\
+%		\midrule
+%		Engine type					&	$\beta$\\
+%		Working gas			&	Helium\\
+%		Mass of the working gas	&	1.136\,g\\
+%		\emph{Heater}			&\\
+%		Number of tubes		&	40\\
+%		Tube external diameter	&	4.83$\times10^{-3}\,\mathrm{m}$\\
+%		Tube internal diameter	&	3.02$\times10^{-3}\,\mathrm{m}$\\
+%		Tube length (cylinder side)&	0.1164\,m\\
+%		Tube length (regenerator side)		&	0.1289\,m\\
+%		\emph{Cooler}			&\\
+%		Number of tubes		&	312\\
+%		Tube external diameter	&	1.59$\times10^{-3}\,\mathrm{m}$\\
+%		Tube internal diameter	&	1.09$\times10^{-3}\,\mathrm{m}$\\
+%		Average tube length		&	4.61$\times10^{-2}\,\mathrm{m}$\\
+%		\emph{Regenerator}		&\\
+%		Number of regenerator	&	8\\
+%		Regenerator internal diameter	&	2.26$\times10^{-2}\,\mathrm{m}$\\
+%		Regenerator length		&	2.26$\times10^{-2}\,\mathrm{m}$\\
+%		Diameter of regenerator tube	&	4$\times10^{-5}\,\mathrm{m}$\\
+%		Material				&	Stainless steel\\
+%		\emph{Volume}			&\\
+%		Swept Vol. (expansion/compression)	&	120.82/114.13\,$\mathrm{cm}^3$\\
+%		Clearance Vol. (expansion/compression)	&	30.52/28.68\,$\mathrm{cm}^3$\\
+%		Dead Vol. (heater/cooler/regenerator)	&	70.28/13.18/50.55\,$\mathrm{cm}^3$\\
+%		\bottomrule
+%	\end{tabular}
+%	\end{center}
+%	\label{tab:GPU3parameters}
+%\end{table*}
+%
+%
+%\begin{table*}[htbp]\footnotesize
+%	\caption{Thermal efficiency of the proposed model, previous thermal models and experimental data(at $T_{hw}=922\,\mathrm{K}$ and $T_{cw}=288\,\mathrm{K}$)}
+%	\begin{center}
+%	\begin{tabular}{cccccccccccc}
+%		\toprule
+%		\multirow{7}{0.5in}{\tabincell{l}{Rotation\\speed\\(Hz)}}	&	\multirow{7}{0.5in}{Mean effective pressure (MPa)}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Thermal efficiency predicted by the simple analysis (variable Pr~\cite{Urieli1984})}}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Thermal efficiency predicted by the adiabatic analysis (simple II~\cite{Strauss2010})}}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Thermal efficiency predicted by the proposed Stirling Engine model}}	&	\multirow{4}{*}{\tabincell{l}{Experimental\\efficiency~\cite{Babaelahi2015}}}\\
+%		\\
+%		\\
+%		\\
+%		\cline{3-12}
+%		&&\multirow{3}{*}{\tabincell{c}{Value\\(\%)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Value\\(\%)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Value\\(\%)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Actual\\value\\(\%)}}\\
+%		\\
+%		\\
+%		\midrule
+%		16.67	&\multirow{6}{*}{2.76}	&38.72	&18.22	&\multirow{6}{*}{17.90}	&32.48	&11.98	&\multirow{6}{*}{12.85}	&28.16	&7.66	&\multirow{6}{*}{12.10}	&20.50\\
+%		25.00	&&36.16	&15.46	&&31.21	&10.51	&&27.75	&7.05	&&20.70\\
+%		33.33	&&33.79	&15.79	&&29.45	&11.45	&&27.43	&9.43	&&18.00\\
+%		41.67	&&31.48	&16.28	&&27.45	&12.25	&&27.17	&11.97	&&15.20\\
+%		50.00	&&29.12	&17.32	&&25.21	&13.41	&&26.94	&15.14	&&11.80\\
+%		58.33	&&29.74	&24.34	&&22.89	&17.49	&&26.74	&21.34	&&5.40\\
+%		\midrule
+%		25.00	&\multirow{5}{*}{4.14}	&35.65	&10.85	&\multirow{5}{*}{11.46}	&32.29	&7.49	&\multirow{5}{*}{8.28}	&27.29	&2.49	&\multirow{5}{*}{6.65}	&24.80\\
+%		33.33	&&33.52	&9.62	&&30.40	&6.50	&&26.94	&3.04	&&23.90\\
+%		41.67	&&31.48	&10.18	&&28.39	&7.09	&&26.65	&5.35	&&21.30\\
+%		50.00	&&29.45	&11.25	&&26.33	&8.13	&&26.39	&8.19	&&18.20\\
+%		58.33	&&27.40	&15.40	&&24.21	&12.21	&&26.17	&14.17	&&12.00\\
+%		\midrule
+%		41.67	&\multirow{3}{*}{5.52}	&31.20	&8.70	&\multirow{3}{*}{10.82}	&28.59	&6.09	&\multirow{3}{*}{8.11}	&26.24	&3.74	&\multirow{3}{*}{7.48}	&22.50\\
+%		50.00	&&29.33	&10.53	&&26.62	&7.82	&&25.97	&7.17	&&18.80\\
+%		58.33	&&27.44	&13.24	&&24.62	&10.42	&&25.73	&11.53	&&14.20\\
+%		\midrule
+%		50.00	&\multirow{2}{*}{6.90}	&29.07	&10.37	&\multirow{2}{*}{11.73}	&26.61	&7.91	&\multirow{2}{*}{9.19}	&25.62	&6.92	&\multirow{2}{*}{9.05}		&18.70\\
+%		58.33	&&27.29	&13.09	&&24.67	&10.47	&&25.37	&11.17	&&14.20\\
+%		\bottomrule
+%	\end{tabular}
+%	\end{center}
+%	\label{tab:EfficiencyComparison}
+%\end{table*}
+%
+%\begin{table*}[htbp]\footnotesize
+%	\caption{Output power of the proposed model, previous thermal models and experimental data(at $T_{hw}=922\,\mathrm{K}$ and $T_{cw}=288\,\mathrm{K}$)}
+%	\begin{center}
+%	\begin{tabular}{cccccccccccc}
+%		\toprule
+%		\multirow{7}{0.5in}{\tabincell{l}{Rotation\\speed\\(Hz)}}	&	\multirow{7}{0.5in}{Mean effective pressure (MPa)}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Output power predicted by the simple analysis (variable Pr~\cite{Urieli1984})}}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Output power predicted by the adiabatic analysis (simple II~\cite{Strauss2010})}}	&	\multicolumn{3}{c}{\multirow{1}{1.0in}{Output power predicted by the proposed Stirling Engine model}}	&	\multirow{4}{*}{\tabincell{l}{Experimental\\output\\power\\(kW)~\cite{Babaelahi2015}}}\\
+%		\\
+%		\\
+%		\\
+%		\cline{3-12}
+%		&&\multirow{3}{*}{\tabincell{c}{Value\\(kW)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Value\\(kW)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Value\\(kW)}}&	\multirow{3}{*}{\tabincell{c}{Error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Average\\error\\(\%)}}&\multirow{3}{*}{\tabincell{c}{Actual\\value\\(kW)}}\\
+%		\\
+%		\\
+%		\midrule
+%		16.67	&\multirow{6}{*}{2.76}	&1.796	&119.02	&\multirow{6}{*}{272.03}	&1.772	&116.10	&\multirow{6}{*}{254.71}	&0.861	&4.98	&\multirow{6}{*}{104.84}	&0.82\\
+%		25.00	&&2.555	&128.13	&&2.500	&123.21	&&1.253	&11.88	&&1.12\\
+%		33.33	&&3.215	&165.70	&&3.117	&157.60	&&1.632	&34.88	&&1.21\\
+%		41.67	&&3.769	&211.49	&&3.615	&198.76	&&2.001	&65.37	&&1.21\\
+%		50.00	&&4.195	&303.37	&&3.973	&282.08	&&2.362	&127.12	&&1.04\\
+%		58.33	&&4.505	&704.46	&&4.203	&650.54	&&2.715	&384.82	&&0.56\\
+%		\midrule
+%		25.00	&\multirow{5}{*}{4.14}	&3.844	&114.75	&\multirow{5}{*}{259.70}	&3.761	&110.11	&\multirow{5}{*}{158.41}	&1.818	&1.56	&\multirow{5}{*}{39.83}	&1.79\\
+%		33.33	&&4.856	&120.73	&&4.708	&114.00	&&2.362	&7.36	&&2.20\\
+%		41.67	&&5.734	&136.94	&&5.501	&127.31	&&2.890	&19.42	&&2.42\\
+%		50.00	&&6.462	&174.98	&&6.126	&160.68	&&3.405	&44.89	&&2.35\\
+%		58.33	&&7.030	&306.36	&&6.573	&279.94	&&3.908	&125.90	&&1.73\\
+%		\midrule
+%		41.67	&\multirow{3}{*}{5.52}	&7.645	&133.08	&\multirow{3}{*}{180.02}	&7.334	&123.60	&\multirow{3}{*}{164.91}	&3.742	&14.09	&\multirow{3}{*}{43.68}	&3.28\\
+%		50.00	&&8.655	&163.87	&&8.206	&150.18	&&4.401	&34.18	&&3.28\\
+%		58.33	&&9.470	&243.12	&&8.858	&220.94	&&5.045	&82.79	&&2.76\\
+%		\midrule
+%		50.00	&\multirow{2}{*}{6.90}	&10.788	&174.50	&\multirow{2}{*}{287.04}	&10.223	&160.13	&\multirow{2}{*}{263.63}	&5.362	&36.44	&\multirow{2}{*}{97.75}		&3.93\\
+%		58.33	&&11.840	&399.58	&&11.071	&367.13	&&6.140	&159.07	&&2.37\\
+%		\bottomrule
+%	\end{tabular}
+%	\end{center}
+%	\label{tab:PowerComparison}
+%\end{table*}
+%
+%It can be found that the proposed model has much better agreement with the experimental results than previous thermal models at various rotation speeds and mean effective pressures. It is required to mention that in all thermal models both power $W$ and input heat $Q$ were determined by the thermal process of heat transfer between the wall and working gas. In the proposed model, $W$ and $Q$ are obtained by Equation~\ref{eq:T_H} and~\ref{eq:T_L}. Therefore, all the three parameters $W$, $Q$ and $\eta$ are determined by the thermal model and input parameters to the model. These input parameters include heater, cooler, mean effective pressure, type of working gas and geometrical specification of the engine.
+%
+%Table~\ref{tab:EfficiencyComparison} and~\ref{tab:PowerComparison} indicate that when mean effective pressure of the engine increases from $2.76\,\mathrm{MPa}$ to $6.90\,\mathrm{MPa}$, best performance (efficiency and power) prediction of the proposed model exists. When rotation speed increases from $16.67\,\mathrm{Hz}$ to $58.33\,\mathrm{Hz}$, error in prediction of performance of the proposed model increases. The proposed model may have the best performance prediction at a low rotation speed, with mean effective pressure between $4.14\,\mathrm{MPa}$ and $5.52\,\mathrm{MPa}$.
+%
+%However, there is still some discrepancy between the simulation results of proposed model and the experimental data. In the future researches, more accurate models of Stirling engine may be developed by considering other irreversibilities such as heat loss to the environment, gas spring hysteresis, and etc. It is worth pointing that there are more accurate Stirling engine models. For example, polytropic simulation models of Stirling engine show higher accuracy than our proposed model~\cite{Hosseinzade2015, Babaelahi2015}. However, the model needs more costly calculations and the polytropic indexes are engine-specific.
+%
+%\subsection{Heat transfer between the engine and the fluids}
+%
+%For a Stirling engine thermal process, the wall temperatures of the heater and cooler are considered to be uniform and constant. The heat transferred between the wall and the fluids is
+%%with heating and cooling fluids, the heat exchange processes are considered to be isothermal processes.
+%%%For an isothermal process in Figure~\ref{fig:ConstTempHX}, transferred heat equals to fluid's enthalpy rise: 
+%%For an isothermal process, transferred heat equals to fluid's enthalpy rise: 
+%
+%\begin{equation}
+%	(T_w-T)UdA = q_mc_pdT
+%\end{equation}
+%\nomenclature{$q_m$}{mass flow rate (kg$\cdot$s$^{-1}$)}
+%\nomenclature{$c_p$}{specific heat at constant pressure (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
+%\nomenclature{$T_w$}{wall temperature (K)}
+%\nomenclature{$U$}{overall heat transfer coefficient (W$\cdot$m$^{-2}\cdot$K$^{-1}$)}
+%\nomenclature{$A$}{heat transfer area (m$^2$)}
+%
+%with $T(0)=T_i$, $T(A)=T_o$,
+%\nomenclature[S]{$i$}{inlet}
+%\nomenclature[S]{$o$}{outlet}
+%
+%\begin{equation}
+%	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{q_mc_p})
+%\end{equation}
+%
+%%\noindent \begin{figure}[htbp]
+%%\begin{center}
+%%	\includegraphics[width = 0.3\columnwidth]{graphics/ConstTempHX}
+%%	\caption{Diagram of heat transfer to a constant temperature heat source}
+%%	\label{fig:ConstTempHX}
+%%\end{center}
+%%\end{figure}
+%
+%%So
+%%
+%%\begin{equation}
+%%	\frac{dT}{dA}=-\frac{U}{q_mc_p}(T-T_c)
+%%\end{equation}
+%%
+%
+%For a Stirling engine, $T_{hw}$ or $T_{cw}$ can be used to substitute $T_w$ to get the relationships between $T_{i,h}$, $T_{o,h}$ and $T_{hw}$, or $T_{i,c}$, $T_{o,c}$ and $T_{cw}$ respectively.
+%\nomenclature[S]{$h$}{heating fluid}
+%\nomenclature[S]{$c$}{cooling fluid}
+%
+%\begin{equation}
+%	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{q_{m,h}c_{p,h}})
+%	\label{Eq:T_h}
+%\end{equation}
+%
+%\begin{equation}
+%	\frac{T_{o,c}-T_{cw}}{T_{i,c}-T_{cw}}=\exp(-\frac{U_cA_c}{q_{m,c}c_{p,c}})
+%	\label{Eq:T_c}
+%\end{equation}
+%
+%Heat transferred from heating fluid to Stirling engine in a cycle
+%
+%\begin{equation}
+%	q_{m,h}c_{p,h}(T_{i,h}-T_{o,h})/s_{se} = Q
+%	\label{Eq:q_h}
+%\end{equation}
+%
+%Heat transferred from Stirling engine to cooling fluid in a cycle
+%
+%\begin{equation}
+%	q_{m,c}c_{p,c}(T_{o,c}-T_{i,c})/s_{se} = Q - W
+%	\label{Eq:q_c}
+%\end{equation}
 
 %For a Stirling engine given $q_{m,h}$, $q_{m,c}$ and $s_{se}$, known 2 of the 6 parameters ($T_{i,h}$, $T_{o,h}$, $T_{i,c}$, $T_{o,c}$, $T_H$ and $T_L$), the rest 4 can be obtained by solving 
 %%Equation~\ref{Eq:T_h},~\ref{Eq:T_c},~\ref{Eq:q_h} and~\ref{Eq:q_c}
@@ -523,7 +523,7 @@ MATLAB was used as the programming tool to build the model of SEAs, and CoolProp
 
 %\noindent \begin{figure*}[htbp]
 %\begin{center}
-%	\includegraphics[width = 0.8\columnwidth]{./graphics/FlowChart}
+%	\includegraphics[width = 0.8\columnwidth]{graphics/FlowChart}
 %	\caption{Flowcharts of the SEA model for performance analysis of the SEAs}
 %	\label{fig:Flowchart}
 %\end{center}
@@ -559,7 +559,7 @@ According to Carnot cycle efficiency formula, the temperature of heating fluid d
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/T_ih}
+	\includegraphics[width = 0.7\columnwidth]{fig/T_ih}
 	\caption{Influence of $T_{i,h}$ on efficiency and power of SEA}
 	\label{fig:Ti_h}
 \end{center}
@@ -578,7 +578,7 @@ According to Equation~\ref{Eq:q_h},~\ref{Eq:q_c}, $q_mc_p$ (both $q_{m,h}c_{p,h}
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/qm_hcp_h}
+	\includegraphics[width = 0.7\columnwidth]{fig/qm_hcp_h}
 	\caption{Influence of $q_{m,h}c_{p,h}$ on efficiency and power of SEA}
 	\label{fig:qm_hcp_h}
 \end{center}
@@ -590,7 +590,7 @@ For a large $q_{m,h}c_{p,h}$ ($>$ 800 W/K), Type 2 , Type 3 and Type 5 have simi
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/qm_ccp_c}
+	\includegraphics[width = 0.7\columnwidth]{fig/qm_ccp_c}
 	\caption{Influence of $q_{m,c}c_{p,c}$ on efficiency and power of SEA}
 	\label{fig:qm_ccp_c}
 \end{center}
@@ -604,7 +604,7 @@ By varying the number of engines in SEA, the performance levels changed accordin
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.7\columnwidth]{./fig/n_se}
+	\includegraphics[width = 0.7\columnwidth]{fig/n_se}
 	\caption{Influence of $n_{se}$ on efficiency and power of SEA}
 	\label{fig:n_se}
 \end{center}

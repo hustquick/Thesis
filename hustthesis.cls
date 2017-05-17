@@ -729,7 +729,7 @@
   \parbox[t][6cm][t]{\textwidth}{
     \vspace{1.0cm}
     \begin{center}
-    \includegraphics[scale=1.1]{fig/hust-title.png}\\[0.8cm]
+    \includegraphics[scale=1.1]{fig/hust-title.pdf}\\[0.8cm]
     \ziju{10bp}{\fontsize{42pt}{54.6pt}\selectfont\HEI\HUST@zhapplyname}
     \end{center}
   }

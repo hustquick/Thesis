@@ -91,7 +91,8 @@ In a traditional dish-Stirling system, a Stirling engine is located at the focal
 In the proposed cascade system, a volumetric receiver is located on the focal point. Spiral tube is located in the receiver to absorb the concentrated solar energy. Air (or nitrogen, is used as the heat transfer fluid) flows trough the tube to transfer the absorbed energy as the heat source of Stirling engine(s).
 
 The reflector is a key element of the systems. The curved reflective surface can be manufactured by attached segments, by individual facets or by a stretched membranes shaped by a continuous plenum. In all cases, the curved surface should be coated or covered by aluminum or silver reflectors. 
-Two different methods~\cite{Adkins1987} are applied for the sun tracking systems:
+
+Two different methods~\cite{Adkins1987} are applied for the sun tracking systems:
 \begin{itemize}
   \item Azimuth elevation tracking by an orientation sensor or by calculated coordinates of the sun performed by the local control.
   \item Polar tracking, where the concentrator rotates about an axis parallel to the earth’s axis rotation.
@@ -312,7 +313,7 @@ In order to obtain a simplified analytical model, several simplifications were m
 \item A symmetrical regenerator behavior is assumed~\cite{Formosa2010,Juhasz2010} so that a simple effectiveness can be obtain by $T_{R}=\frac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$.
 \end{itemize}
 
-To consider internal irreversibilities in Stirling cycle made by dead volumes, as described in~\cite{Duan2014}, total dead volume $V_D$ is divided into heater dead volume $V_{DH}$, regenerator dead volume $V_{DR}$ and cooler dead volume $V_{DC}$. There exists a factor $K$ to describe the dead volumes under different temperatures. $K$ is relevant with temperatures in the process and regenerator effectiveness.
+To consider internal irreversibilities in Stirling cycle made by dead volumes, as described in Duan's paper~\cite{Duan2014}, total dead volume $V_D$ is divided into heater dead volume $V_{DH}$, regenerator dead volume $V_{DR}$ and cooler dead volume $V_{DC}$. There exists a factor $K$ to describe the dead volumes under different temperatures. $K$ is relevant with temperatures in the process and regenerator effectiveness.
 \nomenclature{$V_D$}{total dead volume (m$^3$)}
 \nomenclature{$V_{DH}$}{hot space dead volume (m$^3$)}
 \nomenclature{$V_{DR}$}{regenerator dead volume (m$^3$)}
@@ -680,7 +681,40 @@ with $T(0)=T_i$, $T(A)=T_o$,
 %\begin{equation}
 %	\frac{dT}{dA}=-\frac{U}{q_mc_p}(T-T_c)
 %\end{equation}
+%A simple Stirling engine model is used for the system. The cycle efficiency is given by \cite{Stine1985}
 %
+%\begin{equation}
+%	\eta=\frac{T_{H}-T_{L}}{T_{H}+\text{\ensuremath{\dfrac{1-e}{k-1}}}\cdot\dfrac{T_{H}-T_{L}}{\ln\gamma}}\label{eq:eta_stirling}
+%\end{equation}
+%
+%
+%where \nomenclature{$e$}{Regeneration effectiveness of the Stirling engine}$e = (T_{R}-T_{L}) / (T_{H}-T_{L})$,\nomenclature{$T_R$}{Regenerator temperature, K}$T_{R}$ is the\emph{ }regenerator temperature, \nomenclature{$c_p$}{Heat capacity of Stirling engine working gas at constant pressure, J/(kg$\cdot$K)}\nomenclature{$c_v$}{Heat capacity of Stirling engine working gas at constant volume, J/(kg$\cdot$K)}$k=c_{p}/c_{v}$ for the working gas, $\gamma_{se}=V_{max}/V_{min}$ is the compression ratio.
+%
+%The heat transfer diagram is shown in Figure~\ref{fig:Heat-transfer-diagram}. Flow 1 is used for heating the hot chamber of Stirling engine, $T_{1i}$ is the inlet temperature, $T_{1o}$ is the outlet temperature. Flow 2 is used for cooling the cold chamber of Stirling engine, $T_{2i}$ is the inlet temperature, $T_{2o}$ is the outlet temperature. \nomenclature{$T_H$}{Highest temperature of expansion space, K}$T_{H}$ is the highest temperature of expansion space, \nomenclature{$T_L$}{Lowest temperature of compression space, K}$T_{L}$ is the lowest temperature of compression space.
+%
+%\noindent \begin{center}
+%\begin{figure}[h]
+%	\noindent \centering{}\includegraphics[width=0.4\columnwidth]{fig/StirilingHT}
+%	\protect\caption{\label{fig:Heat-transfer-diagram}Heat transfer diagram of Stirling
+%engine}
+%\end{figure}
+%
+%\par\end{center}
+%
+%According to Equation (\ref{eq:Eq}),
+%
+%\begin{equation}
+%	\dfrac{T_{1o}-T_{H}}{T_{1i}-T_{H}}=\exp(-\dfrac{U_{1}A_{1}}{\dot{m}_{1}c{}_{p1}})
+%\end{equation}
+%
+%and
+%
+%\begin{equation}
+%	\dfrac{T_{2o}-T_{L}}{T_{2i}-T_{L}}=\exp(-\dfrac{U_{2}A_{2}}{\dot{m}_{2}c_{p2}})
+%\end{equation}
+%
+%So known $T_{1o},T_{1i},U_{1},A_{1},\dot{m}_{1},c_{p1},T_{2o},T_{2i},U_{2},A_{2},\dot{m}_{2},c_{p2}$, $T_{H}$ and $T_{L}$ can be calculated, and then $\eta$ can be obtained by using Equation (\ref{eq:eta_stirling}).
+%\nomenclature{$A$}{Area, m$^2$}
 
 For a Stirling engine, $T_{hw}$ or $T_{cw}$ can be used to substitute $T_w$ to get the relationships between $T_{i,h}$, $T_{o,h}$ and $T_{hw}$, or $T_{i,c}$, $T_{o,c}$ and $T_{cw}$ respectively.
 \nomenclature[S]{$h$}{heating fluid}
@@ -725,14 +759,14 @@ The steam generating system can be divided into preheater, evaporator, superheat
 \begin{enumerate}
   \item \emph{Preheater}
   
-  The outlet of the heated fluid is saturated liquid ($x = 0$), so the outlet temperature $T_{2i}$ and outlet enthalpy $h_{2i}$ of the heated fluid is determined by pressure $p_s$.
+  The outlet of the heated fluid is saturated liquid ($x = 0$), so the outlet temperature $T_{2i}$ and outlet enthalpy $h_{2i}$ of the heated fluid are determined by the main pressure of the turbine, $p_s$.
   \begin{equation}
   \dot{m}_3 (h_{3c}-h_{3d})=\dot{m}_2 (h_{2i} - h_{2h})
 \end{equation}
 
   \item \emph{Evaporator}
   
-  The outlet of the heated fluid is saturated gas ($x = 1$), so the outlet temperature $T_{2j}$ and outlet enthalpy $h_{2j}$ of the heated fluid is determined by pressure $p_s$.
+  The outlet of the heated fluid is saturated gas ($x = 1$), so the outlet temperature $T_{2j}$ and outlet enthalpy $h_{2j}$ of the heated fluid are determined by the main pressure of the turbine, $p_s$.
   \begin{equation}
   \dot{m}_3 (h_{3b}-h_{3c})=\dot{m}_2 (h_{2j} - h_{2i})
 \end{equation}
@@ -752,24 +786,25 @@ The Rankine power generation system consists of turbine, condenser, deaerator, g
   
   For steam Rankine cycle, deaerator is used to remove the oxygen and other non-condensable gases in the feedwater to steam generating system. Dissolved oxygen in feedwater will cause serious corrosion damage in steam generating system by forming oxides (rust) of the metal pipes. Dissolved carbon dioxide combines with water to form carbonic acid will cause further corrosion. The accumulation of the non-condensable gases will increase the heat transfer resistance, which is harmful for the heat exchangers. The extraction of the steam turbine provides heat for the deaerator.
   
-  Figure~\ref{fig:T-s_Water} shows the $T-s$ diagram of the water circuit in the cascade system.Figure~\ref{fig:SteamTurbine_hs} shows the heat process curve of the steam turbine in fig~\ref{fig:PES}. To simplify the inner process of the turbine, same isentropic efficiency of steam turbine with different loads and in different stages is assumed, which means  
+  Figure~\ref{fig:Ts_Water} shows the $T$-$s$ diagram of the water circuit in the cascade system in fig~\ref{fig:PES}. Process $2a$-$2c$-$2b$ shows the heat process in the steam turbine. (see fig.~\ref{fig:SteamTurbine_hs}) State point $2b$ and $i,2b$ have the same pressure, state point $2c$ and $i,2c$. To simplify the inner process $2a$-$2c$-$2b$ of the turbine, same isentropic efficiency of steam turbine with different loads and in different stages is assumed, which means  
   \begin{equation}
       \eta_{i,tb} =(h_{2a}-h_{2b})/(h_{2a}-h_{i,2b}) = (h_{2a}-h_{2c})/(h_{2a}-h_{i,2c})
 \end{equation}
+where $h_{i,2b}$ is determined by $s_{2a}$ and $p_c$; $h_{i,2c}$ is determined by $s_{2a}$ and $p_e$.
 
 \noindent \begin{figure}[htbp]
 \centering
 	\begin{subfigure}[b]{0.6\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/T-s_Water.pdf}
-	\caption{$T-s$ diagram of the water circuit}\label{fig:Ts_Water}
+	\caption{$T$-$s$ diagram of the water circuit}\label{fig:Ts_Water}
 	\end{subfigure}
 	~
-\begin{subfigure}[b]{0.35\columnwidth}
+\begin{subfigure}[b]{0.3\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/SteamTurbine_hs.pdf}
-	\caption{$h-s$ diagram of the process $2a$-$2b$}\label{fig:SteamTurbine_hs}
+	\caption{$h$-$s$ diagram of the process $2a$-$2c$-$2b$}\label{fig:SteamTurbine_hs}
 	\end{subfigure}
 	
-	\caption{$T-s$ diagram of the water circuit and $h-s$ diagram of the process $2a$-$2b$}\label{fig:SteamTurbine_hs}
+	\caption{$T$-$s$ diagram of the water circuit and $h$-$s$ diagram of the process $2a$-$2b$}\label{fig:SteamTurbine_hs_p}
 \end{figure}
    
     The output power of the steam turbine
@@ -778,11 +813,26 @@ The Rankine power generation system consists of turbine, condenser, deaerator, g
   \end{equation}
   \nomenclature{$y$}{Extraction rate of steam turbine}
   
+  Process $2b$-$2d$ shows the heat process in the condenser. The outlet water in the condenser is saturated water. The outlet temperature $T_{2d}$ and outlet enthalpy $h_{2d}$ are determined by the exhaust pressure of the turbine $p_c$.
+  The released heat of the condenser
+  \begin{equation}
+      Q_{cd} = (1-y)\dot{m}_2 (h_{2b} - h_{2d})
+\end{equation}
+\nomenclature[S]{$cd$}{Condenser}
+
+  State points $2c$, $2f$ and $2g$ have the same pressure ($p_e$, $1\,\mathrm{MPa}$). The water at the outlet of the deaerator is saturated fluid, its enthalpy is determined.
+  \begin{equation}
+  y h_{2c} + (1-y) h_{2f} = h_{2g}
+\end{equation}
+\nomenclature{$p_e$}{Extraction pressure of the steam turbine, MPa}
+  
   The total power of the pumps 
   \begin{equation}
 	P_{pu}=\left(1-y\right)\dot{m}_{2}\left(h_{2e}-h_{2d}\right)+\dot{m}_{2}\left(h_{2h}-h_{2g}\right)
 \end{equation}
     \nomenclature[S]{$pu$}{Pump}
+    
+    where $h_{2e}$ can be obtained by $\eta_{pu} = (h_{i,2e}-h{2d})/(h_{2e}-h_{2d})$, $h_{2h}$ can be obtained by $\eta_{pu} = (h_{i,2h}-h_{2g})/(h_{2h}-h_{2g})$. $h_{i,2e}$ is determined by $s_{2d}$ and $p_e$, $h_{i,2h}$ is determined by $s_{2g}$ and $p_s$.
     
     The outlet water of the deaerator is saturated water ($x = 0$), so the outlet temperature $T_{2g}$ and outlet enthalpy $h_{2g}$ of the heated fluid is determined by pressure $p_{2g}$. For the deaerator, the outlet pressure equals to any of the inlet pressure.
     \begin{equation}
@@ -800,18 +850,27 @@ The efficiency of Rankine cycle can be expressed as
 	\eta_{rk}=(P_{tb}-P_{pu}/\eta_{ge})/Q_{2}
 \end{equation}
 
-  \subsubsection{ORC turbine}
+  \subsubsection{ORC cycle}
   
-  For organic Rankine cycle, since the pressure of the working fluid is always has than that of the atmosphere, there is no air leakage. This means a deaerator is no more
-necessary. The turbine is without extraction. Since the 
+  Compared with steam Rankine cycle, ORC has the following features:
+  \begin{enumerate}
+  \item Organic fluid has lower boiling point, and higher evaporation pressure. It is suitable for the recovery of low temperature waste heat. Besides, it has small density and specific heat capacity, the required size of turbine, pipes and heat transfer areas are small, which is beneficial for cost saving.
+  \item The exhaust fluid of the turbine is dry. So without overheat, the saturated gas can be used as the main gas for the turbine. The corrosion situation caused by the impact of the droplets to the high-speed rotating blades will not happen with ORC.
+  \item Organic fluid has lower sound speed than vapor, the turbine can achieve favorable aerodynamic performance with lower wheel speed. 
+  \item Organic fluid has higher condensing pressure than water. It can condense under the pressure higher than the atmosphere. The system pressure can be maintained above the atmosphere pressure to prevent air leak into the system. This means a deaerator is no more necessary.
+  \item Organic fluid has low freezing point, no anti-freezing treatment is required even in the cold area.
+\end{enumerate}
 
-Figure~\ref{fig:ORCsystem1} shows the schematic diagram of an ORC system without regenerator.
+The shapes of curves in the $T$-$s$ diagram of different fluids are different. According to the saturated vapor curve $dT/ds$ in the $T$-$s$ diagram, the working fluid can be divided into three types: $dT / ds > 0$ means dry fluid, most of the organic fluid are dry fluids; $dT / ds < 0$ means wet fluid, such as water; $dT/ds \rightarrow \pm\infty$ means isentropic fluid, such as R134a. For the high temperature high pressure dry fluid and isentropic fluid, since there is no droplets after work in the expansion turbine, no superheater is required. On the other hand, since the purpose of the ORC focuses on the recovery of low grade heat power, a superheated approach like the traditional Rankine cycle is not appropriate. 
 
-\noindent \begin{figure}[htbp]
+Figure~\ref{fig:$T$-$s$_2systems} shows the $T$-$s$ diagram of steam Rankine cycle and ORC cycle. Figure~\ref{fig:ORCsystem2} shows the schematic diagram of the ORC system. For a dry fluid, the cycle can be improved by the use of a regenerator: since the fluid has not reached the two-phase state at the end of the expansion, its temperature at this point is higher than the condensing temperature. This higher temperature fluid can be used to preheat the liquid before it enters the evaporator.
+A counter-current heat exchanger is thus installed between the expander outlet and the evaporator inlet. The power required from the heat source is therefore reduced and the efficiency is increased.
+
+  \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.6\columnwidth]{fig/ORCsystem1.pdf}
-	\caption{The schematic diagram of an ORC system without regenerator}
-	\label{fig:ORCsystem1}
+	\includegraphics[width = 0.8\columnwidth]{fig/Ts.pdf}
+	\caption{$T$-$s$ diagram of water and a typical organic fluid}
+	\label{fig:$T$-$s$_2systems}
 \end{center}
 \end{figure}
 
@@ -819,40 +878,85 @@ Figure~\ref{fig:ORCsystem1} shows the schematic diagram of an ORC system without
 \begin{center}
 	\includegraphics[width = 0.6\columnwidth]{fig/ORCsystem2.pdf}
 	\caption{The schematic diagram of an ORC system with regenerator}
-	\label{fig:ORCsyste2}
+	\label{fig:ORCsystem2}
 \end{center}
 \end{figure}
 
+The isentropic efficiency of the turbine
+\begin{equation}
+  \eta_{i,tb} = (h_{4a}-h_{4b})/(h_{4a}-h_{i,4b})
+\end{equation}
 
-\subsubsection{Condenser}
+where $h_{i,4b}$ is determined by $s_{4a}$ and $p_c$.
 
-\subsubsection{Deaerator}
+The output power of the turbine
+\begin{equation}
+  P_{tb}=\dot{m}_{4}(h_{4a}-h_{4b})
+\end{equation}
+
+Process $4c$-$4d$ shows the heat process in the condenser. The outlet fluid in the condenser is saturated liquid. The outlet temperature $T_{4d}$ and outlet enthalpy $h_{4d}$ are determined by the exhaust pressure of the turbine $p_c$.
+
+  For the regenerator,
+  \begin{equation}
+      h_{4b} - h_{4c} = h_{4f} - h_{4e}
+  \end{equation}
+  
+  The released heat of the condenser
+  \begin{equation}
+      Q_{cd} = \dot{m}_4 (h_{4c} - h_{4d})
+\end{equation}
+
+    The power of the pump
+  \begin{equation}
+	P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
+\end{equation}
+    \nomenclature[S]{$pu$}{Pump}
+    
+    where $h_{4e}$ can be obtained by $\eta_{pu} = (h_{i,4e}-h{4d})/(h_{4e}-h_{4d})$. $h_{i,4e}$ is determined by $s_{4d}$ and $p_s$.
+    
+  Heat injected in the circuit
+\begin{equation}
+	    Q_4=\dot{m}_4(h_{4a}-h_{4f})
+    \end{equation}
+
+The efficiency of Rankine cycle can be expressed as
+\begin{equation}
+	\eta_{rk}=(P_{tb}-P_{pu}/\eta_{ge})/Q_{4}
+\end{equation}
+
+%\noindent \begin{figure}[htbp]
+%\begin{center}
+%	\includegraphics[width = 0.6\columnwidth]{fig/ORCsystem1.pdf}
+%	\caption{The schematic diagram of an ORC system without regenerator}
+%	\label{fig:ORCsystem1}
+%\end{center}
+%\end{figure}
+
+%  The stream exiting the turbine was passed through a recuperator to heat the feed working fluid.
+
 
 \subsubsection{Generator}
 The generator is relatively independent of the cascade system and its efficiency is assumed to be a constant, 0.975.
 
 %\subsubsection{Thermal storage system}
 
-\section{Steam generating system}
-\section{Steam extraction and regeneration system}
+%\section{Steam generating system}
+%\section{Steam extraction and regeneration system}
 \section{Stirling engine array}
-\section{Component connection}
-\section{Determination of state parameters}
-
-Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=6\,\mathrm{m^2}$, $A_{se,2}=6\,\mathrm{m^2}$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times{}10^{-2}\,\mathrm{mol}$, $s_{se}=10\,\mathrm{s^{-1}}$.
+Stirling engine array is used in the cascade system, fig.~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=6\,\mathrm{m^2}$, $A_{se,2}=6\,\mathrm{m^2}$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times{}10^{-2}\,\mathrm{mol}$, $s_{se}=10\,\mathrm{s^{-1}}$.
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.4\columnwidth]{fig/stirlingEngineArray.pdf}
+	\includegraphics[width = 0.6\columnwidth]{fig/stirlingEngineArray.pdf}
 	\caption{Layout of Stirling engines}
 	\label{fig:Layout of Stirling engines}
 \end{center}
 \end{figure}
 
 Depending on the direction of heating and cooling flows, there are two possible flow types: parallel flow and counterflow. 
-%Figure~\ref{fig:ParallelFlow} and 
+Figure~\ref{fig:twoFlowTypes} and 
 Figure~\ref{fig:CounterFlow} show the heat transfer diagrams of the two flow types.
-%: \nomenclature{$n_1$}{Number of columns of the Stirling engine array} $n_1$ is chosen to be 10 and can be optimized later.
+\nomenclature{$n_1$}{Number of columns of the Stirling engine array} $n_1$ is chosen to be 10 and can be optimized later.
 
 \noindent \begin{figure}[htbp]
 \centering
@@ -866,7 +970,98 @@ Figure~\ref{fig:CounterFlow} show the heat transfer diagrams of the two flow typ
 	\caption{Counterflow}\label{fig:CounterFlow}
 	\end{subfigure}
 	\caption{Heat transfer diagram of parallel flow and counterflow}
+	\label{fig:twoFlowTypes}
 \end{figure}
 
-By solving above equations, efficiency of the Stirling engine array $\eta_{sea}$ can be obtained by $\eta_{sea}=1-\dfrac{\dot{m}_{2}(h_{2,o,n_1}-h_{2,i,1})}{\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})}$,
-power of each Stirling engine in column $x$, $P_{se,x}=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}$, and power of the Stirling engine array $P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})$.
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.7\columnwidth]{fig/HeatTransfer_Counter}
+	\caption{Heat transfer diagram of counterflow}
+	\label{fig:CounterFlow}
+\end{center}
+\end{figure}
+
+In Figure~\ref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},\dot{m}_{1,r}=\dot{m}_{1}/n_{2}$. For $x$ from $1$ to $n_1-1$, where $x$ is the column number of Stirling engines, $T_{1,i,x+1}=T_{1,o,x},T_{2,i,x+1}=T_{2,o,x}$.
+\nomenclature{$n_1$}{Number of columns of the Stirling engine array}
+%\nomenclature{$\dot{m}_{1}$}{Total mass flow rate of air, kg/s}
+
+Assume that the positive flow direction is to the right, for parallel flow, $T_{2,i,1}=T_{2,i}$, $\dot{m}_{2,r}=\dot{m}_{2}/n_{2}$; for counterflow, $T_{2,o,n_1}=T_{2,i}$, $\dot{m}_{2,r}=-\dot{m}_{2}/n_{2}$.
+\nomenclature{$n_2$}{Number of rows of the Stirling engine array}
+\nomenclature{$\dot{m}$}{Mass flow rate, kg/s}
+
+%\begin{equation}
+%	T_{2,i,1}=T_{2,i}\label{eq:T_2_i_1}
+%\end{equation}
+%\begin{equation}
+%	\dot{m}_{2,r}=\dot{m}_{2}/n_{2}
+%\end{equation}
+%\nomenclature{$\dot{m}_{2,r}$}{Mass flow rate of water in each row of Stirling engine array, kg/s}
+%\nomenclature{$\dot{m}_{2}$}{Total mass flow rate of water, kg/s}
+
+%for counterflow,
+%
+%\begin{equation}
+%	T_{2,o,n_1}=T_{2,i}\label{eq:T_2_o_n1}
+%\end{equation}
+%\begin{equation}
+%	\dot{m}_{2,r}=-\dot{m}_{2}/n_{2}
+%\end{equation}
+
+Assume linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}, and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Formosa2010,Juhasz2010}. For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_1$, according to Equation~\ref{eq:T_H} and Equation~\ref{eq:T_L},
+
+\begin{equation}
+	T_{hw,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{se,1}A_{se,1}}{\dot{m}_{1,r}c_{p,1,x}})}\label{eq:T_H_x}
+\end{equation}
+
+
+\begin{equation}
+	T_{cw,x}=T_{2,i,x}-\dfrac{T_{2,i,x}-T_{2,o,x}}{1-\exp(-\dfrac{U_{se,2}A_{se,2}}{\dot{m}_{2,r}c_{p,2,x}})}\label{eq:T_L_x}
+\end{equation}
+
+The power of each Stirling engine in column $x$ can be written as 
+\begin{equation}
+  P_{se,x} = W_{th,x}-W_{pd,x}-W_{fs,x}\end{equation}
+
+The efficiency of each Stirling engine in column $x$ can be written as 
+\begin{equation}
+  \eta_{se,x} = \dfrac{W_{th,x}-W_{pd,x}-W_{fs,x}}{Q_{th,x}+Q_{id,x}+Q_{sc,x}}
+\end{equation}
+
+%$\eta_{se,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{se}}}\label{eq:eta_striling_x}$, where $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Stine1985,Juhasz2010} and $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}.
+
+%\begin{equation}
+%	\eta_{se,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{se}}}\label{eq:eta_striling_x}
+%\end{equation}
+
+For energy balance,
+\begin{equation}
+	\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})(1-\eta_{se,x})=\dot{m}_{2,r}(h_{2,o,x}-h_{2,i,x})
+\end{equation}
+
+%And in each Stirling cycle, the heat absorbed by the working gas is
+%\begin{equation}
+%\begin{split}
+%	n_gR(T_{H,x}\ln\gamma_{se}+\dfrac{1-e_{x}}{k-1}(T_{H,x}-T_{L,x}))=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})/s_{se}
+%\end{split}
+%\end{equation}
+
+By using equations in~\ref{sec:StirlingEngineModel} and the energy balance equations, key parameters of the Stirling engine array can be obtained. 
+
+The efficiency of the Stirling engine array \begin{equation}
+  \eta_{sea}=1-\dfrac{\dot{m}_{2}(h_{2,o,n_1}-h_{2,i,1})}{\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})}
+\end{equation}
+
+The output power of each Stirling engine in column $x$
+\begin{equation}
+  P_{se,x}=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}
+\end{equation}
+
+The output power of the Stirling engine array
+\begin{equation}
+  P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})
+\end{equation}
+
+\section{Component connection}
+
+%\section{Determination of state parameters}
+

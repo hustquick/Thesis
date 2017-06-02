@@ -28,8 +28,8 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %In a Stirling cycle, there are two isothermal processes that exchange heat with heating and cooling fluids, two isochoric processes that exchange heat with regenerator. Figure~\ref{fig:StirlingCycle} shows the schematic of a Stirling cycle, process 1-2 and process 3-4 are the two isothermal processes, process 2-3 and process 4-1 are the two isochoric processes. The heat absorbed by regenerator in process 4-1 is reused in process 2-3, but only able to heat the working gas from 2 to 3' due to the imperfect regeneration. $e$ is defined as the regenerator effectiveness for the imperfect regeneration~\cite{Formosa2010}, $e=\frac{T_R-T_L}{T_H-T_L}$, where $T_H$ is the temperature in the hot space, $T_L$ is the temperature in the cold space, $T_R$ is the effective working fluid temperature in the regenerator.
 %\nomenclature{$e$}{regenerator effectiveness}
 %\nomenclature{$T_R$}{effective working fluid temperature in regenerator (K)}
-%\nomenclature{$T_L$}{working fluid temperature in the cold space (K)}
-%\nomenclature{$T_H$}{working fluid temperature in the hot space (K)}
+%\nomenclature{$T_L$}{Working fluid temperature in the cold space, K}
+%\nomenclature{$T_H$}{Working fluid temperature in the hot space, K}
 %
 %\noindent \begin{figure}[htbp]
 %\begin{center}
@@ -57,7 +57,7 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %\begin{equation}
 %	K = \frac{V_{DH}}{T_H} + \frac{V_{DR}}{T_R} + \frac{V_{DC}}{T_L}
 %\end{equation}
-%\nomenclature{$K$}{dead volume factor}
+%\nomenclature{$K$}{Dead volume factor}
 %
 %For the isothermal compression process 1-2, the output work
 %
@@ -67,7 +67,7 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %%\nomenclature{$W_{12}$}{output work in process 1-2 (J)}
 %\nomenclature{$V_E$}{expansion volume (m$^3$)}
 %\nomenclature{$V_C$}{compression volume (m$^3$)}
-%\nomenclature{$m$}{mass of working fluid in Stirling engine (kg)}
+%\nomenclature{$m$}{Mass of working fluid in Stirling engine, kg}
 %\nomenclature{$R$}{gas constant (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
 %
 %For the isothermal expansion process 3-4, the output work
@@ -78,8 +78,8 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %%\nomenclature{$W_{34}$}{output work in process 3-4 (J)}
 %
 %Define $\gamma_H = \frac{V_E+V_C+KT_H}{V_E+KT_H}$, and $\gamma_L = \frac{V_E+V_C+KT_L}{V_E+KT_L}$, so in a cycle, the theoretical output work
-%\nomenclature[G]{$\gamma_H$}{space ratio in process 12}
-%\nomenclature[G]{$\gamma_L$}{space ratio in process 34}
+%\nomenclature[G]{$\gamma_H$}{Space ratio in process 12}
+%\nomenclature[G]{$\gamma_L$}{Space ratio in process 34}
 %
 %\begin{equation}
 %	W_{th} = W_{12} + W_{34} = mR(T_H\ln\gamma_H - T_L\ln\gamma_L)
@@ -99,8 +99,8 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %
 %%\nomenclature{$Q_{3^{'}3}$}{heat absorbed in process $3^{'}3$ (J)}
 %%\nomenclature{$M$}{Mole mass of the working fluid in Stirling engine (kg/mol)}
-%\nomenclature{$c_v$}{specific heat at constant volume (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
-%\nomenclature{$k$}{specific heat ratio ($c_p/c_v$), thermal conductivity ($\mathrm{W\cdot m^{-1}\cdot K^{-1}}$)}
+%\nomenclature{$c_v$}{specific heat at constant volume, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
+%\nomenclature{$k$}{specific heat ratio ($c_p/c_v$), thermal conductivity ,$\mathrm{W\cdot m^{-1}\cdot K^{-1}}$}
 %
 %For the isothermal expansion process 3-4, the absorbed heat
 %
@@ -130,7 +130,7 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %%	P = {W}s_{se} = mRs_{se}(T_H\ln\gamma_H - T_L\ln\gamma_L)
 %%	\label{Eq:P}
 %%\end{equation}
-%\nomenclature{$P$}{power of Stirling engine (W)}
+%\nomenclature{$P$}{Power of Stirling engine (W)}
 %\nomenclature{$s_{se}$}{speed of Stirling engine (Hz)}
 %
 %%In order to describe quantitatively the effect of the internal dissipation of the working fluid on the performance (efficiency and power) of Stirling engine, the cycle irreversibility parameter, $R_S$, is defined as~\cite{Kaushik2003}:
@@ -162,13 +162,13 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %	T_H = T_{hw} - \frac{Qs_{se}}{h_hA_{hw}}
 %	\label{eq:T_H}
 %\end{equation}
-%\nomenclature[S]{$hw$}{heater wall}
+%\nomenclature[S]{$hw$}{Heater wall}
 %
 %\begin{equation}
 %	T_L = T_{cw} + \frac{(Q-W)s_{se}}{h_cA_{cw}}
 %	\label{eq:T_L}
 %\end{equation}
-%\nomenclature[S]{$cw$}{cooler wall}
+%\nomenclature[S]{$cw$}{Cooler wall}
 %
 %The heat transfer coefficient can be obtained using the following correlation~\cite{Babaelahi2015}:
 %
@@ -242,9 +242,9 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %\end{equation}
 %
 %where, $Z$, $k_p$, $D_p$, $J$ and $L_d$ denote the displacer stroke, piston thermal conductivity, displacer diameter, gap between the displacer and the cylinder, and length of the displacer respectively.
-%\nomenclature{$Z$}{displacer stroke (m)}
-%\nomenclature{$J$}{annular gap cylinder displacer (m)}
-%\nomenclature[S]{$p$}{piston}
+%\nomenclature{$Z$}{Displacer stroke (m)}
+%\nomenclature{$J$}{Annular gap cylinder displacer (m)}
+%\nomenclature[S]{$p$}{Piston}
 %
 %\end{enumerate}
 %
@@ -411,7 +411,7 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %\begin{equation}
 %	(T_w-T)UdA = q_mc_pdT
 %\end{equation}
-%\nomenclature{$q_m$}{mass flow rate (kg$\cdot$s$^{-1}$)}
+%\nomenclature{$q_m$}{Mass flow rate (kg$\cdot$s$^{-1}$)}
 %\nomenclature{$c_p$}{specific heat at constant pressure (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
 %\nomenclature{$T_w$}{wall temperature (K)}
 %\nomenclature{$U$}{overall heat transfer coefficient (W$\cdot$m$^{-2}\cdot$K$^{-1}$)}
@@ -441,8 +441,8 @@ Five basic connection types of SEA were summarized according to the direction-ir
 %%
 %
 %For a Stirling engine, $T_{hw}$ or $T_{cw}$ can be used to substitute $T_w$ to get the relationships between $T_{i,h}$, $T_{o,h}$ and $T_{hw}$, or $T_{i,c}$, $T_{o,c}$ and $T_{cw}$ respectively.
-%\nomenclature[S]{$h$}{heating fluid}
-%\nomenclature[S]{$c$}{cooling fluid}
+%\nomenclature[S]{$h$}{Heating fluid}
+%\nomenclature[S]{$c$}{Cooling fluid}
 %
 %\begin{equation}
 %	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{q_{m,h}c_{p,h}})
@@ -475,7 +475,7 @@ Five basic connection types of SEA were summarized according to the direction-ir
 
 \section{Modeling of the SEAs}
 
-As mentioned in section~\ref{sec:connectionTypes}, there are five basic connection types for an SEA. All other connection types are the combination of these five basic connection types. This paper investigates the five basic connection types.
+As mentioned in section~\ref{sec:connectionTypes}, there are five basic connection types for an SEA. All other connection types are the combination of these five basic connection types. This thesis investigates the five basic connection types.
 
 To determine the performance of an SEA, models of all the Stirling engines need to be built depending on their thermodynamic characteristic. Stirling engines are chosen to have the same parameters including the same speed $s_{se}$. This is a reasonable assumption when using SEA for power generation, where the output power frequency should be constant. The speed of Stirling engine can be calibrated by speed controller system~\cite{Hooshang2016}. To eliminate interference of other factors, heating and cooling fluids are chosen to have same parameters for different connection types of SEAs. To clearly find out the performance differences of different SEAs, large temperature differences of the heating/cooling fluids after heat exchange with the engines are preferred. Air was chosen as the cooling fluid instead of commonly used water to avoid small temperature rise and evaporation in the cooling process. Design parameters of Stirling engines are the same as shown in Table~\ref{tab:GPU3parameters}. Other parameters of Stirling engines and heating/cooling fluids in SEAs are shown in Table~\ref{tab:parameters}. Rotation speed of the engines and mean effective pressure were chosen to be $25\,\mathrm{Hz}$ and $5\,\mathrm{MPa}$ respectively to get the best Stirling engine model for performance prediction, as pointed in section~\ref{sec:modelValidation}.
 
@@ -500,7 +500,7 @@ To determine the performance of an SEA, models of all the Stirling engines need 
 \end{table}
 
 In an SEA, there are 2 flows as shown in Figure~\ref{fig:SEA}. In a serial flow, each engine's mass flow rate is $q_m$, and from the flow's direction, for $2\leqslant{}x\leqslant{}n_{se}$, $T_{i,x} = T_{o,x-1}$. In a parallel flow, each engine's mass flow is $q_m/n_{se}$, for $2\leqslant{}x\leqslant{}n_{se}$, $T_{i,x} = T_{i,h}$.
-\nomenclature{$n_{se}$}{number of Stirling engine in SEA}
+\nomenclature{$n_{se}$}{Number of Stirling engine in SEA}
 
 %\begin{equation}
 %	\begin{split}
@@ -616,10 +616,10 @@ For a certain connection type, increase $n_{se}$ will reduce the efficiency of S
 
 \section{Conclusion}
 
-A new layout scheme of the solar dish system by using SEA were proposed in this paper. Connection type of the engines may change the flow rates and temperatures of the fluids, as a result the performance of the SEA will be different depending on the connection schemes. In order to compare performance of SEAs with different arrangements, five basic connection types of SEA were summed up according to flow type and flow order. 
+A new layout scheme of the solar dish system by using SEA were proposed in this thesis. Connection type of the engines may change the flow rates and temperatures of the fluids, as a result the performance of the SEA will be different depending on the connection schemes. In order to compare performance of SEAs with different arrangements, five basic connection types of SEA were summed up according to flow type and flow order. 
 
 Analytical Stirling engine model was created to develop the SEA models for the investigation of influence of connection types. Imperfect regeneration and cycle irreversibility of Stirling engine cycle and heat exchange process between fluids and engine were considered in the model. Algorithm to numerically solve different connection types of SEA was developed. The model was evaluated by considering the prototype GPU-3 Stirling engine as a case study. Result shows that the proposed model predicted the performance with higher accuracy than Simple model~\cite{Urieli1984} and Simple II model~\cite{Strauss2010}. 
 
 Models of SEAs were developed to calculated the performance under different parameters to find out the impacts of $T_{i,h}$, $q_{m,h}c_{p,h}$, $q_{m,c}c_{p,c}$ and $n_{se}$ on different connection types. It was found that, as expected, decrease $T_{i,h}$ and $q_{m}c_{p}$ will weaken the performance of SEA of all connection types. However, for some connection types, there exists a critical temperature below which some engines stop working. This needs to be considered for SEA connection type selection, especially when $T_{i,h}$ is low. For given heating and cooling fluids, Type 2 has the best performance and adaptability. Type 2 and Type 3 have similar performance under different parameters ($T_{i,h}$, $T_{i,c}$ and $q_mc_p$), which means the flow order has little influence on the performance of an SEA. SEA of serial flows (Type 3) has the best performance and adaptability under different parameters. Given heating and cooling fluids, using serial flow is the best choice for the connection type of an SEA. %This means the new arrangement of dish-Stirling system in Figure~\ref{fig:Dish_SEA} may have better performance than the traditional arrangement, which can be considered as a particular case of Type 1.
 
-It is important to note that, in the future researches, the experiments of influence of connection type on SEA's performance can be carried out to verify the conclusions in this paper.
+It is important to note that, in the future researches, the experiments of influence of connection type on SEA's performance can be carried out to verify the conclusions in this thesis.

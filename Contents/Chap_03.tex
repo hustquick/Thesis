@@ -52,7 +52,7 @@ The energy pass through the glass tube to the receiver can be obtained by
 \end{equation}
 
 The solar energy absorbed by the absorber occurs very close to the outer surface, to simplify the absorption process, it is treated as a uniform heat flux $q''$.
-\nomenclature{$q''$}{Heat flux}
+
 \begin{equation}
   q''= \frac{P}{\pi d_o L_{tc}} = \frac{I_r w_{tc} \rho \gamma \tau F_e K(\theta)}{\pi d_o}
 \end{equation}
@@ -67,8 +67,8 @@ The solar energy absorbed by the absorber occurs very close to the outer surface
 %%\nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
 
 Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length of the collector, and the heat transfer correlation in Appendix ~\ref{cha:CTCHFHX} can be used. Figure~\ref{fig:Pipe} shows the schematic diagram of the thermal analysis of the absorber pipe.
-\nomenclature{$U$}{Overall heat transfer coefficient, W/(m$^2\cdot$K)}
-\nomenclature{$q''$}{Heat flux, W/m$^2$}
+\nomenclature{$U$}{Overall heat transfer coefficient, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
+\nomenclature{$q''$}{Heat flux, W$\cdot$m$^{-2}$}
 \begin{equation}
 	\frac{T_{o}-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})PL}{\dot{m}c_{p}})\label{eq:CTCHF}
 \end{equation}
@@ -124,11 +124,11 @@ A dish reflector product of SES (Stirling Energy System) is used in this cascade
 	\label{tab:dc}
 \end{table}
 \nomenclature[G]{$\delta$}{Thickness, m}
-\nomenclature[S]{$insu$}{insulating layer}
+\nomenclature[S]{$insu$}{Insulating layer}
 %\nomenclature[G]{$\delta_{insu}$}{Thickness of receiver insulating layer, m}
 \nomenclature{$dep$}{Depth, m}
 \nomenclature{$d$}{Diameter, m}
-\nomenclature[G]{$\lambda$}{Thermal conductivity, $\mathrm{W/(m\cdot K)}$}
+\nomenclature[G]{$\lambda$}{Thermal conductivity, W$\cdot{}$m$^{-1}$$\cdot$K$^{-1}$}
 \nomenclature[G]{$\epsilon$}{Emissivity}
 %\nomenclature[G]{$\lambda_{insu}$}{Thermal conductivity of receiver insulating layer, $\mathrm{W/(m\cdot K)}$}
 %\nomenclature[G]{$\epsilon_{insu}$}{Emissivity of reciver insulating layer}
@@ -199,7 +199,7 @@ $Nu'_{tube}$ is the Nusselt number of straight circular tube, which can be obtai
 \end{equation}
 \nomenclature{$Pr$}{Prandtl number}
 \nomenclature{$Re$}{Reynolds number}
-\nomenclature[G]{$\mu$}{Viscosity, kg/(m$\cdot$s)}
+\nomenclature[G]{$\mu$}{Viscosity, kg$\cdot$m$^{-1}$$\cdot$s$^{-1}$}
 \nomenclature[S]{$w$}{Tube wall}
 and the logarithmic mean temperature difference $\Delta{}T_{ln,dr,1}$ can be written as
 \begin{equation}
@@ -232,7 +232,7 @@ is outside temperature of the insulation wall.
 	=\dfrac{k_{insu}Nu_{insu}A_{insu}(T_{insu}-T_{amb})}{d_{cav}+2\delta_{insu}}
 %\end{split}
 \end{equation}
-\nomenclature{$k_{insu}$}{Thermal conductivity of air at the temperature of outside insulating layer, W/(m$\cdot$K)}
+\nomenclature{$k_{insu}$}{Thermal conductivity of air at the temperature of outside insulating layer, W$\cdot$m$^{-1}\cdot$K$^{-1}$}
 where $Nu_{insu}$ can be obtained by the correlation for flow over a circular cylinder.~\cite{Churchill1977}
 
   \item \emph{Radiation losses from the receiver insulating layer, $q_{cond,rad}$}  
@@ -291,10 +291,10 @@ $q_{dr,1}$ can be obtained by Equation~\ref{eq:q_dr_1}.
 \subsection{Stirling engine}\label{sec:StirlingEngineModel}
 \subsubsection{Theoretical Stirling cycle}
 In a Stirling cycle, there are two isothermal processes that exchange heat with heating and cooling fluids, two isochoric processes that exchange heat with regenerator. In Figure~\ref{fig:StirlingCycle}, the heat absorbed by regenerator in process 4-1 is reused in process 2-3, but only able to heat the working gas from 2 to 3' due to the imperfect regeneration. $e$ is defined as the regenerator effectiveness\cite{Formosa2010,Juhasz2010}, $e=\frac{T_R-T_L}{T_H-T_L}$, where $T_H$ is the temperature in the hot space, $T_L$ is the temperature in the cold space, $T_R$ is the effective working fluid temperature in the regenerator.
-\nomenclature{$e$}{regenerator effectiveness}
-\nomenclature{$T_R$}{effective working fluid temperature in regenerator (K)}
-\nomenclature{$T_L$}{working fluid temperature in the cold space (K)}
-\nomenclature{$T_H$}{working fluid temperature in the hot space (K)}
+\nomenclature{$e$}{Regenerator effectiveness}
+\nomenclature{$T_R$}{Effective working fluid temperature in regenerator, K}
+\nomenclature{$T_L$}{Working fluid temperature in the cold space, K}
+\nomenclature{$T_H$}{Working fluid temperature in the hot space, K}
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -314,39 +314,39 @@ In order to obtain a simplified analytical model, several simplifications were m
 \end{itemize}
 
 To consider internal irreversibilities in Stirling cycle made by dead volumes, as described in Duan's paper~\cite{Duan2014}, total dead volume $V_D$ is divided into heater dead volume $V_{DH}$, regenerator dead volume $V_{DR}$ and cooler dead volume $V_{DC}$. There exists a factor $K$ to describe the dead volumes under different temperatures. $K$ is relevant with temperatures in the process and regenerator effectiveness.
-\nomenclature{$V_D$}{total dead volume (m$^3$)}
-\nomenclature{$V_{DH}$}{hot space dead volume (m$^3$)}
-\nomenclature{$V_{DR}$}{regenerator dead volume (m$^3$)}
-\nomenclature{$V_{DC}$}{cold space dead volume (m$^3$)}
+\nomenclature{$V_D$}{Total dead volume, m$^3$}
+\nomenclature{$V_{DH}$}{Hot space dead volume, m$^3$}
+\nomenclature{$V_{DR}$}{Regenerator dead volume, m$^3$}
+\nomenclature{$V_{DC}$}{Cold space dead volume, m$^3$}
 \begin{equation}
 	K = \frac{V_{DH}}{T_H} + \frac{V_{DR}}{T_R} + \frac{V_{DC}}{T_L}
 \end{equation}
-\nomenclature{$K$}{dead volume factor}
+\nomenclature{$K$}{Dead volume factor}
 
 For the isothermal compression process 1-2, the output work
 \begin{equation}
 	W_{12} = \int^{V_E}_{V_E+V_C}{p_{12}dV}=-mRT_L\ln{\frac{V_E+V_C+KT_L}{V_E+KT_L}}
 \end{equation}
-%\nomenclature{$W_{12}$}{output work in process 1-2 (J)}
-\nomenclature{$V_E$}{expansion volume (m$^3$)}
-\nomenclature{$V_C$}{compression volume (m$^3$)}
-\nomenclature{$m$}{mass of working fluid in Stirling engine (kg)}
-\nomenclature{$R$}{gas constant (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
+%\nomenclature{$W_{12}$}{Output work in process 1-2 (J)}
+\nomenclature{$V_E$}{Expansion volume, m$^3$}
+\nomenclature{$V_C$}{Compression volume, m$^3$}
+\nomenclature{$m$}{Mass of working fluid in Stirling engine, kg}
+\nomenclature{$R$}{Gas constant, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
 
 For the isothermal expansion process 3-4, the output work
 \begin{equation}
 	W_{34} = \int^{V_E+V_C}_{V_E}{p_{34}dV}=mRT_H\ln{\frac{V_E+V_C+KT_H}{V_E+KT_H}}
 \end{equation}
-%\nomenclature{$W_{34}$}{output work in process 3-4 (J)}
+%\nomenclature{$W_{34}$}{Output work in process 3-4 (J)}
 
 Define $\gamma_H = \frac{V_E+V_C+KT_H}{V_E+KT_H}$, and $\gamma_L = \frac{V_E+V_C+KT_L}{V_E+KT_L}$, so in a cycle, the theoretical output work
-\nomenclature[G]{$\gamma_H$}{space ratio in process 12}
-\nomenclature[G]{$\gamma_L$}{space ratio in process 34}
+\nomenclature[G]{$\gamma_H$}{Space ratio in process 12}
+\nomenclature[G]{$\gamma_L$}{Space ratio in process 34}
 \begin{equation}
 	W_{th} = W_{12} + W_{34} = mR(T_H\ln\gamma_H - T_L\ln\gamma_L)
 \end{equation}
-\nomenclature{$W$}{output work (J)}
-\nomenclature[S]{$th$}{theoretical}
+\nomenclature{$W$}{Output work, J}
+\nomenclature[S]{$th$}{Theoretical}
 
 For the isochoric heating process 3'-3, the absorbed heat
 \begin{equation}
@@ -358,9 +358,9 @@ For the isochoric heating process 3'-3, the absorbed heat
 \end{equation}
 
 %\nomenclature{$Q_{3^{'}3}$}{heat absorbed in process $3^{'}3$ (J)}
-%\nomenclature{$M$}{Mole mass of the working fluid in Stirling engine (kg/mol)}
-\nomenclature{$c_v$}{specific heat at constant volume (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
-\nomenclature{$k$}{specific heat ratio ($c_p/c_v$), thermal conductivity ($\mathrm{W\cdot m^{-1}\cdot K^{-1}}$)}
+%\nomenclature{$M$}{Mole mass of the working fluid in Stirling engine, kg$\cdot$mol$^{-1}$)}
+\nomenclature{$c_v$}{Specific heat at constant volume, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
+\nomenclature{$k$}{Specific heat ratio ($c_p/c_v$), thermal conductivity, W$\cdot$m$^{-1}\cdot$K$^{-1}$}
 
 For the the isothermal expansion process 3-4, the absorbed heat
 \begin{equation}
@@ -372,7 +372,7 @@ In a cycle, the theoretical absorbed heat
 \begin{equation}
 	Q_{th} = Q_{3^{'}3} + Q_{34} = \frac{1-e}{k-1}mR(T_H-T_L) + mRT_H\ln\gamma_H
 \end{equation}
-\nomenclature{$Q$}{absorbed heat (J)}
+\nomenclature{$Q$}{Absorbed heat, J}
 
 %The Stirling cycle efficiency
 
@@ -388,8 +388,8 @@ In a cycle, the theoretical absorbed heat
 %	P = {W}s_{se} = mRs_{se}(T_H\ln\gamma_H - T_L\ln\gamma_L)
 %	\label{Eq:P}
 %\end{equation}
-\nomenclature{$P$}{power of Stirling engine (W)}
-\nomenclature{$s_{se}$}{speed of Stirling engine (Hz)}
+\nomenclature{$P$}{Power of Stirling engine, W}
+\nomenclature{$s_{se}$}{Speed of Stirling engine, Hz}
 
 %In order to describe quantitatively the effect of the internal dissipation of the working fluid on the performance (efficiency and power) of Stirling engine, the cycle irreversibility parameter, $R_S$, is defined as~\cite{Kaushik2003}:
 %\nomenclature{$R_S$}{cycle irreversibility parameter}
@@ -419,18 +419,17 @@ Because of non-ideal heater and cooler, the working fluid temperature ($T_{H}$/$
 	T_H = T_{hw} - \frac{Qs_{se}}{h_hA_{hw}}
 	\label{eq:T_H}
 \end{equation}
-\nomenclature[S]{$hw$}{heater wall}
+\nomenclature[S]{$hw$}{Heater wall}
 \begin{equation}
 	T_L = T_{cw} + \frac{(Q-W)s_{se}}{h_cA_{cw}}
 	\label{eq:T_L}
 \end{equation}
-\nomenclature[S]{$cw$}{cooler wall}
+\nomenclature[S]{$cw$}{Cooler wall}
 
 The heat transfer coefficient can be obtained using the following correlation~\cite{Babaelahi2015}:
 \begin{equation}
 	h_{h,c} = \frac{\mu c_pf_{Re}}{2D_{h,c}Pr_{h,c}}
 \end{equation}
-\nomenclature[G]{$\mu$}{dynamic viscosity ($\mathrm{kg\cdot m^{-1}\cdot s^{-1}}$)}
 
 where $f_{Re}$ is a Reynolds friction factor defined as:
 \begin{equation}
@@ -445,7 +444,7 @@ Pressure drops in the heat exchangers cause power losses of the Stirling engine.
 \begin{equation}
 	\Delta p = -\frac{2f_{Re}\mu u V}{d^2A}
 \end{equation}
-\nomenclature{$p$}{pressure (Pa)}
+\nomenclature{$p$}{Pressure, Pa}
 
 where $u$ is the working gas speed, $V$ is volume, $A$ is flow cross-section area.
 
@@ -480,7 +479,7 @@ The temperature differs from the heater and cooler, heat losses from heater to c
 \end{equation}
 
 where, $k_r$, $A_r$ and $L_r$ denote the regenerator matrix conductivity, regenerator length, and regenerator conductive area respectively.
-\nomenclature[S]{$r$}{regenerator}
+\nomenclature[S]{$r$}{Regenerator}
 
 \item Energy losses due to shuttle conduction
 
@@ -490,9 +489,9 @@ The displacer shuttles between the expansion and compression space. It absorbs h
 \end{equation}
 
 where, $Z$, $k_p$, $D_p$, $J$ and $L_d$ denote the displacer stroke, piston thermal conductivity, displacer diameter, gap between the displacer and the cylinder, and length of the displacer respectively.
-\nomenclature{$Z$}{displacer stroke (m)}
-\nomenclature{$J$}{annular gap cylinder displacer (m)}
-\nomenclature[S]{$p$}{piston}
+\nomenclature{$Z$}{Displacer stroke, m}
+\nomenclature{$J$}{Annular gap cylinder displacer, m}
+\nomenclature[S]{$p$}{Piston}
 
 \end{enumerate}
 
@@ -655,15 +654,12 @@ For a Stirling engine thermal process, the wall temperatures of the heater and c
 \begin{equation}
 	(T_w-T)UdA = q_mc_pdT
 \end{equation}
-\nomenclature{$q_m$}{mass flow rate (kg$\cdot$s$^{-1}$)}
-\nomenclature{$c_p$}{specific heat at constant pressure (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
-\nomenclature{$T_w$}{wall temperature (K)}
-\nomenclature{$U$}{overall heat transfer coefficient (W$\cdot$m$^{-2}\cdot$K$^{-1}$)}
-\nomenclature{$A$}{heat transfer area (m$^2$)}
+\nomenclature{$q_m$}{Mass flow rate, kg$\cdot$s$^{-1}$}
+\nomenclature{$c_p$}{Specific heat at constant pressure, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
+\nomenclature{$T_w$}{Wall temperature, K}
+\nomenclature{$A$}{Heat transfer area, m$^2$}
 
 with $T(0)=T_i$, $T(A)=T_o$,
-\nomenclature[S]{$i$}{inlet}
-\nomenclature[S]{$o$}{outlet}
 \begin{equation}
 	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{q_mc_p})
 \end{equation}
@@ -717,8 +713,8 @@ with $T(0)=T_i$, $T(A)=T_o$,
 %\nomenclature{$A$}{Area, m$^2$}
 
 For a Stirling engine, $T_{hw}$ or $T_{cw}$ can be used to substitute $T_w$ to get the relationships between $T_{i,h}$, $T_{o,h}$ and $T_{hw}$, or $T_{i,c}$, $T_{o,c}$ and $T_{cw}$ respectively.
-\nomenclature[S]{$h$}{heating fluid}
-\nomenclature[S]{$c$}{cooling fluid}
+\nomenclature[S]{$h$}{Heating fluid}
+\nomenclature[S]{$c$}{Cooling fluid}
 \begin{equation}
 	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{q_{m,h}c_{p,h}})
 	\label{Eq:T_h}
@@ -987,7 +983,7 @@ In Figure~\ref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},\dot{m}_{1,r}
 
 Assume that the positive flow direction is to the right, for parallel flow, $T_{2,i,1}=T_{2,i}$, $\dot{m}_{2,r}=\dot{m}_{2}/n_{2}$; for counterflow, $T_{2,o,n_1}=T_{2,i}$, $\dot{m}_{2,r}=-\dot{m}_{2}/n_{2}$.
 \nomenclature{$n_2$}{Number of rows of the Stirling engine array}
-\nomenclature{$\dot{m}$}{Mass flow rate, kg/s}
+\nomenclature{$\dot{m}$}{Mass flow rate, kg$\cdot$s$^{-1}$}
 
 %\begin{equation}
 %	T_{2,i,1}=T_{2,i}\label{eq:T_2_i_1}

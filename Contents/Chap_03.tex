@@ -30,7 +30,7 @@ The equation was determined from trough collector testing conducted at SNL~\cite
   K(\theta) = \cos\theta+0.000884\theta-0.00005369\theta^2
 \end{equation}
 
-The optical losses are associated with five parameters (see fig.~\ref{fig:ParabolicTrough}):
+The optical losses are associated with five parameters (see Figure~\ref{fig:ParabolicTrough}):
 
 \begin{itemize}
   \item Reflectivity, $\rho$: only a fraction of the incident radiation is reflected towards the receiver. The fraction is determined by the reflector type and dirt condition. Reflectivity of commercial parabolic trough mirrors can be assumed to be 0.9 for washed mirrors. 
@@ -80,7 +80,7 @@ Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole lengt
 \end{figure}
 
 
-Since the Nusselt number $Nu$ in the pipe is very large (about $1\times10^4$), small temperature difference exists between the absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero~\cite{Romero2007}. The length $L$ required to get the required number of trough collectors in a row can be obtained from Equation (\ref{eq:CTCHF}).
+Since the Nusselt number $Nu$ in the pipe is very large (about $1\times10^4$), small temperature difference exists between the absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero and Zarza~\cite{Romero2007}. The length $L$ required to get the required number of trough collectors in a row can be obtained from Equation~\ref{eq:CTCHF}.
 
 \subsection{Parabolic dish collector}
 
@@ -98,7 +98,7 @@ Two different methods~\cite{Adkins1987} are applied for the sun tracking systems
   \item Polar tracking, where the concentrator rotates about an axis parallel to the earth’s axis rotation.
 \end{itemize}
 
-A dish reflector product of SES (Stirling Energy System) is used in this cascade system, and its key parameters can be found in Table~\ref{tab:dc}. The structure of the receiver is shown in fig.~\ref{fig:dishReceiver}.
+A dish reflector product of SES (Stirling Energy System) is used in this cascade system, and its key parameters can be found in Table~\ref{tab:dc}. The structure of the receiver is shown in Figure~\ref{fig:dishReceiver}.
 
 \begin{figure}[!ht]
 \centering
@@ -140,7 +140,7 @@ A dish reflector product of SES (Stirling Energy System) is used in this cascade
 \nomenclature[G]{$\rho$}{Reflectivity}
 \nomenclature{$A_{se,1}$}{Heat transfer area of Stirling engine at air side, m$^2$}
 \nomenclature{$A_{se,2}$}{Heat transfer area of Stirling engine at water side, m$^2$}
-\nomenclature{$k$}{Specific heat ratio}
+%\nomenclature{$k$}{Specific heat ratio}
 %\nomenclature[G]{$\gamma_{se}$}{Compression ratio of Stirling engine}
 \nomenclature{$n_g$}{Amount of working gas in each Stirling engine, mol}
 \nomenclature{$n_{se}$}{Number of Stirling engines in the Stirling engine array}
@@ -162,7 +162,7 @@ The dish receiver model concerns the losses include: collector losses due to mir
 \end{center}
 \end{figure}
 
-To solve the thermal network in fig.~\ref{fig:thermal-lose}, correlations and relationships of the heat fluxes should be clear.
+To solve the thermal network in Figure~\ref{fig:thermal-lose}, correlations and relationships of the heat fluxes should be clear.
 
 \begin{enumerate}
   \item \emph{Inlet energy from the reflector, $q_i$}
@@ -172,7 +172,7 @@ To solve the thermal network in fig.~\ref{fig:thermal-lose}, correlations and re
       q_i = I_r A_{dc} \gamma \eta_{shading} \rho
   \end{equation}
   
-  In equation~\ref{eq:q_i}, $\gamma$ is the intercept factor, $\eta_{shading}$ is the shading factor between different collectors, $\rho$ is the reflectivity of the reflector.
+  In Equation~\ref{eq:q_i}, $\gamma$ is the intercept factor, $\eta_{shading}$ is the shading factor between different collectors, $\rho$ is the reflectivity of the reflector.
   \item \emph{Heat exchange between the HTF and the dish absorber, $q_{dr,1}$}
   
   The heat transfer process between the HTF and the dish absorber is simplified to a heat exchange process of a flow in a uniform temperature heat pipe. So $q_{dr,1}$ can be written as  
@@ -232,7 +232,7 @@ is outside temperature of the insulation wall.
 	=\dfrac{k_{insu}Nu_{insu}A_{insu}(T_{insu}-T_{amb})}{d_{cav}+2\delta_{insu}}
 %\end{split}
 \end{equation}
-\nomenclature{$k_{insu}$}{Thermal conductivity of air at the temperature of outside insulating layer, W$\cdot$m$^{-1}\cdot$K$^{-1}$}
+%\nomenclature{$k_{insu}$}{Thermal conductivity of air at the temperature of outside insulating layer, W$\cdot$m$^{-1}\cdot$K$^{-1}$}
 where $Nu_{insu}$ can be obtained by the correlation for flow over a circular cylinder.~\cite{Churchill1977}
 
   \item \emph{Radiation losses from the receiver insulating layer, $q_{cond,rad}$}  
@@ -254,7 +254,7 @@ where $h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$, $\overline{d_{cav}}$ is t
 	q_{conv,forc} = h_{forc}A_{cav}(T_{cav}-T_{amb})
 \end{equation}
 
-    Wu~\cite{Wu2010} present a comprehensive review and systematic summarization of convection heat loss from cavity receiver in parabolic dish solar thermal power system. And we choose the correlation presented by Leibfried~\cite{Leibfried1995}. This correlation gives an extended model of Koenig~\cite{Koenig1981} and Stine~\cite{Stine1994} with better results.
+    Wu et al.~\cite{Wu2010} present a comprehensive review and systematic summarization of convection heat loss from cavity receiver in parabolic dish solar thermal power system. And we choose the correlation presented by Leibfried and Ortjohann~\cite{Leibfried1995}. This correlation gives an extended model of Koenig and Marvin~\cite{Koenig1981} and Stine and Diver~\cite{Stine1994} with better results.
 
 For forced convection loss, side-on wind convection loss model given by Ma~\cite{Ma1993}, which is independent of the aperture orientation, is used
 \begin{equation}
@@ -272,7 +272,7 @@ For forced convection loss, side-on wind convection loss model given by Ma~\cite
 \end{equation}
 \end{enumerate}
 
-From fig~\ref{fig:thermal-lose}, it can be found that
+From Figure\ref{fig:thermal-lose}, it can be found that
 
 \begin{equation}
   q_{dr,1} = q_i - q_{rad,ref}
@@ -313,7 +313,7 @@ In order to obtain a simplified analytical model, several simplifications were m
 \item A symmetrical regenerator behavior is assumed~\cite{Formosa2010,Juhasz2010} so that a simple effectiveness can be obtain by $T_{R}=\frac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$.
 \end{itemize}
 
-To consider internal irreversibilities in Stirling cycle made by dead volumes, as described in Duan's paper~\cite{Duan2014}, total dead volume $V_D$ is divided into heater dead volume $V_{DH}$, regenerator dead volume $V_{DR}$ and cooler dead volume $V_{DC}$. There exists a factor $K$ to describe the dead volumes under different temperatures. $K$ is relevant with temperatures in the process and regenerator effectiveness.
+To consider internal irreversibilities in Stirling cycle made by dead volumes, total dead volume $V_D$ can be divided into heater dead volume $V_{DH}$, regenerator dead volume $V_{DR}$ and cooler dead volume $V_{DC}$.~\cite{Duan2014}, There exists a factor $K$ to describe the dead volumes under different temperatures. $K$ is relevant with temperatures in the process and regenerator effectiveness.
 \nomenclature{$V_D$}{Total dead volume, m$^3$}
 \nomenclature{$V_{DH}$}{Hot space dead volume, m$^3$}
 \nomenclature{$V_{DR}$}{Regenerator dead volume, m$^3$}
@@ -652,16 +652,16 @@ For a Stirling engine thermal process, the wall temperatures of the heater and c
 %%For an isothermal process in Figure~\ref{fig:ConstTempHX}, transferred heat equals to fluid's enthalpy rise:
 %For an isothermal process, transferred heat equals to fluid's enthalpy rise:
 \begin{equation}
-	(T_w-T)UdA = q_mc_pdT
+	(T_w-T)UdA = \dot{m}c_pdT
 \end{equation}
-\nomenclature{$q_m$}{Mass flow rate, kg$\cdot$s$^{-1}$}
+%\nomenclature{$q_m$}{Mass flow rate, kg$\cdot$s$^{-1}$}
 \nomenclature{$c_p$}{Specific heat at constant pressure, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
 \nomenclature{$T_w$}{Wall temperature, K}
 \nomenclature{$A$}{Heat transfer area, m$^2$}
 
 with $T(0)=T_i$, $T(A)=T_o$,
 \begin{equation}
-	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{q_mc_p})
+	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{\dot{m}c_p})
 \end{equation}
 
 %\noindent \begin{figure}[htbp]
@@ -675,7 +675,7 @@ with $T(0)=T_i$, $T(A)=T_o$,
 %So
 %
 %\begin{equation}
-%	\frac{dT}{dA}=-\frac{U}{q_mc_p}(T-T_c)
+%	\frac{dT}{dA}=-\frac{U}{\dot{m}c_p}(T-T_c)
 %\end{equation}
 %A simple Stirling engine model is used for the system. The cycle efficiency is given by \cite{Stine1985}
 %
@@ -716,33 +716,33 @@ For a Stirling engine, $T_{hw}$ or $T_{cw}$ can be used to substitute $T_w$ to g
 \nomenclature[S]{$h$}{Heating fluid}
 \nomenclature[S]{$c$}{Cooling fluid}
 \begin{equation}
-	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{q_{m,h}c_{p,h}})
+	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{\dot{m}_hc_{p,h}})
 	\label{Eq:T_h}
 \end{equation}
 \begin{equation}
-	\frac{T_{o,c}-T_{cw}}{T_{i,c}-T_{cw}}=\exp(-\frac{U_cA_c}{q_{m,c}c_{p,c}})
+	\frac{T_{o,c}-T_{cw}}{T_{i,c}-T_{cw}}=\exp(-\frac{U_cA_c}{\dot{m}_cc_{p,c}})
 	\label{Eq:T_c}
 \end{equation}
 
 Heat transferred from heating fluid to Stirling engine in a cycle
 \begin{equation}
-	q_{m,h}c_{p,h}(T_{i,h}-T_{o,h})/s_{se} = Q
+	\dot{m}_hc_{p,h}(T_{i,h}-T_{o,h})/s_{se} = Q
 	\label{Eq:q_h}
 \end{equation}
 
 Heat transferred from Stirling engine to cooling fluid in a cycle
 \begin{equation}
-	q_{m,c}c_{p,c}(T_{o,c}-T_{i,c})/s_{se} = Q - W
+	\dot{m}_cc_{p,c}(T_{o,c}-T_{i,c})/s_{se} = Q - W
 	\label{Eq:q_c}
 \end{equation}
 
-%For a Stirling engine given $q_{m,h}$, $q_{m,c}$ and $s_{se}$, known 2 of the 6 parameters ($T_{i,h}$, $T_{o,h}$, $T_{i,c}$, $T_{o,c}$, $T_H$ and $T_L$), the rest 4 can be obtained by solving
+%For a Stirling engine given $\dot{m}_h$, $\dot{m}_c$ and $s_{se}$, known 2 of the 6 parameters ($T_{i,h}$, $T_{o,h}$, $T_{i,c}$, $T_{o,c}$, $T_H$ and $T_L$), the rest 4 can be obtained by solving
 %%Equation~\ref{Eq:T_h},~\ref{Eq:T_c},~\ref{Eq:q_h} and~\ref{Eq:q_c}
 %Equation~\ref{Eq:T_h}-\ref{Eq:q_c}
 %. Then $\eta$ and $P$ can be obtained by Equation~\ref{Eq:eta} and~\ref{Eq:P}. This means the performance of a given Stirling engine can be inquired by the input/output parameters of heating/cooling fluids.
 
 \subsection{Steam generating system}
-The steam generating system can be divided into preheater, evaporator, superheater, they are collectively referred to as PES. They are all heat exchangers. It is assumed that, in these heat exchangers, the pressure of the fluid does not change significantly. It can be assumed to be equal to the pressure of the inlet pressure of the turbine. To clearly understand the modeling of these heat exchangers, an example of steam generating system as shown in fig~\ref{fig:PES} is used for explanation.
+The steam generating system can be divided into preheater, evaporator, superheater, they are collectively referred to as PES. They are all heat exchangers. It is assumed that, in these heat exchangers, the pressure of the fluid does not change significantly. It can be assumed to be equal to the pressure of the inlet pressure of the turbine. To clearly understand the modeling of these heat exchangers, an example of steam generating system as shown in Figure~\ref{fig:PES} is used for explanation.
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -782,7 +782,7 @@ The Rankine power generation system consists of turbine, condenser, deaerator, g
   
   For steam Rankine cycle, deaerator is used to remove the oxygen and other non-condensable gases in the feedwater to steam generating system. Dissolved oxygen in feedwater will cause serious corrosion damage in steam generating system by forming oxides (rust) of the metal pipes. Dissolved carbon dioxide combines with water to form carbonic acid will cause further corrosion. The accumulation of the non-condensable gases will increase the heat transfer resistance, which is harmful for the heat exchangers. The extraction of the steam turbine provides heat for the deaerator.
   
-  Figure~\ref{fig:Ts_Water} shows the $T$-$s$ diagram of the water circuit in the cascade system in fig~\ref{fig:PES}. Process $2a$-$2c$-$2b$ shows the heat process in the steam turbine. (see fig.~\ref{fig:SteamTurbine_hs}) State point $2b$ and $i,2b$ have the same pressure, state point $2c$ and $i,2c$. To simplify the inner process $2a$-$2c$-$2b$ of the turbine, same isentropic efficiency of steam turbine with different loads and in different stages is assumed, which means  
+  Figure~\ref{fig:Ts_Water} shows the $T$-$s$ diagram of the water circuit in the cascade system in Figure~\ref{fig:PES}. Process $2a$-$2c$-$2b$ shows the heat process in the steam turbine. (see Figure~\ref{fig:SteamTurbine_hs}) State point $2b$ and $i,2b$ have the same pressure, state point $2c$ and $i,2c$. To simplify the inner process $2a$-$2c$-$2b$ of the turbine, same isentropic efficiency of steam turbine with different loads and in different stages is assumed, which means  
   \begin{equation}
       \eta_{i,tb} =(h_{2a}-h_{2b})/(h_{2a}-h_{i,2b}) = (h_{2a}-h_{2c})/(h_{2a}-h_{i,2c})
 \end{equation}
@@ -820,7 +820,7 @@ where $h_{i,2b}$ is determined by $s_{2a}$ and $p_c$; $h_{i,2c}$ is determined b
   \begin{equation}
   y h_{2c} + (1-y) h_{2f} = h_{2g}
 \end{equation}
-\nomenclature{$p_e$}{Extraction pressure of the steam turbine, MPa}
+\nomenclature{$p_e$}{Extraction pressure of the steam turbine, Pa}
   
   The total power of the pumps 
   \begin{equation}
@@ -939,7 +939,7 @@ The generator is relatively independent of the cascade system and its efficiency
 %\section{Steam generating system}
 %\section{Steam extraction and regeneration system}
 \section{Stirling engine array}
-Stirling engine array is used in the cascade system, fig.~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=6\,\mathrm{m^2}$, $A_{se,2}=6\,\mathrm{m^2}$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times{}10^{-2}\,\mathrm{mol}$, $s_{se}=10\,\mathrm{s^{-1}}$.
+Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=6\,\mathrm{m^2}$, $A_{se,2}=6\,\mathrm{m^2}$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times{}10^{-2}\,\mathrm{mol}$, $s_{se}=10\,\mathrm{s^{-1}}$.
 
 \noindent \begin{figure}[htbp]
 \begin{center}

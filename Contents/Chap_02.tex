@@ -328,14 +328,39 @@ Many concentrating collector designs require that the receiver change attitude w
 Two examples of solar Rankine power systems where the engine working fluid vapor is generated directly in the receiver are the Solar One Pilot Plant at Barstow, CA and the solar organic Rankine cycle module built by Ford Aerospace and Communications Corporation. Because Solar One is a central receiver system, the vertical-tube receiver remains stationary and liquid level control is relatively easy. The vertical tubes of the receiver are made of a material with a high melting point and thus can withstand high temperatures in the upper regions where vapor is being superheated. Tube burnout is avoided in the Ford Aerospace receiver design because the inner wall of the receiver is a copper shell with tubes wound around its exterior. The high thermal conductivity of the copper shell provides an averaging effect on receiver temperature, and superheat is attained without burnout of the receiver walls.
 
 All the CSP commercial plants already built apply indirect steam generation, with the exception of the 5 MWe DSG Thai Solar One (TSE-1) plant in Thailand (Thailand, 2012)~\cite{Khenissi2015}. The reason for this universally accepted choice must be found in the difficulties related to the flow control and manufacturing of equipment to be used in the presence of a two-phase flow in the absorber tubes. The behavior of the two-phase flow inside the absorber tubes of a parabolic-trough collector forces the implementation of a complex and expensive control system and the use of fast water streams in order to avoid stratified flow.
-
+			
 Another problem related to the DSG is the high value of the steam pressure inside the receiver tubes that must match the turbine inlet pressure for less than pressure losses. Indeed, handling the moveable and flexible components forming the receiver tube of the collector in case of high-pressure values was one of the main problems to be faced at the early stages of the DSG concept technology. 
 
 Apply direct steam generation may be a better choice in the cascade system, however, it is not adopted for the cascade system for its immaturity.
 
 \subsection{Heat exchanger between circuits}
 
-Section~\ref{sec:hebc} introduces two types of heat exchangers that may be applied in the solar thermal cascade system -- the air-oil heat exchanger and the air-water heat exchanger.
+Section~\ref{sec:hebc} introduces two types of heat exchangers that may be applied in the solar thermal cascade system -- the air-oil heat exchanger (see in Figure~\ref{fig:air-oil_c}) and the air-water heat exchanger (see in Figure~\ref{fig:air-water_c}). 
 
-For the first type, it seems not economic since the temperature of the oil is not limited by the parabolic trough collectors. The temperature of the oil is constrained by the oil properties.  
+\begin{figure}[h]
+\centering 
+\includegraphics[width=0.7\textwidth]{fig/air-oil}
+\caption{Schematic diagram of a solar system using air-oil heat exchanger}\label{fig:air-oil_c}
+\end{figure}
+
+\noindent \begin{figure}[htbp]
+\centering
+	\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/air-water1}
+	\caption{}\label{fig:air-water_1_c}
+	\end{subfigure}
+	~
+\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/air-water2}
+	\caption{}\label{fig:air-water_2_c}
+	\end{subfigure}
+	\caption{Schematic diagrams of two kinds of solar systems using air-water heat exchanger}
+	\label{fig:air-water_c}
+\end{figure}
+
+For the first type, air provides heat for oil. It is not economic for several reasons. First, The temperature of the heat transfer oil can not be further increased. The temperature of the oil is not limited by the parabolic trough collectors. The temperature of the oil is constrained by the oil properties and heat collecting temperature of the trough collectors can exceed this value. In high temperature conditions, oil may deterioration, evaporation, decompose, which has a negative impact on the stable and safe operation of the system. Second, using dish to provide heat for the oil is not suitable since the dish is designed for higher temperature collections and it's less cost-effective compared with parabolic trough.
+
+For the second type, air provides heat for water. Two kinds of solar systems using air-water heat exchanger can be found in Figure~\ref{fig:air-water_c}. Figure~\ref{fig:air-water_1_c} shows the scheme that air after the Stirling engine is used to overheat the steam. It's feasible since the air can increase the average temperature of the endothermic process of the water to increase the efficiency of Rankine cycle. This is the scheme that will be discussed in detail in the next few chapters. Figure~\ref{fig:air-water_2_c} shows the scheme that air after the Stirling engine is used to preheat the feed water. It is not a good choice since the temperature difference of the heat transfer process is large and it provides no benefits to increase the inlet temperature of the steam turbine.
+ 
 \subsection{Heat recovery between cycles}
+

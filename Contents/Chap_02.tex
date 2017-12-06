@@ -1,6 +1,7 @@
 \chapter{System topology}
 %利用热力学原理进行定性分析。提炼出创新点。
 \section{System topology design}
+\label{sec:std}
 %\subsection{Basic systems}
 %\label{sec:bs}
 
@@ -8,12 +9,18 @@ The objective of this research is to research the equipment of solar thermal pow
 The research is based on the national cooperation project "Collaborative research on key technologies to produce electricity by cascade utilization solar thermal energy" as the background. 
 There are three kinds of mature technologies been applied commercially -- parabolic trough, parabolic dish and solar tower. 
 Considering the future deployment of solar cascade demo system, two solar thermal technologies, parabolic trough and parabolic dish, are chosen as the basic systems for the design of cascade solar thermal power system. For the cascade utilization of the high temperature of the parabolic receiver, air (or nitrogen) is used as the HTF to transfer the heat collected.
-Figure~\ref{fig:PTPD} shows the schematic diagrams of a parabolic trough system and a parabolic dish system.
+Figure~\ref{fig:PTPD} shows the schematic diagrams of a parabolic trough system and a parabolic dish system. To make the system structure diagrams in this paper more clearly and consistent, legends of the components that may appear in solar power systems are listed in Figure~\ref{fig:Legends}.
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/PTPD.pdf}
 \caption{Schematic diagrams of a parabolic trough system and a parabolic dish system}\label{fig:PTPD}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/Legends.pdf}
+\caption{Schematic diagrams of a parabolic trough system and a parabolic dish system}\label{fig:Legends}
 \end{figure}
 
 With different considerations (such as water Rankine cycle or ORC, combination of different systems, connection types of collectors, etc) of the cascade system topology, multiple combination topologies may be used for cascade systems. To get the most suitable system topology, these considerations will be analyzed in the following sections. 
@@ -227,32 +234,13 @@ These three kinds of cycles work at different optimum operating temperatures. Ra
 \caption{Diagram of three cycles used in solar energy}\label{fig:cycles}
 \end{figure}
 
-Dunham and Lipi~\cite{Dunham2013} proposed a single Brayton and a combined Brayton-Rankine power cycle for distributed solar power generation and compared its theoretical efficiency to a single Brayton cycle. In the combined power cycle, exhaust gas of the turbine is used to provide heat for Rankine cycle. Working fluids including air, Ar, CO$_2$, He, H$_2$, and N$_2$ are examined for the topping Brayton cycle. C6-fluoroketone, cyclohexane, n-pentane, R-141b, R-245fa, and HFE-7000 are examined as working fluids in the bottoming Rankine cycle. It is found that the combination of the Brayton topping cycle using carbon dioxide and the Rankine bottoming cycle using R-245fa gives the highest combined cycle efficiency of 21.06\%, while a single Brayton cycle is found to reach a peak cycle efficiency of 15.31\% with carbon dioxide at the same design point conditions.
-
+Some researchers have proposed combined cycles for power generation. Dunham and Lipi~\cite{Dunham2013} proposed a single Brayton and a combined Brayton-Rankine power cycle for distributed solar power generation and compared its theoretical efficiency to a single Brayton cycle. In the combined power cycle, exhaust gas of the turbine is used to provide heat for Rankine cycle. Working fluids including air, Ar, CO$_2$, He, H$_2$, and N$_2$ are examined for the topping Brayton cycle. C6-fluoroketone, cyclohexane, n-pentane, R-141b, R-245fa, and HFE-7000 are examined as working fluids in the bottoming Rankine cycle. It is found that the combination of the Brayton topping cycle using carbon dioxide and the Rankine bottoming cycle using R-245fa gives the highest combined cycle efficiency of 21.06\%, while a single Brayton cycle is found to reach a peak cycle efficiency of 15.31\% with carbon dioxide at the same design point conditions. 
 Bahrami et al.~\cite{Bahrami2013} proposed a combined Stirling-organic Rankine cycle (ORC) power cycle. An ORC was used as the cold-side heat rejector of a Stirling engine. The operating temperatures of the ORC are between 80$\mathrm{^\circ C}$ and 140$\mathrm{^\circ C}$ and the combined system can achieve 4\% to 8\% higher efficiency compared with a standard Stirling cycle.
-
 Li et al.~\cite{Li2016a} proposed a novel solar electricity generation system (SEGS) using both SRC and ORC. Screw expander (SE) is employed in the SRC for its good applicability in power conversion with steam-liquid mixture. The heat released by steam condensation is used to drive the ORC. Simulation results show that efficiency of 13.68–15.62\% for the proposed system can be achieved.
-
 Thierry et al.~\cite{Thierry2016} proposed a nonlinear optimization formulation of multistage Rankine cycle with two types of configurations. Both cascade style and series style of the ORC are considered. The results show that for some cases the multistage configurations can achieve higher efficiency at low temperature.
 
-In our basic systems (see Figure~\ref{fig:PTPD}), Rankine cycle and Stirling cycle can be coupled for cascade usage. Figure~\ref{fig:coupledCycles} shows two configurations of the cascade systems with heat recovery between cycles.
-
-\noindent \begin{figure}[htbp]
-\centering
-	\begin{subfigure}[b]{0.4\columnwidth}
-	\includegraphics[width = \columnwidth]{fig/Stirling-Rankine}
-	\caption{}\label{fig:air-water1}
-	\end{subfigure}
-	~
-\begin{subfigure}[b]{0.4\columnwidth}
-	\includegraphics[width = \columnwidth]{fig/SeriesRankine}
-	\caption{}\label{fig:air-water2}
-	\end{subfigure}
-	\caption{Schematic diagrams of two kinds of solar systems using air-water heat exchanger}
-	\label{fig:coupledCycles}
-\end{figure}
-
 \section{System topology selection}
+\label{sec:sts}
 \subsection{Rankine cycle fluid}
 
 There are two important aspects to consider when selecting the working fluid of the Rankine cycle solar power system:
@@ -365,5 +353,67 @@ For the second type, air provides heat for water. Two kinds of solar systems usi
 This is the scheme that will be discussed in detail in the next few chapters. Figure~\ref{fig:air-water_2_c} shows the scheme that air after the Stirling engine is used to preheat the feed water. It is not a good choice since the temperature difference of the heat transfer process is large and it provides no benefits to increase the inlet temperature of the steam turbine.
  
 \subsection{Heat recovery between cycles}
-As it is mentioned in section~\ref{sec:HRBC}, 
+As it is mentioned in section~\ref{sec:HRBC}, different thermodynamic cycles work at different optimum working temperatures. Since each thermodynamic cycle has endothermic and exothermic processes, a bottoming cycle may use the released heat of a topping cycle.
+
+\noindent \begin{figure}[htbp]
+\centering
+	\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/Stirling-Rankine}
+	\caption{}\label{fig:Stirling-Rankine}
+	\end{subfigure}
+	~
+\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/SeriesRankine}
+	\caption{}\label{fig:Rankine-Rankine}
+	\end{subfigure}
+	\caption{Two configurations with heat recovery between thermodynamic cycles}
+	\label{fig:coupledCycles}
+\end{figure}
+
+In our basic systems (see Figure~\ref{fig:PTPD}), Rankine cycle and Stirling cycle can be coupled for cascade usage. 
+Figure~\ref{fig:coupledCycles} shows two configurations of the cascade systems with heat recovery between cycles. 
+For a traditional Stirling engine, to enhance the performance, cooling water is used to absorb the heat released by the engine. The absorbed heat is wasted without reuse.
+In Figure~\ref{fig:Stirling-Rankine}, condensate of the Rankine cycle is used to cool the Stirling engine. Rejected heat of the Stirling cycle can be reused by Rankine cycle. 
+For organic Rankine cycles, different working fluids determine the working temperature zones. It is feasible to reuse the condensation heat of an organic Rankine cycle by another organic Rankine cycle.
+In Figure~\ref{fig:Rankine-Rankine}, two organic Rankine are coupled together for power generation. The bottoming cycle uses the condensation heat of the topping cycle for preheating, evaporation and superheating.
+%补充
+
 \section{Selected system topology}
+
+Considered all the conditions in section~\ref{sec:std} and section~\ref{sec:sts}, two system topologies are chosen for this research as shown in Figure~\ref{fig:CascadeSystems}. 
+
+%第二种方案需要考虑是否用两个空气换热器
+\noindent \begin{figure}[htbp]
+\centering
+	\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/CascadeSystem1}
+	\caption{}\label{fig:CascadeSystem1}
+	\end{subfigure}
+	~
+\begin{subfigure}[b]{0.4\columnwidth}
+	\includegraphics[width = \columnwidth]{fig/CascadeSystem2}
+	\caption{}\label{fig:CascadeSystem2}
+	\end{subfigure}
+	\caption{Two selected typical cascade system}
+	\label{fig:CascadeSystems}
+\end{figure}
+
+In Figure~\ref{fig:CascadeSystem1}, the cascade system has the following features:
+
+\begin{itemize}
+  \item \emph{Multiple types of collectors.} Trough collectors are applied for lower temperature heat collection and Dish collectors are applied for higher temperature heat collection. This helps to reduce the cost and improve the efficiency.
+  \item \emph{Multiple types of thermodynamic cycles.} Rankine cycle is applied for lower temperature heat utilization. Stirling cycle is applied for higher temperature heat utilization.
+  \item \emph{Air-water heat exchanger.} An extra air-water heat exchanger is applied to increase the temperature of the main steam, which helps to improve the efficiency of Rankine cycle. On the other hand, it can overcome the disadvantage of low limit temperature of heat transfer oil in traditional solar trough systems, which helps to achieve higher main steam parameters than traditional solar trough systems. 
+  \item \emph{Condensate for Stirling engine cooling.} Condensate of the Rankine cycle is used to cool the Stirling engine. Rejected heat of the Stirling cycle can be reused by Rankine cycle, which helps to improve the overall system efficiency.
+\end{itemize}
+
+In Figure~\ref{fig:CascadeSystem2}, the cascade system also has the features mentioned above. Besides, it uses different kinds of organic fluid as the working fluid, which adapts more general working temperature for solar energy systems. Figure~\ref{fig:Ex_CascadeSystem2} shows a calculation example of the cascade system.
+
+\begin{figure}[!ht]
+\centering 
+\includegraphics[width=0.7\textwidth]{fig/Ex_CascadeSystem2}
+\caption{A calculation example of cascade system in Figure~\ref{fig:CascadeSystem2}}
+\label{fig:Ex_CascadeSystem2}
+\end{figure}
+
+Both cascade systems are modeled for investigation, however, considering the more extensive application of the steam Rankine cycle, the system as described in Figure~\ref{fig:CascadeSystem1} will be used as the main research content in the following chapters.

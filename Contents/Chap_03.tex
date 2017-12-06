@@ -742,9 +742,10 @@ Heat transferred from Stirling engine to cooling fluid in a cycle
 %. Then $\eta$ and $P$ can be obtained by Equation~\ref{Eq:eta} and~\ref{Eq:P}. This means the performance of a given Stirling engine can be inquired by the input/output parameters of heating/cooling fluids.
 
 \subsection{Steam generating system}
-The steam generating system can be divided into preheater, evaporator, superheater, they are collectively referred to as PES. They are all heat exchangers. It is assumed that, in these heat exchangers, the pressure of the fluid does not change significantly. It can be assumed to be equal to the pressure of the inlet pressure of the turbine. To clearly understand the modeling of these heat exchangers, an example of steam generating system as shown in Figure~\ref{fig:PES} is used for explanation.
+The steam generating system can be divided into preheater, evaporator and superheater, they are collectively referred to as PES. They are all heat exchangers. It is assumed that, in these heat exchangers, the pressure of the fluid does not change significantly. It can be assumed to be equal to the pressure of the inlet pressure of the turbine. Besides, these heat exchangers do not exchange heat with the environment.
+To clearly understand the modeling process of these heat exchangers, an example of steam generating system as shown in Figure~\ref{fig:PES} is used for explanation. Figure~\ref{fig:PES_TQ} shows the $T$-$Q$ diagram of the heat transfer process.
 
-\noindent \begin{figure}[htbp]
+\noindent \begin{figure}[!ht]
 \begin{center}
 	\includegraphics[width = 0.8\columnwidth]{fig/PES}
 	\caption{An example of steam generating system in a cascade system}
@@ -752,12 +753,25 @@ The steam generating system can be divided into preheater, evaporator, superheat
 \end{center}
 \end{figure}
 
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth]{fig/PES_TQ}
+	\caption{The steam generating process}
+	\label{fig:PES_TQ}
+\end{center}
+\end{figure}
+
+The modeling process of PES is the process of solving the unknown states of the state points. Notice that, the pressure of the fluids keeps constant in the heat transfer process. For an unsaturated state, known the temperature or enthalpy, the state is determined. This means, the temperature can be obtained by the enthalpy, and vice versa. For a saturated state, known the dryness ($x$) of the fluid, the state is determined.
+
+For a typical PES modeling process as shown in Figure~\ref{fig:PES}, $\dot{m}_2$, state $2h$ and state $2k$ are determined by the parameters of the turbine. State $3a$ is determined by the design parameters. State $2i$ and state $2j$ are determined by their dryness values. 
+
 \begin{enumerate}[label=(\arabic*)]
   \item \emph{Preheater}
   
   The outlet of the heated fluid is saturated liquid ($x = 0$), so the outlet temperature $T_{2i}$ and outlet enthalpy $h_{2i}$ of the heated fluid are determined by the main pressure of the turbine, $p_s$.
   \begin{equation}
   \dot{m}_3 (h_{3c}-h_{3d})=\dot{m}_2 (h_{2i} - h_{2h})
+  \label{eq:preheater}
 \end{equation}
 
   \item \emph{Evaporator}
@@ -765,14 +779,21 @@ The steam generating system can be divided into preheater, evaporator, superheat
   The outlet of the heated fluid is saturated gas ($x = 1$), so the outlet temperature $T_{2j}$ and outlet enthalpy $h_{2j}$ of the heated fluid are determined by the main pressure of the turbine, $p_s$.
   \begin{equation}
   \dot{m}_3 (h_{3b}-h_{3c})=\dot{m}_2 (h_{2j} - h_{2i})
+  \label{eq:evaporator}
 \end{equation}
+	It has to be mentioned that, state $3c$ is determined by $T_{3c}$, which equals to $T_{2i} + \Delta T_{min}$. ($T_{3c} = T_{2i} + \Delta T_{min}$)
   
   \item \emph{Superheater}
+  
+  For the energy balance,
   \begin{equation}
   \dot{m}_3 (h_{3a}-h_{3b})=\dot{m}_2 (h_{2k} - h_{2j})
+  \label{eq:superheater}
 \end{equation}
-  
+	  
 \end{enumerate}
+
+By solving the equations~\ref{eq:preheater} to~\ref{eq:superheater}, $\dot{m}_3$, state $3b$ and $3d$ can be obtained.
 
 \subsection{Rankine power generation system}
 %The power generating system includes the turbine (steam turbine or ORC turbine) and generator.
@@ -937,7 +958,8 @@ The generator is relatively independent of the cascade system and its efficiency
 
 %\section{Steam generating system}
 %\section{Steam extraction and regeneration system}
-\section{Stirling engine array}
+\section{Stirling engine array modeling}
+
 Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=$30$\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=$150$\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=$6$\,\mathrm{m^2}$, $A_{se,2}=$6$\,\mathrm{m^2}$, $k_{se}=$1.4, $\gamma_{se}=$3.375, $n_g=$7.84$\times$10$^{-2}\,\mathrm{mol}$, $s_{se}=$10$\,\mathrm{s^{-1}}$.
 
 \noindent \begin{figure}[htbp]
@@ -1056,11 +1078,11 @@ The output power of the Stirling engine array
   P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})
 \end{equation}
 
-%\section{Component connection}
+\section{Component connection}
 
-%Different components are connected to form a system. They are connected by their interfaces. 
+Different components are connected to form a system. They are connected by their interfaces. 
 %\subsection{State points}
-State points are defined as objects in the 
+%State points are defined as objects in the 
 
 %\section{Determination of state parameters}
 

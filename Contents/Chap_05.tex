@@ -122,7 +122,7 @@ where $T$ is the average temperature of the tube. Since the $Nu$ number in the t
 
 The exergy loss caused by a heat exchange process per unit time
 \begin{equation}
-  \dot{I} = T_amb (\sum \dot{m}_os_o - \sum \dot{m}_is_i)
+  \dot{I} = T_{amb} (\sum \dot{m}_os_o - \sum \dot{m}_is_i)
 \end{equation}
 
 
@@ -161,29 +161,34 @@ where $T'_{3a}$ and $T'_{3b}$ are the inlet oil temperature of superheater and e
 \begin{table}[htbp]
 	\caption{Simulation results of SGSS and MERS}
 	\begin{center}
-	\begin{tabular}{ccc}
+	\begin{tabular}{ccccc}
 		\toprule
-		&    SGSS	&	MERS\\
+		& \multirow{2}{*}{SGSS} & \multicolumn{3}{c}{MERS}\\\cline{3-5}
+ &  & $T_{3b,max}$ & $T_{3b}$ & $T_{3b,min}$\\
 		\midrule
-		$T_{2a}$	&	613.15$\,\mathrm{K}$	&	613.15$\,\mathrm{K}$\\
-		$T_{2i}$	&	493.83$\,\mathrm{K}$	&	493.83$\,\mathrm{K}$\\
-		$T_{2h}$	&	493.83$\,\mathrm{K}$	&	493.83$\,\mathrm{K}$\\
-		$T_{2g}$	&	453.28$\,\mathrm{K}$	&	453.28$\,\mathrm{K}$\\
-		$T_{3a}$	&	653.15$\,\mathrm{K}$	&	628.15$\,\mathrm{K}$\\
-		$T_{3b}$	&	634.11$\,\mathrm{K}$	&	560.62$\,\mathrm{K}$\\
-		$T_{3c}$	&	508.83$\,\mathrm{K}$	&	508.83$\,\mathrm{K}$\\
-		$T_{3d}$	&	495.43$\,\mathrm{K}$	&	468.28$\,\mathrm{K}$\\
-		$\dot{m}_{3p}$	&	47.8$\,\mathrm{kg}$	&	16.1$\,\mathrm{kg}$\\
-		$\dot{m}_{3e}$	&	47.8$\,\mathrm{kg}$	&	120.8$\,\mathrm{kg}$\\
-		$\dot{m}_{3s}$	&	47.8$\,\mathrm{kg}$	&	14.3$\,\mathrm{kg}$\\
-		$\dot{I}_p$    &    4.79$\times$10$^4\,\mathrm{W}$    &    2.39$\times$10$^4\,\mathrm{W}$\\
-		$\dot{I}_e$    &    1.10$\times$10$^6\,\mathrm{W}$    &    6.26$\times$10$^5\,\mathrm{W}$\\
-		$\dot{I}_s$    &    1.80$\times$10$^5\,\mathrm{W}$    &    9.19$\times$10$^4\,\mathrm{W}$\\
-		$\dot{I}_{total}$    &    1.33$\times$10$^6\,\mathrm{W}$    &    7.42$\times$10$^5\,\mathrm{W}$\\
-		$\eta_p$    &    0.525    &    0.538\\
-		$\eta_e$    &    0.450    &    0.491\\
-		$\eta_s$    &    0.359    &    0.422\\
-		$\eta_{total}$    &    0.440    &    0.484\\
+		$T_{2a}$ & \multicolumn{4}{c}{613.15$\,\mathrm{K}$}\\
+		$T_{2i}$ & \multicolumn{4}{c}{493.83$\,\mathrm{K}$}\\
+		$T_{2h}$ & \multicolumn{4}{c}{493.83$\,\mathrm{K}$}\\
+		$T_{2g}$ & \multicolumn{4}{c}{453.28$\,\mathrm{K}$}\\
+		$T_{3c}$ & \multicolumn{4}{c}{508.83$\,\mathrm{K}$}\\
+%		$T_{3d}$	&	495.43$\,\mathrm{K}$	&	\multicolumn{3}{c}{468.28$\,\mathrm{K}$}\\
+		$T_{3a}$	&	653.15$\,\mathrm{K}$
+	&	628.15$\,\mathrm{K}$	&	628.15$\,\mathrm{K}$	&	628.15$\,\mathrm{K}$\\
+		$T_{3b}$	&	634.11$\,\mathrm{K}$	&	612.41$\,\mathrm{K}$	&	560.62$\,\mathrm{K}$	&	508.83$\,\mathrm{K}$\\
+		$T_{3d}$	&	495.43$\,\mathrm{K}$
+	&	468.28$\,\mathrm{K}$	&	468.28$\,\mathrm{K}$	&	468.28$\,\mathrm{K}$\\
+%		$T_{3a}$	&	653.15$\,\mathrm{K}$	&	\multicolumn{3}{c}{628.15$\,\mathrm{K}$}\\
+		$\dot{m}_{3p}$	&	47.8$\,\mathrm{kg/s}$	&	16.1$\,\mathrm{kg/s}$	&	16.1$\,\mathrm{kg/s}$	&	16.1$\,\mathrm{kg/s}$\\
+		$\dot{m}_{3e}$	&	47.8$\,\mathrm{kg/s}$	&	58.6$\,\mathrm{kg/s}$	&	120.8$\,\mathrm{kg/s}$	&	$\infty$\\
+		$\dot{m}_{3s}$	&	47.8$\,\mathrm{kg/s}$	&	59.4$\,\mathrm{kg/s}$	&	14.3$\,\mathrm{kg/s}$	&	8.3$\,\mathrm{kg/s}$\\
+		$\dot{I}_p$    &    4.80$\times$10$^4\,\mathrm{W}$    	&  2.58$\times$10$^4\,\mathrm{W}$  &	2.58$\times$10$^4\,\mathrm{W}$	&	2.58$\times$10$^4\,\mathrm{W}$\\
+		$\dot{I}_e$    &    1.10$\times$10$^6\,\mathrm{W}$    	&  9.68$\times$10$^5\,\mathrm{W}$  &	6.24$\times$10$^5\,\mathrm{W}$	&	2.41$\times$10$^5\,\mathrm{W}$	\\
+		$\dot{I}_s$    &    1.81$\times$10$^5\,\mathrm{W}$    	&  1.42$\times$10$^5\,\mathrm{W}$  &	9.19$\times$10$^4\,\mathrm{W}$	&	4.24$\times$10$^4\,\mathrm{W}$\\
+		$\dot{I}_{total}$    &    1.33$\times$10$^6\,\mathrm{W}$    &  1.14$\times$10$^6\,\mathrm{W}$  &	7.44$\times$10$^5\,\mathrm{W}$	&	3.10$\times$10$^5\,\mathrm{W}$\\
+		$\eta_p$    &    0.525    &	0.538	&    0.538	&	0.538\\
+		$\eta_e$    &    0.450    &	0.463	& 0.491	&	0.518\\
+		$\eta_s$    &    0.359    &  0.390	&  0.422	&	0.453\\
+		$\eta_{total}$    &    0.440   &	0.456	&    0.484	&	0.510\\
 		\bottomrule
 	\end{tabular}
 	\end{center}

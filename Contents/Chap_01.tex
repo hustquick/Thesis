@@ -1,4 +1,5 @@
-\chapter{Introduction}\label{chapter:Introduction}
+\chapter{Introduction}
+\label{chapter:Introduction}
 \epigraph{Saving our planet, lifting people out of poverty, advancing economic growth... these are one and the same fight. We must connect the dots between climate change, water scarcity, energy shortages, global health, food security and women's empowerment. Solutions to one problem must be solutions for all.}{\textit{Ban Ki-moon}}
 
 This dissertation considers a way to solve the global problems of energy shortage and environment problem.
@@ -137,11 +138,11 @@ Thirunavukkarasu et al.~\cite{Thirunavukkarasu2017} carried out an experimental 
 Pavlovic et al.~\cite{Pavlovic2017} performed the experimental study of a solar dish system. In this system, different working fluids (water, thermal oil and air) were used to validate the numerical models developed in EES (Engineering Equation Solver). It was found that water is the most appropriate working fluid for low-temperature applications, while thermal oil is the most appropriate working fluid for higher-temperature applications.
 
 Some researchers focused on the dish concentrator, many proposed different shapes of concentrators. The perfect concentrator has a parabolic shape, but for some considerations (better production, safer transportation, lest cost and so on), some solar concentrators are composed of multiple spherically shaped mirrors.
-A large dish solar concentrator, SG3, which is about 400$\,\mathrm{m^2}$, was designed and demonstrated in Australian National University (ANU) in 1994 as shown in Figure~\ref{fig:LargeDish}.~\cite{Lovegrove2011} It successfully proved the technical viability of a concentrator that is approximately three times bigger than any other produced. 
+A large dish solar concentrator, SG3, which is about 400$\,\mathrm{m^2}$, was designed and demonstrated in Australian National University in 1994 as shown in Figure~\ref{fig:LargeDish}.~\cite{Lovegrove2011} It successfully proved the technical viability of a concentrator that is approximately three times bigger than any other produced. 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=.8\textwidth]{fig/largeDish.jpg}
-\caption{The SG3 400$\,\mathrm{m^2}$ dish in ANU}\label{fig:LargeDish}
+\caption{The SG3 400$\,\mathrm{m^2}$ dish in Australian National University}\label{fig:LargeDish}
 \end{figure}
 Berumen et al.~\cite{Berumen2004} developed a refector consists of 12 facets made of fiberglass with a reflecting surface made of aluminum sheet with reflectance of 86\%.
 Pavlovic et al.~\cite{Pavlovic2014} presented a procedure to design a square facet concentrator for laboratory-scale research on medium-temperature thermal processes. A parabolic collector made up of individual square mirror panels (facets) were investigated. These facets can deliver up to 13.604 kW radiative power over a 250$\,\mathrm{mm}$ radius dish receiver with average concentrating ratio exceeding 1200.
@@ -157,13 +158,17 @@ Li et al.~\cite{Li2011b} used the Monte-Carlo ray-tracing method for the radiati
 Wang and Laumert~\cite{Wang2017} used the ray-tracing methodology to investigate the effects of cavity surface materials on the flux distribution for an impinging receiver. Five cavity surface materials and their combinations have been studied. The results show that the flux distribution and the total optical efficiency are much more sensitive to the absorptivity on the cylindrical surface than on the bottom.
 Blazquez et al.~\cite{Blazquez2016} studied the optimization of the concentrator and receiver cavity geometry of parabolic dish system. Ray-tracing analysis has been performed with the open source software Tonatiuh, a ray-tracing tool specifically oriented to the modeling of solar concentrators.
 Reddy et al.~\cite{Reddy2015,Reddy2015_2} performed the theoretical thermal performance analysis of a fuzzy focal solar parabolic dish concentrator with modified cavity receiver. Total heat loss from the modified cavity receiver is estimated considering the effects of wind conditions, operating temperature, emissivity of the cavity cover and thickness of insulation. Time constant test was carried out to determine the influence of sudden change in solar radiation at steady state conditions. The daily performance tests were conducted for different flow rates.
-Vikram and Reddy~\cite{Vikram2015} investigated the total heat losses of modified cavity receiver of solar parabolic dish with three configurations using 3D numerical model. The effects of various parameters such as diameter ratio, angle of inclination, operating temperature, insulation thickness and emissivity of the cavity cover on the heat losses from the modified vavity receiver are investigated. An ANN model is developed to predict the heat loss for a large set of influencing parameters. Based on ANN modeling, improved Nusselt number correlations are proposed for convective, radiative and total heat losses from the modified cavity receiver. The convective heat losses are greatly influenced by receiver inclination whereas the radiation heat losses are influenced by the cavity cover emissivity. The diameter ratio also plays a major role in heat losses from the cavity receiver. The present method predicts the heat losses more accurately compared with the existing models.
+Vikram and Reddy~\cite{Vikram2015} used a three-dimensional numerical model to investigate the total heat losses of three parabolic parabolic modified cavity with three configurations. The effects of cavity diameter ratio, tilt angle, operating temperature, insulation thickness and emissivity on the heat loss of the modified cavity receiver were studied. Based on artificial neural network (ANN) modeling, an improved Nusselt number correlation was proposed for convection, radiation and total heat loss calculation.
 
 Some researchers focused on the solar tracking system.
 Patil et al.~\cite{Patil2016} described the development of automatic dual axis solar tracking system for solar parabolic dish. Five light dependent resistors were used to sense the sunlight and Two permanent magnet DC motors are used to move the solar dish. A controller software were developed to control the motors using the data sensed by the resistors.
+Raturi et al.~\cite{Raturi2014} proposed a solar tracking system based on gravity which does not require any external source of power. The prototype test results and analysis show that the system can run successfully.
+Kuang and Zhang~\cite{Kuang2012} developed new design and implementation of tracking system to improve tracking accuracy for dish solar thermal energy based on embedded system that mixes active and passive tracking.
+Jin et al.~\cite{Jin2013} described a two-axis sun tracking system with PLC (programmable logic controller) controlled and a combinative tracking method combined active and passive tracking methods for higher accuracy.
+Shanmugam and Christraj~\cite{Shanmugam2005} presented a method of intermittent tracking of the sun in the north-south direction with no tracking in the east-west direction for less energy yield and the frequency of tracking in the north-south direction determined by variations in solar altitude angle and size of the absorber in Paraboloidal dish concentrator.
 
-
-\subsection{Power tower}\label{sec:st}
+\subsection{Power tower}
+\label{sec:st}
 
 Besarati and Yogi~\cite{Besarati2014} developed a new and simple method to improve the calculation speed and accuracy for shading and blocking computation of the heliostat field. The Sassi method~\cite{Sassi1983} is used for the shading and blocking efficiency. A 50$\,\mathrm{MWth}$ heliostat field in Dagget, California, USA was used as a case study for the proposed method.
 
@@ -188,7 +193,8 @@ Xu et al.~\cite{Xu2011a} created a model of the 1 MW Dahan solar thermal power t
 
 Xu et al.~\cite{Xu2012} built the thermal energy storage model of Badaling 1 MW solar power tower plant using the modular modeling method. This model can accurately simulate the recharge and discharge processes of thermal energy storage system. The dynamic and static characteristics of the thermal energy storage system are analyzed based on the model response curves of the system state parameters that are obtained from different steam flow disturbances. Conclusions of this paper are good references for the design, operating, and control strategy of solar thermal power plant.
 
-\subsection{Cascade solar system}\label{sec:cs}
+\subsection{Cascade solar system}
+\label{sec:cs}
 
 There are mainly two directions of the research of cascade solar systems. One is cascade collection, the other is cascade utilization.
 
@@ -284,7 +290,8 @@ Al-Sulaiman~\cite{AlSulaiman2014} compared the produced power of an SRC-ORC comb
 
 Bahari et al.~\cite{Bahari2016} considered the optimization of an integrated system using organic Rankine cycle to utilize the heat released by the Stirling cycle. However, the integrated system is a primitive design and it takes no consideration of the application in CSP field.
 
-\section{Research content}\label{sec:3}
+\section{Research content}
+\label{sec:researchContent}
 % 改进点，重点，难度
 % 技术路线
 

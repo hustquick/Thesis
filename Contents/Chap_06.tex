@@ -5,7 +5,7 @@ In the cascade system, dish collectors are used to provide heat for Stirling eng
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.5\columnwidth]{fig/cascadeSystem}
+	\includegraphics[width = 0.8\columnwidth]{fig/cascadeSystem}
 	\caption{Sketch of the cascade system}
 	\label{fig:System-1}
 \end{center}
@@ -15,12 +15,12 @@ State points of different fluids are marked on the sketch. The number indicates 
 
 \noindent \begin{figure}[htbp]
 \centering
-	\begin{subfigure}[b]{0.4\columnwidth}
+	\begin{subfigure}[b]{0.45\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/T-s_Water2}
 	\caption{$T$-$s$ diagram of the water circuit}\label{fig:T-s_Water2}
 	\end{subfigure}
 	~
-\begin{subfigure}[b]{0.4\columnwidth}
+\begin{subfigure}[b]{0.45\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Water-SEs}
 	\caption{Diagram of process $2e$-$2f$}\label{fig:HeatTransfer_Water-SEs}
 	\end{subfigure}
@@ -45,7 +45,7 @@ State points of different fluids are marked on the sketch. The number indicates 
 
 %\noindent \begin{figure}[htbp]
 %\begin{center}
-%	\includegraphics[width = 0.7\columnwidth]{./graphics/HeatTransfer_Water-SEs}
+%	\includegraphics[width = 0.7\columnwidth]{fig/HeatTransfer_Water-SEs}
 %	\caption{Heat transfer diagram of process $2e$-$2f$}
 %	\label{fig:HeatTransfer_Water-SEs}
 %\end{center}
@@ -89,9 +89,9 @@ To build the cascade system model, several simplifying assumptions are made:
 %\noindent \begin{figure}[htbp]
 %\begin{center}
 %	\subfigure[Trough-Rankine system]{
-%	\includegraphics[width = 0.45\columnwidth, angle = 0]{./graphics/Trough-s}}
+%	\includegraphics[width = 0.45\columnwidth, angle = 0]{fig/Trough-s}}
 %	\subfigure[Dish-Stirling system]{
-%	\includegraphics[width = 0.19\columnwidth, angle = 0]{./graphics/Dish-s}}
+%	\includegraphics[width = 0.19\columnwidth, angle = 0]{fig/Dish-s}}
 %	\caption{Sketch of the stand-alone systems}
 %	\label{fig:Stand-alone-systems}
 %\end{center}
@@ -101,64 +101,184 @@ Figure~\ref{fig:Stand-alone-systems} shows the sketch of the stand-alone systems
 
 \subsection{Stand-alone trough-Rankine system}
 
-Steam turbine has the same main parameters and isentropic efficiency with that of the cascade system. Working pressure of deaerator is the same of the cascade system. So parameters of state $2b,s$ and $2c,s$ in Figure~\ref{fig:Stand-alone-systems} of the steam turbine can be obtained by $\eta_{i,tb}= (h_{2a,s}-h_{2b,s})/(h_{2a,s}-h_{i,2b,s}) = (h_{2a,s}-h_{2c,s})/(h_{2a,s}-h_{i,2c,s})$.
-%the following equations.
-
-%\begin{equation}
-%	\eta_{i,tb}=\frac{h_{2a,s}-h_{2b,s}}{h_{2a,s}-h_{i,2b,s}}
-%\end{equation}
+Steam turbine has the same main parameters and isentropic efficiency with that of the cascade system. Working pressure of deaerator is the same of the cascade system. So parameters of state $2b,s$ and $2c,s$ in Figure~\ref{fig:Stand-alone-systems} of the steam turbine can be obtained by
 \nomenclature[S]{$s$}{Stand-alone systems}
-%
-%\begin{equation}
-%	\eta_{i,tb}=\frac{h_{2a,s}-h_{2c,s}}{h_{2a,s}-h_{i,2c,s}}
-%\end{equation}
 
-The output power of steam turbine $P_{tb,s}=\left(1-y_{s}\right)\dot{m}_{2,s}\left(h_{2a,s}-h_{2b,s}\right)+y_{s}\dot{m}_{2,s}\left(h_{2a,s}-h_{2c,s}\right)$.
+\begin{equation}
+	\eta_{i,tb}= (h_{2a,s}-h_{2b,s})/(h_{2a,s}-h_{i,2b,s}) = (h_{2a,s}-h_{2c,s})/(h_{2a,s}-h_{i,2c,s})
+\end{equation}
 
-%\begin{equation}
-%	P_{tb,s}=\left(1-y_{s}\right)\dot{m}_{2,s}\left(h_{2a,s}-h_{2b,s}\right)+y_{s}\dot{m}_{2,s}\left(h_{2a,s}-h_{2c,s}\right)
-%\end{equation}
+The output power of steam turbine
 
-The output power of generator $P_{ge,s}=P_{tb,s}\eta_{ge}$.
+\begin{equation}
+	P_{tb,s}=\left(1-y_{s}\right)\dot{m}_{2,s}\left(h_{2a,s}-h_{2b,s}\right)+y_{s}\dot{m}_{2,s}\left(h_{2a,s}-h_{2c,s}\right)
+\end{equation}
 
-%\begin{equation}
-%	P_{ge,s}=P_{tb,s}\eta_{ge}
-%\end{equation}
+The output power of generator
 
-The total power of pumps $P_{pu,s}=\left(1-y_{s}\right)\dot{m}_{2,s}\left(h_{2e,s}-h_{2d,s}\right)+\dot{m}_{2,s}\left(h_{2g,s}-h_{2f,s}\right)$.
+\begin{equation}
+	P_{ge,s}=P_{tb,s}\eta_{ge}
+\end{equation}
 
-%\begin{equation}
-%	P_{pu,s}=\left(1-y_{s}\right)\dot{m}_{2,s}\left(h_{2e,s}-h_{2d,s}\right)+\dot{m}_{2,s}\left(h_{2g,s}-h_{2f,s}\right)
-%\end{equation}
+The total power of pumps
+\begin{equation}
+	P_{pu,s}=\left(1-y_{s}\right)\dot{m}_{2,s}\left(h_{2e,s}-h_{2d,s}\right)+\dot{m}_{2,s}\left(h_{2g,s}-h_{2f,s}\right)
+\end{equation}
 
-Heat injected in the water circuit $Q_{2,s}=\dot{m}_{2,s}\left(h_{2a,s}-h_{2g,s}\right)$.
+Heat injected in the water circuit
 
-%\begin{equation}
-%	Q_{2,s}=\dot{m}_{2,s}\left(h_{2a,s}-h_{2g,s}\right)
-%\end{equation}
+\begin{equation}
+	Q_{2,s}=\dot{m}_{2,s}\left(h_{2a,s}-h_{2g,s}\right)
+\end{equation}
 
-The generator efficiency is the same of that in the cascade system, and the efficiency of Rankine cycle can be expressed as $\eta_{rk,s}=(P_{tb,s}-P_{pu,s}/\eta_{ge})/Q_{2,s}$.
+The generator efficiency is the same of that in the cascade system, and the efficiency of Rankine cycle can be expressed as
 
-%\begin{equation}
-%	\eta_{rk,s}=(P_{tb,s}-P_{pu,s}/\eta_{ge})/Q_{2,s}
-%\end{equation}
+\begin{equation}
+	\eta_{rk,s}=(P_{tb,s}-P_{pu,s}/\eta_{ge})/Q_{2,s}
+\end{equation}
 
 \subsection{Stand-alone dish-Stirling system}
 
 In the stand-alone dish-Stirling system, Stirling engines with the same number of dish collectors are directly put on the focuses of the dish collectors. Water is used for cooling the Stirling engines. $T_{H,s}$ is chosen to be equal to outlet temperature of air in dish receiver. $T_{L,s}$ is chosen to be 310 K, the default expansion temperature in Fraser's dissertation~\cite{Fraser2008} for the calculation of 4-95 NK\uppercase\expandafter{\romannumeral2} engine. $k$ and $\gamma$ are chosen the same value as that of the Stirling engines in the cascade system.
 
-%\begin{equation}
-%	\eta_{sea,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\gamma}}
-%\end{equation}
-%
-%where, $T_{R,s}=\dfrac{T_{H,s}-T_{L,s}}{\ln(T_{H,s}/T_{L,s})}$ and $e_{s}=\dfrac{T_{R,s}-T_{L,s}}{T_{H,s}-T_{L,s}}$.
-%
-The power of Stirling engines $P_{sea,s}=n_{dc}A_{dc}I_r\eta_{dc}\eta_{sea,s}$.
+\begin{equation}
+	\eta_{sea,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\gamma}}
+\end{equation}
 
-%\begin{equation}
-%	P_{sea,s}=n_{dc}A_{dc}I_r\eta_{dc}\eta_{sea,s}
-%\end{equation}
+where, $T_{R,s}=\dfrac{T_{H,s}-T_{L,s}}{\ln(T_{H,s}/T_{L,s})}$ and $e_{s}=\dfrac{T_{R,s}-T_{L,s}}{T_{H,s}-T_{L,s}}$.
+
+The power of Stirling engines
+
+\begin{equation}
+	P_{sea,s}=n_{dc}A_{dc}I_r\eta_{dc}\eta_{sea,s}
+\end{equation}
 \nomenclature{$n$}{Number of collectors}
 
 \section{Comparison with stand-alone system}
+The results presented in Table~\ref{tab:importantResults} are issued using design parameters with counterflow of two fluids in Stirling engine array as the default flow type. It is shown that the cascade system with design parameters can achieve higher efficiency compared to corresponding stand-alone systems. Although the efficiency of the Stirling engine array is lower, the efficiency of the Rankine cycle is higher. The overall output power of the cascade system is $3.83\times10^4\,\mathrm{W}$ higher.
+%Different results between two flow types of Stirling engine array are listed in Table~\ref{tab:SEAresults}.
+
+\begin{table}[htbp]
+	\caption{Some important results using design parameters}
+	\begin{center}
+	\begin{tabular}{cccccc}
+		\toprule
+		Parameter		&	Value	&	Parameter		&	Value	&	Parameter		&	Value\\
+		\midrule
+		$\eta_{cs}$		&	0.1974	&	$\eta_{sea,s}$	&	0.3786	&	$P_{ge,s}$	&	$5.826\times10^6\,\mathrm{W}$\\
+		$\eta_{s}$	&	0.1962	&	$\eta_{rk}$	&	0.2660	&	$P_{sea}$		&	$3.552\times10^5\,\mathrm{W}$\\
+		$\eta_{diff}$		&	0.0062	&	$\eta_{rk,s}$	&	0.2678	&	$P_{sea,s}$	&	$4.909\times10^5\,\mathrm{W}$\\
+		$\eta_{sea}$	&	0.3407	&	$P_{ge}$		&	$6\times10^6\,\mathrm{W}$	&	$P_{diff}$		&	$3.830\times10^4\,\mathrm{W}$\\
+		\bottomrule
+	\end{tabular}
+	\end{center}
+	\label{tab:importantResults}
+\end{table}
+\nomenclature[S]{$cs$}{Cascade system}
+\nomenclature[S]{$se$}{Stirling engine}
+\nomenclature[G]{$\eta_{diff}$}{Efficiency difference of cascade system and stand-alone systems, $\eta_{cs}-\eta_{s}$}
+\nomenclature[S]{$sea$}{Stirling engine array}
+%\nomenclature{$P_{sea,s}$}{Total power of Stirling engines in stand-alone dish system, W}
+
+\subsection{Effects of $I_{r}$}
+\label{sec:I_r}
+
+It is found that $I_r$ can affect the efficiency difference of cascade system and stand-alone systems $\eta_{diff}$. Figure~\ref{fig:I_r-eta_diff} shows curve fits of efficiency differences $\eta_{diff}$ versus $I_r$ with a series of different Stirling engine array power ratios. As it can be seen, for a high $I_r$ ($I_r > 550\,\mathrm{W/m^2}$), $\eta_{diff}>0$, the cascade system can achieve a higher efficiency than corresponding stand-alone systems. For a low $I_r$ ($I_r < 550\,$W/m$^2$), $\eta_{diff}$ may be negative. At this situation, the cascade system achieves a lower efficiency than corresponding stand-alone systems. This may be explained that instead of cooling water in the stand-alone dish-Stirling system, condensed water of Rankine cycle is used to cool the Stirling engines, which jeopardizes the heat dissipation and leads to a lower power of the Stirling engines. For a low $I_r$, the increased power of steam turbine due to absorbed heat by the condensed water is lower than the power loss of the Stirling engines. It can also be found that higher $I_r$ can achieve higher $\eta_{diff}$, which can be interpreted as the heat absorbed by the condensed water increases with $I_r$. So a higher $I_r$ location is always more suitable for cascade system. This means $I_r$ is a key factor to determine whether cascade system should be applied in a certain location.
+\nomenclature[G]{$\beta$}{Ratio of power of Stirling engines to the total output power of cascade system}
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/I_r-eta_diff}
+	\caption{Curve fits of efficiency difference $\eta_{diff}$ versus $I_r$}
+	\label{fig:I_r-eta_diff}
+\end{center}
+\end{figure}
+
+\subsection{Effects of $\beta$}
+
+As it can be seen in Table~\ref{tab:importantResults}, the $\eta_{diff}$ is very small with the design parameters given above. A reason $\eta_{diff}$ to be so small is that $\beta$, the ratio of power of Stirling engines to the total power, is very small, the heat released by the Stirling engine array is a small portion of the heat absorbed in the Rankine cycle. So increase $\beta$ may achieve higher $\eta_{diff}$. The relationship between $\eta_{diff}$ and $\beta$ under a series of $I_r$ is shown in Figure~\ref{fig:beta-eta_diff}. It can be found that, for a high $I_r$, increase $\beta$ may achieve a higher $\eta_{diff}$, but there is a limit. For $I_r=900$W/m$^2$, the maximum $\eta_{diff}=0.0228$ appears at $\beta=0.23$. For a low $I_r$, $\eta_{diff}$ is negative, increase $\beta$ will reduce $\eta_{diff}$. This can be explained as the same reason in section~\ref{sec:I_r}.
+
+\noindent \begin{figure}[H]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/beta-eta_diff}
+	\caption{Curve fits of efficiency difference $\eta_{diff}$ versus $\beta$}
+	\label{fig:beta-eta_diff}
+\end{center}
+\end{figure}
+
+\subsection{Effects of flow type}
+
+Flow type between heating and cooling streams can affect the efficiency of Stirling engine array. Parallel flow, compared to counterflow, leads to higher Stirling engine efficiency in the first columns of the array for lower cooling temperature, while lower Stirling engine efficiency in the last columns for higher cooling temperature. 
+
+\begin{table}[htbp]
+	\caption{Results of Stirling engine array with two different flow types}
+	\begin{center}
+	\begin{tabular}{ccccccccc}
+		\toprule
+		\multirow{3}{*}{$x$}	&	\multicolumn{4}{c}{Parallel flow}	&\multicolumn{4}{c}{Counterflow}\tabularnewline
+		\cline{2-5}	\cline{6-9}
+		&$T_{1,i}$&$T_{2,i}$&$P_{sea}$&$\eta_{sea}$&$T_{1,i}$&$T_{2,i}$&$P_{sea}$&$\eta_{sea}$\tabularnewline
+		&K&K&W&-&K&K&W&-\tabularnewline
+		\midrule
+		1	&	1073.15	&	327.17	&	5000	&	0.3648	&	1073.15	&	348.09	&	4867	&	0.3601\\
+		2	&	1022.38	&	329.80	&	4630	&	0.3599	&	1023.25	&	345.48	&	4541	&	0.3562\\
+		3	&	974.35	&	332.29	&	4280	&	0.3544	&	975.82	&	343.00	&	4230	&	0.3520\\
+		4	&	928.90	&	334.65	&	3949	&	0.3485	&	930.75	&	340.65	&	3934	&	0.3474\\
+		5	&	885.91	&	336.88	&	3635	&	0.3419	&	887.94	&	338.42	&	3654	&	0.3424\\
+		6	&	845.26	&	339.00	&	3338	&	0.3347	&	847.28	&	336.29	&	3387	&	0.3370\\
+		7	&	806.82	&	341.00	&	3057	&	0.3269	&	808.69	&	334.28	&	3134	&	0.3312\\
+		8	&	770.49	&	342.91	&	2792	&	0.3184	&	772.06	&	332.37	&	2894	&	0.3248\\
+		9	&	736.16	&	344.71	&	2541	&	0.3090	&	737.31	&	330.55	&	2666	&	0.3180\\
+		10	&	703.75	&	346.43	&	2304	&	0.2989	&	704.37	&	328.82	&	2450	&	0.3106\\
+		\bottomrule
+	\end{tabular}
+	\end{center}
+	\label{tab:SEAresults}
+\end{table}
+
+Table~\ref{tab:SEAresults} shows the different results of the two flow types. The fit curves of temperature series of the heating and cooling fluids and the efficiency of Stirling engines in different columns are shown in Figure~\ref{fig:Parallelflow}
+and~\ref{fig:Counterflow}.
+
+%\noindent \begin{figure}[htbp]
+%\begin{center}
+%	\subfigure[Parallel flow]{
+%	\includegraphics[width = 0.45\columnwidth, angle = 0]{fig/Parallelflow}}
+%	\subfigure[Counterflow]{
+%	\includegraphics[width = 0.45\columnwidth, angle = 0]{fig/Counterflow}}
+%	\caption{Temperature series of two fluids and efficiency of Stirling engines in column $x$}
+%	\label{fig:ParallelflowAndCounterflow}
+%\end{center}
+%\end{figure}
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/Parallelflow}
+	\caption{Parallel flow: Temperature series of two fluids and efficiency of Stirling engines in column $x$}
+	\label{fig:Parallelflow}
+\end{center}
+\end{figure}
+\noindent \begin{figure}[H]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/Counterflow}
+	\caption{Counterflow: Temperature series of two fluids and efficiency of Stirling engines in column $x$}
+	\label{fig:Counterflow}
+\end{center}
+\end{figure}
+
+It can be concluded that the temperature increment of cooling fluid is much smaller than the temperature decrement of heating fluid due to their large difference of $c_pq_m$, which leads to a small difference of overall efficiency of Stirling engine array between the two flow types.
+
+To find out a clear difference of the two flow types, a simple model of Stirling engine array was developed with air as the heating fluid and water as the cooling fluid. $T_{1,i}, T_{1,o}, T_{2,i}, q_{1,m}$ are fixed and chosen the same values as in the cascade system. Change the value of $q_{2,m}$, and the corresponding Stirling engine array efficiency of the two flow types ($\eta_p$ and $\eta_c$) can be obtained. Figure~\ref{fig:SEAflowtypes} shows the efficiency of Stirling engine array with different $q_{2,m}$ in two flow types. It can be found that counterflow has a higher efficiency than parallel flow, and with lower $q_{2,m}$ comes with higher efficiency difference.
+\nomenclature[S]{$p$}{Parallel flow}
+\nomenclature[S]{$c$}{Counterflow}
+
+For a system with large difference of $c_pq_m$ of two fluids, that means one fluid can only achieve a small temperature rise (drop) compared to the other fluid, will lead to a small difference of two flow types. For a system with similar difference of $c_pq_m$, use the counterflow can achieve a higher efficiency.
+
+\noindent \begin{figure}[H]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/SEAflowtypes}
+	\caption{Efficiency of Stirling engine array with different $q_{2,m}$}
+	\label{fig:SEAflowtypes}
+\end{center}
+\end{figure}
 \section{System evaluation}
+\section{Conclusion}

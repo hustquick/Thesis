@@ -1,4 +1,4 @@
-\chapter{System modeling}
+\chapter{Modeling}
 
 To investigate the performance of the proposed cascade systems, mechanism models of the systems were developed with EES (Engineering Equation Solver) and MATLAB. Bottom-up design method was used for the system modeling. Firstly, the mechanism models of the developed in EES to validate the theoretical relationships of the models. Secondly, the component models were developed in MATLAB by using object-oriented method. It makes full use of inheritance and polymorphism to ensure both the independence and the relevance of the components.
 %The cascade system is developed in several blocks. These blocks are made of circuits with efficiency calculations. 
@@ -1080,8 +1080,8 @@ The output power of the Stirling engine array
 
 \section{System modeling}
 
-\subsection{Stream}
-Different components are connected to form a system by their interfaces. These interfaces are interacted with each other by "streams". For example, the steam turbine in Figure~\ref{fig:PES} is connected with the deaerator by a steam stream. This steam stream has its own properties such as fluid type, mass flow rate, temperature, pressure and so on.
+%\subsection{Stream}
+Different components are connected to form a system by their interfaces (inlets and outlets). These interfaces are interacted with each other by "streams". For example, the steam turbine in Figure~\ref{fig:PES} is connected with the deaerator by a steam stream. This steam stream has its own properties such as fluid type, mass flow rate, temperature, pressure and so on.
 "Steams" are defined as objects in the modeling language -- MATLAB. Listing~\ref{lst:MATLAB_SOURCECODE} shows the source code of the definition of the class -- \textbf{Stream}.
 
 \begin{lstlisting}[language= MATLAB, backgroundcolor = \color{yellow!20}, caption = {The MATLAB source code of the definition of the class -- Stream}, label = {lst:MATLAB_SOURCECODE}]
@@ -1185,10 +1185,20 @@ Given the inherent properties of a \textbf{Stream}, its dependent properties, ma
 
 If the stream is a single phase stream, its dryness does not exist. Its dependent properties ($h$, $s$, $c_p$) can be obtained by its temperature ($T$) and pressure ($p$) by calling the open source MATALB wrapper CoolProp. If the stream is a two-phase stream, $0 \leqslant x \leqslant 1$. Its dependent properties ($h$, $s$, $c_p$) can be obtained by its pressure ($p$) and dryness ($x$). The reason of choosing pressure ($p$) instead of temperature ($T$) as the input value is that it is easier to be determined.
 
+A \textbf{stream} can be used to record a state point since it contains all the information for a state point. Streams are defined in a system for component connection and system calculation. Different components are connected by streams to form a system. The Streams are passed as parameters to the components, completing the calculation of the methods in the components.
 
+%\subsection{System connection}
+Components are connected each other by streams. Their inlets and outlets are used as interfaces for connection. 
+Two interfaces are connected together by be assigned the same stream.
 
-%\subsection{State points}
-%State points are defined as objects in the 
+%\subsection{System initialization}
+Systems are initialized by given parameters (design parameters). These parameters are assigned to corresponding properties of the streams and thus affect the state of the related components.
 
-%\section{Determination of state parameters}
+%\subsection{System calculation}
+For system calculation, it has to be mentioned that, some parameters of a component are related with other components. 
+In such situations, guess values are used for the calculation methods in the components.
+The guess values are set to be the properties of some streams. Each of these streams is assigned to two components (evaporator and superheater). These streams are assigned to corresponding components to accomplish the calculation methods in the components. These calculation methods will return solutions for the stream parameters. Then the parameters will be compared with the guess values for verification. If the differences between guess values and the calculated parameters are within permissible error, the guess values are accepted; otherwise, the guess values will be iteratively readjusted according to the Runge-Kutta method until accepted.
 
+For example, the mass flow rate of oil of the evaporator ($\dot{m}_3$) is related with the superheater in a system as described in Figure~\ref{fig:CascadeSystem1}.
+A guess value of $\dot{m}_3$, $\dot{m}_{3,g}$, is required to determine it. $\dot{m}_{3,g}$ is assigned to the evaporator oil stream. This stream is assigned to both evaporator and superheater. In \textbf{evaporator}, the method \textbf{get\_T\_3b} will change the temperature of the stream ($T_{3b}$) from the default value. 
+In \textbf{superheater}, the method \textbf{get\_q\_m\_3} will return a solution of $\dot{m}_3$, $\dot{m}_{3,s}$, for verification. If $\left|\dot{m}_{3,g} - \dot{m}_{3,s}\right|$ is less than permissible error ($10^{-4}$), then $\dot{m}_{3,g}$ is accepted as the value of $\dot{m}_{3}$; otherwise, $\dot{m}_{3,g}$ will be iteratively readjusted according to the Runge-Kutta method until $\left|\dot{m}_{3,g} - \dot{m}_{3,s}\right| < 10^{-4}$.

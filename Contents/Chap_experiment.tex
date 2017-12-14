@@ -11,13 +11,12 @@ To understand the solar thermal power generation system more deeply and to valid
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=1.0\textwidth]{fig/platform.png}
+\includegraphics[width=1.0\textwidth]{fig/platform.jpg}
 \caption{Schematic structure of the platform}\label{fig:platform}
 \end{figure}
 Figure~\ref{fig:platform} shows the schematic structure of the solar thermal power platform. 
 Three circuits, the air circuit, oil circuit and organic fluid circuit, are created by different fluids. In the air circuit, air in the environment is first compressed in the compressor, and warmed by a heater, 
-then heated in dish receiver, then flows into the air-oil heat exchanger to provide heat for Rankine cycle and finally %through the air pump
-back to the environment. 
+then heated in dish receiver, then flows into the air-oil heat exchanger to provide heat for Rankine cycle and finally through the water cooling system back to the environment. 
 In the oil circuit, the oil is first heated in the trough collector and then flows into the air-oil heat exchanger to obtain the heat provided by the air. The heated oil flows 
 into the evaporator of the ORC system to provide heat for the ORC system, then through the pump back to the trough collector.
 In the organic fluid circuit, the organic fluid first absorbs the heat provided by the oil in the evaporator, then flows into the ORC turbine for expansion. After expansion, the organic fluid flows into the regenerator to recover part of the overheating heat, then into the condenser, and back to the regenerator to reuse the rejected heat, then through the pump back to the evaporator.
@@ -104,10 +103,74 @@ outlet fluid temperatures as required by changing powers.
 
 In order to test the performance of the platform and validate the proposed models, relevant experiments were carried out.
 \subsection{Trough collector experiment}
-
+The purpose of the experiment is to investigate the impact of solar irradiance, flow rate, inlet temperature of the working fluid on the thermal performance of the collector. The operation steps are as follows,
+\begin{enumerate}[label=(\arabic*)]
+	\item Complete the preparation work. Ensure that the devices and components are all properly connected and can work normally.
+	\item Initialize the solar radiometer. Adjust the direction of the solar radiometer to get a normal irradiation value, make sure the spot passing through the tube falls in the designed position.
+	\item Open the valves in the oil circuit, then turn on the oil pump.
+	\item Turn on the motor of the trough collector tracking system. Synchronize the time of the tracking system, and turn on the automatic mode to make the trough system tracking the sun automatically.
+	\item Adjust the parameters to meet the designed conditions. When the data is stable, record and save the data collected by the data acquisition system.
+	\item Finish the experiment when all the design conditions have been tested.
+	\item Rotate the trough collector to face towards the horizontal position on the control panel. Turn off the motor when the trough collector is ready in place.
+	\item Turn off the oil pump.
+\end{enumerate}
 \subsection{Dish collector experiment}
+The purpose of the experiment is to investigate the impact of solar irradiance, flow rate, inlet temperature of the working fluid on the thermal performance of the collector. The operation steps are as follows,
+\begin{enumerate}[label=(\arabic*)]
+	\item Complete the preparation work. Ensure that the devices and components are all properly connected and can work normally.
+	\item Initialize the solar radiometer. Adjust the direction of the solar radiometer to get a normal irradiation value, make sure the spot passing through the tube falls in the designed position.
+	\item Turn on the water cooling system.
+	\item Open the valves of the inlet and outlet of the air circuit, then turn on the air compressor.
+	\item Use manual mode to rotate the collector toward the sun. Then switch to the automative mode.
+	\item Adjust the parameters to meet the designed conditions. When the data is stable, record and save the data collected by the data acquisition system.
+	\item Finish the experiment when all the designed conditions have been tested. 
+	\item Rotate the collector to the up most position (facing the zenith). Turn off the compressor, turn off the outlet and inlet valves, turn off the water cooling system.
+\end{enumerate}
 
 \subsubsection{ORC system experiment}
 
+
 \section{Result analysis}
+\subsection{Trough collector experiment result analysis}
+
+
+\subsection{Dish collector experiment result analysis}
+Influences of solar irradiance, flow rate and inlet temperature of the working fluid on the thermal performance of the collector are concerned.
+To investigate the influence of solar irradiance, the flow rate, inlet temperature and pressure remain unchanged. $\dot{m} = 0.07\,\mathrm{kg/s}$, $T_{1,i} = 423.15\,\mathrm{K}$, $p_{1,i} = 4\times10^5\,\mathrm{Pa}$. It is worth noting that due to the variability of solar radiation intensity, the measured values of solar irradiance are not evenly distributed.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{fig/I_r-eta}
+\caption{Influence of solar irradiance on the thermal efficiency}
+\label{fig:I_r-eta}
+\end{figure}
+Figure~\ref{fig:I_r-eta} shows the influence of solar irradiance on the thermal efficiency of the dish collector. Curve of simulation result is also included. The simulation parameters are set to be the same with that of the experiment. The optical efficiency fo the dish collector is manually reduced to simulate the real situation of the spilled focused spot.
+
+It can be found that the thermal efficiency increased while the solar irradiance increased from 200$\,\mathrm{W/m}^2$ to 500$\,\mathrm{W/m}^2$, which has the same trends with theoretical model. With the increment of solar irradiance, more energy is injected into the receiver. The temperatures of the entrance section of the pipe, and the outer wall are not increased obviously. So the increasing amount of heat loss is not so much compared with the increased input energy. 
+The discrepancy of the experimental data and simulation data may be interpreted as bad insulation conditions. The higher out wall temperature of the insulation layer proved it. Higher irradiance leads to higher wall temperature and hence higher radiation loss, which jeopardizes the thermal efficiency when solar irradiance increases.
+
+However, it has to be pointed out that these data points were collected in different days, the environment temperature and wind speed may differ. It needs further researches on this topic.
+
+To investigate the influence of flow rate, the inlet temperature and pressure remain unchanged. $T_{1,i} = 423.15\,\mathrm{K}$, $p_{1,i} = 4\times10^5\,\mathrm{Pa}$. Figure~\ref{fig:q_m-eta} shows the influence of inlet flow rate on the thermal efficiency of the dish collector. The data points in the figure are collected within a short time, so the irradiance can be regarded as unchanged.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{fig/q_m-eta}
+\caption{Influence of inlet flow rate on the thermal efficiency}
+\label{fig:q_m-eta}
+\end{figure}
+
+It can be found that higher flow rate leads to higher efficiency. This is obvious for higher flow rate takes more heat from the receiver, leads to lower temperature distribution and hence lower thermal losses. The experimental data and simulation result are in good agreement.
+
+To investigate the influence of inlet temperature, the flow rate and pressure remain unchanged. $\dot{m} = 0.07\,\mathrm{kg/s}$, $p_{1,i} = 4\times10^5\,\mathrm{Pa}$. Figure~\ref{fig:T_i-eta} shows the influence of inlet flow rate on the thermal efficiency of the dish collector.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{fig/T_i-eta}
+\caption{Influence of inlet temperature on the thermal efficiency}
+\label{fig:T_i-eta}
+\end{figure}
+
+It can be found that higher inlet temperature leads to lower efficiency, This is obvious for higher inlet temperature leads to higher temperature distribution and hence higher thermal losses. The experimental data and simulation result are in good agreement.
+
+\subsection{ORC system experiment result analysis}
+
 \section{Platform evaluation}

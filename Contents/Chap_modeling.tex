@@ -72,7 +72,7 @@ Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole lengt
 \nomenclature{$U$}{Overall heat transfer coefficient, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
 \nomenclature{$q''$}{Heat flux, W$\cdot$m$^{-2}$}
 \begin{equation}
-	\frac{T_{o}-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})PL}{\dot{m}c_{p}})\label{eq:CTCHF}
+	\frac{T_{o}-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})\pi d_o L_{tc}}{\dot{m}c_{p}})\label{eq:CTCHF}
 \end{equation}
 
 \begin{figure}[!ht]
@@ -82,12 +82,12 @@ Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole lengt
 \end{figure}
 
 
-Since the Nusselt number $Nu$ in the pipe is very large (about 1$\times$10$^4$), small temperature difference exists between the absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero and Zarza~\cite{Romero2007}. The length $L$ required to get the required number of trough collectors in a row can be obtained from Equation~\ref{eq:CTCHF}.
+Since the Nusselt number $Nu$ in the pipe is very large (about 1$\times$10$^4$), small temperature difference exists between the absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero and Zarza~\cite{Romero2007}. The length $L_{tc}$ required to get the required number of trough collectors in a row can be obtained from Equation~\ref{eq:CTCHF}.
 
 The energy projected perpendicularly to the aperture of the trough collectors is
 
 \begin{equation}
-  Q_{total} = I_r L w_{tc}
+  Q_{total} = I_r L_{tc} w_{tc}
 \end{equation}
 
 The energy absorbed by the heat transfer fluid is 
@@ -100,11 +100,12 @@ The thermal efficiency of the trough collectors
 
 \begin{equation}
   \eta_{tc} = \dfrac{Q_{use}}{Q_{total}} = 
-  \dfrac{I_r L w_{tc}}{\dot{m}c_p(T_o - T_i)}
+  \dfrac{I_r L_{tc} w_{tc}}{\dot{m}c_p(T_o - T_i)}
   \label{eq:eta_tc}
 \end{equation}
 
 \subsection{Parabolic dish collector}
+\label{sec:pdc}
 
 Parabolic dish collector consists of a reflector and a receiver. The reflector (mirror) tracks the sun to reflect direct solar radiation and concentrates it onto a receiver located at the focal point of the reflector. Two axes tracking system needs to be applied for the reflector to continuously follow the daily path of the sun.
 
@@ -823,7 +824,7 @@ For a typical PES modeling process as shown in Figure~\ref{fig:PES}, $\dot{m}_2$
 	  
 \end{enumerate}
 
-By solving the equations~\ref{eq:preheater} to~\ref{eq:superheater}, $\dot{m}_3$, state $3b$ and $3d$ can be obtained.
+By solving the equations~(\ref{eq:preheater}) to~(\ref{eq:superheater}), $\dot{m}_3$, state $3b$ and $3d$ can be obtained.
 
 \subsection{Rankine power generation system}
 %The power generating system includes the turbine (steam turbine or ORC turbine) and generator.

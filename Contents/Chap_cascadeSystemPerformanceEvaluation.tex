@@ -4,7 +4,11 @@
 In section~\ref{sec:sst}, two typical cascade system topologies (see Figure~\ref{fig:CascadeSystems}) are selected for further investigation. It has to be pointed out that, in Chapter~\ref{cha:osgs}, multi-stage exergy loss reduction system (MERS) is proposed and analyzed. It is obvious that MERS has better energy and exergy performance than SGSS. However, the MERS is not applied in this chapter for investigation. There are several reasons. First,
 in order to clearly find out the advantages of cascade collection and cascade utilization of the cascade systems, it is not applied in the cascade system in this chapter. Second, compared with traditional SGSS, MERS only changes the solar field, which has no influence on the cascade utilization of the cascade system. It can be easily applied in the cascade system analyzed in this chapter in the future without influence of existing calculations. Third, the MERS proposed in Chapter~\ref{cha:osgs} needs further research in the future. Different types of solar collector technologies can be applied in different solar fields. For example, linear Fresnel reflectors or flat collectors can be applied for the preheating solar field to reduce costs; molten salt can be used as heat transfer fluid in the superheating solar field to increase the main steam temperature of the Rankine cycle.
 
-In the cascade system, dish collectors are used to provide heat for Stirling engines and air-to-water heat exchanger. Trough collectors are used to provide heat for steam generating processes (preheating, evaporating and superheating) in the Rankine cycle. Figure~\ref{fig:System-1} shows the scheme sketch of the cascade system. In this system, hot air is produced by the dish collectors. High temperature (1073\,K) air is used to provide heat to Stirling cycle to get higher conversion efficiency, then the air is used to provide heat for air-to-water heat exchanger to use the lower temperature energy in Rankine cycle effectively. Besides, feed water of Rankine cycle is used to cool the Stirling engines to recycle the heat wasted conventionally. 
+Two typical cascade system topologies are selected in Chapter~\ref{cha:SystemTopology}. 
+Both systems take advantage of the different types of heat collectors and different thermal cycles to achieve cascade collection of energy and cascade utilization.
+However, this chapter focuses on the first model because it is more widely used and more suitable for large-scale applications. 
+Figure~\ref{fig:System-1} shows the scheme sketch of the cascade system.
+In this system, dish collectors are used to provide heat for Stirling engines and air-to-water heat exchanger. Trough collectors are used to provide heat for steam generating processes (preheating, evaporating and superheating) in the Rankine cycle. Hot air is produced by the dish collectors. High temperature (1073\,K) air is used to provide heat to Stirling cycle to get higher conversion efficiency, then the air is used to provide heat for air-to-water heat exchanger to use the lower temperature energy in Rankine cycle effectively. Besides, feed water of Rankine cycle is used to cool the Stirling engines to recycle the heat wasted conventionally. The Stirling engines are connected in series for better performance.
 %Water is used as the working fluid of Rankine cycle, which is heated in the cold chamber of Stirling engines, preheater, evaporator, superheater, and air-to-water heat exchanger successively, and then expand in turbine, condense in condenser. Pumps are used to change the pressure of fluids. Stirling engines are used for power generation and cooled by feed water of the Rankine cycle. 
 
 \noindent \begin{figure}[htbp]
@@ -69,8 +73,102 @@ To build the cascade system model, several simplifying assumptions are made:
 	\item A linear temperature profile across the regenerator exists, the mean effective temperature $T_{R} = (T_H-T_L) / \ln(T_H/T_L)$.~\cite{Der2007, Cavazzuti2012}
 \end{itemize}
 
-%\section{Determination of system parameters}
-%
+\section{System modeling}
+
+In order to study the efficiency of the system and its influencing factors, a model of the cascade system was developed. It mainly consists of the following components:
+
+\subsection{System parameters}
+\subsubsection{Environment}
+
+Typical environmental parameter values of Wuhan are used for the cascade system design.
+
+$I_r = 700\,\mathrm{W/m^2}$, $T_{amb} = 293\,\mathrm{K}$, $p_{amb} = 1\times10^5\,\mathrm{Pa}$, $v_{amb} = 1\,\mathrm{m/s}$.
+
+\subsubsection{Steam Turbine} 
+	
+A steam turbine product, N-6 2.35, of Qingdao Jieneng Power Station Engineering Co., Ltd is used for calculation. Its nominal parameters are: $P = 6\,\mathrm{MW}$, 	$p_s = 2.35\,\mathrm{MPa}$, $T_s = 390\mathrm{^\circ C}$, $\dot{m} = 32.09\,\mathrm{t/h}$, $p_c = 0.015\,\mathrm{MPa}$, $s_{tb} = 3000\,\mathrm{rpm}$.
+	
+	Known the main steam parameters, its enthalpy and entropy can be obtained by using CoolProp, $h_s = 3.2203\times10^6\,\mathrm{J/kg}$, $s_s = 7.0149\times10^3\,\mathrm{J/(kg\cdot K)}$.
+	
+	Exhaust enthalpy of the turbine $h_{c} = h_{s} - \dfrac{P}{\dot{m}} = 2.5472\times10^6\,\mathrm{J/kg}$.
+	
+	Known exhaust pressure and $s_{i,c} = s_s$, isentropic exhaust enthalpy of the turbine can be obtained by using CoolProp, $h_{i,c} = 2.2737\times10^6\mathrm{J/kg}$.	
+	
+	So the isentropic efficiency of the turbine can be obtained from
+	$\eta_{i,tb} = \dfrac{h_s - h_c}{h_{s} - h_{i,c}} = 0.71$.
+	
+	Taking into account of the application in solar trough system, the designed parameters of the steam turbine are shown in Table~\ref{tab:CascadeSystemParameters}.
+	
+\begin{table}[htbp]
+	\caption{Basic design parameters of the cascade system}
+	\begin{center}
+	\begin{tabular}{cccccc}
+		\toprule
+		Parameter		&	Value	&	Parameter		&	Value	&	Parameter		&	Value\\
+		\midrule
+		$I_r$		&	$700\,\mathrm{W/m^2}$	&	$T_{dc,o}$	&	$1073\,\mathrm{K}$	&	$n_{se}$	&	100\\
+		$T_{amb}$	&	$293\,\mathrm{K}$	&	$p_{dc}$		&	$5\times10^5\,\mathrm{Pa}$	&	$T_s$	&	$613\,\mathrm{K}$\\
+		$p_{amb}$	&	$1\times10^5\,\mathrm{Pa}$	&	$\Delta{}T_{3,2,min}$	&	$15\,\mathrm{K}$	&	$p_s$	&	$2.35\times10^6\,\mathrm{Pa}$\\
+		$v_{amb}$	&	$1\,\mathrm{m/s}$	&	$T_{tc,o}$	&	$623\,\mathrm{K}$	&	$p_c$	&	$1.5\times10^4\,\mathrm{Pa}$\\
+		$P_{ge}$	&	$6\times10^6\,\mathrm{W}$	&	
+$p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
+		$T_{dc,i}$		&	$623\,\mathrm{K}$	&	$T_{1b}$	&	$673\,\mathrm{K}$	&	$p_{de}$ 	& 	$1\times10^6\,\mathrm{Pa}$\\			
+		\bottomrule
+	\end{tabular}
+	\end{center}
+	\label{tab:CascadeSystemParameters}
+\end{table}
+	 
+\subsubsection{Trough collector}
+LUZ solar collector LS-3 is used as the trough collector for its known test data. Its main characters are listed in Table~\ref{tab:TroughParameters}~\cite{Fernandez2010}.
+
+\begin{table}[htbp]
+	\caption{Main parameters of LS-3}
+	\begin{center}
+	\begin{tabular}{cccccc}
+		\toprule
+		Parameter		&	Value	&	Parameter		&	Value	&	Parameter		&	Value\\
+		\midrule
+		$A_{pc}$		&	$570.2\,\mathrm{m^2}$	&	$w_{dc}$	&	$5.76\,\mathrm{m}$	&	$L_{dc}$	&	$99\,\mathrm{m}$\\
+		$f$	&	$1.71\,\mathrm{m}$	&	$d_i$		&	$0.066\,\mathrm{m}$	&	$d_o$	&	$0.07\,\mathrm{m}$\\
+		$d_{abs,i}$	&	$0.113\,\mathrm{m}$	&	$d_{abs,o}$	&	$0.115\,\mathrm{m}$	&	Rim angle	&	$80^\circ$\\
+		$\epsilon$		&	$0.15$	&	$\eta_{peak}$	&	$0.77$	&	$\rho$	&	$0.94$\\
+		$\tau$	&	$0.95$	&	
+$\alpha$	&	$0.96$	&	$Fe$	&	$0.97$\\
+		\bottomrule
+	\end{tabular}
+	\end{center}
+	\label{tab:TroughParameters}
+\end{table}
+\nomenclature{$f$}{Focal length, m}
+
+\subsubsection{Dish collector}
+A dish reflector product of SES (Stirling Energy System) is used as the reflector, the receiver is self-designed. The key parameters of the dish collector are listed in Table~\ref{tab:DishCollectorParameters}. 
+
+\begin{table}[htbp]
+	\caption{Key parameters of the dish collector}
+	\begin{center}
+	\begin{tabular}{cccccc}
+		\toprule
+		Parameter		&	Value	&	Parameter		&	Value	&	Parameter		&	Value\\
+		\midrule
+		$d_{cav}$	&	$0.46\,\mathrm{m}$	&	$\epsilon_{insu}$	&	0.6	&	$\theta_{dc}$	&	45$^\circ$\\
+		$\delta_{insu}$	&	$0.075\,\mathrm{m}$	&	$\alpha_{cav}$	&	0.87	&	$\gamma$	&	0.97\\
+		$dep_{cav}$	&	$0.23\,\mathrm{m}$	&	$\delta_a$		&	$0.005\,\mathrm{m}$	&	$\eta_{shading}$	&	0.95\\
+		$d_{ap}$	&	$0.184\,\mathrm{m}$	&	$d_{i,1}$	&	$0.07\,\mathrm{m}$	&	$\rho$	&	0.91\\
+		$\lambda_{insu}$	&	$0.06\,\mathrm{W/(m\cdot K)}$	&	$A_{dc}$	&	$87.7\,\mathrm{m^2}$	&	\\		
+		\bottomrule
+	\end{tabular}
+	\end{center}
+	\label{tab:DishCollectorParameters}
+\end{table}
+
+\subsubsection{Stirling engines}
+The Stirling engines used in the cascade system are the same with the one analyzed in section~\ref{sec:StirlingEngineModel}. It is the GPU-3 Stirling engine, Table~\ref{tab:GPU3parameters} shows its parameters.
+
+\subsubsection{Deaerator}
+The deaerator has two inlet streams and one outlet stream. They have the same pressure, $p_{se} = 1\times10^6\,\mathrm{Pa}$. The outlet stream of the deaerator is saturated water.
+
 %\section{System simulation}
 
 \section{Stand-alone system selection}
@@ -285,4 +383,4 @@ For a system with large difference of $c_pq_m$ of two fluids, that means one flu
 \end{center}
 \end{figure}
 %\section{System evaluation}
-%\section{Conclusion}
+\section{Conclusion}

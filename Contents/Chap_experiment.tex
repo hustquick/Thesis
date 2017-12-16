@@ -72,7 +72,7 @@ The control cabinet of the dish collector provides mechanical, electrical and ot
 
 \subsection{ORC system}
 Hot oil (heated by the trough collector and/or the heater) is supplied to the ORC system. 
-In the hot loop, input temperature of the supplied oil is 180$\,^\circ$C, and output temperature is 160$\,^\circ$C. Flow rate of 0.44$\,\mathrm{kg/s}$ is required to reach the nominal output gross power 1.5$\,\mathrm{kW}$. In the cold loop, input temperature of tap water is 30$\,^\circ$C, and output temperature is 37$\,^\circ$C. The water flow rate is about 0.83$\,\mathrm{kg/s}$.
+In the hot loop, input temperature of the supplied oil is 180$\mathrm{^\circ C}$, and output temperature is 160$\mathrm{^\circ C}$. Flow rate of 0.44$\,\mathrm{kg/s}$ is required to reach the nominal output gross power 1.5$\,\mathrm{kW}$. In the cold loop, input temperature of tap water is 30$\mathrm{^\circ C}$, and output temperature is 37$\mathrm{^\circ C}$. The water flow rate is about 0.83$\,\mathrm{kg/s}$.
 
 \begin{figure}[!ht]
 \centering
@@ -121,7 +121,7 @@ The operation steps are as follows,
 
 %考虑到太阳直射辐射强度在晴天具有不可控性和相对连续性，当以太阳直射辐射强度为控制变量时，太阳辐射强度值不能控制为设计值，而应该为实测值。当需要固定太阳直射辐射强度时，应该尽量控制几组试验的总时间，减少太阳直射辐射强度变化带来的影响。
 
-Considering the uncontrollability and continuity of the direct normal irradiance (DNI) in a clear day, when DNI is the control variable, the solar radiation intensity value can not be controlled as the design value, it should be a measured value. When DNI is required to be fixed, total experiment time should be limited to reduce the impact of DNI changes.
+Considering the uncontrollability and continuity of the direct normal irradiance (DNI) in a clear day, when DNI is a control variable, solar irradiance values can not be controlled as design values and should be measured values. When DNI is required to be a constant, total experiment time should be limited to reduce the impact of DNI changes.
 
 \begin{table}[htbp]\footnotesize
 	\caption{Designed cases of the solar trough system}
@@ -145,24 +145,29 @@ Considering the uncontrollability and continuity of the direct normal irradiance
 	\label{tab:DesignedCasesForTrough}
 \end{table}
 
-In table~\ref{tab:DesignedCasesForTrough}, Case 1 to Case 9 are finished at different times of a day or in different days. Case 10 to Case 14 are required to be finished within half an hour. Since the heating process of the oil circuit takes more time, only 4 cases (Case 15 to Case 18) are designed for the inlet temperature investigation. And the 4 cases are required to be finished within an hour. It has to be pointed out that, the temperature range is small from Case 14 to Case 17 due to the slow heating process of the oil heater.
+In table~\ref{tab:DesignedCasesForTrough}, Case 1 to Case 9 are completed at different times of a day or in different days. Case 10 to Case 14 are required to be completed in half an hour. As the oil heating process takes more time, only 4 cases (Case 15 to Case 18) are designed for the inlet temperature investigation. And the 4 cases are required to be completed in an hour. It has to be noted that, the temperature range from Case 14 to Case 17 is small due to the slow heating process of the oil heater.
 
 \subsubsection{Data processing method}
 %Outlet temperature of the oil in the trough collector is monitored and recorded. 
-The specific heat of the oil is given as: when $T = 373.15 \,\mathrm{^\circ C}$, $c_p = 2.44\times10^3\,\mathrm{J/(kg\cdot K)}$; when $T = 473.15\,\mathrm{^\circ C}$, $c_p = 2.88\times10^3\,\mathrm{J/(kg\cdot K)}$. Linear interpolation method is applied, $c_p = aT + b$, where $a = 4.4\,\mathrm{J/(kg \cdot K^2)}$, $b = 798.14\,\mathrm{J/(kg\cdot K)}$.
+The specific heat of the oil is given as: when $T = 373.15\mathrm{^\circ C}$, $c_p = 2.44\times10^3\,\mathrm{J/(kg\cdot K)}$; when $T = 473.15\mathrm{^\circ C}$, $c_p = 2.88\times10^3\,\mathrm{J/(kg\cdot K)}$. Linear interpolation method is applied, $c_p = aT + b$, where $a = 4.4\,\mathrm{J/(kg \cdot K^2)}$, $b = 798.14\,\mathrm{J/(kg\cdot K)}$.
 
 The absorbed heat of the oil $Q_{abs} = \int_{T=T_i}^{T = T_o}c_p\dot{m}dT = \dfrac{1}{2}a(T_o^2 - T_i^2)\dot{m} + b (T_o - T_i)\dot{m}$.
 
-The thermal efficiency of the trough collector $\eta_{tc} = \dfrac{Q_{abs}}{I_rw_{tc}L_{tc}}$.
+The thermal efficiency of the trough collector 
+\begin{equation}
+	\eta_{tc} = \dfrac{Q_{abs}}{I_rw_{tc}L_{tc}}
+	\label{eq:ExperimentEta}
+\end{equation}
 
 To validate the simulation model, Equation~\ref{eq:CTCHF} is required to be checked. In the simulation model,
 
 \begin{equation}
-	T_{o}=T_{amb} + \dfrac{q''}{U(T_{abs})} + \exp(-\frac{U(T_{abs})\pi d_o L}{\dot{m}c_{p}})(T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})})
+	\widetilde{T_{o}}=T_{amb} + \dfrac{q''}{U(T_{abs})} + \exp(-\frac{U(T_{abs})\pi d_o L}{\dot{m}\widetilde{c_p}})(T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})})
 	\label{eq:CheckT_o}
 \end{equation}
 
-where $T_{abs}$ is substituted by $(T_i + T_o)/2$ ($T_i$ and $T_o$ are the measured values), $U(T_{abs})$ is obtained by~\cite{Romero2007}
+where $T_{abs}$ is replaced by $(T_i + T_o)/2$ ($T_i$ and $T_o$ are the measured values of inlet temperature and outlet temperature), $\widetilde{c_p}$ is the average specific heat obtained from $(T_i + T_o)/2$,
+$U(T_{abs})$ is obtained from~\cite{Romero2007}
 \begin{equation}
 	U(T_{abs}) = 0.687257 + 0.001941(T_{abs} - T_{amb}) + 0.000026(T_{abs} - T_{amb})^2
 \end{equation}
@@ -173,9 +178,14 @@ where $T_{abs}$ is substituted by $(T_i + T_o)/2$ ($T_i$ and $T_o$ are the measu
 	K(\theta) = \cos\theta+0.000884\theta-0.00005369\theta^2
 \end{equation}
 
+So $\widetilde{\eta_{tc}}$ from the simulation results can be obtained for comparison with the one in Equation~\ref{eq:ExperimentEta} obtained from experiment.
+\begin{equation}
+	\widetilde{\eta_{tc}} = \dfrac{\dot{m}\widetilde{c_p}(\widetilde{T_o}-T_i)}{I_rw_{tc}L_{tc}}
+\end{equation}
+	
 \subsection{Dish collector experiment}
 \subsubsection{Experiment purpose}
-The purpose of the experiment is to investigate the impact of solar irradiance, flow rate, inlet temperature of the working fluid on the thermal performance of the collector, and to validate the dish receiver model created in section~\ref{sec:pdc}.
+The purpose of the experiment is to study the effects of solar irradiance, flow rate, inlet temperature of the working fluid on the thermal performance of the collector, and to validate the dish receiver model established in section~\ref{sec:pdc}.
 
 \subsubsection{Experiment steps}
  The operation steps are as follows,
@@ -214,7 +224,7 @@ The purpose of the experiment is to investigate the impact of solar irradiance, 
 	\label{tab:DesignedCasesForDish}
 \end{table}
 
-In table~\ref{tab:DesignedCasesForDish}, Case 1 to Case 9 are finished at different times of a day or in different days. Case 10 to Case 13 are required to be finished within half an hour. Case 15 to Case 18 are required to be finished within an hour.
+In Table~\ref{tab:DesignedCasesForDish}, Case 1 to Case 9 are completed at different times of a day or in different days. Case 10 to Case 13 are required to be completed in half an hour. Case 15 to Case 18 are required to be completed in an hour.
 
 \subsubsection{Data processing method}
 Known the pressure ($p = 4\times10^5\,\mathrm{Pa}$) and the measured temperature, the inlet enthalpy ($h_i$) and outlet enthalpy ($h_o$) of the air can be obtained.
@@ -226,13 +236,13 @@ The thermal efficiency of the dish collector $\eta_{dc} = \dfrac{Q_{abs}}{I_r A_
 To validate the simulation model in section~\ref{sec:pdc}, %$T_{cav}$, $T_{insu}$ and $T_{amb}$ in the thermal network of dish receiver (see Figure~\ref{fig:thermal-lose}) are measured.
 the thermal network of dish receiver (see Figure~\ref{fig:thermal-lose}) are solved from the equations in section~\ref{sec:pdc}.
 
-The simulation efficiency of the dish collector $\eta_{dc} = \dfrac{Q_{dr,1}}{I_r A_{dc}}$.
+The simulation efficiency of the dish collector $\widetilde{\eta_{dc}} = \dfrac{Q_{dr,1}}{I_r A_{dc}}$.
 
 \section{Result analysis}
 \subsection{Trough collector experiment result analysis}
-Influences of solar irradiance, flow rate and inlet temperature of the working fluid on the thermal performance of the collector are concerned.
+Influences of solar irradiance, flow rate and inlet temperature of the working fluid on the collector thermal performance are concerned.
 \subsubsection{Influence of $I_r$}
-Tested values of Case 1 to Case 9 are listed in Table~\ref{tab:ResultOfTrough1}. It is worth noting that due to the variability of solar radiation intensity, the measured values of solar irradiance are not evenly distributed.
+Tested values of Case 1 to Case 9 are listed in Table~\ref{tab:ResultOfTrough1}. It is noteworthy that due to the variability of solar radiation intensity, the measured values of solar irradiance are not evenly distributed.
 
 \begin{table}[htbp]\footnotesize
 	\caption{Experiment results of Case 1 to Case 9 of the trough collector}
@@ -256,7 +266,7 @@ Tested values of Case 1 to Case 9 are listed in Table~\ref{tab:ResultOfTrough1}.
 	\label{tab:ResultOfTrough1}
 \end{table}
 
-Figure~\ref{fig:I_r-eta-trough} shows the influence of solar irradiance on the thermal efficiency of the trough collector. Curve of simulation result is also included. The simulation parameters are set to be the same with that of the experiment. 
+Figure~\ref{fig:I_r-eta-trough} shows the influence of solar irradiance on the thermal efficiency of the trough collector. Curve of simulation result is also included. The simulation parameters are set to be the same as the experiment. 
 %The optical efficiency fo the dish collector is manually reduced to simulate the real situation of the spilled focused spot.
 \begin{figure}[!ht]
 \centering
@@ -287,7 +297,7 @@ Tested values of Case 10 to Case 13 are listed in Table~\ref{tab:ResultOfTrough2
 	\label{tab:ResultOfTrough2}
 \end{table}
 
-Figure~\ref{fig:q_m-eta-trough} shows the influence of inlet flow rate on the thermal efficiency of the dish collector. The data points in the figure are collected within a short time, so the irradiance can be regarded as unchanged.
+Figure~\ref{fig:q_m-eta-trough} shows the influence of inlet flow rate on the thermal efficiency of the dish collector. The data points in the figure are collected in a short time, so the irradiance can be regarded as unchanged.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/q_m-eta-trough}
@@ -328,9 +338,9 @@ Figure~\ref{fig:T_i-eta-trough} shows the influence of inlet flow rate on the th
 It can be found that higher inlet temperature leads to lower efficiency, This is obvious for higher inlet temperature leads to higher temperature distribution and hence more thermal losses. The experimental data and simulation result are in good agreement.
 
 \subsection{Dish collector experiment result analysis}
-Influences of solar irradiance, flow rate and inlet temperature of the working fluid on the thermal performance of the collector are concerned.
+Influences of solar irradiance, flow rate and inlet temperature of the working fluid on the collector thermal performance are concerned.
 \subsubsection{Influence of $I_r$}
-Tested values of Case 1 to Case 9 are listed in Table~\ref{tab:ResultOfDish1}. It is worth noting that due to the variability of solar radiation intensity, the measured values of solar irradiance are not evenly distributed.
+Tested values of Case 1 to Case 9 are listed in Table~\ref{tab:ResultOfDish1}. It is noteworthy that due to the variability of solar radiation intensity, the measured values of solar irradiance are not evenly distributed.
 
 \begin{table}[htbp]\footnotesize
 	\caption{Experiment results of Case 1 to Case 9 of the dish collector}
@@ -354,7 +364,7 @@ Tested values of Case 1 to Case 9 are listed in Table~\ref{tab:ResultOfDish1}. I
 	\label{tab:ResultOfDish1}
 \end{table}
 
-Figure~\ref{fig:I_r-eta} shows the influence of solar irradiance on the thermal efficiency of the dish collector. Curve of simulation result is also included. The simulation parameters are set to be the same with that of the experiment. 
+Figure~\ref{fig:I_r-eta} shows the influence of solar irradiance on the thermal efficiency of the dish collector. Curve of simulation result is also included. The simulation parameters are set to be the same as the experiment. 
 %The optical efficiency fo the dish collector is manually reduced to simulate the real situation of the spilled focused spot.
 \begin{figure}[!ht]
 \centering
@@ -390,7 +400,7 @@ Tested values of Case 10 to Case 13 are listed in Table~\ref{tab:ResultOfDish2}.
 \end{table}
 
 
-Figure~\ref{fig:q_m-eta} shows the influence of inlet flow rate on the thermal efficiency of the dish collector. The data points in the figure are collected within a short time, so the irradiance can be regarded as unchanged.
+Figure~\ref{fig:q_m-eta} shows the influence of inlet flow rate on the thermal efficiency of the dish collector. The data points in the figure are collected in a short time, so the irradiance can be regarded as unchanged.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/q_m-eta}
@@ -431,4 +441,8 @@ Figure~\ref{fig:T_i-eta} shows the influence of inlet flow rate on the thermal e
 
 It can be found that higher inlet temperature leads to lower efficiency, This is obvious for higher inlet temperature leads to higher temperature distribution and hence more thermal losses. The experimental data and simulation result are in good agreement.
 
-\section{Platform evaluation}
+\section{Conclusion}
+The solar thermal power platform is a good start for the cascade solar thermal system.
+Experiment results
+
+The thermal efficiency of trough collectors is between 58\% and 64\% and the thermal efficiency of dish collectors is between 63\% and 68\%.

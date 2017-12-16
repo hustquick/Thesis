@@ -1141,3 +1141,5 @@ The guess values are set to be the properties of some streams. Each of these str
 For example, the mass flow rate of oil of the evaporator ($\dot{m}_3$) is related with the superheater in a system as described in Figure~\ref{fig:CascadeSystem1}.
 A guess value of $\dot{m}_3$, $\dot{m}_{3,g}$, is required to determine it. $\dot{m}_{3,g}$ is assigned to the evaporator oil stream. This stream is assigned to both evaporator and superheater. In \textbf{evaporator}, the method \textbf{get\_T\_3b} will change the temperature of the stream ($T_{3b}$) from the default value. 
 In \textbf{superheater}, the method \textbf{get\_q\_m\_3} will return a solution of $\dot{m}_3$, $\dot{m}_{3,s}$, for verification. If $\left|\dot{m}_{3,g} - \dot{m}_{3,s}\right|$ is less than permissible error ($10^{-4}$), then $\dot{m}_{3,g}$ is accepted as the value of $\dot{m}_{3}$; otherwise, $\dot{m}_{3,g}$ will be iteratively readjusted according to the Runge-Kutta method until $\left|\dot{m}_{3,g} - \dot{m}_{3,s}\right| < 10^{-4}$.
+
+\subsection{Conclusion}

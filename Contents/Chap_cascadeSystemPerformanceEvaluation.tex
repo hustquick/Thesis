@@ -73,18 +73,19 @@ To build the cascade system model, several simplifying assumptions are made:
 	\item A linear temperature profile across the regenerator exists, the mean effective temperature $T_{R} = (T_H-T_L) / \ln(T_H/T_L)$.~\cite{Der2007, Cavazzuti2012}
 \end{itemize}
 
-\section{System modeling}
+\section{System parameters}
 
-In order to study the efficiency of the system and its influencing factors, a model of the cascade system was developed. It mainly consists of the following components:
+In order to study the efficiency of the system and its influencing factors, a model of the cascade system is required. Chapter~\ref{cha:Modeling} introduces the system modeling process in detail. After the system modeling process, another important task is to determine the system parameters.
 
-\subsection{System parameters}
-\subsubsection{Environment}
+The system mainly consists of the following components:
+
+\subsection{Environment}
 
 Typical environmental parameter values of Wuhan are used for the cascade system design.
 
 $I_r = 700\,\mathrm{W/m^2}$, $T_{amb} = 293\,\mathrm{K}$, $p_{amb} = 1\times10^5\,\mathrm{Pa}$, $v_{amb} = 1\,\mathrm{m/s}$.
 
-\subsubsection{Steam Turbine} 
+\subsection{Steam Turbine} 
 	
 A steam turbine product, N-6 2.35, of Qingdao Jieneng Power Station Engineering Co., Ltd is used for calculation. Its nominal parameters are: $P = 6\,\mathrm{MW}$, 	$p_s = 2.35\,\mathrm{MPa}$, $T_s = 390\mathrm{^\circ C}$, $\dot{m} = 32.09\,\mathrm{t/h}$, $p_c = 0.015\,\mathrm{MPa}$, $s_{tb} = 3000\,\mathrm{rpm}$.
 	
@@ -98,28 +99,8 @@ A steam turbine product, N-6 2.35, of Qingdao Jieneng Power Station Engineering 
 	$\eta_{i,tb} = \dfrac{h_s - h_c}{h_{s} - h_{i,c}} = 0.71$.
 	
 	Taking into account of the application in solar trough system, the designed parameters of the steam turbine are shown in Table~\ref{tab:CascadeSystemParameters}.
-	
-\begin{table}[htbp]
-	\caption{Basic design parameters of the cascade system}
-	\begin{center}
-	\begin{tabular}{cccccc}
-		\toprule
-		Parameter		&	Value	&	Parameter		&	Value	&	Parameter		&	Value\\
-		\midrule
-		$I_r$		&	$700\,\mathrm{W/m^2}$	&	$T_{dc,o}$	&	$1073\,\mathrm{K}$	&	$n_{se}$	&	100\\
-		$T_{amb}$	&	$293\,\mathrm{K}$	&	$p_{dc}$		&	$5\times10^5\,\mathrm{Pa}$	&	$T_s$	&	$613\,\mathrm{K}$\\
-		$p_{amb}$	&	$1\times10^5\,\mathrm{Pa}$	&	$\Delta{}T_{3,2,min}$	&	$15\,\mathrm{K}$	&	$p_s$	&	$2.35\times10^6\,\mathrm{Pa}$\\
-		$v_{amb}$	&	$1\,\mathrm{m/s}$	&	$T_{tc,o}$	&	$623\,\mathrm{K}$	&	$p_c$	&	$1.5\times10^4\,\mathrm{Pa}$\\
-		$P_{ge}$	&	$6\times10^6\,\mathrm{W}$	&	
-$p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
-		$T_{dc,i}$		&	$623\,\mathrm{K}$	&	$T_{1b}$	&	$673\,\mathrm{K}$	&	$p_{de}$ 	& 	$1\times10^6\,\mathrm{Pa}$\\			
-		\bottomrule
-	\end{tabular}
-	\end{center}
-	\label{tab:CascadeSystemParameters}
-\end{table}
-	 
-\subsubsection{Trough collector}
+		 
+\subsection{Trough collector}
 LUZ solar collector LS-3 is used as the trough collector for its known test data. Its main characters are listed in Table~\ref{tab:TroughParameters}~\cite{Fernandez2010}.
 
 \begin{table}[htbp]
@@ -142,45 +123,86 @@ $\alpha$	&	$0.96$	&	$Fe$	&	$0.97$\\
 \end{table}
 \nomenclature{$f$}{Focal length, m}
 
-\subsubsection{Dish collector}
-A dish reflector product of SES (Stirling Energy System) is used as the reflector, the receiver is self-designed. The key parameters of the dish collector are listed in Table~\ref{tab:DishCollectorParameters}. 
+\subsection{Dish collector}
+A dish reflector product of SES (Stirling Energy System) is used as the reflector, the receiver is self-designed. The key parameters of the dish collector are listed in Table~\ref{tab:dc}. 
+
+\subsection{Stirling engines}
+The Stirling engines used in the cascade system are the same with the one analyzed in section~\ref{sec:StirlingEngineModel}. It is a GPU-3 type Stirling engine, Table~\ref{tab:GPU3parameters} shows its parameters.
+
+\subsection{Preheater}
+Water is heated to saturated water in the preheater by the oil. For outlet stream of water, $x = 0$.
+Besides, considering the minimum temperature difference required between oil and water, $T_{3c} - T_{2i} = \Delta T_{3,2,min}$. $\Delta T_{3,2,min}$ is set to be $15\,\mathrm{K}$.
+
+\subsection{Evaporator}
+Water is heated from saturated liquid water to saturated steam in the evaporator. For outlet stream of water, $x = 1$.
+
+\subsection{Superheater}
+The inlet temperature of oil is limited by the oil properties. In the cascade system, Therminol VP-1 Synthetic oil is used as the heat transfer fluid. Its properties can be obtained from both EES and CoolProp. The inlet temperature of the oil of superheater is set as $T_{3a} = 623\,\mathrm{K}$.
+
+\subsection{Deaerator}
+The deaerator has two inlet streams and one outlet stream. They have the same pressure, $p_{se} = 1\times10^6\,\mathrm{Pa}$. The outlet stream of the deaerator is saturated water.
+
+\subsection{Air-water heat exchanger}
+The inlet temperature is set as $T_{1b} = 673\,\mathrm{K}$.
+
+\subsection{Main design parameters summary}
+The main design parameters of the cascade system can be concluded in Table~\ref{tab:CascadeSystemParameters}.
 
 \begin{table}[htbp]
-	\caption{Key parameters of the dish collector}
+	\caption{Basic design parameters of the cascade system}
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
 		Parameter		&	Value	&	Parameter		&	Value	&	Parameter		&	Value\\
 		\midrule
-		$d_{cav}$	&	$0.46\,\mathrm{m}$	&	$\epsilon_{insu}$	&	0.6	&	$\theta_{dc}$	&	45$^\circ$\\
-		$\delta_{insu}$	&	$0.075\,\mathrm{m}$	&	$\alpha_{cav}$	&	0.87	&	$\gamma$	&	0.97\\
-		$dep_{cav}$	&	$0.23\,\mathrm{m}$	&	$\delta_a$		&	$0.005\,\mathrm{m}$	&	$\eta_{shading}$	&	0.95\\
-		$d_{ap}$	&	$0.184\,\mathrm{m}$	&	$d_{i,1}$	&	$0.07\,\mathrm{m}$	&	$\rho$	&	0.91\\
-		$\lambda_{insu}$	&	$0.06\,\mathrm{W/(m\cdot K)}$	&	$A_{dc}$	&	$87.7\,\mathrm{m^2}$	&	\\		
+		$I_r$		&	$700\,\mathrm{W/m^2}$	&	$T_{dc,o}$	&	$1073\,\mathrm{K}$	&	$n_{se}$	&	100\\
+		$T_{amb}$	&	$293\,\mathrm{K}$	&	$p_{dc}$		&	$5\times10^5\,\mathrm{Pa}$	&	$T_s$	&	$613\,\mathrm{K}$\\
+		$p_{amb}$	&	$1\times10^5\,\mathrm{Pa}$	&	$\Delta{}T_{3,2,min}$	&	$15\,\mathrm{K}$	&	$p_s$	&	$2.35\times10^6\,\mathrm{Pa}$\\
+		$v_{amb}$	&	$1\,\mathrm{m/s}$	&	$T_{tc,o}$	&	$623\,\mathrm{K}$	&	$p_c$	&	$1.5\times10^4\,\mathrm{Pa}$\\
+		$P_{ge}$	&	$6\times10^6\,\mathrm{W}$	&	
+$p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
+		$T_{dc,i}$		&	$623\,\mathrm{K}$	&	$T_{1b}$	&	$673\,\mathrm{K}$	&	$p_{de}$ 	& 	$1\times10^6\,\mathrm{Pa}$\\			
 		\bottomrule
 	\end{tabular}
 	\end{center}
-	\label{tab:DishCollectorParameters}
+	\label{tab:CascadeSystemParameters}
 \end{table}
 
-\subsubsection{Stirling engines}
-The Stirling engines used in the cascade system are the same with the one analyzed in section~\ref{sec:StirlingEngineModel}. It is the GPU-3 Stirling engine, Table~\ref{tab:GPU3parameters} shows its parameters.
+\section{System evaluation method}
 
-\subsubsection{Deaerator}
-The deaerator has two inlet streams and one outlet stream. They have the same pressure, $p_{se} = 1\times10^6\,\mathrm{Pa}$. The outlet stream of the deaerator is saturated water.
+There are two aspects to be evaluated for the cascade system. The first one is the performance. The cascade system uses different types of collectors and different thermodynamic cycles. They are closely linked together. It is unable to define part of the system's efficiency or to indicate the output power of one specific kinds of collector. A common approach is to define the overall efficiency of the system. The overall solar-to-electric efficiency equals to the total output power divided by the total input solar energy. 
 
-%\section{System simulation}
+The other one is to compare with existing solar thermal power technologies. This requires more consideration. 
+
+\begin{enumerate}[label=(\arabic*)]
+	\item Compare with parabolic trough. 
+
+	When compared with parabolic trough system, a higher efficiency of the cascade system may be explained as the usage of solar dish collector. It is difficult to tell if the higher efficiency is due to the usage of cascade system or	the usage of dish collector.
+	\item Compare with parabolic dish.
+	
+	When compared with parabolic dish system, a lower cost of the cascade system may be explained as the usage of solar trough collector. It is difficult to tell if the lower cost is due to the usage of cascade system or the usage of trough collector.
+	\item Compare with stand-alone systems.
+	
+	It is important to choose good stand-alone systems. An intuitive idea is to use both parabolic trough and parabolic dish for comparison. To compare two systems, contrast conditions needs to be set. 
+	
+	If the same output power was selected as the contrast condition, different amount of trough collectors and dish collectors will be used in the cascade system and stand-alone systems.
+	It is complicated for cost comparison due to different prices of trough collectors and dish collectors.
+	
+	A better way is to select the same collectors as the contrast condition. Since the output is electricity, it is much more convenient for both efficiency comparison and cost comparison.
+	
+\end{enumerate}
+
 
 \section{Stand-alone system selection}
 
 \noindent \begin{figure}[htbp]
 \centering
-	\begin{subfigure}[b]{0.63\columnwidth}
+	\begin{subfigure}[b]{0.64\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/Trough-s}
 	\caption{Trough-Rankine system}\label{fig:TroughRankine}
 	\end{subfigure}
 	~
-\begin{subfigure}[b]{0.266\columnwidth}
+\begin{subfigure}[b]{0.26\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/Dish-s}
 	\caption{Dish-Stirling system}\label{fig:DishStirling}
 	\end{subfigure}
@@ -199,7 +221,7 @@ The deaerator has two inlet streams and one outlet stream. They have the same pr
 %\end{center}
 %\end{figure}
 
-Figure~\ref{fig:Stand-alone-systems} shows the sketch of the stand-alone systems. These two stand-alone systems were developed for comparison. They use the same dish collectors and trough collectors with the same thermal efficiencies.
+Figure~\ref{fig:Stand-alone-systems} shows the sketch of the stand-alone systems. These two stand-alone systems were developed for comparison. They use the same dish collectors and trough collectors with the same thermal efficiencies of the cascade system.
 
 \subsection{Stand-alone trough-Rankine system}
 
@@ -383,4 +405,7 @@ For a system with large difference of $c_pq_m$ of two fluids, that means one flu
 \end{center}
 \end{figure}
 %\section{System evaluation}
+
 \section{Conclusion}
+
+The first version of cascade system with two different types of collectors and two different power generation methods has been developed, including different fluid circuits, with component models. Simulations were carried out and results were compared with corresponding stand-alone systems. Results show that $I_r$ is the key factor to determine whether cascade system should be applied in a certain location. Compared to corresponding stand-alone systems, the cascade system can achieve a higher efficiency with high solar irradiance ($I_r > 550\,\mathrm{W/m^2}$). The directions to increase the efficiency difference between cascade system and corresponding stand-alone systems were also considered. To design a relative cascade system including Stirling engine array, flow type of fluids for heating and cooling Stirling engine array is also required to be considered. However, it has to be pointed out that this paper uses a simple Stirling cycle efficiency formula given in the book~\cite{Stine1985}. This formula takes no consideration of various losses and irreversibilities, such as pressure drop, shuttle conduction, finite speed of piston and mechanical friction. The heat transfer process between the fluids and the Stirling engines has been simplified to be constant heat transfer coefficient. However, the imperfect model of the Stirling engine doesn't affect the idea of solar thermal cascade system presented in this paper. More accurate Stirling engine model can be applied to achieve higher accuracy of the system in the future work. Besides, a cascade system with a different $\beta$ not only affects the efficiency of the system but also changes the portion of dish collector area to the total collector area, which will affect the cost. The cost analysis and optimisation research of the cascade system is not included in this paper, which are worthy candidates for further research.

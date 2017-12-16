@@ -2,7 +2,7 @@
 \label{cha:osgs}
 \section{Steam generating subsystem}
 
-In a solar parabolic trough power plant in which intermediate heat-transfer fluid (take oil for instance) is used, heat addition to the working fluid (take water for instance) takes place in three counterflow heat exchangers (steam generator subsystem, SGSS) as shown in Figure~\ref{fig:PTC}. The SGSS is consist of preheater, evaporator, superheater. The flow rates of both oil and water remains the same in the three heat exchangers. 
+In a solar parabolic trough power plant in which intermediate heat-transfer fluid (take oil for instance) is used, heat addition to the working fluid (take water for instance) takes place in three counterflow heat exchangers (steam generator subsystem, SGSS) as shown in Figure~\ref{fig:PTC}. The SGSS consists of preheater, evaporator, superheater. The flow rates of both oil and water remains the same in the three heat exchangers. 
 The water has phase change in the three heat exchangers, from liquid to vapor in the evaporator, however, oil remains liquid. The heat capacity of water in each heat exchanger differs a lot. The heat capacity of oil has no significant difference since no phase change. The heat transfer process is illustrated on Figure~\ref{fig:DeltaTmin}. Large temperature differences exist at the inlets and outlets of the heat exchangers, which makes large entropy production during the entire heat exchange process.
 
 
@@ -99,8 +99,9 @@ The optimum oil average temperature in the solar field corresponds to the evapor
 \end{equation}
 
 The optimum oil flow rate in the solar field corresponds to the evaporator is
-\begin{equation}\label{eq:m_3e}
+\begin{equation}
   \dot{m}_{3,e} = \dot{m}_{2}(h_{2i} - h_{2h})/(h_{3b} - h_{3c})
+  \label{eq:m_3e}
 \end{equation}
 
 The optimum oil average temperature in the solar field corresponds to the superheater is
@@ -115,8 +116,8 @@ The optimum oil flow rate in the solar field corresponds to the superheater is
 
 \section{Comparison}
 
-To find out the effect of MERS, models of traditional SGSS and proposed MERS are developed based on the models of the components created in chapter~\ref{cha:Modeling}. 
-To clearly find out the influence of oil temperature on the performance of the trough collectors, the equation~\ref{eq:eta_tc} in section~\ref{sec:ptc} is used.
+To find out the effect of MERS, models of traditional SGSS and proposed MERS are developed based on the models of the components created in Chapter~\ref{cha:Modeling}. 
+To clearly find out the influence of oil temperature on the performance of the trough collectors, Equation~(\ref{eq:eta_tc}) in Section~\ref{sec:ptc} is used.
 %To find out the effect of MERS, models of traditional SGSS and proposed MERS are developed based on the models of the components. To clear find out the influence of oil temperature on the performance of the trough collectors, the equation summarized by~\cite{Rovira2011} is used.
 %\begin{equation}
 %  \eta(T) =  0.69563 + 0.000313T - 0.0000013T^2
@@ -157,7 +158,7 @@ The turbine and deaerator are the same for the two systems (SGSS and MERSs), so 
 \end{center}
 \end{figure}
 
-As discussed in Section~\ref{sec:mers}, $T_{3b}$ is an undetermined value. Figure~\ref{fig:T3b} shows the minimum and maximum value of it. $T_{3b,min}$ means the limit situation of unlimited flow rate of oil in the evaporator, $T_{3b,min} = T_{3c}$. (see Equation~\ref{eq:m_3e}) $T_{max}$ has the traditional effect of temperature differences in the evaporator and superheater, $\dot{m}_{3,e} = \dot{m}_{3,s}$. In our research, $T_{3b}$ is set to be the average value of the two limitations, $T_{3b} = (T_{3b,min} + T_{3n,max}) / 2$.
+As discussed in Section~\ref{sec:mers}, $T_{3b}$ is an undetermined value. Figure~\ref{fig:T3b} shows the minimum and maximum value of it. $T_{3b,min}$ means the limit situation of unlimited flow rate of oil in the evaporator, $T_{3b,min} = T_{3c}$. (see Equation~(\ref{eq:m_3e})) $T_{max}$ has the traditional effect of temperature differences in the evaporator and superheater, $\dot{m}_{3,e} = \dot{m}_{3,s}$. In our research, $T_{3b}$ is set to be the average value of the two limitations, $T_{3b} = (T_{3b,min} + T_{3n,max}) / 2$.
 \begin{equation}
   \dfrac{T_{b,max}-T_{3c}}{T_{3a} - T_{3c}} = \dfrac{T'_{3b} - T_{3c}}{T'_{3a} - T_{3c}}
 \end{equation}

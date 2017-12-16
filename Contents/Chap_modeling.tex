@@ -59,7 +59,7 @@ The solar energy absorbed by the absorber occurs very close to the outer surface
   q''= \frac{P}{\pi d_o L_{tc}} = \frac{I_r w_{tc} \rho \gamma \tau F_e K(\theta)}{\pi d_o}
 \end{equation}
 %
-%Yilmaz et al~\cite{Yilmaz2014} 
+%Yilmaz et al.~\cite{Yilmaz2014} 
 %
 %LUZ solar collector LS-3 is used as the trough collector.
 %%For a trough collector, 
@@ -82,7 +82,7 @@ Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole lengt
 \end{figure}
 
 
-Since the Nusselt number $Nu$ in the pipe is very large (about 1$\times$10$^4$), small temperature difference exists between the absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero and Zarza~\cite{Romero2007}. The length $L_{tc}$ required to get the required number of trough collectors in a row can be obtained from Equation~\ref{eq:CTCHF}.
+Since the Nusselt number $Nu$ in the pipe is very large (about 1$\times$10$^4$), small temperature difference exists between the absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero and Zarza~\cite{Romero2007}. The length $L_{tc}$ required to get the required number of trough collectors in a row can be obtained from Equation~(\ref{eq:CTCHF}).
 
 The energy projected perpendicularly to the aperture of the trough collectors is
 
@@ -191,16 +191,18 @@ To solve the thermal network in Figure~\ref{fig:thermal-lose}, correlations and 
   \item \emph{Inlet energy from the reflector, $q_i$}
   
   To simplify the model, influences made by receiver blocking and imperfection track are ignored.  
-  \begin{equation}\label{eq:q_i}
+  \begin{equation}
       q_i = I_r A_{dc} \gamma \eta_{shading} \rho
+      \label{eq:q_i}
   \end{equation}
   
-  In Equation~\ref{eq:q_i}, $\gamma$ is the intercept factor, $\eta_{shading}$ is the shading factor between different collectors, $\rho$ is the reflectivity of the reflector.
+  In Equation~(\ref{eq:q_i}), $\gamma$ is the intercept factor, $\eta_{shading}$ is the shading factor between different collectors, $\rho$ is the reflectivity of the reflector.
   \item \emph{Heat exchange between the HTF and the dish absorber, $q_{dr,1}$}
   
   The heat transfer process between the HTF and the dish absorber is simplified to a heat exchange process of a flow in a uniform temperature heat pipe. So $q_{dr,1}$ can be written as  
-  \begin{equation}\label{eq:q_dr_1}
+  \begin{equation}
       q_{dr,1} = h_{dr,1}A_{dr,1}\Delta T_{ln,dr,1}
+      \label{eq:q_dr_1}
   \end{equation}
   \nomenclature{$A_{dr,1}$}{Heat transfer area of dish receiver between tube and air, $\mathrm{m^2}$}  
   where  
@@ -309,7 +311,7 @@ From Figure\ref{fig:thermal-lose}, it can be found that
 
 So the temperature nodes in the thermal network can be solved by these equations.
 
-$q_{dr,1}$ can be obtained by Equation~\ref{eq:q_dr_1}, and efficiency of the dish receiver
+$q_{dr,1}$ can be obtained by Equation~(\ref{eq:q_dr_1}), and efficiency of the dish receiver
 \begin{equation}
   \eta_{dr} = \frac{q_{dr,1}}{q_i}
 \end{equation}
@@ -670,7 +672,7 @@ Evaluation of the developed thermal model was performed by considering the GPU-3
 	\label{tab:PowerComparison}
 \end{sidewaystable}
 
-It can be found that the proposed model has much better agreement with the experimental results than previous thermal models at various rotation speeds and mean effective pressures. It is required to mention that in all thermal models both power $W$ and input heat $Q$ were determined by the thermal process of heat transfer between the wall and working gas. In the proposed model, $W$ and $Q$ are obtained by Equation~\ref{eq:T_H} and~\ref{eq:T_L}. Therefore all the three parameters $W$, $Q$ and $\eta$ are determined by the thermal model and input parameters to the model. These input parameters includes heater, cooler, mean effective pressure, type of working gas and geometrical specification of the engine.
+It can be found that the proposed model has much better agreement with the experimental results than previous thermal models at various rotation speeds and mean effective pressures. It is required to mention that in all thermal models both power $W$ and input heat $Q$ were determined by the thermal process of heat transfer between the wall and working gas. In the proposed model, $W$ and $Q$ are obtained by Equation~(\ref{eq:T_H}) and~(\ref{eq:T_L}). Therefore all the three parameters $W$, $Q$ and $\eta$ are determined by the thermal model and input parameters to the model. These input parameters includes heater, cooler, mean effective pressure, type of working gas and geometrical specification of the engine.
 
 Table~\ref{tab:EfficiencyComparison} and~\ref{tab:PowerComparison} indicate that when mean effective pressure of the engine increases from 2.76$\,\mathrm{MPa}$ to 6.90$\,\mathrm{MPa}$, best performance (efficiency and power) prediction of the proposed model exists. When rotation speed increases from 16.67$\,\mathrm{Hz}$ to 58.33$\,\mathrm{Hz}$, error in prediction of performance of the proposed model increases. The proposed model may have the best performance prediction at a low rotation speed, with mean effective pressure between 4.14$\,\mathrm{MPa}$ and 5.52$\,\mathrm{MPa}$.
 
@@ -685,7 +687,7 @@ For a Stirling engine thermal process, the wall temperatures of the heater and c
 \begin{equation}
 	(T_w-T)UdA = \dot{m}c_pdT
 \end{equation}
-%\nomenclature{$q_m$}{Mass flow rate, kg$\cdot$s$^{-1}$}
+\nomenclature{$q_m$}{Mass flow rate, kg$\cdot$s$^{-1}$}
 \nomenclature{$c_p$}{Specific heat at constant pressure, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
 \nomenclature{$T_w$}{Wall temperature, K}
 \nomenclature{$A$}{Heat transfer area, m$^2$}
@@ -878,15 +880,16 @@ where $h_{i,2b}$ is determined by $s_{2a}$ and $p_c$; $h_{i,2c}$ is determined b
 \nomenclature{$p_e$}{Extraction pressure of the steam turbine, Pa}
   
   The total power of the pumps 
-  \begin{equation}
+\begin{equation}
 	P_{pu}=\left(1-y\right)\dot{m}_{2}\left(h_{2e}-h_{2d}\right)+\dot{m}_{2}\left(h_{2h}-h_{2g}\right)
 \end{equation}
     \nomenclature[S]{$pu$}{Pump}
     
-    where $h_{2e}$ can be obtained by $\eta_{pu} = (h_{i,2e}-h{2d})/(h_{2e}-h_{2d})$, $h_{2h}$ can be obtained by $\eta_{pu} = (h_{i,2h}-h_{2g})/(h_{2h}-h_{2g})$. $h_{i,2e}$ is determined by $s_{2d}$ and $p_e$, $h_{i,2h}$ is determined by $s_{2g}$ and $p_s$.
+where $h_{2e}$ can be obtained by $\eta_{pu} = (h_{i,2e}-h{2d})/(h_{2e}-h_{2d})$, $h_{2h}$ can be obtained by $\eta_{pu} = (h_{i,2h}-h_{2g})/(h_{2h}-h_{2g})$. $h_{i,2e}$ is determined by $s_{2d}$ and $p_e$, $h_{i,2h}$ is determined by $s_{2g}$ and $p_s$.
     
-    The outlet water of the deaerator is saturated water ($x = 0$), so the outlet temperature $T_{2g}$ and outlet enthalpy $h_{2g}$ of the heated fluid is determined by pressure $p_{2g}$. For the deaerator, the outlet pressure equals to any of the inlet pressure.
-    \begin{equation}
+The outlet water of the deaerator is saturated water ($x = 0$), so the outlet temperature $T_{2g}$ and outlet enthalpy $h_{2g}$ of the heated fluid is determined by pressure $p_{2g}$. For the deaerator, the outlet pressure equals to any of the inlet pressure.
+
+\begin{equation}
   p_{2g} = p_{2c}
 \end{equation}
 
@@ -1058,7 +1061,7 @@ Assume that the positive flow direction is to the right, for parallel flow, $T_{
 %	\dot{m}_{2,r}=-\dot{m}_{2}/n_{2}
 %\end{equation}
 
-Assume linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}, and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Formosa2010,Juhasz2010}. For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_1$, according to Equation~\ref{eq:T_H} and Equation~\ref{eq:T_L},
+Assume linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}, and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Formosa2010,Juhasz2010}. For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_1$, according to Equation~(\ref{eq:T_H}) and Equation~(\ref{eq:T_L}),
 
 \begin{equation}
 	T_{hw,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{se,1}A_{se,1}}{\dot{m}_{1,r}c_{p,1,x}})}\label{eq:T_H_x}
@@ -1071,7 +1074,8 @@ Assume linear temperature profile across the regenerator, the mean effective tem
 
 The power of each Stirling engine in column $x$ can be written as 
 \begin{equation}
-  P_{se,x} = W_{th,x}-W_{pd,x}-W_{fs,x}\end{equation}
+  P_{se,x} = W_{th,x}-W_{pd,x}-W_{fs,x}
+\end{equation}
 
 The efficiency of each Stirling engine in column $x$ can be written as 
 \begin{equation}
@@ -1096,9 +1100,10 @@ For energy balance,
 %\end{split}
 %\end{equation}
 
-By using equations in~\ref{sec:StirlingEngineModel} and the energy balance equations, key parameters of the Stirling engine array can be obtained. 
+By using equations in Section~\ref{sec:StirlingEngineModel} and the energy balance equations, key parameters of the Stirling engine array can be obtained. 
 
-The efficiency of the Stirling engine array \begin{equation}
+The efficiency of the Stirling engine array 
+\begin{equation}
   \eta_{sea}=1-\dfrac{\dot{m}_{2}(h_{2,o,n_1}-h_{2,i,1})}{\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})}
 \end{equation}
 

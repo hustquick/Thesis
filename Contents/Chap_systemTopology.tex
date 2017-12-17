@@ -3,25 +3,26 @@
 %利用热力学原理进行定性分析。提炼出创新点。
 \section{System topology design}
 \label{sec:std}
-%\subsection{Basic systems}
-%\label{sec:bs}
 
-The objective of this research is to research the equipment of solar thermal power generation system, to propose, develop and optimize a solar thermal cascade system depending on the advantages and disadvantages of the solar thermal power generation systems. 
-The research is based on the national cooperation project "Collaborative research on key technologies to produce electricity by cascade utilization solar thermal energy" as the background. 
+The objective of this research is to investigate the equipment of solar thermal power generation system, to propose, develop and optimize a cascade solar thermal system depending on the advantages and disadvantages of exsisting solar thermal power generation technologies. 
+%The research is based on the national cooperation project "Collaborative research on key technologies to produce electricity by cascade utilization solar thermal energy" as the background. 
+
 There are three kinds of mature technologies been applied commercially -- parabolic trough, parabolic dish and solar tower. 
-Considering the future deployment of solar cascade demo system, two solar thermal technologies, parabolic trough and parabolic dish, are chosen as the basic systems for the design of cascade solar thermal power system. For the cascade utilization of the high temperature of the parabolic receiver, air (or nitrogen) is used as the HTF to transfer the heat collected.
+Considering the future deployment of solar cascade demo system, two solar thermal technologies, parabolic trough and parabolic dish, are chosen as the basic systems for the design of cascade solar thermal power system. For the cascade utilization of the high temperature heat source obtained from the parabolic dish receiver, air (or nitrogen) is used as the HTF to transfer the heat collected.
 Figure~\ref{fig:PTPD} shows the schematic diagrams of a parabolic trough system and a parabolic dish system. To make the system structure diagrams in this thesis more clearly and consistent, legends of the components that may appear in solar power systems are listed in Figure~\ref{fig:Legends}.
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/PTPD.pdf}
-\caption{Schematic diagrams of a parabolic trough system and a parabolic dish system}\label{fig:PTPD}
+\caption{Schematic diagrams of a parabolic trough system and a parabolic dish system}
+\label{fig:PTPD}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/Legends.pdf}
-\caption{Components in solar power systems}\label{fig:Legends}
+\caption{Components in solar power systems}
+\label{fig:Legends}
 \end{figure}
 
 With different considerations (such as water Rankine cycle or ORC, combination of different systems, connection types of collectors, etc) of the cascade system topology, multiple combination topologies may be used for cascade systems. To get the most suitable system topology, these considerations will be analyzed in the following sections. 
@@ -35,7 +36,7 @@ With different considerations (such as water Rankine cycle or ORC, combination o
 \caption{Collector and Rankine cycle efficiency variation with operating temperature}\label{fig:idealTs}
 \end{figure}
 
-An ideal working fluid would have the temperature entropy diagram given in Figure~\ref{fig:idealTs}. The following characteristics listed by Abbin and Leuenberger~\cite{Abbin1977} describe this fluid:
+An ideal working fluid would have the temperature-entropy diagram given in Figure~\ref{fig:idealTs}. The following characteristics listed by Abbin and Leuenberger~\cite{Abbin1977} describe this fluid:
 \begin{itemize}
   \item The heat capacity of the liquid phase should be small. This makes the curve 22' in Figure~\ref{fig:idealTs} almost vertical.
   \item The critical point should be above the highest operating temperature to allow all heat to be added at that temperature.
@@ -49,7 +50,7 @@ An ideal working fluid would have the temperature entropy diagram given in Figur
   \item The fluid should have good heat-transfer properties, be inexpensive, thermally stable at the highest operating temperature, nonflammable, noncorrosive, nontoxic, and so on.
 \end{itemize}
 
-Water is the most commonly used fluid for Rankine cycle, it is mare mature to design Rankine cycle components for steam systems than any other liquid. It is inexpensive to use (although boiler-grade water must be highly distilled and thus costs more than tap water), sealing of the high-pressure portions of a Rankine cycle using steam is not critical. Non-flammability and ready availability of steam are additional advantages. Because it has a critical temperature and pressure of 374$\mathrm{^\circ C}$ / 22.1$\mathrm{MPa}$, it can be used for systems operating at fairly high temperatures with most of the heat addition (at constant temperature) and at moderate pressure. Figure~\ref{fig:TypicalSteamRankineSolarSystem} shows the schematic diagram of a typical steam Rankine cycle solar system.
+Water is the most commonly used fluid for Rankine cycle, it is more mature to design Rankine cycle components for steam systems than any other liquid. It is inexpensive to use (although boiler-grade water must be highly distilled and thus costs more than tap water), sealing of the high-pressure portions of a Rankine cycle using steam is not critical. Non-flammability and ready availability of steam are additional advantages. Because it has a critical temperature and pressure of 374$\mathrm{^\circ C}$ and 22.1$\mathrm{MPa}$, it can be used for systems operating at fairly high temperatures with most of the heat addition (at constant temperature) and at moderate pressure. Figure~\ref{fig:TypicalSteamRankineSolarSystem} shows the schematic diagram of a typical steam Rankine cycle solar system.
 
 \noindent \begin{figure}[htbp]
 \centering
@@ -250,17 +251,15 @@ There are two important aspects to consider when selecting the working fluid of 
   
   For a Rankine cycle solar system, the collector efficiency reduces with operating temperature, and the Rankine cycle efficiency increases with operating temperature, there exists an optimal operating temperature as illustrated in Figure~\ref{fig:Efficiency}. The working fluid should be conducive to achieve the optimal operating temperature.
   
-  \begin{figure}[!ht]
+  \item The working fluid state matches the heat transfer fluid state, if heat transfer fluid is used.
+  
+  On the one hand, the operating temperature o78f the working fluid should be lower than the collecting temperature of the HTF. On the other hand, the operating temperature of the working fluid should not be much lower than the collecting temperature of the HTF to avoid large exergy loss during the heat exchange process.
+\end{enumerate}
+\begin{figure}[!ht]
 \centering 
 \includegraphics[width=0.7\textwidth]{fig/Efficiency}
 \caption{Efficiency variation with operating temperature}\label{fig:Efficiency}
 \end{figure}
-  
-  \item The working fluid state matches the heat transfer fluid state, if heat transfer fluid is used.
-  
-  On the one hand, the operating temperature of the working fluid should be lower than the collecting temperature of the HTF. On the other hand, the operating temperature of the working fluid should not be much lower than the collecting temperature of the HTF to avoid large exergy loss during the heat exchange process.
-  
-\end{enumerate}
 
 Based on the advantages and disadvantages of water and organic fluid as the working fluid of Rankine cycle, it is clear that, for low operating temperature and small capacity distribution power generation, organic fluid will be a better choice, otherwise water is the better one. Bao and Zhao~\cite{Bao2013} presented a comprehensive review of working fluid selection (including pure fluids and mixtures). In this review, many factors such as operating conditions, working fluid characteristics, equipment structures and environmental safety considerations were considered.
 It has to be mentioned that the types of working fluids (mainly dry or wet) will affect the operation and layout of the system.
@@ -296,7 +295,7 @@ However, the efficiency of current solar chimney system is still very low. Prima
 \end{table}
 
 %Besides, it will cost much more to apply a chimney tower in the demonstration system of this project. 
-Besides, a solar chimney is costly and requires vast land, which is adverse to the future deployment of solar cascade demo system. With these considerations, the solar chimney plans are not adopted. 
+Besides, a solar chimney is costly and requires vast land, which is adverse to the future deployment of solar cascade demo system. With these considerations, the solar chimney plans are not adopted for the cascade system. 
 
 \subsection{Collector series connection}
 Each type of collector has its own suitable temperature range. It is feasible to heat the HTF step by step using different types of collectors with series connection.
@@ -417,4 +416,18 @@ In Figure~\ref{fig:CascadeSystem2}, the cascade system also has the features men
 \label{fig:Ex_CascadeSystem2}
 \end{figure}
 
-Both cascade systems are modeled for investigation, however, considering the more extensive application of the steam Rankine cycle, the system as described in Figure~\ref{fig:CascadeSystem1} will be used as the main research content in the following chapters.
+Both cascade systems will be modeled for investigation. However, considering the more extensive application of the steam Rankine cycle, the system as described in Figure~\ref{fig:CascadeSystem1} will be used as the main research content in the following chapters.
+
+\section{Conclusion}
+This chapter systematically introduces a number of considerations in cascade solar thermal system design. These considerations include Rankine cycle fluid type, solar chimney, collector series connection, direct steam generation, heat exchanger between circuits and heat recovery between cycles. 
+
+These considerations are carefully checked for the cascade system study. Combining with the research direction, two typical system topologies suitable for the deployment of cascade demo system are put forward. These two typical system topologies have the following features:
+
+\begin{itemize}
+  \item Multiple types of collectors are applied.
+  \item Multiple types of thermodynamic cycles are applied. 
+  \item Air-water heat exchanger is applied to increase the Rankine cycle efficiency.
+  \item Condensate for Stirling engine cooling to recover the heat rejected by the engine.
+\end{itemize}
+
+It is worthy noting that some of the considerations of the system topology design deserves more concern in the future. For example, a solar power tower combined with parabolic trough collectors and flat plates as shown in Figure~\ref{fig:seriesCollection} effectively utilizes the characteristics of the collectors. When the technology of direct steam generation is mature, it is worthy to apply it in cascade system for its less equipment required and no temperature loss feature.

@@ -1,7 +1,7 @@
 \chapter{Modeling}
 \label{cha:Modeling}
 
-To investigate the performance of the proposed cascade systems, mechanism models of the systems were developed with EES (Engineering Equation Solver) and MATLAB. Bottom-up design method was used for the system modeling. Firstly, the mechanism models of the developed in EES to validate the theoretical relationships of the models. Secondly, the component models were developed in MATLAB by using object-oriented method. It makes full use of inheritance and polymorphism to ensure both the independence and the relevance of the components.
+To investigate the performance of the proposed cascade systems, mechanism models of the systems were developed with EES (Engineering Equation Solver) and MATLAB. Bottom-up design method was used for the system modeling. Firstly, the mechanism models developed in EES are used to validate the theoretical relationships of the models. Secondly, the component models were developed in MATLAB by using object-oriented method. It makes full use of inheritance and polymorphism to ensure both the independence and the relevance of the components.
 %The cascade system is developed in several blocks. These blocks are made of circuits with efficiency calculations. 
 Three circuits, air circuit, water circuit and oil circuit, were developed with some specific state parameters in some key components. Energy-based models of these key components were created on the basis of their thermodynamic behavior, heat transfer and the second law.
 
@@ -774,63 +774,6 @@ Heat transferred from Stirling engine to cooling fluid in a cycle
 %Equation~\ref{Eq:T_h}-\ref{Eq:q_c}
 %. Then $\eta$ and $P$ can be obtained by Equation~\ref{Eq:eta} and~\ref{Eq:P}. This means the performance of a given Stirling engine can be inquired by the input/output parameters of heating/cooling fluids.
 
-\subsection{Steam generating system}
-The steam generating system can be divided into preheater, evaporator and superheater, they are collectively referred to as PES. They are all heat exchangers. It is assumed that, in these heat exchangers, the pressure of the fluid does not change significantly. It can be assumed to be equal to the pressure of the inlet pressure of the turbine. Besides, these heat exchangers do not exchange heat with the environment.
-To clearly understand the modeling process of these heat exchangers, an example of steam generating system as shown in Figure~\ref{fig:PES} is used for explanation. Figure~\ref{fig:PES_TQ} shows the $T$-$Q$ diagram of the heat transfer process. State points of different fluids are marked on the sketch. The number indicates the type of the fluid, the letter indicates the state point of the fluid. A state point with solid circle indicates saturated liquid state, and with dotted circle indicates saturated gas state.
-\nomenclature{$x$}{Dryness fraction}
-
-%State points of different fluids are marked on the sketch. The number indicates the type of the fluid, the letter indicates the state point of the fluid. State points with solid circle indicate saturated liquid states ($x = 0$\nomenclature{$x$}{Dryness fraction}), and with dotted circle indicates saturated gas states ($x = 1$).
-
-\noindent \begin{figure}[!ht]
-\begin{center}
-	\includegraphics[width = 0.8\columnwidth]{fig/PES}
-	\caption{An example of steam generating system in a cascade system}
-	\label{fig:PES}
-\end{center}
-\end{figure}
-
-\noindent \begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width = 0.8\columnwidth]{fig/PES_TQ}
-	\caption{The steam generating process}
-	\label{fig:PES_TQ}
-\end{center}
-\end{figure}
-
-The modeling process of PES is the process of solving the unknown states of the state points. Notice that, the pressure of the fluids keeps constant in the heat transfer process. For an unsaturated state, known the temperature or enthalpy, the state is determined. This means, the temperature can be obtained by the enthalpy, and vice versa. For a saturated state, known the dryness ($x$) of the fluid, the state is determined.
-
-For a typical PES modeling process as shown in Figure~\ref{fig:PES}, $\dot{m}_2$, state $2h$ and state $2k$ are determined by the parameters of the turbine. State $3a$ is determined by the design parameters. State $2i$ and state $2j$ are determined by their dryness values. 
-
-\begin{enumerate}[label=(\arabic*)]
-  \item \emph{Preheater}
-  
-  The outlet of the heated fluid is saturated liquid ($x = 0$), so the outlet temperature $T_{2i}$ and outlet enthalpy $h_{2i}$ of the heated fluid are determined by the main pressure of the turbine, $p_s$.
-  \begin{equation}
-  \dot{m}_3 (h_{3c}-h_{3d})=\dot{m}_2 (h_{2i} - h_{2h})
-  \label{eq:preheater}
-\end{equation}
-
-  \item \emph{Evaporator}
-  
-  The outlet of the heated fluid is saturated gas ($x = 1$), so the outlet temperature $T_{2j}$ and outlet enthalpy $h_{2j}$ of the heated fluid are determined by the main pressure of the turbine, $p_s$.
-  \begin{equation}
-  \dot{m}_3 (h_{3b}-h_{3c})=\dot{m}_2 (h_{2j} - h_{2i})
-  \label{eq:evaporator}
-\end{equation}
-	It has to be mentioned that, state $3c$ is determined by $T_{3c}$, which equals to $T_{2i} + \Delta T_{min}$. ($T_{3c} = T_{2i} + \Delta T_{min}$)
-  
-  \item \emph{Superheater}
-  
-  For the energy balance,
-  \begin{equation}
-  \dot{m}_3 (h_{3a}-h_{3b})=\dot{m}_2 (h_{2k} - h_{2j})
-  \label{eq:superheater}
-\end{equation}
-	  
-\end{enumerate}
-
-By solving the equations~(\ref{eq:preheater}) to~(\ref{eq:superheater}), $\dot{m}_3$, state $3b$ and $3d$ can be obtained.
-
 \subsection{Rankine power generation system}
 %The power generating system includes the turbine (steam turbine or ORC turbine) and generator.
 
@@ -1117,6 +1060,63 @@ The output power of the Stirling engine array
   P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})
 \end{equation}
 
+\section{Steam generating system modeling}
+The steam generating system can be divided into preheater, evaporator and superheater, they are collectively referred to as PES. They are all heat exchangers. It is assumed that, in these heat exchangers, the pressure of the fluid does not change significantly. It can be assumed to be equal to the pressure of the inlet pressure of the turbine. Besides, these heat exchangers do not exchange heat with the environment.
+To clearly understand the modeling process of these heat exchangers, an example of steam generating system as shown in Figure~\ref{fig:PES} is used for explanation. Figure~\ref{fig:PES_TQ} shows the $T$-$Q$ diagram of the heat transfer process. State points of different fluids are marked on the sketch. The number indicates the type of the fluid, the letter indicates the state point of the fluid. A state point with solid circle indicates saturated liquid state, and with dotted circle indicates saturated gas state.
+\nomenclature{$x$}{Dryness fraction}
+
+%State points of different fluids are marked on the sketch. The number indicates the type of the fluid, the letter indicates the state point of the fluid. State points with solid circle indicate saturated liquid states ($x = 0$\nomenclature{$x$}{Dryness fraction}), and with dotted circle indicates saturated gas states ($x = 1$).
+
+\noindent \begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth]{fig/PES}
+	\caption{An example of steam generating system in a cascade system}
+	\label{fig:PES}
+\end{center}
+\end{figure}
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth]{fig/PES_TQ}
+	\caption{The steam generating process}
+	\label{fig:PES_TQ}
+\end{center}
+\end{figure}
+
+The modeling process of PES is the process of solving the unknown states of the state points. Notice that, the pressure of the fluids keeps constant in the heat transfer process. For an unsaturated state, known the temperature or enthalpy, the state is determined. This means, the temperature can be obtained by the enthalpy, and vice versa. For a saturated state, known the dryness ($x$) of the fluid, the state is determined.
+
+For a typical PES modeling process as shown in Figure~\ref{fig:PES}, $\dot{m}_2$, state $2h$ and state $2k$ are determined by the parameters of the turbine. State $3a$ is determined by the design parameters. State $2i$ and state $2j$ are determined by their dryness values. 
+
+\begin{enumerate}[label=(\arabic*)]
+  \item \emph{Preheater}
+  
+  The outlet of the heated fluid is saturated liquid ($x = 0$), so the outlet temperature $T_{2i}$ and outlet enthalpy $h_{2i}$ of the heated fluid are determined by the main pressure of the turbine, $p_s$.
+  \begin{equation}
+  \dot{m}_3 (h_{3c}-h_{3d})=\dot{m}_2 (h_{2i} - h_{2h})
+  \label{eq:preheater}
+\end{equation}
+
+  \item \emph{Evaporator}
+  
+  The outlet of the heated fluid is saturated gas ($x = 1$), so the outlet temperature $T_{2j}$ and outlet enthalpy $h_{2j}$ of the heated fluid are determined by the main pressure of the turbine, $p_s$.
+  \begin{equation}
+  \dot{m}_3 (h_{3b}-h_{3c})=\dot{m}_2 (h_{2j} - h_{2i})
+  \label{eq:evaporator}
+\end{equation}
+	It has to be mentioned that, state $3c$ is determined by $T_{3c}$, which equals to $T_{2i} + \Delta T_{min}$. ($T_{3c} = T_{2i} + \Delta T_{min}$)
+  
+  \item \emph{Superheater}
+  
+  For the energy balance,
+  \begin{equation}
+  \dot{m}_3 (h_{3a}-h_{3b})=\dot{m}_2 (h_{2k} - h_{2j})
+  \label{eq:superheater}
+\end{equation}
+	  
+\end{enumerate}
+
+By solving the equations~(\ref{eq:preheater}) to~(\ref{eq:superheater}), $\dot{m}_3$, state $3b$ and $3d$ can be obtained.
+
 \section{System modeling}
 
 %\subsection{Stream}
@@ -1133,7 +1133,7 @@ A \textbf{stream} can be used to record a state point since it contains all the 
 
 %\subsection{System connection}
 Components are connected each other by streams. Their inlets and outlets are used as interfaces for connection. 
-Two interfaces are connected together by be assigned the same stream.
+Two interfaces are connected together by being assigned the same stream.
 
 %\subsection{System initialization}
 Systems are initialized by given parameters (design parameters). These parameters are assigned to corresponding properties of the streams and thus affect the state of the related components.
@@ -1147,4 +1147,12 @@ For example, the mass flow rate of oil of the evaporator ($\dot{m}_3$) is relate
 A guess value of $\dot{m}_3$, $\dot{m}_{3,g}$, is required to determine it. $\dot{m}_{3,g}$ is assigned to the evaporator oil stream. This stream is assigned to both evaporator and superheater. In \textbf{evaporator}, the method \textbf{get\_T\_3b} will change the temperature of the stream ($T_{3b}$) from the default value. 
 In \textbf{superheater}, the method \textbf{get\_q\_m\_3} will return a solution of $\dot{m}_3$, $\dot{m}_{3,s}$, for verification. If $\left|\dot{m}_{3,g} - \dot{m}_{3,s}\right|$ is less than permissible error ($10^{-4}$), then $\dot{m}_{3,g}$ is accepted as the value of $\dot{m}_{3}$; otherwise, $\dot{m}_{3,g}$ will be iteratively readjusted according to the Runge-Kutta method until $\left|\dot{m}_{3,g} - \dot{m}_{3,s}\right| < 10^{-4}$.
 
-\subsection{Conclusion}
+\section{Conclusion}
+
+This chapter presents the modeling method of the cascade system and introduces the modeling of some key components and subsystems in detail. The component models were developed in MATLAB by using object-oriented method. Bottom-up design method is applied for system development. Models of the components of a system are developed first according to their mechanism characteristics, and the system model is established by these component models. A MATLAB class \textbf{Stream} is created for component connection. The components' inlets and outlets are used as interfaces for connection. 
+Two interfaces are connected together by being assigned the same stream.
+The calculation process related with different components is also briefly introduced in this chapter.
+
+Due to the encapsulation, composition and polymorphism of the object-oriented language, the system model has some advantages such as easy to establish, convenient to replace a component and clearly check the performance of specific components.
+
+The key component models in the cascade system can be validated experimentally or be compared with the classic models. The validation of Stirling engine model shows that the proposed model has much better agreement with the experimental results than previous classic thermal models at various rotation speeds and mean effective pressures.

@@ -129,7 +129,7 @@ classdef Stream < handle
     
     properties
         fluid;  % Fluid type
-        q_m;    % Mass flow rate, kg/s
+        dot_m;  % Mass flow rate, kg/s
         T;      % Temperature, K
         p;      % Pressure, Pa
         x;      % Quality, [0, 1] for two phase stream; NaN for single 
@@ -144,12 +144,12 @@ classdef Stream < handle
     methods
         function obj = Stream
             obj.T = Temperature;
-            obj.q_m = Massflow;
+            obj.dot_m = Massflow;
             obj.p = Pressure;
         end
         function flowTo(obj, st)
             st.fluid = obj.fluid;
-            st.q_m = obj.q_m;
+            st.dot_m = obj.dot_m;
         end
         function st2 = mix(obj, st1)
             % Get the properties of a stream mixed by two streams
@@ -159,9 +159,9 @@ classdef Stream < handle
                     obj.p = st1.p;
                     st2.fluid = obj.fluid;
                     st2.p = obj.p;
-                    st2.q_m.v = obj.q_m.v + st1.q_m.v;
-                    h = (obj.q_m.v .* obj.h + st1.q_m.v .* st1.h)...
-                        ./ (obj.q_m.v + st1.q_m.v);
+                    st2.dot_m.v = obj.dot_m.v + st1.dot_m.v;
+                    h = (obj.dot_m.v .* obj.h + st1.dot_m.v .* st1.h)...
+                        ./ (obj.dot_m.v + st1.dot_m.v);
                     st2.T.v = CoolProp.PropsSI('T', 'H', h, 'P',st2.p.v);
                 else
                     error('The two streams have different pressures!');
@@ -179,7 +179,7 @@ classdef Stream < handle
             st.T = obj.T;
             st.p = obj.p;
             st.x = obj.x;
-            st.q_m.v = obj.q_m.v .* y;
+            st.dot_m.v = obj.dot_m.v .* y;
         end
     end
     methods

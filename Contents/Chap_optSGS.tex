@@ -39,7 +39,7 @@ However, even with the chosen pinch temperature $\Delta T_{min}$, the temperatur
 \end{center}
 \end{figure}
 
-\section{Multi-stage exergy loss reduction system}\label{sec:mers}
+\section{Multi-stage exergy loss reduction system}\label{sec:melrs}
 The reason of large temperature differences of the two curves in Figure~\ref{fig:DeltaTmin} is that, the slope of oil curve changes slightly in different heat exchangers (preheater, evaporator and superheater), while the water curve changes dramatically due to large heat capacity $c_p$ differences.
 
 \begin{equation}
@@ -56,20 +56,20 @@ The slope of the curves are determined by $c_p\dot{m}$, $\dot{m}$ can be altered
 \end{center}
 \end{figure}
 
-As shown in Figure~\ref{fig:BetterCurve}, the oil curve can be changed to the dashed curve. The temperature difference between the water curve and oil curve reduces significantly. Water is heated in three stages and the exergy loss reduces. The corresponding steam generating system is so called Multi-stage exergy loss reduction system (MERS).
-Figure~\ref{fig:SEP} shows the schematic diagram of the MERS for comparison of typical solar parabolic trough system in Figure~\ref{fig:PTC}. The solar field in Figure~\ref{fig:PTC} has been divided into three independent sectors. Each sector becomes the heat source of a range for the steam heating process: the first corresponds to overheating, the second to evaporation, and the third to preheating. 
+As shown in Figure~\ref{fig:BetterCurve}, the oil curve can be changed to the dashed curve. The temperature difference between the water curve and oil curve reduces significantly. Water is heated in three stages and the exergy loss reduces. The corresponding steam generating system is so called Multi-stage exergy loss reduction system (MELRS).
+Figure~\ref{fig:SEP} shows the schematic diagram of the MELRS for comparison of typical solar parabolic trough system in Figure~\ref{fig:PTC}. The solar field in Figure~\ref{fig:PTC} has been divided into three independent sectors. Each sector becomes the heat source of a range for the steam heating process: the first corresponds to overheating, the second to evaporation, and the third to preheating. 
 %Each section can be equipped with a thermal storage system to overcome the instability and intermittency of solar energy.
 It has to be mentioned that the collectors in the schematic diagram are only used for explanation. The arrangement of these collectors can be in series, in parallel or combination of both.
 
 \noindent \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.7\columnwidth]{fig/SEP}
-	\caption{The schematic diagram of the MERS}
+	\caption{The schematic diagram of the MELRS}
 	\label{fig:SEP}
 \end{center}
 \end{figure}
 
-To optimize the MERS, considering the limitation of pinch temperature, temperatures of the oil at the inlet/outlet of the heat exchangers can be set according to following rules:
+To optimize the MELRS, considering the limitation of pinch temperature, temperatures of the oil at the inlet/outlet of the heat exchangers can be set according to following rules:
 \begin{eqnarray*}
 	&T_{3d} - T_{2g} = \Delta T_{min}\\
    &T_{3c,p} = T_{3c,e} = T_{3c}\\
@@ -116,9 +116,9 @@ The optimum oil flow rate in the solar field corresponds to the superheater is
 
 \section{Comparison}
 
-To find out the effect of MERS, models of traditional SGSS and proposed MERS are developed based on the models of the components created in Chapter~\ref{cha:Modeling}. 
+To find out the effect of MELRS, models of traditional SGSS and proposed MELRS are developed based on the models of the components created in Chapter~\ref{cha:Modeling}. 
 To clearly find out the influence of oil temperature on the performance of the trough collectors, Equation~(\ref{eq:eta_tc}) in Section~\ref{sec:ptc} is used.
-%To find out the effect of MERS, models of traditional SGSS and proposed MERS are developed based on the models of the components. To clear find out the influence of oil temperature on the performance of the trough collectors, the equation summarized by~\cite{Rovira2011} is used.
+%To find out the effect of MELRS, models of traditional SGSS and proposed MELRS are developed based on the models of the components. To clear find out the influence of oil temperature on the performance of the trough collectors, the equation summarized by~\cite{Rovira2011} is used.
 %\begin{equation}
 %  \eta(T) =  0.69563 + 0.000313T - 0.0000013T^2
 %\end{equation}
@@ -131,7 +131,7 @@ The exergy loss caused by a heat exchange process per unit time
 \end{equation}
 
 \begin{table}[htbp]
-	\caption{Main parameters used for SGSS and MERSs}
+	\caption{Main parameters used for SGSS and MELRSs}
 	\begin{center}
 	\begin{tabular}{cccc}
 		\toprule
@@ -148,7 +148,7 @@ The exergy loss caused by a heat exchange process per unit time
 	\label{tab:ptc}
 \end{table}
 
-The turbine and deaerator are the same for the two systems (SGSS and MERSs), so that the corresponding state points of water are the same. The main parameters are listed in Table~\ref{tab:ptc}.
+The turbine and deaerator are the same for the two systems (SGSS and MELRSs), so that the corresponding state points of water are the same. The main parameters are listed in Table~\ref{tab:ptc}.
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -158,18 +158,18 @@ The turbine and deaerator are the same for the two systems (SGSS and MERSs), so 
 \end{center}
 \end{figure}
 
-As discussed in Section~\ref{sec:mers}, $T_{3b}$ is an undetermined value. Figure~\ref{fig:T3b} shows the minimum and maximum value of it. $T_{3b,min}$ means the limit situation of unlimited flow rate of oil in the evaporator, $T_{3b,min} = T_{3c}$. (see Equation~(\ref{eq:m_3e})) $T_{max}$ has the traditional effect of temperature differences in the evaporator and superheater, $\dot{m}_{3,e} = \dot{m}_{3,s}$. In our research, $T_{3b}$ is set to be the average value of the two limitations, $T_{3b} = (T_{3b,min} + T_{3n,max}) / 2$.
+As discussed in Section~\ref{sec:melrs}, $T_{3b}$ is an undetermined value. Figure~\ref{fig:T3b} shows the minimum and maximum value of it. $T_{3b,min}$ means the limit situation of unlimited flow rate of oil in the evaporator, $T_{3b,min} = T_{3c}$. (see Equation~(\ref{eq:m_3e})) $T_{max}$ has the traditional effect of temperature differences in the evaporator and superheater, $\dot{m}_{3,e} = \dot{m}_{3,s}$. In our research, $T_{3b}$ is set to be the average value of the two limitations, $T_{3b} = (T_{3b,min} + T_{3n,max}) / 2$.
 \begin{equation}
   \dfrac{T_{b,max}-T_{3c}}{T_{3a} - T_{3c}} = \dfrac{T'_{3b} - T_{3c}}{T'_{3a} - T_{3c}}
 \end{equation}
 
 where $T'_{3a}$ and $T'_{3b}$ are the inlet oil temperature of superheater and evaporator in SGSS respectively.
 \begin{table}[htbp]
-	\caption{Simulation results of SGSS and MERS}
+	\caption{Simulation results of SGSS and MELRS}
 	\begin{center}
 	\begin{tabular}{ccccc}
 		\toprule
-		& \multirow{2}{*}{SGSS} & \multicolumn{3}{c}{MERS}\\\cline{3-5}
+		& \multirow{2}{*}{SGSS} & \multicolumn{3}{c}{MELRS}\\\cline{3-5}
  &  & $T_{3b,max}$ & $T_{3b}$ & $T_{3b,min}$\\
 		\midrule
 		$T_{2a}$ & \multicolumn{4}{c}{613.15$\,\mathrm{K}$}\\
@@ -202,7 +202,8 @@ where $T'_{3a}$ and $T'_{3b}$ are the inlet oil temperature of superheater and e
 \end{table}
 %该表格的解释
 
-Simulation results of the two system models are listed in Table~\ref{tab:comparison}. 
+Simulation results of the two system models are listed in Table~\ref{tab:comparison}. It can be found that MELRSs can effectively reduce the exergy loss of the steam generating process. The exergy loss can be reduced from 14.3\% up to 76.7\% for the three MELRSs. The overall thermal efficiency of the solar fields can be improved from 0.9\% up to 3.6\%.
+
 It is worthy pointing that, for the situation $T_{3b} = T_{3b,min}$, when $\dot{m}_{3e} = \infty$, the correlation~(\ref{eq:dot_I}) is not applicable. The new correlation listed below is applied for the isothermal heat transfer process
 
 \begin{equation}
@@ -212,16 +213,19 @@ It is worthy pointing that, for the situation $T_{3b} = T_{3b,min}$, when $\dot{
 
 where, $Q$ is the heat transferred in the evaporator.
 
-$T_{2a}$, $T_{2i}$, $T_{2h}$, $T_{2g}$ and $T_{3c}$ are the same for SGSS and different MERSs for the same water side processes. The different mass flow rates of the oil lead to different oil temperatures in the heat exchangers, and hence different exergy loss. It can be found that the exergy losses in preheaters of MERSs (all $2.58\times 10^4\,\mathrm{W}$) are smaller than that of SGSS ($4.80\times10^4\,\mathrm{W}$). The exergy losses in evaporators of different MERSs vary greatly, from $9.68\times10^5\,\mathrm{W}$ to $2.41\times10^5\,\mathrm{W}$ for oil flow rate from $58.6\,\mathrm{kg/s}$ to infinity.
-Exergy loss in the evaporator takes the largest portion of the steam generating process, which takes about 82.8\%, 85.2\%, 83.8\% and 78.0\% for SGSS and MERSs separately.
+$T_{2a}$, $T_{2i}$, $T_{2h}$, $T_{2g}$ and $T_{3c}$ are the same for SGSS and different MELRSs for the same water side processes. The different mass flow rates of the oil lead to different oil temperatures in the heat exchangers, and hence different exergy loss. It can be found that the exergy losses in preheaters of MELRSs (all $2.58\times 10^4\,\mathrm{W}$) are smaller than that of SGSS ($4.80\times10^4\,\mathrm{W}$). The exergy losses in evaporators of different MELRSs vary greatly, from $9.68\times10^5\,\mathrm{W}$ to $2.41\times10^5\,\mathrm{W}$ for oil flow rate from $58.6\,\mathrm{kg/s}$ to infinity.
+Exergy loss in the evaporator takes the largest portion of the steam generating process, which takes about 82.8\%, 85.2\%, 83.8\% and 78.0\% for SGSS and MELRSs separately.
 Increasing flow rate of the heating fluid in the steam generating process can effectively reduce the exergy loss.
-The exergy losses in superheaters of MERSs ($1.42\times 10^5\,\mathrm{W}$, $9.19\times 10^4\,\mathrm{W}$ and $4.24\times 10^4\,\mathrm{W}$) are much smaller than that of SGSS ($1.81\times10^5\,\mathrm{W}$) due to the large temperature differences in the traditional superheaters.
+The exergy losses in superheaters of MELRSs ($1.42\times 10^5\,\mathrm{W}$, $9.19\times 10^4\,\mathrm{W}$ and $4.24\times 10^4\,\mathrm{W}$) are much smaller than that of SGSS ($1.81\times10^5\,\mathrm{W}$) due to the large temperature differences in the traditional superheaters.
 
-It can be found that the MERS can effectively reduce exergy loss hence improve the system efficiency compared to traditional SGSS. The thermal efficiency for the corresponding solar field for the preheater ($\eta_p$), evaporator ($\eta_e$) and superheater ($\eta_s$) of MERSs are larger than that of SGSS (virtual solar fields).
+It can be found that the MELRS can effectively reduce exergy loss hence improve the system efficiency compared to traditional SGSS. The thermal efficiency for the corresponding solar field for the preheater ($\eta_p$), evaporator ($\eta_e$) and superheater ($\eta_s$) of MELRSs are larger than that of SGSS (virtual solar fields).
 The overall thermal efficiency ($\eta_{overall}$) of the solar field can be improved effectively.
 
 \section{Conclusion}
 
 In this chapter, a novel multi-stage exergy loss reduction system is proposed to reduce the large exergy loss in traditional solar parabolic trough power plants.
+Traditional solar field is divided into three solar fields to provide heat to the preheater, evaporator, and superheater, respectively. Different flow rates in the three solar fields provides the ability to reduce temperature difference of the heat exchange processes.
 
-In a traditional solar parabolic trough power plant, the potential of exergy loss reduction in the heating process of Rankine cycle is large. There exist large temperature differences between the heat transfer fluid (HTF) and water in the steam generator subsystem (SGSS). In order to reduce the temperature differences, a novel multi-stage exergy loss reduction system (MERS) with different HTF flows to lower the required HTF temperature is put forward. A flow control strategy of HTF depending on the analytical system model was derived. Energy and exergy efficiency of the MERS was analyzed and compared with the SGSS of traditional solar parabolic trough power plant. Result shows that the MERS can effectively decrease the exergy loss in the heating process, thus the performance of the plant can be improved.
+Smaller temperature difference leads to lower oil temperature and therefore higher solar field thermal efficiency. Besides, the different temperature ranges of different solar fields provide the convenience of the application of different types of collectors.
+
+The analytical model of the steam generating system was developed. A flow control strategy of HTF depending on the analytical system model was derived. Energy and exergy efficiency of the MELRS was analyzed and compared with the SGSS of traditional solar parabolic trough power plant. Result shows that the MELRS can effectively decrease the exergy loss in the heating process, and the performance of the plant can be improved. The exergy loss can be reduced from 14.3\% up to 76.7\% for the three typical MELRSs. The overall thermal efficiency of the solar fields can be improved from 0.9\% up to 3.6\%.

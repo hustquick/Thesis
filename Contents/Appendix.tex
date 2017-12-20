@@ -115,7 +115,7 @@ the same as Equation~(\ref{eq:T_h(x)}), so we have
 \end{equation}
 
 \begin{equation}
-\frac{T_{o}-T_{c}-\frac{q''}{U}}{T_{i}-T_{c}-\frac{q''}{U}}=\exp(-\frac{UA}{\dot{m}c_{p}})
+\frac{T_{o}-T_{c}-\dfrac{q''}{U}}{T_{i}-T_{c}-\dfrac{q''}{U}}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
 
 \chapter{MATLAB code of class Stream}
@@ -183,7 +183,7 @@ classdef Stream < handle
         end
     end
     methods
-        % The dependent properties can be obtained by the inherent
+        % The dependent properties can be obtained from the inherent
         %   properties
         % If x is NaN, then the dependent properties are determined
         %   by T and P; otherwise, they are determined by P and x

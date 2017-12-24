@@ -1,7 +1,7 @@
 \chapter{Modeling}
 \label{cha:Modeling}
 
-To investigate the performance of the proposed cascade systems, mechanism models of the systems are developed with EES (Engineering Equation Solver) and MATLAB (Matrix Laboratory). Bottom-up design method is used for the system modeling. Firstly, the mechanism models developed in EES are used to validate the theoretical relationships of the models. Secondly, the component models are developed in MATLAB by using object-oriented method. It makes full use of inheritance and polymorphism to ensure both the independence and the relevance of the components.
+To investigate the performance of the proposed cascade systems, mechanism models of the systems are developed with EES (Engineering Equation Solver) and MATLAB (Matrix Laboratory). Bottom-up design method is used for the system modeling. Firstly, the mechanism models developed in EES are used to validate the theoretical relationships of the models. Secondly, the component models are developed in MATLAB using object-oriented method. It makes full use of inheritance and polymorphism to ensure both the independence and the relevance of the components.
 %The cascade system is developed in several blocks. These blocks are made of circuits with efficiency calculations. 
 Three circuits, air circuit, water circuit and oil circuit, are developed with some specific state parameters in some key components. Energy-based models of these key components are created on the basis of their thermodynamic behavior, heat transfer and the second law.
 
@@ -10,7 +10,7 @@ The following part introduce models of some key components.
 \subsection{Parabolic trough collector}
 \label{sec:ptc}
 
-Parabolic trough collector consists of a reflector and a receiver. The reflector (mirror) reflects direct normal radiation and concentrates it onto a receiver tube located on the focal line of the parabola. The receiver is typically a metal absorber tube with high absorption rate coating. An outer glass tube is used outside the absorber tube to reduce thermal losses and the space between the absorber tube and the glass tube is usually drawn into a vacuum to further reduce the thermal losses.
+Parabolic trough collector consists of a reflector and a receiver. The reflector (mirror) reflects direct normal radiation and concentrates it onto a receiver tube located on the focal line of the parabola. The receiver is typically a metal absorber tube with high absorption rate coating. An outer glass tube is used outside the absorber tube to reduce thermal losses and the space between the absorber tube and the glass tube is usually drawn into a vacuum to further reduce thermal losses.
 
 Optical loss exists in the reflection process due to optical efficiency terms. The reflection terms can be listed as bellow~\cite{Price2002}:
 
@@ -516,7 +516,7 @@ The displacer shuttles between the expansion and compression space. It absorbs h
 where, $Z$, $k_p$, $D_p$, $J$ and $L_d$ denote the displacer stroke, piston thermal conductivity, displacer diameter, gap between the displacer and the cylinder, and length of the displacer respectively.
 \nomenclature{$Z$}{Displacer stroke, m}
 \nomenclature{$J$}{Annular gap cylinder displacer, m}
-\nomenclature[S]{$p$}{Piston}
+%\nomenclature[S]{$p$}{Piston}
 
 \end{enumerate}
 
@@ -733,12 +733,12 @@ with $T(0)=T_i$, $T(A)=T_o$,
 %	\dfrac{T_{2o}-T_{L}}{T_{2i}-T_{L}}=\exp(-\dfrac{U_{2}A_{2}}{\dot{m}_{2}c_{p2}})
 %\end{equation}
 %
-%So known $T_{1o},T_{1i},U_{1},A_{1},\dot{m}_{1},c_{p1},T_{2o},T_{2i},U_{2},A_{2},\dot{m}_{2},c_{p2}$, $T_{H}$ and $T_{L}$ can be calculated, and then $\eta$ can be obtained by using Equation (\ref{eq:eta_stirling}).
+%So known $T_{1o},T_{1i},U_{1},A_{1},\dot{m}_{1},c_{p1},T_{2o},T_{2i},U_{2},A_{2},\dot{m}_{2},c_{p2}$, $T_{H}$ and $T_{L}$ can be calculated, and then $\eta$ can be obtained using Equation (\ref{eq:eta_stirling}).
 %\nomenclature{$A$}{Area, m$^2$}
 
 For a Stirling engine, $T_{hw}$ or $T_{cw}$ can be used to substitute $T_w$ to get the relationships between $T_{i,h}$, $T_{o,h}$ and $T_{hw}$, or $T_{i,c}$, $T_{o,c}$ and $T_{cw}$ respectively.
-\nomenclature[S]{$h$}{Heating fluid}
-\nomenclature[S]{$c$}{Cooling fluid}
+\nomenclature[S]{$h$}{Heating fluid; homogeneous solution}
+\nomenclature[S]{$c$}{Cooling fluid; counterflow}
 \begin{equation}
 	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{\dot{m}_hc_{p,h}})
 	\label{Eq:T_h}
@@ -1034,7 +1034,7 @@ For energy balance,
 %\end{split}
 %\end{equation}
 
-By using equations in Section~\ref{sec:StirlingEngineModel} and the energy balance equations, key parameters of the Stirling engine array can be obtained. 
+Using equations in Section~\ref{sec:StirlingEngineModel} and the energy balance equations, key parameters of the Stirling engine array can be obtained. 
 
 The efficiency of the Stirling engine array 
 \begin{equation}
@@ -1140,7 +1140,7 @@ In \textbf{superheater}, the method \textbf{get\_q\_m\_3} will return a solution
 
 \section{Conclusion}
 
-This chapter presents the modeling method of the cascade system and introduces the modeling of some key components and subsystems in detail. The component models are developed in MATLAB by using object-oriented method. Bottom-up design method is applied for system development. Models of the components of a system are developed first according to their mechanism characteristics, and the system model is established by these component models. A MATLAB class \textbf{Stream} created for component connection is used as an example to introduce the system modeling process. The components' inlets and outlets are used as interfaces for connection. 
+This chapter presents the modeling method of the cascade system and introduces the modeling of some key components and subsystems in detail. The component models are developed in MATLAB using object-oriented method. Bottom-up design method is applied for system development. Models of the components of a system are developed first according to their mechanism characteristics, and the system model is established by these component models. A MATLAB class \textbf{Stream} created for component connection is used as an example to introduce the system modeling process. The components' inlets and outlets are used as interfaces for connection. 
 Two interfaces are connected together by being assigned the same stream.
 The calculation process related with different components is also briefly introduced in this chapter.
 

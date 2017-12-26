@@ -10,7 +10,7 @@ The following part introduce models of some key components.
 \subsection{Parabolic trough collector}
 \label{sec:ptc}
 
-Parabolic trough collector consists of a reflector and a receiver. The reflector (mirror) reflects direct normal radiation and concentrates it onto a receiver tube located on the focal line of the parabola. The receiver is typically a metal absorber tube with high absorption rate coating. An outer glass tube is used outside the absorber tube to reduce thermal losses and the space between the absorber tube and the glass tube is usually drawn into a vacuum to further reduce thermal losses.
+Parabolic trough collector consists of a reflector and a receiver. The reflector (mirror) reflects direct normal radiation and concentrates it onto a receiver tube located at the focal line of the parabola. The receiver is typically a metal absorber tube with high absorption rate coating. An outer glass tube is used outside the absorber tube to reduce thermal losses and the space between the absorber tube and the glass tube is usually drawn into a vacuum to further reduce thermal losses.
 
 Optical loss exists in the reflection process due to optical efficiency terms. The reflection terms can be listed as bellow~\cite{Price2002}:
 
@@ -25,7 +25,7 @@ Optical loss exists in the reflection process due to optical efficiency terms. T
 
 Another term, incident angle modifier $K(\theta)$, should be concerned when the solar irradiation is not normal to the collector aperture. It is a function of the solar incidence angle to the normal of the collector aperture ($\theta$).
 
-$K(\theta)$ is expressed by the following equation concluded from trough collector testing conducted at SNL~\cite{Dudley1994}.
+$K(\theta)$ is expressed by the following equation concluded from trough collector testing conducted at SNL.~\cite{Dudley1994}
 \begin{equation}
   K(\theta) = \cos\theta+0.000884\theta-0.00005369\theta^2
 \end{equation}
@@ -64,7 +64,7 @@ The solar energy absorbed by the absorber occurs very close to the outer surface
 %\nomenclature{$K$}{Incidence angle modifier of trough collector}
 %%\nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
 
-Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length of the collector, and the heat transfer correlation in Appendix ~\ref{cha:CTCHFHX} can be applied. Figure~\ref{fig:Pipe} shows the schematic diagram of the thermal analysis of the absorber pipe.
+Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length of the collector, and the heat transfer correlation in Appendix~\ref{cha:CTCHFHX} can be applied. Figure~\ref{fig:Pipe} shows the schematic diagram of the thermal analysis of the absorber pipe.
 \nomenclature{$U$}{Overall heat transfer coefficient, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
 \nomenclature{$q''$}{Heat flux, W$\cdot$m$^{-2}$}
 \begin{equation}
@@ -78,7 +78,7 @@ Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole lengt
 \end{figure}
 
 
-Since the Nusselt number $Nu$ in the pipe is very large (about 1$\times$10$^4$), small temperature difference exists between absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be expressed by the a second-order polynomial function given by Romero and Zarza~\cite{Romero2007}. The length $L_{tc}$ required to get the required number of trough collectors in a row can be obtained from Equation~(\ref{eq:CTCHF}).
+Since the Nusselt number $Nu$ in the pipe is very large (about $1\times10^4$), small temperature difference exists between absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be expressed by the a second-order polynomial function given by Romero and Zarza~\cite{Romero2007}. The length $L_{tc}$ to get the required number of trough collectors in a row can be obtained from Equation~(\ref{eq:CTCHF}).
 
 The energy projected perpendicularly to the aperture of the trough collectors is
 \begin{equation}
@@ -100,9 +100,9 @@ The thermal efficiency of the trough collectors
 \subsection{Parabolic dish collector}
 \label{sec:pdc}
 
-Parabolic dish collector consists of a reflector and a receiver. The reflector (mirror) tracks the sun to reflect direct solar radiation and concentrates it onto a receiver located at the focal point of the reflector. Two axes tracking system needs to be applied for the reflector to continuously follow the daily path of the sun.
+Parabolic dish collector consists of a reflector and a receiver. The reflector tracks the sun to reflect direct solar radiation and concentrates it onto a receiver located at the focal point of the reflector. Two axes tracking system needs to be applied for the reflector to continuously follow the daily path of the sun.
 
-Two different methods~\cite{Adkins1987} are applied for the sun tracking systems:
+Two different methods are applied for the sun tracking systems:~\cite{Adkins1987}
 \begin{itemize}
   \item Azimuth elevation tracking by an orientation sensor or by calculated coordinates of the sun performed by the local control.
   \item Polar tracking, where the concentrator rotates about an axis parallel to the earth’s axis rotation.
@@ -110,7 +110,7 @@ Two different methods~\cite{Adkins1987} are applied for the sun tracking systems
 
 In a traditional dish-Stirling system, a Stirling engine is located at the focal point. The Stirling engine has a receiver to absorb the thermal energy from the concentrated sunlights. The receiver consists of an aperture and an absorber. The aperture in a Stirling receiver is located at the focal point of the reflector to reduce the radiation and convection losses. The absorber absorbs the solar radiation and transfers the thermal energy to the working gas of the Stirling engine. An electrical generator, directly connected to the crankshaft of the engine, converts the mechanical energy into electricity. 
 
-In the proposed cascade system, a volumetric receiver is located on the focal point. Spiral tube is located in the receiver to absorb the concentrated solar energy. Air (or nitrogen, is used as the heat transfer fluid) flows trough the tube to transfer the absorbed energy as the heat source of Stirling engine(s).
+In a proposed cascade system, a volumetric receiver is located at the focal point. A spiral tube is located in the receiver to absorb the concentrated solar energy. Air (or nitrogen, is used as the heat transfer fluid) flows trough the tube to transfer the absorbed energy as the heat source of Stirling engine(s).
 
 The reflector is a key element of the systems. The curved reflective surface can be manufactured by attached segments, by individual facets or by a stretched membranes shaped by a continuous plenum. In all cases, the curved surface should be coated or covered by aluminum or silver reflectors. 
 
@@ -118,7 +118,7 @@ A dish reflector product of SES (Stirling Energy System) is used in this cascade
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.6\textwidth]{fig/DishReceiver.pdf}
+\includegraphics[width=0.4\textwidth]{fig/DishReceiver.pdf}
 \caption{The structure of the dish receiver}\label{fig:dishReceiver}
 \end{figure}
 
@@ -162,9 +162,9 @@ A dish reflector product of SES (Stirling Energy System) is used in this cascade
 \nomenclature{$n_{se}$}{Number of Stirling engines in the Stirling engine array}
 
 The dish receiver model concerns the losses include: collector losses due to mirror reflectivity, receiver intercept losses, losses due to shading, and thermal losses. Thermal losses take the largest portion of all those losses, which are due to conduction, convection and radiation.
-\noindent \begin{figure}[htbp]
+\noindent \begin{figure}[ht!]
 \begin{center}
-	\includegraphics[width = 0.7\columnwidth]{fig/thermalLosses.pdf}
+	\includegraphics[width = 0.5\columnwidth]{fig/thermalLosses.pdf}
 	\caption{Thermal network of dish receiver}
 	\label{fig:thermal-lose}
 \end{center}
@@ -236,11 +236,10 @@ and the logarithmic mean temperature difference $\Delta{}T_{ln,dr,1}$ can be wri
   \item \emph{Conductive losses through the receiver insulating layer, $q_{cond,tot}$}
   
   \begin{equation}
-q_{cond,tot}=2\pi\lambda_{insu}dep_{cav}\dfrac{T_{cav}-T_{insu}}{\ln((d_{cav}+2\delta_{insu})/d_{cav})}
+q_{cond,tot}=2\pi\lambda_{insu}dep_{cav}\dfrac{T_{cav}-T_{insu}}{\ln(1 + 2\delta_{insu}/d_{cav})}
     \end{equation}
     
-    where $T_{cav}$ is the temperature of the cavity wall, $T_{insu}$
-is outside temperature of the insulation wall.
+    where $T_{cav}$ is the temperature of the cavity wall, $T_{insu}$ is outside temperature of the insulation wall.
 
   \item \emph{Convection losses from the receiver insulating layer, $q_{cond,conv}$}  
   \begin{equation}
@@ -289,7 +288,7 @@ For forced convection loss, side-on wind convection loss model given by Ma~\cite
 \end{equation}
 \end{enumerate}
 
-From Figure\ref{fig:thermal-lose}, it can be found that
+From Figure~\ref{fig:thermal-lose}, it can be found that
 
 \begin{equation}
   q_{eff} = q_i - q_{rad,ref}
@@ -315,7 +314,7 @@ Efficiency of the dish collector
 
 \subsection{Stirling engine}\label{sec:StirlingEngineModel}
 \subsubsection{Theoretical Stirling cycle}
-In a Stirling cycle, there are two isothermal processes that exchange heat with heating and cooling fluids, two isochoric processes that exchange heat with regenerator. In Figure~\ref{fig:StirlingCycle}, the heat absorbed by regenerator in process 4-1 is reused in process 2-3, but only able to heat the working gas from 2 to 3' due to the imperfect regeneration. $e$ is defined as the regenerator effectiveness\cite{Formosa2010,Juhasz2010}, $e=\dfrac{T_R-T_L}{T_H-T_L}$, where $T_H$ is the temperature in the hot space, $T_L$ is the temperature in the cold space, $T_R$ is the effective working fluid temperature in the regenerator.
+In a Stirling cycle, there are two isothermal processes that exchange heat with heating and cooling fluids, two isochoric processes that exchange heat with regenerator. Figure~\ref{fig:StirlingCycle} shows the $T$-$s$ diagram of a typical Stirling cycle. The heat absorbed by regenerator in process 4-1 is reused in process 2-3, but only able to heat the working gas from 2 to 3' due to the imperfect regeneration. $e$ is defined as the regenerator effectiveness\cite{Formosa2010,Juhasz2010}, $e=\dfrac{T_R-T_L}{T_H-T_L}$, where $T_H$ is the temperature in the hot space, $T_L$ is the temperature in the cold space, $T_R$ is the effective working fluid temperature in the regenerator.
 \nomenclature{$e$}{Regenerator effectiveness}
 \nomenclature{$T_R$}{Effective working fluid temperature in regenerator, K}
 \nomenclature{$T_L$}{Working fluid temperature in the cold space, K}
@@ -335,10 +334,10 @@ In order to obtain a simplified analytical model, several simplifications are ma
 \item The working gas in Stirling engines obeys the idea gas law.
 \item No heat loss to the environment for Stirling engines.
 \item Overall heat transfer coefficients of the fluids are constant.
-\item A symmetrical regenerator behavior is assumed~\cite{Formosa2010,Juhasz2010} so that a simple effectiveness can be obtain by $T_{R}=\dfrac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$.
+\item A symmetrical regenerator behavior is assumed so that a simple effectiveness can be obtain by $T_{R}=\dfrac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$.~\cite{Formosa2010,Juhasz2010}
 \end{itemize}
 
-To consider internal irreversibilities in Stirling cycle made by dead volumes, total dead volume $V_D$ can be divided into heater dead volume $V_{DH}$, regenerator dead volume $V_{DR}$ and cooler dead volume $V_{DC}$.~\cite{Duan2014}, There exists a factor $K$ to describe the dead volumes under different temperatures. $K$ is relevant with temperatures in the process and regenerator effectiveness.
+To consider internal irreversibilities in a Stirling cycle made by dead volumes, total dead volume $V_D$ can be divided into heater dead volume $V_{DH}$, regenerator dead volume $V_{DR}$ and cooler dead volume $V_{DC}$.~\cite{Duan2014}, There exists a factor $K$ to describe the dead volumes under different temperatures. $K$ is relevant with temperatures in the process and regenerator effectiveness.
 \nomenclature{$V_D$}{Total dead volume, m$^3$}
 \nomenclature{$V_{DH}$}{Hot space dead volume, m$^3$}
 \nomenclature{$V_{DR}$}{Regenerator dead volume, m$^3$}
@@ -458,14 +457,14 @@ The heat transfer coefficient can be obtained using the following correlation~\c
 
 where $f_{Re}$ is a Reynolds friction factor defined as:
 \begin{equation}
-	f_{Re} = 0.0791{Re_{h,c}}^{0.75}
+	f_{Re} = 0.0791Re_{h,c}^{0.75}
 \end{equation}
 
 $Re_{h,c}$, $Pr_{h,c}$ and $D_{h,c}$ are Reynolds number, Prandtl number and hydraulic diameter of the heater/cooler exchanger.
 
 \item Effect of pressure drop
 
-Pressure drops in the heat exchangers cause power losses of the Stirling engine. The pressure drops can be expressed by~\cite{Urieli1984}:
+Pressure drops in the heat exchangers cause power losses of the Stirling engine. The pressure drops can be expressed by:~\cite{Urieli1984}
 \begin{equation}
 	\Delta p = -\frac{2f_{Re}\mu u V}{d^2A}
 \end{equation}
@@ -480,12 +479,12 @@ The net power loss of the Stirling engine due to pressure drop of the heat excha
 
 \item Effect of finite speed of piston and mechanical friction
 
-Due to the finite speed of piston, the pressure on the piston surface is different from the pressure of expansion and compression spaces. It has been demonstrated that the pressure on the piston surface in the expansion process is less than the mean pressure in the expansion space. Similarly, the pressure on the piston surface in the compression process is greater than the mean pressure in the compression space. This means the output work is less than the theoretical value. Besides, The output work also reduces due to mechanical friction. The output work loss due to finite speed of piston and mechanical friction can be obtained as follows~\cite{Babaelahi2015}:
+Due to the finite speed of piston, the pressure on the piston surface is different from the pressure of expansion and compression spaces. It has been demonstrated that the pressure on the piston surface in the expansion process is less than the mean pressure in the expansion space. Similarly, the pressure on the piston surface in the compression process is greater than the mean pressure in the compression space. This means the output work is less than the theoretical value. Besides, The output work also reduces due to mechanical friction. The output work loss due to finite speed of piston and mechanical friction can be obtained as follows:~\cite{Babaelahi2015}
 \begin{equation}
 	W_{fs} = \oint p(\pm\frac{au_p}{c}\pm\frac{\Delta p_f}{p})dV
 \end{equation}
 
-where the sign ($+$) is used in the compression space, and the sign ($-$) is used in the expansion space. $p$ is the mean pressure in the compression/expansion space, $u_p$ is velocity of the piston, $c$ is the average speed of molecules and $\Delta p_f$ is the pressure loss due to mechanical friction. $\Delta p_f$, $a$ and $c$ can be expressed by~\cite{Heywood1988}:
+where the sign ($+$) is used in the compression space, and the sign ($-$) is used in the expansion space. $p$ is the mean pressure in the compression/expansion space, $u_p$ is velocity of the piston, $c$ is the average speed of molecules and $\Delta p_f$ is the pressure loss due to mechanical friction. $\Delta p_f$, $a$ and $c$ can be expressed by:~\cite{Heywood1988}
 \begin{equation}
 	\Delta p_f = 0.97+0.009s_{se}
 \end{equation}
@@ -545,7 +544,7 @@ Efficiency of the Stirling engine
 
 \subsubsection{Model validation}\label{sec:modelValidation}
 
-Evaluation of the developed thermal model is performed by considering the GPU-3 Stirling engine as a case study. Design specifications of the GPU-3 Stirling engine are indicated in Table~\ref{tab:GPU3parameters}. The thermal efficiency and power of the proposed Stirling engine model is compared with previous thermal models and experimental data as shown in Table~\ref{tab:EfficiencyComparison} and Table~\ref{tab:PowerComparison}.
+Evaluation of the developed thermal model is performed by considering the GPU-3 Stirling engine as a case study. Design specifications of the GPU-3 Stirling engine are indicated in Table~\ref{tab:GPU3parameters}. The thermal efficiency and power of the proposed Stirling engine model are compared with previous thermal models and experimental data as shown in Table~\ref{tab:EfficiencyComparison} and Table~\ref{tab:PowerComparison}.
 
 \begin{table*}[htbp]\footnotesize
 	\caption{Design specifications of the GPU-3 Stirling engine~\cite{Babaelahi2015,Martini1983}}
@@ -672,18 +671,21 @@ However, there is still some discrepancy between the the simulation results of p
 
 \subsubsection{Heat transfer between the engine and the fluids}
 
-For a Stirling engine thermal process, the wall temperatures of the heater and cooler are considered to be uniform and constant. The heat transferred between the wall and the fluids is
+For a Stirling engine thermal process, the wall temperatures of the heater and cooler are considered to be uniform and constant. The heat transferred between the wall and the fluids after a contact area of $dA$ is
 %with heating and cooling fluids, the heat exchange processes are considered to be isothermal processes.
 %%For an isothermal process in Figure~\ref{fig:ConstTempHX}, transferred heat equals to fluid's enthalpy rise:
 %For an isothermal process, transferred heat equals to fluid's enthalpy rise:
 \begin{equation}
 	(T_w-T)UdA = \dot{m}c_pdT
 \end{equation}
+\begin{equation}
+	\frac{dT}{T-T_w}=-\frac{UdA}{\dot{m}c_p}
+\end{equation}
 \nomenclature{$c_p$}{Specific heat at constant pressure, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
 \nomenclature{$T_w$}{Wall temperature, K}
 \nomenclature{$A$}{Heat transfer area, m$^2$}
 
-with $T(0)=T_i$, $T(A)=T_o$,
+With $T(0)=T_i$, $T(A)=T_o$,
 \begin{equation}
 	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{\dot{m}c_p})
 \end{equation}
@@ -768,12 +770,13 @@ Heat transferred from Stirling engine to cooling fluid in a cycle
 \subsection{Rankine power generation system}
 %The power generating system includes the turbine (steam turbine or ORC turbine) and generator.
 
-The Rankine power generation system consists of turbine, condenser, deaerator, generator and pumps. Based on different working fluids, there are two different kinds of Rankine power generation systems, steam Rankine power generation system and organic Rankine power generation.
+%The Rankine power generation system consists of turbine, condenser, deaerator, generator and pumps. 
+Based on different working fluids, there are two different kinds of Rankine power generation systems, steam Rankine power generation system and organic Rankine power generation.
 \subsubsection{Steam Rankine cycle}
   
-  For steam Rankine cycle, deaerator is used to remove the oxygen and other non-condensable gases in the feedwater to steam generating system. Dissolved oxygen in feedwater will cause serious corrosion damage in steam generating system by forming oxides (rust) of the metal pipes. Dissolved carbon dioxide combines with water to form carbonic acid will cause further corrosion. The accumulation of the non-condensable gases will increase the heat transfer resistance, which is harmful for the heat exchangers. The extraction of the steam turbine provides heat for the deaerator.
+  For steam Rankine cycle, a deaerator is used to remove the oxygen and other non-condensable gases in the feedwater of steam generating system. Dissolved oxygen in feedwater will cause serious corrosion damage in steam generating system by forming oxides (rust) of the metal pipes. Dissolved carbon dioxide combines with water to form carbonic acid will cause further corrosion. The accumulation of the non-condensable gases will increase the heat transfer resistance, which is harmful for the heat exchangers. The extraction of the steam turbine provides heat for the deaerator.
   
-  Figure~\ref{fig:Ts_Water} shows the $T$-$s$ diagram of the water circuit in the cascade system in Figure~\ref{fig:PES}. Process $2a$-$2c$-$2b$ shows the heat process in the steam turbine. (see Figure~\ref{fig:SteamTurbine_hs}) State point $2b$ and $i,2b$ have the same pressure, state point $2c$ and $i,2c$. To simplify the inner process $2a$-$2c$-$2b$ of the turbine, same isentropic efficiency of steam turbine with different loads and in different stages is assumed, which means  
+  Figure~\ref{fig:Ts_Water} shows the $T$-$s$ diagram of the water circuit in the cascade system in Figure~\ref{fig:PES}. Process $2a$-$2c$-$2b$ shows the heat process in the steam turbine (see Figure~\ref{fig:SteamTurbine_hs}). State point $2b$ and $i,2b$ have the same pressure, state point $2c$ and $i,2c$ have the same pressure. To simplify the inner process $2a$-$2c$-$2b$ of the turbine, same isentropic efficiency of steam turbine with different loads and in different stages is assumed, which means  
   \begin{equation}
       \eta_{i,tb} =(h_{2a}-h_{2b})/(h_{2a}-h_{i,2b}) = (h_{2a}-h_{2c})/(h_{2a}-h_{i,2c})
 \end{equation}
@@ -793,52 +796,44 @@ where $h_{i,2b}$ is determined by $s_{2a}$ and $p_c$; $h_{i,2c}$ is determined b
 	
 	\caption{$T$-$s$ diagram of the water circuit and $h$-$s$ diagram of the process $2a$-$2b$}\label{fig:SteamTurbine_hs_p}
 \end{figure}
-   
+
     The output power of the steam turbine
     \begin{equation}
   P_{tb}=\left(1-y\right)\dot{m}_{2}\left(h_{2a}-h_{2b}\right)+y\dot{m}_{2}\left(h_{2a}-h_{2c}\right)
   \end{equation}
   \nomenclature{$y$}{Extraction rate of steam turbine}
-  
   Process $2b$-$2d$ shows the heat process in the condenser. The outlet water in the condenser is saturated water. The outlet temperature $T_{2d}$ and outlet enthalpy $h_{2d}$ are determined by the exhaust pressure of the turbine $p_c$.
   The released heat of the condenser
   \begin{equation}
       Q_{cd} = (1-y)\dot{m}_2 (h_{2b} - h_{2d})
 \end{equation}
 \nomenclature[S]{$cd$}{Condenser}
-
   State points $2c$, $2f$ and $2g$ have the same pressure ($p_e$, 1$\,\mathrm{MPa}$). The water at the outlet of the deaerator is saturated fluid, its enthalpy is determined.
   \begin{equation}
   y h_{2c} + (1-y) h_{2f} = h_{2g}
 \end{equation}
-\nomenclature{$p_e$}{Extraction pressure of the steam turbine, Pa}
-  
+\nomenclature{$p_e$}{Extraction pressure of the steam turbine, Pa}  
   The total power of the pumps 
 \begin{equation}
 	P_{pu}=\left(1-y\right)\dot{m}_{2}\left(h_{2e}-h_{2d}\right)+\dot{m}_{2}\left(h_{2h}-h_{2g}\right)
 \end{equation}
-    \nomenclature[S]{$pu$}{Pump}
-    
-where $h_{2e}$ can be obtained from $\eta_{pu} = (h_{i,2e}-h{2d})/(h_{2e}-h_{2d})$, $h_{2h}$ can be obtained from $\eta_{pu} = (h_{i,2h}-h_{2g})/(h_{2h}-h_{2g})$. $h_{i,2e}$ is determined by $s_{2d}$ and $p_e$, $h_{i,2h}$ is determined by $s_{2g}$ and $p_s$.
+    \nomenclature[S]{$pu$}{Pump}    
+where $h_{2e}$ can be obtained from $\eta_{pu} = (h_{i,2e}-h_{2d})/(h_{2e}-h_{2d})$, $h_{2h}$ can be obtained from $\eta_{pu} = (h_{i,2h}-h_{2g})/(h_{2h}-h_{2g})$. $h_{i,2e}$ is determined by $s_{2d}$ and $p_e$, $h_{i,2h}$ is determined by $s_{2g}$ and $p_s$.
     
 The outlet water of the deaerator is saturated water ($x = 0$), so the outlet temperature $T_{2g}$ and outlet enthalpy $h_{2g}$ of the heated fluid is determined by pressure $p_{2g}$. For the deaerator, the outlet pressure equals to any of the inlet pressure.
-
 \begin{equation}
   p_{2g} = p_{2c}
-\end{equation}
-
-    
-  Heat injected in the water circuit
+\end{equation}    
+Heat injected in the water circuit
 \begin{equation}
 	    Q_2=\left(1-y\right)\dot{m}_{2}\left(h_{2f}-h_{2e}\right)+\dot{m}_{2}\left(h_{2a}-h_{2h}\right)
     \end{equation}
-
 The efficiency of Rankine cycle can be expressed as
 \begin{equation}
 	\eta_{rk}=(P_{tb}-P_{pu}/\eta_{ge})/Q_{2}
 \end{equation}
 
-  \subsubsection{ORC cycle}
+\subsubsection{Organic Rankine cycle}
   
   Compared with steam Rankine cycle, ORC has the following features:
   \begin{enumerate}[label=(\arabic*)]
@@ -854,10 +849,10 @@ The shapes of curves in the $T$-$s$ diagram of different fluids are different. A
 Figure~\ref{fig:$T$-$s$_2systems} shows the $T$-$s$ diagram of steam Rankine cycle and ORC cycle. Figure~\ref{fig:ORCsystem2} shows the schematic diagram of the ORC system. For a dry fluid, the cycle can be improved by the use of a regenerator: since the fluid has not reached the two-phase state at the end of the expansion, its temperature at this point is higher than the condensing temperature. This higher temperature fluid can be used to preheat the liquid before it enters the evaporator.
 A counter-current heat exchanger is thus installed between the expander outlet and the evaporator inlet. The power required from the heat source is therefore reduced and the efficiency is increased.
 
-  \noindent \begin{figure}[htbp]
+\noindent \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.8\columnwidth]{fig/Ts.pdf}
-	\caption{$T$-$s$ diagram of water and a typical organic fluid}
+	\caption{$T$-$s$ diagram of water and a typical organic fluid in Rankine cycles}
 	\label{fig:$T$-$s$_2systems}
 \end{center}
 \end{figure}
@@ -882,29 +877,29 @@ The output power of the turbine
   P_{tb}=\dot{m}_{4}(h_{4a}-h_{4b})
 \end{equation}
 
-Process $4c$-$4d$ shows the heat process in the condenser. The outlet fluid in the condenser is saturated liquid. The outlet temperature $T_{4d}$ and outlet enthalpy $h_{4d}$ are determined by the exhaust pressure of the turbine $p_c$.
+Process $4c$-$4d$ shows the heat process in the condenser. The outlet fluid of the condenser is saturated liquid. The outlet temperature $T_{4d}$ and outlet enthalpy $h_{4d}$ are determined by the exhaust pressure of the turbine $p_c$.
 
-  For the regenerator,
-  \begin{equation}
-      h_{4b} - h_{4c} = h_{4f} - h_{4e}
-  \end{equation}
-  
-  The released heat of the condenser
-  \begin{equation}
-      Q_{cd} = \dot{m}_4 (h_{4c} - h_{4d})
-\end{equation}
-
-    The power of the pump
-  \begin{equation}
-	P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
-\end{equation}
-    
-    where $h_{4e}$ can be obtained from $\eta_{pu} = (h_{i,4e}-h_{4d})/(h_{4e}-h_{4d})$. $h_{i,4e}$ is determined by $s_{4d}$ and $p_s$.
-    
-  Heat injected in the circuit
+For the regenerator,
 \begin{equation}
-	    Q_4=\dot{m}_4(h_{4a}-h_{4f})
-    \end{equation}
+  h_{4b} - h_{4c} = h_{4f} - h_{4e}
+\end{equation}
+
+The released heat of the condenser
+\begin{equation}
+  Q_{cd} = \dot{m}_4 (h_{4c} - h_{4d})
+\end{equation}
+
+The power of the pump
+\begin{equation}
+P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
+\end{equation}
+    
+where $h_{4e}$ can be obtained from $\eta_{pu} = (h_{i,4e}-h_{4d})/(h_{4e}-h_{4d})$. $h_{i,4e}$ is determined by $s_{4d}$ and $p_s$.
+    
+Heat injected in the circuit
+\begin{equation}
+    Q_4=\dot{m}_4(h_{4a}-h_{4f})
+\end{equation}
 
 The efficiency of Rankine cycle can be expressed as
 \begin{equation}
@@ -931,15 +926,14 @@ The generator is relatively independent of the cascade system and its efficiency
 %\section{Steam extraction and regeneration system}
 \section{Stirling engine array modeling}
 
-Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=$30$\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=$150$\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=$6$\,\mathrm{m^2}$, $A_{se,2}=$6$\,\mathrm{m^2}$, $k_{se}=$1.4, $\gamma_{se}=$3.375, $n_g=$7.84$\times$10$^{-2}\,\mathrm{mol}$, $s_{se}=$10$\,\mathrm{s^{-1}}$.
-
-\noindent \begin{figure}[htbp]
+\begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.6\columnwidth]{fig/stirlingEngineArray.pdf}
 	\caption{Layout of Stirling engines}
 	\label{fig:Layout of Stirling engines}
 \end{center}
 \end{figure}
+Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of a Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=6\,\mathrm{m^2}$, $A_{se,2}=6\,\mathrm{m^2}$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times10^{-2}\,\mathrm{mol}$, $s_{se}=10\,\mathrm{s^{-1}}$.
 
 Depending on the direction of heating and cooling flows, there are two possible flow types: parallel flow and counterflow. 
 Figure~\ref{fig:twoFlowTypes} and 
@@ -948,26 +942,18 @@ Figure~\ref{fig:CounterFlow} show the heat transfer diagrams of the two flow typ
 
 \noindent \begin{figure}[htbp]
 \centering
-	\begin{subfigure}[b]{0.4\columnwidth}
+	\begin{subfigure}[b]{0.45\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Parallel.pdf}
 	\caption{Parallel flow}\label{fig:ParallelFlow}
 	\end{subfigure}
 	~
-\begin{subfigure}[b]{0.4\columnwidth}
+\begin{subfigure}[b]{0.45\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Counter.pdf}
 	\caption{Counterflow}\label{fig:CounterFlow}
 	\end{subfigure}
-	\caption{Heat transfer diagram of parallel flow and counterflow}
+	\caption{Heat transfer diagrams of parallel flow and counterflow}
 	\label{fig:twoFlowTypes}
 \end{figure}
-
-%\noindent \begin{figure}[htbp]
-%\begin{center}
-%	\includegraphics[width = 0.7\columnwidth]{fig/HeatTransfer_Counter}
-%	\caption{Heat transfer diagram of counterflow}
-%	\label{fig:CounterFlow}
-%\end{center}
-%\end{figure}
 
 In Figure~\ref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},\dot{m}_{1,r}=\dot{m}_{1}/n_{2}$. For $x$ from $1$ to $n_1-1$, where $x$ is the column number of Stirling engines, $T_{1,i,x+1}=T_{1,o,x},T_{2,i,x+1}=T_{2,o,x}$.
 \nomenclature{$n_1$}{Number of columns of the Stirling engine array}
@@ -995,8 +981,10 @@ Assume that the positive flow direction is to the right, for parallel flow, $T_{
 %	\dot{m}_{2,r}=-\dot{m}_{2}/n_{2}
 %\end{equation}
 
-Assume linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}, and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Formosa2010,Juhasz2010}. For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_1$, according to Equation~(\ref{eq:T_H}) and Equation~(\ref{eq:T_L}),
+Assume linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$,~\cite{Der2007,Cavazzuti2012} and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$.~\cite{Formosa2010,Juhasz2010} 
 
+For a Stirling engine in column $x$, $x$ from $1$ to $n_1$, according to Equation~(\ref{eq:T_H}) and Equation~(\ref{eq:T_L}),
+\nomenclature[S]{$x$}{Stirling engine in column $x$}
 \begin{equation}
 	T_{hw,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{se,1}A_{se,1}}{\dot{m}_{1,r}c_{p,1,x}})}\label{eq:T_H_x}
 \end{equation}
@@ -1046,13 +1034,13 @@ The output power of each Stirling engine in column $x$
   P_{se,x}=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}
 \end{equation}
 
-The output power of the Stirling engine array
+The total output power of the Stirling engine array
 \begin{equation}
   P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})
 \end{equation}
 
 \section{Steam generating system modeling}
-The steam generating system can be divided into preheater, evaporator and superheater, they are collectively referred to as PES. They are all heat exchangers. It is assumed that, in these heat exchangers, the pressure of the fluid does not change significantly. It can be assumed to be equal to the pressure of the inlet pressure of the turbine. Besides, these heat exchangers do not exchange heat with the environment.
+The steam generating system can be divided into preheater, evaporator and superheater, they are collectively referred to as PES. They are all heat exchangers. It is assumed that, in these heat exchangers, the pressure of the fluid does not change significantly. It can be assumed that the water pressure in the steam generating system equals to the pressure of the inlet pressure of the turbine. Besides, these heat exchangers do not exchange heat with the environment.
 To clearly understand the modeling process of these heat exchangers, an example of steam generating system as shown in Figure~\ref{fig:PES} is used for explanation. Figure~\ref{fig:PES_TQ} shows the $T$-$Q$ diagram of the heat transfer process. State points of different fluids are marked on the sketch. The number indicates the type of the fluid, the letter indicates the state point of the fluid. A state point with solid circle indicates saturated liquid state ($x = 0$), and with dotted circle indicates saturated gas state ($x = 1$).
 \nomenclature{$x$}{Dryness fraction}
 

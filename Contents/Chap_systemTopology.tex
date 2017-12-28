@@ -1,55 +1,74 @@
-\chapter{System topology}
+%\chapter{System topology}
+\chapter{系统拓扑结构}
 \label{cha:SystemTopology}
 %利用热力学原理进行定性分析。提炼出创新点。
-\section{System topology design}
+%\section{System topology design}
+\section{系统拓扑结构的设计}
 \label{sec:std}
 
-The objective of this research is to investigate the equipment of solar thermal power generation system, to propose, develop and optimize a cascade solar thermal system depending on the advantages and disadvantages of existing solar thermal power generation technologies. 
+%The objective of this research is to investigate the equipment of solar thermal power generation system, to propose, develop and optimize a cascade solar thermal system depending on the advantages and disadvantages of existing solar thermal power generation technologies. 
+本文的研究目的是分析太阳能光热发电系统的设备的特点，根据现有太阳能光热发电技术的优缺点，提出、开发和优化梯级太阳能光热发电系统。
 
-Three solar thermal power generation technologies are commercially proven -- parabolic trough, parabolic dish and solar tower. 
-Considering the future deployment of solar cascade demo system, two solar thermal technologies, parabolic trough and parabolic dish, are chosen as the basic systems for the design of cascade solar thermal power system. For the cascade utilization of the high temperature heat obtained from the parabolic dish receiver, air (or nitrogen) is used as the HTF to transfer the heat collected.
-Figure~\ref{fig:PTPD} shows the schematic diagrams of a parabolic trough system and a parabolic dish system. To make the system structure diagrams in this thesis more clearly and consistent, legends of the components that may appear in solar power systems are listed in Figure~\ref{fig:Legends}.
-
+%Three solar thermal power generation technologies are commercially proven -- parabolic trough, parabolic dish and solar tower. 
+%Considering the future deployment of solar cascade demo system, two solar thermal technologies, parabolic trough and parabolic dish, are chosen as the basic systems for the design of cascade solar thermal power system. For the cascade utilization of the high temperature heat obtained from the parabolic dish receiver, air (or nitrogen) is used as the HTF to transfer the heat collected.
+%Figure~\ref{fig:PTPD} shows the schematic diagrams of a parabolic trough system and a parabolic dish system. To make the system structure diagrams in this thesis more clearly and consistent, legends of the components that may appear in solar power systems are listed in Figure~\ref{fig:Legends}.
+现有的经过商业验证的太阳能热发电技术有三种——太阳能槽式发电，太阳能碟式发电和太阳能塔式发电。
+由于太阳能塔式发电系统占地面积较大，投资成本太高，考虑到未来需要搭建太阳能光热梯级发电示范系统，本文仅选择两种太阳能光热发电技术（太阳能槽式发电和太阳能碟式发电）作为太阳能光热梯级发电系统设计的基本系统。为了实现对太阳能碟式集热器获得的高温热量进行梯级利用，采用空气（或氮气）作为太阳能碟式发电系统的传热介质来传输所收集的热量。
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.8\textwidth]{fig/PTPD.pdf}
-\caption{Schematic diagrams of a parabolic trough system and a parabolic dish system}
+\includegraphics[width=0.8\textwidth]{fig/PTPD_CN.pdf}
+\caption{太阳能槽式发电系统和太阳能碟式发电系统结构示意图}
 \label{fig:PTPD}
 \end{figure}
-
+典型的太阳能槽式发电系统和太阳能碟式发电系统的结构示意图如图\ref{fig:PTPD}所示。为使本文中的系统结构图更加清晰和一致，图\ref{fig:Legends}列出了太阳能光热发电系统中可能出现的所有元件的图例。
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.8\textwidth]{fig/Legends.pdf}
-\caption{Components in solar power systems}
+\includegraphics[width=0.8\textwidth]{fig/Legends_CN.pdf}
+\caption{太阳能光热发电系统中的元件列表}
 \label{fig:Legends}
 \end{figure}
 
-With different considerations (such as water Rankine cycle or ORC, combination of different systems, connection types of collectors, etc) of the cascade system topology, multiple combination topologies may be used for cascade systems. To get the most suitable system topology, these considerations will be analyzed in the following sections. 
+%With different considerations (such as water Rankine cycle or ORC, combination of different systems, connection types of collectors, etc) of the cascade system topology, multiple combination topologies may be used for cascade systems. To get the most suitable system topology, these considerations will be analyzed in the following sections. 
+利用这两种基本系统，通过选择不同的系统拓扑结构，来实现能量的梯级收集和梯级利用。由于梯级系统的拓扑结构需要考虑多种因素，例如水工质朗肯循环或有机工质朗肯循环、多种集热器的配合使用、不同热工循环的组合等，梯级系统可以组合的拓扑结构的数量非常之多。为了获得最合适的梯级系统拓扑结构，需要从可行性、经济性等角度仔细分析这些因素。
 
-\subsection{Rankine cycle fluid}
+%\subsection{Rankine cycle fluid}
+\subsection{朗肯循环工质}
 \label{sec:RankineCycleFluid}
 
 \begin{figure}[!ht]
 \centering 
-\includegraphics[width=0.5\textwidth]{fig/idealTs}
-\caption{Temperature-entropy diagram of an ideal working fluid}\label{fig:idealTs}
+\includegraphics[width=0.5\textwidth]{fig/idealTs_CN}
+\caption{用于朗肯循环的理想工质的温熵图}
+\label{fig:idealTs_CN}
 \end{figure}
 
-An ideal working fluid for Rankine cycle would have the temperature-entropy diagram given in Figure~\ref{fig:idealTs}. The following characteristics listed by Abbin and Leuenberger~\cite{Abbin1977} describe this fluid:
+%An ideal working fluid for Rankine cycle would have the temperature-entropy diagram given in Figure~\ref{fig:idealTs}. The following characteristics listed by Abbin and Leuenberger~\cite{Abbin1977} describe this fluid:
+不同应用于朗肯循环的工质的温熵曲线如图\ref{fig:idealTs_CN}所示。需要说明的是，图中各曲线只是用于表示不同工质的饱和曲线形状，曲线对应的熵值和温度不代表其真实熵值和温度，也不能用于不同工质之间的比较。其中，理想工质具有以下特点\cite{Abbin1977}：
 \begin{itemize}
-  \item The heat capacity of the liquid phase should be small. This makes the curve 22' in Figure~\ref{fig:idealTs} almost vertical.
-  \item The critical point should be above the highest operating temperature to allow all heat to be added at that temperature.
-  \item The vapor pressure at the highest operating temperature should be moderate for safety reasons and to reduce the cost of the equipment.
-  \item The vapor pressure at the condensing temperature should be above atmospheric pressure to prevent air leakage into the system.
-  \item The specific volume of the vapor at state 4 should be small to avoid large-diameter turbine wheels, casings, and heat exchangers.
-  \item The saturated vapor curve 3-4 in Figure~\ref{fig:idealTs} should be vertical to avoid expansion into the wet vapor region (negative $ds/dT$) or expansion into the superheat region (positive $ds/dT$).
-  \item For low-power turbine applications, the fluid should have a high molecular weight to minimize the rotational speed and/or the number of turbine stages and to allow for reasonable mass flow rates and turbine nozzle areas.
-  \item The fluid should be liquid at atmospheric pressure and temperature for ease of handling and containment.
-  \item The freezing point should be lower than the lowest ambient operating temperature.
-  \item The fluid should have good heat-transfer properties, be inexpensive, thermally stable at the highest operating temperature, nonflammable, noncorrosive, nontoxic, and so on.
+%  \item The heat capacity of the liquid phase should be small. This makes the curve 22' in Figure~\ref{fig:idealTs} almost vertical.
+	\item 饱和液体的比热容要小，这样图.\ref{fig:idealTs_CN}中的曲线2-2'才接近竖直。
+%  \item The critical point should be above the highest operating temperature to allow all heat to be added at that temperature.
+	\item 临界点温度要高于最高运行温度，以便于所有的吸热过程都发生在临界点温度以下。
+%  \item The vapor pressure at the highest operating temperature should be moderate for safety reasons and to reduce the cost of the equipment.
+	\item 最高运行温度所对应的饱和蒸汽压力应该适中，以便安全运行并有利于降低设备的制造成本。
+%  \item The vapor pressure at the condensing temperature should be above atmospheric pressure to prevent air leakage into the system.
+	\item 凝气温度下对应的蒸气压力应该高于大气压，以避免空气泄漏到系统中。
+%  \item The specific volume of the vapor at state 4 should be small to avoid large-diameter turbine wheels, casings, and heat exchangers.
+	\item 状态点4的蒸气的密度应该较大，这样可以避免大直径的汽轮机叶片，壳体和热交换器。
+%  \item The saturated vapor curve 3-4 in Figure~\ref{fig:idealTs} should be vertical to avoid expansion into the wet vapor region (negative $ds/dT$) or expansion into the superheat region (positive $ds/dT$).
+	\item 图\ref{fig:idealTs_CN}中气态饱和曲线3-4应该接近竖直，从而避免汽轮机中的工质膨胀进入湿蒸汽区（$ds/dT < 0$的情况）或是过热区（$ds/dT > 0$的情况）。
+%  \item For low-power turbine applications, the fluid should have a high molecular weight to minimize the rotational speed and/or the number of turbine stages and to allow for reasonable mass flow rates and turbine nozzle areas.
+	\item 对于小功率汽轮机的应用，工质应该具有较高的分子量以减小汽轮机的转速和（或）级的数量，并且允许合适的质量流量和汽轮机喷嘴面积。
+%  \item The fluid should be liquid at atmospheric pressure and temperature for ease of handling and containment.
+	\item 工质在常温常压下为液体，以便于运输和控制。
+%  \item The freezing point should be lower than the lowest ambient operating temperature.
+	\item 工质的凝固点应该低于工作的环境温度。
+%  \item The fluid should have good heat-transfer properties, be inexpensive, thermally stable at the highest operating temperature, nonflammable, noncorrosive, nontoxic, and so on.
+	\item 工质具有良好的传热性能，价格便宜，在最高操作温度下热稳定较好，不易燃烧，无腐蚀性，无毒性等。
 \end{itemize}
 
-Water is the most commonly used fluid for Rankine cycle, it is more mature to design Rankine cycle components for steam systems than any other liquid. It is inexpensive to use (although boiler-grade water must be highly distilled and thus costs more than tap water), sealing of the high-pressure portions of a Rankine cycle using steam is not critical. Non-flammability and ready availability of steam are additional advantages. Because it has a critical temperature and pressure of 374$\mathrm{^\circ C}$ and 22.1$\,\mathrm{MPa}$, it can be used for systems operating at fairly high temperatures with most of the heat addition (at constant temperature) and at moderate pressure. Figure~\ref{fig:TypicalSteamRankineSolarSystem} shows the schematic diagram of a typical steam Rankine cycle solar system.
+%Water is the most commonly used fluid for Rankine cycle, it is more mature to design Rankine cycle components for steam systems than any other liquid. It is inexpensive to use (although boiler-grade water must be highly distilled and thus costs more than tap water), sealing of the high-pressure portions of a Rankine cycle using steam is not critical. Non-flammability and ready availability of steam are additional advantages. Because it has a critical temperature and pressure of 374$\mathrm{^\circ C}$ and 22.1$\,\mathrm{MPa}$, it can be used for systems operating at fairly high temperatures with most of the heat addition (at constant temperature) and at moderate pressure. Figure~\ref{fig:TypicalSteamRankineSolarSystem} shows the schematic diagram of a typical steam Rankine cycle solar system.
+水是朗肯循环中最常用的工质，水工质朗肯循环的各部件相关的技术比其他工质更为成熟。水的价格便宜（虽然锅炉级的水必须是高度蒸馏的，因此成本比自来水高），水工质朗肯循环的高压部分的密封并没有其它工质那么重要。此外，蒸汽的不易燃性和可用性是其额外的优点。因为它的临界温度和压力分别为374$\mathrm{^\circ C}$和22$\,\mathrm{MPa}$，它可以在中等压力下实现较高温度的等温吸热。典型水工质朗肯循环太阳能系统的示意图如图\ref{fig:TypicalSteamRankineSolarSystem}所示。
 
 \noindent \begin{figure}[htbp]
 \centering
@@ -62,13 +81,14 @@ Water is the most commonly used fluid for Rankine cycle, it is more mature to de
 	\includegraphics[width = \columnwidth]{fig/TypicalOrganicRankineSolarSystem}
 	\caption{}\label{fig:TypicalOrganicRankineSolarSystem}
 	\end{subfigure}
-	\caption{Schematic diagrams of two types of Rankine cycle solar system}
+	\caption{典型的水工质和有机工质的朗肯循环的结构示意图}
 	\label{fig:TwoTypesOfRankineCycle}
 \end{figure}
 
-There are some disadvantages for steam as the Rankine cycle fluid. The low temperature characteristics of steam are not ideal because the steam has a low vapor pressure and a very low density at ambient temperature (see Table~\ref{tab:waterT_P_D}). Therefore, sealing air from low pressure components is a major design problem.
+%There are some disadvantages for steam as the Rankine cycle fluid. The low temperature characteristics of steam are not ideal because the steam has a low vapor pressure and a very low density at ambient temperature (see Table~\ref{tab:waterT_P_D}). Therefore, sealing air from low pressure components is a major design problem.
+水工质朗肯循环也存在一些缺点。蒸汽的低温特性并不理想，因为蒸汽在常温下具有很低的蒸气压和密度（参见表\ref{tab:waterT_P_D}）。对于低压部件，保持密封性，防止空气泄漏是设计中主要关注的问题。
 \begin{table}[htbp]
-	\caption{Saturated steam pressure at the corresponding temperature}
+	\caption{对应温度下的饱和蒸气压和密度}
 	\begin{center}
 	\begin{tabular}{cccccccccc}
 		\toprule	
@@ -186,7 +206,7 @@ In the second type, air-water heat exchanger is applied to transfer heat between
 \label{sec:HRBC}
 
 According to the second law of thermodynamics, it is impossible for any device that operates on a cycle to receive heat from a single reservoir and produces a net amount of work. For a heat engine, it requires both a hot source and a cold sink to convert heat energy to mechanical energy. 
-Figure~\ref{fig:engines} shows the $T-s$ diagram of a typical heat engine. In a thermodynamic cycle, heat is absorbed from the hot source, only part of it can be converted into mechanical work by the engine. The conversion ratio related to the temperatures of hot source and cold sink is fundamentally limited by Carnot's theorem.
+Figure~\ref{fig:engines} shows the $T$-$s$ diagram of a typical heat engine. In a thermodynamic cycle, heat is absorbed from the hot source, only part of it can be converted into mechanical work by the engine. The conversion ratio related to the temperatures of hot source and cold sink is fundamentally limited by Carnot's theorem.
 
 \begin{figure}[h]
 \centering 

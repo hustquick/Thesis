@@ -88,7 +88,7 @@
 %There are some disadvantages for steam as the Rankine cycle fluid. The low temperature characteristics of steam are not ideal because the steam has a low vapor pressure and a very low density at ambient temperature (see Table~\ref{tab:waterT_P_D}). Therefore, sealing air from low pressure components is a major design problem.
 水工质朗肯循环也存在一些缺点。蒸汽的低温特性并不理想，因为蒸汽在常温下具有很低的蒸气压和密度（参见表\ref{tab:waterT_P_D}）。对于低压部件，保持密封性，防止空气泄漏是设计中主要关注的问题。
 \begin{table}[htbp]
-	\caption{对应温度下的饱和蒸气压和密度}
+	\caption{对应温度下的饱和蒸气的压力和密度}
 	\begin{center}
 	\begin{tabular}{cccccccccc}
 		\toprule	
@@ -128,58 +128,69 @@
 \subsection{太阳能烟囱}
 \label{sec:sc}
 %Solar chimney, also known as solar updraft tower, directly (without concentration) uses the sun's heat to generate power. It uses solar radiation to increase the internal air temperature to form a flow to the chimney located at the middle of the roof. Figure~\ref{fig:SolarChimney} shows the schematic diagram of a typical solar chimney power plant. In this plant, air is heated by the green house effect under the translucent roof. As the roof is open at its periphery, air flows into the plant due to different density distribution. Hot air flows into the chimney because of buoyancy. An electricity-generating turbine is set in the path of the air current to convert the kinetic energy of the air flow into electricity.
-太阳能烟囱也被称为太阳能气流电站，直接（不聚光）利用太阳产生的热能来发电。太阳能烟囱发电系统由太阳能集热棚、太阳能烟囱和涡轮机发电机组3个基本部分所构成，图\ref{fig:SolarChimney}显示了一个典型的太阳能烟囱发电厂的示意图。 在这种植物中，空气在半透明屋顶下被温室效应加热。 由于屋顶在周边是开放的，由于密度分布不同，空气流入工厂。 由于浮力，热空气流入烟囱。 在气流路径上设置发电涡轮，将气流动能转化为电能。
+太阳能烟囱电站也被称为太阳能气流电站，直接（不聚光）利用太阳产生的热能来发电。太阳能烟囱发电系统由太阳能集热棚、太阳能烟囱和涡轮机发电机组3个基本部分所构成，典型的太阳能烟囱电站的示意图如图\ref{fig:SolarChimney}所示。太阳能烟囱电站建立在太阳辐射强度高、土地保温性能好的地区。集热棚离地面有一定距离，其外围周边是开放的。太阳能烟囱和集热棚连接，位于集热棚中央。涡轮机发电机组位于烟囱底部。
+在这种电站中，空气在半透明的集热棚下由于温室效应而升温，由于集热棚的周边是开放的，外部空气由于密度分布不同而流入集热棚，然后在浮力的作用下热空气流入烟囱。在气流的路径上设置有涡轮机发电机组，用于将气流的动能转化为电能。
 
 \begin{figure}[!ht]
 \centering 
 \includegraphics[width=0.5\textwidth]{fig/SolarChimney}
-\caption{Schematic diagram of a solar chimney power plant}\label{fig:SolarChimney}
+\caption{太阳能烟囱电站的结构示意图}\label{fig:SolarChimney}
 \end{figure}
 
-The solar chimney can use the low temperature (low grade energy) for power generation. So the combination of parabolic trough system and solar chimney is considered an effective way for energy cascade utilization. In the combined system, the condenser in the Rankine cycle is air cooled. The fan blows the hot air that has cooled the condenser into the solar chimney power plant from its periphery. The hot air stream converges at the bottom of chimney, flows upward with the action of buoyancy and drives the turbine in the chimney.
-Energy of the hot air can be utilized by the solar chimney. Figure~\ref{fig:CombinedSolarChimney} shows an example of the combined system. 
+%The solar chimney can use the low temperature (low grade energy) for power generation. So the combination of parabolic trough system and solar chimney is considered an effective way for energy cascade utilization. In the combined system, the condenser in the Rankine cycle is air cooled. The fan blows the hot air that has cooled the condenser into the solar chimney power plant from its periphery. The hot air stream converges at the bottom of chimney, flows upward with the action of buoyancy and drives the turbine in the chimney.
+%Energy of the hot air can be utilized by the solar chimney. Figure~\ref{fig:CombinedSolarChimney} shows an example of the combined system. 
+太阳能烟囱可以利用低温热源（低品位能源）发电。因此，槽式系统和太阳能烟囱的组合可以作为能源梯级利用的有效途径。在组合系统中，朗肯循环中的冷凝器是采用空冷。空冷风扇将冷却过冷凝器的热空气从太阳能烟囱的周边吹入太阳能烟囱发电厂。热气流汇聚在烟囱底部，在浮力作用下向上流动，带动烟囱内的涡轮机发电机组，从而实现朗肯循环凝结热的有效利用。
+图\ref{fig:CombinedSolarChimney}显示了一个槽式系统和太阳能烟囱组合的例子。
 
 \begin{figure}[!ht]
 \centering 
 \includegraphics[width=0.7\textwidth]{fig/CombinedSolarChimney}
-\caption{Schematic diagram of a combined solar trough and chimney power system}\label{fig:CombinedSolarChimney}
+\caption{槽式系统和太阳能烟囱组合结构示意图}\label{fig:CombinedSolarChimney}
 \end{figure}
 
-\subsection{Collector series connection}
+%\subsection{Collector series connection}
+\subsection{集热器串联连接}
 \label{sec:csc}
 
-Considering different heat collecting temperatures of different types of collectors, series connection of different types of collectors can be a feasible choice for solar cascade collection. Trough collectors and Fresnel collectors have better performance and lower cost for lower temperature heat collection. Dish collectors and solar towers are more suitable for higher temperature heat collection. Serial connection utilize the advantages of different types of collectors. Figure~\ref{fig:SeriesCollector} shows an example of a cascade system using collector series connection. In this system, air, the HTF, is preheated by parabolic collectors before it flows into the parabolic dish collectors.
+%Considering different heat collecting temperatures of different types of collectors, series connection of different types of collectors can be a feasible choice for solar cascade collection. Trough collectors and Fresnel collectors have better performance and lower cost for lower temperature heat collection. Dish collectors and solar towers are more suitable for higher temperature heat collection. Serial connection utilize the advantages of different types of collectors. Figure~\ref{fig:SeriesCollector} shows an example of a cascade system using collector series connection. In this system, air, the HTF, is preheated by parabolic collectors before it flows into the parabolic dish collectors.
+考虑到不同类型集热器的集热温度不同，采用不同类型集热器的串联连接是梯级集热的一种可行方案。槽式集热器和菲涅耳集热器更适合于低温集热，碟式集热器和塔式集热器更适合于更高温度的集热。串联连接利用不同类型的集热器可以有效利用它们各自的优点。图\ref{fig:SeriesCollector}给出了一个采用集热器串联连接的梯级系统的例子。 在这个系统中，空气作为传热介质在流入碟式集热器之前先被槽式集热器预热。槽式集热器用于收集低温热能，碟式集热器用于收集高温热能。
 
 \begin{figure}[!ht]
 \centering 
 \includegraphics[width=0.5\textwidth]{fig/SeriesCollector}
-\caption{Schematic diagram of a cascade system using collector series connection}\label{fig:SeriesCollector}
+\caption{一种采用集热器串联连接的梯级系统}\label{fig:SeriesCollector}
 \end{figure}
 
-\subsection{Direct steam generation}
+%\subsection{Direct steam generation}
+\subsection{直接产蒸汽}
 
-Direct steam generation (DSG) in parabolic troughs is considered as an attractive option for both economic and efficiency improvement of for solar thermal electricity generation applications.~\cite{Montes2011,Elsafi2015} It allows higher cycle temperatures and, consequently, higher Rankine cycle efficiencies.~\cite{Fraidenraich2013} In conventional parabolic trough solar plants, HTF (typically synthetic oil or melton salt) is used in the solar field. It leads to high pressure drop, limits the HTF related equipment operation, maintenance and cost. Besides, the highest temperature of the Rankine cycle is limited by HTF temperature, and large temperature difference exists between the HTF and working fluid of the Rankine cycle. So generating steam in the receiver tubes (direct steam generation, DSG) of the solar collector is one of the directions to reduce the cost and increase the efficiency of the parabolic trough systems. Figure~\ref{fig:DSG} shows the schematic diagram of a typical DSG solar system.
+%Direct steam generation (DSG) in parabolic troughs is considered as an attractive option for both economic and efficiency improvement of solar thermal electricity generation applications.~\cite{Montes2011,Elsafi2015} It allows higher cycle temperatures and, consequently, higher Rankine cycle efficiencies.~\cite{Fraidenraich2013} In conventional parabolic trough solar plants, HTF (typically synthetic oil or melton salt) is used in the solar field. It leads to high pressure drop, limits the HTF related equipment operation, maintenance and cost. Besides, the highest temperature of the Rankine cycle is limited by HTF temperature, and large temperature difference exists between the HTF and working fluid of the Rankine cycle. So generating steam in the receiver tubes (direct steam generation, DSG) of the solar collector is one of the directions to reduce the cost and increase the efficiency of the parabolic trough systems. Figure~\ref{fig:DSG} shows the schematic diagram of a typical DSG solar system.
+在太阳能槽式系统中采用直接产蒸汽（DSG）技术被认为是太阳能光热发电应用中可以同时提高系统效率并降低成本的选择。它允许更高的循环温度，并可以带来更高的朗肯循环效率。常规太阳能槽式系统中，传热流体（通常是合成油或熔融盐）用于将收集到的热能传递给朗肯循环做功工质。这会导致较高的压力损失，限制了传热流体相关设备的运行维护成本。此外，朗肯循环的最高温度受到传热流体温度的限制，而且传热流体与朗肯循环的工作介质之间存在较大的温差。因此，传统太阳能槽式系统的光电转换效率并不高。在太阳能集热器的接收管中直接产蒸汽是降低成本并提高系统效率的方法之一。典型的DSG太阳能系统的示意图如图\ref{fig:DSG}所示。
 
 \begin{figure}[!ht]
 \centering 
 \includegraphics[width=0.4\textwidth]{fig/DSG}
-\caption{Schematic diagram of a typical solar trough using DSG}\label{fig:DSG}
+\caption{典型的DSG太阳能系统示意图}\label{fig:DSG}
 \end{figure}
 
-\subsection{Heat exchanger between circuits}
+%\subsection{Heat exchanger between circuits}
+\subsection{回路间的传热}
 \label{sec:hebc}
 
-Heat transfer between different circuits can be applied for cascade utilization of the heat collected. Depending on the two basic solar system as shown in Figure~\ref{fig:PTPD}, there are two types of heat exchangers that can be applied in the cascade solar system.
+%Heat transfer between different circuits can be applied for cascade utilization of the heat collected. Depending on the two basic solar system as shown in Figure~\ref{fig:PTPD}, there are two types of heat exchangers that can be applied in the cascade solar system.
+不同回路之间的传热可用于实现能量的梯级利用。根据图\ref{fig:PTPD}所示的两个基本太阳能系统，可以在太阳能梯级系统中应用两种类型的换热器。
 
-For the first type, air-oil heat exchanger is applied to transfer heat between the air circuit and the oil circuit. Figure~\ref{fig:air-oil} shows an example of solar system using this type of heat exchanger. In this system, after providing heat for the Stirling engines, the hot air flows through the air-oil heat exchanger and provides heat for the oil. 
+%For the first type, air-oil heat exchanger is applied to transfer heat between the air circuit and the oil circuit. Figure~\ref{fig:air-oil} shows an example of solar system using this type of heat exchanger. In this system, after providing heat for the Stirling engines, the hot air flows through the air-oil heat exchanger and provides heat for the oil. 
+第一种是在空气回路和导热油回路之间使用空气-导热油换热器。图\ref{fig:air-oil}是使用了这种换热器的一个梯级系统实例。在这个系统中，热空气在为斯特林机组供热后，再流过空气-导热油换热器为导热油提供热量。
 
 \begin{figure}[h]
 \centering 
 \includegraphics[width=0.7\textwidth]{fig/air-oil}
-\caption{Schematic diagram of a solar system using air-oil heat exchanger}\label{fig:air-oil}
+\caption{使用空气-导热油换热器的太阳能光热系统示意图}\label{fig:air-oil}
 \end{figure}
 
-In the second type, air-water heat exchanger is applied to transfer heat between the air circuit and the water circuit. Figure~\ref{fig:air-water_1} and Figure~\ref{fig:air-water_2} show two different kinds of cascade solar systems using this type of heat exchanger. In Figure~\ref{fig:air-water_1}, after providing heat for the Stirling engines, hot air flows through the air-water heat exchanger and provides heat for superheating. In Figure~\ref{fig:air-water_2}, after providing heat for the Stirling engines, the hot air flows through the air-water heat exchanger and provides heat for preheating. 
+%In the second type, air-water heat exchanger is applied to transfer heat between the air circuit and the water circuit. Figure~\ref{fig:air-water_1} and Figure~\ref{fig:air-water_2} show two different kinds of cascade solar systems using this type of heat exchanger. In Figure~\ref{fig:air-water_1}, after providing heat for the Stirling engines, hot air flows through the air-water heat exchanger and provides heat for superheating. In Figure~\ref{fig:air-water_2}, after providing heat for the Stirling engines, the hot air flows through the air-water heat exchanger and provides heat for preheating.
+第二种是在空气回路和水回路之间使用空气-水换热器。图\ref{fig:air-water_1}和图\ref{fig:air-water_2}是使用了这种换热器的两个梯级系统实例。图\ref{fig:air-water_1}中，热空气在为斯特林机组供热后，再流经空气-水换热器，为水的过热过程提供热量。图\ref{fig:air-water_2}中，热空气在为斯特林机组供热后，再流经空气-水换热器，为水的预热过程提供热量。
 
 \noindent \begin{figure}[htbp]
 \centering
@@ -192,73 +203,83 @@ In the second type, air-water heat exchanger is applied to transfer heat between
 	\includegraphics[width = \columnwidth]{fig/air-water2}
 	\caption{}\label{fig:air-water_2}
 	\end{subfigure}
-	\caption{Schematic diagrams of two kinds of solar systems using air-water heat exchanger}
+	\caption{两种使用了空气-水换热器的梯级系统实例}
 	\label{fig:air-water}
 \end{figure}
 
-%\begin{figure}[h]
-%\centering 
-%\includegraphics[width=0.6\textwidth]{fig/air-water1}
-%\caption{schematic diagram of a solar system using air-water heat exchanger}\label{fig:air-water1}
-%\end{figure}
-%
-%\begin{figure}[h]
-%\centering 
-%\includegraphics[width=0.6\textwidth]{fig/air-water2}
-%\caption{schematic diagram of a solar system using air-water heat exchanger}\label{fig:air-water1}
-%\end{figure}
-\subsection{Heat recovery between cycles}
+\subsection{循环之间热量利用}
 \label{sec:HRBC}
 
-According to the second law of thermodynamics, it is impossible for any device that operates on a cycle to receive heat from a single reservoir and produces a net amount of work. For a heat engine, it requires both a hot source and a cold sink to convert heat energy to mechanical energy. 
-Figure~\ref{fig:engines} shows the $T$-$s$ diagram of a typical heat engine. In a thermodynamic cycle, heat is absorbed from the hot source, only part of it can be converted into mechanical work by the engine. The conversion ratio related to the temperatures of hot source and cold sink is fundamentally limited by Carnot's theorem.
+%According to the second law of thermodynamics, it is impossible for any device that operates on a cycle to receive heat from a single reservoir and produces a net amount of work. For a heat engine, it requires both a hot source and a cold sink to convert heat energy to mechanical energy. 
+%Figure~\ref{fig:engines} shows the $T$-$s$ diagram of a typical heat engine. In a thermodynamic cycle, heat is absorbed from the hot source, only part of it can be converted into mechanical work by the engine. The conversion ratio related to the temperatures of hot source and cold sink is fundamentally limited by Carnot's theorem.
+根据热力学第二定律，不可能从单一热源吸热使之完全转换为有用的功而不产生其他影响。对于热机，它同时需要热源和冷源来将热能转化为机械能。典型热机的热功转换图如图\ref{fig:engines}所示。在热力循环中，从热源吸收的热量，只有一部分可以通过热机转化为机械功，其它部分需要传递到冷源。卡诺定理从根本上限制了与热源温度和冷源温度有关的热功转换比，即$\dfrac{W}{Q_H} \leqslant \dfrac{T_H - T_C}{T_H}$，其中$T_H$和$T_C$的单位为$\mathrm{K}$。
 
 \begin{figure}[h]
 \centering 
 \includegraphics[width=0.5\textwidth]{fig/engines}
-\caption{Diagram of a typical heat engine}\label{fig:engines}
+\caption{典型热机的热功转换图}\label{fig:engines}
 \end{figure}
 
-Only those engines suitable for external heating are usually considered for solar applications. Unlike an internal combustion engine that generates heat within the working fluid, an externally heated engine needs external heat to be added to the working fluid by a heat exchanger.
+%Only those engines suitable for external heating are usually considered for solar applications. Unlike an internal combustion engine that generates heat within the working fluid, an externally heated engine needs external heat to be added to the working fluid by a heat exchanger.
+对于太阳能光热应用，仅考虑外部加热的热机。与在工作流体内产生热量的内燃机不同，外部加热的发动机需要通过换热器向工作流体添加外部热量。
 
-Three types of engines are designed to accept external heat and have been used for solar heat sources: the Rankine, the Stirling, and the Brayton cycles~\cite{Roschke1979}. The Rankine and Brayton cycles are both suitable for constant-pressure heat-addition. 
-The original Brayton engine uses piston compressors and piston expanders, but more modern gas turbines and airbreathing jet engines also follow the Brayton cycle. Although the cycle is usually an open system, in order to carry out thermodynamic analysis, usually it is assumed that exhaust gases are reused as the intake so that the whole process can be analyzed as a closed cycle.
-The Stirling machine uses a reciprocating piston design that allows external heating to be combined into its constant-temperature heat-addition process. 
-In a Rankine cycle, the pressurized liquid enters a heat exchanger where it is heated at constant pressure by an external heat source to become vapor.
+%Three types of engines are designed to accept external heat and have been used for solar heat sources: the Rankine, the Stirling, and the Brayton cycles~\cite{Roschke1979}. The Rankine and Brayton cycles are both suitable for constant-pressure heat-addition. 
+%The original Brayton engine uses piston compressors and piston expanders, but more modern gas turbines and airbreathing jet engines also follow the Brayton cycle. Although the cycle is usually an open system, in order to carry out thermodynamic analysis, usually it is assumed that exhaust gases are reused as the intake so that the whole process can be analyzed as a closed cycle.
+%The Stirling machine uses a reciprocating piston design that allows external heating to be combined into its constant-temperature heat-addition process. 
+%In a Rankine cycle, the pressurized liquid enters a heat exchanger where it is heated at constant pressure by an external heat source to become vapor.
+根据热功循环型式的不同，有三种设计成接受外部热量的热机，它们都已经应用于太阳能光热应用。这三种热机所采用的热工循环型式为朗肯循环（Rankine cycle）、斯特林循环（Stirling cycle）和布雷顿循环（Brayton cycle）。其中，朗肯循环和布雷顿循环都适用于恒压加热。
 
-These three kinds of cycles work at different optimum operating temperatures. Rankine cycle works with the lowest hot source temperature and Brayton works with the highest. Figure~\ref{fig:cycles} shows the diagram of the three cycles used in solar energy. The heat released by these cycles may be recovered by another cycle (as a bottom cycle).
+最初的布雷顿热机使用活塞式压缩机和活塞式膨胀机，但更现代化的燃气轮机和吹气式喷气发动机也遵循布雷顿循环。 尽管循环通常是一个开放的系统，但为了进行热力学分析，通常假定废气被重新用作进气，使得整个过程可以被分析为闭式循环。
+斯特林机采用往复式活塞设计，可将外部加热结合到恒温加热过程中。
+在朗肯循环中，加压液体进入热交换器，在热交换器中由外部热源以恒定压力加热成为蒸气。
+
+%These three kinds of cycles work at different optimum operating temperatures. Rankine cycle works with the lowest hot source temperature and Brayton works with the highest. Figure~\ref{fig:cycles} shows the diagram of the three cycles used in solar energy. The heat released by these cycles may be recovered by another cycle (as a bottom cycle).
+这三种循环具有不同的最佳工作温度。 朗肯循环的最佳工作温度最低，布雷顿循环的最佳工作温度最高。太阳能光热应用中使用的三种热功循环的$T$-$s$图如图\ref{fig:cycles}所示。
 
 \begin{figure}[h]
 \centering 
 \includegraphics[width=0.5\textwidth]{fig/cycles}
-\caption{Diagram of three cycles used in solar energy}\label{fig:cycles}
+\caption{太阳能光热应用中所使用的三种热功循环的$T$-$s$图}\label{fig:cycles}
 \end{figure}
 
-\section{System topology selection}
+%\section{System topology selection}
+\section{系统拓扑结构的选择}
 \label{sec:sts}
-\subsection{Rankine cycle fluid}
+%\subsection{Rankine cycle fluid}
+\subsection{朗肯循环工质}
 
-There are two important aspects to consider when selecting the working fluid of the Rankine cycle solar power system:
+%There are two important aspects to consider when selecting the working fluid of the Rankine cycle solar power system:
+选择朗肯循环太阳能系统的传热流体时需要考虑两个重要方面：
 \begin{enumerate}
-  \item Select the working fluid that is conducive to the optimization of the cycle efficiency.  
-  For a Rankine cycle solar system, the collector efficiency reduces with operating temperature, and the Rankine cycle efficiency increases with operating temperature, there exists an optimal operating temperature as illustrated in Figure~\ref{fig:Efficiency}. The working fluid should be conducive to achieve the optimal operating temperature.
+%  \item Select the working fluid that is conducive to the optimization of the system efficiency.  
+%  For a Rankine cycle solar system, the collector efficiency reduces with operating temperature, and the Rankine cycle efficiency increases with operating temperature, there exists an optimal operating temperature as illustrated in Figure~\ref{fig:Efficiency}. The working fluid should be conducive to achieve the optimal operating temperature.
+  \item 选择的传热流体易于在最佳运行温度条件下运行。
+  对于朗肯循环太阳能光热系统，集热器效率随着工作温度的升高而降低，朗肯循环的效率随着工作温度的升高而升高，系统的总效率存在如图\ref{fig:Efficiency}所示的最佳工作温度。传热流体应当有利于达到该最佳工作温度。  
   
-  \item The working fluid state matches the heat transfer fluid state, if heat transfer fluid is used.
-    On the one hand, the operating temperature of the working fluid should be lower than the collecting temperature of the HTF. On the other hand, the operating temperature of the working fluid should not be much lower than the collecting temperature of the HTF to avoid large exergy loss during the heat exchange process.
+%  \item The working fluid state matches the heat transfer fluid state, if heat transfer fluid is used.
+%    On the one hand, the operating temperature of the working fluid should be lower than the collecting temperature of the HTF. On the other hand, the operating temperature of the working fluid should not be much lower than the collecting temperature of the HTF to avoid large exergy loss during the heat exchange process.
+  \item 如果使用传热流体，则传热流体的状态需要和热功循环的工作流体的状态相匹配。
+  一方面，工作流体的工作温度应该低于传热流体的收集温度。另一方面，工作流体的工作温度不应该比传热流体的收集温度低很多，以避免热交换过程中产生大量的㶲损失。
+  
 \end{enumerate}
 \begin{figure}[!ht]
 \centering 
 \includegraphics[width=0.5\textwidth]{fig/Efficiency}
-\caption{Efficiency variation with operating temperature}\label{fig:Efficiency}
+\caption{不同运行温度下的效率曲线}\label{fig:Efficiency}
 \end{figure}
 
-Based on the advantages and disadvantages of water and organic fluid as the working fluid of Rankine cycle, it is clear that, for low operating temperature and small capacity distribution power generation, organic fluid will be a better choice, otherwise water is the better one. Bao and Zhao~\cite{Bao2013} presented a comprehensive review of working fluid selection (including pure fluids and mixtures). In this review, many factors such as operating conditions, working fluid characteristics, equipment structures and environmental safety considerations were considered.
-It has to be mentioned that the types of working fluids (mainly dry or wet) will affect the operation and layout of the system.
+%Based on the advantages and disadvantages of water and organic fluid as the working fluid of Rankine cycle, it is clear that, for low operating temperature and small capacity distribution power generation, organic fluid will be a better choice, otherwise water is the better one. Bao and Zhao~\cite{Bao2013} presented a comprehensive review of working fluid selection (including pure fluids and mixtures). In this review, many factors such as operating conditions, working fluid characteristics, equipment structures and environmental safety considerations were considered.
+%It has to be mentioned that the types of working fluids (mainly dry or wet) will affect the operation and layout of the system.
+第\ref{sec:RankineCycleFluid}节中详细介绍了水和有机流体作为朗肯循环的工作流体的优缺点，很清楚，对于低参数和小容量的配电发电，有机流体将是更好的选择，否则水是更好的选择。Bao和Zhao\cite{Bao2013}对工作流体的选择（包括纯液体和混合液）进行了全面的综述。在该综述中，考虑了许多因素，如操作条件，工作流体的特性，设备结构和环境安全等。
+必须指出的是，工作流体的种类（主要是干流体或湿流体）会影响系统的运行和布局。
 
-\subsection{Solar chimney}
+%\subsection{Solar chimney}
+\subsection{太阳能烟囱}
 
-Section~\ref{sec:sc} shows the idea of coupling solar chimney to concentrated solar thermal power generation technologies.
-However, the efficiency of current solar chimney system is very low. Primary design data of solar chimney power plants with different location, different chimney height and collector height are shown in Table~\ref{tab:sc}~\cite{Bilgen2005}. The preliminary design parameters are selected and determined for a nominal solar irradiation intensity of 1000$\,\mathrm{W/m^2}$ and the nominal plant power of 5$\,\mathrm{MW}$. From the table, it can be found that the chimney efficiency and total efficiency are very low and the technology is still in the developing stage.
+%Section~\ref{sec:sc} shows the idea of coupling solar chimney to concentrated solar thermal power generation technologies.
+%However, the efficiency of current solar chimney system is very low. Primary design data of solar chimney power plants with different location, different chimney height and collector height are shown in Table~\ref{tab:sc}~. The preliminary design parameters are selected and determined for a nominal solar irradiation intensity of 1000$\,\mathrm{W/m^2}$ and the nominal plant power of 5$\,\mathrm{MW}$. From the table, it can be found that the chimney efficiency and total efficiency are very low and the technology is still in the developing stage.
+第\ref{sec:sc}小节提出了将太阳能烟囱连接到太阳能槽式光热发电技术的观点。
+然而，目前的太阳能烟囱系统的效率非常低。Bilgen和Rheault利用MATLAB建立了5MW的太阳能烟囱模型\cite{Bilgen2005}。他们对不同位置，不同烟囱高度和集热器高度的太阳能烟囱电站进行了模拟分析。其主要设计数据如表\ref{tab:sc}所示。 初步的设计参数为太阳辐射强度为1000$\mathrm{W/m^2}$和额定功率为5$\mathrm{MW}$。从表中可以看出，烟囱效率和系统总效率都很低，太阳能烟囱技术仍处于发展阶段。
 \begin{table}[htbp]
 	\caption{Results of SEA models under specified parameters}
 	\begin{center}
@@ -288,7 +309,8 @@ However, the efficiency of current solar chimney system is very low. Primary des
 %Besides, it will cost much more to apply a chimney tower in the demonstration system of this project. 
 Besides, a solar chimney is costly and requires vast land, which is adverse to the future deployment of solar cascade demo system. With these considerations, the solar chimney plans are not adopted for the cascade system. 
 
-\subsection{Collector series connection}
+%\subsection{Collector series connection}
+\subsection{集热器串联连接}
 Each type of collector has its own suitable temperature range. It is feasible to heat the HTF step by step using different types of collectors with series connection.
 
 A collector series connection is proposed in Section~\ref{sec:csc} (see Figure~\ref{fig:SeriesCollector}) depending on the basic systems. In this configuration, air is heated in the trough collectors and dish receivers consequently. After providing heat for the Stirling engines, the hot air flows into the heat exchanger to provide heat for the Rankine cycle. In this topology, air is used as the HTF for the solar trough, this idea is only numerically and experimentally studied,~\cite{Good2015,Good2016} no commercial applications can be found up to now. This technology is mainly constrained by the low conductivity and low heat capacity of air, which leads to low system efficiency. For this consideration, this topology is not adopted due to the air parabolic trough technology.
@@ -301,7 +323,8 @@ It can be a good choice to apply flat plate solar collectors and parabolic troug
 \caption{Schematic diagram of a solar power tower using collector series connection}\label{fig:seriesCollection}
 \end{figure}
 
-\subsection{Direct steam generation}
+%\subsection{Direct steam generation}
+\subsection{直接产蒸汽}
 Direct steam generation for solar thermal power generation has the advantages of having fewer components and no temperature drop due to an intermediate transfer. Besides, it is clear that water is characterized by lower environmental risk than thermal oil so that leakages in a DSG power plant do not represent an environmental hazard~\cite{Fernandez2010}. Water has a lower freezing temperature than thermal oil and solar salt: the efforts required to ensure adequate anti-freezing protection are significantly reduced. Water is also less corrosive than solar salt~\cite{Giglio2017}.
  
 However, all the CSP commercial plants already built apply indirect steam generation, with the exception of the 5$\,\mathrm{MWe}$ DSG Thai Solar One (TSE-1) plant in Thailand (Thailand, 2012)~\cite{Khenissi2015}. 
@@ -318,7 +341,8 @@ Indeed, handling of movable and flexible parts forming the collector's receiver 
 
 Applying direct steam generation may be a better choice in the cascade system in the future, however, it is not adopted for the cascade system for its immaturity.
 
-\subsection{Heat exchanger between circuits}
+%\subsection{Heat exchanger between circuits}
+\subsection{回路间的换热}
 
 Section~\ref{sec:hebc} introduces two types of heat exchangers that may be applied in the solar thermal cascade system -- the air-oil heat exchanger (see in Figure~\ref{fig:air-oil_c}) and the air-water heat exchanger (see in Figure~\ref{fig:air-water_c}). 
 
@@ -348,7 +372,8 @@ For the first type, air provides heat for oil. It is not economic for several re
 For the second type, air provides heat for water. Two kinds of solar systems using air-water heat exchanger can be found in Figure~\ref{fig:air-water_c}. Figure~\ref{fig:air-water_1_c} shows the scheme that air after the Stirling engine is used to overheat the steam. It's feasible since the air can increase the average temperature of the endothermic process of the water to increase the efficiency of Rankine cycle. On the other hand, in a conventional solar trough system, the main steam temperature is limited by the oil, which is not conductive to Rankine cycle efficiency. In this proposed cascade system, the main steam temperature of the Rankine cycle can be raised to be higher than 400$\mathrm{^\circ C}$ to eliminate the negative effect of the oil.
 This is the scheme that will be discussed in detail in the next few chapters. Figure~\ref{fig:air-water_2_c} shows the scheme that air after the Stirling engine is used to preheat the feed water. It is not a good choice since the temperature difference of the heat transfer process is large and it provides no benefits to increase the inlet temperature of the steam turbine.
  
-\subsection{Heat recovery between cycles}
+%\subsection{Heat recovery between cycles}
+\subsection{循环之间热量利用}
 As it is mentioned in Section~\ref{sec:HRBC}, different thermodynamic cycles work at different optimum working temperatures. Since each thermodynamic cycle has endothermic and exothermic processes, a bottoming cycle may use the released heat of a topping cycle.
 
 \noindent \begin{figure}[htbp]

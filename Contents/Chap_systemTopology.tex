@@ -16,14 +16,14 @@
 由于太阳能塔式发电系统占地面积较大，投资成本太高，考虑到未来需要搭建太阳能光热梯级发电示范系统，本文仅选择两种太阳能光热发电技术（太阳能槽式发电和太阳能碟式发电）作为太阳能光热梯级发电系统设计的基本系统。为了实现对太阳能碟式集热器获得的高温热量进行梯级利用，采用空气（或氮气）作为太阳能碟式发电系统的传热介质来传输所收集的热量。
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.8\textwidth]{fig/PTPD_CN.pdf}
+\includegraphics[width=0.8\textwidth]{fig/PTPD.pdf}
 \caption{太阳能槽式发电系统和太阳能碟式发电系统结构示意图}
 \label{fig:PTPD}
 \end{figure}
 典型的太阳能槽式发电系统和太阳能碟式发电系统的结构示意图如图\ref{fig:PTPD}所示。为使本文中的系统结构图更加清晰和一致，图\ref{fig:Legends}列出了太阳能光热发电系统中可能出现的所有元件的图例。
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.8\textwidth]{fig/Legends_CN.pdf}
+\includegraphics[width=0.8\textwidth]{fig/Legends.pdf}
 \caption{太阳能光热发电系统中的元件列表}
 \label{fig:Legends}
 \end{figure}
@@ -37,16 +37,16 @@
 
 \begin{figure}[!ht]
 \centering 
-\includegraphics[width=0.5\textwidth]{fig/idealTs_CN}
+\includegraphics[width=0.5\textwidth]{fig/idealTs}
 \caption{用于朗肯循环的理想工质的温熵图}
-\label{fig:idealTs_CN}
+\label{fig:idealTs}
 \end{figure}
 
 %An ideal working fluid for Rankine cycle would have the temperature-entropy diagram given in Figure~\ref{fig:idealTs}. The following characteristics listed by Abbin and Leuenberger~\cite{Abbin1977} describe this fluid:
-不同应用于朗肯循环的工质的温熵曲线如图\ref{fig:idealTs_CN}所示。需要说明的是，图中各曲线只是用于表示不同工质的饱和曲线形状，曲线对应的熵值和温度不代表其真实熵值和温度，也不能用于不同工质之间的比较。其中，理想工质具有以下特点\cite{Abbin1977}：
+不同应用于朗肯循环的工质的温熵曲线如图\ref{fig:idealTs}所示。需要说明的是，图中各曲线只是用于表示不同工质的饱和曲线形状，曲线对应的熵值和温度不代表其真实熵值和温度，也不能用于不同工质之间的比较。其中，理想工质具有以下特点\cite{Abbin1977}：
 \begin{itemize}
 %  \item The heat capacity of the liquid phase should be small. This makes the curve 22' in Figure~\ref{fig:idealTs} almost vertical.
-	\item 饱和液体的比热容要小，这样图.\ref{fig:idealTs_CN}中的曲线2-2'才接近竖直。
+	\item 饱和液体的比热容要小，这样图.\ref{fig:idealTs}中的曲线2-2'才接近竖直。
 %  \item The critical point should be above the highest operating temperature to allow all heat to be added at that temperature.
 	\item 临界点温度要高于最高运行温度，以便于所有的吸热过程都发生在临界点温度以下。
 %  \item The vapor pressure at the highest operating temperature should be moderate for safety reasons and to reduce the cost of the equipment.
@@ -56,7 +56,7 @@
 %  \item The specific volume of the vapor at state 4 should be small to avoid large-diameter turbine wheels, casings, and heat exchangers.
 	\item 状态点4的蒸气的密度应该较大，这样可以避免大直径的汽轮机叶片，壳体和热交换器。
 %  \item The saturated vapor curve 3-4 in Figure~\ref{fig:idealTs} should be vertical to avoid expansion into the wet vapor region (negative $ds/dT$) or expansion into the superheat region (positive $ds/dT$).
-	\item 图\ref{fig:idealTs_CN}中气态饱和曲线3-4应该接近竖直，从而避免汽轮机中的工质膨胀进入湿蒸汽区（$ds/dT < 0$的情况）或是过热区（$ds/dT > 0$的情况）。
+	\item 图\ref{fig:idealTs}中气态饱和曲线3-4应该接近竖直，从而避免汽轮机中的工质膨胀进入湿蒸汽区（$ds/dT < 0$的情况）或是过热区（$ds/dT > 0$的情况）。
 %  \item For low-power turbine applications, the fluid should have a high molecular weight to minimize the rotational speed and/or the number of turbine stages and to allow for reasonable mass flow rates and turbine nozzle areas.
 	\item 对于小功率汽轮机的应用，工质应该具有较高的分子量以减小汽轮机的转速和（或）级的数量，并且允许合适的质量流量和汽轮机喷嘴面积。
 %  \item The fluid should be liquid at atmospheric pressure and temperature for ease of handling and containment.
@@ -68,7 +68,7 @@
 \end{itemize}
 
 %Water is the most commonly used fluid for Rankine cycle, it is more mature to design Rankine cycle components for steam systems than any other liquid. It is inexpensive to use (although boiler-grade water must be highly distilled and thus costs more than tap water), sealing of the high-pressure portions of a Rankine cycle using steam is not critical. Non-flammability and ready availability of steam are additional advantages. Because it has a critical temperature and pressure of 374$\mathrm{^\circ C}$ and 22.1$\,\mathrm{MPa}$, it can be used for systems operating at fairly high temperatures with most of the heat addition (at constant temperature) and at moderate pressure. Figure~\ref{fig:TypicalSteamRankineSolarSystem} shows the schematic diagram of a typical steam Rankine cycle solar system.
-水是朗肯循环中最常用的工质，水工质朗肯循环的各部件相关的技术比其他工质更为成熟。水的价格便宜（虽然锅炉级的水必须是高度蒸馏的，因此成本比自来水高），水工质朗肯循环的高压部分的密封并没有其它工质那么重要。此外，蒸汽的不易燃性和可用性是其额外的优点。因为它的临界温度和压力分别为374$\mathrm{^\circ C}$和22$\,\mathrm{MPa}$，它可以在中等压力下实现较高温度的等温吸热。典型水工质朗肯循环太阳能系统的示意图如图\ref{fig:TypicalSteamRankineSolarSystem}所示。
+水是朗肯循环中最常用的工质，水工质朗肯循环的各部件相关的技术比其他工质更为成熟。水的价格便宜（虽然锅炉级的水必须是高度蒸馏的，因此成本比自来水高），水工质朗肯循环的高压部分的密封并没有其它工质那么重要。此外，蒸汽的不易燃性和可用性是其额外的优点。因为它的临界温度和压力分别为374$\mathrm{^\circ C}$和22$\,\mathrm{MPa}$，它可以在中等压力下实现较高温度的等温吸热。典型水工质朗肯循环太阳能光热系统的示意图如图\ref{fig:TypicalSteamRankineSolarSystem}所示。
 
 \noindent \begin{figure}[htbp]
 \centering
@@ -81,7 +81,7 @@
 	\includegraphics[width = \columnwidth]{fig/TypicalOrganicRankineSolarSystem}
 	\caption{}\label{fig:TypicalOrganicRankineSolarSystem}
 	\end{subfigure}
-	\caption{典型的水工质和有机工质的朗肯循环的结构示意图}
+	\caption{典型的水工质和有机工质的朗肯循环的太阳能光热系统结构示意图}
 	\label{fig:TwoTypesOfRankineCycle}
 \end{figure}
 
@@ -102,28 +102,33 @@
 	\label{tab:waterT_P_D}
 \end{table}
 
-The organic Rankine cycle can be used in the solar parabolic trough technology in place of the usual steam Rankine cycle. The ORC allows power generation at lower capacities and with a lower collector temperature, and hence the possibility for low-cost, small scale decentralized CSP units. Most organic fluids used in organic Rankine cycle are drying fluids. The vapor leaving the expander still contains heat that can be transferred to the compressed liquid stream because the turbine outlet temperature is above the condenser temperature. A vapor-to-liquid heat exchanger, known as a regenerator, is typically used for this purpose.
-Figure~\ref{fig:TypicalOrganicRankineSolarSystem} shows the schematic diagram of a typical organic Rankine cycle solar system. 
+%The organic Rankine cycle can be used in the solar parabolic trough technology in place of the usual steam Rankine cycle. The ORC allows power generation at lower capacities and with a lower collector temperature, and hence the possibility for low-cost, small scale decentralized CSP units. Most organic fluids used in organic Rankine cycle are drying fluids. The vapor leaving the expander still contains heat that can be transferred to the compressed liquid stream because the turbine outlet temperature is above the condenser temperature. A vapor-to-liquid heat exchanger, known as a regenerator, is typically used for this purpose.
+%Figure~\ref{fig:TypicalOrganicRankineSolarSystem} shows the schematic diagram of a typical organic Rankine cycle solar system.
+有机工质朗肯循环（ORC）也可应用于太阳能槽式发电，取代常见的水工质朗肯循环。ORC可以在小功率和低集热温度的条件下进行发电，因此可以用于生产低成本，小规模的分布式CSP装置。ORC中使用的大多数有机工质是干流体（温熵图上$ds/dT > 0$）。汽轮机出口的气体具有一定的过热度，由于汽轮机出口温度高于冷凝器温度，所以可以将一部分热量传递给压缩过的液态有机工质。回热器就是为了利用这一部分热量而设计的，回热器为过热蒸气-过冷液体换热器。
+典型的有机工质太阳能光热系统结构示意图如图\ref{fig:TypicalOrganicRankineSolarSystem}所示。
 
-%\begin{figure}[!ht]
-%\centering 
-%\includegraphics[width=0.7\textwidth]{fig/TypicalOrganicRankineSolarSystem}
-%\caption{Schematic diagram of a typical organic Rankine cycle solar system}\label{fig:TypicalOrganicRankineSolarSystem}
-%\end{figure}
-
-Compared with steam for the Rankine cycle, it has the following advantages:
+%Compared with steam for the Rankine cycle, it has the following advantages:
+与水工质朗肯循环相比，它具有以下优点：
 \begin{itemize}
-  \item  Small turbine head allows for moderate shaft speed and a single- or two-stage design.
-    \item Low volume ratio facilitates the flow path design.
-    \item High volume flow and low velocity of sound results in reasonable flow areas.
-    \item Low temperature drop during expansion reduces thermal stress problems.
-    \item Dry expansion avoids blade erosion caused by vapor wetness.
-    \item Low system pressure facilitates housing design.
+%  \item  Small turbine head allows for moderate shaft speed and a single- or two-stage design.
+	\item 在中等转速和单级或双级的设计条件下可以实现小型汽轮机。
+%    \item Low volume ratio facilitates the flow path design.
+    \item 较低的体积比更有利于流道的设计。
+%    \item High volume flow and low velocity of sound results in reasonable flow areas.
+    \item 较高的体积流量和音速值便于设计合理大小的流通面积。
+%    \item Low temperature drop during expansion reduces thermal stress problems.
+    \item 有机工质在膨胀的过程中温降很小，这有利于减少热应力导致的各种问题。
+%    \item Dry expansion avoids blade erosion caused by vapor wetness.
+	\item 干流体可以避免由于乏气存在湿度造成的叶片侵蚀。
+%    \item Low system pressure facilitates housing design.
+	\item 较低的系统运行压力便于一体化设计。
   \end{itemize}
 
-\subsection{Solar chimney}
+%\subsection{Solar chimney}
+\subsection{太阳能烟囱}
 \label{sec:sc}
-Solar chimney, also known as solar updraft tower, directly (without concentration) uses the sun's heat to generate power. It uses solar radiation to increase the internal air temperature to form a flow to the chimney located at the middle of the roof. Figure~\ref{fig:SolarChimney} shows the schematic diagram of a typical solar chimney power plant. In this plant, air is heated by the green house effect under the translucent roof. As the roof is open at its periphery, air flows into the plant due to different density distribution. Hot air flows into the chimney because of buoyancy. An electricity-generating turbine is set in the path of the air current to convert the kinetic energy of the air flow into electricity.
+%Solar chimney, also known as solar updraft tower, directly (without concentration) uses the sun's heat to generate power. It uses solar radiation to increase the internal air temperature to form a flow to the chimney located at the middle of the roof. Figure~\ref{fig:SolarChimney} shows the schematic diagram of a typical solar chimney power plant. In this plant, air is heated by the green house effect under the translucent roof. As the roof is open at its periphery, air flows into the plant due to different density distribution. Hot air flows into the chimney because of buoyancy. An electricity-generating turbine is set in the path of the air current to convert the kinetic energy of the air flow into electricity.
+太阳能烟囱也被称为太阳能气流电站，直接（不聚光）利用太阳产生的热能来发电。太阳能烟囱发电系统由太阳能集热棚、太阳能烟囱和涡轮机发电机组3个基本部分所构成，图\ref{fig:SolarChimney}显示了一个典型的太阳能烟囱发电厂的示意图。 在这种植物中，空气在半透明屋顶下被温室效应加热。 由于屋顶在周边是开放的，由于密度分布不同，空气流入工厂。 由于浮力，热空气流入烟囱。 在气流路径上设置发电涡轮，将气流动能转化为电能。
 
 \begin{figure}[!ht]
 \centering 

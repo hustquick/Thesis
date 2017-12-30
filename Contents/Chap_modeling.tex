@@ -1,58 +1,81 @@
-\chapter{Modeling}
+%\chapter{Modeling}
+\chapter{建模}
 \label{cha:Modeling}
 
-To investigate the performance of the proposed cascade systems, mechanism models of the systems are developed with EES (Engineering Equation Solver) and MATLAB (Matrix Laboratory). Bottom-up design method is used for the system modeling. Firstly, the mechanism models developed in EES are used to validate the theoretical relationships of the models. Secondly, the component models are developed in MATLAB using object-oriented method. It makes full use of inheritance and polymorphism to ensure both the independence and the relevance of the components.
+%To investigate the performance of the proposed cascade systems, mechanism models of the systems are developed with EES (Engineering Equation Solver) and MATLAB (Matrix Laboratory). Bottom-up design method is used for the system modeling. Firstly, the mechanism models developed in EES are used to validate the theoretical relationships of the models. Secondly, the component models are developed in MATLAB using object-oriented method. It makes full use of inheritance and polymorphism to ensure both the independence and the relevance of the components.
 %The cascade system is developed in several blocks. These blocks are made of circuits with efficiency calculations. 
-Three circuits, air circuit, water circuit and oil circuit, are developed with some specific state parameters in some key components. Energy-based models of these key components are created on the basis of their thermodynamic behavior, heat transfer and the second law.
+%Three circuits, air circuit, water circuit and oil circuit, are developed with some specific state parameters in some key components. Energy-based models of these key components are created on the basis of their thermodynamic behavior, heat transfer and the second law.
+为了研究所提出的梯级系统的性能，使用EES（Engineering Equation Solver）和MATLAB（Matrix Laboratory）作为计算工具和开发工具开发了系统的机理模型。系统建模采用自底向上的设计方法。首先，在EES中建立机理模型用于来验证模型中各参数间的物理关系。其次，使用面向对象的方法在MATLAB中开发出组件模型，它充分利用了面向对象的继承性和多态性来保证组件之间的独立性和相关性。
+依据不同流体，创建了三个回路（空气回路，水回路和油回路），并确定了一些关键部件的特定的状态参数。依据这些关键部件的热力学特性和热力学第二定律，为其创建了基于能量平衡的机理模型。
 
-The following part introduce models of some key components.
-\section{Component modeling}
-\subsection{Parabolic trough collector}
+%The following part introduce models of some key components.
+以下部分介绍一些关键部件的模型。
+
+%\section{Component modeling}
+\section{部件建模}
+%\subsection{Parabolic trough collector}
+\subsection{槽式集热器}
 \label{sec:ptc}
 
-Parabolic trough collector consists of a reflector and a receiver. The reflector (mirror) reflects direct normal radiation and concentrates it onto a receiver tube located at the focal line of the parabola. The receiver is typically a metal absorber tube with high absorption rate coating. An outer glass tube is used outside the absorber tube to reduce thermal losses and the space between the absorber tube and the glass tube is usually drawn into a vacuum to further reduce thermal losses.
+%Parabolic trough collector consists of a reflector and a receiver. The reflector (mirror) reflects direct normal radiation and concentrates it onto a receiver tube located at the focal line of the parabola. The receiver is typically a metal absorber tube with high absorption rate coating. An outer glass tube is used outside the absorber tube to reduce thermal losses and the space between the absorber tube and the glass tube is usually drawn into a vacuum to further reduce thermal losses.
+槽式集热器由反射镜和接收器组成。反射镜（镜面）反射太阳直射辐射并将其会聚到位于抛物槽面焦线处的接收器上。接收器通常包含涂有高吸收率涂层的金属吸热管。在吸热管外部设有玻璃管以减少散热损失，吸热管和玻璃管之间通常被抽成真空以进一步减少热损。
 
-Optical loss exists in the reflection process due to optical efficiency terms. The reflection terms can be listed as bellow~\cite{Price2002}:
+%Optical loss exists in the reflection process due to optical efficiency terms. The reflection terms can be listed as bellow~\cite{Price2002}:
+在反射过程中存在着光学损失，主要包含以下几项\cite{Price2002}：
 
 \begin{itemize}
-  \item Shadowing factor
-  \item Tracking error
-  \item Geometry error
-  \item Clean mirror reflectance
-  \item Dirt on mirrors
-  \item Unaccounted errors
+%  \item Shadowing factor
+  \item 遮挡损失
+%  \item Tracking error
+  \item 追踪损失
+%  \item Geometry error
+  \item 形状损失
+%  \item Clean mirror reflectance
+  \item 反射率损失
+%  \item Dirt on mirrors
+  \item 镜面沾污损失
+%  \item Unaccounted errors
+  \item 其它未列入损失
 \end{itemize}
 
-Another term, incident angle modifier $K(\theta)$, should be concerned when the solar irradiation is not normal to the collector aperture. It is a function of the solar incidence angle to the normal of the collector aperture ($\theta$).
+%Another term, incident angle modifier $K(\theta)$, should be concerned when the solar irradiation is not normal to the collector aperture. It is a function of the solar incidence angle to the normal of the collector aperture ($\theta$).
+还有一项，即太阳直射的阳光与集热器开口不垂直时，应该考虑入射角带来的损失$K(\theta)$（也称为余弦损失）。该损失是太阳入射角与集热器开口法线交角（$\theta$）的函数。
 
-$K(\theta)$ is expressed by the following equation concluded from trough collector testing conducted at SNL.~\cite{Dudley1994}
+%$K(\theta)$ is expressed by the following equation concluded from trough collector testing conducted at SNL.~\cite{Dudley1994}
+桑迪亚国家实验室的Dudley等\cite{Dudley1994}通过试验研究给出了槽式集热器的余弦损失计算公式：
 \begin{equation}
   K(\theta) = \cos\theta+0.000884\theta-0.00005369\theta^2
 \end{equation}
 
-The optical losses are associated with five parameters (see Figure~\ref{fig:ParabolicTrough}):
-
-\begin{enumerate}[label=(\arabic*)]
-  \item Reflectivity, $\rho$: only a fraction of the incident radiation is reflected towards the receiver. The fraction is determined by the reflector type and dirt condition. Reflectivity of commercial parabolic trough mirrors can be assumed to be 0.9 for washed mirrors. 
-  \item Intercept factor, $\gamma$: a fraction of the direct solar radiation reflected by the mirrors does not reach the glass cover of the absorber tube due to either microscopic imperfections of the reflectors or macroscopic shape errors in the parabolic trough concentrators (e.g., imprecision during assembly). These errors cause reflection of some rays at wrong angles, and therefore they do not intercept the absorber tube. These losses are quantified by an optical parameter called the intercept factor, $\gamma$, that is typically 0.95 for a collector properly assembled.
-  \item Transmissivity of the glass tube, $\tau$: only a fraction of the direct solar radiation reaching the glass cover of the absorber pipe is able to pass through it. The ratio between the radiation passing through the glass tube and the total incident radiation on it, gives transmissivity $\tau$,  which is typically 0.93.
-  \item Absorptivity of the absorber selective coating, $\alpha_{abs}$: this parameter quantifies the amount of energy absorbed by the steel absorber pipe, compared with the total radiation reaching the outer wall of the steel pipe. This parameter is typically 0.95 for receiver pipes with a cermet coating, whereas it is slightly lower for pipes coated with black nickel or chrome.
-  \item Soiling factor, $F_e$: the dirt on reflectors will reduce the reflectivity, it needs to concern the soiling factor. The soiling factor $F_e$ takes into account the progressive soiling of mirrors and glass tubes after washing.
-\end{enumerate}
-
+%The optical losses are associated with five parameters (see Figure~\ref{fig:ParabolicTrough}):
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.4\textwidth]{fig/ParametersOfParablicDish.pdf}
-\caption{Some of the optical parameters of a parabolic trough}\label{fig:ParabolicTrough}
+\caption{槽式集热器结构示意图}\label{fig:ParabolicTrough}
 \end{figure}
+图\ref{fig:ParabolicTrough}给出了槽式集热器反射太阳光线的示意图，图中还标出了影响光学损失的一些参数。整个光学损失与下列五个参数有关：
 
-The energy passes through the glass tube to the receiver can be expressed by
+\begin{enumerate}[label=(\arabic*)]
+%  \item Reflectivity, $\rho$: only a fraction of the incident radiation is reflected towards the receiver. The fraction is determined by the reflector type and dirt condition. Reflectivity of commercial parabolic trough mirrors can be assumed to be 0.9 for washed mirrors. 
+  \item 反射率，$\rho$：只有一部分入射辐射会反射到接收器上。这一部分由反射镜的种类决定。商业槽式反射镜的反射率可以假定为0.9。
+%  \item Intercept factor, $\gamma$: a fraction of the direct solar radiation reflected by the mirrors does not reach the glass cover of the absorber tube due to either microscopic imperfections of the reflectors or macroscopic shape errors in the parabolic trough concentrators (e.g., imprecision during assembly). These errors cause reflection of some rays at wrong angles, and therefore they do not intercept the absorber tube. These losses are quantified by an optical parameter called the intercept factor, $\gamma$, that is typically 0.95 for a collector properly assembled.
+  \item 拦截因子，$\gamma$：由于反射镜的微观缺陷或抛物面槽式集热器的宏观形状误差，反射镜反射的太阳直射辐射中的一部分不能到达吸热管（例如组装不精确）。这些缺陷或误差导致一些光线以错误的角度反射，因此它们不能被吸热管拦截吸收。这些损失通过称为拦截因子的光学参数来量化。对于正确组装的集热器而言，该参数通常为0.95。
+%  \item Transmissivity of the glass tube, $\tau$: only a fraction of the direct solar radiation reaching the glass cover of the absorber pipe is able to pass through it. The ratio between the radiation passing through the glass tube and the total incident radiation on it, gives transmissivity $\tau$,  which is typically 0.93.
+  \item 透射率$\tau$：到达接收器的玻璃管的太阳直射辐射只有一部分能够透射它。透射玻璃管的辐射与投射到其上的总的入射辐射之间的比称为透射率$\tau$，它通常取为0.93。
+%  \item Absorptivity of the absorber selective coating, $\alpha_{abs}$: this parameter quantifies the amount of energy absorbed by the steel absorber pipe, compared with the total radiation reaching the outer wall of the steel pipe. This parameter is typically 0.95 for receiver pipes with a cermet coating, whereas it is slightly lower for pipes coated with black nickel or chrome.
+  \item 吸热管涂层的吸收率，$\alpha_{abs}$：该参数量化了吸热管吸收的能量与到达吸热管外壁的总辐射量的比例。对于有陶瓷涂层的金属吸热管，该参数通常为0.95，而对于涂有黑色镍或铬的吸热管，该参数值稍低。
+%  \item Soiling factor, $F_e$: the dirt on reflectors will reduce the reflectivity, it needs to concern the soiling factor. The soiling factor $F_e$ takes into account the progressive soiling of mirrors and glass tubes after washing.
+  \item 沾污因子，$F_e$：反射镜上的污垢会降低反射率，因此需要考虑沾污带来的影响。沾污因子$F_e$的引入考虑了反射镜和玻璃管在清洗干净之后的逐渐产生的沾污。
+\end{enumerate}
+
+%The energy passes through the glass tube to the receiver can be expressed by
+穿透玻璃管到达吸热器的能量可以表示为
 \begin{equation}
   P = I_r w_{tc} L_{tc} \rho \gamma \tau F_e K(\theta)
 \end{equation}
 
-The solar energy absorbed by the absorber occurs very close to the outer surface, to simplify the absorption process, it is treated as a uniform heat flux $q''$.
-
+%The solar energy absorbed by the absorber occurs very close to the outer surface, to simplify the absorption process, it is treated as a uniform heat flux $q''$.
+为了简化吸热器的吸热过程，通常将其视为均匀的热通量$q''$
 \begin{equation}
   q''= \frac{P}{\pi d_o L_{tc}} = \frac{I_r w_{tc} \rho \gamma \tau F_e K(\theta)}{\pi d_o}
 \end{equation}
@@ -64,9 +87,10 @@ The solar energy absorbed by the absorber occurs very close to the outer surface
 %\nomenclature{$K$}{Incidence angle modifier of trough collector}
 %%\nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
 
-Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length of the collector, and the heat transfer correlation in Appendix~\ref{cha:CTCHFHX} can be applied. Figure~\ref{fig:Pipe} shows the schematic diagram of the thermal analysis of the absorber pipe.
-\nomenclature{$U$}{Overall heat transfer coefficient, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
-\nomenclature{$q''$}{Heat flux, W$\cdot$m$^{-2}$}
+%Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length of the collector, and the heat transfer correlation in Appendix~\ref{cha:CTCHFHX} can be applied. Figure~\ref{fig:Pipe} shows the schematic diagram of the thermal analysis of the absorber pipe.
+假设整体传热系数$U(T_{abs})$沿着整个集热器的长度方向是均匀的，这样就可以利用附录\ref{cha:CTCHFHX}中的传热计算公式。吸收管的传热分析示意图如图\ref{fig:Pipe}所示。
+\nomenclature{$U$}{整体传热系数, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
+\nomenclature{$q''$}{热流量, W$\cdot$m$^{-2}$}
 \begin{equation}
 	\frac{T_{o}-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})\pi d_o L_{tc}}{\dot{m}c_{p}})\label{eq:CTCHF}
 \end{equation}
@@ -74,56 +98,68 @@ Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole lengt
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.6\textwidth]{fig/Pipe.pdf}
-\caption{Schematic diagram of the absorber pipe}\label{fig:Pipe}
+\caption{吸热管的传热分析示意图}\label{fig:Pipe}
 \end{figure}
 
+%Since the Nusselt number $Nu$ in the pipe is very large (about $1\times10^4$), small temperature difference exists between absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be expressed by the a second-order polynomial function given by Romero and Zarza~\cite{Romero2007}. The length $L_{tc}$ to get the required number of trough collectors in a row can be obtained from Equation~(\ref{eq:CTCHF}).
+由于管道中的努塞尔数$Nu$非常大（约为$1/times10^4$），所以吸热管和导热油之间存在很小的温差。所以平均流体温度$(T_{i}+T_{o})/2$可以用作$T_{abs}$的平均值，$U(T_{abs})$可以用Romero和Zarza给出的二阶多项式函数表示\cite{Romero2007}。达到所需加热效果的槽式集热器的长度$L_{tc}$可以从公式（\ref{eq:CTCHF}）中获得。
 
-Since the Nusselt number $Nu$ in the pipe is very large (about $1\times10^4$), small temperature difference exists between absorber and oil. So the average fluid temperature $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be expressed by the a second-order polynomial function given by Romero and Zarza~\cite{Romero2007}. The length $L_{tc}$ to get the required number of trough collectors in a row can be obtained from Equation~(\ref{eq:CTCHF}).
-
-The energy projected perpendicularly to the aperture of the trough collectors is
+%The energy projected perpendicularly to the aperture of the trough collectors is
+垂直投射到槽式集热器开口的能量为
 \begin{equation}
   Q_{total} = I_r L_{tc} w_{tc}
 \end{equation}
 
-The energy absorbed by the heat transfer fluid is 
+%The energy absorbed by the heat transfer fluid is 
+被传热流体吸收的能量为
 \begin{equation}
   Q_{use} = \dot{m}c_p(T_o - T_i)
 \end{equation}
 
-The thermal efficiency of the trough collectors
+%The thermal efficiency of the trough collectors
+槽式集热器的集热效率为
 \begin{equation}
   \eta_{tc} = \dfrac{Q_{use}}{Q_{total}} = 
   \dfrac{I_r L_{tc} w_{tc}}{\dot{m}c_p(T_o - T_i)}
   \label{eq:eta_tc}
 \end{equation}
 
-\subsection{Parabolic dish collector}
+%\subsection{Parabolic dish collector}
+\subsection{碟式集热器}
 \label{sec:pdc}
 
-Parabolic dish collector consists of a reflector and a receiver. The reflector tracks the sun to reflect direct solar radiation and concentrates it onto a receiver located at the focal point of the reflector. Two axes tracking system needs to be applied for the reflector to continuously follow the daily path of the sun.
+%Parabolic dish collector consists of a reflector and a receiver. The reflector tracks the sun to reflect direct solar radiation and concentrates it onto a receiver located at the focal point of the reflector. Two axes tracking system needs to be applied for the reflector to continuously follow the daily path of the sun.
+碟式集热器由发射镜和接收器组成。反射镜通过追踪太阳来将太阳光反射并会聚到位于反射镜焦点处的接收器熵。碟式集热器需要采用双轴跟踪系统来不间断地追踪太阳的轨迹。
 
-Two different methods are applied for the sun tracking systems:~\cite{Adkins1987}
+%Two different methods are applied for the sun tracking systems:~\cite{Adkins1987}
+碟式集热器的追踪系统主要有两种型式：\cite{Adkins1987}
 \begin{itemize}
-  \item Azimuth elevation tracking by an orientation sensor or by calculated coordinates of the sun performed by the local control.
-  \item Polar tracking, where the concentrator rotates about an axis parallel to the earth’s axis rotation.
+%  \item Azimuth elevation tracking by an orientation sensor or by calculated coordinates of the sun performed by the local control.
+  \item 由方位传感器进行的方位高度角跟踪，或由计算得到的太阳坐标通过控制系统进行控制。
+%  \item Polar tracking, where the concentrator rotates about an axis parallel to the earth’s axis rotation.
+  \item 极轴跟踪，集热器围绕与地轴平行的轴旋转追踪太阳。
 \end{itemize}
 
-In a traditional dish-Stirling system, a Stirling engine is located at the focal point. The Stirling engine has a receiver to absorb the thermal energy from the concentrated sunlights. The receiver consists of an aperture and an absorber. The aperture in a Stirling receiver is located at the focal point of the reflector to reduce the radiation and convection losses. The absorber absorbs the solar radiation and transfers the thermal energy to the working gas of the Stirling engine. An electrical generator, directly connected to the crankshaft of the engine, converts the mechanical energy into electricity. 
+%In a traditional dish-Stirling system, a Stirling engine is located at the focal point. The Stirling engine has a receiver to absorb the thermal energy from the concentrated sunlights. The receiver consists of an aperture and an absorber. The aperture in a Stirling receiver is located at the focal point of the reflector to reduce the radiation and convection losses. The absorber absorbs the solar radiation and transfers the thermal energy to the working gas of the Stirling engine. An electrical generator, directly connected to the crankshaft of the engine, converts the mechanical energy into electricity. 
+在传统的碟式斯特林机系统中，斯特林发动机放置在碟式集热器的焦点上。斯特林机设有接收器来吸收会聚的阳光。接收器由一个开孔和一个吸热器组成。斯特林接收器的开孔位于反射器的焦点处，以减少辐射和对流损失。吸热器吸收太阳辐射能并将产生的热能传递给斯特林机的工作气体，为斯特林循环提供热量，使斯特林机的曲轴连续往复运动。直接连接到斯特林机曲轴的发电机将机械能转化为电能。
 
-In a proposed cascade system, a volumetric receiver is located at the focal point. A spiral tube is located in the receiver to absorb the concentrated solar energy. Air (or nitrogen, is used as the heat transfer fluid) flows trough the tube to transfer the absorbed energy as the heat source of Stirling engine(s).
+%In a proposed cascade system, a volumetric receiver is located at the focal point. A spiral tube is located in the receiver to absorb the concentrated solar energy. Air (or nitrogen, is used as the heat transfer fluid) flows trough the tube to transfer the absorbed energy as the heat source of Stirling engine(s).
+本文提出的梯级系统中，碟式集热器的焦点处放置有容积式接收器。 一个金属螺旋管（称为吸热管）作为吸热器位于接收器中以吸收集中的太阳能。空气（或氮气）被用作传热流体流经吸热管以传输被吸热管吸收的能量，为斯特林机提供热源。
 
-The reflector is a key element of the systems. The curved reflective surface can be manufactured by attached segments, by individual facets or by a stretched membranes shaped by a continuous plenum. In all cases, the curved surface should be coated or covered by aluminum or silver reflectors. 
+%The reflector is a key element of the systems. The curved reflective surface can be manufactured by attached segments, by individual facets or by a stretched membranes shaped by a continuous plenum. In all cases, the curved surface should be coated or covered by aluminum or silver reflectors. 
+碟式反射镜是碟式系统的重要元件。弯曲的反射表面可以利用单独的小平面连接起来形成，或是通过由连续气室成形的拉伸膜来实现。在所有的情况下，曲面都应涂铝或银以提高反射率。
 
-A dish reflector product of SES (Stirling Energy System) is used in this cascade system, and its key parameters can be found in Table~\ref{tab:dc}. The structure of the receiver is shown in Figure~\ref{fig:dishReceiver}.
+%A dish reflector product of SES (Stirling Energy System) is used in this cascade system, and its key parameters can be found in Table~\ref{tab:dc}. The structure of the receiver is shown in Figure~\ref{fig:dishReceiver}.
+本文选用SES（Stirling Energy System）公司生产的碟式反射镜作为梯级集热系统的碟式反射镜，其主要参数见于表\ref{tab:dc}。碟式接收器为自行设计研制的接收器，图\ref{fig:dishReceiver}是其结构示意图。
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.4\textwidth]{fig/DishReceiver.pdf}
-\caption{The structure of the dish receiver}\label{fig:dishReceiver}
+\caption{碟式接收器的结构示意图}\label{fig:dishReceiver}
 \end{figure}
 
 \begin{table}[htbp]
-	\caption{Key parameters of the dish collector}
+	\caption{碟式集热器的主要参数}
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
@@ -139,27 +175,27 @@ A dish reflector product of SES (Stirling Energy System) is used in this cascade
 	\end{center}
 	\label{tab:dc}
 \end{table}
-\nomenclature[G]{$\delta$}{Thickness, m}
-\nomenclature[S]{$insu$}{Insulating layer}
+\nomenclature[G]{$\delta$}{厚度, m}
+\nomenclature[S]{$insu$}{绝热层}
 %\nomenclature[G]{$\delta_{insu}$}{Thickness of receiver insulating layer, m}
-\nomenclature{$dep$}{Depth, m}
-\nomenclature{$d$}{Diameter, m}
-\nomenclature[G]{$\lambda$}{Thermal conductivity, W$\cdot{}$m$^{-1}$$\cdot$K$^{-1}$}
-\nomenclature[G]{$\epsilon$}{Emissivity}
+\nomenclature{$dep$}{深度, m}
+\nomenclature{$d$}{直径, m}
+\nomenclature[G]{$\lambda$}{导热率, W$\cdot{}$m$^{-1}$$\cdot$K$^{-1}$}
+\nomenclature[G]{$\epsilon$}{发射率}
 %\nomenclature[G]{$\lambda_{insu}$}{Thermal conductivity of receiver insulating layer, $\mathrm{W/(m\cdot K)}$}
 %\nomenclature[G]{$\epsilon_{insu}$}{Emissivity of reciver insulating layer}
 %\nomenclature[G]{$\delta_{a}$}{Thickness of air tube in volumetric receiver, m}
 %\nomenclature{$d_{i,1}$}{Inner diameter of air tube, m}
-\nomenclature[G]{$\theta_{dc}$}{Dish aperture angle (0$^{\circ}$ is horizontal, 90$^{\circ}$ is vertically down)}
-\nomenclature[G]{$\gamma$}{Intercept factor; compression ratio}
-\nomenclature[G]{$\eta_{shading}$}{Shading factor}
-\nomenclature[G]{$\rho$}{Reflectivity}
-\nomenclature{$A_{se,1}$}{Heat transfer area of Stirling engine at air side, m$^2$}
-\nomenclature{$A_{se,2}$}{Heat transfer area of Stirling engine at water side, m$^2$}
+\nomenclature[G]{$\theta_{dc}$}{碟式集热器开口倾角 (0$^{\circ}$表示碟式集热器开口水平, 90$^{\circ}$表示碟式集热器开口竖直)}
+\nomenclature[G]{$\gamma$}{拦截因子; 压缩比}
+\nomenclature[G]{$\eta_{shading}$}{遮挡因子}
+\nomenclature[G]{$\rho$}{反射因子}
+\nomenclature{$A_{se,1}$}{斯特林机在空气侧的传热面积，$\mathrm{m^2}$}
+\nomenclature{$A_{se,2}$}{斯特林机在水侧的传热面积，$\mathrm{m^2}$}
 %\nomenclature{$k$}{Specific heat ratio}
 %\nomenclature[G]{$\gamma_{se}$}{Compression ratio of Stirling engine}
-\nomenclature{$n_g$}{Amount of working gas in each Stirling engine, mol}
-\nomenclature{$n_{se}$}{Number of Stirling engines in the Stirling engine array}
+\nomenclature{$n_g$}{单个斯特林机中的工作气体的量，mol}
+\nomenclature{$n_{se}$}{斯特林机组中斯特林机的数量}
 
 The dish receiver model concerns the losses include: collector losses due to mirror reflectivity, receiver intercept losses, losses due to shading, and thermal losses. Thermal losses take the largest portion of all those losses, which are due to conduction, convection and radiation.
 \noindent \begin{figure}[ht!]

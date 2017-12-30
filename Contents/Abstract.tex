@@ -3,7 +3,7 @@
 %
 %基于此，本文以国家国际合作项目专项“太阳能梯级集热发电系统关键技术合作研究”为背景，目标是研究太阳能光热发电装置，利用各种传统型式的太阳能光热发电系统的优缺点以及热力特性，提出并组建、优化太阳能梯级集热发电系统，为探索出大规模低成本高效率利用太阳能的光热发电技术提供新的方案。主要研究内容包括：
 %
-%提出了多种采用梯级集热和梯级发电的太阳能光热梯级发电系统。在梯级系统中，采用了多种型式的集热器，实现能量的梯级收集，采用多种形式的热功循环，实现能量的梯级利用。经过系统评估、参数选取、初步计算、方案比较，确定了两种具有代表性的梯级系统方案。一种方案同时选用水工质朗肯循环和斯特林循环，利用给水来冷却斯特林机冷腔，回收利用斯特林机放出的热量；另一种方案选用多级有机工质朗肯循环，利用上一级的凝结热来加热下一级的循环工质，实现能量的梯级利用。
+%提出了多种采用梯级集热和梯级发电的太阳能光热梯级发电系统。在梯级系统中，采用了多种型式的集热器，实现能量的梯级收集，采用多种形式的热力循环，实现能量的梯级利用。经过系统评估、参数选取、初步计算、方案比较，确定了两种具有代表性的梯级系统方案。一种方案同时选用水工质朗肯循环和斯特林循环，利用给水来冷却斯特林机冷腔，回收利用斯特林机放出的热量；另一种方案选用多级有机工质朗肯循环，利用上一级的凝结热来加热下一级的循环工质，实现能量的梯级利用。
 %
 %以EES、MATLAB等工具，建立了梯级系统中各部件的机理模型，进而组建了梯级系统。采用面向对象的方法，充分利用了继承、多态等特性，保证了各部件之间既具有独立性又具有关联性。其中，斯特林机的建模过程中，考虑了多种不可逆过程及多类损失，建立了较为完善的斯特林机机理模型，并进行了模型验证分析。结果表明，所建立的斯特林机模型的精度要高于传统的经典斯特林机模型。
 %
@@ -15,9 +15,9 @@
 
 随着化石能源消耗和环境污染问题的凸显，太阳能被广泛认为是未来最有潜力替代传统化石能源的清洁能源。本文以国家国际合作项目专项“太阳能梯级集热发电系统关键技术合作研究”为背景，目标是研究太阳能光热发电装置，利用各种传统型式的太阳能光热发电系统的优缺点以及热力特性，提出并组建、优化太阳能梯级集热发电系统，为探索出大规模低成本高效率利用太阳能的光热发电技术提供新的方案。主要研究内容包括：
 
-提出了多种采用梯级集热和梯级发电的太阳能光热梯级发电系统。在梯级系统中，采用了多种型式的集热器，实现能量的梯级收集，采用多种形式的热功循环，实现能量的梯级利用。经过系统评估、参数选取、初步计算、方案比较，确定了两种具有代表性的梯级系统方案。
+提出了多种采用梯级集热和梯级发电的太阳能光热梯级发电系统。在梯级系统中，采用了多种型式的集热器，实现能量的梯级收集，采用多种形式的热力循环，实现能量的梯级利用。经过系统评估、参数选取、初步计算、方案比较，确定了两种具有代表性的梯级系统方案。
 
-采用EES、MATLAB等工具，建立了梯级系统中各部件的机理模型，进而组建了梯级系统。采用面向对象的方法，充分利用了继承、多态等特性，保证了各部件之间既具有独立性又具有关联性。其中，斯特林机的建模过程中，考虑了多种不可逆过程及多类损失，建立了较为完善的斯特林机机理模型，并进行了模型验证分析。结果表明，所建立的斯特林机模型的精度要高于传统的经典斯特林机模型。
+采用数学计算工具和系统开发工具，建立了梯级系统中各部件的机理模型，进而组建了梯级系统。采用面向对象的方法，充分利用了继承、多态等特性，保证了各部件之间既具有独立性又具有关联性。其中，斯特林机的建模过程中，考虑了多种不可逆过程及多类损失，建立了较为完善的斯特林机机理模型，并进行了模型验证分析。结果表明，所建立的斯特林机模型的精度要高于传统的经典斯特林机模型。
 
 研究了太阳能光热梯级发电系统中斯特林机组不同排布方式对系统效率的影响。通过分析斯特林机组的各种不同的排布方式，发现串联连接是最佳的连接型式，斯特林机组具有最佳健壮性和最大的发电效率，梯级发电系统也具有最大的光热发电效率。
 
@@ -35,7 +35,7 @@ With the increasing awareness of the problem of fossil energy consumption and en
 
 Multiple topological structures with cascade collection and cascade utilization of the cascade systems were proposed. In these systems, different types of collectors were used for cascade collection and different types of thermodynamic cycles were used for cascade utilization. After system evaluation, parameter selection, preliminary calculation and scheme comparison, two representative typical schemes were selected.
 
-Mechanism models were established for the components of solar thermal power generation system by using EES and MATLAB. The modeling process uses an object-oriented approach, taking full advantage of inheritance, polymorphism and other characteristics, to ensure each component has both independence and relevance. Among them, the Stirling machine modeling process, considering various irreversibilities and losses, established a more accurate Stirling mechanism model with verification analysis. The results show that the accuracy of the established Stirling model is higher than that of the classical classical Stirling engine models.
+Mechanism models were established for the components of solar thermal power generation system by using mathematical calculation tool and system development tool. The modeling process uses an object-oriented approach, taking full advantage of inheritance, polymorphism and other characteristics, to ensure each component has both independence and relevance. Among them, the Stirling machine modeling process, considering various irreversibilities and losses, established a more accurate Stirling mechanism model with verification analysis. The results show that the accuracy of the established Stirling model is higher than that of the classical classical Stirling engine models.
 
 The effect of different arrangements of Stirling engines on the efficiency of the cascade system was studied. Through the analysis of different arrangements of Stirling engines, it was found that series connection is the best connection type for the best robustness and maximum efficiency of the Stirling engines, and the largest solar-to-electric efficiency of the cascade system.
 

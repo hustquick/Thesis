@@ -2,8 +2,8 @@
 
 \section{斯特林机组的排布}
 \label{sec:connectionTypes}
-对于单个斯特林机，斯特林机与传热流体之间的换热过程和流体的流动方向无关，这意味着改变冷热流体的流动方向并不会影响斯特林机的功率和效率。然而，对于斯特林机组，斯特林机的连接方式和流体的流动方向需要仔细考虑。它们既影响冷热流体的温度，又影响冷热流体的质量流量分布，这二者都对斯特林机的功率和效率又很大影响。
-如果采用串联连接，则一方面，每个斯特林机都可以获得全部的流体流量，这有利于获得较高的输出功率；另一方面，各斯特林机的入口加热流体温度随着流动方向逐渐降低（或各斯特林机的入口冷却流体温度随着流动方向逐渐升高），这将使沿着流动方向的斯特林机的功率和效率逐渐下降。如果采用并联连接，则一方面，每个斯特林机的入口加热流体的温度都为最高值（或每个斯特林机的入口冷却流体的温度都为最低值），这有利于获得较高的输出功率；另一方面，由于每个斯特林机都分流了热流体（或冷流体）的流量，每个斯特林机的输入总能量降低，这将不利于获得较高的输出功率。如果采用顺流连接（这里的顺流和逆流是指冷热流体依次流经一列斯特林机的次序是否一致，和传统的换热器中的顺流和逆流的含义不同），则一方面，最先流经的数个斯特林机具有最大的冷热源温差，具有最大的输出功率；另一方面，最后流经的数个斯特林机具有最小的冷热源温差，具有最小的输出功率。如果采用逆流连接，则会使斯特林机组中的每个斯特林机具有接近的冷热源温差，每个斯特林机的输出功率都比较接近。对于传统的传热器，采用逆流可以降低冷热流体的传热温差，降低换热过程中产生的㶲损，并因此获得更优的换热效果。而对于斯特林机，需要增大冷热流体的温差，以提高斯特林机的输出功率和效率。
+对于单台斯特林机，斯特林机与传热流体之间的换热过程和流体的流动方向无关，这意味着改变冷热流体的流动方向并不会影响斯特林机的功率和效率。然而，对于斯特林机组，斯特林机的连接方式和流体的流动方向需要仔细考虑。它们既影响冷热流体的温度，又影响冷热流体的质量流量分布，这二者都对斯特林机的功率和效率又很大影响。
+如果采用串联连接，则一方面，每台斯特林机都可以获得全部的流体流量，这有利于获得较高的输出功率；另一方面，各斯特林机的入口加热流体温度随着流动方向逐渐降低（或各斯特林机的入口冷却流体温度随着流动方向逐渐升高），这将使沿着流动方向的斯特林机的功率和效率逐渐下降。如果采用并联连接，则一方面，每台斯特林机的入口加热流体的温度都为最高值（或每台斯特林机的入口冷却流体的温度都为最低值），这有利于获得较高的输出功率；另一方面，由于每台斯特林机都分流了热流体（或冷流体）的流量，每台斯特林机的输入总能量降低，这将不利于获得较高的输出功率。如果采用顺流连接（这里的顺流和逆流是指冷热流体依次流经一列斯特林机的次序是否一致，和传统的换热器中的顺流和逆流的含义不同），则一方面，最先流经的数台斯特林机具有最大的冷热源温差，具有最大的输出功率；另一方面，最后流经的数台斯特林机具有最小的冷热源温差，具有最小的输出功率。如果采用逆流连接，则会使斯特林机组中的每台斯特林机具有接近的冷热源温差，每台斯特林机的输出功率都比较接近。对于传统的传热器，采用逆流可以降低冷热流体的传热温差，降低换热过程中产生的㶲损，并因此获得更优的换热效果。而对于斯特林机，需要增大冷热流体的温差，以提高斯特林机的输出功率和效率。
 为此，分析不同斯特林机组排布方式对斯特林机组性能（包括功率和效率）的影响，并优化梯级系统中斯特林机组的排布，显得额外重要而有意义。由于斯特林机组的排列方式多种多样，既可以是串联并联，又可以是顺流逆流，还可能是四者的复杂组合。因此在分析斯特林机组的排布方式之前，需要将其进行归类。
 
 本文依据斯特林机的性能与流体流向无关性的特点，提出了五种基本的斯特林机组排布方式，如图\ref{fig:SEA}所示。其中，第1种为并联连接，第2种为串联顺流连接，第3种为串联逆流连接，第4种为加热流体串联连接而冷却流体并联连接，第5种为加热流体并联连接而冷却流体串联连接。
@@ -52,19 +52,19 @@
 	\label{tab:parameters}
 \end{table}
 
-每个斯特林机组都有两股流体，每股流体都有串联流动和并联流动两种形式，如图\ref{fig:SEA}所示。
-对于串联流动，每个斯特林机的流体质量流量均为$\dot{m}$，从流体流动的方向看，对于第$x$个斯特林机（$2\leqslant{}x\leqslant{}n_{se}$），
+每台斯特林机组都有两股流体，每股流体都有串联流动和并联流动两种形式，如图\ref{fig:SEA}所示。
+对于串联流动，每台斯特林机的流体质量流量均为$\dot{m}$，从流体流动的方向看，对于第$x$台斯特林机（$2\leqslant{}x\leqslant{}n_{se}$），
 \begin{equation}
 	T_{i,x} = T_{o,x-1}
 	\label{Eq:T_serial}
 \end{equation}
-对于并联流动，每个斯特林机的流体质量流量均为$\dot{m}/n_{se}$，对于第$x$个斯特林机（$2\leqslant{}x\leqslant{}n_{se}$），
+对于并联流动，每台斯特林机的流体质量流量均为$\dot{m}/n_{se}$，对于第$x$台斯特林机（$2\leqslant{}x\leqslant{}n_{se}$），
 \begin{equation}
 	T_{i,x} = T_{i,h}
 	\label{Eq:T_parallel}
 \end{equation}
 
-依据第\ref{sec:StirlingEngineModel}节中的方程及方程(\ref{Eq:T_serial})-(\ref{Eq:T_parallel})，知道了冷热流体的属性就可以求解各个斯特林机的功率（方程(\ref{Eq:P})）和效率（方程(\ref{Eq:eta})）。斯特林机组的功率和效率可以由各斯特林机的功率和热流体的流入流出参数获得。
+依据第\ref{sec:StirlingEngineModel}节中的方程及方程(\ref{Eq:T_serial})-(\ref{Eq:T_parallel})，知道了冷热流体的属性就可以求解各台斯特林机的功率（方程(\ref{Eq:P})）和效率（方程(\ref{Eq:eta})）。斯特林机组的功率和效率可以由各斯特林机的功率和热流体的流入流出参数获得。
 
 \begin{equation}
 	P_{sea} = \sum_{x = 1}^{n_{se}}P_{se,x}
@@ -109,7 +109,7 @@
 \end{table}
 
 \subsection{$T_{i,h}$的影响}
-
+\label{sec:T_i_h}
 根据卡诺循环效率公式，热流体的温度对斯特林机的效率有很大的影响。斯特林机的效率随着热流体温度的降低而减小。当热流体温度足够低时，热源温度将不足以带动斯特林机，斯特林机的输出功率和效率可能将为零（不工作）。
 \begin{figure}[htpb]
 \begin{center}
@@ -118,9 +118,9 @@
 	\label{fig:Ti_h}
 \end{center}
 \end{figure}
-斯特林机组对于$T_{i,h}$的性能曲线图如图\ref{fig:Ti_h}所示。随着$T_{i,h}$的增加，所有排布方式的斯特林机组的效率和功率都会上升。然而，对于有些种类的斯特林机组，在$T_{i,h}$低于某临界温度时，斯特林机组中的一些斯特林机会停止工作。在这种情况下，适当减少正在运行的斯特林机的数目反而可以增加斯特林机组的总功率输出。当$T_{i,h}$很低时，图\ref{fig:Ti_h}中的一些斯特林机组使用了这种策略。$\eta$-$T_{i,h}$和$P$-$T_{i,h}$曲线上的拐点就是这种策略的结果。图中的数据点都是以在给定的条件下输出功率最大为目标计算得到的。例如，对于第1种连接方式的斯特林机组，当$T_{i,h} = 820\,\mathrm{K}$时，如果不减少运行的斯特林机数目，则所有斯特林机都会因为较低的热源温度和较小的冷热流体质量流量而停止工作，斯特林机组的输出功率和效率都会降至零。然而，从6个斯特林机中移除1个斯特林机以后，由于每个斯特林机的冷热流体质量流量都增加了，剩余的5个斯特林机都会再次工作，并获得给定参数下的最大输出功率（虽然效率仍然很低）。$820\,\mathrm{K}$是第1中连接方式的斯特林机组的临界温度，图\ref{fig:Ti_h}中的$\eta$-$T_{i,h}$曲线和$P$-$T_{i,h}$曲线在$820\,\mathrm{K}$处有拐点。
+斯特林机组对于$T_{i,h}$的性能曲线图如图\ref{fig:Ti_h}所示。随着$T_{i,h}$的增加，所有排布方式的斯特林机组的效率和功率都会上升。然而，对于有些种类的斯特林机组，在$T_{i,h}$低于某临界温度时，斯特林机组中的一些斯特林机会停止工作。在这种情况下，适当减少正在运行的斯特林机的数目反而可以增加斯特林机组的总功率输出。当$T_{i,h}$很低时，图\ref{fig:Ti_h}中的一些斯特林机组使用了这种策略。$\eta$-$T_{i,h}$和$P$-$T_{i,h}$曲线上的拐点就是这种策略的结果。图中的数据点都是以在给定的条件下输出功率最大为目标计算得到的。例如，对于第1种连接方式的斯特林机组，当$T_{i,h} = 820\,\mathrm{K}$时，如果不减少运行的斯特林机数目，则所有斯特林机都会因为较低的热源温度和较小的冷热流体质量流量而停止工作，斯特林机组的输出功率和效率都会降至零。然而，从6台斯特林机中移除1台斯特林机以后，由于每台斯特林机的冷热流体质量流量都增加了，剩余的5台斯特林机都会再次工作，并获得给定参数下的最大输出功率（虽然效率仍然很低）。$820\,\mathrm{K}$是第1种连接方式的斯特林机组的临界温度，图\ref{fig:Ti_h}中的$\eta$-$T_{i,h}$曲线和$P$-$T_{i,h}$曲线在$820\,\mathrm{K}$处有拐点。
 
-从图\ref{fig:Ti_h}中的曲线可以看出，第2种排布方式和第3种排布方式可以让斯特林机组获得最佳的性能，第2中排布方式具有最佳的健壮性（较低温度下所有斯特林机仍然可以工作）。第2种排布方式中的所有斯特林机在$730\,\mathrm{K}$以上时都会工作。
+从图\ref{fig:Ti_h}中的曲线可以看出，第2种排布方式和第3种排布方式可以让斯特林机组获得最佳的性能，第2种排布方式具有最佳的健壮性（较低温度下所有斯特林机仍然可以工作）。第2种排布方式中的所有斯特林机在$730\,\mathrm{K}$以上时都会工作。
 
 \subsection{$\dot{m}c_p$的影响}
 
@@ -133,55 +133,42 @@
 	\label{fig:qm_hcp_h}
 \end{center}
 \end{figure}
-
-Curves of performance of SEAs of different $\dot{m}_hc_{p,h}$ are shown in Figure~\ref{fig:qm_hcp_h}.
-%For a connection type of SEA, $\dot{m}_hc_{p,h}$ has little effect on the performance of the SEA if it is big enough to drive the engines. This means increase the mass flow rate of heating fluid will not increase the efficiency and power of SEA significantly. 
-For a large $\dot{m}_hc_{p,h}$ ($>$ 800 W/K), Type 2 , Type 3 and Type 5 have similar performance, which can be interpreted as the cooling fluid has the same properties for the two types of SEAs, and for a large $\dot{m}_hc_{p,h}$, the heating fluid has similar effect after diverged. Similar performance of Type 1 and Type 4 can be also interpreted for the same reason.
+斯特林机组对于$\dot{m}_hc_{p,h}$的性能曲线图如图\ref{fig:qm_hcp_h}所示。各种排布方式的斯特林机组的性能都随着$\dot{m}_hc_{p,h}$的增加而上升。
+对于较大的$\dot{m}_hc_{p,h}$（$> 800\,\mathrm{W/K}$），第2种，第3种，第5种排布方式的斯特林机组具有类似的性能，这可以解释为这几种排布方式的冷却流体的属性相同，对于较大的$\dot{m}_hc_{p,h}$，其加热效果在分流后降低地并不明显。同样，当$\dot{m}_hc_{p,h}$较大时，第1种和第4种排布方式的斯特林机组的性能也很接近。这也可以用类似的原因解释。
 
 \noindent \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.7\columnwidth]{fig/qm_ccp_c}
-	\caption{Influence of $\dot{m}_cc_{p,c}$ on efficiency and power of SEA}
+	\caption{$\dot{m}_cc_{p,c}$对斯特林机组效率和功率的影响}
 	\label{fig:qm_ccp_c}
 \end{center}
 \end{figure}
+斯特林机组对于$\dot{m}_cc_{p,c}$的性能曲线图如图\ref{fig:qm_ccp_c}所示。各种排布方式的斯特林机组的性能都随着$\dot{m}_cc_{p,c}$的增加而上升。
+对于较大的$\dot{m}_cc_{p,c}$（$> 800\,\mathrm{W/K}$），第2种和第3种排布方式的斯特林机组具有类似的性能，这意味着当$\dot{m}_cc_{p,c}$较大时，顺流或是逆流对斯特林机组的性能的影响不大。第4种和第5种排布方式的性能曲线存在交点（约$830\,\mathrm{W/K}$处），对于较大的$\dot{m}_cc_{p,c}$，第4种排布方式具有更优的性能，对于较小的$\dot{m}_cc_{p,c}$，第5种排布方式具有更优的性能。这可以解释为，较大的$\dot{m}_cc_{p,c}$削弱了并行连接带来的不利影响。
 
-Curves of performance of SEAs of different $\dot{m}_cc_{p,c}$ are shown in Figure~\ref{fig:qm_ccp_c}. For a connection type of SEA, the performance improves with the increase of $\dot{m}_cc_{p,c}$. For a large $\dot{m}_cc_{p,c}$ ($>$ 800 W/K), Type 2 and Type 3 have similar performance, which means the flow order doesn't affect the performance of SEA with a large $\dot{m}_cc_{p,c}$. There exists an intersection point (at 830 W/K) of curves of Type 4 and Type 5. For a larger $\dot{m}_cc_{p,c}$, Type 4 has a better performance, and vice versa. This can be interpreted that larger $\dot{m}_cc_{p,c}$ weaken the drawback of larger temperature rise of parallel flow, while for the heating fluid, temperature drop of serial flow is smaller than parallel flow.
+\subsection{$n_{se}$的影响}
 
-\subsection{Effects of $n_{se}$}
-
-By varying the number of engines in SEA, the performance levels changed accordingly. $n_{se}$ may affect both the flow rates and temperatures of fluids of each engine. Figure~\ref{fig:n_se} shows curves of performance of SEAs with different $n_{se}$. As it is shown, with an increase of $n_{se}$ leads to a reduction of $\eta$ for all SEAs due to smaller heating and cooling average temperature difference for more engines. For some types of SEA, when $n_{se}$ is larger than a critical value, some of the engines in the SEA will not work and the curves will dive. E.g. for SEA of Type 1, when $n_{se}$ is larger than 9, all the engines stop working, turning points at 9 can be found on the $\eta$-$n_{se}$, $P$-$n_{se}$ curves in Figure~\ref{fig:n_se}.
+通过改变运行的斯特林机的数目，斯特林机组的性能也会随之改变。$n_{se}$会影响到每一台斯特林机的流体流量和温度。斯特林机组对于$n_{se}$的性能曲线图如图\ref{fig:n_se}所示。随着$n_{se}$的增大，所有排布方式的斯特林机组的效率都会下降。这是由于随着斯特林机数目的增加，每台斯特林机的平均冷热流体温差下降了。对于一些排布方式，$n_{se}$同样存在临界值。当$n_{se}$大于该临界值时，斯特林机组中的一些斯特林机将会停止工作。基于第\ref{sec:T_i_h}节所采用的策略，减少运行的斯特林机的数目才能获得最大功率的输出。显然，当$n_{se}$大于临界值时，将运行的斯特林机数目减少至临界值可以获得最大的功率输出。这解释了图\ref{fig:n_se}中性能曲线中的水平线部分。
 
 \noindent \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.7\columnwidth]{fig/n_se}
-	\caption{Influence of $n_{se}$ on efficiency and power of SEA}
+	\caption{$n_{se}$对斯特林机组效率和功率的影响}
 	\label{fig:n_se}
 \end{center}
 \end{figure}
 
-For a certain connection type, increase $n_{se}$ will reduce the efficiency of SEA. For some connection types, increase $n_{se}$ will reduce the output power $P$ due to inoperative engines and smaller output power engines. It is important to choose the number of engines for some connection types of SEA. 
+对于给定的冷热流体，选择合适的斯特林机数量显得格外重要。对于第1种排布方式，当$n_{se} \geqslant 10$时，所有的斯特林机停止工作，这是因为冷热流体的$\dot{m}c_p$值太小。对于第2种和第3种排布方式，所有斯特林机都会工作。斯特林机组的效率随着$n_{se}$的增大而减小，功率随着$n_{se}$的增大而增大。对于第4种排布方式，通过检查计算结果可以发现，如果一直不减少运行的斯特林机数目，当$n_{se} = 13$时，最后1台斯特林机停止工作；当$n_{se} = 14$时，只有前10台斯特林机正常工作；当$n_{se} = 15$时，正常工作的斯特林机数目降至9台。对于第5种排布方式，通过检查结果可以发现，如果不直不减少运行的斯特林机数目，当$n_{se} = 12$时，最后2台斯特林机停止工作；当$n_{se} = 13$时，只有前8台斯特林机正常工作；当$n_{se} = 14$时，正常工作的斯特林机数目降至6台。
 
-For Type 1, when $n_{se} \geqslant 10$, all engines stop working for given heating and cooling fluids due to small $\dot{m}c_p$. For Type 2 and Type 3, every engine in the SEAs works. $\eta$ reduces with increasing $n_{se}$ due to smaller temperature difference of the fluids, and $P$ increases due to more operating engines. For Type 4, by checking results, it can be found that when $n_{se} = 13$,  the last engine doesn't work; when $n_{se} = 14$, only the first 10 engines will work; when $n_{se} = 15$, the working engine number drops to 9. For Type 5, by checking results, it can be found that when $n_{se} = 12$, the last 2 engines stop working; when $n_{se} = 13$, only the first 8 engines will work; when $n_{se} = 14$, the working engine number drops to 6; when $n_{se} = 15$, the working engine number drops to 4. The aforementioned strategy is applied to achieve maximum total output power. For Type 4, when $n_{se} \geqslant 13$, the number of the operating engines is changed to be 12 to achieve maximum output power. For Type 5, when $n_{se} \geqslant 12$, the number of the operating engines is changed to be 11 to achieve maximum output power.
-Horizontal lines in Figure~\ref{fig:n_se} shows the application results of the strategy. 
+\section{本章小结}
 
-\section{Conclusion}
+斯特林机组的排布方式影响流体的流量和温度分布，进而影响了斯特林机组中每台斯特林机的性能。为了比较不同排布方式的斯特林机组在不同运行参数下性能，进而优化太阳能光热发电梯级系统中斯特林机组的排布方式，本文依据斯特林机的特性提出了五种基本的斯特林机组排布方式，并为这五种基本排布方式建立了分析模型。
 
-%A new layout scheme of the solar dish system by using SEA are proposed in this thesis. 
-Connection type of the engines changes the flow rates and temperatures of the fluids, as a result the performance of the SEA will be different depending on the connection schemes. In order to compare performance of SEAs with different arrangements, five basic connection types of SEA are classified according to flow type and flow order. 
-
-%Analytical Stirling engine model is created to develop the SEA models for the investigation of influence of connection types. Imperfect regeneration and cycle irreversibility of Stirling engine cycle and heat exchange process between fluids and engine are considered in the model. Algorithm to numerically solve different connection types of SEA is developed. The model is evaluated by considering the prototype GPU-3 Stirling engine as a case study. Result shows that the proposed model predicted the performance with higher accuracy than Simple model~\cite{Urieli1984} and Simple II model~\cite{Strauss2010}. 
-
-Models of different connections of SEAs are developed to investigate the performance under different parameters and the impacts of $T_{i,h}$, $\dot{m}_hc_{p,h}$, $\dot{m}_cc_{p,c}$ and $n_{se}$ with different connection types. It is found that
+本文系统性地分析了不同排列方式的斯特林机组在不同$T_{i,h}$、$\dot{m}_hc_{p,h}$、$\dot{m}_cc_{p,c}$及$n_{se}$下的性能，得到了以下结论：
 
 \begin{enumerate}[label=(\arabic*)]
-\item Reduce $T_{i,h}$ or $\dot{m}c_{p}$ will weaken the performance of SEA of all connection types. This is obvious since lower $T_{i,h}$ or $\dot{m}c_p$ leads to lower temperature distribution of the hot chamber of the Stirling engines. Lower temperature difference of the hot chamber and cold chamber leads to lower efficiency.
-\item When inlet temperature of hot fluid ($T_{i,h}$) is lower than a critical value, some engines in the SEAs will stop working. Reduce the number of operating engines may help for the total output power.
-\item Different connection types of SEAs show different adaptability for low $T_{i,h}$. Type 2 shows the best adaptability for low $T_{i,h}$. when $T_{i,h} \geqslant 730\,\mathrm{K}$, all the 6 engines are running.
-\item SEA of serial flows (Type 3) has the best performance and adaptability under different parameters. Given heating and cooling fluids, using serial flow is the best choice for the connection type of an SEA.
-	
+	\item 降低$T_{i,h}$或$\dot{m}c_{p}$将会给各种排布方式的斯特林机组的性能带来不利影响。这是显而易见的，因为$T_{i,h}$或$\dot{m}c_p$的降低将导致斯特林机热腔更低的温度分布，斯特林机的热腔和冷腔温差的降低将会削弱斯特林机的性能。
+	\item 当热流体的入口温度低于某临界值时，斯特林机组中的一些斯特林机将会停止工作。降低运行的斯特林机的数目则可能会增加斯特林机组的总输出功率。
+	\item 不同排布方式对热流体入口温度具有不同的健壮性。第2种排布方式对于较低的$T_{i,h}$具有最佳健壮性，当$T_{i,h} \geqslant 730\,\mathrm{K}$时，所有6台斯特林机都在工作。
+	\item 串联排布（第2种和第3种）的斯特林机组具有最优的性能和健壮性。给定了冷热流体，采用串联排布是最优的排布方式。
 \end{enumerate}
-%as expected, decrease $T_{i,h}$ and $\dot{m}c_{p}$ will weaken the performance of SEA of all connection types. However, for some connection types, there exists a critical temperature below which some engines stop working. This needs to be considered for SEA connection type selection, especially when $T_{i,h}$ is low. For given heating and cooling fluids, Type 2 has the best performance and adaptability. Type 2 and Type 3 have similar performance under different parameters ($T_{i,h}$, $T_{i,c}$ and $\dot{m}c_p$), which means the flow order has little influence on the performance of an SEA. SEA of serial flows (Type 3) has the best performance and adaptability under different parameters. Given heating and cooling fluids, using serial flow is the best choice for the connection type of an SEA. 
-%This means the new arrangement of dish-Stirling system in Figure~\ref{fig:Dish_SEA} may have better performance than the traditional arrangement, which can be considered as a particular case of Type 1.
-
-%It is important to note that, in the future researches, the experiments of influence of connection type on SEA's performance can be carried out to verify the conclusions in this thesis.

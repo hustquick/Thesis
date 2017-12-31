@@ -1,8 +1,8 @@
 \chapter{建模}
 \label{cha:Modeling}
 
-为了研究所提出的梯级系统的性能，使用EES（Engineering Equation Solver）和MATLAB（Matrix Laboratory）作为计算工具和开发工具开发了系统的机理模型。系统建模采用自底向上的设计方法。首先，在EES中建立机理模型用于来验证模型中各参数间的物理关系。其次，使用面向对象的方法在MATLAB中开发出组件模型，它充分利用了面向对象的继承性和多态性来保证组件之间的独立性和相关性。
-依据不同流体，创建了三个回路（空气回路，水回路和油回路），并确定了一些关键部件的特定的状态参数。依据这些关键部件的热力学特性和热力学第二定律，为其创建了基于能量平衡的机理模型。
+为了研究所提出的梯级系统的性能，使用EES（Engineering Equation Solver）和MATLAB（Matrix Laboratory）作为计算工具和开发工具开发了系统的模型。系统建模采用自底向上的设计方法。首先，在EES中建立机理模型用于来验证模型中各参数间的物理关系。其次，使用面向对象的方法在MATLAB中开发出组件模型，它充分利用了面向对象的继承性和多态性来保证组件之间的独立性和相关性。
+依据不同流体，创建了三个回路（空气回路，水回路和油回路），并确定了一些关键部件的特定的状态参数。依据这些关键部件的热力学特性和动力学特性，为其创建了基于能量平衡的机理模型。
 
 以下部分介绍一些关键部件的模型。
 \section{部件建模}
@@ -1057,20 +1057,16 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 
 %\subsection{System calculation}
 针对系统计算，需要指出的是，一个部件的某些参数可能和其它多个部件相关联。
-在这种条件下，需要使用估值来辅助计算。估值用于设定未定状态的流对象的固有属性（如质量流量或温度），以便于获得流的依赖属性，进而得到状态点的状态信息。这些流对象通过参数传递给相应的部件
-In such situations, guess values are used for the calculation methods in the components.
-The guess values are set to be the properties of some streams. Each of these streams is assigned to two components (evaporator and superheater, e.g.). These streams are assigned to corresponding components to accomplish the calculation methods in the components. These calculation methods will return solutions for the stream parameters. Then the parameters will be compared with the guess values for verification. If the differences between guess values and the calculated parameters are within permissible error, the guess values are accepted; otherwise, the guess values will be iteratively readjusted according to the Runge-Kutta method until accepted.
+在这种条件下，需要使用估值来辅助计算。估值用于设定未定状态的流对象的固有属性（如质量流量或温度），以便于获得流的依赖属性，进而得到状态点的状态信息。这些流对象通过参数传递给相应的部件，进而完成部件内部的计算方法，获得相应的计算结果。这些结果会以状态点参数的形式，和原来设定的估值进行比较。如果估值和相应计算值之间的差异在允许误差范围之内，则接受估值作；否则，估值将会依据隆戈库塔法重新设定，并重新启动部件内的计算，并将新估值和获得的新的计算值进行比较，直至二者之间的差异小于允许误差为止。
 
-For example, the mass flow rate of oil of the evaporator ($\dot{m}_3$) is related with the superheater in a system as described in Figure~\ref{fig:CascadeSystem1}.
-A guess value of $\dot{m}_3$, $\dot{m}_{3,g}$, is required to determine it. $\dot{m}_{3,g}$ is assigned to the evaporator oil stream. This stream is assigned to both evaporator and superheater. In \textbf{evaporator}, the method \textbf{get\_T\_3b} will change the temperature of the stream ($T_{3b}$) from the default value. 
-In \textbf{superheater}, the method \textbf{get\_q\_m\_3} will return a solution of $\dot{m}_3$, $\dot{m}_{3,s}$, for verification. If $\left|\dot{m}_{3,g} - \dot{m}_{3,s}\right|$ is less than permissible error ($10^{-4}$), then $\dot{m}_{3,g}$ is accepted as the value of $\dot{m}_{3}$; otherwise, $\dot{m}_{3,g}$ will be iteratively readjusted according to the Runge-Kutta method until $\left|\dot{m}_{3,g} - \dot{m}_{3,s}\right| < 10^{-4}$.
+例如，在图\ref{fig:CascadeSystem1}所示的蒸汽发生系统中，蒸发器的出口油温\textbf{evaporator.T\_3o}还和过热器有关。想要获得该温度值，就需要先使用估值。估值用于赋值给对应于状态点$3b$的流对象的温度属性，这样可以获得该流对象的所有依赖属性（因为其压力已知）。该流对象作为过热器的输入参数将该状态点相应的焓值带入到过热器中，在过热器中通过方法\textbf{superheater.get\_T\_3i}得到过热器的入口油温\textbf{superheater.T\_3i}，并将此值和估值进行比较，如果$\left|\mathrm{evaporator}.T_{3o} - \mathrm{superheater}.T_{3i}\right|$比允许误差（$10^{-4}$）小，则接受该估值；否则，依据隆戈库塔法迭代调整估值，直至$\left|\mathrm{evaporator}.T_{3o} - \mathrm{superheater}.T_{3i}\right| < 10^{-4}$。
 
-\section{Conclusion}
+\section{本章小结}
 
-This chapter presents the modeling method of the cascade system and introduces the modeling of some key components and subsystems in detail. The component models are developed in MATLAB using object-oriented method. Bottom-up design method is applied for system development. Models of the components of a system are developed first according to their mechanism characteristics, and the system model is established by these component models. A MATLAB class \textbf{Stream} created for component connection is used as an example to introduce the system modeling process. The components' inlets and outlets are used as interfaces for connection. 
-Two interfaces are connected together by being assigned the same stream.
-The calculation process related with different components is also briefly introduced in this chapter.
+本章介绍了太阳能光热梯级系统的建模方法，并详细分析了系统中关键部件和子系统的机理建模。部件模型使用MATLAB建模工具，采用面向对象的方法。部件模型的机理建模充分考虑了各部件的热力学特性，动力学特性以及能量平衡。系统模型采用自底向上的方法，利用部件模型完成系统模型的搭建工作。
+基于面向对象语言的封装、组合和多态等特性，各部件间既具有独立性，又具有关联性。所建立的系统模型具有易于搭建，结构清晰，便于替换或改进部件，容易检查单个部件等优点。
 
-Due to the encapsulation, composition and polymorphism of the object-oriented language, the system model has some advantages such as easy to establish, convenient to replace a component and clearly check the performance of specific components.
+系统还专门建立了\textbf{Stream}类用于部件的连接工作，部件的出口和入口是连接的接口。两个不同的部件通过被赋值同一个流对象而实现相互连接。
+此外，本章还简单介绍了不同部件间通过流对象进行耦合计算的方法。
 
-The key component models in the cascade system can be validated experimentally or be compared with the classic models. The validation of Stirling engine model shows that the proposed model has much better agreement with the experimental results than previous classic thermal models at various rotation speeds and mean effective pressures.
+本文建立的关键部件模型可以通过试验或与经典模型进行比较等方式进行验证。斯特林机的验证工作表明，与传统的经典的斯特林机模型相比，本文所建立的模型在不同的转速和平均有效压力下，具有和试验数据更接近的性能结果。

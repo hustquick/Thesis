@@ -150,19 +150,18 @@
 \end{center}
 \end{figure}
 
-正如在第\ref{sec:melrs}节中所讨论的，$T_{3b}$是未定的参数。图\ref{fig:T3b}显示了其最小值$T_{3b,min}$和最大值$T_{3b,max}$。$T_{3b,min}$表示的是在蒸发区导热油的流量为无穷大时，蒸发器的入口油温，$T_{3b,min} = T_{3c}$。
-As discussed in Section~\ref{sec:melrs}, $T_{3b}$ is an undetermined value. Figure~\ref{fig:T3b} shows the minimum and maximum value of it. $T_{3b,min}$ means the limit situation of unlimited flow rate of oil in the evaporator, $T_{3b,min} = T_{3c}$. $T_{3b,max}$ has the traditional effect of temperature differences in the evaporator and superheater, $\dot{m}_{3,e} = \dot{m}_{3,s}$. In our research, $T_{3b}$ is set to be the average value of the two limitations, $T_{3b} = (T_{3b,min} + T_{3b,max}) / 2$.
+正如在第\ref{sec:melrs}节中所讨论的，$T_{3b}$是未定的参数。图\ref{fig:T3b}显示了其最小值$T_{3b,min}$和最大值$T_{3b,max}$。$T_{3b,min}$表示的是在蒸发区导热油的流量为无穷大时，蒸发器的入口油温，$T_{3b,min} = T_{3c}$。$T_{3b,max}$和传统蒸汽发生系统在蒸发区和过热区的效果相同，即导热油在这两个区的流量相同，$\dot{m}_{3,e} = \dot{m}_{3,s}$。本文添加了另一个中间值$T_{3b}$作为参考，$T_{3b} = (T_{3b,min} + T_{3b,max}) / 2$。
 \begin{equation}
   \dfrac{T_{3b,max}-T_{3c}}{T_{3a} - T_{3c}} = \dfrac{T'_{3b} - T_{3c}}{T'_{3a} - T_{3c}}
 \end{equation}
 
-where $T'_{3a}$ and $T'_{3b}$ are the inlet oil temperature of superheater and evaporator in SGSS respectively.
+其中，$T'_{3a}$和$T'_{3b}$分别是传统蒸汽发生系统中过热器和蒸发器的入口油温。
 \begin{table}[htbp]
-	\caption{Simulation results of SGSS and MELRS}
+	\caption{传统蒸汽发生系统和分段加热系统的模拟结果}
 	\begin{center}
 	\begin{tabular}{ccccc}
 		\toprule
-		& \multirow{2}{*}{SGSS} & \multicolumn{3}{c}{MELRS}\\\cline{3-5}
+		& \multirow{2}{*}{传统蒸汽发生系统} & \multicolumn{3}{c}{分段加热系统}\\\cline{3-5}
  &  & $T_{3b,max}$ & $T_{3b}$ & $T_{3b,min}$\\
 		\midrule
 		$T_{2a}$ & \multicolumn{4}{c}{613.15$\,\mathrm{K}$}\\
@@ -195,18 +194,19 @@ where $T'_{3a}$ and $T'_{3b}$ are the inlet oil temperature of superheater and e
 \end{table}
 %该表格的解释
 
-Simulation results of the four system models are listed in Table~\ref{tab:comparison}. It can be found that MELRS can effectively reduce the exergy loss of the steam generating process. The exergy loss can be reduced from 14.3\% up to 76.7\% for the three MELRS. The overall thermal efficiency of the solar fields can be improved from 0.9\% up to 3.6\%.
+四个系统模型的模拟结果见表\ref{tab:comparison}。可以发现，分段加热系统可以有效降低蒸汽发生过程中产生的㶲损。三种方案的㶲损可以减少14.3\%到76.7\%。太阳能镜场的集热效率可以提升0.9\%到3.6\%。
 
-It is worthy pointing that, for the situation $T_{3b} = T_{3b,min}$, when $\dot{m}_{3e} = \infty$, the correlation~(\ref{eq:dot_I}) is not applicable. The new correlation listed below is applied for the isothermal heat transfer process
+需要指出的是，对于$T_{3b} = T_{3b,min}$的方案，当$\dot{m}_{3e} = \infty$时，方程(\ref{eq:dot_I})不再适用。这时采用等温换热过程的计算公式来计算单位时间的㶲损
 
 \begin{equation}
   \dot{I} = T_{amb} (\frac{Q}{T_{2h}} - \frac{Q}{T_{3c}}) = \frac{QT_{amb}(T_{3c} - T_{2h})}{T_{2h}T_{3c}}
   \label{eq:isothermal}
 \end{equation}
 
-where, $Q$ is the heat transferred per unit time in the evaporator.
+其中，$Q$是蒸发过程中单位时间内传递的热量。
 
-$T_{2a}$, $T_{2i}$, $T_{2h}$, $T_{2g}$ and $T_{3c}$ are the same for SGSS and different MELRSs for the same water side processes. The different mass flow rates of the oil lead to different oil temperatures in the heat exchangers, and hence different exergy loss. It can be found that the exergy losses in preheaters of MELRSs ($2.58\times 10^4\,\mathrm{W}$) are smaller than that of SGSS ($4.80\times10^4\,\mathrm{W}$). The exergy losses in evaporators of different MELRSs vary greatly, from $9.68\times10^5\,\mathrm{W}$ to $2.41\times10^5\,\mathrm{W}$ for oil flow rate from $58.6\,\mathrm{kg/s}$ to infinity.
+由于水回路相同，四种系统的$T_{2a}$、$T_{2i}$、$T_{2h}$、$T_{2g}$和$T_{3c}$都相同。油回路的流量各不相同，这导致了不同的油水换热温差，并因此带来不同的㶲损。从表中可以发现，分段加热系统的预热器中的㶲损值（$2.58\times 10^4\,\mathrm{W}$）要小于传统蒸汽发生系统的㶲损值（$4.80\times10^4\,\mathrm{W}$）。
+are the same for SGSS and different MELRSs for the same water side processes. The different mass flow rates of the oil lead to different oil temperatures in the heat exchangers, and hence different exergy loss. It can be found that the exergy losses in preheaters of MELRSs ($2.58\times 10^4\,\mathrm{W}$) are smaller than that of SGSS ($4.80\times10^4\,\mathrm{W}$). The exergy losses in evaporators of different MELRSs vary greatly, from $9.68\times10^5\,\mathrm{W}$ to $2.41\times10^5\,\mathrm{W}$ for oil flow rate from $58.6\,\mathrm{kg/s}$ to infinity.
 Exergy loss in the evaporator takes the largest portion of the steam generating process, which takes about 82.8\%, 85.2\%, 83.8\% and 78.0\% for SGSS and MELRSs separately.
 Increasing flow rate of the heating fluid in the steam generating process can effectively reduce the exergy loss.
 The exergy losses in superheaters of MELRSs ($1.42\times 10^5\,\mathrm{W}$, $9.19\times 10^4\,\mathrm{W}$ and $4.24\times 10^4\,\mathrm{W}$) are much smaller than that of SGSS ($1.81\times10^5\,\mathrm{W}$) due to large temperature differences in the traditional superheaters.

@@ -628,7 +628,7 @@
   }
   {
     \ifthenelse{\equal{\HUST@language}{chinese}}
-    {\zhnumber{\thechapter}}
+    {\thechapter}
     {Chapter~\thechapter}
   }
   {1em}

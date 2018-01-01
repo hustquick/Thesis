@@ -2,7 +2,7 @@
 
 第\ref{cha:Modeling}章介绍了利用MATLAB建模工具实现为太阳能光热发电系统中各关键部件建模的工作。基于其建立的部件模型，可以方便地构建太阳能光热发电平台的模型。
 
-在第\ref{cha:Modeling}章中，建立了槽式集热器的机理模型。在假定整体传热系数沿着集热器长度方向均匀分布的条件下，建立了传热流体温升与太阳辐射强度、集热器长度、传热流体流量、环境温度、传热流体入口温度等因素之间的关系式，并得出了槽式集热器的热效率计算公式。
+在第\ref{cha:Modeling}章中，建立了槽式集热器的机理模型。在假定整体传热系数沿着集热器长度方向均匀分布的条件下，建立了传热流体温升与太阳直射辐射强度（DNI）、集热器长度、传热流体流量、环境温度、传热流体入口温度等因素之间的关系式，并得出了槽式集热器的热效率计算公式。
 还详细分析了碟式接收器的各种能量损失，建立了详细的热网络模型。通过使用各种经典的传热公式，求解了热网络模型中各节点温度值，并得到了碟式集热器的热效率计算公式。
 
 %For organic Rankine cycle (ORC) system, processes of the Rankine cycle were analyzed and the Rankine cycle efficiency formula is derived.
@@ -100,7 +100,7 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在热回�
 
 太阳能光热发电平台采用了两个加热器来调节流体（空气和导热油）的温度，以满足试验的要求。
 两个加热器都可以通过改变功率来维持其出口流体温度的稳定。
-此外，当太阳辐射强度不够高时，可以启用加热器辅助加热，实现ORC系统的正常运行。
+此外，当DNI不够高时，可以启用加热器辅助加热，实现ORC系统的正常运行。
 %\subsection{Data collection system}
 
 \section{试验}
@@ -109,7 +109,7 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在热回�
 
 \subsection{槽式集热器试验}
 \subsubsection{试验目的}
-槽式集热器试验的目的是研究太阳辐射强度、传热流体流量、入口温度对槽式集热器热性能的影响，并验证第\ref{sec:ptc}节所建立的槽式集热器模型。
+槽式集热器试验的目的是研究DNI、传热流体流量、入口温度对槽式集热器热性能的影响，并验证第\ref{sec:ptc}节所建立的槽式集热器模型。
 
 \subsubsection{试验步骤}
 试验步骤分为以下几步：
@@ -152,7 +152,7 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在热回�
 	\label{tab:DesignedCasesForTrough}
 \end{table}
 
-表\ref{tab:DesignedCasesForTrough}中，工况1到工况10分别在一天的不同时间点或是数天间的时间点完成。工况11到工况15的试验要求在半个小时之内完成。需要指出的是，当以入口油温为考察变量时，仅仅设计了5个温度相差不大的工况（工况16到工况20）进行试验。这是由于通过加热器提升油温的速度较慢，为了保证太阳辐射强度基本不变，所以各工况入口油温差别不大。这5个工况的试验要求在一个小时之内完成。
+表\ref{tab:DesignedCasesForTrough}中，工况1到工况10分别在一天的不同时间点或是数天间的时间点完成。工况11到工况15的试验要求在半个小时之内完成。需要指出的是，当以入口油温为考察变量时，仅仅设计了5个温度相差不大的工况（工况16到工况20）进行试验。这是由于通过加热器提升油温的速度较慢，为了保证DNI基本不变，所以各工况入口油温差别不大。这5个工况的试验要求在一个小时之内完成。
 
 \subsubsection{数据处理方法}
 %Outlet temperature of the oil in the trough collector is monitored and recorded. 
@@ -194,7 +194,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	
 \subsection{碟式集热器试验}
 \subsubsection{试验目的}
-碟式集热器试验的目的是研究太阳辐射强度、传热流体流量、入口温度对碟式集热器热性能的影响，并验证第\ref{sec:pdc}节所建立的碟式集热器模型。
+碟式集热器试验的目的是研究太阳直射辐射强度、传热流体流量、入口温度对碟式集热器热性能的影响，并验证第\ref{sec:pdc}节所建立的碟式集热器模型。
 
 \subsubsection{试验步骤}
 试验步骤分为以下几步：
@@ -275,17 +275,17 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\end{center}
 	\label{tab:ResultOfTrough1}
 \end{table}
-工况1到工况10的试验结果如表\ref{tab:ResultOfTrough1}所示。需要指出的是，由于太阳能辐射强度的不可控性和多变性，表中太阳直射辐射强度（DNI）的实测值分布并不均匀。太阳辐射强度对集热器效率的影响曲线见图\ref{fig:I_r-eta-trough}。图中还显示了模型计算的结果。模型所采用的参数和试验参数相同。
+工况1到工况10的试验结果如表\ref{tab:ResultOfTrough1}所示。需要指出的是，由于太阳能辐射强度的不可控性和多变性，表中太阳直射辐射强度（DNI）的实测值分布并不均匀。DNI对集热器效率的影响曲线见图\ref{fig:I_r-eta-trough}。图中还显示了模型计算的结果。模型所采用的参数和试验参数相同。
 %The optical efficiency fo the dish collector is manually reduced to simulate the real situation of the spilled focused spot.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/I_r-eta-trough}
-\caption{太阳辐射强度对槽式集热器效率的影响}
+\caption{DNI对槽式集热器效率的影响}
 \label{fig:I_r-eta-trough}
 \end{figure}
 
-可以发现，试验数据和模拟结果具有相同的变化趋势，即槽式集热器的集热效率随着太阳辐射强度的增加而升高。
-模拟结果与试验数据的误差很小（小于1\%），但随着太阳辐射强度的增加，误差会有所增大。
+可以发现，试验数据和模拟结果具有相同的变化趋势，即槽式集热器的集热效率随着DNI的增加而升高。
+模拟结果与试验数据的误差很小（小于1\%），但随着DNI的增加，误差会有所增大。
 
 \subsubsection{$\dot{m}$的影响}
 
@@ -315,7 +315,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 \label{fig:q_m-eta-trough}
 \end{figure}
 
-可以发现，试验数据和模拟结果具有相同的变化趋势，即槽式集热器的集热效率随着传热流体流量的增加而升高。这是因为，更大的流量将从吸热器带走更多的热量，导致更低的吸热器温度分布，进而使散热损失减小。模拟结果与试验数据存在较小的偏差（误差在0.4\%到0.9\%之间），模拟结果所得的集热效率要低于相应的试验数据得到的集热效率。这是由于模拟过程所采用的整体传热系数公式（见式\ref{eq:U_T_abs}）适用于LS-3型的接收器，而对本试验所采用的集热器并不是很适合。未来更多的试验数据可以用来修正此公式，使其更加适用于本试验平台的SEIDO6型接收器。
+可以发现，试验数据和模拟结果具有相同的变化趋势，即槽式集热器的集热效率随着传热流体流量的增加而升高。这是因为，更大的流量将从吸热器带走更多的热量，导致更低的吸热器温度分布，进而使散热损失减小。模拟结果与试验数据存在较小的偏差（误差在0.4\%到0.9\%之间），模拟结果所得的集热效率要低于相应的试验数据得到的集热效率。这是由于模拟过程所采用的整体传热系数公式（见式\ref{eq:U_T_abs}）适用于LS-3型的接收器，而对本试验所采用的集热器并不是很适合。未来更多的试验数据可以用来修正此公式，使其更加适用于本试验平台的SEIDO-I型接收器。
 
 \subsubsection{$T_i$的影响}
 
@@ -336,24 +336,23 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\end{center}
 	\label{tab:ResultOfTrough3}
 \end{table}
-工况16到工况20的试验结果如表\ref{tab:ResultOfTrough3}所示。
+工况16到工况20的试验结果如表\ref{tab:ResultOfTrough3}所示。导热油入口温度对槽式集热器集热效率的影响曲线见图\ref{fig:T_i-eta-trough}。
 
-Figure~\ref{fig:T_i-eta-trough} shows the influence of inlet temperature on the thermal efficiency of the trough collector.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/T_i-eta-trough}
-\caption{Influence of inlet temperature on the thermal efficiency}
+\caption{入口油温对槽式集热器效率的影响}
 \label{fig:T_i-eta-trough}
 \end{figure}
 
-Both the experimental data and simulation results show that, higher inlet temperature leads to lower efficiency. This is obvious for higher inlet temperature leads to higher receiver temperature distribution and hence more thermal losses. Small deviations also exist between the experimental data and simulation results, between 0.7\% to 1.5\%. The simulation efficiency is lower than corresponding experimental efficiency. This can be interpreted as the same reason of inaccurate thermal loss coefficient $U$.
+可以发现，试验数据和模拟结果具有相同的变化趋势，即槽式集热器的集热效率随着导热油入口温度的提高而降低。这是因为，更高的入口油温将导致更高的吸热器温度分布，并由此带来更多的散热损失。模拟结果和试验数据算得的集热效率之间存在较小的偏差（0.7\%到1.5\%），模拟结果的效率要低于相应的试验数据得到的集热效率。这同样可以用整体传热系数不适用来解释。
 
-\subsection{Dish collector experiment result analysis}
-Influences of solar irradiance, flow rate and inlet temperature of the working fluid on the collector thermal performance are concerned.
-\subsubsection{Influence of $I_r$}
+\subsection{碟式集热器试验结果分析}
+%Influences of solar irradiance, flow rate and inlet temperature of the working fluid on the collector thermal performance are concerned.
+\subsubsection{$I_r$的影响}
 
 \begin{table}[htbp]\footnotesize
-	\caption{Experiment results of 工况 1 to 工况 10 of the dish collector}
+	\caption{碟式集热器在工况1到工况10条件下的试验结果}
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
@@ -374,33 +373,32 @@ Influences of solar irradiance, flow rate and inlet temperature of the working f
 	\end{center}
 	\label{tab:ResultOfDish1}
 \end{table}
-Tested results of 工况 1 to 工况 10 are listed in Table~\ref{tab:ResultOfDish1}. It is noteworthy that the measured values of solar irradiance are not evenly distributed due to the uncontrollability and variability of solar radiation intensity.
-Figure~\ref{fig:I_r-eta-dish} shows the influence of solar irradiance on the thermal efficiency of the dish collector. Simulation results are also included. The simulation parameters are set to be the same as the experiment. 
+工况1到工况10的试验结果如表\ref{tab:ResultOfDish1}所示。DNI对集热器效率的影响曲线如图\ref{fig:I_r-eta-dish}所示。图中还显示了模拟计算的结果。模型所采用的参数和试验参数相同。
 %The optical efficiency fo the dish collector is manually reduced to simulate the real situation of the spilled focused spot.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/I_r-eta-dish}
-\caption{Influence of solar irradiance on the thermal efficiency}
+\caption{DNI对碟式集热器效率的影响}
 \label{fig:I_r-eta-dish}
 \end{figure}
 
-It can be found that the thermal efficiency increases with solar irradiance when DNI is less than 600$\,\mathrm{W/m^2}$. When DNI is larger than 600$\,\mathrm{W/m^2}$, higher irradiance leads to higher wall temperature and hence more radiation loss, which jeopardizes the thermal efficiency when solar irradiance increases. 
-The discrepancy of the experimental data and simulation data may be interpreted for the insulation condition. The out wall temperature of the insulation layer is higher than expected, which proves that the isolation condition is not good enough. 
+可以发现，试验数据和模拟结果具有相同的变化趋势，即碟式集热器的集热效率存在极值。
+当DNI小于600$\,\mathrm{W/m^2}$时，碟式集热器的集热效率随着DNI的增加而升高；当DNI大于600$\,\mathrm{W/m^2}$时，碟式集热器的集热效率随着DNI的增加而下降。
+这是由于，较高的辐射强度将会增加接收器的内腔温度，进而带来更多的辐射损失，而由于辐射损失与内腔温度的四次方成正比，所以随着辐射强度的增加，集热器的热效率反而下降。模拟结果和试验数据之间的差异可以认为是接收器的绝热措施不够导致的，试验测得的绝热层外壁温度高于热网络结构图算得的温度也验证了这一点。
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/HigherDNI-eta-dish}
-\caption{Simulation results of influence of solar irradiance on the thermal efficiency}
+\caption{DNI与碟式集热器集热效率之间的模拟结果曲线图}
 \label{fig:HigherDNI-eta-dish}
 \end{figure}
-To clearly show the influence of higher DNI, a simulation of the dish collector model was carried out. The inlet air temperature is set to be 423.2$\,\mathrm{K}$, and the flow rate is set to be 0.03$\,\mathrm{kg/s}$. The environment temperature was set to be 283.2$\,\mathrm{K}$ and the wind speed is set to be 0.4$\,\mathrm{m/s}$. The simulation results are shown in Figure~\ref{fig:HigherDNI-eta-dish}. It can be found that there exists an optimum DNI for a specific receiver to achieve the highest thermal efficiency. For the receiver used in the platform, the optimum DNI is about 600$\,\mathrm{W/m^2}$.
-
+为了更加清晰地表明更高DNI对碟式集热器的影响，图\ref{fig:HigherDNI-eta-dish}显示了DNI值在300$\,\mathrm{W/m^2}$到1000$\,\mathrm{W/m^2}$之间变化时，碟式集热器集热效率的模拟结果曲线图。模拟的参数为：入口空气温度为423.2$\,\mathrm{K}$，流量为0.03$\,\mathrm{kg/s}$，环境温度设置为283.2$\,\mathrm{K}$，环境风速为0.4$\,\mathrm{m/s}$。可以发现，对于给定的集热器，存在最佳DNI，使得集热器获得最大集热效率。本试验的条件下，碟式集热器的最佳DNI约为600$\,\mathrm{W/m^2}$。
 %However, it has to be pointed out that these data points were collected in different days, the environment temperature and wind speed may differ. It needs further researches on this topic.
 
-\subsubsection{Influence of $\dot{m}$}
+\subsubsection{$\dot{m}$的影响}
 
 \begin{table}[htbp]\footnotesize
-	\caption{Experiment results of 工况 11 to 工况 15 of the dish collector}
+	\caption{碟式集热器在工况11到工况 15条件下的试验结果}
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
@@ -416,21 +414,21 @@ To clearly show the influence of higher DNI, a simulation of the dish collector 
 	\end{center}
 	\label{tab:ResultOfDish2}
 \end{table}
-Tested results of 工况 11 to 工况 15 are listed in Table~\ref{tab:ResultOfDish2}.
-Figure~\ref{fig:q_m-eta-dish} shows the influence of inlet flow rate on the thermal efficiency of the dish collector. The data points on the figure are collected within a short time, so the irradiance can be regarded as unchanged.
+工况11到工况15的试验结果如表\ref{tab:ResultOfDish2}所示。这些数据点都是在半个小时以内完成采集，以减小太阳辐射变化带来的影响。空气流量对槽式集热器集热效率的影响曲线见图\ref{fig:q_m-eta-dish}。
+
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/q_m-eta-dish}
-\caption{Influence of inlet flow rate on the thermal efficiency}
+\caption{空气流量对碟式集热器效率的影响}
 \label{fig:q_m-eta-dish}
 \end{figure}
 
-It can be found that higher flow rate leads to higher efficiency. This is obvious for higher flow rate takes more heat away from the receiver, leads to lower temperature distribution and hence less thermal losses. The experimental data and simulation result are in good agreement.
+可以发现，试验数据和模拟结果具有相同的变化趋势，即碟式集热器的集热效率随着空气流量的增加而增加。这是因为，更大的流量将从接收器带走更多的热量，导致更低的接收器温度分布，进而使散热损失减少。模拟结果和试验数据符合的很好。
 
-\subsubsection{Influence of $T_i$}
+\subsubsection{$T_i$的影响}
 
 \begin{table}[htbp]\footnotesize
-	\caption{Experiment results of 工况 16 to 工况 20 of the dish collector}
+	\caption{碟式集热器在工况16到工况20条件下的试验结果}
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
@@ -446,30 +444,27 @@ It can be found that higher flow rate leads to higher efficiency. This is obviou
 	\end{center}
 	\label{tab:ResultOfDish3}
 \end{table}
-Tested results of 工况 16 to 工况 20 are listed in Table~\ref{tab:ResultOfDish3}.
-Figure~\ref{fig:T_i-eta-dish} shows the influence of inlet flow rate on the thermal efficiency of the dish collector.
+工况16到工况20的试验结果如表Table~\ref{tab:ResultOfDish3}所示。空气入口温度对碟式集热器效率的影响曲线如图\ref{fig:T_i-eta-dish}所示。
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/T_i-eta-dish}
-\caption{Influence of inlet temperature on the thermal efficiency}
+\caption{空气的入口温度对碟式集热器效率的影响}
 \label{fig:T_i-eta-dish}
 \end{figure}
 
-It can be found that higher inlet temperature leads to lower efficiency, This is obvious for higher inlet temperature leads to higher temperature distribution and hence more thermal losses. The experimental data and simulation result are in good agreement.
+可以发现，试验数据和模拟结果具有相同的变化趋势，即碟式集热器的集热效率随着空气入口温度的提高而降低。这是因为，更高的空气入口温度将导致更高的接收器温度分布，并由此带来更多的散热损失。模拟结果和试验数据符合的很好。
 
-\section{Conclusion}
+\section{本章小结}
+太阳能光热发电平台的建立为太阳能梯级系统开启了良好的开端。本章介绍了平台的部件和各回路。依据太阳辐射的特点，专门设计了特殊的试验工况来研究不同参数对槽式集热器和碟式集热器的集热效率的影响。设计了详细的试验步骤，明确了试验目的，并进行了相关的试验，获得了相关的试验数据。
 
-The solar thermal power platform is a good start for the cascade solar thermal system. This chapter introduces the components and the circuits of the platform. According to the features of solar irradiance, special experiment cases are designed to investigate the impact of different factors on the system performance. Experiment steps are carefully arranged.
-Tests of the trough collector and the dish collector are carried out and the experimental results are collected for analysis. 
+研究分析了太阳辐射直射强度、传热流体流量、入口温度对集热器性能的影响，并对建立的槽式集热器模型和碟式集热器模型进行了验证分析。需要指出的是，由于试验平台并不具备测量各集热器光学效率的能力，且本文建立的集热器模型中光学效率的各参数都是常数值，所以本章所建立的模型的光学效率是人为设定的常数值。
 
-The influence of solar irradiance, flow rate and inlet temperature of the working fluid on the performance of the collector model is investigated. The established trough collector model and dish collector model are validated by the experimental data.
-
-The analysis of experimental data and simulation results shows that
+通过对试验数据和模拟结果的分析，可以发现：
 
 \begin{enumerate}[label=(\arabic*)]
-\item The thermal efficiency of trough collectors is between 60.1\% and 62.8\% and the thermal efficiency of dish collectors is between 39.7\% and 63.3\% under the experimental conditions.
-\item With regard to the effect of the considered factors on the performance of the collectors, the experimental data and the simulation results have the same trend. Higher working fluid flow rate leads to higher thermal efficiency, while higher working fluid inlet temperature leads to lower thermal efficiency.
-\item For a specific dish receiver, there exists an optimum DNI to obtain the highest thermal efficiency.
-\item The discrepancy of the experimental data and simulation results of the trough collector indicates that the thermal loss coefficient used in the modeling process is not ideal for the trough product used in the platform. It needs to be revised in the future.
-\item The discrepancy of the experimental data and simulation results of the dish collector indicates that the thermal insulation of the dish collector needs to be inspected and strengthened.
+\item 在试验条件下，槽式集热器的集热效率在60.1\%到62.8\%之间，碟式集热器的集热效率在39.7\%到63.3\%之间。
+\item 在不同测试参数下，模拟结果都与试验数据具有相同的影响趋势。更高的传热流体流量带来更高的集热效率，更高的传热流体入口温度导致更低的集热效率。
+\item 对于给定的碟式集热器，存在着最佳的太阳直射辐射强度使得集热器获得最高的集热效率。
+\item 槽式集热器模拟结果和试验数据之间的差异表明模型所用的整体传热系数和试验平台所采用的集热器的整体传热系数存在差异，可以通过更多的试验数据来修改公式，使模拟结果更加精确。
+\item 碟式集热器模拟结果和试验数据之间的差异表明需要检查并加强碟式集热器的绝热措施。
 \end{enumerate}

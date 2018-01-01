@@ -1,39 +1,34 @@
 \chapter{梯级系统性能评估}
-\section{系统描述}
+\section{系统简介}
 
-第\ref{sec:sst}节选出了两种典型的梯级系统拓扑结构用于研究工作。需要指出的是，在第\ref{cha:osgs}章，
-In Section~\ref{sec:sst}, two typical cascade system topologies (see Figure~\ref{fig:CascadeSystems}) are selected for further investigation. It has to be pointed out that, in Chapter~\ref{cha:osgs}, multistage exergy loss reduction system (MELRS) is proposed and analyzed. It is obvious that MELRS has better energy and exergy performance than SGSS. However, the MELRS is not applied in this chapter for investigation. There are several reasons. First,
-in order to clearly find out the advantages of cascade collection and cascade utilization of the cascade systems, it is not applied in the cascade system in this chapter. Second, compared with traditional SGSS, MELRS only changes the solar field, which has no influence on the cascade utilization of the cascade system. It can be easily applied in the cascade system analyzed in this chapter in the future without influence of existing calculations. Third, the MELRS proposed in Chapter~\ref{cha:osgs} needs further research in the future. Different kinds of solar collector technologies can be applied in different solar fields. For example, linear Fresnel reflectors or flat collectors can be applied for preheating solar field to reduce costs; molten salt can be used as heat transfer fluid in the superheating solar field to increase the main steam temperature of the Rankine cycle.
+第\ref{sec:sst}节选出了两种典型的梯级系统拓扑结构用于研究工作。需要指出的是，第\ref{cha:osgs}章提出并分析了分段加热系统。分段加热系统比传统的蒸汽发生系统具有更好的热效率和㶲效率。然而，本章的梯级系统并没有使用改分段加热系统，这是因为，首先，为了更加清晰地表明本文所提出的梯级系统因梯级集热和梯级利用带来的收益，本章的梯级系统不使用分段加热系统。其次，同使用传统的蒸汽发生系统的太阳能光热发电系统相比，使用分段加热系统的太阳能光热发电系统只是改变了太阳能场部分。因此可以方便地将分段加热系统引入梯级系统而不影响其它部分的计算。最后，第\ref{cha:osgs}章提出的分段加热系统有很大的改进空间，值得以后进行更深入地研究。
 
-Two typical cascade system topologies are selected in Chapter~\ref{cha:SystemTopology}. 
-Both systems take advantage of the different types of heat collectors and different thermal cycles to achieve cascade collection of energy and cascade utilization.
-However, this chapter focuses on the first model because it is more widely used and more suitable for large-scale applications. 
-Figure~\ref{fig:System-1} shows the scheme sketch of the cascade system.
-In this system, dish collectors are used to provide heat for Stirling engines and air-to-water heat exchanger. Trough collectors are used to provide heat for steam generating processes (preheating, evaporating and superheating) in the Rankine cycle. Hot air is produced by the dish collectors. High temperature (1073\,K) air is used to provide heat to Stirling cycle to get higher conversion efficiency, then the air is used to provide heat for air-to-water heat exchanger to use the lower temperature energy in Rankine cycle effectively. Besides, feed water of Rankine cycle is used to cool the Stirling engines to recycle the heat wasted conventionally. The Stirling engines are connected in series for better performance.
+第\ref{sec:sst}节选出了两种典型的梯级系统拓扑结构都采用了多种型式的集热器和多个热力循环来实现能量的梯级收集和梯级利用。然而，本章主要研究第一个拓扑结构，因为它使用更加广泛，也更适合大规模利用。图\ref{fig:System-1}为其拓扑结构示意图，在该系统结构中，碟式集热器用于为斯特林机和空气-水换热器提供热源，槽式集热器用于为朗肯循环的蒸汽发生过程提供热源。碟式集热器出口的高温空气（1037$\,\mathrm{K}$）先为斯特林机供热，以实现较高的转换效率，接着进入空气-水换热器为朗肯循环提供热量。朗肯循环的凝结水用于冷却斯特林机组，以回收利用斯特林机组释放的热量。斯特林机组以串联的形式连接以获得最佳的性能。
 
 \noindent \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.8\columnwidth]{fig/cascadeSystem}
-	\caption{Sketch of the cascade system}
+	\caption{梯级系统结构示意图}
 	\label{fig:System-1}
 \end{center}
 \end{figure}
 
-Figure~\ref{fig:T-s_Water2} shows the $T$-$s$ diagram of the water circuit in the cascade system. In this Rankine cycle, the heat provided in process $2e$-$2f$ comes from the Stirling engines, which increases the power of Rankine cycle. Figure~\ref{fig:HeatTransfer_Water-SEs} shows the heat transfer diagram of this process.
+梯级系统的水回路的$T$-$s$图如图\ref{fig:T-s_Water2}所示。在朗肯循环中，过程$2e$-$2f$的热量由斯特林机组提供。其传热过程曲线图如图\ref{fig:HeatTransfer_Water-SEs}所示。
 
 \noindent \begin{figure}[htbp]
 \centering
 	\begin{subfigure}[b]{0.45\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/T-s_Water2}
-	\caption{$T$-$s$ diagram of the water circuit}\label{fig:T-s_Water2}
+	\caption{水循环的$T$-$s$图}\label{fig:T-s_Water2}
 	\end{subfigure}
 	~
 \begin{subfigure}[b]{0.45\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Water-SEs}
-	\caption{Diagram of process $2e$-$2f$}\label{fig:HeatTransfer_Water-SEs}
+	\caption{$2e$-$2f$的传热过程曲线图}
+	\label{fig:HeatTransfer_Water-SEs}
 	\end{subfigure}
 	
-	\caption{Diagrams of water circuit and $2e$-$2f$ process}\label{fig:Diagrams$2e$-$2f$}
+	\caption{水循环的过程曲线图和过程$2e$-$2f$的传热曲线图}\label{fig:Diagrams$2e$-$2f$}
 \end{figure}
 
 
@@ -59,108 +54,117 @@ Figure~\ref{fig:T-s_Water2} shows the $T$-$s$ diagram of the water circuit in th
 %\end{center}
 %\end{figure}
 
-To build the cascade system model, several simplifying assumptions are made:
+%To build the cascade system model, several simplifying assumptions are made:
+%
+%\begin{itemize}
+%	\item Steady state at nominal load of the system is analyzed.
+%	\item Pressure drop due to flow is negligible.
+%	\item The leak of working fluid in the pipes is neglected.
+%	\item Same isentropic efficiency of steam turbine with different loads and in different stages.
+%	\item Heat loss that occurs from the tube to the atmosphere is not considered.
+%	\item There is no heat loss to the environment for Stirling engines.
+%	\item Simple models are used of some processes and equipment.
+%	\item A symmetrical regenerator behavior is assumed so that a single effectiveness can be defined as $e = (T_R - T_L) /(T_H - T_L)$.~\cite{Formosa2010, Juhasz2010}
+%	\item A linear temperature profile across the regenerator exists, the mean effective temperature $T_{R} = (T_H-T_L) / \ln(T_H/T_L)$.~\cite{Der2007, Cavazzuti2012}
+%\end{itemize}
 
-\begin{itemize}
-	\item Steady state at nominal load of the system is analyzed.
-	\item Pressure drop due to flow is negligible.
-	\item The leak of working fluid in the pipes is neglected.
-	\item Same isentropic efficiency of steam turbine with different loads and in different stages.
-	\item Heat loss that occurs from the tube to the atmosphere is not considered.
-	\item There is no heat loss to the environment for Stirling engines.
-	\item Simple models are used of some processes and equipment.
-	\item A symmetrical regenerator behavior is assumed so that a single effectiveness can be defined as $e = (T_R - T_L) /(T_H - T_L)$.~\cite{Formosa2010, Juhasz2010}
-	\item A linear temperature profile across the regenerator exists, the mean effective temperature $T_{R} = (T_H-T_L) / \ln(T_H/T_L)$.~\cite{Der2007, Cavazzuti2012}
-\end{itemize}
+\section{系统评估方法}
+\subsection{系统性能}
 
-\section{System evaluation method}
-\subsection{System performance}
-
-The cascade system uses different types of collectors and different kinds of thermodynamic cycles. They are closely linked together. It is unable to indicate the output power of one specific kind of collector. A common approach is to define the overall efficiency of the system. The overall solar-to-electric efficiency equals to the total output power divided by the total input solar energy.
+梯级系统同时使用不同类型的集热器和不同种类的热力循环，它们相互耦合在一起。无法评价某一种型式的集热器收集的能量所产生的电能。一个更加通用的方式是定义系统的整体效率。梯级系统的整体光电转换效率等于总的输出功除以总的输入太阳能。
+%The cascade system uses different types of collectors and different kinds of thermodynamic cycles. They are closely linked together. It is unable to indicate the output power of one specific kind of collector. A common approach is to define the overall efficiency of the system. The overall solar-to-electric efficiency equals to the total output power divided by the total input solar energy.
 
 \begin{equation}
 	\eta_{cs}=\dfrac{P_{cs}}{I_rA_{cs}} = \dfrac{P_{rk}+ P_{sea}}{I_rA_{tc} + I_rA_{dc}}
 \end{equation}
 \nomenclature[S]{rk}{Rankine cycle}
 
-where $P_{rk}$ is the output power of the Rankine cycle, and $P_{sea}$ is the total output power of the Stirling engines.
+其中，$P_{rk}$是朗肯循环的输出功率，$P_{sea}$是所有斯特林机的输出功率之和。
 
 \begin{equation}
 	P_{rk} = P_{tb} - P_{pu} / \eta_{ge}
 \end{equation}
 
+汽轮机的功率
 \begin{equation}
   P_{tb}=\left(1-y\right)\dot{m}_{2}\left(h_{2a}-h_{2b}\right)+y\dot{m}_{2}\left(h_{2a}-h_{2c}\right)
 \end{equation}
-  
+
+泵消耗的功率
 \begin{equation}
 	P_{pu}=\left(1-y\right)\dot{m}_{2}\left(h_{2e}-h_{2d}\right)+\dot{m}_{2}\left(h_{2h}-h_{2g}\right)
 \end{equation}
 
+依据能量守恒，斯特林机组的输出总功率等于单位时间内热流体的焓降减去热流体的焓升。
 \begin{equation}
 	P_{sea}=\dot{m_1}(h_{1,i,1} - h_{1,o,n_1}) - \dot{m_2}(h_{2,o,n_1} - h_{2,i,1})
 \end{equation}
 
-As mentioned above, $\dfrac{P_{rk}}{I_rA_{tc}}$ does not indicate the efficiency of solar trough collectors and $\dfrac{P_{sea}}{I_rA_{dc}}$ does not indicate the efficiency of solar dish collectors.
+正如前文提到的，$\dfrac{P_{rk}}{I_rA_{tc}}$并不能表明槽式集热器的发电效率，$\dfrac{P_{sea}}{I_rA_{dc}}$也不能表示碟式集热器的效率。
 
-\subsection{System comparison}
+\subsection{系统对比方案}
 
-The other one is to compare with existing solar thermal power technologies. This requires more consideration. 
+梯级系统评估的另一个重要方面是与现有太阳能光热发电技术进行对比分析。主要有以下几种对比方案：
 
 \begin{enumerate}[label=(\arabic*)]
-	\item Compare with parabolic trough. 
+	\item 同槽式系统进行对比。 
 
-	When compared with parabolic trough system, a higher efficiency of the cascade system may be explained as the usage of solar dish collector. It is difficult to tell if the higher efficiency is due to the usage of cascade system or the usage of dish collector.
-	\item Compare with parabolic dish.
+	当选择与槽式系统进行对比时，梯级系统获取的效率提升难以辨别出是由于采用梯级系统带来的提升还是只是由于采用了碟式集热器和斯特林机组带来的提升。
+	\item 同碟式系统对比。
 	
-	When compared with parabolic dish system, a lower cost of the cascade system may be explained as the usage of solar trough collector. It is difficult to tell if the lower cost is due to the usage of cascade system or the usage of trough collector.
-	\item Compare with stand-alone systems.
+	当选择与碟式系统进行对比时，梯级效率获得的成本的降低难以区分是由于采用梯级系统带来的降低还是只是由于采用了槽式集热器和朗肯循环带来的降低。
+	\item 与多种系统同时对比。
 	
-	It is important to choose good stand-alone systems. An intuitive idea is to use both parabolic trough and parabolic dish for comparison. To compare two systems, contrast conditions needs to be set. 
+	一种自然的想法是，尽可能选用和梯级系统中相同的部件。这意味，需要同时选择槽式系统和碟式系统作为对比的系统。这两个系统独立存在，不存在梯级利用的关系，称为独立系统。
 	
-	If the same output power was selected as the contrast condition, different amount of trough collectors and dish collectors will be used in the cascade system and stand-alone systems.
-	It is complicated for cost comparison due to different prices of trough collectors and dish collectors.
+	由于独立系统和梯级系统的不同，独立系统中的槽式集热器和汽轮机不可能同时和梯级系统中的相同。同样，独立系统中的碟式集热器和斯特林机不可能同时和梯级系统中的相同。
 	
-	A better way is to select the same collectors as the contrast condition. Since the output is electricity, it is much more convenient for both efficiency comparison and cost comparison.
+	如果以相同的汽轮机输出功和相同的斯特林机输出功作为选择独立系统的条件，独立系统将具有和梯级系统不同的槽式集热面积以及不同的碟式集热面积。然而，这将非常不利于未来对梯级系统进行经济性对比分析，因为槽式集热器单位面积的成本和碟式集热器单位面积的成本相差很大。
+	
+	一个更好的选择方案则是，以相同的槽式集热器和相同的碟式集热器作为选择独立系统的条件，这样可以利用发电设备的变工况运行来实现不更换设备就能满足发电要求。同时，由于输出都是电能，可以很方便地进行效率对比分析和经济对比分析。
 	
 \end{enumerate}
 
-\section{System parameters}
+本文选用以相同的槽式集热器和相同的碟式集热器作为选择独立系统的条件，即独立系统具有和梯级系统相同的槽式集热器和碟式集热器。
 
-In order to study the efficiency of the system and its influencing factors, a model of the cascade system is required. Chapter~\ref{cha:Modeling} introduces the system modeling process in detail. After the system modeling process, another important task is to determine the system parameters.
+\section{系统参数的确定}
 
-The system mainly consists of the following components:
+为了研究梯级系统的性能及其影响因素，需要对系统进行建模仿真分析。第\ref{cha:Modeling}章详细介绍了系统的建模方法。完成系统建模后，另一项重要的任务就是确定系统的参数。
 
-\subsection{Environment}
+系统中的参数主要由以下部分确定：
 
-Typical environmental parameter values of Wuhan are used for the cascade system design.
+\begin{enumerate}[label=(\arabic*)]
 
-$I_r = 700\,\mathrm{W/m^2}$, $T_{amb} = 293\,\mathrm{K}$, $p_{amb} = 1\times10^5\,\mathrm{Pa}$, $v_{amb} = 1\,\mathrm{m/s}$.
+\item 环境
 
-\subsection{Steam Turbine} 
+典型的环境参数值设定为：
+$I_r = 700\,\mathrm{W/m^2}$，$T_{amb} = 293\,\mathrm{K}$，$p_{amb} = 1\times10^5\,\mathrm{Pa}$，$v_{amb} = 1\,\mathrm{m/s}$。
+
+\item 汽轮机
+
+汽轮机以青岛捷能汽轮机集团股份有限公司的N-6 2.35系列产品为设计模型。其额定参数为：$P = 6\,\mathrm{MW}$，$p_s = 2.35\,\mathrm{MPa}$，$T_s = 390\mathrm{^\circ C}$，$\dot{m} = 32.09\,\mathrm{t/h}$，$p_c = 0.015\,\mathrm{MPa}$，$s_{tb} = 3000\,\mathrm{rpm}$。
 	
-A steam turbine product, N-6 2.35, of Qingdao Jieneng Power Station Engineering Co., Ltd is used for calculation. Its nominal parameters are: $P = 6\,\mathrm{MW}$, 	$p_s = 2.35\,\mathrm{MPa}$, $T_s = 390\mathrm{^\circ C}$, $\dot{m} = 32.09\,\mathrm{t/h}$, $p_c = 0.015\,\mathrm{MPa}$, $s_{tb} = 3000\,\mathrm{rpm}$.
+	已知主汽参数，其比焓和比熵可以通过物性参数插件CoolProp获得：$h_s = 3.2203\times10^6\,\mathrm{J/kg}$，$s_s = 7.0149\times10^3\,\mathrm{J/(kg\cdot K)}$。
 	
-	Known the main steam parameters, its enthalpy and entropy can be obtained by using CoolProp, $h_s = 3.2203\times10^6\,\mathrm{J/kg}$, $s_s = 7.0149\times10^3\,\mathrm{J/(kg\cdot K)}$.
+	汽轮机的排汽焓：$h_{c} = h_{s} - \dfrac{P}{\dot{m}} = 2.5472\times10^6\,\mathrm{J/kg}$.
 	
-	Exhaust enthalpy of the turbine $h_{c} = h_{s} - \dfrac{P}{\dot{m}} = 2.5472\times10^6\,\mathrm{J/kg}$.
+	已知排汽压力以及$s_{i,c} = s_s$，汽轮机的理想排汽焓值可以由CoolProp获得：$h_{i,c} = 2.2737\times10^6\mathrm{J/kg}$。
 	
-	Known exhaust pressure and $s_{i,c} = s_s$, isentropic exhaust enthalpy of the turbine can be obtained by using CoolProp, $h_{i,c} = 2.2737\times10^6\mathrm{J/kg}$.	
-	
-	So the isentropic efficiency of the turbine can be obtained from
+	所以，汽轮机的等熵效率
 	$\eta_{i,tb} = \dfrac{h_s - h_c}{h_{s} - h_{i,c}} = 0.71$.
 	
-	Taking into account of the application in solar trough system, the designed parameters of the steam turbine are shown in Table~\ref{tab:CascadeSystemParameters}.
+	考虑到应用于本文提出的梯级系统，汽轮机的设计参数选择值见表ref{tab:CascadeSystemParameters}。
 		 
-\subsection{Trough collector}
-LUZ solar collector LS-3 is used as the trough collector for its known test data. Its main characters are listed in Table~\ref{tab:TroughParameters}.~\cite{Fernandez2010}
+\item 槽式集热器
+
+由于LUZ公司的LS-3型号的集热器的试验数据比较丰富，本文选用它作为槽式集热器。它的主要参数见表\ref{tab:TroughParameters}~\cite{Fernandez2010}。
 
 \begin{table}[htbp]
-	\caption{Main parameters of LS-3}
+	\caption{LS-3型槽式集热器的主要参数}
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		Parameter		&	Value	&	Parameter		&	Value	&	Parameter		&	Value\\
+		参数		&	值	&	参数		&	值	&	参数		&	值\\
 		\midrule
 		$A_{pc}$		&	$570.2\,\mathrm{m^2}$	&	$w_{dc}$	&	$5.76\,\mathrm{m}$	&	$L_{dc}$	&	$99\,\mathrm{m}$\\
 		$f$	&	$1.71\,\mathrm{m}$	&	$d_i$		&	$0.066\,\mathrm{m}$	&	$d_o$	&	$0.07\,\mathrm{m}$\\
@@ -173,39 +177,48 @@ $\alpha$	&	$0.96$	&	$Fe$	&	$0.97$\\
 	\end{center}
 	\label{tab:TroughParameters}
 \end{table}
-\nomenclature{$f$}{Focal length, m}
+\nomenclature{$f$}{焦距, m}
 
-\subsection{Dish collector}
-A dish reflector product of SES (Stirling Energy System) is used as the reflector, the receiver is self-designed. The key parameters of the dish collector are listed in Table~\ref{tab:dc}. 
+\item 碟式集热器
 
-\subsection{Stirling engines}
-The Stirling engines used in the cascade system are the same with the one analyzed in Section~\ref{sec:StirlingEngineModel}. It is a GPU-3 type Stirling engine, Table~\ref{tab:GPU3parameters} shows its parameters.
+碟式集热器的反射镜选用SES公司的产品，而碟式接收器采用自行设计。碟式集热器的反射镜参数和接收器参数见表\ref{tab:dc}。
 
-\subsection{Preheater}
-Water is heated to saturated water in the preheater by the oil. For outlet stream of water, $x = 0$.
-Besides, considering the minimum temperature difference required between oil and water, $T_{3c} - T_{2i} = \Delta T_{3,2,min}$. $\Delta T_{3,2,min}$ is set to be $15\,\mathrm{K}$.
+\item 斯特林机
 
-\subsection{Evaporator}
-Water is heated from saturated liquid water to saturated steam in the evaporator. For outlet stream of water, $x = 1$.
+梯级系统所用的斯特林机和第{sec:StirlingEngineModel}节中分析的斯特林机相同，即GPU-3型斯特林机，其参数见表{tab:GPU3parameters}。
 
-\subsection{Superheater}
-The inlet temperature of oil is limited by the oil properties. In the cascade system, Therminol VP-1 Synthetic oil is used as the heat transfer fluid. Its properties can be obtained from both EES and CoolProp. The inlet temperature of the oil of superheater is set as $T_{3a} = 623\,\mathrm{K}$.
+\item 预热器
 
-\subsection{Deaerator}
-The deaerator has two inlet streams and one outlet stream. They have the same pressure, $p_{se} = 1\times10^6\,\mathrm{Pa}$. The outlet stream of the deaerator is saturated water.
+水在预热器中由过冷水被加热成饱和液态水，水在预热器的出口干度为0（$x = 0$）。
 
-\subsection{Air-water heat exchanger}
-The inlet temperature is set as $T_{1b} = 673\,\mathrm{K}$.
+此外，考虑到夹点温度，预热器的入口油温要比出口水温高出$\Delta T_{min}$，即$T_{3c} - T_{2i} = \Delta T_{min}$，$\Delta T_{min}$设定为$15\,\mathrm{K}$。
 
-\subsection{Main design parameters summary}
-The main design parameters of the cascade system can be concluded in Table~\ref{tab:CascadeSystemParameters}.
+\item 蒸发器
+
+水在蒸发器中由饱和液态水被加热成饱和蒸汽，水在蒸发器的出口干度为1（$x = 1$）。
+
+\item 过热器
+
+过热器的入口油温受限于导热油的属性。在梯级系统中，导热油选用Therminol VP-1型合成油。它的物性参数可以通过CoolProp得到。过热器的入口油温设定为$T_{3a} = 623\,\mathrm{K}$。
+
+\item 除氧器
+
+除氧器具有两股入口流体和一股出口流体，它们都具有相同的压力。设定除氧器的压力$p_{se} = 1\times10^6\,\mathrm{Pa}$。除氧器的出口流体为饱和液态水，其干度为0（$x = 0$）。
+
+\item 空气-水换热器
+
+空气-水换热器的入口空气温度设定为 $T_{1b} = 673\,\mathrm{K}$。
+\end{enumerate}
+
+\subsection{主要设计参数小结}
+梯级系统的主要设计参数归纳见表\ref{tab:CascadeSystemParameters}。
 
 \begin{table}[htbp]
-	\caption{Basic design parameters of the cascade system}
+	\caption{梯级系统的基本设计参数}
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		Parameter		&	Value	&	Parameter		&	Value	&	Parameter		&	Value\\
+		参数		&	值	&	参数		&	值	&	参数		&	值\\
 		\midrule
 		$I_r$		&	$700\,\mathrm{W/m^2}$	&	$T_{dc,o}$	&	$1073\,\mathrm{K}$	&	$n_{se}$	&	100\\
 		$T_{amb}$	&	$293\,\mathrm{K}$	&	$p_{dc}$		&	$5\times10^5\,\mathrm{Pa}$	&	$T_s$	&	$613\,\mathrm{K}$\\
@@ -220,21 +233,21 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 	\label{tab:CascadeSystemParameters}
 \end{table}
 
-\section{Stand-alone system selection}
+\section{对比系统的选择}
 
 \noindent \begin{figure}[htbp]
 \centering
 	\begin{subfigure}[b]{0.64\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/Trough-s}
-	\caption{Trough-Rankine system}\label{fig:TroughRankine}
+	\caption{槽式-朗肯循环系统}\label{fig:TroughRankine}
 	\end{subfigure}
 	~
 \begin{subfigure}[b]{0.26\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/Dish-s}
-	\caption{Dish-Stirling system}\label{fig:DishStirling}
+	\caption{碟式-斯特林机系统}\label{fig:DishStirling}
 	\end{subfigure}
 	
-	\caption{Sketch of the stand-alone systems}\label{fig:Stand-alone-systems}
+	\caption{独立系统的结构示意图}\label{fig:Stand-alone-systems}
 \end{figure}
 
 %\noindent \begin{figure}[htbp]
@@ -305,7 +318,7 @@ The total power of Stirling engines
 \end{equation}
 \nomenclature{$n$}{Number of collectors}
 
-\section{Comparison with stand-alone system}
+\section{同独立系统的对比分析}
 The results presented in Table~\ref{tab:importantResults} are issued using design parameters with counterflow of two fluids in Stirling engine array as the default flow type. It is shown that the cascade system with design parameters can achieve higher efficiency compared to corresponding stand-alone systems. Although the efficiency of the Stirling engine array is lower, the efficiency of the Rankine cycle is higher. The overall output power of the cascade system is $3.83\times10^4\,\mathrm{W}$ higher.
 %Different results between two flow types of Stirling engine array are listed in Table~\ref{tab:SEAresults}.
 
@@ -433,7 +446,7 @@ For a system with large difference of $c_p\dot{m}$ of two fluids, that means one
 \end{figure}
 %\section{System evaluation}
 
-\section{Conclusion}
+\section{本章小结}
 
 In this chapter, an effective typical cascade system proposed in Chapter~\ref{cha:SystemTopology} is chosen for evaluation. 
 This cascade system uses two different types of collectors and two different power generation methods. 

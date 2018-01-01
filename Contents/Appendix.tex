@@ -1,41 +1,40 @@
 \appendix
 
-\chapter{Heat transfer under constant temperature}
-Assuming $U$, $T_{c}$, $\dot{m}$,$c_{p}$ to be constant, for given $T_{i}$,
-\nomenclature[S]{$i$}{Inlet}
+\chapter{流体与定温热源的传热计算公式}
+假定$U$，$T_{c}$，$\dot{m}$和$c_{p}$都为常数，对于给定的来流温度$T_{i}$，
+\nomenclature[S]{$i$}{入口}
 
 \noindent \begin{center}
 \begin{figure}[h]
 \begin{centering}
-\includegraphics[width=0.6\textwidth]{fig/ConstTempHX.pdf}
+\includegraphics[width=0.4\textwidth]{fig/ConstTempHX.pdf}
 \par\end{centering}
-\caption{Diagram of heat transfer under constant temperature}
+\caption{流体与定温热源的传热示意图}
 \label{fig:CTHX}
 \end{figure}
 \par\end{center}
 
-For $A(x)=Px$, $x$ from $0$ to $L$, while $T(x)$ from $T_{i}$ to $T_{o}$,
-\nomenclature[S]{$o$}{Outlet}
+取$x$为已经参与换热的面积，当$x=0$时，$T(x)=T_i$；当$x=A$时，$T(x)=T_o$。
+\nomenclature[S]{$o$}{出口}
 
 \begin{equation}
-\dot{m}c_{p}dT(x)=(T_{c}-T(x))UPdx
+\dot{m}c_{p}dT(x)=(T_{c}-T(x))Udx
 \end{equation}
 
-so
+于是，
 
 \begin{equation}
-\frac{dT(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}(T(x)-T_{c})
+\frac{dT(x)}{dx}=-\frac{U}{\dot{m}c_{p}}(T(x)-T_{c})
 \end{equation}
 
 \begin{equation}
 T_{g}(x)=T_{p}(x)+T_{h}(x)
 \end{equation}
 
-where $T_{g}(x)$ is the general solution, $T_{p}(x)$ is the particular
-solution, $T_{h}(x)$ is the homogeneous solution.
+其中，$T_{g}(x)$是通解，$T_{p}(x)$是特解，$T_{h}(x)$是齐次解。
 
 \begin{equation}
--\frac{UP}{\dot{m}c_{p}}(T_{p}(x)-T_{c})=0
+-\frac{U}{\dot{m}c_{p}}(T_{p}(x)-T_{c})=0
 \end{equation}
 
 \begin{equation}
@@ -43,20 +42,20 @@ T_{p}(x)=T_{c}
 \end{equation}
 
 \begin{equation}
-\frac{dT_{h}(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}T_{h}(x)\label{eq:T_h(x)}
+\frac{dT_{h}(x)}{dx}=-\frac{U}{\dot{m}c_{p}}T_{h}(x)\label{eq:T_h(x)}
 \end{equation}
 
 \begin{equation}
-\int_{T_{h}(x)=T_{h}(0)}^{T_{h}(x)=T_{h}(L)}\frac{dT_{h}(x)}{T_{h}(x)}=-\int_{x=0}^{x=L}\frac{UP}{\dot{m}c_{p}}dx
+\int_{T_{h}(x)=T_{h}(0)}^{T_{h}(x)=T_{h}(A)}\frac{dT_{h}(x)}{T_{h}(x)}=-\int_{x=0}^{x=A}\frac{U}{\dot{m}c_{p}}dx
 \end{equation}
 \begin{equation}
-\frac{T_{h}(L)}{T_{h}(0)}=\exp(-\frac{UPL}{\dot{m}c_{p}})
+\frac{T_{h}(A)}{T_{h}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
 
-that is
+也就是
 
 \begin{equation}
-\frac{T_{g}(L)-T_{p}(L)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
+\frac{T_{g}(A)-T_{p}(A)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
 
 \begin{equation}
@@ -64,43 +63,41 @@ that is
 \label{eq:Eq}
 \end{equation}
 
-\chapter{Thermal gradient under constant heat flux}\label{cha:CTCHFHX}
+\chapter{等热流密度下的流体与定温热源的传热计算公式}
+\label{cha:CTCHFHX}
 
-Assuming $U$, $T_{c}$, $\dot{m}$, $c_p$, $q''$ to be constant, for
-given $T_{i}$,
+假定$U$，$T_{c}$，$\dot{m}$，$c_p$和$q''$都为常数，对于给定的来流温度${T_i}$，
 
 \noindent \begin{center}
 \begin{figure}[h]
 \noindent \begin{centering}
-\includegraphics[width=0.6\textwidth]{fig/CTCHFHX.pdf}\caption{Diagram of heat transfer with one constant temperature
-heat source and constant heat flux}
+\includegraphics[width=0.4\textwidth]{fig/CTCHFHX.pdf}\caption{等热流密度下的流体与定温热源的传热示意图}
 \label{fig:CTCHFHX}
 \par\end{centering}
 \end{figure}
 \par\end{center}
 
-For $A(x)=Px$, $x$ from $0$ to $L$, while $T(x)$ from $T_{i}$ to $T_{o}$,
+取$x$为已经参与换热的面积，当$x=0$时，$T(x)=T_i$；当$x=A$时，$T(x)=T_o$。
 \begin{equation}
-\dot{m}c_{p}dT(x)=(T_{c}-T(x))UPdx+q''Pdx
+\dot{m}c_{p}dT(x)=(T_{c}-T(x))Udx+q''dx
 \end{equation}
 
-so
+于是，
 
 \begin{equation}
 \frac{dT(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}T(x)+\frac{q''P+UPT_{c}}{\dot{m}c_{p}}
 \end{equation}
-\nomenclature[S]{$g$}{General solution}
+%\nomenclature[S]{$g$}{通解}
 %\nomenclature[S]{$p$}{Particular solution}
 %\nomenclature[S]{$h$}{Homogeneous solution}
 \begin{equation}
 T_{g}(x)=T_{p}(x)+T_{h}(x)
 \end{equation}
 
-where $T_{g}(x)$ is the general solution, $T_{p}(x)$ is the particular
-solution, $T_{h}(x)$ is the homogeneous solution.
+其中，$T_{g}(x)$是通解，$T_{p}(x)$是特解，$T_{h}(x)$是齐次解。
 
 \begin{equation}
--\frac{UP}{\dot{m}c_{p}}T_{p}(x)+\frac{q''P+UPT_{c}}{\dot{m}c_{p}}=0
+-\frac{U}{\dot{m}c_{p}}T_{p}(x)+\frac{q''+UT_{c}}{\dot{m}c_{p}}=0
 \end{equation}
 
 \begin{equation}
@@ -108,19 +105,19 @@ T_{p}(x)=T_{c}+\frac{q''}{U}
 \end{equation}
 
 \begin{equation}
-\frac{dT_{h}(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}T_{h}(x)
+\frac{dT_{h}(x)}{dx}=-\frac{U}{\dot{m}c_{p}}T_{h}(x)
 \end{equation}
 
-the same as Equation~(\ref{eq:T_h(x)}), so we have
+同方程(\ref{eq:T_h(x)})一样，于是有
 \begin{equation}
-\frac{T_{g}(L)-T_{p}(L)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
+\frac{T_{g}(A)-T_{p}(A)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
 
 \begin{equation}
 \frac{T_{o}-T_{c}-\dfrac{q''}{U}}{T_{i}-T_{c}-\dfrac{q''}{U}}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
 
-\chapter{MATLAB code of class Stream}
+\chapter{类Stream的MATLAB源代码}
 \label{cha:MATLAB_SOURCECODE}
 
 %\begin{lstlisting}[language= MATLAB, backgroundcolor = \color{yellow!20}, title = {The MATLAB source code of the definition of the class -- Stream}, label = {lst:MATLAB_SOURCECODE}]

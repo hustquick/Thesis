@@ -261,69 +261,69 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 %\end{center}
 %\end{figure}
 
-Figure~\ref{fig:Stand-alone-systems} shows the sketch of the stand-alone systems. These two stand-alone systems are developed for comparison. They use the same dish collectors and trough collectors with the same thermal efficiencies of the cascade system.
+独立系统的结构示意图如图\ref{fig:Stand-alone-systems}所示。为了完成梯级系统的对比分析，利用系统建模方法，对两个独立系统分别进行建模工作。这两个独立系统分别使用和梯级系统相同的槽式集热器和碟式集热器。
 
-\subsection{Stand-alone trough-Rankine system}
+\subsection{独立槽式-朗肯循环系统}
 
-Steam turbine has the same main parameters and isentropic efficiency with that of the cascade system. Working pressure of deaerator is the same of the cascade system. So parameters of state $2b,s$ and $2c,s$ in Figure~\ref{fig:Stand-alone-systems} of the steam turbine can be expressed by
+汽轮机的设计参数和相对内效率和梯级系统中的汽轮机一样。除氧器的工作压力和梯级系统中的一样。于是，图\ref{fig:Stand-alone-systems}中汽轮机的状态点$2b,s$和$2c,s$的参数可以由下式求出
 \nomenclature[S]{$s$}{Stand-alone systems}
 
 \begin{equation}
 	\eta_{i,tb}= (h_{2a,s}-h_{2b,s})/(h_{2a,s}-h_{i,2b,s}) = (h_{2a,s}-h_{2c,s})/(h_{2a,s}-h_{i,2c,s})
 \end{equation}
 
-The output power of steam turbine
+汽轮机的输出功率
 
 \begin{equation}
 	P_{tb,s}=\left(1-y_{s}\right)\dot{m}_{2,s}\left(h_{2a,s}-h_{2b,s}\right)+y_{s}\dot{m}_{2,s}\left(h_{2a,s}-h_{2c,s}\right)
 \end{equation}
 
-The output power of generator
+发电机的输出功率
 
 \begin{equation}
 	P_{ge,s}=P_{tb,s}\eta_{ge}
 \end{equation}
 
-The total power of pumps
+泵消耗的总功率
 \begin{equation}
 	P_{pu,s}=\left(1-y_{s}\right)\dot{m}_{2,s}\left(h_{2e,s}-h_{2d,s}\right)+\dot{m}_{2,s}\left(h_{2g,s}-h_{2f,s}\right)
 \end{equation}
 
-Heat injected in the water circuit
+水循环吸收的热
 
 \begin{equation}
 	Q_{2,s}=\dot{m}_{2,s}\left(h_{2a,s}-h_{2g,s}\right)
 \end{equation}
 
-The generator efficiency is the same of that in the cascade system, and the efficiency of Rankine cycle can be expressed as
+发电机的效率和梯级系统中发电机的效率相同，所以朗肯循环的效率可以表示为
 
 \begin{equation}
 	\eta_{rk,s}=(P_{tb,s}-P_{pu,s}/\eta_{ge})/Q_{2,s}
 \end{equation}
 
-\subsection{Stand-alone dish-Stirling system}
+\subsection{独立碟式-斯特林机系统}
 
-In the stand-alone dish-Stirling system, Stirling engines with the same number of dish collectors are directly put on the focuses of the dish collectors. Water is used for cooling the Stirling engines. $T_{H,s}$ is chosen to be equal to outlet temperature of air in dish receiver. $T_{L,s}$ is chosen to be 310 K, the default expansion temperature in Fraser's dissertation~\cite{Fraser2008} for the calculation of 4-95 NK\uppercase\expandafter{\romannumeral2} engine. $k$ and $\gamma$ are chosen the same value as that of the Stirling engines in the cascade system.
+在独立碟式-斯特林机系统中，为了和现有技术进行对比，将具有和碟式集热器相同数目的斯特林机放置于碟式集热器的焦点处。斯特林机利用水来冷却。$T_{H,s}$选择为碟式集热器出口的空气温度，即1073 K，$T_{L,s}$依据Fraser的论文\cite{Fraser2008}中的默认膨胀腔的温度数据选定为310 K。$k$和$\gamma$选择和梯级系统中的斯特林机相同。
 
 \begin{equation}
 	\eta_{sea,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\gamma}}
 \end{equation}
 
-where, $T_{R,s}=\dfrac{T_{H,s}-T_{L,s}}{\ln(T_{H,s}/T_{L,s})}$ and $e_{s}=\dfrac{T_{R,s}-T_{L,s}}{T_{H,s}-T_{L,s}}$.
+其中，$T_{R,s}=\dfrac{T_{H,s}-T_{L,s}}{\ln(T_{H,s}/T_{L,s})}$，$e_{s}=\dfrac{T_{R,s}-T_{L,s}}{T_{H,s}-T_{L,s}}$。
 
-The total power of Stirling engines
-
+斯特林机组的总输出功率为
 \begin{equation}
 	P_{sea,s}=n_{dc}A_{dc}I_r\eta_{dc}\eta_{sea,s}
 \end{equation}
-\nomenclature{$n$}{Number of collectors}
+\nomenclature{$n$}{集热器的数目}
 
 \section{同独立系统的对比分析}
-The results presented in Table~\ref{tab:importantResults} are issued using design parameters with counterflow of two fluids in Stirling engine array as the default flow type. It is shown that the cascade system with design parameters can achieve higher efficiency compared to corresponding stand-alone systems. Although the efficiency of the Stirling engine array is lower, the efficiency of the Rankine cycle is higher. The overall output power of the cascade system is $3.83\times10^4\,\mathrm{W}$ higher.
+
+设计参数下，经过系统建模和仿真，得到梯级系统和其对应的独立系统的结果如表\ref{tab:importantResults}所示。其中，梯级系统的斯特林机组采用串联逆流的排布方式（第3种基本排布方式）。可以发现，在设计参数条件下，梯级系统可以获得比其对应的独立系统更高的光热发电效率。尽管梯级系统斯特林机组的效率较低，但朗肯循环的效率更高。梯级系统可以获得额外$3.83\times10^4\,\mathrm{W}$的功率输出。
 %Different results between two flow types of Stirling engine array are listed in Table~\ref{tab:SEAresults}.
 
 \begin{table}[htbp]
-	\caption{Some important results using design parameters}
+	\caption{设计参数下，梯级系统和其对应的独立系统的模拟分析结果}
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
@@ -343,10 +343,11 @@ The results presented in Table~\ref{tab:importantResults} are issued using desig
 \nomenclature[G]{$\eta_{diff}$}{Efficiency difference of cascade system and stand-alone systems, $\eta_{cs}-\eta_{s}$}
 \nomenclature[S]{$sea$}{Stirling engine array}
 %\nomenclature{$P_{sea,s}$}{Total power of Stirling engines in stand-alone dish system, W}
-
-\subsection{Effects of $I_{r}$}
+接下来的各节分析在不同影响因素的影响下，梯级系统与其对应的独立系统之间的对比分析。
+\subsection{$I_{r}$的影响}
 \label{sec:I_r}
 
+$I_r$对
 It is found that $I_r$ can affect the efficiency difference of cascade system and stand-alone systems $\eta_{diff}$. Figure~\ref{fig:I_r-eta_diff} shows curve fits of efficiency differences $\eta_{diff}$ versus $I_r$ with a series of different Stirling engine array power ratios. As it can be seen, for a high $I_r$ ($I_r > 550\,\mathrm{W/m^2}$), $\eta_{diff}>0$, the cascade system can achieve a higher efficiency than corresponding stand-alone systems. For a low $I_r$ ($I_r < 550\,$W/m$^2$), $\eta_{diff}$ may be negative. At this situation, the cascade system achieves a lower efficiency than corresponding stand-alone systems. This may be explained that instead of cooling water in the stand-alone dish-Stirling system, condensed water of Rankine cycle is used to cool the Stirling engines, which jeopardizes the heat dissipation and leads to a lower power of the Stirling engines. For a low $I_r$, the increased power of steam turbine due to absorbed heat by the condensed water is lower than the power loss of the Stirling engines. It can also be found that higher $I_r$ can achieve higher $\eta_{diff}$, which can be interpreted as the heat absorbed by the condensed water increases with $I_r$. So a higher $I_r$ location is always more suitable for cascade system. This means $I_r$ is a key factor to determine whether cascade system should be applied in a certain location.
 \nomenclature[G]{$\beta$}{Ratio of power of Stirling engines to the total output power of cascade system}
 

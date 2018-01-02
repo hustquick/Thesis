@@ -2,7 +2,7 @@
 
 第\ref{cha:Modeling}章介绍了利用MATLAB建模工具实现为太阳能光热发电系统中各关键部件建模的工作。基于其建立的部件模型，可以方便地构建太阳能光热发电平台的模型。
 
-在第\ref{cha:Modeling}章中，建立了槽式集热器的机理模型。在假定整体传热系数沿着集热器长度方向均匀分布的条件下，建立了传热流体温升与太阳直射辐射强度（DNI）、集热器长度、传热流体流量、环境温度、传热流体入口温度等因素之间的关系式，并得出了槽式集热器的热效率计算公式。
+在第\ref{cha:Modeling}章中，建立了槽式集热器的机理模型。在假定整体传热系数沿着集热器长度方向均匀分布的条件下，建立了传热流体温升与太阳直射辐射强度（$I_r$）、集热器长度、传热流体流量、环境温度、传热流体入口温度等因素之间的关系式，并得出了槽式集热器的热效率计算公式。
 还详细分析了碟式接收器的各种能量损失，建立了详细的热网络模型。通过使用各种经典的传热公式，求解了热网络模型中各节点温度值，并得到了碟式集热器的热效率计算公式。
 
 %For organic Rankine cycle (ORC) system, processes of the Rankine cycle were analyzed and the Rankine cycle efficiency formula is derived.
@@ -100,7 +100,7 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在热回�
 
 太阳能光热发电平台采用了两个加热器来调节流体（空气和导热油）的温度，以满足试验的要求。
 两个加热器都可以通过改变功率来维持其出口流体温度的稳定。
-此外，当DNI不够高时，可以启用加热器辅助加热，实现ORC系统的正常运行。
+此外，当$I_r$不够高时，可以启用加热器辅助加热，实现ORC系统的正常运行。
 %\subsection{Data collection system}
 
 \section{试验}
@@ -109,7 +109,7 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在热回�
 
 \subsection{槽式集热器试验}
 \subsubsection{试验目的}
-槽式集热器试验的目的是研究DNI、传热流体流量、入口温度对槽式集热器热性能的影响，并验证第\ref{sec:ptc}节所建立的槽式集热器模型。
+槽式集热器试验的目的是研究$I_r$、传热流体流量、入口温度对槽式集热器热性能的影响，并验证第\ref{sec:ptc}节所建立的槽式集热器模型。
 
 \subsubsection{试验步骤}
 试验步骤分为以下几步：
@@ -133,7 +133,7 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在热回�
 	\begin{center}
 	\begin{tabular}{cccc}
 		\toprule
-		工况	& DNI（$\mathrm{W/m^2}$）&	流量（$\mathrm{kg/s}$）			&	入口油温（$\mathrm{K}$）\\
+		工况	& $I_r$（$\mathrm{W/m^2}$）&	流量（$\mathrm{kg/s}$）			&	入口油温（$\mathrm{K}$）\\
 		\midrule
 		1-10	&	实测值	&	0.2	&	433.2\\
 		11	&	实测值	&	0.1	&	433.2\\
@@ -152,7 +152,7 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在热回�
 	\label{tab:DesignedCasesForTrough}
 \end{table}
 
-表\ref{tab:DesignedCasesForTrough}中，工况1到工况10分别在一天的不同时间点或是数天间的时间点完成。工况11到工况15的试验要求在半个小时之内完成。需要指出的是，当以入口油温为考察变量时，仅仅设计了5个温度相差不大的工况（工况16到工况20）进行试验。这是由于通过加热器提升油温的速度较慢，为了保证DNI基本不变，所以各工况入口油温差别不大。这5个工况的试验要求在一个小时之内完成。
+表\ref{tab:DesignedCasesForTrough}中，工况1到工况10分别在一天的不同时间点或是数天间的时间点完成。工况11到工况15的试验要求在半个小时之内完成。需要指出的是，当以入口油温为考察变量时，仅仅设计了5个温度相差不大的工况（工况16到工况20）进行试验。这是由于通过加热器提升油温的速度较慢，为了保证$I_r$基本不变，所以各工况入口油温差别不大。这5个工况的试验要求在一个小时之内完成。
 
 \subsubsection{数据处理方法}
 %Outlet temperature of the oil in the trough collector is monitored and recorded. 
@@ -216,7 +216,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccc}
 		\toprule
-		工况	& DNI（$\mathrm{W/m^2}$）	&	流量（$\mathrm{kg/s}$）			&	入口温度（$\mathrm{K}$）\\
+		工况	& $I_r$（$\mathrm{W/m^2}$）	&	流量（$\mathrm{kg/s}$）			&	入口温度（$\mathrm{K}$）\\
 		\midrule
 		1-10	&	实测值	&	0.03	&	423.2\\
 		11	&	实测值	&	0.01	&	423.2\\
@@ -258,7 +258,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& DNI ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		1	&	353	&	0.2	&	433.2	&	452.9	&	277.8\\
 		2	&	408	&	0.2	&	433.2	&	456.2	&	278.0\\
@@ -275,17 +275,17 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\end{center}
 	\label{tab:ResultOfTrough1}
 \end{table}
-工况1到工况10的试验结果如表\ref{tab:ResultOfTrough1}所示。需要指出的是，由于太阳能辐射强度的不可控性和多变性，表中太阳直射辐射强度（DNI）的实测值分布并不均匀。DNI对集热器效率的影响曲线见图\ref{fig:I_r-eta-trough}。图中还显示了模型计算的结果。模型所采用的参数和试验参数相同。
+工况1到工况10的试验结果如表\ref{tab:ResultOfTrough1}所示。需要指出的是，由于太阳能辐射强度的不可控性和多变性，表中太阳直射辐射强度（$I_r$）的实测值分布并不均匀。$I_r$对集热器效率的影响曲线见图\ref{fig:I_r-eta-trough}。图中还显示了模型计算的结果。模型所采用的参数和试验参数相同。
 %The optical efficiency fo the dish collector is manually reduced to simulate the real situation of the spilled focused spot.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/I_r-eta-trough}
-\caption{DNI对槽式集热器效率的影响}
+\caption{$I_r$对槽式集热器效率的影响}
 \label{fig:I_r-eta-trough}
 \end{figure}
 
-可以发现，试验数据和模拟结果具有相同的变化趋势，即槽式集热器的集热效率随着DNI的增加而升高。
-模拟结果与试验数据的误差很小（小于1\%），但随着DNI的增加，误差会有所增大。
+可以发现，试验数据和模拟结果具有相同的变化趋势，即槽式集热器的集热效率随着$I_r$的增加而升高。
+模拟结果与试验数据的误差很小（小于1\%），但随着$I_r$的增加，误差会有所增大。
 
 \subsubsection{$\dot{m}$的影响}
 
@@ -294,7 +294,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& DNI ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		11	&	612	&	0.1	&	433.2	&	501.0	&	286.3\\
 		12	&	615	&	0.2	&	433.2	&	468.2	&	286.4\\
@@ -324,7 +324,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& DNI ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		16	&	616	&	0.2	&	413.2	&	449.7	&	289.5\\
 		17	&	614	&	0.2	&	423.2	&	458.8	&	288.3\\
@@ -356,7 +356,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& DNI ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		1	&	303	&	0.03	&	423.2	&	552.1	&	282.1\\
 		2	&	358	&	0.03	&	423.2	&	576.4	&	282.5\\
@@ -373,26 +373,26 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\end{center}
 	\label{tab:ResultOfDish1}
 \end{table}
-工况1到工况10的试验结果如表\ref{tab:ResultOfDish1}所示。DNI对集热器效率的影响曲线如图\ref{fig:I_r-eta-dish}所示。图中还显示了模拟计算的结果。模型所采用的参数和试验参数相同。
+工况1到工况10的试验结果如表\ref{tab:ResultOfDish1}所示。$I_r$对集热器效率的影响曲线如图\ref{fig:I_r-eta-dish}所示。图中还显示了模拟计算的结果。模型所采用的参数和试验参数相同。
 %The optical efficiency fo the dish collector is manually reduced to simulate the real situation of the spilled focused spot.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/I_r-eta-dish}
-\caption{DNI对碟式集热器效率的影响}
+\caption{$I_r$对碟式集热器效率的影响}
 \label{fig:I_r-eta-dish}
 \end{figure}
 
 可以发现，试验数据和模拟结果具有相同的变化趋势，即碟式集热器的集热效率存在极值。
-当DNI小于600$\,\mathrm{W/m^2}$时，碟式集热器的集热效率随着DNI的增加而升高；当DNI大于600$\,\mathrm{W/m^2}$时，碟式集热器的集热效率随着DNI的增加而下降。
+当$I_r$小于600$\,\mathrm{W/m^2}$时，碟式集热器的集热效率随着$I_r$的增加而升高；当$I_r$大于600$\,\mathrm{W/m^2}$时，碟式集热器的集热效率随着$I_r$的增加而下降。
 这是由于，较高的辐射强度将会增加接收器的内腔温度，进而带来更多的辐射损失，而由于辐射损失与内腔温度的四次方成正比，所以随着辐射强度的增加，集热器的热效率反而下降。模拟结果和试验数据之间的差异可以认为是接收器的绝热措施不够导致的，试验测得的绝热层外壁温度高于热网络结构图算得的温度也验证了这一点。
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/HigherDNI-eta-dish}
-\caption{DNI与碟式集热器集热效率之间的模拟结果曲线图}
+\caption{$I_r$与碟式集热器集热效率之间的模拟结果曲线图}
 \label{fig:HigherDNI-eta-dish}
 \end{figure}
-为了更加清晰地表明更高DNI对碟式集热器的影响，图\ref{fig:HigherDNI-eta-dish}显示了DNI值在300$\,\mathrm{W/m^2}$到1000$\,\mathrm{W/m^2}$之间变化时，碟式集热器集热效率的模拟结果曲线图。模拟的参数为：入口空气温度为423.2$\,\mathrm{K}$，流量为0.03$\,\mathrm{kg/s}$，环境温度设置为283.2$\,\mathrm{K}$，环境风速为0.4$\,\mathrm{m/s}$。可以发现，对于给定的集热器，存在最佳DNI，使得集热器获得最大集热效率。本试验的条件下，碟式集热器的最佳DNI约为600$\,\mathrm{W/m^2}$。
+为了更加清晰地表明更高$I_r$对碟式集热器的影响，图\ref{fig:HigherDNI-eta-dish}显示了$I_r$值在300$\,\mathrm{W/m^2}$到1000$\,\mathrm{W/m^2}$之间变化时，碟式集热器集热效率的模拟结果曲线图。模拟的参数为：入口空气温度为423.2$\,\mathrm{K}$，流量为0.03$\,\mathrm{kg/s}$，环境温度设置为283.2$\,\mathrm{K}$，环境风速为0.4$\,\mathrm{m/s}$。可以发现，对于给定的集热器，存在最佳$I_r$，使得集热器获得最大集热效率。本试验的条件下，碟式集热器的最佳$I_r$约为600$\,\mathrm{W/m^2}$。
 %However, it has to be pointed out that these data points were collected in different days, the environment temperature and wind speed may differ. It needs further researches on this topic.
 
 \subsubsection{$\dot{m}$的影响}
@@ -402,7 +402,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& DNI ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		11	&	613	&	0.01	&	423.2	&	950.7	&	286.3\\
 		12	&	615	&	0.02	&	423.2	&	783.9	&	286.4\\
@@ -432,7 +432,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& DNI ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		16	&	616	&	0.03	&	383.2	&	661.9	&	289.0\\
 		17	&	615	&	0.03	&	403.2	&	676.4	&	288.8\\

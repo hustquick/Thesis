@@ -685,7 +685,7 @@
     }
   \fi
 }
-\setlist{noitemsep,partopsep=0pt,topsep=.8ex}
+\setlist{noitemsep,partopsep=0pt,topsep=.2ex}
 \setlist[1]{labelindent=\parindent}
 \setlist[enumerate,1]{fullwidth, label=(\arabic*),itemindent=2em, ref=\arabic*}
 \setlist[enumerate,2]{label*=\arabic*,ref=\theenumi.\arabic*}

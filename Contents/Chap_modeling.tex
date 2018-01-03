@@ -175,7 +175,7 @@
 \begin{enumerate}[label=(\arabic*)]
   \item \emph{入射到接收器的能量, $q_i$}
   
-  为了简化模型，不考虑接收器对反射镜造成的遮挡，以及太阳跟踪系统的调节滞后造成的不利影响。
+\setlength\parindent{2em}为了简化模型，不考虑接收器对反射镜造成的遮挡，以及太阳跟踪系统的调节滞后造成的不利影响。
   \begin{equation}
       q_i = I_r A_{dc} \gamma \eta_{shading} \rho
       \label{eq:q_i}
@@ -432,7 +432,7 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \begin{enumerate}[label=(\arabic*)]
 \item 非理想吸热影响
 
-由于加热器和冷却器不理想，它们的流体同换热器壁面存在温差。加热器中的热流体温度$T_{H}$要高于加热器的壁面温度$T_{hw}$，冷却器中的冷却流体温度$T_L$要低于冷却器的壁面温度$T_{cw}$。根据传热学，$T_{H}$和$T_{L}$可以通过下式修正：
+\setlength\parindent{2em}由于加热器和冷却器不理想，它们的流体同换热器壁面存在温差。加热器中的热流体温度$T_{H}$要高于加热器的壁面温度$T_{hw}$，冷却器中的冷却流体温度$T_L$要低于冷却器的壁面温度$T_{cw}$。根据传热学，$T_{H}$和$T_{L}$可以通过下式修正：
 
 \begin{equation}
 	T_H = T_{hw} - \frac{Qs_{se}}{h_hA_{hw}}
@@ -747,12 +747,14 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
   P_{tb}=\left(1-y\right)\dot{m}_{2}\left(h_{2a}-h_{2b}\right)+y\dot{m}_{2}\left(h_{2a}-h_{2c}\right)
   \end{equation}
   \nomenclature{$y$}{汽轮机的抽汽率}
+  
   过程$2b$-$2d$表示凝汽器中的换热工况。凝汽器的出口水是饱和液态水，其出口温度$T_{2d}$和出口焓值$h_{2d}$由汽轮机的排汽压力$p_c$确定。
   凝汽器释放的热量
   \begin{equation}
       Q_{cd} = (1-y)\dot{m}_2 (h_{2b} - h_{2d})
 \end{equation}
 \nomenclature[S]{$cd$}{凝汽器}
+
   除氧器的各进口压力和出口压力相等，状态点$2c$、$2f$和$2g$具有相同的压力（等于$p_e$）。除氧器的出口水是饱和液态水，其焓值可以由$p_e$确定。
   由能量平衡方程
   \begin{equation}
@@ -763,7 +765,7 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \begin{equation}
 	P_{pu}=\left(1-y\right)\dot{m}_{2}\left(h_{2e}-h_{2d}\right)+\dot{m}_{2}\left(h_{2h}-h_{2g}\right)
 \end{equation}
-    \nomenclature[S]{$pu$}{泵}    
+\nomenclature[S]{$pu$}{泵}    
 其中，$h_{2e}$可以通过方程$\eta_{pu} = (h_{i,2e}-h_{2d})/(h_{2e}-h_{2d})$获得，$h_{2h}$可以通过方程$\eta_{pu} = (h_{i,2h}-h_{2g})/(h_{2h}-h_{2g})$获得。$h_{i,2e}$由$s_{2d}$和$p_e$决定，$h_{i,2h}$由$s_{2g}$和$p_s$决定。
 
 由于除氧器的出口水是饱和液态水，其出口温度$T_{2g}$和出口焓值$h_{2g}$由除氧器的压力$p_{2g}$决定。
@@ -1022,7 +1024,7 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 \begin{enumerate}[label=(\arabic*)]
   \item \emph{预热器}
   
-  预热器出口的水是饱和液态水（$x = 0$），所以其出口温度$T_{2i}$和出口焓值$h_{2i}$由汽轮机的主汽压力$p_s$决定。根据能量平衡方程，
+\setlength\parindent{2em}预热器出口的水是饱和液态水（$x = 0$），所以其出口温度$T_{2i}$和出口焓值$h_{2i}$由汽轮机的主汽压力$p_s$决定。根据能量平衡方程，
   \begin{equation}
   \dot{m}_3 (h_{3c}-h_{3d})=\dot{m}_2 (h_{2i} - h_{2h})
   \label{eq:preheater}

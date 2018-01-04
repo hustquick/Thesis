@@ -64,11 +64,11 @@
 
 %It is very important to find out a way to utilize the advantages of existing solar thermal power technologies and overcome their disadvantages. In other words, to find out a new technology with higher efficiency and lower cost is urgent.
 %This research is trying to achieve this by proposing a cascade system that uses different solar collectors and different thermodynamic cycles, which may be a new and feasible technology to realize large-scale, higher efficiency and lower cost solar thermal power generation.
-不同种类的太阳能光热发电技术具有各自的优缺点，找到一种能够利用现有太阳能光热发电技术的优势并克服其缺点的方法是非常重要的。换句话说，开发出一种效率更高，成本更低的新的太阳能光热发电技术是迫在眉睫的。
+不同种类的太阳能光热发电技术具有各自的优缺点，找到一种能够利用现有太阳能光热发电技术的优势并克服其缺点的方法是非常重要的。换句话说，开发出一种效率更高，成本更低的新的太阳能光热发电技术迫在眉睫。
 本文试图通过提出使用不同型式的太阳能集热器和不同种类的热力循环的梯级系统来实现这一目标。这可能是实现大规模，高效率和低成本太阳能光热发电的新的可行技术。
 
 %\section{State of the art}
-\section{研究现状}
+\section{国内外研究现状}
 % 范围的大小
 %国内外对太阳能光热发电技术的研究现状。
 %外文文献-问题-解决方案-本项目需求
@@ -84,50 +84,51 @@
 %Many of these works have concentrated on experimental work aimed at testing the mechanical and thermal performance of parabolic trough collectors. Dudley et al.~\cite{Dudley1994} tested the collector efficiency and thermal losses of the LS-2 type trough collector. Burkholder and Kutscher~\cite{Burkholder2009} tested the heat losses of Solel's UVAC3 and Schott's 2008 PTR70 parabolic trough collectors. A correlation to estimate the thermal efficiency of the collectors as a function of the absorber temperature was developed. Reddy et al.~\cite{Reddy2015b} developed and investigated six different receiver configurations of trough collectors for performance comparison. Experimental tests were carried out for a 15$\,\mathrm{m^2}$ collector according to ASHRAE 93-1986 test procedure.
 %Li et al.~\cite{Li2015} carried out experiments to verify the feasibility of proposed end loss compensation methods. A fan-shaped plane mirror was put at one end of the trough collectors to compensate the end loss effect. Results prove that the compensation methods are feasible and effective.
 来自桑迪亚国家实验室的Dudley等人\cite{Dudley1994}测试了应用于SEGS太阳能光热电站的LS-2型槽式接收器的集热效率和热损失。实验分析了不同类型的选择性涂层，不同接收器配置，不同真空度对集热器性能的影响。他们还建立了槽式接收器的一维分析模型，并将模拟结果与实验数据进行了对比分析。
-来自美国国家可再生能源实验室的Burkholder和Kutscher\cite{Burkholder2009}测试了来自Solel的UVAC3型槽式集热器和来自Schott的PTR70型槽式集热器，并建立了以接收器平均温度和环境温度为参数的热损失方程。
-Reddy等\cite{Reddy2015b}开发并研究了六种不同型式的槽式集热器，并进行了性能对比分析。根据ASHRAE 93-1986测试程序，对一台收集器进行了实验测试。
 
-It is well known that experimental studies are the most accurate and convincing method for parabolic trough collector research. However, this method is not only investment required and also time consuming. In order to reduce the R\&D cost and time, parabolic trough collectors are usually modeled.
+来自美国国家可再生能源实验室的Burkholder和Kutscher\cite{Burkholder2009}测试了来自Solel的UVAC3型槽式集热器和来自Schott的PTR70型槽式集热器，并建立了以接收器平均温度和环境温度为参数的热损失方程。
+
+Kr\"uger等~\cite{Kruger2008}对Solitem PTC 1800型槽式集热器的光学性能进行了研究，并以工作温度为200$^\circ\mathrm{C}$的高压水作为传热流体进行了实验分析，并对光学效率的改进提出了建议。
+
+Reddy等\cite{Reddy2015b}开发并研究了六种不同型式的槽式接收器，并进行了性能对比分析。根据ASHRAE 93-1986测试程序，针对一台集热面积为15$\,\mathrm{m^2}$的集热器，对六种不同型式的接收器进行了实验测试分析。实验表明，多孔圆盘型接收器可以显著提高槽式集热器的性能，可以有效地用于工业加热过程。
+
+%众所周知，实验研究最具有说服力和可信性，然而，实验研究需要大量的研发成本和实验时间，所以槽式太阳能光热发电的大部分工作都采用模拟分析的方法，通过建造相关模型，对槽式集热器进行研究，或是通过实验对所建立的模型及方法进行相关的验证工作。
+%It is well known that experimental studies are the most accurate and convincing method for parabolic trough collector research. However, this method is not only investment required and also time consuming. In order to reduce the R\&D cost and time, parabolic trough collectors are usually modeled.
 
 % 光学效率
-Some researchers investigated the optical model of the parabolic trough solar collectors.
-Wang et al.~\cite{Wang2016} proposed a mathematical model for optical efficiency of the trough collector and selected three typical regions of solar thermal utilization in China for the model. The model is validated by comparing the test results in parabolic trough power plant, with relative error range of 1\% to about 5\%.
-Zou et al.~\cite{Zou2017} investigated the influences of sunshape and incident angle on the optical performance of the trough collectors. It is found that the sunshape has significant effect on the optical efficiency and should be token into consideration in practice. Larger aperture with smaller absorber diameter leads to more end loss caused by incident angle. It is also found that optimal focal length exists for the optical efficiency.
-L\"upfert et al.~\cite{Lupfert2006} introduced the specific techniques to analyze the geometry and optical properties of trough collectors and summarized results in collector shape measurement, flux measurement, ray tracing, and thermal performance analysis for parabolic troughs. It is shown that the measurement methods and the parameter analysis give consistent results, which can provide references for the next generation trough collector relevant improvements.
-Xu et al.~\cite{Xu2014} analyzed the optical efficiency of a PTC with horizontal north-south axis and proposed a method to compensate the end loss effect of the PTC. The calculation formula of the optical end loss rate and the increased optical efficiency for the system using the compensation method were derived. A five-meter experimental system was built to verify the feasibility of the compensation method proposed. The increased thermal efficiency of the experimental system was measured, and it was proved that the proposed compensation method is feasible.
-Huang et al.~\cite{Huang2012} proposed an analytical model for optical performance which employed a modified integration algorithm to simulate the performance of trough collectors. The analytical equation of the optical efficiency of each point of the reflector was deduced to obtain the optical efficiency of the system by integration algorithm.
+一些研究人员研究了槽式集热器的光学效率模型。王金平等\cite{Wang2016}提出了用于计算槽式集热器的光学效率的数学模型，并选取了中国的三个典型地区作为实验地点，进行了相关的实验验证工作。结果表明，其提出的光学效率数学模型的相对误差在1\%到5\%之间。
+邹斌等\cite{Zou2017}研究了太阳形状和入射角对槽式集热器的性能影响，发现太阳形状对光学效率具有很大的影响，需要在实际应用中考虑此因素。更宽的开口和更细的吸收管将使入射角对端部损失的影响更大。他们还发现，对于特定集热器存在着最佳焦距使光学效率获得最大值。
+L\"upfert等\cite{Lupfert2006}介绍了实际工程应用中用于分析槽式集热器的形状参数和光学参数的技术，并对槽式集热器的集热器形状测量、光通量测量、光线跟踪、热性能分析等的数据进行了分析。结果表明，不同的测量方法和参数分析可以获得一致的结果，这些结果可以为下一代测量技术和分析方法提供相关参考。
+许成木等\cite{Xu2014}分析了南北布置的槽式集热器的光学效率，并提出了一种补偿端部损失的方法，并推导出了端部损失比例与采用补偿损失方法后效率增加量之间的计算公式。计算分析了不同纬度的日光学损失率，年光学损失率，以及采用补偿损失方法后的日增光学效率和年增光学效率。结果表明，该补偿方法对于维度高于25度的地区的短集热器非常适用。
+黄卫东等\cite{Huang2012}提出了一种新的光学性能分析模型，该模型采用了改进的积分算法，用于模拟带有真空管的槽式接收器的性能。首先推导了反射镜各点光学效率的解析方程，然后用数值积分算法模拟了系统的光学效率。可以通过该程序计算出余弦损失，集热效率，热损失。
 
 %热效率和㶲效率分析,想要从能量利用的数量和品质上提升槽式集热器的性能。
-Some researchers investigated the exergy performance of the parabolic trough collectors.
-Padilla et al.~\cite{Padilla2014} performed a comprehensive exergy balance of a parabolic trough collector based on the previous heat transfer model~\cite{Padilla2011}. The results shown that inlet temperature of heat transfer fluid, solar irradiance, and vacuum in annulus have a significant effect on the thermal and exergetic performance, but the effect of wind speed and mass flow rate of heat transfer fluid is negligible. It was obtained that inlet temperature of heat transfer fluid cannot be optimized to achieve simultaneously maximum thermal and exergetic efficiency because they exhibit opposite trends. Finally, it was found that the highest exergy destruction is due to the heat transfer between the sun and the absorber while for exergy losses is due to optical error.
-%Al-Sulaiman~\cite{AlSulaiman2014} presented the exergy analysis of selected thermal power systems driven by PTSCs. The power pf the thermal power system is produced using either a steam Rankine cycle (SRC) or a combined cycle, in which the SRC is the topping cycle and an organic Rankine cycle (ORC) is the bottoming cycle.
-Guo et al.~\cite{JiangfengGuo2016-1} investigated the energy efficiency and exergy efficiency of the parabolic trough collector. The result shown that there exists an optimal mass flow rate of working fluid for exergy efficiency, and the thermal efficiency and exergy efficiency have opposite changing tendencies under some conditions.
+一些学者对槽式系统进行了热效率和㶲效率分析，以便于从能量利用的数量和品质上提升槽式系统的性能。
+Padilla等\cite{Padilla2014}在其建立的传热模型\cite{Padilla2011}的基础上进行了㶲效率分析，来研究实验操作和环境参数对槽式集热器性能的影响。分析考虑了传热流体的入口温度，质量流量，风速，真空压力以及太阳直射辐射强度等因素，结果表明，传热流体的入口温度，太阳直射辐射强度和真空度对散热性能有显着影响，但传热流体的流量和风速的影响很小。如果传热流体入口温度固定，则不能同时获得最大的热效率和㶲效率，它们呈现相反的变化趋势。最后，他们发现最大㶲损发生在接收器与太阳之间的辐射传热过程中。
+郭江峰等\cite{JiangfengGuo2016-1}研究了一些参数对槽式集热器的热效率和㶲效率的影响。结果发现，当传热流体的质量流量，环境温度和入射角增大时，太阳鞥接收器的热损失减少。随着传热流体入口温度，风速和玻璃管内径的增加，槽式接收器的㶲损失也随之增加。当入射角较大时，存在最佳的传热流体流量使㶲效率获得最大值。
 
 %热效率模型
-Some researchers are dedicated to developing more accurate models using new methods. Behar et al.~\cite{Behar2015} developed and validated a novel parabolic trough solar collector model. The model has been compared with models made by Lab. SNL and NREL. The proposed model has a better accuracy of thermal performance prediction.
-% 算法及优化方法
-% 光热模型，建模及运算方法
-Padilla et al.~\cite{Padilla2011} performed a detailed one dimensional numerical heat transfer analysis of a PTC (Parabolic Trough Collector). To solve the mathematical model of heat transfer of the PTC model, the partial differential equations were discretized and the nonlinear algebraic equations were solved simultaneously. The numerical results was validated to the data from Sandia National Laboratory (SNL).
-Hachicha et al.~\cite{Hachicha2013} presented a detailed numerical heat transfer model based on the finite volume method for the parabolic trough collector.  This model is based on finite volume method and ray trace techniques and takes into account the size of the Sun.  The model is thoroughly validated with results from the literature and it shows a good agreement with experimental and analytical results.
-Guo and Huai~\cite{JiangfengGuo2016-2} implemented a multi-parameter optimization of parabolic trough solar receiver based on genetic algorithm where Exergy and thermal efficiencies were employed as objective function.
-Boukelia et al.~\cite{Boukelia2016} investigated the feed-forward back-propagation learning algorithm with three different variants; Levenberge Marguardt (LM), Scaled Conjugate Gradient (SCG), and Pola-Ribiere Conjugate Gradient (PCG), used in artificial neural network (ANN) to find the best approach for prediction and techno-economic optimization of parabolic trough solar thermal power plant integrated with fuel backup system and thermal energy storage.
-Liu et al.~\cite{Liu2012} developed a mathematical model of PTC using the least squares support vector machine (LSSVM) method. Numerical simulations were implemented to evaluate the feasibility and efficiency of the LSSVM method, where the sample data derived from the experiment and the simulation results of two solar collector systems with 30 m$^2$ and 600 m$^2$ solar fields, and the complicated relationship between the solar collector efficiency and the solar flux, the flow rate and the inlet temperature of the heat transfer fluid (HTF) is extracted.
-Lobon et al.~\cite{Lobon2014} introduced a computational fluid dynamic simulation approach to predict the behavior of a solar steam generating system, which is located at the Plataforma Solar de Almeria, Spain. The CFD package STAR-CCM+ code has been used to implement an efficient multiphase model capable of simulating the dynamics of the multiphase fluid in parabolic-trough solar collectors. Numerical and experimental data are compared in a wide range of working conditions.
-To understand the thermal performance of the collector and identify the heat losses, Mohamad et al.~\cite{Mohamad2014} analyzed the temperature variation of the working fluid, tube and glass along the collector. It is found that using double glazing cover enhances the thermal efficiency of the collector operating at high temperature. However, when the collector length is 10$\,\mathrm{m}$ or less, it is more economical to use a single glass cover for the collector than a double glazing cover.
-Also, it is clearly shown that increasing the diameter of absorbing tube enhances the rate of heat transfer losses, consequently decreasing the thermal efficiency of the collector.
-Guo et al.~\cite{SuGuo2016} developed a nonlinear distribution parameter model to model the dynamic behaviors of direct steam generation parabolic trough collector loops under either full or partial solar irradiance disturbance.
+一些研究人员致力于使用新方法开发出精度更高的槽式系统模型。Behar等\cite{Behar2015}开发并验证了一种新颖的槽式集热器模型。通过与桑迪亚国家实验室和国家可再生能源实验室建立的模型进行的比较，该模型显示出更好的集热效率预测精度。
+Padilla等\cite{Padilla2011}针对槽式集热器建立了详细的一位数值模型分析。为了求解换热过程中的数学模型，偏微分方程被离散化，然后通过求解非线性代数方程得到槽式集热器的数值分析结果。该模型得到的数值结果利用桑迪亚国家实验室的试验数据进行了验证。
+Hachicha等\cite{Hachicha2013}基于有限体积法建立了一个详细的一维槽式集热器模型。该模型还采用了光线追踪法，并考虑了太阳大小带来的影响。该模型通过文献上的数据进行了验证，和其它模型及实验结果具有很好的一致性。
+郭江峰与淮秀兰~\cite{JiangfengGuo2016-2}基于基因算法对槽式接收器进行了多目标参数优化研究，该研究同时以热效率和㶲效率为优化目标。
+Boukelia等\cite{Boukelia2016}研究了三种应用于的人工神经网络的不同形式的前馈向后传播学习算法，包括Levenberge Marguardt法、扩展共轭梯度法和Pola-Ribiere共轭梯度法，并利用这些算法对槽式电厂进行预测和技术经济优化。
+刘启斌等\cite{Liu2012}开发了基于最小二乘支持向量机（LSSVM）方法的槽式集热器模型并通过数值模拟评估了LSSVM方法的可行性和有效性。
+Lobon等\cite{Lobon2014}引入了计算流体动力学特性的模拟方法来预测槽式系统中蒸汽发生系统，该蒸汽发生系统位于西班牙Plataforma Solar de Almeria。利用CFD代码包STAR-CCM+建立了一个有效的多相流体模型，可以模拟槽式集热器中的多相流体的动力学行为。模拟结果和试验数据在各种工作条件下进行了对比分析。
+为了得到槽式集热器的动力学特性，并计算出散热损失，Mohamad等\cite{Mohamad2014}分析了工作流体，吸热管和玻璃管沿轴向的温度分布。结果发现，使用双层玻璃罩可以有效提高高温运行时的集热效率。然而，当集热器的长度小于10$\,\mathrm{m}$时，使用单层玻璃罩比双层玻璃罩更经济。结果还清晰地表明，随着吸热管管径的增大，热损失也迅速增加。
+郭苏等\cite{SuGuo2016}针对槽式系统中的直接蒸汽生产系统开发了一个非线性分布的参数模型来模拟在全部或部分太阳辐射干扰下的直接蒸汽生产系统的动态特性。该模型具有两个优点：（1）传热系数和摩擦阻力系数采用实时局部值;（2）考虑收集器的完整回路，包括过冷区，蒸发区和过热区。该模型已经使用新南威尔士大学太阳能热能实验室的实验数据进行验证，出口流体温度相对误差仅为1.91％。
 
 % 其它用法
-Some researchers have proposed some new types of solar trough systems.
-Ashouri et al.~\cite{Ashouri2015} coupled a small scale parabolic trough collector and a thermal storage tank along with an auxiliary heater to a Kalina cycle to study the performance of the system throughout the year, both thermodynamically and economically.
+一些研究人员还提出了新的太阳能槽式系统。Ashouri等\cite{Ashouri2015}将一台小型抛物槽式集热器，一台储热罐和一台辅助加热器连接到一个卡林纳循环，并研究了其全年热力性能和全年经济性能。
 % 空气介质
-Bader et al.~\cite{Bader2015} developed a numerical model of a tubular vavity-receiver that uses air as the heat transfer fluid. Four different receiver configurations are considered, with smooth or V-corrugated absorber tube and single- or double-glazed aperture window. The different types of energy loss by the collector have been quantified, and the temperature distribution inside the receiver has been studied. The pumping power required to pump the HTF through the receiver has been determined for a 200$\,\mathrm{m}$ long collector row.
-Good et al.~\cite{Good2015} proposed solar trough concentrators using air as heat transfer fluid at operating temperatures exceeding 600$\mathrm{^\circ C}$. It consists of an array of helically coiled absorber tubes contained side-by-side within an insulated groove having a rectangular windowed opening. Secondary concentrating optics are incorporated to boost the geometric concentration ratio to 97$\times$.
+
+Good等提出了使用空气作为槽式集热器的集热方案，空气的集热温度可以达到600$\mathrm{^\circ C}$。吸热管有一组螺旋卷曲的金属管组成，外层包裹着矩形截面的绝缘槽。该方案采用二次反射镜面将聚光比提升至97。
+Bader等\cite{Bader2015}针对采用空气作为传热介质的槽式真空接收器建立了数值模型。该模型考虑了四种不同的接收器型式，包括光滑圆管吸热管和V型吸热管，单层套管和双层套管。数值模型考虑了不同类型的热损失以及吸热管内的温度分布。
 % 强化换热
-Kaloudis et al.~\cite{Kaloudis2016} investigated a PTC system with nanofluid as the HTF in terms of Computational Fluid Dynamics (CFD). Syltherm 800 liquid oil was used as the HTF, and Al$_2$O$_3$ nanoparticles with the concentrations ranges from 0\% to 4\% was investigated. A boost up to 10\% on the collector efficiency was reported for Al$_2$O$_3$ concentration of 4\%.
+Kaloudis等\cite{Kaloudis2016}利用CFD软件对采用含有纳米颗粒的流体作为传热介质的槽式集热器进行了模拟分析。使用Syltherm 800作为流体，在其中加入了浓度为0\%到4\%的氧化铝纳米颗粒。结果发现，当纳米颗粒浓度为4\%时，系统的集热效率可以达到10\%的提升。
+
 % 新颖的系统
 %Tan et al.~\cite{Tan2014} proposed a two-stage photovoltaic thermal system based on solar trough concentration, in which the metal cavity heating stage is added on the basis of the PV/T stage, and thermal energy with higher temperature is output while electric energy is output. The experimental platform of the two-stage photovoltaic thermal system was established, with a 1.8 m$^2$ mirror PV/T stage and a 15 m$^2$ mirror heating stage, or a 1.8 m$^2$ mirror PV/T stage and a 30 m$^2$ mirror heating stage. The results show that with single cycle, the long metal cavity heating stage would bring lower thermal efficiency, but temperature rise of the working medium is higher, up to 12.06$\mathrm{^\circ C}$ with only single cycle. With 30 min closed multiple cycles, the temperature of the working medium in the water tank was 62.8$\mathrm{^\circ C}$, with an increase of 28.7$\mathrm{^\circ C}$, and thermal energy with higher temperature could be output.
-Al-Sulaiman et al.~\cite{AlSulaiman2012} proposed a novel system based on PTC and ORC for combined cooling, heating and power (CCHP). Performance assessment, including efficiency, net electrical power, and electrical to heating and cooling ratios, of the system shown that when CCHP is used, the efficiency increases significantly. This study reveals that the maximum electrical efficiency for the solar mode is 15\%, for the solar and storage mode is 7\%, and for the storage mode is 6.5\%. The maximum CCHP efficiency for the solar mode is 94\%, for the solar and storage mode is 47\%, and for the storage mode is 42\%.
+Al-Sulaiman等\cite{AlSulaiman2012}基于槽式集热器和有机工质朗肯循环提出了一种冷热电三联供的新型系统，并对系统的效率、电功率、供热供冷比进行了性能评估。研究表明，太阳能模式的最大发电效率是15％，太阳能和蓄能联供模式的最大发电效率是7％，只是用蓄能模式是6.5％。太阳能模式的冷热电三联供最高效率为94％，太阳能和蓄能联供模式为47％，只使用蓄能模式为42％。
 \nomenclature[C]{CCHP}{Combined cooling, heating and power}
 \nomenclature[C]{HTF}{Heat Transfer Fluid}
 \nomenclature[C]{CFD}{Computational fluid dynamics}
@@ -222,12 +223,12 @@ Benammar et al.~\cite{Benammar2014} developed a mathematical model based on ener
 \subsection{Cascade solar system}
 \label{sec:cs}
 
-To fully utilize the features of components of solar thermal power system, cascade solar systems are researched by many researchers. There are mainly two directions of the research of cascade solar systems. One is cascade collection, the other is cascade utilization.
+为了更加有效地利用太阳能光热发电系统中各部件的特性，许多研究人员研究了梯级太阳能系统。梯级太阳能系统的研究主要有两个方向：一个是梯级收集，一个是梯级利用。
+%To fully utilize the features of components of solar thermal power system, cascade solar systems are researched by many researchers. There are mainly two directions of the research of cascade solar systems. One is cascade collection, the other is cascade utilization.
 
-\subsubsection{Cascade collection}
+\subsubsection{梯级收集}
 
-Some researchers have investigated the combination of different types of collectors for CSP to achieve cascade solar collection.
-Suzuki~\cite{Suzuki1986} analyzed the solar thermal systems with two different types of collectors connected in series. A value of the collectors, the product of the collector efficiency factor and the optical efficiency,  was revealed to be the key factor to determine whether a cascade system is better than either one of the collectors alone. If the value of the lower concentration ratio collector is lager than that of the higher concentration ratio, the cascade system is more effective. Furthermore, it was found that to obtain the maximum energy gain, there exists the optimum operating conditions.
+许多研究人员研究了在太阳能光热发电技术中采用多种集热器实现太阳能梯级收集的方案。Suzuki\cite{Suzuki1986}分析了使用两种不同型式的集热器串联连接的集热方案。研究表明，集热器的一个参数值——集热效率和光学效率的乘积，是决定梯级系统是否比单独使用任何一种集热器更高效的关键参数。如果更低聚光比的集热器的这个参数值比更高聚光比的这个参数值大，那么梯级系统更加高效。此外还发现，梯级系统具有最佳的运行参数。
 
 Kribus et al.~\cite{Kribus1999} proposed an idea of using separate aperture stages for different irradiance distribution. The working fluid is gradually heated when it flow through the receiver elements with increasing irradiance levels. A two-stage system was set up to demonstrate this principle at the Weizmann Institute's Solar Tower. Air was used as the HTF to obtain 750$\mathrm{^\circ C}$ after the low-temperature stage and 1000$\mathrm{^\circ C}$ after the high-temperature stage. Figure~\ref{fig:Kribus1999} shows the two-stage receiver system.
 \begin{figure}[!ht]
@@ -240,28 +241,6 @@ Kribus et al.~\cite{Kribus1999} proposed an idea of using separate aperture stag
 % 组合使用不同厂家的集热器
 Gordon and Saltiel~\cite{Gordon1986} presented an analytic method for predicting the long-term performance of solar energy systems with more than one collector brand (``multistage'' systems). This procedure enables the designer to determine the most cost-effective method of combining different collector brands for a given load. The analytic method is illustrated by a solved example which shows that significant savings can be realized by combining different collector brands for a given application (multi-staging).
 
-% Collado2016 and Guallar~\cite{Collado2016} proposed a method breaking the optimization process of solar power tower system down into two consecutive steps.
-%    In solar power tower (SPT) systems, selecting the optimum location of thousands of heliostats and the most profitable tower height and receiver size remains a challenge. Given the complexity of the problem, breaking the optimization process down into two consecutive steps is suggested here;
-%First, a primary, or energy, optimization, which is practically independent of the cost models, and then a main, or economic, optimization. The primary optimization seeks a heliostat layout supplying the maximum annual incident energy for all the explored combinations of receiver sizes and tower heights. The annual electric output is then calculated as the combination of the incident energy and the simplified (annual averaged) receiver thermal losses and power efficiencies. Finally, the figure of merit of the main optimization is the levelized cost of electric energy (LCOE) where the capital cost models used for the LCOE calculation are reported by the System Advisor Model (SAM)-NREL and Sandia. This structured optimization, splitting energy procedures from economic ones, enables the organization of a rather complex process, and it is not limited to any particular power tower code. Moreover, as the heliostat field layout is already fully optimized before the economic optimization, the profiles of the LCOE versus the receiver radius for the tower heights explored here are sharp enough to establish optima easily. As an example of the new procedure, we present a full thermo-economic optimization for the design of the collector field of an actual SPT system (Gemasolar, 20 MWe, radially staggered surrounding field with 2650 heliostats, 15 h of storage). The optimum design found for Gemasolar is reasonably consistent with the scarce open data. Finally, optimum designs are strongly dependent on the receiver cost, the electricity tariff and the assumed maximum receiver surface temperature.
-
-% 不同集热器型式的对比
-%Reddy~\cite{Reddy2009} carried out the numerical analysis of solar dish modified cavity receiver with cone, CPC and Trumpet reflectors is presented. Three-dimensional modeling to estimate the convective and radiative heat loss from the receiver for different angles of inclination and operating temperatures. Incorporating reflectors in the modified cavity receiver for second stage concentration, the natural convection heat losses are reduced by 29.23, 19.81 and 19.16\%, respectively. The receiver with the trumpet reflector has shown better performance as compared to other configurations.
-
-%Mills~\cite{Mills1995}
-%
-%Maximally concentrating collectors include the class of ideal concentrating collectors, but are a more general class offering many more practical possibilities. By evaluating such configurations using the concept of maximal flux concentration, based upon average radiation flux concentration over the acceptance angle, clear ray trace comparisons may be made between different collector configurations. These comparisons allow the most effective configuration to be selected for a given application. An example of a comparatively simple and practical two-stage concentrator having equal or better maximal performance than previous work for high rim angle primaries is given. This uses an unusual straight section of reflector and allows rays to cross from one reflector segment of the secondary to another. Versions which allow concentration up to 90\% of maximal are described, as are versions achieving 80\% with high collection efficiency. Use of the ~~~ geometrical concentration criterion based upon aperture ratios is suggested to be inappropriate for comparisons.
-
-%空气槽式集热器
-
-%Good et al.~\cite{Good2015} proposed an entirely novel solar receiver design for solar trough concentrators using air as heat transfer fluid at operating temperatures exceeding 600 °C. It consists of an array of helically coiled absorber tubes contained side-by-side within an insulated groove having a rectangular windowed opening. Secondary concentrating optics are incorporated to boost the geometric concentration ratio to 97×. The multiple absorber tubes are connected via two axial pipes serving as feeding and collecting manifolds. The steady-state energy conservation equation coupling radiation, convection, and conduction is formulated and solved numerically using the finite volume technique. The solar flux distribution incident at each absorber tube is determined by Monte Carlo ray-tracing using spectrally and directionally dependent optical properties. Thermal radiative heat exchange is analyzed using the gray-band approximated radiosity method for an enclosure with a selective window. Model validation is accomplished by comparison to on-sun experiments with a 1 m-long solar receiver prototype composed of 7 absorber tubes, mounted on a 4.85 m-aperture solar trough concentrator. Feeding rates in the range of 5–20 ln/min to each absorber tube led to air outlet temperatures of 621–449 °C and a peak receiver efficiency of 64\%.
-
-% 空气碟式系统
-% Barder et al.~\cite{Bader2015} developed a numerical model of a tubular cavity-receiver that uses air as the heat transfer fluid using a validated heat transfer model. The receiver is designed for use on a large-span (9 m net concentrator aperture width) solar parabolic trough concentrator. Through the combination of a parabolic primary concentrator with a nonimaging secondary concentrator, the collector reaches a solar concentration ratio of 97.5. Four different receiver configurations are considered, with smooth or V-corrugated absorber tube and single- or double-glazed aperture window. The collector's performance is characterized by its optical efficiency and heat loss. The optical efficiency is determined with the Monte Carlo ray-tracing method. Radiative heat exchange inside the receiver is calculated with the net radiation method. The 2D steady-state energy equation, which couples conductive, convective, and radiative heat transfer, is solved for the solid domains of the receiver cross-section, using finite-volume techniques. Simulations for Sevilla/Spain at the summer solstice at solar noon (direct normal solar irradiance: 847 W$\cdot$m$^{-2}$, solar incidence angle: 13.9$^\circ$) yield collector efficiencies between 60\% and 65\% at a heat transfer fluid temperature of 125$\mathrm{^\circ C}$ and between 37\% and 42\% at 500$\mathrm{^\circ C}$, depending on the receiver configuration. The optical losses amount to more than 30\% of the incident solar radiation and constitute the largest source of energy loss. For a 200 m long collector module operated between 300 and 500$\mathrm{^\circ C}$, the isentropic pumping power required to pump the HTF through the receiver is between 11 and 17 kW.
-
-%多种集热器的混合利用
-
-
-%Cau~\cite{Cau2014} reported a comparative performance analysis of CSP plants using both parabolic trough and linear Fresnel collectors. A two-tank direct thermal storage system are included and in the Rankine cycle, regenerator, $4\sim6$ steam extractions and air-cooler condenser are used.
 Oshida and Suzuki~\cite{Oshida1987} presented the idea of optical cascade heat collection of solar energy. Two absorbers, one warm and the other hot, are used in the cascade system. The warm absorber is heated by the Fresnel lenses and the hot absorber is heated by CPC. HTF flows into the warm absorber firstly and then flows into the hot absorber. The temperature of HTF can increase more effectively by the cascade heating design.
 
 Desai et al.~\cite{Desai2015} presented an integrated CSP plant configuration with the combination of both PTC and LFC. Thermo-economic comparisons between PTC-based, LFC-based and integrated CSP plant configurations, without hybridization and storage, were analyzed. Figure~\ref{fig:Desai2015} shows a simplified schematic of a proposed integrated CSP plant configuration. It is demonstrated that the cost of energy of an integrated CSP plant is 9.6\% cheaper than PTC-based CSP plant and 13.5\% cheaper than LFC-based CSP plant.
@@ -324,12 +303,7 @@ Bahari et al.~\cite{Bahari2016} considered the optimization of an integrated sys
 \nomenclature[C]{LFC}{Linear Fresnel Collector}
 
 \section{文献综述小结}
-对前人研究工作的总结可以发现，太阳能光热发电技术正迎来高速发展的黄金期。
-Reviewing the former literatures concerning solar thermal power it can be found that most of the research works have focused on specific solar thermal power technologies to increase efficiency or reduce costs. 
-
-A small number of researchers have also studied the cascade collection or cascade utilization of solar energy. 
-
-There is no literature on the combination of cascade collection and cascade utilization in one cascade solar thermal power system. No systematically analysis of the cascade system has been found.
+对前人研究工作的总结可以发现，太阳能光热发电技术正迎来高速发展的黄金期。大量的研究人员从试验研究、机理模型、数学方法等方面对太阳能光热发电技术进行了相关研究。然而，他们多是针对现有太阳能光热技术进行改进性分析，也有文献提到了新的技术，比如空气槽式集热器、直接蒸汽生产系统等。但他们多是孤立的研究这些技术，没有把这些技术放进光热发电系统，尤其是梯级光热发电系统中进行研究。此外，也有少量文献研究太阳能的梯级收集或梯级利用。然而，没有文献针对太阳能光热梯级系统进行系统地分析，也没有文献梯级在一个梯级系统中同时能量的考虑梯级收集与梯级利用。
 
 \section{研究内容}
 \label{sec:researchContent}
@@ -340,7 +314,7 @@ There is no literature on the combination of cascade collection and cascade util
 
 \begin{enumerate}[label=(\arabic*)]
 	
-	\item 太阳能光热发电技术文献综述分析，对应于本文第一章。
+	\item 光热发电技术文献综述分析，对应于本文第一章。
 	\setlength\parindent{2em}
 	
 	在简要介绍太阳能光热发电技术的研究背景及意义后，详细回顾了前人在已经商业应用的太阳能光热发电技术以及太阳能光热发电技术中的能量梯级收集利用领域所做的主要研究成果及研究现状，并简要概括了当前研究现状所存在的不足。
@@ -376,7 +350,7 @@ There is no literature on the combination of cascade collection and cascade util
 
 	\item 太阳能梯级发电实验台的建设及实验研究，对应于本文第七章。
 	
-	参与了太阳能梯级发电实验台的建设工作及实验研究。针对太阳辐射强度的不可控性、连续性及变化性，专门设计了特殊的实验工况来研究不同参数对槽式集热器和碟式集热器的集热效率的影响。设计了详细的实验步骤，明确了实验目的，并进行了相关的实验，获得了相关的实验数据，并对建立的槽式集热器模型和碟式集热器模型进行了验证分析。
+	参与了太阳能梯级发电实验台的建设工作及实验研究。针对太阳辐射强度的不可控性、连续性及变化性，专门设计了特殊的实验工况来研究不同参数对槽式集热器和碟式集热器的集热效率的影响。设计了详细的实验步骤，明确了实验目的，并进行了相关的实验，获得了实验数据，并对建立的槽式集热器模型和碟式集热器模型进行了验证分析。
 \end{enumerate}
 \nomenclature[C]{CSP}{太阳能聚光集热发电}
 %\nomenclature[C]{HTF}{传热流体}

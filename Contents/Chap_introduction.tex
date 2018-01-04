@@ -323,7 +323,8 @@ Bahari et al.~\cite{Bahari2016} considered the optimization of an integrated sys
 
 \nomenclature[C]{LFC}{Linear Fresnel Collector}
 
-\section{Literature summary}
+\section{文献综述小结}
+对前人研究工作的总结可以发现，太阳能光热发电技术正迎来高速发展的黄金期。
 Reviewing the former literatures concerning solar thermal power it can be found that most of the research works have focused on specific solar thermal power technologies to increase efficiency or reduce costs. 
 
 A small number of researchers have also studied the cascade collection or cascade utilization of solar energy. 
@@ -349,23 +350,33 @@ There is no literature on the combination of cascade collection and cascade util
 
 	\item 机理建模理论研究，对应于本文第三章。
 	
-	研究太阳能光热发电系统中各部件的物理特性和运行机理，采用数学计算工具和系统开发工具，建立梯级系统中各部件的机理模型，进而组建梯级系统。采用面向对象的方法，充分利用封装、继承、多态等特性，保证各部件之间既具有独立性又具有关联性，同时保证系统中各模型易于替换和修改。
+	针对太阳能光热发电系统中关键部件的物理特性和运行机理，本文在关键部件的建模理论上进行深入研究。采用数学计算工具和系统开发工具，建立梯级系统中各部件的机理模型，进而组建梯级系统。采用面向对象的方法，充分利用封装、继承、多态等特性，保证各部件之间既具有独立性又具有关联性，同时保证系统中各模型易于替换和修改。最后开发了具有计算机软件著作权的太阳能光热发电开发系统。
+	
+	针对槽式集热器在长度方向上能量密度一致的特点，进行了整体换热系数沿长度方向均匀一致的假设，利用等热流密度下的流体与定温热源的传热计算公式，建立了槽式集热器的热效率计算模型。
+	
+	为碟式接收器建立了热网络模型，针对每一项热损失进行了详细地分析计算，通过求解热网络模型的各温度节点，得到碟式接收器的热效率计算模型。
+	
+	针对经典斯特林机模型考虑不可逆损失因素较少，计算误差较大的缺点，建立了考虑包括非理想换热、气体压力损失、活塞运动及摩擦损失、内部导热损失、穿梭导热损失等不可逆损失的斯特林机模型，并与经典模型和实验数据进行了对比分析。
+	
+	建立了\textbf{Stream}类用于部件的连接工作，部件的出口和入口用作连接的接口。两个不同的部件通过被赋值给同一个\textbf{Stream}对象而实现相互连接。以部件连接为基础实现了多部件间耦合计算功能。
 
 	\item 斯特林机组排列方式优化研究，对应于本文第四章。
 	
-	System modeling for each proposed cascade system scheme. Based on the mechanism models of the components, a software that provides the functions of system topology arrangement, component connection, parameter setting and environment selection will be developed for the system investigation.
+	考虑到斯特林机组不同排列方式对机组性能的影响，提出了五种基本的斯特林机组排列方式。利用太阳能光热开发系统建立了不同排列方式的斯特林机组仿真模型，并对其在不同影响因素下的性能进行了对比分析，找到了斯特林机组的最佳排列方式。
 
 	\item 蒸汽发生系统的优化研究，对应于本文第五章。
 	
-	Optimizing the subsystem of the cascade system. Specifically, a staged heating method will be analyzed for the optimization of the steam generating system. Different layouts of Stirling engines will be analyzed to find out best layouts of the Stirling engines in the cascade system.
+	针对传统蒸汽发生系统在换热过程存在大量㶲损的缺点，本文提出了新型的分段加热系统，通过分段加热的方法来减少蒸汽发生过程中的温差，进而减少换热过程带来的㶲损，并降低太阳能场中传热流体的温度，提升太阳能光热系统的效率。
+	
+	在新型的分段加热系统中，太阳能场别分成三个片区，分别为预热过程、蒸发过程和过热过程供热。可以通过调整各片区传热流体的流量，降低其对应的换热温差，降低各片区的传热流体的温度，提升集热效率，并降低换热过程的㶲损，提升太阳能光热系统的效率。
 
 	\item 梯级系统评估分析研究，对应于本文第六章。
 	
-	Finding out the conditions conductive for cascade solar thermal power application.  Selecting appropriate stand-alone systems for comparative analysis of the cascade systems. Analysis of the influences of various parameters on the efficiency difference between cascade system and its corresponding stand-alone systems will be conducted.
+	给出了梯级系统的性能评估指标——整体光电转换效率，并提出了合适的独立系统方案进行对比分析。通过选取合理的系统参数，利用太阳能光热发电开发系统对梯级系统和其对应的独立系统进行了建模仿真分析。分析了不同因素对梯级系统的效率提升的影响，并给出了有利于梯级系统实施的条件。
 
 	\item 太阳能梯级发电实验台的建设及实验研究，对应于本文第七章。
 	
-	Building a solar thermal power generation test platform to carry out experimental works for solar thermal power generation. Special experiment cases considering the features of solar irradiance need to be designed to investigate the impact of different factors on the system performance. Influences of different factors on the performance of components will be investigated. Thermal performances of trough collectors and dish collectors will be analyzed, and the simulation models will be validated.
+	参与了太阳能梯级发电实验台的建设工作及实验研究。针对太阳辐射强度的不可控性、连续性及变化性，专门设计了特殊的实验工况来研究不同参数对槽式集热器和碟式集热器的集热效率的影响。设计了详细的实验步骤，明确了实验目的，并进行了相关的实验，获得了相关的实验数据，并对建立的槽式集热器模型和碟式集热器模型进行了验证分析。
 \end{enumerate}
 \nomenclature[C]{CSP}{太阳能聚光集热发电}
 %\nomenclature[C]{HTF}{传热流体}

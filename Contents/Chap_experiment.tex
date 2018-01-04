@@ -136,7 +136,7 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在热回�
 	\begin{center}
 	\begin{tabular}{cccc}
 		\toprule
-		工况	& $I_r$（$\mathrm{W/m^2}$）&	流量（$\mathrm{kg/s}$）			&	入口油温（$\mathrm{K}$）\\
+		工况编号	& $I_r$（$\mathrm{W/m^2}$）&	流量（$\mathrm{kg/s}$）			&	入口油温（$\mathrm{K}$）\\
 		\midrule
 		1-10	&	实测值	&	0.2	&	433.2\\
 		11	&	实测值	&	0.1	&	433.2\\
@@ -220,7 +220,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccc}
 		\toprule
-		工况	& $I_r$（$\mathrm{W/m^2}$）	&	流量（$\mathrm{kg/s}$）			&	入口温度（$\mathrm{K}$）\\
+		工况编号	& $I_r$（$\mathrm{W/m^2}$）	&	流量（$\mathrm{kg/s}$）			&	入口温度（$\mathrm{K}$）\\
 		\midrule
 		1-10	&	实测值	&	0.03	&	423.2\\
 		11	&	实测值	&	0.01	&	423.2\\
@@ -263,7 +263,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		1	&	353	&	0.2	&	433.2	&	452.9	&	277.8\\
 		2	&	408	&	0.2	&	433.2	&	456.2	&	278.0\\
@@ -300,7 +300,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		11	&	612	&	0.1	&	433.2	&	501.0	&	286.3\\
 		12	&	615	&	0.2	&	433.2	&	468.2	&	286.4\\
@@ -331,7 +331,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		16	&	616	&	0.2	&	413.2	&	449.7	&	289.5\\
 		17	&	614	&	0.2	&	423.2	&	458.8	&	288.3\\
@@ -364,7 +364,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		1	&	303	&	0.03	&	423.2	&	552.1	&	282.1\\
 		2	&	358	&	0.03	&	423.2	&	576.4	&	282.5\\
@@ -407,11 +407,11 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 
 \begin{table}[htbp]\footnotesize
 \setlength{\abovecaptionskip}{-10pt}
-	\caption{碟式集热器在工况11到工况 15条件下的实验结果}
+	\caption{碟式集热器在工况11到工况15条件下的实验结果}
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		11	&	613	&	0.01	&	423.2	&	950.7	&	286.3\\
 		12	&	615	&	0.02	&	423.2	&	783.9	&	286.4\\
@@ -442,7 +442,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 	\begin{center}
 	\begin{tabular}{cccccc}
 		\toprule
-		工况	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
+		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
 		\midrule
 		16	&	616	&	0.03	&	383.2	&	661.9	&	289.0\\
 		17	&	615	&	0.03	&	403.2	&	676.4	&	288.8\\

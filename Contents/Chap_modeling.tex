@@ -62,7 +62,7 @@
 %\nomenclature{$K$}{Incidence angle modifier of trough collector}
 %%\nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
 
-假设整体传热系数$U(T_{abs})$沿着整个集热器的长度方向是均匀的，这样就可以利用附录\ref{cha:CTCHFHX}中的传热计算公式。吸收管的传热分析示意图如图\ref{fig:Pipe}所示。
+假设整体传热系数$U(T_{abs})$沿着整个集热器的长度方向是均匀的，可以将环境看作定温热源，这样就可以利用附录\ref{cha:CTCHFHX}中的传热计算公式计算吸收管对环境的散热。吸收管的传热分析示意图如图\ref{fig:Pipe}所示。
 \nomenclature{$U$}{Overall heat transfer coefficient, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
 \nomenclature{$q''$}{Heat flux, W$\cdot$m$^{-2}$}
 \begin{equation}
@@ -653,7 +653,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\label{tab:PowerComparison}
 \end{sidewaystable}
 
-从表中可以看出，与之前的斯特林机热力模型相比，本文建立的模型同实验在不同转速和不同平均有效压力的条件下得到的结果更加接近。需要指出的是，上述所有模型中，输出功率$W$和输入热量$Q$都由工作气体同壁面的换热得到。在本文建立的模型中，$W$和$Q$由方程(\ref{eq:T_H})和(\ref{eq:T_L})得到。因此，$W$、$Q$和$\eta$都可以由热力模型和输入参数得到。这些输入参数包括加热器参数、冷却器参数、回热器参数、平均有效压力、工作气体的类型以及斯特林机的几何尺寸。
+从表中可以发现，与之前的斯特林机热力模型相比，本文建立的模型同实验在不同转速和不同平均有效压力的条件下得到的结果更加接近。需要指出的是，上述所有模型中，输出功率$W$和输入热量$Q$都由工作气体同壁面的换热得到。在本文建立的模型中，$W$和$Q$由方程(\ref{eq:T_H})和(\ref{eq:T_L})得到。因此，$W$、$Q$和$\eta$都可以由热力模型和输入参数得到。这些输入参数包括加热器参数、冷却器参数、回热器参数、平均有效压力、工作气体的类型以及斯特林机的几何尺寸。
 
 表\ref{tab:EfficiencyComparison}和表\ref{tab:PowerComparison}表明，当斯特林机的平均有效压力位于2.76$\,\mathrm{MPa}$到6.90$\,\mathrm{MPa}$之间时，本文建立的模型具有最佳性能预测（效率和功率）。当斯特林机的转速从16.67$\,\mathrm{Hz}$增加到58.33$\,\mathrm{Hz}$时，本文建立的模型的性能预测的误差也随之增大。所以本文所建立的模型在平均有效压力在2.76$\,\mathrm{MPa}$和6.90$\,\mathrm{MPa}$之间，转速较低时具有最好的性能预测准确性。
 

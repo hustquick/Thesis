@@ -63,8 +63,8 @@
 %%\nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
 
 假设整体传热系数$U(T_{abs})$沿着整个集热器的长度方向是均匀的，可以将环境看作定温热源，这样就可以利用附录\ref{cha:CTCHFHX}中的传热计算公式计算吸收管对环境的散热。吸收管的传热分析示意图如图\ref{fig:Pipe}所示。
-\nomenclature{$U$}{Overall heat transfer coefficient, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
-\nomenclature{$q''$}{Heat flux, W$\cdot$m$^{-2}$}
+\nomenclature{$U$}{整体换热系数, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
+\nomenclature{$q''$}{热流密度, W$\cdot$m$^{-2}$}
 \begin{equation}
 	\frac{T_{o}-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})\pi d_o L_{tc}}{\dot{m}c_{p}})\label{eq:CTCHF}
 \end{equation}
@@ -138,20 +138,20 @@
 	\label{tab:dc}
 \end{table}
 
-\nomenclature[G]{$\delta$}{Thickness, m}
-\nomenclature[S]{$insu$}{Insulating layer}
-\nomenclature{$dep$}{Depth, m}
-\nomenclature{$d$}{Diameter, m}
-\nomenclature[G]{$\lambda$}{Thermal conductivity, W$\cdot{}$m$^{-1}$$\cdot$K$^{-1}$}
-\nomenclature[G]{$\epsilon$}{Emissivity}
-\nomenclature[G]{$\theta_{dc}$}{Dish aperture angle (0$^{\circ}$ is horizontal, 90$^{\circ}$ is vertically down)}
-\nomenclature[G]{$\gamma$}{Intercept factor; compression ratio}
-\nomenclature[G]{$\eta_{shading}$}{Shading factor}
-\nomenclature[G]{$\rho$}{Reflectivity}
-\nomenclature{$A_{se,1}$}{Heat transfer area of Stirling engine at air side, m$^2$}
-\nomenclature{$A_{se,2}$}{Heat transfer area of Stirling engine at water side, m$^2$}
-\nomenclature{$n_g$}{Amount of working gas in each Stirling engine, mol}
-\nomenclature{$n_{se}$}{Number of Stirling engines in the Stirling engine array}
+\nomenclature[G]{$\delta$}{厚度, m}
+\nomenclature[S]{$insu$}{绝热层}
+\nomenclature{$dep$}{深度, m}
+\nomenclature{$d$}{直径, m}
+\nomenclature[G]{$\lambda$}{导热率, W$\cdot{}$m$^{-1}$$\cdot$K$^{-1}$}
+\nomenclature[G]{$\epsilon$}{发射率}
+\nomenclature[G]{$\theta_{dc}$}{碟式集热器开口角度 (0$^{\circ}$表示水平, 90$^{\circ}$表示竖直向下)}
+\nomenclature[G]{$\gamma$}{拦截因子；压缩比}
+\nomenclature[G]{$\eta_{shading}$}{遮挡因子}
+\nomenclature[G]{$\rho$}{反射率}
+%\nomenclature{$A_{se,1}$}{Heat transfer area of Stirling engine at air side, m$^2$}
+%\nomenclature{$A_{se,2}$}{Heat transfer area of Stirling engine at water side, m$^2$}
+\nomenclature{$n_g$}{单台斯特林机中的工质的物质的量, mol}
+\nomenclature{$n_{se}$}{斯特林机组中斯特林的数目}
 
 碟形接收器模型涉及的损失包括：接收器拦截损失，由于阴影造成的损失以及热损失。热损失占所有这些损失的最大部分，这部分损失由传导，对流和辐射三种形式组成。
 \noindent \begin{figure}[ht!]
@@ -189,7 +189,10 @@
       q_{dr,1} = h_{dr,1}A_{dr,1}\Delta T_{ln,dr,1}
       \label{eq:q_dr_1}
   \end{equation}
-  \nomenclature{$A_{dr,1}$}{Heat transfer area of dish receiver between tube and air, $\mathrm{m^2}$}  
+  \nomenclature[S]{$dr$}{碟式接收器}
+  \nomenclature[S]{1}{空气} 
+  \nomenclature[S]{2}{水} 
+  \nomenclature[S]{3}{导热油}  
   其中  
   \begin{equation}
       h_{dr,1} = Nu_{tube}\lambda_{dr,1} / d_{i,1}
@@ -197,8 +200,8 @@
 \begin{equation}
       Nu_{tube} = c_r Nu'_{tube}
 \end{equation}
-    \nomenclature{$Nu$}{Nusselt number}
-    \nomenclature{$c_r$}{Heat transfer correction factor of coiled tube of volumetric receiver}
+    \nomenclature{$Nu$}{努赛尔数}
+    \nomenclature{$c_r$}{螺旋管的螺旋因子}
     该式为修正后应用于螺旋管的努赛尔数计算公式，式中存在基于弯管曲率的螺旋因子$c_r$作为修正系数。$c_r$的表达式为：\cite{Pablo2008}
 \begin{equation}
 	c_{r}=1+3.5\frac{d_{i,1}}{d_{cav}-d_{i,1}-2\delta_{a}}
@@ -207,10 +210,10 @@ $Nu'_{tube}$是直圆管的努赛尔数，它由下式计算：\cite{Serth2007}
 \begin{equation}
 	Nu'_{tube}= 0.027Re_{tube}^{0.8}Pr_{tube}^{1/3}(\mu_{tube}/\mu_{tube,w})^{0.14}
 \end{equation}
-\nomenclature{$Pr$}{Prandtl number}
-\nomenclature{$Re$}{Reynolds number}
-\nomenclature[G]{$\mu$}{Viscosity, kg$\cdot$m$^{-1}$$\cdot$s$^{-1}$}
-\nomenclature[S]{$w$}{Tube wall}
+\nomenclature{$Pr$}{普朗特数}
+\nomenclature{$Re$}{雷诺数}
+\nomenclature[G]{$\mu$}{动力粘度, kg$\cdot$m$^{-1}$$\cdot$s$^{-1}$}
+\nomenclature[S]{$w$}{管壁}
 传热流体与管壁之间的对数温差$\Delta{}T_{ln,dr,1}$可以写作
 \begin{equation}
 	\Delta{}T_{ln,dr,1}=\frac{(T_{cav}-T_{dc,i})-(T_{cav}-T_{dc,o})}{\ln\dfrac{T_{cav}-T_{dc,i}}{T_{cav}-T_{dc,o}}}
@@ -252,8 +255,8 @@ q_{cond,tot}=2\pi\lambda_{insu}dep_{cav}\dfrac{T_{cav}-T_{insu}}{\ln(1 + 2\delta
 	q_{conv,free} = h_{free}A_{cav}(T_{cav}-T_{amb})
 \end{equation}
 其中，$h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$，$\overline{d_{cav}}$是孔腔的有效直径, 它由$\overline{d_{cav}}=d_{cav}-2d_i-4 \delta_a$算得。
-\nomenclature{$\overline{d_{cav}}$}{Effective diameter of the cavity, m}
-\nomenclature{$d_i$}{Inner diameter of trough receiver, m}
+\nomenclature{$\overline{d_{cav}}$}{腔体有效直径, m}
+%\nomenclature{$d_i$}{Inner diameter of trough receiver, m}
 %$d_{i}=$0.066$\,$m
   
   \item \emph{有风条件下接收器开口处发生的强制对流损失，$q_{conv,forc}$}  
@@ -306,10 +309,10 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \label{sec:StirlingEngineModel}
 \subsubsection{理想斯特林循环}
 理想斯特林循环由同冷热热源进行等温换热两个换热过程及同回热器进行定容换热的两个换热过程组成。斯特林循环的$T$-$s$图如图\ref{fig:StirlingCycle}所示。4-1过程中回热器吸收的热量在2-3过程中重新利用。但是实际上，由于不完善的回热过程，这部分能量往往不能完全重新利用，这部分能量只能将斯特林机的工作气体从2状态点加热到3'状态点。所以定义了回热率$e$来表征回热器的完善程度\cite{Formosa2010,Juhasz2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
-\nomenclature{$e$}{Regenerator effectiveness}
-\nomenclature{$T_R$}{Effective working fluid temperature in regenerator, K}
-\nomenclature{$T_L$}{Working fluid temperature in the cold space, K}
-\nomenclature{$T_H$}{Working fluid temperature in the hot space, K}
+\nomenclature{$e$}{回热率}
+\nomenclature{$T_R$}{有效回热温度, K}
+\nomenclature{$T_L$}{冷腔温度, K}
+\nomenclature{$T_H$}{热量温度, K}
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -329,24 +332,24 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \end{itemize}
 
 为了考虑斯特林循环中由于存在死区容积带来的内部不可逆损失，将死区容积$V_D$划分成热头死区容积$V_{DH}$、回热器死区容积$V_{DR}$和冷头死区容积$V_{DC}$\cite{Duan2014}。并采用容积因子$K$来描述不同温度下的各死区容积。$K$同各过程的温度及回热效率有关。
-\nomenclature{$V_D$}{Total dead volume, m$^3$}
-\nomenclature{$V_{DH}$}{Hot space dead volume, m$^3$}
-\nomenclature{$V_{DR}$}{Regenerator dead volume, m$^3$}
-\nomenclature{$V_{DC}$}{Cold space dead volume, m$^3$}
+\nomenclature{$V_D$}{死区容积, m$^3$}
+\nomenclature{$V_{DH}$}{热头死区容积, m$^3$}
+\nomenclature{$V_{DR}$}{回热器死区容积, m$^3$}
+\nomenclature{$V_{DC}$}{冷头死区容积, m$^3$}
 \begin{equation}
 	K = \frac{V_{DH}}{T_H} + \frac{V_{DR}}{T_R} + \frac{V_{DC}}{T_L}
 \end{equation}
-\nomenclature{$K$}{Dead volume factor}
+\nomenclature{$K$}{容积因子}
 
 对于定温压缩过程1-2，输出功
 \begin{equation}
-	W_{12} = \int^{V_E}_{V_E+V_C}{p_{12}dV}=-mRT_L\ln{\frac{V_E+V_C+KT_L}{V_E+KT_L}}
+	W_{12} = \int^{V_E}_{V_E+V_C}{p_{12}dV}=-m_{se}RT_L\ln{\frac{V_E+V_C+KT_L}{V_E+KT_L}}
 \end{equation}
 %\nomenclature{$W_{12}$}{Output work in process 1-2 (J)}
-\nomenclature{$V_E$}{Expansion volume, m$^3$}
-\nomenclature{$V_C$}{Compression volume, m$^3$}
-\nomenclature{$m$}{Mass of working fluid in Stirling engine, kg}
-\nomenclature{$R$}{Gas constant, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
+\nomenclature{$V_E$}{膨胀体积, m$^3$}
+\nomenclature{$V_C$}{压缩体积, m$^3$}
+\nomenclature{$m_{se}$}{单台斯特林机中的工质的质量, kg}
+\nomenclature{$R$}{气体常数, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
 
 对于定温膨胀过程3-4，输出功
 \begin{equation}
@@ -355,13 +358,13 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 %\nomenclature{$W_{34}$}{Output work in process 3-4 (J)}
 
 定义$\gamma_H = \dfrac{V_E+V_C+KT_H}{V_E+KT_H}$，$\gamma_L = \dfrac{V_E+V_C+KT_L}{V_E+KT_L}$。在一个循环过程中，理论输出功
-\nomenclature[G]{$\gamma_H$}{Space ratio in process 12}
-\nomenclature[G]{$\gamma_L$}{Space ratio in process 34}
+\nomenclature[G]{$\gamma_H$}{过程12的容积率}
+\nomenclature[G]{$\gamma_L$}{过程34的容积率}
 \begin{equation}
 	W_{th} = W_{12} + W_{34} = mR(T_H\ln\gamma_H - T_L\ln\gamma_L)
 \end{equation}
-\nomenclature{$W$}{Output work, J}
-\nomenclature[S]{$th$}{Theoretical}
+\nomenclature{$W$}{输出功, J}
+\nomenclature[S]{$th$}{理论值}
 
 对于定容加热过程3'-3，吸收的热量
 \begin{equation}
@@ -374,8 +377,8 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 
 %\nomenclature{$Q_{3^{'}3}$}{heat absorbed in process $3^{'}3$ (J)}
 %\nomenclature{$M$}{Mole mass of the working fluid in Stirling engine, kg$\cdot$mol$^{-1}$)}
-\nomenclature{$c_v$}{Specific heat at constant volume, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
-\nomenclature{$k$}{Specific heat ratio ($c_p/c_v$), thermal conductivity, W$\cdot$m$^{-1}\cdot$K$^{-1}$}
+\nomenclature{$c_v$}{定容比热容, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
+\nomenclature{$k$}{热容比 ($c_p/c_v$)；导热率, W$\cdot$m$^{-1}\cdot$K$^{-1}$}
 
 对于定温膨胀过程3-4，吸收的热量
 \begin{equation}
@@ -387,7 +390,7 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \begin{equation}
 	Q_{th} = Q_{3^{'}3} + Q_{34} = \frac{1-e}{k-1}mR(T_H-T_L) + mRT_H\ln\gamma_H
 \end{equation}
-\nomenclature{$Q$}{Absorbed heat, J}
+\nomenclature{$Q$}{吸热量, W}
 
 %The Stirling cycle efficiency
 
@@ -403,8 +406,8 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 %	P = {W}s_{se} = mRs_{se}(T_H\ln\gamma_H - T_L\ln\gamma_L)
 %	\label{Eq:P}
 %\end{equation}
-\nomenclature{$P$}{Power of Stirling engine, W}
-\nomenclature{$s_{se}$}{Speed of Stirling engine, Hz}
+\nomenclature{$P$}{功率, W}
+\nomenclature{$s_{se}$}{斯特林机转速, Hz}
 
 %In order to describe quantitatively the effect of the internal dissipation of the working fluid on the performance (efficiency and power) of Stirling engine, the cycle irreversibility parameter, $R_S$, is defined as~\cite{Kaushik2003}:
 %\nomenclature{$R_S$}{cycle irreversibility parameter}
@@ -435,12 +438,12 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 	T_H = T_{hw} - \frac{Qs_{se}}{h_hA_{hw}}
 	\label{eq:T_H}
 \end{equation}
-\nomenclature[S]{$hw$}{Heater wall}
+\nomenclature[S]{$hw$}{加热器壁面}
 \begin{equation}
 	T_L = T_{cw} + \frac{(Q-W)s_{se}}{h_cA_{cw}}
 	\label{eq:T_L}
 \end{equation}
-\nomenclature[S]{$cw$}{Cooler wall}
+\nomenclature[S]{$cw$}{冷却器壁面}
 
 其中的传热系数可以通过下式获得\cite{Babaelahi2015}：
 \begin{equation}
@@ -458,7 +461,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \begin{equation}
 	\Delta p = -\frac{2f_{Re}\mu u V}{d^2A}
 \end{equation}
-\nomenclature{$p$}{Pressure, Pa}
+\nomenclature{$p$}{压力, Pa}
 其中，$u$是工作气体的流速，$V$是流通体积，$A$是流动截面积。
 
 由压力损失带来的斯特林机的净输出损失可以由下式计算得到：
@@ -490,7 +493,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	Q_{id} = \frac{k_rA_r}{L_rs_{se}}(T_{hw} - T_{cw})
 \end{equation}
 其中，$k_r$、$L_r$和$A_r$分别表示回热器的导热率、长度和导热面积。
-\nomenclature[S]{$r$}{Regenerator}
+\nomenclature[S]{$r$}{回热器}
 
 \item 穿梭导热产生的能量损失
 
@@ -499,8 +502,8 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	Q_{sc} = 0.4\frac{Z^2k_pD_p}{JL_ds_{se}}(T_{H} - T_{L})
 \end{equation}
 其中，$Z$、$k_p$、$D_p$、$J$和$L_d$分别表示置换器的一次往复距离、活塞导热率、置换器的直径、置换器和圆柱体内壁之间的缝隙大小以及置换器的长度。
-\nomenclature{$Z$}{Displacer stroke, m}
-\nomenclature{$J$}{Annular gap cylinder displacer, m}
+\nomenclature{$Z$}{置换器一次往复的距离, m}
+\nomenclature{$J$}{置换器与圆柱体内壁之间的缝隙大小, m}
 %\nomenclature[S]{$p$}{Piston}
 
 \end{enumerate}
@@ -669,9 +672,9 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \begin{equation}
 	\frac{dT}{T-T_w}=-\frac{UdA}{\dot{m}c_p}
 \end{equation}
-\nomenclature{$c_p$}{Specific heat at constant pressure, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
-\nomenclature{$T_w$}{Wall temperature, K}
-\nomenclature{$A$}{Heat transfer area, m$^2$}
+\nomenclature{$c_p$}{定压比热容, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
+\nomenclature{$T_w$}{壁温, K}
+\nomenclature{$A$}{面积, m$^2$}
 
 由于$T(0)=T_i$，$T(A)=T_o$，
 \begin{equation}
@@ -679,8 +682,8 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \end{equation}
 
 对于斯特林机，可以分别用$T_{hw}$和$T_{cw}$来替代$T_w$来获得$T_{i,h}$、$T_{o,h}$同$T_{hw}$，$T_{i,c}$、$T_{o,c}$同$T_{cw}$之间的关系式。
-\nomenclature[S]{$h$}{Heating fluid; homogeneous solution}
-\nomenclature[S]{$c$}{Cooling fluid; counterflow}
+\nomenclature[S]{$h$}{加热流体; 齐次解}
+\nomenclature[S]{$c$}{冷却流体; 逆流}
 \begin{equation}
 	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{\dot{m}_hc_{p,h}})
 	\label{Eq:T_h}
@@ -754,7 +757,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
   \begin{equation}
   y h_{2c} + (1-y) h_{2f} = h_{2g}
 \end{equation}
-\nomenclature{$p_e$}{Extraction pressure of the steam turbine, Pa} 
+\nomenclature{$p_e$}{汽轮机抽汽压力, Pa} 
  
   泵消耗的总功率
 \begin{equation}
@@ -855,138 +858,8 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 	\eta_{rk}=\dfrac{P_{tb}-P_{pu}/\eta_{ge}}{\dot{m}_4(h_{4a}-h_{4f})}
 \end{equation}
 
-%\noindent \begin{figure}[htbp]
-%\begin{center}
-%	\includegraphics[width = 0.6\columnwidth]{fig/ORCsystem1.pdf}
-%	\caption{The schematic diagram of an ORC system without regenerator}
-%	\label{fig:ORCsystem1}
-%\end{center}
-%\end{figure}
-
-%  The stream exiting the turbine is passed through a recuperator to heat the feed working fluid.
-
-
 \subsubsection{发电机}
 发电机相对而言是独立于梯级系统之外的部件，它的效率一般假定为常数，值为0.975。
-
-%\subsubsection{Thermal storage system}
-
-%\section{Steam generating system}
-%\section{Steam extraction and regeneration system}
-%\section{斯特林机组建模}
-%
-%\begin{figure}[htbp]
-%\begin{center}
-%	\includegraphics[width = 0.6\columnwidth]{fig/stirlingEngineArray.pdf}
-%	\caption{斯特林机组的排布}
-%	\label{fig:Layout of Stirling engines}
-%\end{center}
-%\end{figure}
-%梯级系统中使用了斯特林机组，图\ref{fig:Layout of Stirling engines}显示的是一种斯特林机组的排列方式。为了便于研究斯特林机组排列方式对机组效率的影响，斯特林机组中每个斯特林机都具有相同的参数：$U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$，$U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$，$A_{se,1}=6\,\mathrm{m^2}$，$A_{se,2}=6\,\mathrm{m^2}$，$k_{se}=1.4$，$\gamma_{se}=3.375$，$n_g=7.84\times10^{-2}\,\mathrm{mol}$，$s_{se}=10\,\mathrm{s^{-1}}$。
-%
-%Depending on the direction of heating and cooling flows, there are two possible flow types: parallel flow and counterflow. 
-%Figure~\ref{fig:twoFlowTypes} and 
-%Figure~\ref{fig:CounterFlow} show the heat transfer diagrams of the two flow types.
-%\nomenclature{$n_1$}{Number of columns of the Stirling engine array} $n_1$ is chosen to be 10 and can be optimized later.
-%
-%\noindent \begin{figure}[htbp]
-%\centering
-%	\begin{subfigure}[b]{0.45\columnwidth}
-%	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Parallel.pdf}
-%	\caption{Parallel flow}\label{fig:ParallelFlow}
-%	\end{subfigure}
-%	~
-%\begin{subfigure}[b]{0.45\columnwidth}
-%	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Counter.pdf}
-%	\caption{Counterflow}\label{fig:CounterFlow}
-%	\end{subfigure}
-%	\caption{Heat transfer diagrams of parallel flow and counterflow}
-%	\label{fig:twoFlowTypes}
-%\end{figure}
-%
-%In Figure~\ref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},\dot{m}_{1,r}=\dot{m}_{1}/n_{2}$. For $x$ from $1$ to $n_1-1$, where $x$ is the column number of Stirling engines, $T_{1,i,x+1}=T_{1,o,x},T_{2,i,x+1}=T_{2,o,x}$.
-%\nomenclature{$n_1$}{Number of columns of the Stirling engine array}
-%%\nomenclature{$\dot{m}_{1}$}{Total mass flow rate of air, kg/s}
-%
-%Assume that the positive flow direction is to the right, for parallel flow, $T_{2,i,1}=T_{2,i}$, $\dot{m}_{2,r}=\dot{m}_{2}/n_{2}$; for counterflow, $T_{2,o,n_1}=T_{2,i}$, $\dot{m}_{2,r}=-\dot{m}_{2}/n_{2}$.
-%\nomenclature{$n_2$}{Number of row s of the Stirling engine array}
-%\nomenclature{$\dot{m}$}{Mass flow rate, kg$\cdot$s$^{-1}$}
-%
-%%\begin{equation}
-%%	T_{2,i,1}=T_{2,i}\label{eq:T_2_i_1}
-%%\end{equation}
-%%\begin{equation}
-%%	\dot{m}_{2,r}=\dot{m}_{2}/n_{2}
-%%\end{equation}
-%%\nomenclature{$\dot{m}_{2,r}$}{Mass flow rate of water in each row of Stirling engine array, kg/s}
-%%\nomenclature{$\dot{m}_{2}$}{Total mass flow rate of water, kg/s}
-%
-%%for counterflow,
-%%
-%%\begin{equation}
-%%	T_{2,o,n_1}=T_{2,i}\label{eq:T_2_o_n1}
-%%\end{equation}
-%%\begin{equation}
-%%	\dot{m}_{2,r}=-\dot{m}_{2}/n_{2}
-%%\end{equation}
-%
-%Assume linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$,~\cite{Der2007,Cavazzuti2012} and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$.~\cite{Formosa2010,Juhasz2010} 
-%
-%For a Stirling engine in column $x$, $x$ from $1$ to $n_1$, according to Equation~(\ref{eq:T_H}) and Equation~(\ref{eq:T_L}),
-%\nomenclature[S]{$x$}{Stirling engine in column $x$}
-%\begin{equation}
-%	T_{hw,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{se,1}A_{se,1}}{\dot{m}_{1,r}c_{p,1,x}})}\label{eq:T_H_x}
-%\end{equation}
-%
-%
-%\begin{equation}
-%	T_{cw,x}=T_{2,i,x}-\dfrac{T_{2,i,x}-T_{2,o,x}}{1-\exp(-\dfrac{U_{se,2}A_{se,2}}{\dot{m}_{2,r}c_{p,2,x}})}\label{eq:T_L_x}
-%\end{equation}
-%
-%The power of each Stirling engine in column $x$ can be written as 
-%\begin{equation}
-%  P_{se,x} = W_{th,x}-W_{pd,x}-W_{fs,x}
-%\end{equation}
-%
-%The efficiency of each Stirling engine in column $x$ can be written as 
-%\begin{equation}
-%  \eta_{se,x} = \dfrac{W_{th,x}-W_{pd,x}-W_{fs,x}}{Q_{th,x}+Q_{id,x}+Q_{sc,x}}
-%\end{equation}
-%
-%%$\eta_{se,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{se}}}\label{eq:eta_striling_x}$, where $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Stine1985,Juhasz2010} and $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}.
-%
-%%\begin{equation}
-%%	\eta_{se,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{se}}}\label{eq:eta_striling_x}
-%%\end{equation}
-%
-%For energy balance,
-%\begin{equation}
-%	\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})(1-\eta_{se,x})=\dot{m}_{2,r}(h_{2,o,x}-h_{2,i,x})
-%\end{equation}
-%
-%%And in each Stirling cycle, the heat absorbed by the working gas is
-%%\begin{equation}
-%%\begin{split}
-%%	n_gR(T_{H,x}\ln\gamma_{se}+\dfrac{1-e_{x}}{k-1}(T_{H,x}-T_{L,x}))=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})/s_{se}
-%%\end{split}
-%%\end{equation}
-%
-%Using equations in Section~\ref{sec:StirlingEngineModel} and the energy balance equations, key parameters of the Stirling engine array can be obtained. 
-%
-%The efficiency of the Stirling engine array 
-%\begin{equation}
-%  \eta_{sea}=1-\dfrac{\dot{m}_{2}(h_{2,o,n_1}-h_{2,i,1})}{\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})}
-%\end{equation}
-%
-%The output power of each Stirling engine in column $x$
-%\begin{equation}
-%  P_{se,x}=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}
-%\end{equation}
-%
-%The total output power of the Stirling engine array
-%\begin{equation}
-%  P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})
-%\end{equation}
 
 \section{蒸汽发生系统建模}
 槽式太阳能光热发电厂的蒸汽发生系统可以被分成三部分——预热器、蒸发器和过热器，它们都是换热器。为了便于系统分析，假定这些换热器都不存在流动压力损失，即加热流体（以导热油为例）和被加热流体（以水为例）的压力保持不变。水的压力和汽轮机的入口压力相等。此外，假设这些换热器都不与环境交换热量。

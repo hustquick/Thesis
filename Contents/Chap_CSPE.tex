@@ -77,7 +77,7 @@
 \begin{equation}
 	\eta_{cs}=\dfrac{P_{cs}}{I_rA_{cs}} = \dfrac{P_{rk}+ P_{sea}}{I_rA_{tc} + I_rA_{dc}}
 \end{equation}
-\nomenclature[S]{rk}{Rankine cycle}
+\nomenclature[S]{$rk$}{朗肯循环}
 
 其中，$P_{rk}$是朗肯循环的输出功率，$P_{sea}$是所有斯特林机的输出功率之和。
 
@@ -268,7 +268,7 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 \subsection{独立槽式-朗肯循环系统}
 
 汽轮机的设计参数和相对内效率和梯级系统中的汽轮机一样。除氧器的工作压力和梯级系统中的一样。于是，图\ref{fig:Stand-alone-systems}中汽轮机的状态点$2b,s$和$2c,s$的参数可以由下式求出
-\nomenclature[S]{$s$}{Stand-alone systems}
+\nomenclature[S]{$s$}{独立系统}
 
 \begin{equation}
 	\eta_{i,tb}= (h_{2a,s}-h_{2b,s})/(h_{2a,s}-h_{i,2b,s}) = (h_{2a,s}-h_{2c,s})/(h_{2a,s}-h_{i,2c,s})
@@ -341,10 +341,10 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 	\end{center}
 	\label{tab:importantResults}
 \end{table}
-\nomenclature[S]{$cs$}{Cascade system}
-\nomenclature[S]{$se$}{Stirling engine}
-\nomenclature[G]{$\eta_{diff}$}{Efficiency difference of cascade system and stand-alone systems, $\eta_{cs}-\eta_{s}$}
-\nomenclature[S]{$sea$}{Stirling engine array}
+\nomenclature[S]{$cs$}{梯级系统}
+\nomenclature[S]{$se$}{斯特林机}
+\nomenclature[G]{$\eta_{diff}$}{梯级系统效率与其对应独立系统的效率差, $\eta_{cs}-\eta_{s}$}
+\nomenclature[S]{$sea$}{斯特林机组}
 %\nomenclature{$P_{sea,s}$}{Total power of Stirling engines in stand-alone dish system, W}
 接下来的各节分析在不同因素的影响下，梯级系统与其对应的独立系统之间的对比分析。
 \subsection{法向直射辐射强度$I_r$的影响}
@@ -352,7 +352,7 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 
 $I_r$对梯级系统和独立系统都有影响，因此对两种系统的效率差异（$\eta_{diff}$）也有影响。$I_r$对$\eta_{diff}$的影响曲线图如图\ref{fig:I_r-eta_diff}所示。从图中可以发现，对于较高的辐射强度（$I_r > 550\,\mathrm{W/m^2}$），$\eta_{diff}>0$，梯级系统可以获得更高的光电转换效率。对于较低的辐射强度（$I_r < 550\,$W/m$^2$），$\eta_{diff}$可能为负值。在这种条件下，梯级系统的光电转换效率要低于其对应的独立系统。这可以被解释为，由于梯级系统使用朗肯循环的给水来冷却斯特林机，随着给水温度的升高，这种冷却方式将会削弱斯特林机的冷却效果，导致斯特林机功率和效率的下降。对于较低的$I_r$，汽轮机功率的增加量要小于斯特林机组因此带来的功率损失。而随着$I_r$的增大，凝结液吸收的热量给汽轮机带来的功率提升逐渐高于斯特林机的功率损失。所以，太阳法向直射辐射强度$I_r$较高的地区更适合采用梯级系统。这意味着太阳法相直射辐射强度是梯级系统选址所需要考虑的一个重要因素。
 
-\nomenclature[G]{$\beta$}{Ratio of power of Stirling engines to the total output power of cascade system}
+\nomenclature[G]{$\beta$}{斯特林机发电功率占系统发电总功率的比例}
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -437,7 +437,7 @@ $I_r$对梯级系统和独立系统都有影响，因此对两种系统的效率
 
 为了更加清晰地找出两种流动方向的差异，本文建立了简单的斯特林机组模型，并进行了模拟分析。$T_{1,i}，T_{1,o}，T_{2,i}及q_{1,m}$设定为固定值，并和梯级系统中的值相同。通过改变$q_{2,m}$的值，研究不同$q_{2,m}$条件下，两种流动方向的斯特林机组的效率（对应顺流和逆流，分别为$\eta_p$和$\eta_c$）。斯特林机组的效率曲线图如图\ref{fig:SEAflowtypes}所示，可以发现，逆流方式具有比顺流方式更高的斯特林机组效率。但是，随着$q_{2,m}$的增大，这种差异越来越小。
 
-\nomenclature[S]{$p$}{Parallel flow; particular solution; piston}
+\nomenclature[S]{$p$}{顺流; 特解; 活塞}
 %\nomenclature[S]{$c$}{Counterflow}
 
 对于冷热流体的$c_p\dot{m}$具有很大差别的系统，这意味着一种流体的温度变化量很小，这时采用顺流和逆流对系统效率的影响很小。对于冷热流体的$c_p\dot{m}$相差不大的系统，采用逆流方式将会获得更高的效率。

@@ -468,7 +468,7 @@
 \ifthenelse{\equal{\HUST@language}{chinese}}{
   \def\HUST@ackname{致\hspace{1em}谢}
   \def\HUST@acknamenospace{致谢}
-  \def\HUST@publicationtitle{攻读学位期间发表的学术论文}
+  \def\HUST@publicationtitle{攻读学位期间的主要成果和奖励}
 }{
   \def\HUST@ackname{Acknowledge}
   \def\HUST@acknamenospace{Acknowledge}

@@ -175,7 +175,6 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在热回�
 	\widetilde{T_{o}}=T_{amb} + \dfrac{q''}{U(T_{abs})} + \exp(-\frac{U(T_{abs})\pi d_o L}{\dot{m}\widetilde{c_p}})(T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})})
 	\label{eq:CheckT_o}
 \end{equation}
-
 其中，$T_{abs}$用$(T_i + T_o)/2$代替（$T_i$和$T_o$分别采用测量的入口油温和出口油温），$\widetilde{c_p}$是用$(T_i + T_o)/2$得到的平均比热容。
 $U(T_{abs})$由下式得到\cite{Romero2007}：
 \begin{equation}
@@ -192,6 +191,7 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 \begin{equation}
 	\widetilde{\eta_{tc}} = \dfrac{\dot{m}\widetilde{c_p}(\widetilde{T_o}-T_i)}{I_rw_{tc}L_{tc}}
 \end{equation}
+
 于是模拟得到的集热器的效率值$\widetilde{\eta_{tc}}$可以同方程(\ref{eq:ExperimentEta})得到的实验值$\eta_{tc}$进行比较。
 
 	

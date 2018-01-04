@@ -1,4 +1,4 @@
-\chapter{发电系统数字建模}
+\chapter{发电系统建模理论研究}
 \label{cha:Modeling}
 
 为了研究所提出的梯级系统的性能，使用EES（Engineering Equation Solver）和MATLAB（Matrix Laboratory）作为计算工具和开发工具创建了系统的模型。系统建模采用自底向上的设计方法。首先，在EES中建立机理模型用于来验证模型中各参数间的物理关系。其次，使用面向对象的方法在MATLAB中开发出组件模型，它充分利用了面向对象的继承性和多态性来保证组件之间的独立性和相关性。
@@ -175,7 +175,8 @@
 \begin{enumerate}[label=(\arabic*)]
   \item \emph{入射到接收器的能量, $q_i$}
   
-\setlength\parindent{2em}为了简化模型，不考虑接收器对反射镜造成的遮挡，以及太阳跟踪系统的调节滞后造成的不利影响。
+\setlength\parindent{2em}
+为了简化模型，不考虑接收器对反射镜造成的遮挡，以及太阳跟踪系统的调节滞后造成的不利影响。
   \begin{equation}
       q_i = I_r A_{dc} \gamma \eta_{shading} \rho
       \label{eq:q_i}

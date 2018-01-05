@@ -48,14 +48,15 @@
 \usepackage[figuresright]{rotating}
 \renewcommand{\nomgroup}[1]{
 %\ifthenelse{\equal{#1}{A}}{\item[\textbf{Roman Symbols}]}{%
-\ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Symbols}]}{%
-\ifthenelse{\equal{#1}{C}}{\item[\textbf{Abbreviations}]}{%
-\ifthenelse{\equal{#1}{U}}{\item[\textbf{Superscripts}]}{%
-\ifthenelse{\equal{#1}{S}}{\item[\textbf{Subscripts}]}{%
-\ifthenelse{\equal{#1}{Z}}{\item[\textbf{Mathematical Symbols}]}
+\ifthenelse{\equal{#1}{G}}{\item[\textbf{希腊字母}]}{%
+\ifthenelse{\equal{#1}{C}}{\item[\textbf{缩略语}]}{%
+\ifthenelse{\equal{#1}{U}}{\item[\textbf{上标}]}{%
+\ifthenelse{\equal{#1}{S}}{\item[\textbf{下标}]}{%
+\ifthenelse{\equal{#1}{Z}}{\item[\textbf{数学符号}]}
 %}% matches mathematical symbols
 }% matches Greek Symbols
 }% matches Abbreviations
 }% matches Superscripts
 }% matches Subscripts
 }% matches Roman Symbols
+\renewcommand{\nomname}{术语表}

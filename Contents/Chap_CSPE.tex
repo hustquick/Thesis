@@ -31,48 +31,10 @@
 	\caption{水循环的过程曲线图和过程$2e$-$2f$的传热曲线图}\label{fig:Diagrams$2e$-$2f$}
 \end{figure}
 
-
-%\noindent \begin{figure}[htbp]
-%\begin{center}
-%	\subfigure[$T$-$s$ diagram of the water circuit]{
-%	\includegraphics[width = 0.4\columnwidth]{fig/T-s_Water}
-%	\caption{$T-s$ diagram of the water circuit}
-%	\label{fig:T-s_Water}}
-%	~\subfigure[Heat transfer diagram of process $2e$-$2f$]{
-%	\includegraphics[width = 0.4\columnwidth]{fig/HeatTransfer_Water-SEs}
-%	\caption{Heat transfer diagram of process $2e$-$2f$}
-%	\label{fig:HeatTransfer_Water-SEs}}
-%	\caption{Diagrams of water circuit and $2e$-$2f$ process}
-%\end{center}
-%\end{figure}
-
-%\noindent \begin{figure}[htbp]
-%\begin{center}
-%	\includegraphics[width = 0.7\columnwidth]{fig/HeatTransfer_Water-SEs}
-%	\caption{Heat transfer diagram of process $2e$-$2f$}
-%	\label{fig:HeatTransfer_Water-SEs}
-%\end{center}
-%\end{figure}
-
-%To build the cascade system model, several simplifying assumptions are made:
-%
-%\begin{itemize}
-%	\item Steady state at nominal load of the system is analyzed.
-%	\item Pressure drop due to flow is negligible.
-%	\item The leak of working fluid in the pipes is neglected.
-%	\item Same isentropic efficiency of steam turbine with different loads and in different stages.
-%	\item Heat loss that occurs from the tube to the atmosphere is not considered.
-%	\item There is no heat loss to the environment for Stirling engines.
-%	\item Simple models are used of some processes and equipment.
-%	\item A symmetrical regenerator behavior is assumed so that a single effectiveness can be defined as $e = (T_R - T_L) /(T_H - T_L)$.~\cite{Formosa2010, Juhasz2010}
-%	\item A linear temperature profile across the regenerator exists, the mean effective temperature $T_{R} = (T_H-T_L) / \ln(T_H/T_L)$.~\cite{Der2007, Cavazzuti2012}
-%\end{itemize}
-
 \section{系统评估方法}
 \subsection{系统性能}
 
 梯级系统同时使用不同类型的集热器和不同种类的热力循环，它们相互耦合在一起。无法评价某一种型式的集热器收集的能量所产生的电能。一个更加通用的方式是定义系统的整体效率。梯级系统的整体光电转换效率等于总的输出功除以总的输入太阳能。
-%The cascade system uses different types of collectors and different kinds of thermodynamic cycles. They are closely linked together. It is unable to indicate the output power of one specific kind of collector. A common approach is to define the overall efficiency of the system. The overall solar-to-electric efficiency equals to the total output power divided by the total input solar energy.
 
 \begin{equation}
 	\eta_{cs}=\dfrac{P_{cs}}{I_rA_{cs}} = \dfrac{P_{rk}+ P_{sea}}{I_rA_{tc} + I_rA_{dc}}
@@ -146,12 +108,12 @@ $I_r = 700\,\mathrm{W/m^2}$，$T_{amb} = 293\,\mathrm{K}$，$p_{amb} = 1\times10
 	
 	已知主汽参数，其比焓和比熵可以通过物性参数插件CoolProp获得：$h_s = 3.2203\times10^6\,\mathrm{J/kg}$，$s_s = 7.0149\times10^3\,\mathrm{J/(kg\cdot K)}$。
 	
-	汽轮机的排汽焓：$h_{c} = h_{s} - \dfrac{P}{\dot{m}} = 2.5472\times10^6\,\mathrm{J/kg}$.
+	汽轮机的排汽焓：$h_{c} = h_{s} - \dfrac{P}{\dot{m}} = 2.5472\times10^6\,\mathrm{J/kg}$。
 	
-	已知排汽压力以及$s_{i,c} = s_s$，汽轮机的理想排汽焓值可以由CoolProp获得：$h_{i,c} = 2.2737\times10^6\mathrm{J/kg}$。
+	已知排汽压力以及$s_{i,c} = s_s$，汽轮机的理想排汽焓值可以由CoolProp获得：$h_{i,c} = 2.2737\times10^6\,\mathrm{J/kg}$。
 	
 	所以，汽轮机的相对内效率
-	$\eta_{i,tb} = \dfrac{h_s - h_c}{h_{s} - h_{i,c}} = 0.71$.
+	$\eta_{i,tb} = \dfrac{h_s - h_c}{h_{s} - h_{i,c}} = 0.71$。
 	
 	考虑到应用于本文提出的梯级系统，汽轮机的设计参数选择值见表\ref{tab:CascadeSystemParameters}。
 		 
@@ -186,25 +148,25 @@ $\alpha$	&	$0.96$	&	$Fe$	&	$0.97$\\
 
 \item 斯特林机
 
-梯级系统所用的斯特林机和第{sec:StirlingEngineModel}节中分析的斯特林机相同，即GPU-3型斯特林机，其参数见表\ref{tab:GPU3parameters}。
+梯级系统所用的斯特林机和第\ref{sec:StirlingEngineModel}节中分析的斯特林机相同，即GPU-3型斯特林机，其参数见表\ref{tab:GPU3parameters}。
 
 \item 预热器
 
-水在预热器中由过冷水被加热成饱和液态水，水在预热器的出口干度为0（$x = 0$）。
+水在预热器中由过冷水被加热成饱和液态水，水在预热器的出口干度为0 （$x = 0$）。
 
 此外，考虑到夹点温度，预热器的入口油温要比出口水温高出$\Delta T_{min}$，即$T_{3c} - T_{2i} = \Delta T_{min}$，$\Delta T_{min}$设定为$15\,\mathrm{K}$。
 
 \item 蒸发器
 
-水在蒸发器中由饱和液态水被加热成饱和蒸汽，水在蒸发器的出口干度为1（$x = 1$）。
+水在蒸发器中由饱和液态水被加热成饱和蒸汽，水在蒸发器的出口干度为1 （$x = 1$）。
 
 \item 过热器
 
-过热器的入口油温受限于导热油的属性。在梯级系统中，导热油选用Therminol VP-1型合成油。它的物性参数可以通过CoolProp得到。过热器的入口油温设定为$T_{3a} = 623\,\mathrm{K}$。
+过热器的入口油温受限于导热油的属性。在梯级系统中，导热油选用Therminol VP-1型合成油，它的物性参数可以通过CoolProp得到。过热器的入口油温设定为$T_{3a} = 623\,\mathrm{K}$。
 
 \item 除氧器
 
-除氧器具有两股入口流体和一股出口流体，它们都具有相同的压力。设定除氧器的压力$p_{se} = 1\times10^6\,\mathrm{Pa}$。除氧器的出口流体为饱和液态水，其干度为0（$x = 0$）。
+除氧器具有两股入口流体和一股出口流体，它们都具有相同的压力。设定除氧器的压力$p_e = 1\times10^6\,\mathrm{Pa}$。除氧器的出口流体为饱和液态水，其干度为0 （$x = 0$）。
 
 \item 空气-水换热器
 
@@ -357,7 +319,7 @@ $I_r$对梯级系统和独立系统都有影响，因此对两种系统的效率
 \noindent \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/I_r-eta_diff}
-	\caption{$I_r$对$\eta_{diff}$的影响曲线图}
+	\caption{法向直射辐射强度$I_r$对$\eta_{diff}$的影响曲线图}
 	\label{fig:I_r-eta_diff}
 \end{center}
 \end{figure}
@@ -369,7 +331,7 @@ $I_r$对梯级系统和独立系统都有影响，因此对两种系统的效率
 \noindent \begin{figure}[H]
 \begin{center}
 	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/beta-eta_diff}
-	\caption{$\beta$对$\eta_{diff}$的影响曲线图}
+	\caption{斯特林机发电比例$\beta$对$\eta_{diff}$的影响曲线图}
 	\label{fig:beta-eta_diff}
 \end{center}
 \end{figure}
@@ -445,7 +407,7 @@ $I_r$对梯级系统和独立系统都有影响，因此对两种系统的效率
 \noindent \begin{figure}[H]
 \begin{center}
 	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/SEAflowtypes}
-	\caption{斯特林机组在不同$q_{2,m}$条件下的效率曲线}
+	\caption{斯特林机组效率与冷却流体流量之间的曲线关系图}
 	\label{fig:SEAflowtypes}
 \end{center}
 \end{figure}

@@ -1,16 +1,16 @@
 \chapter{发电系统建模理论研究}
 \label{cha:Modeling}
 
-为了研究所提出的梯级系统的性能，使用EES（Engineering Equation Solver）和MATLAB（Matrix Laboratory）作为计算工具和开发工具创建了系统的模型。系统建模采用自底向上的设计方法。首先，在EES中建立机理模型用于来验证模型中各参数间的物理关系。其次，使用面向对象的方法在MATLAB中开发出组件模型，它充分利用了面向对象的继承性和多态性来保证组件之间的独立性和相关性。
+为了研究所提出的梯级系统的性能，使用EES（Engineering Equation Solver）和MATLAB（Matrix Laboratory）作为计算工具和开发工具创建了系统的模型。系统建模采用自底向上的设计方法。首先，在EES中建立机理模型用于来验证模型中各参数间的物理关系。其次，使用面向对象的方法在MATLAB中开发出组件模型，它充分利用了面向对象的封装性、继承性和多态性来保证组件之间的独立性和相关性。
 依据不同流体，创建了三个回路（空气回路，水回路和油回路），并确定了一些关键部件的特定的状态参数。依据这些关键部件的热力学特性和动力学特性，为其创建了基于能量平衡的机理模型。
 
 \section{发电系统部件建模}
 \subsection{槽式集热器}
 \label{sec:ptc}
 
-槽式集热器（collector）由反射镜（reflector）和接收器（receiver）组成。反射镜（镜面）反射太阳直射辐射并将其会聚到位于抛物槽面焦线处的接收器上。接收器通常包含涂有高吸收率涂层的金属吸热管（absorber）。在吸热管外部设有玻璃管以减少散热损失，吸热管和玻璃管之间通常被抽成真空以进一步减少热损。
+槽式集热器由反射镜和接收器组成。反射镜（镜面）反射太阳直射辐射并将其会聚到位于抛物槽面焦线处的接收器上。接收器通常包含涂有高吸收率涂层的金属吸热管。在吸热管外部设有玻璃管以减少散热损失，吸热管和玻璃管之间通常被抽成真空以进一步减少热损。
 
-在反射过程中存在着光学损失，主要包含以下几项\cite{Price2002}：
+在反射过程中存在着光学损失，它主要包含以下几项\cite{Price2002}：
 
 \begin{itemize}
   \item 遮挡损失
@@ -31,9 +31,9 @@
 图\ref{fig:ParabolicTrough}给出了槽式集热器反射太阳光线的示意图，图中还标出了影响光学损失的一些参数。整个光学损失与下列五个参数有关：
 
 \begin{enumerate}[label=(\arabic*)]
-  \item 反射率，$\rho$：只有一部分入射辐射会反射到接收器上。这一部分由反射镜的种类决定。对于清洗干净的商业槽式反射镜，其反射率可以假定为0.9。
-  \item 拦截因子，$\gamma$：由于反射镜的微观缺陷或抛物面槽式集热器的宏观形状误差，反射镜反射的太阳直射辐射中的一部分不能到达吸热管（例如组装不精确）。这些缺陷或误差导致一些光线以错误的角度反射，因此它们不能被吸热管拦截吸收。这些损失通过称为拦截因子的光学参数来量化。对于正确组装的集热器而言，该参数通常为0.95。
-  \item 透射率$\tau$：到达接收器的玻璃管的太阳直射辐射只有一部分能够透射它。透射玻璃管的辐射与投射到其上的总的入射辐射之间的比称为透射率$\tau$，它通常取为0.93。
+  \item 反射率，$\rho$：只有一部分入射辐射会被反射到接收器上。这一部分辐射量的多少由反射镜的种类决定。对于清洗干净的商业槽式反射镜，其反射率可以假定为0.9。
+  \item 拦截因子，$\gamma$：由于反射镜的微观缺陷或抛物面槽式集热器的宏观形状误差，反射镜反射的太阳直射辐射中的一部分不能到达吸热管。这些缺陷或误差导致一些光线以错误的角度反射，因此它们不能被吸热管拦截吸收。这些损失通过称为拦截因子的光学参数来量化。对于正确组装的集热器而言，该参数通常为0.95。
+  \item 透射率，$\tau$：到达接收器的玻璃管的太阳直射辐射只有一部分能够透射它。透射玻璃管的辐射与投射到其上的总的入射辐射之间的比称为透射率$\tau$，它通常取为0.93。
   \item 吸热管涂层的吸收率，$\alpha_{abs}$：该参数量化了吸热管吸收的能量与到达吸热管外壁的总辐射量的比例。对于有陶瓷涂层的金属吸热管，该参数通常为0.95，而对于涂有黑色镍或铬的吸热管，该参数值稍低。
   \item 沾污因子，$F_e$：反射镜上的污垢会降低反射率，因此需要考虑沾污带来的影响。沾污因子$F_e$的引入考虑了反射镜和玻璃管在清洗干净之后的逐渐产生的沾污。
 \end{enumerate}
@@ -75,7 +75,18 @@
 \caption{吸热管的传热分析示意图}\label{fig:Pipe}
 \end{figure}
 
-由于管道中的努塞尔数$Nu$非常大（大约为$1/times10^4$），吸热管和导热油之间存在很小的温差。所以平均流体温度$(T_{i}+T_{o})/2$可以用作$T_{abs}$的平均值，$U(T_{abs})$可以用Romero和Zarza给出的二阶多项式函数表示\cite{Romero2007}。达到所需加热效果的槽式集热器的长度$L_{tc}$可以从公式（\ref{eq:CTCHF}）中获得。
+由于管道中的努塞尔数$Nu$非常大（大约为$1\times10^4$），吸热管和导热油之间存在很小的温差。所以平均流体温度$(T_{i}+T_{o})/2$可以用作$T_{abs}$的平均值，$U(T_{abs})$可以用Romero和Zarza给出的二阶多项式函数表示\cite{Romero2007}:
+
+\begin{equation}
+	U(T_{abs}) = 0.687257 + 0.001941(T_{abs} - T_{amb}) + 0.000026(T_{abs} - T_{amb})^2
+\end{equation}
+
+达到所需加热效果的槽式集热器的长度$L_{tc}$可以从公式（\ref{eq:CTCHF}）中获得。
+
+\begin{equation}
+	L_{tc} = \dfrac{\dot{m}c_p}{\pi d_o U(T_{abs})}\ln\left(\dfrac{T_i-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_o-T_{amb}-\dfrac{q''}{U(T_{abs})}}\right)
+	\label{eq:get_L}
+\end{equation}
 
 垂直投射到槽式集热器开口的能量为
 \begin{equation}
@@ -97,19 +108,19 @@
 \subsection{碟式集热器}
 \label{sec:pdc}
 
-碟式集热器由反射镜和接收器组成。反射镜通过跟踪太阳来将太阳光反射并会聚到位于反射镜焦点处的接收器熵。碟式集热器需要采用双轴跟踪系统来不间断地追踪太阳的轨迹。
+碟式集热器由反射镜和接收器组成。反射镜通过跟踪太阳来反射太阳光并将其会聚到位于反射镜焦点处的接收器。碟式集热器需要采用双轴跟踪系统来不间断地追踪太阳的轨迹。
 
-碟式集热器的跟踪系统主要有两种型式：\cite{Adkins1987}
+碟式集热器的跟踪系统主要有两种型式\cite{Adkins1987}：
 \begin{itemize}
   \item 由方位传感器进行的方位高度角跟踪，或由计算得到的太阳坐标通过控制系统进行控制。
   \item 极轴跟踪，集热器围绕与地轴平行的轴旋转跟踪太阳。
 \end{itemize}
 
-在传统的碟式斯特林机系统中，斯特林发动机放置在碟式集热器的焦点上。斯特林机设有接收器来吸收会聚的阳光。接收器由一个开孔和一个吸热器组成。斯特林接收器的开孔位于反射器的焦点处，以减少辐射和对流损失。吸热器吸收太阳辐射能并将产生的热能传递给斯特林机的工作气体，为斯特林循环提供热量，使斯特林机的曲轴连续往复运动。直接连接到斯特林机曲轴的发电机将机械能转化为电能。
+在传统的碟式斯特林机系统中，斯特林机放置在碟式集热器的焦点上。斯特林机设有接收器来吸收会聚的阳光。接收器由设有开孔的腔体和置于其中的吸热器组成。斯特林接收器的开孔位于反射器的焦点处，以减少辐射和对流损失。吸热器吸收太阳辐射能并将产生的热能传递给斯特林机的工作气体，为斯特林循环提供热量，使斯特林机的曲轴连续往复运动。直接连接到斯特林机曲轴的发电机将机械能转化为电能。
 
-本文提出的梯级系统中，碟式集热器的焦点处放置有腔体式接收器。 一个金属螺旋管（称为吸热管）作为吸热器位于接收器中以吸收集中的太阳能。空气（或氮气）被用作传热流体流经吸热管以传输被吸热管吸收的能量，为斯特林机提供热源。
+本文提出的梯级系统中，碟式集热器的焦点处放置有腔体式接收器。 一个金属螺旋管（称为吸热管）作为吸热器位于接收器中以吸收集中的太阳能。空气（或氮气）被用作传热流体流经吸热管以传输被吸热管吸收的能量，空气流出吸热器作为高温热源为其它部件提供热量。
 
-碟式反射镜是碟式系统的重要元件。弯曲的反射表面可以利用单独的小平面连接起来形成，或是通过由连续气室成形的拉伸膜来实现。在所有的情况下，曲面都应涂铝或银以提高反射率。
+碟式反射镜是碟式系统的重要元件。弯曲的反射表面可以利用单独的小型曲面拼接起来形成，或是通过由连续气室成形的拉伸膜形成。在所有的情况下，曲面都应镀铝或镀银以提高反射率。
 
 本文选用SES（Stirling Energy System）公司生产的碟式反射镜作为梯级集热系统的碟式反射镜，其主要参数见于表\ref{tab:dc}。碟式接收器为自行设计研制的接收器，图\ref{fig:dishReceiver}是其结构示意图。
 
@@ -170,7 +181,7 @@
 	\item 由接收器孔腔发射出去的热辐射造成的辐射损失，$q_{rad,emit}$。
 \end{itemize}
 
-为了求解图\ref{fig:thermal-lose}中的热网络结构图，必须仔细分析图中各热流量的关系和求解方程。
+为了求解图\ref{fig:thermal-lose}中的热网络结构图，必须仔细分析图中各热流量的关系并求解方程。
 
 \begin{enumerate}[label=(\arabic*)]
   \item \emph{入射到接收器的能量, $q_i$}
@@ -206,7 +217,7 @@
 \begin{equation}
 	c_{r}=1+3.5\frac{d_{i,1}}{d_{cav}-d_{i,1}-2\delta_{a}}
 \end{equation}
-$Nu'_{tube}$是直圆管的努塞尔数，它由下式计算：\cite{Serth2007}
+$Nu'_{tube}$是直圆管的努塞尔数，它由下式计算\cite{Serth2007}：
 \begin{equation}
 	Nu'_{tube}= 0.027Re_{tube}^{0.8}Pr_{tube}^{1/3}(\mu_{tube}/\mu_{tube,w})^{0.14}
 \end{equation}
@@ -227,7 +238,7 @@ $Nu'_{tube}$是直圆管的努塞尔数，它由下式计算：\cite{Serth2007}
     \begin{equation}
     \alpha_{eff}=\frac{\alpha_{cav}}{\alpha_{cav}+(1-\alpha_{cav})\dfrac{A_{ap}}{A_{cav}}}
     \end{equation} 
-$\alpha_{cav}$是接收器孔腔材料的吸收率，$A_{cav}$是孔腔的总面积，$A_{ap}$是开口面积.
+$\alpha_{cav}$是接收器孔腔材料的吸收率，$A_{cav}$是孔腔的内表面总面积，$A_{ap}$是开口面积.
   \item \emph{由于和接收器的绝热层发生热传导产生的损失, $q_{cond,tot}$}
   
   \begin{equation}
@@ -242,7 +253,7 @@ q_{cond,tot}=2\pi\lambda_{insu}l_{cav}\dfrac{T_{cav}-T_{insu}}{\ln(1 + 2\delta_{
 	=\dfrac{k_{insu}Nu_{insu}A_{insu}(T_{insu}-T_{amb})}{d_{cav}+2\delta_{insu}}
 %\end{split}
 \end{equation}
-其中，$Nu_{insu}$可以由流体绕流圆柱体的公式得到。~\cite{Churchill1977}
+其中，$Nu_{insu}$可以由流体绕流圆柱体的公式得到\cite{Churchill1977}。
 
   \item \emph{接收器绝热层的辐射损失，$q_{cond,rad}$}  
   \begin{equation}
@@ -250,11 +261,20 @@ q_{cond,tot}=2\pi\lambda_{insu}l_{cav}\dfrac{T_{cav}-T_{insu}}{\ln(1 + 2\delta_{
 \end{equation}
   \item \emph{无风条件下接收器开口处发生的自然对流损失，$q_{conv,free}$}
     
-  桑迪亚国家实验室进行了一系列实验，研究了不同工况下各种参数对碟式接收器开口处自然对流损失的影响，获取了大量的实验数据\cite{Ma1993}。这些数据同Stine和McDonald提出的自然对流公式获得的结果具有很高的一致性。本文假设的是强制对流和自然对流相互独立，所以强制对流和自然对流的综合如热网络结构图\ref{fig:thermal-lose}所示。
+  桑迪亚国家实验室进行了一系列实验，研究了不同工况下各种参数对碟式接收器开口处自然对流损失的影响，获取了大量的实验数据\cite{Ma1993}。这些数据同Stine和McDonald提出的自然对流公式获得的结果具有很高的一致性。本文假设的是强制对流和自然对流相互独立，所以强制对流和自然对流的综合对流损失如热网络结构图\ref{fig:thermal-lose}所示。
   \begin{equation}
 	q_{conv,free} = h_{free}A_{cav}(T_{cav}-T_{amb})
 \end{equation}
 其中，$h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$，$\overline{d_{cav}}$是孔腔的有效直径, 它由$\overline{d_{cav}}=d_{cav}-2d_i-4 \delta_a$算得。
+$Nu_{free}由下式算得$\cite{Jilte2013b}：
+\begin{equation}
+	Nu_{free} = 0.088Gr^{1/3}(T_{cav}/T_{amb})^{0.18}\cos^{2.47}\theta (d_{ap}/\overline{d_{cav}})^S
+\end{equation}
+其中，
+\begin{equation}
+	S = -0.982d_{ap}/\overline{d_{cav}} + 1.12
+\end{equation}
+
 \nomenclature{$\overline{d_{cav}}$}{腔体有效直径, m}
 %\nomenclature{$d_i$}{Inner diameter of trough receiver, m}
 %$d_{i}=$0.066$\,$m
@@ -264,11 +284,21 @@ q_{cond,tot}=2\pi\lambda_{insu}l_{cav}\dfrac{T_{cav}-T_{insu}}{\ln(1 + 2\delta_{
 	q_{conv,forc} = h_{forc}A_{cav}(T_{cav}-T_{amb})
 \end{equation}
 
-    Wu等\cite{Wu2010}针对碟式集热器的对流热损失编写了全面的综述，并进行了系统性的总结。本文应用Leibfried和Ortjohann~\cite{Leibfried1995}提出的改进型公式来计算接收器开口处的强制对流损失。该公式基于Koenig和Marvin~\cite{Koenig1981}提出的公式、Stine和Diver\cite{Stine1994}提出的公式，并对一些影响因素进行了分析，具有更好的计算结果。
+    Wu等\cite{Wu2010}针对碟式集热器的对流热损失编写了全面的综述，并进行了系统性的总结。本文应用Leibfried和Ortjohann\cite{Leibfried1995}提出的改进型公式来计算接收器开口处的强制对流损失。该公式基于Koenig和Marvin\cite{Koenig1981}提出的公式、Stine和Diver\cite{Stine1994}提出的公式，并对一些影响因素进行了分析，具有更好的计算结果。
 
+对于正面迎风，
 \begin{equation}
 	h_{forc}=0.1967v_{wind}^{1.849}
 \end{equation}
+
+对于侧面迎风，
+\begin{equation}
+	h_{forc}=f(\theta)v_{wind}^{1.401}
+\end{equation}
+\begin{equation}
+	f(\theta)=0.1634 + 0.7498\sin\theta - 0.5026\sin(2\theta) + 0.3278\sin(3\theta)
+\end{equation}
+式中，$\theta$为风向与圆柱形接收器轴线间的夹角。
 
   \item \emph{由接收器孔腔发射出去的热辐射造成的辐射损失，$q_{rad,emit}$}
   
@@ -308,7 +338,7 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \subsection{斯特林机}
 \label{sec:StirlingEngineModel}
 \subsubsection{理想斯特林循环}
-理想斯特林循环由同冷热热源进行等温换热两个换热过程及同回热器进行定容换热的两个换热过程组成。斯特林循环的$T$-$s$图如图\ref{fig:StirlingCycle}所示。4-1过程中回热器吸收的热量在2-3过程中重新利用。但是实际上，由于不完善的回热过程，这部分能量往往不能完全重新利用，这部分能量只能将斯特林机的工作气体从2状态点加热到3'状态点。所以定义了回热率$e$来表征回热器的完善程度\cite{Formosa2010,Juhasz2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
+理想斯特林循环由同冷热热源进行的两个等温换热过程及同回热器进行的两个定容换热过程组成。斯特林循环的$T$-$s$图如图\ref{fig:StirlingCycle}所示，图中4-1过程中回热器吸收的热量在2-3过程中被重新利用。但是实际上，由于回热过程不完善，这部分能量往往不能被完全利用，这部分能量只能将斯特林机的工作气体从2状态点加热到3'状态点，所以需要定义回热率$e$来表征回热器的完善程度\cite{Formosa2010,Juhasz2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
 \nomenclature{$e$}{回热率}
 \nomenclature{$T_R$}{有效回热温度, K}
 \nomenclature{$T_L$}{冷腔温度, K}
@@ -325,8 +355,8 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 为了得到简化的分析模型，针对斯特林机做了以下简化假设：
 
 \begin{itemize}
-\item 斯特林机中的工质可以被看成是理想气体。
-\item 斯特林机不向环境散热。
+\item 斯特林机中的工质可以被看成理想气体。
+\item 斯特林机不与环境间交换热量。
 \item 冷热流体的平均换热系数为常数。
 \item 回热器具有对称性，这样有效回热温度可以简化计算为$T_{R}=\dfrac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$\cite{Formosa2010,Juhasz2010}。
 \end{itemize}
@@ -353,7 +383,7 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 
 对于定温膨胀过程3-4，输出功
 \begin{equation}
-	W_{34} = \int^{V_E+V_C}_{V_E}{p_{34}dV}=mRT_H\ln{\frac{V_E+V_C+KT_H}{V_E+KT_H}}
+	W_{34} = \int^{V_E+V_C}_{V_E}{p_{34}dV}=m_{se}RT_H\ln{\frac{V_E+V_C+KT_H}{V_E+KT_H}}
 \end{equation}
 %\nomenclature{$W_{34}$}{Output work in process 3-4 (J)}
 
@@ -361,7 +391,7 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \nomenclature[G]{$\gamma_H$}{过程12的容积率}
 \nomenclature[G]{$\gamma_L$}{过程34的容积率}
 \begin{equation}
-	W_{th} = W_{12} + W_{34} = mR(T_H\ln\gamma_H - T_L\ln\gamma_L)
+	W_{th} = W_{12} + W_{34} = m_{se}R(T_H\ln\gamma_H - T_L\ln\gamma_L)
 \end{equation}
 \nomenclature{$W$}{输出功, J}
 \nomenclature[S]{$th$}{理论值}
@@ -371,7 +401,7 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 	\begin{split}
 		Q_{3^{'}3} = nc_v(T_H-T_R)
 %		\\=n(1-e)c_v(T_H-T_L)
-		=\frac{1-e}{k-1}mR(T_H-T_L)
+		=\frac{1-e}{k-1}m_{se}R(T_H-T_L)
 	\end{split}
 \end{equation}
 
@@ -382,13 +412,13 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 
 对于定温膨胀过程3-4，吸收的热量
 \begin{equation}
-	Q_{34} = W_{34} = mRT_H\ln\gamma_H
+	Q_{34} = W_{34} = m_{se}RT_H\ln\gamma_H
 \end{equation}
 %\nomenclature{$Q_{34}$}{heat absorbed in process 3-4 (J)}
 
 在一个循环过程中，理论吸收热为
 \begin{equation}
-	Q_{th} = Q_{3^{'}3} + Q_{34} = \frac{1-e}{k-1}mR(T_H-T_L) + mRT_H\ln\gamma_H
+	Q_{th} = Q_{3^{'}3} + Q_{34} = \frac{1-e}{k-1}m_{se}R(T_H-T_L) + m_{se}RT_H\ln\gamma_H
 \end{equation}
 \nomenclature{$Q$}{吸热量, W}
 
@@ -396,7 +426,7 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 
 %\begin{equation}
 %	\eta = \frac{W}{Q} = \frac{T_H\ln\gamma_H - T_L\ln\gamma_L}{T_H\ln\gamma_H + \frac{1-e}{k-1}(T_H-T_L)}
-%	\label{Eq:eta}
+%	\label{eq:eta}
 %\end{equation}
 %\nomenclature[G]{$\eta$}{efficiency of a Stirling engine}
 %
@@ -404,7 +434,7 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 %
 %\begin{equation}
 %	P = {W}s_{se} = mRs_{se}(T_H\ln\gamma_H - T_L\ln\gamma_L)
-%	\label{Eq:P}
+%	\label{eq:P}
 %\end{equation}
 \nomenclature{$P$}{功率, W}
 \nomenclature{$s_{se}$}{斯特林机转速, Hz}
@@ -417,22 +447,24 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 %\end{equation}
 %\nomenclature{$s$}{specific entropy (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
 %
-%If the internal processes are reversible, $R_S = 1$, Equation~\ref{Eq:eta} becomes the same as described in~\cite{Stine1994}:
+%If the internal processes are reversible, $R_S = 1$, Equation~\ref{eq:eta} becomes the same as described in~\cite{Stine1994}:
 %
 %\begin{equation}
 %	\eta = \frac{T_H - T_L}{T_H + \frac{1-e}{k-1}\cdot\frac{T_H-T_L}{\ln\gamma}}
 %\end{equation}
 %\nomenclature[G]{$\gamma$}{compression ratio}
 
-%It can be found from Equation~\ref{Eq:eta} and~\ref{Eq:P} that
+%It can be found from Equation~\ref{eq:eta} and~\ref{eq:P} that
 %given the properties of a Stirling engine, its efficiency and power can be obtained by known $T_H$ and $T_L$.
 
 \subsubsection{不可逆因素及损失}
 
+本文主要考虑以下不可逆因素及损失：
 \begin{enumerate}[label=(\arabic*)]
-\item 非理想吸热影响
+\item \emph{非理想吸热影响}
 
-\setlength\parindent{2em}由于加热器和冷却器不理想，它们的流体同换热器壁面存在温差。加热器中的热流体温度$T_{H}$要高于加热器的壁面温度$T_{hw}$，冷却器中的冷却流体温度$T_L$要低于冷却器的壁面温度$T_{cw}$。根据传热学，$T_{H}$和$T_{L}$可以通过下式修正：
+\setlength\parindent{2em}
+由于加热器和冷却器的传热过程并非理想传热，它们的流体同换热器壁面存在温差。加热器中的热流体温度$T_{H}$要高于加热器的壁面温度$T_{hw}$，冷却器中的冷却流体温度$T_L$要低于冷却器的壁面温度$T_{cw}$。根据传热学，$T_{H}$和$T_{L}$可以通过下式修正：
 
 \begin{equation}
 	T_H = T_{hw} - \frac{Qs_{se}}{h_hA_{hw}}
@@ -455,9 +487,9 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \end{equation}
 $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，普朗特数和水利直径。
 
-\item 压力损失带来的影响
+\item \emph{压力损失带来的影响}
 
-压力损失带来了斯特林机的输出功率的下降。压力损失可以表示为\cite{Urieli1984}：
+压力损失使斯特林机的输出功率下降。压力损失可以表示为\cite{Urieli1984}：
 \begin{equation}
 	\Delta p = -\frac{2f_{Re}\mu u V}{d^2A}
 \end{equation}
@@ -469,13 +501,13 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	W_{pd} = \oint\underset{i = E,C}{\sum}(\Delta p_{i}\frac{dV_i}{d\theta})d\theta
 \end{equation}
 
-\item 由于活塞运动及机械摩擦带来的损失
+\item \emph{由于活塞运动及机械摩擦带来的损失}
 
-由于活塞的运动，压缩过程和膨胀过程中活塞表面的压力都与气体压力不同。可以证明，压缩过程中活塞表面的压力要高于气体压力，膨胀过程中活塞表面的压力要低于气体压力。这意味着输出功要少于理论值。此外，机械摩擦的存在也会减少输出功率。由于活塞运动及机械摩擦带来的损失可以由下式得到\cite{Babaelahi2015}：
+由于活塞的运动，压缩过程和膨胀过程中活塞表面的压力与气体压力不同。可以证明，压缩过程中活塞表面的压力要高于气体压力，膨胀过程中活塞表面的压力要低于气体压力。这意味着输出功要少于理论值。此外，机械摩擦的存在也会减少输出功率。由于活塞运动及机械摩擦带来的损失可以由下式得到\cite{Babaelahi2015}：
 \begin{equation}
 	W_{fs} = \oint p(\pm\frac{au_p}{c}\pm\frac{\Delta p_f}{p})dV
 \end{equation}
-其中，加号（$+$）用于压缩过程，减号（$-$）用于膨胀过程。$p$是压缩腔和膨胀腔的平均压力，$u_p$是活塞的速度，$c$是气体分子的平均速度，$\Delta p_f$是由于机械摩导致的压力损失。$\Delta p_f$，$a$和$c$可以由下列各式得到：\cite{Heywood1988}
+其中，加号（$+$）用于压缩过程，减号（$-$）用于膨胀过程。$p$是压缩腔和膨胀腔的平均压力，$u_p$是活塞的速度，$c$是气体分子的平均速度，$\Delta p_f$是由于机械摩导致的压力损失。$\Delta p_f$，$a$和$c$可以由下列各式得到\cite{Heywood1988}：
 
 \begin{equation}
 	\Delta p_f = 0.97+0.009s_{se}
@@ -487,7 +519,8 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	c = \sqrt{3RT}
 \end{equation}
 
-\item 由于内部导热引起的能量损失
+\item \emph{由于内部导热引起的能量损失}
+
 由于加热器和冷却器存在温差，会有热量以导热的形式透过回热器壁进行传输\cite{Strauss2010}。在一个循环周期中，由于内部导热引起的损失可以由下式得到：
 \begin{equation}
 	Q_{id} = \frac{k_rA_r}{L_rs_{se}}(T_{hw} - T_{cw})
@@ -495,7 +528,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 其中，$k_r$、$L_r$和$A_r$分别表示回热器的导热率、长度和导热面积。
 \nomenclature[S]{$r$}{回热器}
 
-\item 穿梭导热产生的能量损失
+\item \emph{穿梭导热产生的能量损失}
 
 由于置换器在膨胀腔和压缩腔中往来穿梭，它会在热端区间吸热，在冷端区间放热。这部分损失可以由下式估算\cite{Timoumi2008}：
 \begin{equation}
@@ -508,33 +541,34 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 
 \end{enumerate}
 
-于是，斯特林机在一个循环过程中的总的吸收热可以表述为
+于是，斯特林机在一个循环过程中的总吸热量可以表述为
 \begin{equation}
 	Q = Q_{th} + Q_{id} + Q_{sc}
+	\label{eq:heat}
 \end{equation}
 
 总的输出功可以表述为
 \begin{equation}
 	W = W_{th} - W_{pd} - W_{fs}
+	\label{eq:work}
 \end{equation}
 
 斯特林机的输出功率为
 \begin{equation}
 	P = Ws_{se}
-	\label{Eq:P}
+	\label{eq:P}
 \end{equation}
 
 斯特林机的效率为
 \begin{equation}
 	\eta = W/Q
-	\label{Eq:eta}
+	\label{eq:eta}
 \end{equation}
-
 
 \subsubsection{模型验证}
 \label{sec:modelValidation}
 
-通过选用GPU-3型斯特林机作为一个实例，对所建立的模型进行评估。GPU-3型斯特林机的设计参数列表见表\ref{tab:GPU3parameters}。将建立的模型计算得到的斯特林机效率和功率同经典模型及实验结果进行比较，结果如表\ref{tab:EfficiencyComparison}和表\ref{tab:PowerComparison}所示。
+通过选用GPU-3型斯特林机作为实例，对所建立的模型进行评估。GPU-3型斯特林机的设计参数见表\ref{tab:GPU3parameters}。将建立的模型计算得到的斯特林机效率和功率同经典模型及实验结果进行比较，结果如表\ref{tab:EfficiencyComparison}和表\ref{tab:PowerComparison}所示。
 
 \begin{table*}[htbp]\footnotesize
 \setlength{\abovecaptionskip}{-10pt}
@@ -562,7 +596,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 		回热器数量	&	8\\
 		回热器内径	&	2.26$\times$10$^{-2}\,\mathrm{m}$\\
 		回热器长度		&	2.26$\times$10$^{-2}\,\mathrm{m}$\\
-		回热器管径	&	4$\times$10$^{-5}\,\mathrm{m}$\\
+		%回热器管径	&	4$\times$10$^{-5}\,\mathrm{m}$\\
 		材料				&	不锈钢\\
 		\emph{容积}			&\\
 		波及容积（膨胀/压缩）	&	120.82/114.13\,$\mathrm{cm}^3$\\
@@ -656,59 +690,50 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\label{tab:PowerComparison}
 \end{sidewaystable}
 
-从表中可以发现，与之前的斯特林机热力模型相比，本文建立的模型同实验在不同转速和不同平均有效压力的条件下得到的结果更加接近。需要指出的是，上述所有模型中，输出功率$W$和输入热量$Q$都由工作气体同壁面的换热得到。在本文建立的模型中，$W$和$Q$由方程(\ref{eq:T_H})和(\ref{eq:T_L})得到。因此，$W$、$Q$和$\eta$都可以由热力模型和输入参数得到。这些输入参数包括加热器参数、冷却器参数、回热器参数、平均有效压力、工作气体的类型以及斯特林机的几何尺寸。
+从表中可以发现，与之前的斯特林机热力模型相比，本文建立的模型同实验在不同转速和不同平均有效压力的条件下得到的结果更加接近。需要指出的是，上述所有模型中，输出功率$W$和输入热量$Q$都由工作气体同壁面的换热得到。在本文建立的模型中，$W$和$Q$由方程(\ref{eq:work})和(\ref{eq:heat})得到。因此，$W$,$Q$和$\eta$都可以由热力模型和输入参数得到。这些输入参数包括加热器参数、冷却器参数、回热器参数、平均有效压力、工作气体的类型以及斯特林机的几何尺寸。
 
-表\ref{tab:EfficiencyComparison}和表\ref{tab:PowerComparison}表明，当斯特林机的平均有效压力位于2.76$\,\mathrm{MPa}$到6.90$\,\mathrm{MPa}$之间时，本文建立的模型具有最佳性能预测（效率和功率）。当斯特林机的转速从16.67$\,\mathrm{Hz}$增加到58.33$\,\mathrm{Hz}$时，本文建立的模型的性能预测的误差也随之增大。所以本文所建立的模型在平均有效压力在2.76$\,\mathrm{MPa}$和6.90$\,\mathrm{MPa}$之间，转速较低时具有最好的性能预测准确性。
+表\ref{tab:EfficiencyComparison}和表\ref{tab:PowerComparison}表明，当斯特林机的平均有效压力位于2.76$\,\mathrm{MPa}$到6.90$\,\mathrm{MPa}$之间时，本文建立的模型具有最佳性能预测准确性。当斯特林机的转速从16.67$\,\mathrm{Hz}$增加到58.33$\,\mathrm{Hz}$时，本文建立的模型的性能预测的误差也随之增大。所以本文所建立的模型在平均有效压力在2.76$\,\mathrm{MPa}$和6.90$\,\mathrm{MPa}$之间，转速较低时具有最佳性能预测准确性。
 
-然而，同实验结果相比，本文提出的模型仍然存在一些误差。未来的研究工作可能会考虑斯特林机的其它不可逆损失，如斯特林机向环境的散热，气弹滞后效应等等，从而建立更加精确的斯特林机模型。值得指出的是，其它文献也有提到更加精确的斯特林机模型。例如，多变过程模拟模型具有比本文提出的模型更高的性能预测精度\cite{Hosseinzade2015, Babaelahi2015}。然而，该模型需要假定与具体斯特林机中各过程相关的多变指数，而且需要复杂地多的计算度。
+然而，同实验结果相比，本文提出的模型仍然存在一些误差。未来的研究工作可能会考虑斯特林机的其它不可逆损失，如斯特林机向环境的散热，气弹滞后效应等等，从而建立更加精确的斯特林机模型。值得指出的是，其它文献也有提到更加精确的斯特林机模型。例如，多变过程模拟模型具有比本文提出的模型更高的性能预测精度\cite{Hosseinzade2015, Babaelahi2015}。然而，该模型需要假定斯特林循环中各过程的多变指数，该多变指数又与具体的斯特林机及具体的过程相关，而且多变过程模拟模型需要更多的计算量。
 
 \subsubsection{斯特林机与冷热流体间的传热}
 
-对于斯特林机的传热过程，加热器、冷却器和回热器的壁面温度被假定为均匀且恒定。
-对于定温壁面换热，壁面同流体之间经过$dA$的换热面积所交换的热量为：
+对于斯特林机的传热过程，加热器、冷却器和回热器的壁面温度被假定为均匀且恒定。于是可以利用附录\ref{cha:CTHX}中的流体与定温热源的传热计算公式，有
 \begin{equation}
-	(T_w-T)UdA = \dot{m}c_pdT
-\end{equation}
-\begin{equation}
-	\frac{dT}{T-T_w}=-\frac{UdA}{\dot{m}c_p}
+	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{\dot{m}c_p})
 \end{equation}
 \nomenclature{$c_p$}{定压比热容, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
 \nomenclature{$T_w$}{壁温, K}
 \nomenclature{$A$}{面积, m$^2$}
 
-由于$T(0)=T_i$，$T(A)=T_o$，
-\begin{equation}
-	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{\dot{m}c_p})
-\end{equation}
-
-对于斯特林机，可以分别用$T_{hw}$和$T_{cw}$来替代$T_w$来获得$T_{i,h}$、$T_{o,h}$同$T_{hw}$，$T_{i,c}$、$T_{o,c}$同$T_{cw}$之间的关系式。
+对于斯特林机，可以分别用$T_{hw}$和$T_{cw}$来替代$T_w$，用$T_{i,h}$、$T_{o,h}$及$T_{i,c}$、$T_{o,c}$来替代$T_{i}$与$T_{o}$。
 \nomenclature[S]{$h$}{加热流体; 齐次解}
 \nomenclature[S]{$c$}{冷却流体; 逆流}
 \begin{equation}
 	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{\dot{m}_hc_{p,h}})
-	\label{Eq:T_h}
+	\label{eq:T_h}
 \end{equation}
 \begin{equation}
 	\frac{T_{o,c}-T_{cw}}{T_{i,c}-T_{cw}}=\exp(-\frac{U_cA_c}{\dot{m}_cc_{p,c}})
-	\label{Eq:T_c}
+	\label{eq:T_c}
 \end{equation}
 
 在一个循环周期中，热流体传递给斯特林机的热量为
 \begin{equation}
 	\dot{m}_hc_{p,h}(T_{i,h}-T_{o,h})/s_{se} = Q
-	\label{Eq:q_h}
+	\label{eq:q_h}
 \end{equation}
 
 在一个循环周期中，斯特林机传递给冷流体的热量为
 \begin{equation}
 	\dot{m}_cc_{p,c}(T_{o,c}-T_{i,c})/s_{se} = Q - W
-	\label{Eq:q_c}
+	\label{eq:q_c}
 \end{equation}
 
 %For a Stirling engine given $\dot{m}_h$, $\dot{m}_c$ and $s_{se}$, known 2 of the 6 parameters ($T_{i,h}$, $T_{o,h}$, $T_{i,c}$, $T_{o,c}$, $T_H$ and $T_L$), the rest 4 can be obtained by solving
-%%Equation~\ref{Eq:T_h},~\ref{Eq:T_c},~\ref{Eq:q_h} and~\ref{Eq:q_c}
-%Equation~\ref{Eq:T_h}-\ref{Eq:q_c}
-%. Then $\eta$ and $P$ can be obtained by Equation~\ref{Eq:eta} and~\ref{Eq:P}. This means the performance of a given Stirling engine can be inquired by the input/output parameters of heating/cooling fluids.
+%%Equation~\ref{eq:T_h},~\ref{eq:T_c},~\ref{eq:q_h} and~\ref{eq:q_c}
+%Equation~\ref{eq:T_h}-\ref{eq:q_c}
+%. Then $\eta$ and $P$ can be obtained by Equation~\ref{eq:eta} and~\ref{eq:P}. This means the performance of a given Stirling engine can be inquired by the input/output parameters of heating/cooling fluids.
 
 \section{朗肯循环发电子系统建模}
 %The power generating system includes the turbine (steam turbine or ORC 
@@ -716,9 +741,20 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 
 \subsection{水工质朗肯循环}
   
-  水工质朗肯循环需要设置除氧器以去除给水中的氧气和其它不凝结气体。给水中溶解的氧气将会给蒸汽发生系统造成严重的腐蚀损伤，并使金属管道形成氧化物（生锈）。溶解在给水中的二氧化碳将会形成碳酸，并进一步对管道造成腐蚀。不凝结气体的聚集将会增加热阻，这对各种换热器很不利。本系统中的除氧器采用抽汽作为热源。
+  水工质朗肯循环需要设置除氧器以去除给水中的氧气和其它不凝结气体。给水中溶解的氧气将会给蒸汽发生系统造成严重的腐蚀损伤，并使金属管道形成氧化物（生锈）。溶解在给水中的二氧化碳将会形成碳酸，并进一步对管道造成腐蚀。不凝结气体的聚集将会增加热阻，这对各种换热器很不利。本系统中的除氧器采用汽轮机抽汽作为热源。
   
-  梯级系统的水循环的$T$-$s$图如图\ref{fig:Ts_Water1}所示。过程曲线$2a$-$2c$-$2b$表示汽轮机内蒸汽做功的过程，其$h$-$s$曲线图如图\ref{fig:SteamTurbine_hs}所示。状态点$2b$和$i,2b$的压力相等，状态点$2c$和$i,2c$的压力相等。为了简化汽轮机内效率的计算，假定汽轮机在不同负荷、不同级中的相对内效率不变，即
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth]{fig/SRCinCS}
+	\caption{用于分析水工质朗肯循环的梯级系统结构图}
+	\label{fig:SRCinCS}
+\end{center}
+\end{figure}
+  
+  以图\ref{fig:SRCinCS}为例，详细介绍水工质冷肯循环的建模理论研究。图\ref{fig:SRCinCS}中，各种流体的不同状态点用数字加字母标出。其中，数字表示流体类型：1代表空气，2代表水，3代表导热油；字母代表不同位置的状态点。有的状态点还加有圆圈，表示其为饱和状态：实线圆圈表示为饱和液态，$x = 0$；虚线圆圈表示为饱和气态，$x = 1$。
+\nomenclature{$x$}{干度}
+
+梯级系统的水循环的温熵图如图\ref{fig:Ts_Water1}所示。过程曲线$2a$-$2c$-$2b$表示汽轮机内蒸汽做功的过程，其焓熵曲线图如图\ref{fig:SteamTurbine_hs}所示。状态点$2b$和$i,2b$的压力相等，状态点$2c$和$i,2c$的压力相等。为了简化汽轮机内效率的计算，假定汽轮机在不同负荷、不同级中的相对内效率不变，即
 \begin{equation}
       \eta_{i,tb} =(h_{2a}-h_{2b})/(h_{2a}-h_{i,2b}) = (h_{2a}-h_{2c})/(h_{2a}-h_{i,2c})
 \end{equation}
@@ -785,7 +821,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
   
   同水工质朗肯循环相比，有机工质朗肯循环具有以下特点：
   \begin{enumerate}[label=(\arabic*)]
-  \item 有机工质具有更低的沸点，更高的饱和蒸汽压力，它更适宜于回收低温废热。此外，其密度和比热容较小，所需要的汽轮机、管道和换热面积都较小，这些都有利于节约制造成本。
+  \item 有机工质具有更低的沸点，更高的饱和蒸汽压力，它更适宜于回收低温废热。此外，其密度和比热容较小，所需要的汽轮机、管道和换热面积都较小，这些都有利于降低制造成本。
   \item 汽轮机的排气没有湿度（干气体）。所以无需过热，饱和蒸气就可以用作汽轮机的主气。有机工质汽轮机不会发生由于湿蒸汽中的液滴给高速旋转的叶片带来的腐蚀现象。
   \item 有机工质流体具有比蒸汽更低的声速，汽轮机可以在较低转速下达到较好的气动力学性能。
   \item 相同温度下，有机工质的凝汽压力比水工质高。常温下，有机工质可以在高于大气压的条件下凝结。系统压力可以保持在大气压以上运行，这就可以避免空气泄漏进入系统。这也意味着有机工质朗肯循环不再需要除氧器。
@@ -794,7 +830,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 
 不同有机工质的饱和$T$-$s$图具有不同形状的饱和曲线。有机工质可以根据$T$-$s$图中饱和蒸气曲线斜率$dT/ds$的不同分为三种类型：$dT / ds > 0$表示该流体为干工质（高压饱和蒸气定熵膨胀时不会进入湿气区），大多数有机工质为干工质；$dT / ds < 0$表示该流体为湿工质（高压饱和蒸气定熵膨胀时会产生液滴），少数有机工质为湿工质；$dT/ds \rightarrow \pm\infty$表示该流体为等熵流体，例如R134a。对于干工质，由于在汽轮机中不会出现液滴，有机工质无需过热。此外，对于应用于低温废热回收的有机工质朗肯循环，也无需进行过热。由于本文讨论的太阳能光热发电技术所获得的集热温度一般高于有机工质的饱和温度，所以本文选用的有机工质朗肯循环仍然采用过热，以提高朗肯循环的效率。
 
-水工质朗肯循环和典型有机工质朗肯循环的$T$-$s$图分别如图\ref{fig:Ts_Water}和图\ref{fig:Ts_organic}所示。在典型有机工质循环（其系统结构图如图\ref{fig:ORCsystem2}）中，循环效率可以通过使用回热器来得到提升。这是因为汽轮机出口工质是过热气体，其温度比对应的凝汽温度高。利用这部分高出的温度可以给加压的凝结液提供热量。通常会在有机工质汽轮机的出口和蒸发器的入口之间安装一个逆流布置的回热器。回热器可以回收部分热量，从而降低对热源的需求，提升循环的效率。
+水工质朗肯循环和典型有机工质朗肯循环的$T$-$s$图分别如图\ref{fig:Ts_Water}和图\ref{fig:Ts_organic}所示。在典型有机工质循环（其系统结构图如图\ref{fig:ORCsystem2}）中，循环效率可以通过使用回热器来得到提升。这是因为汽轮机出口工质是过热气体，其温度比对应压力下的凝汽温度高。利用这部分高出的温度可以给加压的凝结液提供热量。通常会在有机工质汽轮机的出口和蒸发器的入口之间安装一个逆流布置的回热器。回热器可以回收部分热量，从而降低对热源的需求，提升循环的效率。
 
 \noindent \begin{figure}[htbp]
 \centering
@@ -862,17 +898,16 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 发电机相对而言是独立于梯级系统之外的部件，它的效率一般假定为常数，值为0.975。
 
 \section{蒸汽发生系统建模}
-槽式太阳能光热发电厂的蒸汽发生系统可以被分成三部分——预热器、蒸发器和过热器，它们都是换热器。为了便于系统分析，假定这些换热器都不存在流动压力损失，即加热流体（以导热油为例）和被加热流体（以水为例）的压力保持不变。水的压力和汽轮机的入口压力相等。此外，假设这些换热器都不与环境交换热量。
+槽式太阳能光热发电厂的蒸汽发生系统可以被分成三部分——预热器、蒸发器和过热器，它们都是换热器。为了便于系统分析，假定这些换热器都不存在流动压力损失，即加热器中的加热流体（以导热油为例）和被加热流体（以水为例）的压力保持不变。水的压力和汽轮机的入口压力相等。此外，假设这些换热器都不与环境交换热量。
 
-为了更加清晰地理解这些换热器的机理建模过程，本文使用图\ref{fig:PES}中的蒸汽发生系统作为例子进行详细分析，其传热过程如图\ref{fig:PES_TQ}所示。图\ref{fig:PES}中，各种流体的不同状态点用数字加字母标出。其中，数字表示流体类型：1代表空气，2代表水，3代表导热油；字母代表不同位置的状态点。有的状态点还加有圆圈，表示其为饱和状态：实线圆圈表示为饱和液态，$x = 0$；虚线圆圈表示为饱和气态，$x = 1$。
-\nomenclature{$x$}{干度}
+为了更加清晰地理解这些换热器的机理建模理论，本文使用图\ref{fig:PES}中的蒸汽发生系统作为例子进行详细分析，其传热过程如图\ref{fig:PES_TQ}所示。
 
 %State points of different fluids are marked on the sketch. The number indicates the type of the fluid, the letter indicates the state point of the fluid. State points with solid circle indicate saturated liquid states ($x = 0$\nomenclature{$x$}{Dryness fraction}), and with dotted circle indicates saturated gas states ($x = 1$).
 
 \noindent \begin{figure}[!ht]
 \begin{center}
 	\includegraphics[width = 0.8\columnwidth]{fig/PES}
-	\caption{梯级系统中蒸汽发生系统的一个例子}
+	\caption{用于分析蒸汽发生系统的梯级系统结构图}
 	\label{fig:PES}
 \end{center}
 \end{figure}
@@ -922,23 +957,23 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 
 \section{梯级系统建模}
 
-由于系统建模采用面向对象的方法，系统是利用各种组件的接口（入口和出口）相互连接形成的。这些接口通过流（stream）相互作用。例如图\ref{fig:PES}中的汽轮机和除氧器之间通过抽汽流相互连接。每个流都拥有独立的属性，如流体类型，质量流量，温度，压力，比焓，比熵等等。
+由于系统建模采用面向对象的方法，系统是利用各种组件的接口（入口和出口）相互连接形成的。这些接口通过各股流体（称为流，stream）相互作用。例如图\ref{fig:PES}中的汽轮机和除氧器之间通过抽汽流相互连接。每个流都拥有独立的属性，如流体类型，质量流量，温度，压力，比焓，比熵等等。
 为此，利用MATLAB建模工具建立了专门的\textbf{Stream}类，将各流都作为对象进行计算分析。附录\ref{cha:MATLAB_SOURCECODE}给出了\textbf{Stream}类的定义的源代码。\textbf{Stream}类中的一些属性由于被多个\textbf{Stream}实例所共用，也被定义为对象。
 如\textbf{Stream}类中的属性\textbf{T}，\textbf{q\_m}和\textbf{p}也是对象，它们分别属于\textbf{Temperature}类，\textbf{Massflow}类和\textbf{Pressure}类。
 
 给定了\textbf{Stream}对象的固有属性（inherent properties，包括流体类型，质量流量，温度，压力和干度），其依赖属性（dependent properties，包括比焓，比熵和比热容）可以依据其内部方法获得。
 
-如果流是单相流体，它的干度就不存在，它的依赖属性就可以通过温度和压力获得。如果流是两相流体或饱和流体，那么其干度$0 \leqslant x \leqslant 1$，它的依赖属性可以通过压力和干度获得。选择压力而不是温度作为输入参数的原因是，在梯级系统中，流的压力往往更容易确定。
+如果流是单相流体，它没有干度值，它的依赖属性就可以通过温度和压力获得。如果流是两相流体或饱和流体，那么其干度$0 \leqslant x \leqslant 1$，它的依赖属性可以通过压力和干度获得。选择压力而不是温度作为输入参数的原因是，在梯级系统中，流的压力往往更容易确定。
 
-由于流包含了状态点的所有信息，它被用来记录状态点。梯级系统的模型中创建了多个流对象，用于连接各部件，并记录各部件出入口的状态点信息。各个部件通过流对象连接在一起形成整个系统，流对象也作为参数在各个部件之间传递信息，已完成部件和系统的计算分析及结果的展示。
+由于流包含了状态点的所有信息，它被用来记录状态点。梯级系统的模型中创建了多个流对象，用于连接各部件，并记录各部件出入口的状态点信息。各个部件通过流对象连接在一起形成整个系统，流对象也作为参数在各个部件之间传递信息，以完成部件和系统的计算分析及用于结果的展示。
 %\subsection{System connection}
 不同的部件通过赋值同一个流对象而连接在一起，它们的出口和入口是连接的接口。
 %\subsection{System initialization}
-系统通过给定的参数（设计参数）完成初始化，这些参数赋值给相应的流对象，并影响相关部件的状态。
+系统通过给定的参数（设计参数）完成初始化，这些参数被赋值给相应的流对象，并影响相关部件的状态。
 
 %\subsection{System calculation}
 针对系统计算，需要指出的是，一个部件的某些参数可能和其它多个部件相关联。
-在这种条件下，需要使用估值来辅助计算。估值用于设定未定状态的流对象的固有属性（如质量流量或温度），以便于获得流的依赖属性，进而得到状态点的状态信息。这些流对象通过参数传递给相应的部件，进而完成部件内部的计算方法，获得相应的计算结果。这些结果会以状态点参数的形式，和原来设定的估值进行比较。如果估值和相应计算值之间的差异在允许误差范围之内，则接受估值作；否则，估值将会依据隆戈库塔法重新设定，并重新启动部件内的计算，并将新估值和获得的新的计算值进行比较，直至二者之间的差异小于允许误差为止。
+在这种条件下，需要使用估值来辅助计算。估值用于设定未定状态的流对象的固有属性（如质量流量或温度），以便于获得流的依赖属性，进而得到状态点的状态信息。这些流对象通过参数传递给相应的部件，进而完成部件内部的计算方法，获得相应的计算结果。这些结果会以状态点参数的形式，和原来设定的估值进行比较。如果估值和相应计算值之间的差异在允许误差范围之内，则接受该估值；否则，估值将会依据隆戈库塔法重新设定，并重新启动部件内的计算，并将新估值和获得的新的计算值进行比较，直至二者之间的差异小于允许误差为止。
 
 例如，在图\ref{fig:PES}所示的蒸汽发生系统中，蒸发器的出口油温%\textbf{evaporator.T\_3o}
 还和过热器有关。想要获得该温度值，就需要先使用估值。估值用于赋值给对应于状态点$3b$的流对象的温度属性，这样可以获得该流对象的所有依赖属性（因为其压力已知），包括状态点$3b$的焓值。该流对象作为蒸发器和过热器的输入参数将该状态点相应的焓值带入到蒸发器和过热器中，在蒸发器中通过计算
@@ -964,7 +999,7 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 
 \section{本章小结}
 
-本章介绍了太阳能光热梯级系统的建模方法，并详细分析了系统中关键部件和子系统的机理建模。部件模型使用MATLAB建模工具，采用面向对象的方法。部件模型的机理建模充分考虑了各部件的热力学特性，动力学特性以及能量平衡。系统模型采用自底向上的方法，利用部件模型完成系统模型的搭建工作。
+本章介绍了太阳能光热梯级系统的建模方法，并详细分析了系统中关键部件和子系统的机理建模。部件模型使用MATLAB建模工具，采用面向对象的方法，部件模型的机理建模充分考虑了各部件的热力学特性，动力学特性以及能量平衡。系统模型采用自底向上的方法，利用部件模型完成系统模型的搭建工作。
 基于面向对象语言的封装、组合和多态等特性，各部件间既具有独立性，又具有关联性。所建立的系统模型具有易于搭建，结构清晰，便于替换或改进部件，容易检查单个部件等优点。
 
 系统还专门建立了\textbf{Stream}类用于部件的连接工作，部件的出口和入口是连接的接口。两个不同的部件通过被赋值同一个流对象而实现相互连接。

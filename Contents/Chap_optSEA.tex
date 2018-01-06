@@ -58,16 +58,16 @@
 对于串联流动，每台斯特林机的流体质量流量均为$\dot{m}$，从流体流动的方向看，对于第$x$台斯特林机（$2\leqslant{}x\leqslant{}n_{se}$），
 \begin{equation}
 	T_{i,x} = T_{o,x-1}
-	\label{Eq:T_serial}
+	\label{eq:T_serial}
 \end{equation}
 
 对于并联流动，每台斯特林机的流体质量流量均为$\dot{m}/n_{se}$，对于第$x$台斯特林机（$2\leqslant{}x\leqslant{}n_{se}$），
 \begin{equation}
 	T_{i,x} = T_{i,h}
-	\label{Eq:T_parallel}
+	\label{eq:T_parallel}
 \end{equation}
 
-依据第\ref{sec:StirlingEngineModel}节中的方程及方程(\ref{Eq:T_serial})-(\ref{Eq:T_parallel})，知道了冷热流体的属性就可以求解各台斯特林机的功率（方程(\ref{Eq:P})）和效率（方程(\ref{Eq:eta})）。斯特林机组的功率和效率可以由各斯特林机的功率和热流体的流入流出参数获得。
+依据第\ref{sec:StirlingEngineModel}节中的方程及方程(\ref{eq:T_serial})-(\ref{eq:T_parallel})，知道了冷热流体的属性就可以求解各台斯特林机的功率（方程(\ref{eq:P})）和效率（方程(\ref{eq:eta})）。斯特林机组的功率和效率可以由各斯特林机的功率和热流体的流入流出参数获得。
 
 \begin{equation}
 	P_{sea} = \sum_{x = 1}^{n_{se}}P_{se,x}
@@ -128,7 +128,7 @@
 
 \subsection{流体热容量$\dot{m}c_p$的影响}
 
-根据方程(\ref{Eq:q_h})和方程(\ref{Eq:q_c})，$\dot{m}c_p$（$\dot{m}_hc_{p,h}$和$\dot{m}_cc_{p,c}$）将会对传热过程产生很大的影响，它是影响斯特林机组性能的一个重要因素。
+根据方程(\ref{eq:q_h})和方程(\ref{eq:q_c})，$\dot{m}c_p$（$\dot{m}_hc_{p,h}$和$\dot{m}_cc_{p,c}$）将会对传热过程产生很大的影响，它是影响斯特林机组性能的一个重要因素。
 
 \noindent \begin{figure}[htbp]
 \begin{center}

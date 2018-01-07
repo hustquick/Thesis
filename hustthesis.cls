@@ -261,7 +261,7 @@
   \setdate{#1}{#2}{#3}
 }
 \setdatetoday
-\def\zhdateformat{~\thedateyear~年~\thedatemonth~月~\thedateday~日}
+\def\zhdateformat{}
 \def\endateformat{\datedate}
 \ifthenelse{\equal{\HUST@language}{chinese}}{
   \let\dateformat\zhdateformat
@@ -431,7 +431,7 @@
 \def\HUST@zhmajortitle{{学}\hfill{科}\hfill{专}\hfill{业}：}
 \def\HUST@zhsupervisortitle{{指}\hfill{导}\hfill{教}\hfill{师}：}
 \def\HUST@zhasssupervisortitle{{副}\hfill{指}\hfill{导}\hfill{教}\hfill{师}：}
-\def\HUST@zhdatetitle{{答}\hfill{辩}\hfill{日}\hfill{期}：}
+\def\HUST@zhdatetitle{}
 
 \def\HUST@enauthortitle{Student}
 \def\HUST@enmajortitle{Major}
@@ -443,7 +443,7 @@
   本人声明所呈交的学位论文是我个人在导师的指导下进行的研究工作及取得的研究成果。尽我所知，除文中已标明引用的内容外，本论文不包含任何其他人或集体已经发表或撰写过的研究成果。对本文的研究做出贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律结果由本人承担。
 }
 \def\HUST@zhauthorsig{学位论文作者签名：}
-\def\HUST@zhdatefield{日期：\hspace{2em}年\hspace{2em}月\hspace{2em}日}
+\def\HUST@zhdatefield{}
 
 \def\HUST@authtitle{学位论文版权使用授权书}
 \long\def\HUST@authorizationtext{
@@ -750,8 +750,8 @@
     \HUST@zhauthortitle       & {\HUST@zhauthor} \\
     \HUST@zhmajortitle      & {\HUST@zhmajor} \\
     \HUST@zhsupervisortitle & {\HUST@zhsupervisor} \\
-    & {Inmaculada Arauzo教授}\\
-    & {张燕平\hspace{0.2em}副教授}\\
+%    & {Inmaculada Arauzo教授}\\
+%    & {张燕平\hspace{0.2em}副教授}\\
     \ifthenelse{\equal{\HUST@zhasssupervisor}{}}{}{
       \HUST@zhasssupervisortitle & {\HUST@zhasssupervisor} \\
     }

@@ -599,8 +599,9 @@
   labelsep=quad,
   skip=12pt
 }
-\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand{\thetable}{\arabic{chapter}-\arabic{table}}
 \renewcommand{\thefigure}{\arabic{chapter}-\arabic{figure}}
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 \definecolor{HUST@lstgreen}{rgb}{0,0.6,0}
 \definecolor{HUST@lstmauve}{rgb}{0.58,0,0.82}
 

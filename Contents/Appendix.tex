@@ -3,7 +3,6 @@
 \chapter{流体与定温热源的传热计算公式}
 \label{cha:CTHX}
 假定$U$，$T_{c}$，$\dot{m}$和$c_{p}$都为常数，对于给定的来流温度$T_{i}$，
-\nomenclature[S]{$i$}{进口}
 
 \begin{figure}[h]
 \begin{centering}
@@ -14,8 +13,6 @@
 \end{figure}
 
 取$x$为已经参与换热的面积，当$x=0$时，$T(x)=T_i$；当$x=A$时，$T(x)=T_o$。
-\nomenclature[S]{$o$}{出口}
-
 \begin{equation}
 \dot{m}c_{p}dT(x)=(T_{c}-T(x))Udx
 \end{equation}
@@ -29,7 +26,6 @@
 \begin{equation}
 T_{g}(x)=T_{p}(x)+T_{h}(x)
 \end{equation}
-
 其中，$T_{g}(x)$是通解，$T_{p}(x)$是特解，$T_{h}(x)$是齐次解。
 
 \begin{equation}
@@ -84,23 +80,17 @@ T_{p}(x)=T_{c}
 \begin{equation}
 \frac{dT(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}T(x)+\frac{q''P+UPT_{c}}{\dot{m}c_{p}}
 \end{equation}
-%\nomenclature[S]{$g$}{通解}
-%\nomenclature[S]{$p$}{Particular solution}
-%\nomenclature[S]{$h$}{Homogeneous solution}
 \begin{equation}
 T_{g}(x)=T_{p}(x)+T_{h}(x)
 \end{equation}
-
 其中，$T_{g}(x)$是通解，$T_{p}(x)$是特解，$T_{h}(x)$是齐次解。
 
 \begin{equation}
 -\frac{U}{\dot{m}c_{p}}T_{p}(x)+\frac{q''+UT_{c}}{\dot{m}c_{p}}=0
 \end{equation}
-
 \begin{equation}
 T_{p}(x)=T_{c}+\frac{q''}{U}
 \end{equation}
-
 \begin{equation}
 \frac{dT_{h}(x)}{dx}=-\frac{U}{\dot{m}c_{p}}T_{h}(x)
 \end{equation}
@@ -109,7 +99,6 @@ T_{p}(x)=T_{c}+\frac{q''}{U}
 \begin{equation}
 \frac{T_{g}(A)-T_{p}(A)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
-
 \begin{equation}
 \frac{T_{o}-T_{c}-\dfrac{q''}{U}}{T_{i}-T_{c}-\dfrac{q''}{U}}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}

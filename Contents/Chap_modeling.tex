@@ -503,7 +503,8 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 
 通过选用GPU-3型斯特林机作为实例，对所建立的模型进行评估。GPU-3型斯特林机的设计参数见\autoref{tab:GPU3parameters}\cite{Babaelahi2015,Martini1983}。将建立的模型计算得到的斯特林机效率和功率同经典模型及实验结果进行比较，结果如\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}所示。
 
-\begin{table*}[htbp]\footnotesize
+\begin{table*}[t!]\footnotesize
+\setlength{\abovecaptionskip}{0pt}
 	\caption{GPU-3型斯特林机的设计参数}
 	\centering
 	\begin{tabular}{ll}
@@ -540,6 +541,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \end{table*}
 
 \begin{sidewaystable}[htbp]\footnotesize
+\setlength{\abovecaptionskip}{0pt}
   \renewcommand\arraystretch{0.75}
 	\caption{模型及实验的热效率（$T_{hw}=$922$\,\mathrm{K}$，$T_{cw}=$288$\,\mathrm{K}$）}
 	\centering
@@ -579,6 +581,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \end{sidewaystable}
 
 \begin{sidewaystable}[htbp]\footnotesize
+\setlength{\abovecaptionskip}{0pt}\
   \renewcommand\arraystretch{0.75}
 	\caption{模型及实验的输出功率（$T_{hw}=$922$\,\mathrm{K}$，$T_{cw}=$288$\,\mathrm{K}$）}
 	\centering
@@ -646,7 +649,12 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \end{equation}
 其中，$h_{i,2b}$由$s_{2a}$和$p_c$得到，$h_{i,2c}$由$s_{2a}$和$p_e$得到。
 
-\noindent \begin{figure}[htbp]
+  汽轮机的输出功率
+  \begin{equation}
+  P_{tb}=\left(1-y\right)\dot{m}_{2}\left(h_{2a}-h_{2b}\right)+y\dot{m}_{2}\left(h_{2a}-h_{2c}\right)
+  \end{equation}
+ 
+  \noindent \begin{figure}[htbp]
 \centering
 	\begin{subfigure}[b]{0.6\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/T-s_Water.pdf}
@@ -657,16 +665,9 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\includegraphics[width = \columnwidth]{fig/SteamTurbine_hs.pdf}
 	\caption{}\label{fig:SteamTurbine_hs}
 	\end{subfigure}
-	
 	\caption{水循环的$T$-$s$图及过程$2a$-$2c$-$2b$的$h$-$s$图}\label{fig:SteamTurbine_hs_p}
 \end{figure}
 
-  汽轮机的输出功率
-  \begin{equation}
-  P_{tb}=\left(1-y\right)\dot{m}_{2}\left(h_{2a}-h_{2b}\right)+y\dot{m}_{2}\left(h_{2a}-h_{2c}\right)
-  \end{equation}
- 
-  
   过程$2b$-$2d$表示凝汽器中的换热工况。凝汽器的出口水是饱和液态水，其出口温度$T_{2d}$和出口焓值$h_{2d}$由汽轮机的排汽压力$p_c$确定。
   凝汽器释放的热量
   \begin{equation}
@@ -704,30 +705,28 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
   
 不同有机工质的饱和$T$-$s$图具有不同形状的饱和曲线。有机工质可以根据$T$-$s$图中饱和蒸气曲线斜率$dT/ds$的不同分为三种类型：$dT / ds > 0$表示该流体为干工质（高压饱和蒸气定熵膨胀时不会进入湿气区），大多数有机工质为干工质；$dT / ds < 0$表示该流体为湿工质（高压饱和蒸气定熵膨胀时会产生液滴），少数有机工质为湿工质；$dT/ds \rightarrow \pm\infty$表示该流体为等熵流体，例如R134a。对于干工质，由于在汽轮机中不会出现液滴，有机工质无需过热。此外，对于应用于低温废热回收的有机工质朗肯循环，也无需进行过热。由于本文讨论的太阳能光热发电技术所获得的集热温度一般高于有机工质的饱和温度，所以本文选用的有机工质朗肯循环仍然采用过热，以提高朗肯循环的效率。
 
-\noindent \begin{figure}[htbp]
+水工质朗肯循环和典型有机工质朗肯循环的$T$-$s$图分别如\autoref{fig:Ts_Water}和\autoref{fig:Ts_organic}所示。在典型有机工质循环（其系统结构图如\autoref{fig:ORCsystem2}）中，循环效率可以通过使用回热器来得到提升。这是因为汽轮机出口工质是过热气体，其温度比对应压力下的凝汽温度高。利用这部分高出的温度可以给加压的凝结液提供热量。通常会在有机工质汽轮机的出口和蒸发器的进口之间安装一个逆流布置的回热器。回热器可以回收部分热量，从而降低对热源的需求，提升循环的效率。
+
+\begin{figure}[htbp]
 \centering
-	\begin{subfigure}[b]{0.35\columnwidth}
+	\begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/Ts_a.pdf}
 	\caption{SRC的$T$-$s$图}\label{fig:Ts_Water}
 	\end{subfigure}
 	~
-\begin{subfigure}[b]{0.35\columnwidth}
+\begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/Ts_b.pdf}
 	\caption{ORC的$T$-$s$图}\label{fig:Ts_organic}
 	\end{subfigure}
 	\caption{朗肯循环的$T$-$s$图}
 	\label{fig:Ts}
 \end{figure}
-
-水工质朗肯循环和典型有机工质朗肯循环的$T$-$s$图分别如\autoref{fig:Ts_Water}和\autoref{fig:Ts_organic}所示。在典型有机工质循环（其系统结构图如\autoref{fig:ORCsystem2}）中，循环效率可以通过使用回热器来得到提升。这是因为汽轮机出口工质是过热气体，其温度比对应压力下的凝汽温度高。利用这部分高出的温度可以给加压的凝结液提供热量。通常会在有机工质汽轮机的出口和蒸发器的进口之间安装一个逆流布置的回热器。回热器可以回收部分热量，从而降低对热源的需求，提升循环的效率。
-
-\noindent \begin{figure}[htbp]
+\begin{figure}[htbp]
 \centering
 	\includegraphics[width = 0.4\columnwidth]{fig/ORCsystem2.pdf}
 	\caption{具有回热器的ORC系统结构示意图}
 	\label{fig:ORCsystem2}
 \end{figure}
-
 汽轮机的相对内效率为
 \begin{equation}
   \eta_{i,tb} = (h_{4a}-h_{4b})/(h_{4a}-h_{i,4b})

@@ -799,7 +799,7 @@
       \fontsize{14pt}{28.0pt}\selectfont
       \HUST@enschoolname \\
       \HUST@enaddress \\
-      \endateformat
+%      \endateformat
     \end{center}
     }
   \end{center}

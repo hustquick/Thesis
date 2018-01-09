@@ -196,6 +196,7 @@
 \RequirePackage{indentfirst}
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0pt plus 2pt minus 1pt}
+%\setlength{\parskip}{0.5\baselineskip}
 \RequirePackage{color}
 \RequirePackage[table]{xcolor}
 \RequirePackage[unicode]{hyperref}
@@ -364,17 +365,17 @@
     \def\appendixname{附录}
     \def\HUST@listfigurename{插图索引}
     \def\HUST@listtablename{表格索引}
-    \def\equationautorefname{公式}
+    \def\equationautorefname~#1\null{式~{#1}~\null}
     \def\footnoteautorefname{脚注}
     \def\itemautorefname~#1\null{第~#1~项\null}
-    \def\figureautorefname{图}
+    \def\figureautorefname~#1\null{图~{#1}~\null}
     \def\tableautorefname{表}
-    \def\appendixautorefname{附录}
+    \def\appendixautorefname~#1\null{附录~{#1}~\null}
     \expandafter\def\csname\appendixname autorefname\endcsname{\appendixname}
-    \def\chapterautorefname~#1\null{第\zhnumber{#1}章\null}
-    \def\sectionautorefname~#1\null{#1~小节\null}
-    \def\subsectionautorefname~#1\null{#1~小节\null}
-    \def\subsubsectionautorefname~#1\null{#1~小节\null}
+    \def\chapterautorefname~#1\null{第{#1}~章\null}
+    \def\sectionautorefname~#1\null{第{#1}~节\null}
+    \def\subsectionautorefname~#1\null{第{#1}~小节\null}
+    \def\subsubsectionautorefname~#1\null{第{#1}~小节\null}
     \def\FancyVerbLineautorefname~#1\null{第~#1~行\null}
     \def\pageautorefname~#1\null{第~#1~页\null}
     \def\lstlistingautorefname{代码}

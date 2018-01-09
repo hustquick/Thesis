@@ -26,7 +26,7 @@
   K(\theta) = \cos\theta+0.000884\theta-0.00005369\theta^2
 \end{equation}
 
-图~\ref{fig:ParabolicTrough}~给出了槽式集热器反射太阳光线的示意图，图中还标出了影响光学损失的一些参数。整个光学损失与下列五个参数有关：
+\autoref{fig:ParabolicTrough}给出了槽式集热器反射太阳光线的示意图，图中还标出了影响光学损失的一些参数。整个光学损失与下列五个参数有关：
 
 \begin{enumerate}[label=(\arabic*)]
   \item 反射率，$\rho$：只有一部分入射辐射会被反射到接收器上。这一部分辐射量的多少由反射镜的种类决定。对于清洗干净的商业槽式反射镜，其反射率可以假定为0.9。
@@ -52,7 +52,7 @@
   q''= \frac{P}{\pi d_o L_{tc}} = \frac{I_r w_{tc} \rho \gamma \tau F_e K(\theta)}{\pi d_o}
 \end{equation}
 
-假设整体传热系数$U(T_{abs})$沿着整个集热器的长度方向是均匀的，可以将环境看作定温热源，这样就可以利用附录~\ref{cha:CTCHFHX}~中的传热计算公式计算吸热管对环境的散热。吸收管的传热分析示意图如图~\ref{fig:Pipe}~所示。
+假设整体传热系数$U(T_{abs})$沿着整个集热器的长度方向是均匀的，可以将环境看作定温热源，这样就可以利用\autoref{cha:CTCHFHX}~中的传热计算公式计算吸热管对环境的散热。吸收管的传热分析示意图如\autoref{fig:Pipe}所示。
 \begin{equation}
 	\frac{T_{o}-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})\pi d_o L_{tc}}{\dot{m}c_{p}})\label{eq:CTCHF}
 \end{equation}
@@ -68,7 +68,7 @@
 	U(T_{abs}) = 0.687257 + 0.001941(T_{abs} - T_{amb}) + 0.000026(T_{abs} - T_{amb})^2
 \end{equation}
 
-达到所需加热效果的槽式集热器的长度$L_{tc}$可以从式（\ref{eq:CTCHF}）中算得
+达到所需加热效果的槽式集热器的长度$L_{tc}$可以从\autoref{eq:CTCHF}中算得
 \begin{equation}
 	L_{tc} = \dfrac{\dot{m}c_p}{\pi d_o U(T_{abs})}\ln\left(\dfrac{T_i-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_o-T_{amb}-\dfrac{q''}{U(T_{abs})}}\right)
 	\label{eq:get_L}
@@ -110,7 +110,7 @@
 
 碟式反射镜是碟式系统的重要元件。弯曲的反射表面可以利用单独的小型曲面拼接起来形成，或是通过由连续气室成形的拉伸膜形成。在所有的情况下，曲面都应镀铝或镀银以提高反射率。
 
-本文选用SES（Stirling Energy System）公司生产的碟式反射镜作为梯级集热系统的碟式反射镜，其主要参数见于表~\ref{tab:dc}~。碟式接收器为自行设计研制的接收器，图~\ref{fig:dishReceiver}~是其结构示意图。
+本文选用SES（Stirling Energy System）公司生产的碟式反射镜作为梯级集热系统的碟式反射镜，其主要参数见于\autoref{tab:dc}。碟式接收器为自行设计研制的接收器，\autoref{fig:dishReceiver}是其结构示意图。
 
 \begin{table}[htbp]
 \setlength{\abovecaptionskip}{0pt}
@@ -143,7 +143,7 @@
 	\caption{碟式接收器的热网络模型}
 	\label{fig:thermal-lose}
 \end{figure}
-为了详细分析碟式接收器的热损失，建立了如图~\ref{fig:thermal-lose}~所示的热网络模型。该网络模型考虑了以下损失：
+为了详细分析碟式接收器的热损失，建立了如\autoref{fig:thermal-lose}所示的热网络模型。该网络模型考虑了以下损失：
 \begin{itemize}
 	\item 由接收器孔腔从接收器开口反射出去的辐射能损失，$q_{rad,ref}$。
 	\item 由于和接收器的绝热层发生热传导产生的损失，$q_{cond,tot}$。
@@ -152,7 +152,7 @@
 	\item 由接收器孔腔发射出去的热辐射造成的辐射损失，$q_{rad,emit}$。
 \end{itemize}
 
-为了求解图~\ref{fig:thermal-lose}~中的热网络结构图，必须仔细分析图中各热流量的关系并求解方程。
+为了求解\autoref{fig:thermal-lose}中的热网络结构图，必须仔细分析图中各热流量的关系并求解方程。
 
 \begin{enumerate}[label=(\arabic*)]
   \item \emph{入射到接收器的能量, $q_i$}
@@ -223,7 +223,7 @@ q_{cond,tot}=2\pi\lambda_{insu}l_{cav}\dfrac{T_{cav}-T_{insu}}{\ln(1 + 2\delta_{
 \end{equation}
   \item \emph{无风条件下接收器开口处发生的自然对流损失，$q_{conv,free}$}
     
-  桑迪亚国家实验室进行了一系列实验，研究了不同工况下各种参数对碟式接收器开口处自然对流损失的影响，获取了大量的实验数据\cite{Ma1993}。这些数据同Stine和McDonald提出的自然对流公式获得的结果具有很高的一致性。本文假设的是强制对流和自然对流相互独立，所以强制对流和自然对流的综合对流损失如热网络结构图~\ref{fig:thermal-lose}~所示。
+  桑迪亚国家实验室进行了一系列实验，研究了不同工况下各种参数对碟式接收器开口处自然对流损失的影响，获取了大量的实验数据\cite{Ma1993}。这些数据同Stine和McDonald提出的自然对流公式获得的结果具有很高的一致性。本文假设的是强制对流和自然对流相互独立，所以强制对流和自然对流的综合对流损失如热网络结构图\autoref{fig:thermal-lose}所示。
   \begin{equation}
 	q_{conv,free} = h_{free}A_{cav}(T_{cav}-T_{amb})
 \end{equation}
@@ -269,7 +269,7 @@ $Nu_{free}由下式算得$\cite{Jilte2013b}：
 \end{equation}
 \end{enumerate}
 
-从热网络结构图（见图~\ref{fig:thermal-lose}~）中可以得到
+从热网络结构图（见\autoref{fig:thermal-lose}）中可以得到
 \begin{equation}
   q_{eff} = q_i - q_{rad,ref}
 \end{equation}
@@ -281,7 +281,7 @@ $Nu_{free}由下式算得$\cite{Jilte2013b}：
 \end{equation}
 
 热网络结构图中的各温度节点可以通过上述方程解出。
-$q_{dr,1}$可以通过方程（\ref{eq:q_dr_1}）计算得出。于是，碟式接收器的热效率为
+$q_{dr,1}$可以通过\autoref{eq:q_dr_1}计算得出。于是，碟式接收器的热效率为
 \begin{equation}
   \eta_{dr} = \frac{q_{dr,1}}{q_i}
 \end{equation}
@@ -296,7 +296,7 @@ $q_{dr,1}$可以通过方程（\ref{eq:q_dr_1}）计算得出。于是，碟式�
 \subsection{斯特林机}
 \label{sec:StirlingEngineModel}
 \subsubsection{斯特林循环}
-理想斯特林循环由同冷热热源进行的两个等温换热过程及同回热器进行的两个定容换热过程组成。斯特林循环的$T$-$s$图如图\ref{fig:StirlingCycle}所示，图中4-1过程中回热器吸收的热量在2-3过程中被重新利用。但是实际上，由于回热过程不完善，这部分能量往往不能被完全利用，这部分能量只能将斯特林机的工作气体从2状态点加热到3'状态点，所以需要定义回热率$e$来表征回热器的完善程度\cite{Formosa2010,Juhasz2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
+理想斯特林循环由同冷热热源进行的两个等温换热过程及同回热器进行的两个定容换热过程组成。斯特林循环的$T$-$s$图如\autoref{fig:StirlingCycle}所示，图中4-1过程中回热器吸收的热量在2-3过程中被重新利用。但是实际上，由于回热过程不完善，这部分能量往往不能被完全利用，这部分能量只能将斯特林机的工作气体从2状态点加热到3'状态点，所以需要定义回热率$e$来表征回热器的完善程度\cite{Formosa2010,Juhasz2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
 
 \begin{figure}[htbp]
 \centering
@@ -458,7 +458,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 
 \subsubsection{斯特林机与冷热流体间的传热}
 
-对于斯特林机的传热过程，加热器、冷却器和回热器的壁面温度被假定为均匀且恒定。于是可以利用附录\ref{cha:CTHX}中的流体与定温热源的传热计算公式，有
+对于斯特林机的传热过程，加热器、冷却器和回热器的壁面温度被假定为均匀且恒定。于是可以利用\autoref{cha:CTHX}~中的流体与定温热源的传热计算公式，有
 \begin{equation}
 	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{\dot{m}c_p})
 \end{equation}
@@ -501,7 +501,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \subsubsection{模型验证}
 \label{sec:modelValidation}
 
-通过选用GPU-3型斯特林机作为实例，对所建立的模型进行评估。GPU-3型斯特林机的设计参数见表\ref{tab:GPU3parameters}\cite{Babaelahi2015,Martini1983}。将建立的模型计算得到的斯特林机效率和功率同经典模型及实验结果进行比较，结果如表\ref{tab:EfficiencyComparison}和表\ref{tab:PowerComparison}所示。
+通过选用GPU-3型斯特林机作为实例，对所建立的模型进行评估。GPU-3型斯特林机的设计参数见\autoref{tab:GPU3parameters}\cite{Babaelahi2015,Martini1983}。将建立的模型计算得到的斯特林机效率和功率同经典模型及实验结果进行比较，结果如\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}所示。
 
 \begin{table*}[htbp]\footnotesize
 	\caption{GPU-3型斯特林机的设计参数}
@@ -617,9 +617,9 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\label{tab:PowerComparison}
 \end{sidewaystable}
 
-从表中可以发现，与之前的斯特林机热力模型相比，本文建立的模型同实验在不同转速和不同平均有效压力的条件下得到的结果更加接近。需要指出的是，上述所有模型中，输出功率$W$和输入热量$Q$都由工作气体同壁面的换热得到。在本文建立的模型中，$W$和$Q$由方程(\ref{eq:work})和(\ref{eq:heat})得到。因此，$W$,$Q$和$\eta$都可以由热力模型和输入参数得到。这些输入参数包括加热器参数、冷却器参数、回热器参数、平均有效压力、工作气体的类型以及斯特林机的几何尺寸。
+从表中可以发现，与之前的斯特林机热力模型相比，本文建立的模型同实验在不同转速和不同平均有效压力的条件下得到的结果更加接近。需要指出的是，上述所有模型中，输入热量$Q$和输出功率$W$都由工作气体同壁面的换热得到。在本文建立的模型中，$Q$和$W$由\autoref{eq:heat}和\autoref{eq:work}得到。因此，$Q$,$W$和$\eta$都可以由热力模型和输入参数得到。这些输入参数包括加热器参数、冷却器参数、回热器参数、平均有效压力、工作气体的类型以及斯特林机的几何尺寸。
 
-表\ref{tab:EfficiencyComparison}和表\ref{tab:PowerComparison}表明，当斯特林机的平均有效压力位于2.76$\,\mathrm{MPa}$到6.90$\,\mathrm{MPa}$之间时，本文建立的模型具有最佳性能预测准确性。当斯特林机的转速从16.67$\,\mathrm{Hz}$增加到58.33$\,\mathrm{Hz}$时，本文建立的模型的性能预测的误差也随之增大。所以本文所建立的模型在平均有效压力在2.76$\,\mathrm{MPa}$和6.90$\,\mathrm{MPa}$之间，转速较低时具有最佳性能预测准确性。
+\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}表明，当斯特林机的平均有效压力位于2.76$\,\mathrm{MPa}$到6.90$\,\mathrm{MPa}$之间时，本文建立的模型具有最佳性能预测准确性。当斯特林机的转速从16.67$\,\mathrm{Hz}$增加到58.33$\,\mathrm{Hz}$时，本文建立的模型的性能预测的误差也随之增大。所以本文所建立的模型在平均有效压力在2.76$\,\mathrm{MPa}$和6.90$\,\mathrm{MPa}$之间，转速较低时具有最佳性能预测准确性。
 
 然而，同实验结果相比，本文提出的模型仍然存在一些误差。未来的研究工作可能会考虑斯特林机的其它不可逆损失，如斯特林机向环境的散热，气弹滞后效应等等，从而建立更加精确的斯特林机模型。值得指出的是，其它文献也有提到更加精确的斯特林机模型。例如，多变过程模拟模型具有比本文提出的模型更高的性能预测精度\cite{Hosseinzade2015, Babaelahi2015}。然而，该模型需要假定斯特林循环中各过程的多变指数，该多变指数又与具体的斯特林机及具体的过程相关，而且多变过程模拟模型需要更多的计算量。
 
@@ -638,9 +638,9 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\label{fig:SRCinCS}
 \end{figure}
   
-  以图\ref{fig:SRCinCS}为例，详细介绍水工质朗肯循环的建模理论研究。图\ref{fig:SRCinCS}中，各种流体的不同状态点用数字加字母标出。其中，数字表示流体类型：1代表空气，2代表水，3代表导热油；字母代表不同位置的状态点。有的状态点还加有圆圈，表示其为饱和状态：实线圆圈表示为饱和液态，$x = 0$；虚线圆圈表示为饱和气态，$x = 1$。
+  以\autoref{fig:SRCinCS}为例，详细介绍水工质朗肯循环的建模理论研究。\autoref{fig:SRCinCS}中，各种流体的不同状态点用数字加字母标出。其中，数字表示流体类型：1代表空气，2代表水，3代表导热油；字母代表不同位置的状态点。有的状态点还加有圆圈，表示其为饱和状态：实线圆圈表示为饱和液态，$x = 0$；虚线圆圈表示为饱和气态，$x = 1$。
 
-梯级系统的水循环的温熵图如图\ref{fig:Ts_Water1}所示。过程曲线$2a$-$2c$-$2b$表示汽轮机内蒸汽做功的过程，其焓熵曲线图如图\ref{fig:SteamTurbine_hs}所示。状态点$2b$和$i,2b$的压力相等，状态点$2c$和$i,2c$的压力相等。为了简化汽轮机内效率的计算，假定汽轮机在不同负荷、不同级中的相对内效率不变，即
+梯级系统的水循环的温熵图如\autoref{fig:Ts_Water1}所示。过程曲线$2a$-$2c$-$2b$表示汽轮机内蒸汽做功的过程，其焓熵曲线图如\autoref{fig:SteamTurbine_hs}所示。状态点$2b$和$i,2b$的压力相等，状态点$2c$和$i,2c$的压力相等。为了简化汽轮机内效率的计算，假定汽轮机在不同负荷、不同级中的相对内效率不变，即
 \begin{equation}
       \eta_{i,tb} =(h_{2a}-h_{2b})/(h_{2a}-h_{i,2b}) = (h_{2a}-h_{2c})/(h_{2a}-h_{i,2c})
 \end{equation}
@@ -719,7 +719,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\label{fig:Ts}
 \end{figure}
 
-水工质朗肯循环和典型有机工质朗肯循环的$T$-$s$图分别如图\ref{fig:Ts_Water}和图\ref{fig:Ts_organic}所示。在典型有机工质循环（其系统结构图如图\ref{fig:ORCsystem2}）中，循环效率可以通过使用回热器来得到提升。这是因为汽轮机出口工质是过热气体，其温度比对应压力下的凝汽温度高。利用这部分高出的温度可以给加压的凝结液提供热量。通常会在有机工质汽轮机的出口和蒸发器的进口之间安装一个逆流布置的回热器。回热器可以回收部分热量，从而降低对热源的需求，提升循环的效率。
+水工质朗肯循环和典型有机工质朗肯循环的$T$-$s$图分别如\autoref{fig:Ts_Water}和\autoref{fig:Ts_organic}所示。在典型有机工质循环（其系统结构图如\autoref{fig:ORCsystem2}）中，循环效率可以通过使用回热器来得到提升。这是因为汽轮机出口工质是过热气体，其温度比对应压力下的凝汽温度高。利用这部分高出的温度可以给加压的凝结液提供热量。通常会在有机工质汽轮机的出口和蒸发器的进口之间安装一个逆流布置的回热器。回热器可以回收部分热量，从而降低对热源的需求，提升循环的效率。
 
 \noindent \begin{figure}[htbp]
 \centering
@@ -773,9 +773,9 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 \section{蒸汽发生系统建模}
 槽式太阳能光热发电厂的蒸汽发生系统可以被分成三部分——预热器、蒸发器和过热器，它们都是换热器。为了便于系统分析，假定这些换热器都不存在流动压力损失，即加热器中的加热流体（以导热油为例）和被加热流体（以水为例）的压力保持不变。水的压力和汽轮机的入口压力相等。此外，假设这些换热器都不与环境交换热量。
 
-为了更加清晰地理解这些换热器的机理建模理论，本文使用图\ref{fig:PES}中的蒸汽发生系统作为例子进行详细分析，其传热过程如图\ref{fig:PES_TQ}所示。
+为了更加清晰地理解这些换热器的机理建模理论，本文使用\autoref{fig:PES}中的蒸汽发生系统作为例子进行详细分析，其传热过程如\autoref{fig:PES_TQ}所示。
 
-蒸汽发生系统的机理建模过程从本质上来看，是求解各未知状态点的过程。需要再次提出的是，由于水和导热油在换热过程中都没有压降，对于饱和状态，由于其干度已知，其状态是确定的；对于不饱和状态，只要知道了温度或焓值，那么其状态也可以确定。这意味着，知道了温度可以求出焓值，反之亦然。
+蒸汽发生系统的机理建模过程从本质上来看，是求解各未知状态点的过程。需要再次提出的是，由于水和导热油在换热过程中都没有压降，对于饱和状态，由于其干度已知，其状态是确定的；对于不饱和状态，只要已知温度或焓值，那么其状态也可以确定。这意味着，已知温度可以求出焓值，反之亦然。
 
 \noindent \begin{figure}[ht!]
 	\centering
@@ -791,7 +791,7 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 	\label{fig:PES_TQ}
 \end{figure}
 
-对于如图\ref{fig:PES}所示的典型的蒸汽发生系统的建模过程，水工质质量流量$\dot{m}_2$，状态点$2h$和状态点$2k$都由汽轮机及朗肯循环的参数确定，可以看作已知量。状态点$3a$的状态由槽式镜场的设计参数确定，状态点$2i$和$2j$的状态可以由其干度确定。
+对于如\autoref{fig:PES}所示的典型的蒸汽发生系统的建模过程，水工质质量流量$\dot{m}_2$，状态点$2h$和状态点$2k$都由汽轮机及朗肯循环的参数确定，可以看作已知量。状态点$3a$的状态由槽式镜场的设计参数确定，状态点$2i$和$2j$的状态可以由其干度确定。
 
 \begin{enumerate}[label=(\arabic*)]
   \item \emph{预热器}
@@ -810,24 +810,24 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
   \label{eq:evaporator}
 \end{equation}
 
-	需要指出的是，状态点$3c$的状态由$T_{3c}$决定。而$T_{3c}$由夹点温度（pinch temperature）$\Delta T_{min}$确定，即$T_{3c} = T_{2i} + \Delta T_{min}$。关于夹点温度，第\ref{cha:osgs}章有更加详细的说明。
+	需要指出的是，状态点$3c$的状态由$T_{3c}$决定。而$T_{3c}$由夹点温度（pinch temperature）$\Delta T_{min}$确定，即$T_{3c} = T_{2i} + \Delta T_{min}$。关于夹点温度，\autoref{cha:osgs}有更加详细的说明。
   
   \item \emph{过热器}
   
   根据能量平衡方程，
   \begin{equation}
   \dot{m}_3 (h_{3a}-h_{3b})=\dot{m}_2 (h_{2k} - h_{2j})
-  \label{eq:superheater}
+  \label{Equation:superheater}
 \end{equation}
 
 \end{enumerate}
 
-通过求解方程(\ref{eq:preheater})到(\ref{eq:superheater})，可以得到导热油的质量流量$\dot{m}_3$和状态点$3b$、$3d$的状态。
+通过求解\autoref{eq:preheater}到\autoref{Equation:superheater}，可以得到导热油的质量流量$\dot{m}_3$和状态点$3b$、$3d$的状态。
 
 \section{梯级系统建模}
 
-由于系统建模采用面向对象的方法，系统是利用各种部件的接口（进出口）相互连接形成的。这些接口通过各股流体（称为流，stream）相互作用。例如图\ref{fig:PES}中的汽轮机和除氧器之间通过抽汽流相互连接。每个流都拥有独立的属性，如流体类型，质量流量，温度，压力，比焓，比熵等等。
-为此，利用MATLAB建模工具建立了专门的\textbf{Stream}类，将各流都作为对象进行计算分析。附录\ref{cha:MATLAB_SOURCECODE}给出了\textbf{Stream}类的定义的源代码。\textbf{Stream}类中的一些属性由于被多个\textbf{Stream}实例所共用，也被定义为对象。
+由于系统建模采用面向对象的方法，系统是利用各种部件的接口（进出口）相互连接形成的。这些接口通过各股流体（称为流，stream）相互作用。例如\autoref{fig:PES}中的汽轮机和除氧器之间通过抽汽流相互连接。每个流都拥有独立的属性，如流体类型，质量流量，温度，压力，比焓，比熵等等。
+为此，利用MATLAB建模工具建立了专门的\textbf{Stream}类，将各流都作为对象进行计算分析。\autoref{cha:MATLAB_SOURCECODE}给出了\textbf{Stream}类的定义的源代码。\textbf{Stream}类中的一些属性由于被多个\textbf{Stream}实例所共用，也被定义为对象。
 如\textbf{Stream}类中的属性\textbf{T}，\textbf{q\_m}和\textbf{p}也是对象，它们分别属于\textbf{Temperature}类，\textbf{Massflow}类和\textbf{Pressure}类。
 
 给定了\textbf{Stream}对象的固有属性（inherent properties，包括流体类型，质量流量，温度，压力和干度），其依赖属性（dependent properties，包括比焓，比熵和比热容）可以依据其内部方法获得。
@@ -844,7 +844,7 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 针对系统计算，需要指出的是，一个部件的某些参数可能和其它多个部件相关联。
 在这种条件下，需要使用估值来辅助计算。估值用于设定未定状态的流对象的固有属性（如质量流量或温度），以便于获得流的依赖属性，进而得到状态点的状态信息。这些流对象通过参数传递给相应的部件，进而完成部件内部的计算方法，获得相应的计算结果。这些结果会以状态点参数的形式，和原来设定的估值进行比较。如果估值和相应计算值之间的差异在允许误差范围之内，则接受该估值；否则，估值将会依据隆戈库塔法重新设定，并重新启动部件内的计算，并将新估值和获得的新的计算值进行比较，直至二者之间的差异小于允许误差为止。
 
-例如，在图\ref{fig:PES}所示的蒸汽发生系统中，蒸发器的出口油温%\textbf{evaporator.T\_3o}
+例如，在\autoref{fig:PES}所示的蒸汽发生系统中，蒸发器的出口油温%\textbf{evaporator.T\_3o}
 还和过热器有关。想要获得该温度值，就需要先使用估值。估值用于赋值给对应于状态点$3b$的流对象的温度属性，这样可以获得该流对象的所有依赖属性（因为其压力已知），包括状态点$3b$的焓值。该流对象作为蒸发器和过热器的输入参数将该状态点相应的焓值带入到蒸发器和过热器中，在蒸发器中通过计算
 %方法\textbf{superheater.get\_T\_3i}
 得到导热油的质量流量，并在过热器中计算得到过热器的出口油温
@@ -862,7 +862,7 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 	\label{fig:SystemFlow}
 \end{figure}
 
-完成各部件的数学机理研究和运行特征分析后，利用MATLAB的数学计算和建模分析等功能，采用面向对象的方式，以运行库文件和各模型基础模块为基础，编写设计软件的主程序，开发了具有软件著作权的太阳能光热发电系统设计软件。图\ref{fig:SystemFlow}是太阳能光热发电系统设计软件结构图。该设计软件具有系统部件选择、部件模型选择、部件连接、设定系统参数、模拟计算、结果分析等功能。
+完成各部件的数学机理研究和运行特征分析后，利用MATLAB的数学计算和建模分析等功能，采用面向对象的方式，以运行库文件和各模型基础模块为基础，编写设计软件的主程序，开发了具有软件著作权的太阳能光热发电系统设计软件。\autoref{fig:SystemFlow}是太阳能光热发电系统设计软件结构图。该设计软件具有系统部件选择、部件模型选择、部件连接、设定系统参数、模拟计算、结果分析等功能。
 通过该设计软件，可以选择太阳能光热发电系统拓扑结构，连接系统中的各个部件，设定系统初始参数，并进行模拟计算和结果分析，最终实现太阳能光热发电系统的建模，计算和分析工作。
 
 \section{本章小结}

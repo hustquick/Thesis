@@ -26,7 +26,7 @@
   K(\theta) = \cos\theta+0.000884\theta-0.00005369\theta^2
 \end{equation}
 
-图\ref{fig:ParabolicTrough}给出了槽式集热器反射太阳光线的示意图，图中还标出了影响光学损失的一些参数。整个光学损失与下列五个参数有关：
+图~\ref{fig:ParabolicTrough}~给出了槽式集热器反射太阳光线的示意图，图中还标出了影响光学损失的一些参数。整个光学损失与下列五个参数有关：
 
 \begin{enumerate}[label=(\arabic*)]
   \item 反射率，$\rho$：只有一部分入射辐射会被反射到接收器上。这一部分辐射量的多少由反射镜的种类决定。对于清洗干净的商业槽式反射镜，其反射率可以假定为0.9。
@@ -48,21 +48,11 @@
 \end{equation}
 
 为了简化吸热器的吸热过程，通常将其视为均匀的热流量$q''$
-
 \begin{equation}
   q''= \frac{P}{\pi d_o L_{tc}} = \frac{I_r w_{tc} \rho \gamma \tau F_e K(\theta)}{\pi d_o}
 \end{equation}
 
-%LUZ solar collector LS-3 is used as the trough collector.
-%%For a trough collector, 
-%The heat flux to the outer surface of the receiver can be obtained by $q''=I_rw_{tc}\eta_{opt,0}K(\phi)F_{e}/P$, where $P=\pi{}d_o$, $K(\phi)$ is the incidence angle modifier, $\eta_{opt,0} = \rho \gamma \tau \alpha_{abs}$
-%is peak optical efficiency (optical efficiency with an incidence angle of 0).
-%\nomenclature{$K$}{Incidence angle modifier of trough collector}
-%%\nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
-
-假设整体传热系数$U(T_{abs})$沿着整个集热器的长度方向是均匀的，可以将环境看作定温热源，这样就可以利用附录\ref{cha:CTCHFHX}中的传热计算公式计算吸热管对环境的散热。吸收管的传热分析示意图如图\ref{fig:Pipe}所示。
-\nomenclature{$U$}{整体换热系数, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
-\nomenclature{$q''$}{热流密度, W$\cdot$m$^{-2}$}
+假设整体传热系数$U(T_{abs})$沿着整个集热器的长度方向是均匀的，可以将环境看作定温热源，这样就可以利用附录~\ref{cha:CTCHFHX}~中的传热计算公式计算吸热管对环境的散热。吸收管的传热分析示意图如图~\ref{fig:Pipe}~所示。
 \begin{equation}
 	\frac{T_{o}-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q''}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})\pi d_o L_{tc}}{\dot{m}c_{p}})\label{eq:CTCHF}
 \end{equation}
@@ -78,7 +68,7 @@
 	U(T_{abs}) = 0.687257 + 0.001941(T_{abs} - T_{amb}) + 0.000026(T_{abs} - T_{amb})^2
 \end{equation}
 
-达到所需加热效果的槽式集热器的长度$L_{tc}$可以从公式（\ref{eq:CTCHF}）中算得
+达到所需加热效果的槽式集热器的长度$L_{tc}$可以从式（\ref{eq:CTCHF}）中算得
 \begin{equation}
 	L_{tc} = \dfrac{\dot{m}c_p}{\pi d_o U(T_{abs})}\ln\left(\dfrac{T_i-T_{amb}-\dfrac{q''}{U(T_{abs})}}{T_o-T_{amb}-\dfrac{q''}{U(T_{abs})}}\right)
 	\label{eq:get_L}
@@ -120,18 +110,12 @@
 
 碟式反射镜是碟式系统的重要元件。弯曲的反射表面可以利用单独的小型曲面拼接起来形成，或是通过由连续气室成形的拉伸膜形成。在所有的情况下，曲面都应镀铝或镀银以提高反射率。
 
-本文选用SES（Stirling Energy System）公司生产的碟式反射镜作为梯级集热系统的碟式反射镜，其主要参数见于表\ref{tab:dc}。碟式接收器为自行设计研制的接收器，图\ref{fig:dishReceiver}是其结构示意图。
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.4\textwidth]{fig/DishReceiver.pdf}
-\caption{碟式接收器的结构示意图}\label{fig:dishReceiver}
-\end{figure}
+本文选用SES（Stirling Energy System）公司生产的碟式反射镜作为梯级集热系统的碟式反射镜，其主要参数见于表~\ref{tab:dc}~。碟式接收器为自行设计研制的接收器，图~\ref{fig:dishReceiver}~是其结构示意图。
 
 \begin{table}[htbp]
-	\setlength{\abovecaptionskip}{-10pt}
+\setlength{\abovecaptionskip}{0pt}
 	\caption{碟式集热器的主要参数}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		参数		&	值	&	参数		&	值	&	参数		&	值\\
@@ -143,34 +127,23 @@
 		$\lambda_{insu}$	&	0.06$\,\mathrm{W/(m\cdot K)}$	&	$A_{dc}$	&	87.7$\,\mathrm{m^2}$	&	\\		
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:dc}
 \end{table}
 
-\nomenclature[G]{$\delta$}{厚度, m}
-\nomenclature[S]{$insu$}{绝热层}
-\nomenclature{$l$}{深度, m}
-\nomenclature{$d$}{直径, m}
-\nomenclature[G]{$\lambda$}{导热率, W$\cdot{}$m$^{-1}$$\cdot$K$^{-1}$}
-\nomenclature[G]{$\epsilon$}{发射率}
-\nomenclature[G]{$\theta_{dc}$}{碟式集热器开口角度 (0$^{\circ}$表示水平, 90$^{\circ}$表示竖直向下)}
-\nomenclature[G]{$\gamma$}{拦截因子；压缩比}
-%\nomenclature[G]{$\eta_{shading}$}{遮挡因子}
-\nomenclature[G]{$\rho$}{反射率}
-%\nomenclature{$A_{se,1}$}{Heat transfer area of Stirling engine at air side, m$^2$}
-%\nomenclature{$A_{se,2}$}{Heat transfer area of Stirling engine at water side, m$^2$}
-\nomenclature{$n_g$}{单台斯特林机中的工质的物质的量, mol}
-%\nomenclature{$n_{se}$}{斯特林机组中斯特林的数目}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.4\textwidth]{fig/DishReceiver.pdf}
+\caption{碟式接收器的结构示意图}\label{fig:dishReceiver}
+\end{figure}
 
 碟式接收器模型涉及的损失包括：接收器拦截损失，由于阴影造成的损失以及热损失。热损失占所有这些损失的最大部分，这部分损失由传导，对流和辐射三种形式组成。
-\noindent \begin{figure}[ht!]
-\begin{center}
+\begin{figure}[ht!]
+	\centering
 	\includegraphics[width = 0.5\columnwidth]{fig/thermalLosses.pdf}
 	\caption{碟式接收器的热网络模型}
 	\label{fig:thermal-lose}
-\end{center}
 \end{figure}
-为了详细分析碟式接收器的热损失，建立了如图\ref{fig:thermal-lose}所示的热网络模型。该网络模型考虑了以下损失：
+为了详细分析碟式接收器的热损失，建立了如图~\ref{fig:thermal-lose}~所示的热网络模型。该网络模型考虑了以下损失：
 \begin{itemize}
 	\item 由接收器孔腔从接收器开口反射出去的辐射能损失，$q_{rad,ref}$。
 	\item 由于和接收器的绝热层发生热传导产生的损失，$q_{cond,tot}$。
@@ -179,7 +152,7 @@
 	\item 由接收器孔腔发射出去的热辐射造成的辐射损失，$q_{rad,emit}$。
 \end{itemize}
 
-为了求解图\ref{fig:thermal-lose}中的热网络结构图，必须仔细分析图中各热流量的关系并求解方程。
+为了求解图~\ref{fig:thermal-lose}~中的热网络结构图，必须仔细分析图中各热流量的关系并求解方程。
 
 \begin{enumerate}[label=(\arabic*)]
   \item \emph{入射到接收器的能量, $q_i$}
@@ -198,10 +171,6 @@
       q_{dr,1} = h_{dr,1}A_{dr,1}\Delta T_{ln,dr,1}
       \label{eq:q_dr_1}
   \end{equation}
-  \nomenclature[S]{$dr$}{碟式接收器}
-  \nomenclature[S]{1}{空气} 
-  \nomenclature[S]{2}{水} 
-  \nomenclature[S]{3}{导热油}  
   其中  
   \begin{equation}
       h_{dr,1} = Nu_{tube}\lambda_{dr,1} / d_{i,1}
@@ -209,9 +178,7 @@
 \begin{equation}
       Nu_{tube} = c_r Nu'_{tube}
 \end{equation}
-    \nomenclature{$Nu$}{努塞尔数}
-    \nomenclature{$c_r$}{螺旋管的螺旋因子}
-    该式为修正后应用于螺旋管的努赛尔数计算公式，式中存在基于弯管曲率的螺旋因子$c_r$作为修正系数。$c_r$的表达式为\cite{Pablo2008}：
+该式为修正后应用于螺旋管的努赛尔数计算公式，式中存在基于弯管曲率的螺旋因子$c_r$作为修正系数。$c_r$的表达式为\cite{Pablo2008}：
 \begin{equation}
 	c_{r}=1+3.5\frac{d_{i,1}}{d_{cav}-d_{i,1}-2\delta_{a}}
 \end{equation}
@@ -219,10 +186,7 @@ $Nu'_{tube}$是直圆管的努塞尔数，它由下式计算\cite{Serth2007}：
 \begin{equation}
 	Nu'_{tube}= 0.027Re_{tube}^{0.8}Pr_{tube}^{1/3}(\mu_{tube}/\mu_{tube,w})^{0.14}
 \end{equation}
-\nomenclature{$Pr$}{普朗特数}
-\nomenclature{$Re$}{雷诺数}
-\nomenclature[G]{$\mu$}{动力粘度, kg$\cdot$m$^{-1}$$\cdot$s$^{-1}$}
-\nomenclature[S]{$w$}{管壁}
+
 传热流体与管壁之间的对数温差$\Delta{}T_{ln,dr,1}$可以写作
 \begin{equation}
 	\Delta{}T_{ln,dr,1}=\frac{(T_{cav}-T_{dc,i})-(T_{cav}-T_{dc,o})}{\ln\dfrac{T_{cav}-T_{dc,i}}{T_{cav}-T_{dc,o}}}
@@ -259,7 +223,7 @@ q_{cond,tot}=2\pi\lambda_{insu}l_{cav}\dfrac{T_{cav}-T_{insu}}{\ln(1 + 2\delta_{
 \end{equation}
   \item \emph{无风条件下接收器开口处发生的自然对流损失，$q_{conv,free}$}
     
-  桑迪亚国家实验室进行了一系列实验，研究了不同工况下各种参数对碟式接收器开口处自然对流损失的影响，获取了大量的实验数据\cite{Ma1993}。这些数据同Stine和McDonald提出的自然对流公式获得的结果具有很高的一致性。本文假设的是强制对流和自然对流相互独立，所以强制对流和自然对流的综合对流损失如热网络结构图\ref{fig:thermal-lose}所示。
+  桑迪亚国家实验室进行了一系列实验，研究了不同工况下各种参数对碟式接收器开口处自然对流损失的影响，获取了大量的实验数据\cite{Ma1993}。这些数据同Stine和McDonald提出的自然对流公式获得的结果具有很高的一致性。本文假设的是强制对流和自然对流相互独立，所以强制对流和自然对流的综合对流损失如热网络结构图~\ref{fig:thermal-lose}~所示。
   \begin{equation}
 	q_{conv,free} = h_{free}A_{cav}(T_{cav}-T_{amb})
 \end{equation}
@@ -272,10 +236,6 @@ $Nu_{free}由下式算得$\cite{Jilte2013b}：
 \begin{equation}
 	S = -0.982d_{ap}/\overline{d_{cav}} + 1.12
 \end{equation}
-
-%\nomenclature{$\overline{d_{cav}}$}{腔体有效直径, m}
-%\nomenclature{$d_i$}{Inner diameter of trough receiver, m}
-%$d_{i}=$0.066$\,$m
   
   \item \emph{有风条件下接收器开口处发生的强制对流损失，$q_{conv,forc}$}  
   \begin{equation}
@@ -309,8 +269,7 @@ $Nu_{free}由下式算得$\cite{Jilte2013b}：
 \end{equation}
 \end{enumerate}
 
-从热网络结构图（见图\ref{fig:thermal-lose}）中可以得到
-
+从热网络结构图（见图~\ref{fig:thermal-lose}~）中可以得到
 \begin{equation}
   q_{eff} = q_i - q_{rad,ref}
 \end{equation}
@@ -321,9 +280,8 @@ $Nu_{free}由下式算得$\cite{Jilte2013b}：
   q_{cond,tot} = q_{cond,conv}+q_{cond,rad}
 \end{equation}
 
-
 热网络结构图中的各温度节点可以通过上述方程解出。
-$q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接收器的热效率为
+$q_{dr,1}$可以通过方程（\ref{eq:q_dr_1}）计算得出。于是，碟式接收器的热效率为
 \begin{equation}
   \eta_{dr} = \frac{q_{dr,1}}{q_i}
 \end{equation}
@@ -339,17 +297,12 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \label{sec:StirlingEngineModel}
 \subsubsection{斯特林循环}
 理想斯特林循环由同冷热热源进行的两个等温换热过程及同回热器进行的两个定容换热过程组成。斯特林循环的$T$-$s$图如图\ref{fig:StirlingCycle}所示，图中4-1过程中回热器吸收的热量在2-3过程中被重新利用。但是实际上，由于回热过程不完善，这部分能量往往不能被完全利用，这部分能量只能将斯特林机的工作气体从2状态点加热到3'状态点，所以需要定义回热率$e$来表征回热器的完善程度\cite{Formosa2010,Juhasz2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
-\nomenclature{$e$}{回热率}
-\nomenclature{$T_R$}{有效回热温度, K}
-\nomenclature{$T_L$}{冷腔温度, K}
-\nomenclature{$T_H$}{热量温度, K}
 
-\noindent \begin{figure}[htbp]
-\begin{center}
+\begin{figure}[htbp]
+\centering
 	\includegraphics[width = 0.4\columnwidth]{fig/StirlingCycle}
 	\caption{斯特林循环的$T$-$s$图}
 	\label{fig:StirlingCycle}
-\end{center}
 \end{figure}
 
 为了得到简化的分析模型，针对斯特林机做了以下简化假设：
@@ -362,39 +315,26 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 \end{itemize}
 
 为了考虑斯特林循环中由于存在死区容积带来的内部不可逆损失，将死区容积$V_D$划分成热头死区容积$V_{DH}$、回热器死区容积$V_{DR}$和冷头死区容积$V_{DC}$\cite{Duan2014}，并采用容积因子$K$来描述不同温度下的各死区容积。$K$同各过程的温度及回热效率有关。
-\nomenclature{$V_D$}{死区容积, m$^3$}
-\nomenclature{$V_{DH}$}{热头死区容积, m$^3$}
-\nomenclature{$V_{DR}$}{回热器死区容积, m$^3$}
-\nomenclature{$V_{DC}$}{冷头死区容积, m$^3$}
+
 \begin{equation}
 	K = \frac{V_{DH}}{T_H} + \frac{V_{DR}}{T_R} + \frac{V_{DC}}{T_L}
 \end{equation}
-\nomenclature{$K$}{容积因子}
+
 
 对于定温压缩过程1-2，输出功
 \begin{equation}
 	W_{12} = \int^{V_E}_{V_E+V_C}{p_{12}dV}=-m_{se}RT_L\ln{\frac{V_E+V_C+KT_L}{V_E+KT_L}}
 \end{equation}
-%\nomenclature{$W_{12}$}{Output work in process 1-2 (J)}
-\nomenclature{$V_E$}{膨胀体积, m$^3$}
-\nomenclature{$V_C$}{压缩体积, m$^3$}
-\nomenclature{$m_{se}$}{单台斯特林机中的工质的质量, kg}
-\nomenclature{$R$}{气体常数, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
 
 对于定温膨胀过程3-4，输出功
 \begin{equation}
 	W_{34} = \int^{V_E+V_C}_{V_E}{p_{34}dV}=m_{se}RT_H\ln{\frac{V_E+V_C+KT_H}{V_E+KT_H}}
 \end{equation}
-%\nomenclature{$W_{34}$}{Output work in process 3-4 (J)}
 
 定义$\gamma_H = \dfrac{V_E+V_C+KT_H}{V_E+KT_H}$，$\gamma_L = \dfrac{V_E+V_C+KT_L}{V_E+KT_L}$。在一个循环过程中，理论输出功
-\nomenclature[G]{$\gamma_H$}{过程12的容积率}
-\nomenclature[G]{$\gamma_L$}{过程34的容积率}
 \begin{equation}
 	W_{th} = W_{12} + W_{34} = m_{se}R(T_H\ln\gamma_H - T_L\ln\gamma_L)
 \end{equation}
-\nomenclature{$W$}{输出功, J}
-\nomenclature[S]{$th$}{理论值}
 
 对于定容加热过程3'-3，吸收的热量
 \begin{equation}
@@ -405,57 +345,15 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 	\end{split}
 \end{equation}
 
-%\nomenclature{$Q_{3^{'}3}$}{heat absorbed in process $3^{'}3$ (J)}
-%\nomenclature{$M$}{Mole mass of the working fluid in Stirling engine, kg$\cdot$mol$^{-1}$)}
-\nomenclature{$c_v$}{定容比热容, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
-\nomenclature{$k$}{热容比 ($c_p/c_v$)；导热率, W$\cdot$m$^{-1}\cdot$K$^{-1}$}
-
 对于定温膨胀过程3-4，吸收的热量
 \begin{equation}
 	Q_{34} = W_{34} = m_{se}RT_H\ln\gamma_H
 \end{equation}
-%\nomenclature{$Q_{34}$}{heat absorbed in process 3-4 (J)}
 
 在一个循环过程中，理论吸收热为
 \begin{equation}
 	Q_{th} = Q_{3^{'}3} + Q_{34} = \frac{1-e}{k-1}m_{se}R(T_H-T_L) + m_{se}RT_H\ln\gamma_H
 \end{equation}
-\nomenclature{$Q$}{吸热量, W}
-
-%The Stirling cycle efficiency
-
-%\begin{equation}
-%	\eta = \frac{W}{Q} = \frac{T_H\ln\gamma_H - T_L\ln\gamma_L}{T_H\ln\gamma_H + \frac{1-e}{k-1}(T_H-T_L)}
-%	\label{eq:eta}
-%\end{equation}
-%\nomenclature[G]{$\eta$}{efficiency of a Stirling engine}
-%
-%and the output power
-%
-%\begin{equation}
-%	P = {W}s_{se} = mRs_{se}(T_H\ln\gamma_H - T_L\ln\gamma_L)
-%	\label{eq:P}
-%\end{equation}
-\nomenclature{$P$}{功率, W}
-\nomenclature{$s_{se}$}{斯特林机转速, Hz}
-
-%In order to describe quantitatively the effect of the internal dissipation of the working fluid on the performance (efficiency and power) of Stirling engine, the cycle irreversibility parameter, $R_S$, is defined as~\cite{Kaushik2003}:
-%\nomenclature{$R_S$}{cycle irreversibility parameter}
-%
-%\begin{equation}
-%	R_S = \frac{\ln\gamma_H}{\ln\gamma_L} = \frac{s_4 - s_3}{s_1 - s_2}
-%\end{equation}
-%\nomenclature{$s$}{specific entropy (J$\cdot$kg$^{-1}\cdot$K$^{-1}$)}
-%
-%If the internal processes are reversible, $R_S = 1$, Equation~\ref{eq:eta} becomes the same as described in~\cite{Stine1994}:
-%
-%\begin{equation}
-%	\eta = \frac{T_H - T_L}{T_H + \frac{1-e}{k-1}\cdot\frac{T_H-T_L}{\ln\gamma}}
-%\end{equation}
-%\nomenclature[G]{$\gamma$}{compression ratio}
-
-%It can be found from Equation~\ref{eq:eta} and~\ref{eq:P} that
-%given the properties of a Stirling engine, its efficiency and power can be obtained by known $T_H$ and $T_L$.
 
 \subsubsection{不可逆因素及损失}
 
@@ -470,12 +368,10 @@ $q_{dr,1}$可以通过方程(\ref{eq:q_dr_1})计算得出。于是，碟式接�
 	T_H = T_{hw} - \frac{Qs_{se}}{h_hA_{hw}}
 	\label{eq:T_H}
 \end{equation}
-\nomenclature[S]{$hw$}{加热器壁面}
 \begin{equation}
 	T_L = T_{cw} + \frac{(Q-W)s_{se}}{h_cA_{cw}}
 	\label{eq:T_L}
 \end{equation}
-\nomenclature[S]{$cw$}{冷却器壁面}
 
 其中的传热系数可以通过下式获得\cite{Babaelahi2015}：
 \begin{equation}
@@ -493,7 +389,6 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \begin{equation}
 	\Delta p = -\frac{2f_{Re}\mu u V}{d^2A}
 \end{equation}
-\nomenclature{$p$}{压力, Pa}
 其中，$u$是工作气体的流速，$V$是流通体积，$A$是流动截面积。
 
 由压力损失带来的斯特林机的净输出损失可以由下式计算得到：
@@ -526,7 +421,6 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	Q_{id} = \frac{k_rA_r}{L_rs_{se}}(T_{hw} - T_{cw})
 \end{equation}
 其中，$k_r$、$L_r$和$A_r$分别表示回热器的导热率、长度和导热面积。
-\nomenclature[S]{$r$}{回热器}
 
 \item \emph{穿梭导热产生的能量损失}
 
@@ -535,9 +429,6 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	Q_{sc} = 0.4\frac{Z^2k_pD_p}{JL_ds_{se}}(T_{H} - T_{L})
 \end{equation}
 其中，$Z$、$k_p$、$D_p$、$J$和$L_d$分别表示置换器的往复长度、活塞导热率、置换器的直径、置换器和圆柱体内壁之间的缝隙大小以及置换器的长度。
-\nomenclature{$Z$}{置换器的往复长度, m}
-\nomenclature{$J$}{置换器与圆柱体内壁之间的缝隙大小, m}
-%\nomenclature[S]{$p$}{Piston}
 
 \end{enumerate}
 
@@ -571,13 +462,8 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \begin{equation}
 	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{\dot{m}c_p})
 \end{equation}
-\nomenclature{$c_p$}{定压比热容, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
-\nomenclature{$T_w$}{壁温, K}
-\nomenclature{$A$}{面积, m$^2$}
 
 对于斯特林机，可以分别用$T_{hw}$和$T_{cw}$来替代$T_w$，用$T_{i,h}$、$T_{o,h}$及$T_{i,c}$、$T_{o,c}$来替代$T_{i}$与$T_{o}$。
-\nomenclature[S]{$h$}{加热流体; 齐次解}
-\nomenclature[S]{$c$}{冷却流体; 逆流}
 \begin{equation}
 	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{\dot{m}_hc_{p,h}})
 	\label{eq:T_h}
@@ -610,11 +496,6 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	 Q - W = \dot{m}_cc_{p,c}(T_{o,c}-T_{i,c})/s_{se}	\label{eq:q_c}
 \end{equation}
 
-%For a Stirling engine given $\dot{m}_h$, $\dot{m}_c$ and $s_{se}$, known 2 of the 6 parameters ($T_{i,h}$, $T_{o,h}$, $T_{i,c}$, $T_{o,c}$, $T_H$ and $T_L$), the rest 4 can be obtained by solving
-%%Equation~\ref{eq:T_h},~\ref{eq:T_c},~\ref{eq:q_h} and~\ref{eq:q_c}
-%Equation~\ref{eq:T_h}-\ref{eq:q_c}
-%. Then $\eta$ and $P$ can be obtained by Equation~\ref{eq:eta} and~\ref{eq:P}. This means the performance of a given Stirling engine can be inquired by the input/output parameters of heating/cooling fluids.
-
 基于以上简化假设和对斯特林机循环及其各种不可逆因素损失的分析，本文建立了斯特林机的模型。依据此模型可以求解给定斯特林机及其冷热流体条件下，斯特林机的输出功率和效率。并可以得到冷热流体流出斯特林机后的状态信息。
 
 \subsubsection{模型验证}
@@ -623,9 +504,8 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 通过选用GPU-3型斯特林机作为实例，对所建立的模型进行评估。GPU-3型斯特林机的设计参数见表\ref{tab:GPU3parameters}\cite{Babaelahi2015,Martini1983}。将建立的模型计算得到的斯特林机效率和功率同经典模型及实验结果进行比较，结果如表\ref{tab:EfficiencyComparison}和表\ref{tab:PowerComparison}所示。
 
 \begin{table*}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
 	\caption{GPU-3型斯特林机的设计参数}
-	\begin{center}
+	\centering
 	\begin{tabular}{ll}
 		\toprule
 		参数				&	值\\
@@ -656,15 +536,13 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 		死区容积（加热器/冷却器/回热器）	&	70.28/13.18/50.55$\,\mathrm{cm}^3$\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:GPU3parameters}
 \end{table*}
 
 \begin{sidewaystable}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
   \renewcommand\arraystretch{0.75}
 	\caption{模型及实验的热效率（$T_{hw}=$922$\,\mathrm{K}$，$T_{cw}=$288$\,\mathrm{K}$）}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccccccccc}
 		\toprule
 		\multirow{5}{0.5in}{\tabincell{c}{转速\\(Hz)}}	&
@@ -697,15 +575,13 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 		58.33	&&27.29	&13.09	&&24.67	&10.47	&&25.37	&11.17	&&14.20\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:EfficiencyComparison}
 \end{sidewaystable}
 
 \begin{sidewaystable}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
   \renewcommand\arraystretch{0.75}
 	\caption{模型及实验的输出功率（$T_{hw}=$922$\,\mathrm{K}$，$T_{cw}=$288$\,\mathrm{K}$）}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccccccccc}
 		\toprule
 		\multirow{5}{0.5in}{\tabincell{c}{转速\\(Hz)}}	&
@@ -738,7 +614,6 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 		58.33	&&11.840	&399.58	&&11.071	&367.13	&&6.140	&159.07	&&2.37\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:PowerComparison}
 \end{sidewaystable}
 
@@ -757,15 +632,13 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
   水工质朗肯循环需要设置除氧器以去除给水中的氧气和其它不凝结气体。给水中溶解的氧气将会给蒸汽发生系统造成严重的腐蚀损伤，并使金属管道形成氧化物（生锈）。溶解在给水中的二氧化碳将会形成碳酸，并进一步对管道造成腐蚀。不凝结气体的聚集将会增加热阻，这对各种换热器很不利。本系统中的除氧器采用汽轮机抽汽作为热源。
   
 \begin{figure}[!ht]
-\begin{center}
+\centering
 	\includegraphics[width = 0.8\columnwidth]{fig/SRCinCS}
 	\caption{用于分析水工质朗肯循环的梯级系统结构示意图}
 	\label{fig:SRCinCS}
-\end{center}
 \end{figure}
   
   以图\ref{fig:SRCinCS}为例，详细介绍水工质朗肯循环的建模理论研究。图\ref{fig:SRCinCS}中，各种流体的不同状态点用数字加字母标出。其中，数字表示流体类型：1代表空气，2代表水，3代表导热油；字母代表不同位置的状态点。有的状态点还加有圆圈，表示其为饱和状态：实线圆圈表示为饱和液态，$x = 0$；虚线圆圈表示为饱和气态，$x = 1$。
-\nomenclature{$x$}{干度}
 
 梯级系统的水循环的温熵图如图\ref{fig:Ts_Water1}所示。过程曲线$2a$-$2c$-$2b$表示汽轮机内蒸汽做功的过程，其焓熵曲线图如图\ref{fig:SteamTurbine_hs}所示。状态点$2b$和$i,2b$的压力相等，状态点$2c$和$i,2c$的压力相等。为了简化汽轮机内效率的计算，假定汽轮机在不同负荷、不同级中的相对内效率不变，即
 \begin{equation}
@@ -792,27 +665,24 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
   \begin{equation}
   P_{tb}=\left(1-y\right)\dot{m}_{2}\left(h_{2a}-h_{2b}\right)+y\dot{m}_{2}\left(h_{2a}-h_{2c}\right)
   \end{equation}
-  \nomenclature{$y$}{汽轮机的抽汽率}
+ 
   
   过程$2b$-$2d$表示凝汽器中的换热工况。凝汽器的出口水是饱和液态水，其出口温度$T_{2d}$和出口焓值$h_{2d}$由汽轮机的排汽压力$p_c$确定。
   凝汽器释放的热量
   \begin{equation}
       Q_{cd} = (1-y)\dot{m}_2 (h_{2b} - h_{2d})
 \end{equation}
-\nomenclature[S]{$cd$}{凝汽器}
 
   除氧器的各进口压力和出口压力相等，状态点$2c$、$2f$和$2g$具有相同的压力（等于$p_e$）。除氧器的出口水是饱和液态水，其焓值可以由$p_e$确定。
   由能量平衡方程
   \begin{equation}
   y h_{2c} + (1-y) h_{2f} = h_{2g}
 \end{equation}
-\nomenclature{$p_e$}{汽轮机抽汽压力, Pa} 
  
   泵消耗的总功率
 \begin{equation}
 	P_{pu}=\left(1-y\right)\dot{m}_{2}\left(h_{2e}-h_{2d}\right)+\dot{m}_{2}\left(h_{2h}-h_{2g}\right)
-\end{equation}
-\nomenclature[S]{$pu$}{泵}    
+\end{equation}   
 其中，$h_{2e}$可以通过方程$\eta_{pu} = (h_{i,2e}-h_{2d})/(h_{2e}-h_{2d})$获得，$h_{2h}$可以通过方程$\eta_{pu} = (h_{i,2h}-h_{2g})/(h_{2h}-h_{2g})$获得。$h_{i,2e}$由$s_{2d}$和$p_e$决定，$h_{i,2h}$由$s_{2g}$和$p_s$决定。
 
 由于除氧器的出口水是饱和液态水，其出口温度$T_{2g}$和出口焓值$h_{2g}$由除氧器的压力$p_{2g}$决定。
@@ -845,19 +715,18 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\includegraphics[width = \columnwidth]{fig/Ts_b.pdf}
 	\caption{ORC的$T$-$s$图}\label{fig:Ts_organic}
 	\end{subfigure}
-	
-	\caption{朗肯循环的$T$-$s$图}\label{fig:Ts}
-\end{figure}
-
-\noindent \begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width = 0.4\columnwidth]{fig/ORCsystem2.pdf}
-	\caption{具有回热器的ORC系统结构示意图}
-	\label{fig:ORCsystem2}
-\end{center}
+	\caption{朗肯循环的$T$-$s$图}
+	\label{fig:Ts}
 \end{figure}
 
 水工质朗肯循环和典型有机工质朗肯循环的$T$-$s$图分别如图\ref{fig:Ts_Water}和图\ref{fig:Ts_organic}所示。在典型有机工质循环（其系统结构图如图\ref{fig:ORCsystem2}）中，循环效率可以通过使用回热器来得到提升。这是因为汽轮机出口工质是过热气体，其温度比对应压力下的凝汽温度高。利用这部分高出的温度可以给加压的凝结液提供热量。通常会在有机工质汽轮机的出口和蒸发器的进口之间安装一个逆流布置的回热器。回热器可以回收部分热量，从而降低对热源的需求，提升循环的效率。
+
+\noindent \begin{figure}[htbp]
+\centering
+	\includegraphics[width = 0.4\columnwidth]{fig/ORCsystem2.pdf}
+	\caption{具有回热器的ORC系统结构示意图}
+	\label{fig:ORCsystem2}
+\end{figure}
 
 汽轮机的相对内效率为
 \begin{equation}
@@ -906,25 +775,21 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 
 为了更加清晰地理解这些换热器的机理建模理论，本文使用图\ref{fig:PES}中的蒸汽发生系统作为例子进行详细分析，其传热过程如图\ref{fig:PES_TQ}所示。
 
-%State points of different fluids are marked on the sketch. The number indicates the type of the fluid, the letter indicates the state point of the fluid. State points with solid circle indicate saturated liquid states ($x = 0$\nomenclature{$x$}{Dryness fraction}), and with dotted circle indicates saturated gas states ($x = 1$).
+蒸汽发生系统的机理建模过程从本质上来看，是求解各未知状态点的过程。需要再次提出的是，由于水和导热油在换热过程中都没有压降，对于饱和状态，由于其干度已知，其状态是确定的；对于不饱和状态，只要知道了温度或焓值，那么其状态也可以确定。这意味着，知道了温度可以求出焓值，反之亦然。
 
-\noindent \begin{figure}[!ht]
-\begin{center}
+\noindent \begin{figure}[ht!]
+	\centering
 	\includegraphics[width = 0.8\columnwidth]{fig/PES}
 	\caption{用于分析蒸汽发生系统的梯级系统结构图}
 	\label{fig:PES}
-\end{center}
 \end{figure}
 
-\noindent \begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width = 0.5\columnwidth]{fig/PES_TQ}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width = 0.6\columnwidth]{fig/PES_TQ}
 	\caption{蒸汽发生过程的$T$-$Q$曲线图}
 	\label{fig:PES_TQ}
-\end{center}
 \end{figure}
-
-蒸汽发生系统的机理建模过程从本质上来看，是求解各未知状态点的过程。需要再次提出的是，由于水和导热油在换热过程中都没有压降，对于饱和状态，由于其干度已知，其状态是确定的；对于不饱和状态，只要知道了温度或焓值，那么其状态也可以确定。这意味着，知道了温度可以求出焓值，反之亦然。
 
 对于如图\ref{fig:PES}所示的典型的蒸汽发生系统的建模过程，水工质质量流量$\dot{m}_2$，状态点$2h$和状态点$2k$都由汽轮机及朗肯循环的参数确定，可以看作已知量。状态点$3a$的状态由槽式镜场的设计参数确定，状态点$2i$和$2j$的状态可以由其干度确定。
 
@@ -991,11 +856,10 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 小，则接受该估值；否则，依据隆戈库塔法迭代调整估值，并重新进行计算，直至新估值与计算得到的过热器出口油温之差的绝对值小于允许误差。
 
 \begin{figure}[htbp]
-\begin{center}
+	\centering
 	\includegraphics[width = 0.8\columnwidth]{fig/SystemFlow}
 	\caption{太阳能光热发电系统设计软件结构图}
 	\label{fig:SystemFlow}
-\end{center}
 \end{figure}
 
 完成各部件的数学机理研究和运行特征分析后，利用MATLAB的数学计算和建模分析等功能，采用面向对象的方式，以运行库文件和各模型基础模块为基础，编写设计软件的主程序，开发了具有软件著作权的太阳能光热发电系统设计软件。图\ref{fig:SystemFlow}是太阳能光热发电系统设计软件结构图。该设计软件具有系统部件选择、部件模型选择、部件连接、设定系统参数、模拟计算、结果分析等功能。
@@ -1012,3 +876,64 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 本文还利用MATLAB的数学计算和建模分析等功能，以运行库文件和各模型基础模块为基础，编写设计软件的主程序，完成了具有软件著作权的太阳能光热发电系统设计软件的开发工作，为本文研究中的大量的建模仿真分析工作提供了坚实的基础。
 
 本文建立的关键部件模型可以通过实验或与经典模型进行比较等方式进行验证。斯特林机的验证工作表明，与传统的经典的斯特林机模型相比，本文所建立的模型在不同的转速和平均有效压力下，具有与实验数据更接近的性能结果。
+
+\nomenclature[S]{$pu$}{泵} 
+\nomenclature[S]{$h$}{加热流体; 齐次解}
+\nomenclature[S]{$c$}{冷却流体; 逆流}
+\nomenclature{$p_e$}{汽轮机抽汽压力, Pa} 
+\nomenclature{$c_p$}{定压比热容, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
+\nomenclature{$T_w$}{壁温, K}
+\nomenclature{$A$}{面积, m$^2$}
+\nomenclature[S]{$cd$}{凝汽器}
+\nomenclature{$Z$}{置换器的往复长度, m}
+\nomenclature{$J$}{置换器与圆柱体内壁之间的缝隙大小, m}
+\nomenclature[S]{$r$}{回热器}
+\nomenclature{$p$}{压力, Pa}
+\nomenclature[S]{$cw$}{冷却器壁面}
+\nomenclature[S]{$hw$}{加热器壁面}
+\nomenclature{$P$}{功率, W}
+\nomenclature{$s_{se}$}{斯特林机转速, Hz}
+\nomenclature{$x$}{干度}
+\nomenclature{$Q$}{吸热量, W}
+\nomenclature{$c_v$}{定容比热容, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
+\nomenclature{$k$}{热容比 ($c_p/c_v$)；导热率, W$\cdot$m$^{-1}\cdot$K$^{-1}$}
+\nomenclature[G]{$\gamma_H$}{过程12的容积率}
+\nomenclature[G]{$\gamma_L$}{过程34的容积率}
+\nomenclature{$V_E$}{膨胀体积, m$^3$}
+\nomenclature{$V_C$}{压缩体积, m$^3$}
+\nomenclature{$m_{se}$}{单台斯特林机中的工质的质量, kg}
+\nomenclature{$R$}{气体常数, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
+\nomenclature{$V_D$}{死区容积, m$^3$}
+\nomenclature{$V_{DH}$}{热头死区容积, m$^3$}
+\nomenclature{$V_{DR}$}{回热器死区容积, m$^3$}
+\nomenclature{$V_{DC}$}{冷头死区容积, m$^3$}
+\nomenclature{$Pr$}{普朗特数}
+\nomenclature{$Re$}{雷诺数}
+\nomenclature[G]{$\mu$}{动力粘度, kg$\cdot$m$^{-1}$$\cdot$s$^{-1}$}
+\nomenclature[S]{$w$}{管壁}
+\nomenclature{$Nu$}{努塞尔数}
+\nomenclature{$c_r$}{螺旋管的螺旋因子}
+\nomenclature[S]{$dr$}{碟式接收器}
+\nomenclature[S]{1}{空气} 
+\nomenclature[S]{2}{水} 
+\nomenclature[S]{3}{导热油}  
+\nomenclature[G]{$\delta$}{厚度, m}
+\nomenclature[S]{$insu$}{绝热层}
+\nomenclature{$l$}{深度, m}
+\nomenclature{$d$}{直径, m}
+\nomenclature[G]{$\lambda$}{导热率, W$\cdot{}$m$^{-1}$$\cdot$K$^{-1}$}
+\nomenclature[G]{$\epsilon$}{发射率}
+\nomenclature[G]{$\theta_{dc}$}{碟式集热器开口角度 (0$^{\circ}$表示水平, 90$^{\circ}$表示竖直向下)}
+\nomenclature[G]{$\gamma$}{拦截因子；压缩比}
+\nomenclature[G]{$\rho$}{反射率}
+\nomenclature{$n_g$}{单台斯特林机中的工质的物质的量, mol}
+\nomenclature{$U$}{整体换热系数, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
+\nomenclature{$q''$}{热流密度, W$\cdot$m$^{-2}$}
+\nomenclature{$e$}{回热率}
+\nomenclature{$T_R$}{有效回热温度, K}
+\nomenclature{$T_L$}{冷腔温度, K}
+\nomenclature{$T_H$}{热量温度, K}
+\nomenclature{$W$}{输出功, J}
+\nomenclature[S]{$th$}{理论值}
+\nomenclature{$y$}{汽轮机的抽汽率}
+\nomenclature{$K$}{容积因子}

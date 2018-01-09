@@ -2,12 +2,11 @@
 
 第\ref{cha:SystemTopology}章中通过对梯级系统拓扑结构的研究，提出了两种典型的太阳能光热梯级系统的拓扑结构。这两种结构都采用了多种型式的集热器和多个热力循环来实现能量的梯级收集和梯级利用。本章主要研究第一种拓扑结构，因为它使用更加广泛，也更适合大规模利用。图\ref{fig:System-1}为其拓扑结构示意图，在该系统结构中，碟式集热器用于为斯特林机和空气-水换热器提供热源，槽式集热器用于为朗肯循环的蒸汽发生过程提供热源。碟式集热器出口的高温空气先为斯特林机供热，以实现较高的转换效率，接着再进入空气-水换热器为朗肯循环提供热量。朗肯循环的凝结水用于冷却斯特林机组，以回收利用斯特林机组释放的热量。斯特林机组以串联的形式连接以获得最佳的性能。
 
-\noindent \begin{figure}[htbp]
-\begin{center}
+\begin{figure}[htbp]
+\centering
 	\includegraphics[width = 0.8\columnwidth]{fig/cascadeSystem}
 	\caption{梯级系统结构示意图}
 	\label{fig:System-1}
-\end{center}
 \end{figure}
 
 梯级系统的水回路的$T$-$s$图如图\ref{fig:T-s_Water2}所示。在朗肯循环中，过程$2e$-$2f$的热量由斯特林机组提供，其传热过程曲线图如图\ref{fig:HeatTransfer_Water-SEs}所示。
@@ -75,14 +74,11 @@
 \subsection{梯级系统性能指标}
 
 梯级系统同时使用不同类型的集热器和不同种类的热力循环，它们相互耦合在一起。无法评价某一种型式的集热器收集的能量所产生的电能及其光电转换效率。一个更加通用的选择是定义系统的整体效率。梯级系统的整体光电转换效率定义为总的输出功除以总的输入太阳能。
-
 \begin{equation}
 	\eta_{cs}=\dfrac{P_{cs}}{I_rA_{cs}} = \dfrac{P_{rk}+ P_{sea}}{I_rA_{tc} + I_rA_{dc}}
 \end{equation}
-\nomenclature[S]{$rk$}{朗肯循环}
 
 其中，$P_{rk}$是朗肯循环的输出功率，$P_{sea}$是所有斯特林机的输出功率之和。
-
 \begin{equation}
 	P_{rk} = P_{tb} - P_{pu} / \eta_{ge}
 \end{equation}
@@ -110,20 +106,16 @@
 
 在独立槽式-朗肯循环系统中，槽式集热器选取与梯级系统中相同的集热器。汽轮机、发电机、除氧器等部件用相同的部件以变工况的形式运行。
 汽轮机的设计参数和相对内效率与梯级系统中的汽轮机一样。除氧器的工作压力与梯级系统中的一样。于是，图\ref{fig:Stand-alone-systems}中汽轮机的状态点$2b,s$和$2c,s$的参数可以由下式求出
-\nomenclature[S]{$s$}{独立系统}
-
 \begin{equation}
 	\eta_{i,tb}= (h_{2a,s}-h_{2b,s})/(h_{2a,s}-h_{i,2b,s}) = (h_{2a,s}-h_{2c,s})/(h_{2a,s}-h_{i,2c,s})
 \end{equation}
 
 汽轮机的输出功率
-
 \begin{equation}
 	P_{tb,s}=\left(1-y_{s}\right)\dot{m}_{2,s}\left(h_{2a,s}-h_{2b,s}\right)+y_{s}\dot{m}_{2,s}\left(h_{2a,s}-h_{2c,s}\right)
 \end{equation}
 
 发电机的输出功率
-
 \begin{equation}
 	P_{ge,s}=P_{tb,s}\eta_{ge}
 \end{equation}
@@ -134,13 +126,11 @@
 \end{equation}
 
 水循环的吸热量
-
 \begin{equation}
 	Q_{2,s}=\dot{m}_{2,s}\left(h_{2a,s}-h_{2g,s}\right)
 \end{equation}
 
 发电机的效率和梯级系统中发电机的效率相同，所以朗肯循环的效率可以表示为
-
 \begin{equation}
 	\eta_{rk,s}=(P_{tb,s}-P_{pu,s}/\eta_{ge})/Q_{2,s}
 \end{equation}
@@ -151,18 +141,15 @@
 为了和现有技术进行对比，将具有和碟式集热器相同数目的斯特林机放置于各碟式集热器的焦点处。斯特林机利用水来冷却。$T_{H,s}$选择为碟式集热器出口的空气温度，即1073$\,\mathrm{K}$。$T_{L,s}$依据Fraser的论文\cite{Fraser2008}中的默认膨胀腔的温度数据选定为310$\,\mathrm{K}$。$k$和$\gamma$选择和梯级系统中的斯特林机相同。
 
 由于冷热流体的改变（冷流体改用了冷却水，选用固定膨胀腔温度的方式进行计算；取消了热流体，而采用太阳辐射直接照射的方式让斯特林机直接从太阳辐射中获取能量），本文建立的斯特林机模型不能应用于该独立碟式-斯特林机系统中的斯特林机。采用经典的斯特林机模型公式来计算斯特林机的效率\cite{Stine1998}：
-
 \begin{equation}
 	\eta_{sea,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\gamma}}
 \end{equation}
-
 其中，$T_{R,s}=\dfrac{T_{H,s}-T_{L,s}}{\ln(T_{H,s}/T_{L,s})}$，$e_{s}=\dfrac{T_{R,s}-T_{L,s}}{T_{H,s}-T_{L,s}}$。
 
 斯特林机组的总输出功率为
 \begin{equation}
 	P_{sea,s}=n_{dc}A_{dc}I_r\eta_{dc}\eta_{sea,s}
 \end{equation}
-\nomenclature{$n$}{数目}
 
 \section{系统参数设置}
 
@@ -197,9 +184,9 @@ $I_r = 700\,\mathrm{W/m^2}$，$T_{amb} = 293\,\mathrm{K}$，$p_{amb} = 1\times10
 由于LUZ公司的LS-3型号的集热器的实验数据比较丰富，本文选用它作为槽式集热器。它的主要参数见表\ref{tab:TroughParameters}~\cite{Fernandez2010}。
 
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{-10pt}
+\setlength{\abovecaptionskip}{0pt}
 	\caption{LS-3型槽式集热器的主要参数}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		参数		&	值	&	参数		&	值	&	参数		&	值\\
@@ -212,10 +199,8 @@ $I_r = 700\,\mathrm{W/m^2}$，$T_{amb} = 293\,\mathrm{K}$，$p_{amb} = 1\times10
 $\alpha$	&	$0.96$	&	$Fe$	&	$0.97$\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:TroughParameters}
 \end{table}
-\nomenclature{$f$}{焦距, m}
 
 \item 碟式集热器
 
@@ -252,9 +237,9 @@ $\alpha$	&	$0.96$	&	$Fe$	&	$0.97$\\
 梯级系统的主要设计参数归纳见表\ref{tab:CascadeSystemParameters}。
 
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{-10pt}
+\setlength{\abovecaptionskip}{0pt}
 	\caption{梯级系统的基本设计参数}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		参数		&	值	&	参数		&	值	&	参数		&	值\\
@@ -265,10 +250,9 @@ $\alpha$	&	$0.96$	&	$Fe$	&	$0.97$\\
 		$v_{amb}$	&	$1\,\mathrm{m/s}$	&	$T_{tc,o}$	&	$623\,\mathrm{K}$	&	$p_c$	&	$1.5\times10^4\,\mathrm{Pa}$\\
 		$P_{ge}$	&	$6\times10^6\,\mathrm{W}$	&	
 $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
-		$T_{dc,i}$		&	$623\,\mathrm{K}$	&	$T_{1b}$	&	$673\,\mathrm{K}$	&	$p_{de}$ 	& 	$1\times10^6\,\mathrm{Pa}$\\			
-		\bottomrule
+		$T_{dc,i}$		&	$623\,\mathrm{K}$	&	$T_{1b}$	&	$673\,\mathrm{K}$	&	$p_{de}$ 	& 	$1\times10^6\,\mathrm{Pa}$\\
+	\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:CascadeSystemParameters}
 \end{table}
 
@@ -277,9 +261,9 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 在设计参数条件下，经过系统建模和仿真，得到梯级系统和其对应的独立系统的结果如表\ref{tab:importantResults}所示。其中，梯级系统的斯特林机组采用串联逆流的排列方式（第3种基本排列方式）。可以发现，在设计参数条件下，梯级系统可以获得比其对应的独立系统更高的光热发电效率。尽管梯级系统斯特林机组的效率较低，但朗肯循环的效率更高。梯级系统可以获得额外$3.83\times10^4\,\mathrm{W}$的功率输出。
 
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{-10pt}
+\setlength{\abovecaptionskip}{0pt}
 	\caption{设计参数下，梯级系统和其对应的独立系统的模拟分析结果}
-	\begin{center}
+	\centering
 	\begin{tabular}{p{1cm}<{\centering} p{1.75cm}<{\centering} p{1cm}<{\centering} p{1.75cm}<{\centering} p{1cm}<{\centering} p{3cm}<{\centering}}
 		\toprule
 		参数		&	值	&	参数		&	值	&	参数		&	值\\
@@ -290,40 +274,30 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 		$\eta_{sea}$	&	0.3407	&	$P_{ge}$		&	$6\times10^6\,\mathrm{W}$	&	$P_{diff}$		&	$3.830\times10^4\,\mathrm{W}$\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:importantResults}
 \end{table}
-\nomenclature[S]{$cs$}{梯级系统}
-\nomenclature[S]{$se$}{斯特林机}
-\nomenclature[G]{$\eta_{diff}$}{梯级系统效率与其对应独立系统的效率差, $\eta_{cs}-\eta_{s}$}
-\nomenclature[S]{$sea$}{斯特林机组}
-%\nomenclature{$P_{sea,s}$}{Total power of Stirling engines in stand-alone dish system, W}
+
 接下来的各小节分析在不同因素的影响下，梯级系统与其对应的独立系统之间的效率差异$\eta_{diff}$的分析。
 \subsection{法向直射强度$I_r$的影响}
 \label{sec:I_r}
 
 法向直射强度$I_r$对梯级系统和独立系统都有影响，因此对两种系统的效率差异（$\eta_{diff}$）也会有影响。$I_r$对$\eta_{diff}$的影响曲线图如图\ref{fig:I_r-eta_diff}所示。从图中可以发现，对于较高的辐射强度（$I_r > 550\,\mathrm{W/m^2}$），$\eta_{diff}>0$，梯级系统可以获得更高的光电转换效率。对于较低的辐射强度（$I_r < 550\,$W/m$^2$），$\eta_{diff}$可能为负值。在这种条件下，梯级系统的光电转换效率要低于其对应的独立系统。这可以被解释为，由于梯级系统使用朗肯循环的给水来冷却斯特林机，随着给水温度的升高，这种冷却方式将会削弱斯特林机的冷却效果，导致斯特林机功率和效率的下降。对于较低的辐射强度，汽轮机功率的增加量要小于斯特林机组因此带来的功率损失。而随着辐射强度的增大，凝结水吸收的热量给汽轮机带来的功率提升逐渐高于斯特林机的功率损失。此外，在高辐射强度的条件下，不同型式的集热器具有更显著的集热性能差异，更能体现出梯级集热带来的益处。所以，太阳法向直射强度$I_r$较高的地区更适合采用梯级系统。这意味着太阳法向直射强度是梯级系统选址所需要考虑的一个重要因素。
-
-\nomenclature[G]{$\beta$}{斯特林机发电功率占系统发电总功率的比例}
-
-\noindent \begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/I_r-eta_diff}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width = 0.9\columnwidth, angle = 0]{fig/I_r-eta_diff}
 	\caption{法向直射强度$I_r$对$\eta_{diff}$的影响曲线图}
 	\label{fig:I_r-eta_diff}
-\end{center}
 \end{figure}
 
 \subsection{斯特林机发电比例$\beta$的影响}
 
 表\ref{tab:importantResults}中的结果表明，在设计参数条件下，梯级系统带来的效率提升非常低。其中的一个原因就是斯特林机发电功率占系统发电总功率的比例$\beta$太小。这样被朗肯循环给水吸收的斯特林机组释放的热量只占朗肯循环吸收总热量的一小部分，梯级利用的效果并不明显。所以，增加$\beta$可以增加梯级利用的效果，可能会获得更大的$\eta_{diff}$。不同太阳辐射强度条件下的$\beta$对$\eta_{diff}$的影响如图\ref{fig:beta-eta_diff}所示。可以发现，对于较高的太阳法向直射辐射，增加$\beta$可以获得更高的效率提升，但是，这个提升存在极限值。对于$I_r=900$W/m$^2$，当$\eta_{diff}=0.0228$时，获得最大效率提升值$\eta_{diff}=0.0228$。对于较低的太阳法向直射辐射，$\eta_{diff}$为负值，增加$\beta$将会进一步减小$\eta_{diff}$。这可以解释为，$\beta$的增大将会恶化斯特林机组的散热，使斯特林机组性能下降。
 
-\noindent \begin{figure}[H]
-\begin{center}
+\begin{figure}[H]
+\centering
 	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/beta-eta_diff}
 	\caption{斯特林机发电比例$\beta$对$\eta_{diff}$的影响曲线图}
 	\label{fig:beta-eta_diff}
-\end{center}
 \end{figure}
 
 \subsection{冷热流体流动方向的影响}
@@ -331,9 +305,9 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 正如第\ref{cha:optSEA}章中提到的，斯特林机组的排列方式对系统的发电效率有影响。采用串联连接是最好的连接方式。本小节研究在串联连接的条件下，冷热流体流动方向（顺流逆流）对$\eta_{diff}$的影响。同逆流相比，顺流会导致前面的斯特林机的功率和效率更高，而后面的斯特林机的功率和效率更低。
 
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{-10pt}
+\setlength{\abovecaptionskip}{0pt}
 	\caption{斯特林机组采用不同流体流动方向时的模拟结果}
-	\begin{center}
+	\centering
 	\begin{tabular}{ccccccccc}
 		\toprule
 		\multirow{3}{*}{$x$}	&	\multicolumn{4}{c}{顺流}	&\multicolumn{4}{c}{逆流}\tabularnewline
@@ -353,42 +327,35 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 		10	&	703.75	&	346.43	&	2304	&	0.2989	&	704.37	&	328.82	&	2450	&	0.3106\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:SEAresults}
 \end{table}
 
 两种不同流体流动方向的模拟结果见表\ref{tab:SEAresults}。冷热流体在不同斯特林机处的温度以及不同斯特林机的效率的拟合曲线如图\ref{fig:Parallelflow}和图\ref{fig:Counterflow}所示。
 
-\begin{figure}[hbp]
-\begin{center}
+\begin{figure}[ht!]
+\centering
 	\includegraphics[width = 0.8\columnwidth]{fig/Parallelflow.pdf}
 	\caption{顺流时，各斯特林机的效率及其进出口流体温度的拟合曲线图}
 	\label{fig:Parallelflow}
-\end{center}
 \end{figure}
 
-\begin{figure}[htbp]
-\begin{center}
+\begin{figure}[ht!]
+\centering
 	\includegraphics[width = 0.8\columnwidth]{fig/Counterflow.pdf}
 	\caption{逆流时，各斯特林机的效率及其进出口流体温度的拟合曲线图}
 	\label{fig:Counterflow}
-\end{center}
 \end{figure}
 
 可以发现，相比于热流体温度变化量，冷流体的温度增量非常小，这是因为冷流体（水）具有大得多的热容量$\dot{m}c_p$。这也使得两种流动方向的斯特林机组的性能差异很小。
 
 \begin{figure}[htbp]
-\begin{center}
+\centering
 	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/SEAflowtypes}
 	\caption{斯特林机组效率与冷却流体流量之间的曲线关系图}
 	\label{fig:SEAflowtypes}
-\end{center}
 \end{figure}
 
 为了更加清晰地找出两种流动方向的差异，本文建立了简单的斯特林机组模型，并进行了模拟分析。$T_{1,i}，T_{1,o}，T_{2,i}及q_{1,m}$设定为固定值，并和梯级系统中的值相同。通过改变$q_{2,m}$的值，研究不同冷却水流量的条件下，两种流动方向的斯特林机组的效率（对应顺流和逆流，分别为$\eta_p$和$\eta_c$）。斯特林机组的效率曲线图如图\ref{fig:SEAflowtypes}所示，可以发现，逆流方式具有比顺流方式更高的斯特林机组效率。但是，随着$q_{2,m}$的增大，这种差异越来越小。
-
-\nomenclature[S]{$p$}{顺流; 特解; 活塞}
-%\nomenclature[S]{$c$}{Counterflow}
 
 对于冷热流体的热容量$\dot{m}c_p$差别很大的系统，这意味着一种流体流经斯特林机换热之后的温度变化量很小，这时采用顺流和逆流对系统效率的影响很小。对于冷热流体的热容量相差不大的系统，采用逆流方式将会获得更高的效率。
 
@@ -401,4 +368,13 @@ $p_{tc}$	&	$2\times10^6\,\mathrm{Pa}$	&	$T_{s,d}$	&	$663\,\mathrm{K}$\\
 
 结果表明，太阳法向直射辐射是决定梯级系统是否具有更高效率的决定因素。同其对应的独立系统相比，梯级系统在较高辐射强度的条件下（$I_r > 550\,\mathrm{W/m^2}$）具有更高的发电效率。当$I_r=900$W/m$^2$，$\eta_{diff}=0.0228$时，梯级系统可以获得$\eta_{diff}=0.0228$的效率提升。此外，增加斯特林机组的发电比例也是增大梯级系统发电效率提升的方法之一。本章还考虑了冷热流体流动方向对梯级系统的影响。分析表明，对于冷热流体热容量相差不大的情况，采用逆流方式是最佳的选择方案。
 
-%However, it has to be pointed out that this thesis uses a simple Stirling cycle efficiency formula given in the book~\cite{Stine1985}. This formula takes no consideration of various losses and irreversibilities, such as pressure drop, shuttle conduction, finite speed of piston and mechanical friction. The heat transfer process between the fluids and the Stirling engines has been simplified to be constant heat transfer coefficient. However, the imperfect model of the Stirling engine doesn't affect the idea of solar thermal cascade system presented in this thesis. More accurate Stirling engine model can be applied to achieve higher accuracy of the system in the future work. Besides, a cascade system with a different $\beta$ not only affects the efficiency of the system but also changes the portion of dish collector area to the total collector area, which will affect the cost. The cost analysis and optimization research of the cascade system is not included in this thesis, which are worthy candidates for further research.
+\nomenclature[S]{$rk$}{朗肯循环}
+\nomenclature[S]{$s$}{独立系统}
+\nomenclature{$f$}{焦距, m}
+\nomenclature{$n$}{数目}
+\nomenclature[S]{$cs$}{梯级系统}
+\nomenclature[S]{$se$}{斯特林机}
+\nomenclature[G]{$\eta_{diff}$}{梯级系统效率与其对应独立系统的效率差, $\eta_{cs}-\eta_{s}$}
+\nomenclature[S]{$sea$}{斯特林机组}
+\nomenclature[G]{$\beta$}{斯特林机发电功率占系统发电总功率的比例}
+\nomenclature[S]{$p$}{顺流; 特解; 活塞}

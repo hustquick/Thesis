@@ -10,7 +10,7 @@
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=1.0\textwidth]{fig/platform.jpg}
+\includegraphics[width=0.9\textwidth]{fig/platform.jpg}
 \caption{太阳能聚光集热实验台的结构示意图}\label{fig:platform}
 \end{figure}
 太阳能聚光集热实验台的结构示意图如图\ref{fig:platform}所示。不同的流体构建了三个回路，包括空气回路、油回路和有机工质回路。
@@ -45,9 +45,9 @@
 集热器的焦点处放置有自行设计的接收器，如图\ref{fig:DishCollector}的右上角所示。
 碟式集热器的各重要参数见表\ref{tab:ddc}。
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{-10pt}
+\setlength{\abovecaptionskip}{0pt}
 	\caption{碟式集热器的重要参数列表}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		参数		&	值	&	参数		&	值	&	参数		&	值\\
@@ -59,7 +59,6 @@
 		$\lambda_{insu}$	&	0.06$\,\mathrm{W/(m\cdot K)}$	&	$A_{dc}$	&	23.3$\,\mathrm{m^2}$	&	\\		
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:ddc}
 \end{table}
 碟式集热器采用YYGN-GR-1A型双轴跟踪系统，该跟踪系统同时采用算法跟踪和传感器跟踪。除了自动跟踪功能外，该跟踪系统还提供了手动调整集热器朝向的功能。通常在进行聚焦工作时，先启用手动模式，将集热器粗略调整至朝向太阳的方向，然后再启用自动模式，利用传感器精确对准太阳，并启用跟踪算法，实现连续精确地跟踪太阳。这为碟式集热器提供了非常精确的跟踪方式，其误差小于0.2$^\circ$，且没有累积误差。
@@ -128,10 +127,10 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在额定�
 
 考虑到太阳法向直射强度在晴天具有不可控性和相对连续性，当以太阳法向直射强度为控制变量时，其值不能控制为设计值，而应该为实测值。当需要固定太阳法向直射强度时，应该尽量控制实验的总时间，以减少太阳法向直射强度变化带来的影响。
 
-\begin{table}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
+\begin{table}[htbp]
+\setlength{\abovecaptionskip}{0pt}
 	\caption{太阳能槽式系统的设计工况}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccc}
 		\toprule
 		工况编号	& $I_r$（$\mathrm{W/m^2}$）&	流量（$\mathrm{kg/s}$）			&	入口油温（$\mathrm{K}$）\\
@@ -149,7 +148,6 @@ ORC系统采用导热油作为热源，采用自来水作为冷源。在额定�
 		20	&	实测值	&	0.2	&	453.2\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:DesignedCasesForTrough}
 \end{table}
 
@@ -212,10 +210,10 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 
 \subsubsection{实验设计工况}
 
-\begin{table}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
+\begin{table}[htbp]
+\setlength{\abovecaptionskip}{0pt}
 	\caption{太阳能碟式系统的设计工况}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccc}
 		\toprule
 		工况编号	& $I_r$（$\mathrm{W/m^2}$）	&	流量（$\mathrm{kg/s}$）			&	入口温度（$\mathrm{K}$）\\
@@ -233,7 +231,6 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 		20	&	实测值	&	0.03	&	463.2\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:DesignedCasesForDish}
 \end{table}
 
@@ -255,10 +252,10 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 
 \subsubsection{法向直射强度$I_r$的影响}
 
-\begin{table}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
+\begin{table}[htbp]
+\setlength{\abovecaptionskip}{0pt}
 	\caption{槽式集热器在工况1到工况10条件下的实验结果}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
@@ -275,7 +272,6 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 		10	&	652	&	0.2	&	433.2	&	470.2	&	278.9\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:ResultOfTrough1}
 \end{table}
 工况1到工况10的实验结果如表\ref{tab:ResultOfTrough1}所示。需要指出的是，由于太阳能辐射强度的不可控性和多变性，表中太阳法向直射强度$I_r$的实测值分布并不均匀。$I_r$对集热器效率的影响曲线见图\ref{fig:I_r-eta-trough}。图中还显示了模型计算的结果。模型所采用的参数和实验参数相同。
@@ -292,10 +288,10 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 
 \subsubsection{导热油质量流量$\dot{m}$的影响}
 
-\begin{table}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
+\begin{table}[htbp]
+\setlength{\abovecaptionskip}{0pt}
 	\caption{槽式集热器在工况11到工况15条件下的实验结果}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
@@ -307,7 +303,6 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 		15	&	612	&	0.5	&	433.2	&	447.6	&	286.7\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:ResultOfTrough2}
 \end{table}
 工况11到工况15的实验结果如表\ref{tab:ResultOfTrough2}所示。这些数据点都在半个小时内完成采集，以减小太阳辐射变化带来的影响。导热油质量流量对集热器集热效率的影响曲线见图\ref{fig:q_m-eta-trough}。
@@ -323,10 +318,10 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 
 \subsubsection{入口油温$T_i$的影响}
 
-\begin{table}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
+\begin{table}[htbp]
+\setlength{\abovecaptionskip}{0pt}
 	\caption{槽式集热器在工况16到工况20条件下的实验结果}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
@@ -338,7 +333,6 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 		20	&	615	&	0.2	&	453.2	&	486.8	&	286.3\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:ResultOfTrough3}
 \end{table}
 工况16到工况20的实验结果如表\ref{tab:ResultOfTrough3}所示。导热油入口温度对槽式集热器集热效率的影响曲线见图\ref{fig:T_i-eta-trough}。
@@ -356,10 +350,10 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 %Influences of solar irradiance, flow rate and inlet temperature of the working fluid on the collector thermal performance are concerned.
 \subsubsection{法向直射强度$I_r$的影响}
 
-\begin{table}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
+\begin{table}[htbp]
+\setlength{\abovecaptionskip}{0pt}
 	\caption{碟式集热器在工况1到工况10条件下的实验结果}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
@@ -376,12 +370,11 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 		10	&	683	&	0.03	&	423.2	&	719.4	&	289.5\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:ResultOfDish1}
 \end{table}
 工况1到工况10的实验结果如表\ref{tab:ResultOfDish1}所示。太阳法向直射强度$I_r$对集热器效率的影响曲线如图\ref{fig:I_r-eta-dish}所示。图中还显示了模拟计算的结果。模型所采用的参数和实验参数相同。
 %The optical efficiency fo the dish collector is manually reduced to simulate the real situation of the spilled focused spot.
-\begin{figure}[!ht]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/I_r-eta-dish}
 \caption{法向直射强度$I_r$对碟式集热器效率的影响}
@@ -406,10 +399,10 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 
 \subsubsection{质量流量$\dot{m}$的影响}
 
-\begin{table}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
+\begin{table}[htbp]
+\setlength{\abovecaptionskip}{0pt}
 	\caption{碟式集热器在工况11到工况15条件下的实验结果}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
@@ -421,7 +414,6 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 		15	&	613	&	0.05	&	423.2	&	597.8	&	286.7\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:ResultOfDish2}
 \end{table}
 工况11到工况15的实验结果如表\ref{tab:ResultOfDish2}所示。这些数据点都在半个小时以内完成采集，以减小太阳辐射变化带来的影响。空气流量对槽式集热器集热效率的影响曲线见图\ref{fig:q_m-eta-dish}。
@@ -437,10 +429,10 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 
 \subsubsection{入口温度$T_i$的影响}
 
-\begin{table}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{-10pt}
+\begin{table}[htbp]
+\setlength{\abovecaptionskip}{0pt}
 	\caption{碟式集热器在工况16到工况20条件下的实验结果}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccc}
 		\toprule
 		工况编号	& $I_r$ ($\mathrm{W/m^2}$)	&	$\dot{m}$ ($\mathrm{kg/s}$)			&	$T_i$ ($\mathrm{K}$)	&	$T_o$ ($\mathrm{K}$)		&	$T_{amb}$ ($\mathrm{K}$)\\
@@ -452,7 +444,6 @@ $U(T_{abs})$由下式得到\cite{Romero2007}：
 		20	&	615	&	0.03	&	463.2	&	722.2	&	288.9\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:ResultOfDish3}
 \end{table}
 工况16到工况20的实验结果如表\ref{tab:ResultOfDish3}所示。空气入口温度对碟式集热器效率的影响曲线如图\ref{fig:T_i-eta-dish}所示。

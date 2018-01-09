@@ -5,16 +5,17 @@
 
 现有的经过商业验证的太阳能热发电技术有三种——太阳能槽式发电，太阳能碟式发电和太阳能塔式发电。
 由于太阳能塔式发电系统占地面积较大，投资成本太高，考虑到未来需要搭建太阳能梯级集热发电示范系统，本文仅选择两种太阳能光热发电技术（太阳能槽式发电和太阳能碟式发电）作为太阳能梯级集热发电系统设计的基本系统。为了实现对太阳能碟式集热器获得的高温热量进行梯级利用，采用空气（或氮气）作为太阳能碟式发电系统的传热介质来传输所收集的热量。
-\begin{figure}[!ht]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/PTPD.pdf}
 \caption{太阳能槽式发电系统和太阳能碟式发电系统结构示意图}
 \label{fig:PTPD}
 \end{figure}
 典型的太阳能槽式发电系统和太阳能碟式发电系统的结构示意图如图\ref{fig:PTPD}所示。为使本文中的系统结构图更加清晰一致，图\ref{fig:Legends}列出了太阳能光热发电系统中可能出现的所有元件的图例。
-\begin{figure}[!ht]
+
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=0.65\textwidth]{fig/Legends.pdf}
+\includegraphics[width=0.8\textwidth]{fig/Legends.pdf}
 \caption{太阳能光热发电系统中的元件列表}
 \label{fig:Legends}
 \end{figure}
@@ -75,9 +76,9 @@
 
 水工质朗肯循环也存在一些缺点。蒸汽的低温特性并不理想，因为蒸汽在常温下具有很低的蒸气压和密度（参见表\ref{tab:waterT_P_D}）。对于低压部件，保持密封性，防止空气泄漏是设计中需要注意的问题。
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{-10pt}
+\setlength{\abovecaptionskip}{0pt}
 	\caption{不同温度下饱和蒸汽的压力和密度}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccccccccc}
 		\toprule	
 		    $T$(K)    &	373.15	    &    363.15    &    353.15    &    343.15    &    333.15    &    323.15    &    313.15    &    303.15    &    293.15\\
@@ -86,7 +87,6 @@
 		    $\rho$($\mathrm{kg/m^3}$)    &    0.5982        &    0.4239    &    0.2937    &    0.1984    &    0.1304    &    0.0831    &    0.0512    &    0.0304    &    0.0173\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:waterT_P_D}
 \end{table}
 
@@ -145,14 +145,14 @@
 \end{figure}
 然而，目前的太阳能烟囱系统的效率非常低。Bilgen和Rheault利用MATLAB建立了5$\,\mathrm{MW}$的太阳能烟囱电站模型，并同Schlaich的模型进行了比较\cite{Bilgen2005}。他们对不同地理位置，不同烟囱高度的太阳能烟囱电站进行了模拟分析。其主要设计数据及计算结果如表\ref{tab:sc}所示。 初步的设计参数为太阳辐射强度为1000$\,\mathrm{W/m^2}$，额定功率为5$\,\mathrm{MW}$。从表中可以发现，烟囱效率和系统总效率都很低，太阳能烟囱技术仍处于初步发展阶段。
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{-10pt}
+\setlength{\abovecaptionskip}{0pt}
 	\caption{太阳能烟囱设计参数及模拟结果}
-	\begin{center}
+	\centering
 	\begin{tabular}{ccccc}
 		\toprule
 			&渥太华    &温尼伯    &埃德蒙顿    &Schlaich的模型\\
 		\midrule
-		集热棚直径 (m)    &	-	&	-	&	-	&	1110 \\
+		集热棚直径 (m)    &	--	&	--	&	--	&	1110 \\
   集热棚面积 ($\mathrm{m^2}$)    & 950000    & 950000	&	950000	&	950000\\
   烟囱高度 (m)    &123    &60    &    35&    547\\
 %  集热棚高度 (m)    &848    &975    &1024    &    -\\
@@ -167,7 +167,6 @@
   系统整体 (\%)    &0.79    &0.79    &0.79    &0.63\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:sc}
 \end{table}
  
@@ -178,17 +177,16 @@
 考虑到每种类型的集热器都有其适宜的工作温度范围，集成使用多种集热方式，采用多种集热器逐步加热传热流体是实现梯级集热的可行方案。
 槽式集热器和菲涅耳集热器更适合于低温集热，碟式集热器和塔式集热器更适合于高温集热。串联连接不同类型的集热器可以有效利用它们各自的优点。图\ref{fig:SeriesCollector}给出了一个采用集热器串联连接的梯级系统的方案。在这个系统中，空气作为传热介质在流入碟式集热器之前先被槽式集热器预热。槽式集热器用于收集低温热能，碟式集热器用于收集高温热能。
 
-\begin{figure}[!ht]
+在这种方案中，空气依次在槽式集热器和碟式集热器中被加热。为斯特林机提供热量后，热空气流入换热器为朗肯循环提供热量。在这种拓扑结构中，空气被用作太阳能槽的传热流体，这个想法目前只有少数研究人员进行了数值和实验研究，至今还没有商业应用\cite{Good2015,Good2016}。这种技术最大的技术难题在于，空气导热系数低，热容量低，导致系统效率非常低。由于该拓扑结构使用了尚不成熟的空气槽式集热技术，故不采用这种方案。
+\begin{figure}[htbp]
 \centering 
 \includegraphics[width=0.5\textwidth]{fig/SeriesCollector}
 \caption{一种采用集热器串联连接的梯级系统方案}\label{fig:SeriesCollector}
 \end{figure}
 
-在这种方案中，空气依次在槽式集热器和碟式集热器中被加热。为斯特林机提供热量后，热空气流入换热器为朗肯循环提供热量。在这种拓扑结构中，空气被用作太阳能槽的传热流体，这个想法目前只有少数研究人员进行了数值和实验研究，至今还没有商业应用\cite{Good2015,Good2016}。这种技术最大的技术难题在于，空气导热系数低，热容量低，导致系统效率非常低。由于该拓扑结构使用了尚不成熟的空气槽式集热技术，故不采用这种方案。
-
 有的太阳能塔式电厂采用水作为传热流体（如Solar One电厂），这时可以利用平板式太阳能集热器和（或）槽式集热器作为低温段的集热器。系统结构图如图\ref{fig:seriesCollection}所示，冷凝水由平板式集热器加热，给水由槽式集热器加热。与太阳能塔式电厂相比，平板式集热器和槽式集热器收集低温热量的单位热成本要低很多。平板式集热器和槽式集热器的串联连接加入可以有效降低系统发电成本。虽然该方案有很好的前景，值得进一步研究，但本文的梯级系统不考虑采用太阳能塔式系统，所以该方案留给后续研究工作。
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
 \centering 
 \includegraphics[width=0.5\textwidth]{fig/SeriesCollection}
 \caption{采用多种型式集热器串联连接的太阳能塔式发电系统}\label{fig:seriesCollection}
@@ -237,8 +235,7 @@
 \label{sec:HRBC}
 
 根据热力学第二定律，不可能从单一热源吸热使之完全转换为有用的功而不产生其他影响。对于热机，它同时需要热源和冷源来将热能转化为机械能。典型热机的热功转换图如图\ref{fig:engines}所示。在热力循环中，从热源吸收的热量，只有一部分可以通过热机转化为机械功，其它部分需要传递到冷源。卡诺定理从根本上限制了与热源温度和冷源温度有关的热功转换比，即$\dfrac{W}{Q_H} \leqslant \dfrac{T_H - T_C}{T_H}$，其中$T_H$和$T_C$的单位为$\mathrm{K}$。
-
-\begin{figure}[ht]
+\begin{figure}[htb]
 \centering 
 \includegraphics[width=0.5\textwidth]{fig/engines}
 \caption{典型热机的热功转换图}
@@ -246,15 +243,13 @@
 \end{figure}
 
 不同的热机采用不同的热力循环来实现热功转换，它们有着不同的最佳工作温度。朗肯循环的最佳工作温度较低，斯特林循环的最佳工作温度较高。太阳能光热应用中斯特林循环和朗肯循环的$T$-$s$图如图\ref{fig:cycles}所示。
-
-\begin{figure}[ht]
+\begin{figure}[htb]
 \centering 
 \includegraphics[width=0.5\textwidth]{fig/cycles}
 \caption{太阳能光热应用中斯特林循环和朗肯循环热力循环的$T$-$s$图}\label{fig:cycles}
 \end{figure}
 
 由于每个热力循环都具有吸热和放热过程，因此可以组合多种热力循环，使一个循环（底部循环）吸收利用另一个循环（顶部循环）释放的热量，不同的循环可以耦合起来用于梯级发电。
-
 \noindent \begin{figure}[htbp]
 \centering
 	\begin{subfigure}[b]{0.4\columnwidth}

@@ -427,7 +427,7 @@ FUNCTION {format.names}
                   lang empty$
                     { ", " * bbl.etal * }
                     { lang "chinese" =
-                       { ", " * bbl.cn.etal * }
+                       { "" * bbl.cn.etal * }
                        'skip$
                       if$
                     }

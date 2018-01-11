@@ -15,32 +15,25 @@ Assuming $U$, $T_{c}$, $\dot{m}$,$c_{p}$ to be constant, for given $T_{i}$,
 \end{figure}
  
 Set $x$ as the area involved in the transfer heat process, when $x$ from $0$ to $A$, $T(x)$ from $T_{i}$ to $T_{o}$,
-
 \begin{equation}
 \dot{m}c_{p}dT(x)=(T_{c}-T(x))Udx
 \end{equation}
-
 so
-
 \begin{equation}
 \frac{dT(x)}{dx}=-\frac{U}{\dot{m}c_{p}}(T(x)-T_{c})
 \end{equation}
-
 \begin{equation}
 T_{g}(x)=T_{p}(x)+T_{h}(x)
 \end{equation}
-
 where $T_{g}(x)$ is the general solution, $T_{p}(x)$ is the particular
 solution, $T_{h}(x)$ is the homogeneous solution.
 
 \begin{equation}
 -\frac{U}{\dot{m}c_{p}}(T_{p}(x)-T_{c})=0
 \end{equation}
-
 \begin{equation}
 T_{p}(x)=T_{c}
 \end{equation}
-
 \begin{equation}
 \frac{dT_{h}(x)}{dx}=-\frac{U}{\dot{m}c_{p}}T_{h}(x)
 \label{eq:T_h(x)}
@@ -52,13 +45,10 @@ T_{p}(x)=T_{c}
 \begin{equation}
 \frac{T_{h}(A)}{T_{h}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
-
 that is
-
 \begin{equation}
 \frac{T_{g}(A)-T_{p}(A)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
-
 \begin{equation}
 \frac{T_{o}-T_{c}}{T_{i}-T_{c}}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \label{eq:Eq}
@@ -68,7 +58,6 @@ that is
 
 Assuming $U$, $T_{c}$, $\dot{m}$, $c_p$, $q''$ to be constant, for
 given $T_{i}$,
-
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.6\textwidth]{fig/CTCHFHX.pdf}\caption{Diagram of heat transfer with one constant temperature
@@ -80,9 +69,7 @@ Set $x$ as the area involved in the transfer heat process, when $x$ from $0$ to 
 \begin{equation}
 \dot{m}c_{p}dT(x)=(T_{c}-T(x))Udx+q''dx
 \end{equation}
-
 so
-
 \begin{equation}
 \frac{dT(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}T(x)+\frac{q''P+UPT_{c}}{\dot{m}c_{p}}
 \end{equation}
@@ -102,11 +89,10 @@ T_{p}(x)=T_{c}+\frac{q''}{U}
 \frac{dT_{h}(x)}{dx}=-\frac{U}{\dot{m}c_{p}}T_{h}(x)
 \end{equation}
 
-the same as \autoref{eq:T_h(x)}, so we have
+It is the same as \autoref{eq:T_h(x)}, so we have
 \begin{equation}
 \frac{T_{g}(A)-T_{p}(A)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
-
 \begin{equation}
 \frac{T_{o}-T_{c}-\dfrac{q''}{U}}{T_{i}-T_{c}-\dfrac{q''}{U}}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}

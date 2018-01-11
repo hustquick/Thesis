@@ -369,7 +369,7 @@
     \def\footnoteautorefname{脚注}
     \def\itemautorefname~#1\null{第~#1~项\null}
     \def\figureautorefname~#1\null{图~{#1}~\null}
-    \def\tableautorefname{表}
+    \def\tableautorefname~#1\null{表~{#1}~\null}
     \def\appendixautorefname~#1\null{附录~{#1}~\null}
     \expandafter\def\csname\appendixname autorefname\endcsname{\appendixname}
     \def\chapterautorefname~#1\null{第{#1}~章\null}

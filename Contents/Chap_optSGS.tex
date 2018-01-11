@@ -2,44 +2,40 @@
 \label{cha:osgs}
 \section{Steam generating subsystem}
 
-In a solar parabolic trough power plant in which intermediate heat-transfer fluid (take oil for instance) is used, heat addition to the working fluid (take water for instance) takes place in three counterflow heat exchangers (steam generator subsystem, SGSS) as shown in Figure~\ref{fig:PTC}. The SGSS consists of preheater, evaporator and superheater. The flow rates of both oil and water remain the same in the three heat exchangers. 
-The water has phase change in the three heat exchangers, from liquid to vapor in the evaporator, however, oil remains liquid. The heat capacity of water in each heat exchanger  differs significantly. The heat capacity of oil has no significant difference since no phase change. The heat transfer process is illustrated on Figure~\ref{fig:DeltaTmin}. Large temperature differences exist at the inlets and outlets of the heat exchangers, which leads to large entropy production during the entire heat exchange process.
+In a solar parabolic trough power plant in which intermediate heat-transfer fluid (take oil for instance) is used, heat addition to the working fluid (take water for instance) takes place in three counterflow heat exchangers (steam generator subsystem, SGSS) as shown in \autoref{fig:PTC}. The SGSS consists of preheater, evaporator and superheater. The flow rates of both oil and water remain the same in the three heat exchangers. 
+The water has phase change in the three heat exchangers, from liquid to vapor in the evaporator, however, oil remains liquid. The heat capacity of water in each heat exchanger  differs significantly. The heat capacity of oil has no significant difference since no phase change. The heat transfer process is illustrated on \autoref{fig:DeltaTmin}. Large temperature differences exist at the inlets and outlets of the heat exchangers, which leads to large entropy production during the entire heat exchange process.
 
-\noindent \begin{figure}[htbp]
-\begin{center}
+\begin{figure}[htbp]
+\centering
 	\includegraphics[width = 0.4\columnwidth]{fig/PTC}
 	\caption{A typical solar parabolic trough system}
 	\label{fig:PTC}
-\end{center}
 \end{figure}
-
-\noindent \begin{figure}[htbp]
-\begin{center}
+\begin{figure}[htbp]
+\centering
 	\includegraphics[width = 0.5\columnwidth]{fig/DeltaTmin}
 	\caption{The steam generating process in counterflow heat exchangers}
 	\label{fig:DeltaTmin}
-\end{center}
 \end{figure}
 
 The HTF at $3a$ represents the solar field outlet temperature and at $3d$, the field inlet temperature. The difference between the two can be reduced by increasing the flow rate of HTF through the field.
 
 Since the heat exchangers must always stay a positive temperature difference for heat transfer, the temperature of oil must always be higher than the temperature of water. On the other hand, the temperature of oil should not be much higher than that of the water. Higher oil temperature leads to more heat losses in the solar field hence lower efficiency, more entropy production generated in the heat exchange process. Besides, higher oil temperature brings greater operational risks for the solar system. Setting the appropriate temperature difference between the oil and water is particularly important. The oil temperature must always higher (but not too much higher) than that of the water.
 
-To find out the inlet and outlet temperatures of oil at the solar field, the lowest temperature difference of oil and water is defined as the pinch temperature $\Delta T_{min}$. The temperatures of state points $2h$ and $2i$ are determined by the main pressure of the steam turbine in Figure~\ref{fig:PTC}, and $T_{3b}$ is larger than $T_{3c}$. So state points $3c$ and $2h$, called the pinch points, are set to satisfy the pinch temperature, $T_{3c} - T_{2h} = \Delta T_{min}$. The pinch temperature $\Delta T_{min}$ is usually set to be 10$\sim$20$\,\mathrm{K}$.
+To find out the inlet and outlet temperatures of oil at the solar field, the lowest temperature difference of oil and water is defined as the pinch temperature $\Delta T_{min}$. The temperatures of state points $2h$ and $2i$ are determined by the main pressure of the steam turbine in \autoref{fig:PTC}, and $T_{3b}$ is larger than $T_{3c}$. So state points $3c$ and $2h$, called the pinch points, are set to satisfy the pinch temperature, $T_{3c} - T_{2h} = \Delta T_{min}$. The pinch temperature $\Delta T_{min}$ is usually set to be 10$\sim$20$\,\mathrm{K}$.
 It has to be mentioned that the temperature differences $T_{3d} - T_{2g}$ and $T_{3a} - T_{2a}$ worth attention to be larger than $\Delta T_{min}$.
 
-However, even with the chosen pinch temperature $\Delta T_{min}$, the temperature difference during the heat exchange process in SGSS is still large due to the phase change of water. Large temperature differences always exist at the inlet/outlet of the exchangers. As shown in Figure~\ref{fig:DeltaT}, it is a tradeoff to choose a mass flow rate of oil ($\dot{m}_3$). $\dot{m}_3$ affects the slope of curve $3a$-$3b$-$3c$-$3d$. A smaller $\dot{m}_3$ leads to a steeper curve, hence a larger $T_{3a} - T_{2j}$. A larger $\dot{m}_3$ leads to a more gentle curve, hence a larger $T_{3d} - T_{2g}$. The heat transfer processes in SGSS always produce large entropy and exergy losses. In this regard, a new steam generating system to reduce exergy loss is put forward.
+However, even with the chosen pinch temperature $\Delta T_{min}$, the temperature difference during the heat exchange process in SGSS is still large due to the phase change of water. Large temperature differences always exist at the inlet/outlet of the exchangers. As shown in \autoref{fig:DeltaT}, it is a tradeoff to choose a mass flow rate of oil ($\dot{m}_3$). $\dot{m}_3$ affects the slope of curve $3a$-$3b$-$3c$-$3d$. A smaller $\dot{m}_3$ leads to a steeper curve, hence a larger $T_{3a} - T_{2j}$. A larger $\dot{m}_3$ leads to a more gentle curve, hence a larger $T_{3d} - T_{2g}$. The heat transfer processes in SGSS always produce large entropy and exergy losses. In this regard, a new steam generating system to reduce exergy loss is put forward.
 
-\noindent \begin{figure}[htbp]
-\begin{center}
+\begin{figure}[htbp]
+\centering
 	\includegraphics[width = 0.5\columnwidth]{fig/DeltaT}
 	\caption{The tradeoff to choose $\dot{m}_3$}
 	\label{fig:DeltaT}
-\end{center}
 \end{figure}
 
 \section{Multistage exergy loss reduction system}\label{sec:melrs}
-The reason of large temperature differences of the two curves in Figure~\ref{fig:DeltaTmin} is that, the slope of oil curve changes slightly in different heat exchangers (preheater, evaporator and superheater), while the water curve changes dramatically due to large heat capacity $c_p$ differences.
+The reason of large temperature differences of the two curves in \autoref{fig:DeltaTmin} is that, the slope of oil curve changes slightly in different heat exchangers (preheater, evaporator and superheater), while the water curve changes dramatically due to large heat capacity $c_p$ differences.
 
 \begin{equation}
   \Delta Q =  c_p\dot{m} \Delta T
@@ -47,25 +43,23 @@ The reason of large temperature differences of the two curves in Figure~\ref{fig
 
 The slope of the curves are determined by $c_p\dot{m}$, $\dot{m}$ can be altered to adjust the slope of the curves despite $c_p$ is unalterable. All the water needs to be heated from supercooled water to superheated steam, which means $\dot{m}_2$ remains the same in the three heat exchangers. The last way is to change $\dot{m}_3$ in the heat exchangers.
 
-\noindent \begin{figure}[htbp]
-\begin{center}
+\begin{figure}[htbp]
+\centering
 	\includegraphics[width = 0.5\columnwidth]{fig/BetterCurve}
 	\caption{Change $\dot{m}_3$ in the heat exchangers to reduce the temperature difference}
 	\label{fig:BetterCurve}
-\end{center}
 \end{figure}
 
-As shown in Figure~\ref{fig:BetterCurve}, the oil curve can be changed to the dashed curve. The temperature difference between the water curve and oil curve reduces significantly. Water is heated in three stages and the exergy loss reduces. The corresponding steam generating system is so called Multistage Exergy Loss Reduction System (MELRS).
-Figure~\ref{fig:SEP} shows the schematic diagram of the MELRS for comparison with typical solar parabolic trough system in Figure~\ref{fig:PTC}. The solar field in Figure~\ref{fig:PTC} has been divided into three independent sectors. Each sector becomes the heat source of a range for the steam heating process: the first corresponds to overheating, the second to evaporation, and the third to preheating. 
+As shown in \autoref{fig:BetterCurve}, the oil curve can be changed to the dashed curve. The temperature difference between the water curve and oil curve reduces significantly. Water is heated in three stages and the exergy loss reduces. The corresponding steam generating system is so called Multistage Exergy Loss Reduction System (MELRS).
+\autoref{fig:SEP} shows the schematic diagram of the MELRS for comparison with typical solar parabolic trough system in \autoref{fig:PTC}. The solar field in \autoref{fig:PTC} has been divided into three independent sectors. Each sector becomes the heat source of a range for the steam heating process: the first corresponds to overheating, the second to evaporation, and the third to preheating. 
 %Each section can be equipped with a thermal storage system to overcome the instability and intermittency of solar energy.
 It has to be mentioned that the collectors in the schematic diagram are only used for explanation. The arrangement of these collectors can be in series, in parallel or combination of both.
 
-\noindent \begin{figure}[htbp]
-\begin{center}
+\begin{figure}[htbp]
+\centering
 	\includegraphics[width = 0.5\columnwidth]{fig/SEP}
 	\caption{The schematic diagram of the MELRS}
 	\label{fig:SEP}
-\end{center}
 \end{figure}
 
 To optimize the MELRS, considering the constrain of pinch temperature, temperatures of the oil at the inlet/outlet of the heat exchangers can be set according to following rules:
@@ -115,8 +109,8 @@ The optimum oil flow rate in the solar field corresponds to the superheater is
 
 \section{Comparison}
 
-To find out the effect of MELRS, models of traditional SGSS and proposed MELRS are developed based on the models of the components created in Chapter~\ref{cha:Modeling}. 
-To clearly find out the influence of oil temperature on the performance of the trough collectors, Equation~(\ref{eq:eta_tc}) in Section~\ref{sec:ptc} is used.
+To find out the effect of MELRS, models of traditional SGSS and proposed MELRS are developed based on the models of the components created in \autoref{cha:Modeling}. 
+To clearly find out the influence of oil temperature on the performance of the trough collectors, \autoref{eq:eta_tc} in \autoref{sec:ptc} is used.
 %To find out the effect of MELRS, models of traditional SGSS and proposed MELRS are developed based on the models of the components. To clear find out the influence of oil temperature on the performance of the trough collectors, the equation summarized by~\cite{Rovira2011} is used.
 %\begin{equation}
 %  \eta(T) =  0.69563 + 0.000313T - 0.0000013T^2
@@ -131,7 +125,7 @@ The exergy loss caused by a heat exchange process per unit time
 
 \begin{table}[htbp]
 	\caption{Main parameters used for SGSS and MELRS}
-	\begin{center}
+	\centering
 	\begin{tabular}{cccc}
 		\toprule
 		Parameter		&	Value	&	Parameter		&	Value\\
@@ -143,21 +137,19 @@ The exergy loss caused by a heat exchange process per unit time
 		$\Delta T_{min}$	&	15$\,\mathrm{K}$	&	&\\		
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:ptc}
 \end{table}
 
-The turbine and deaerator are the same for the two systems (SGSS and MELRS), so that the corresponding state points of water are the same. The main parameters are listed in Table~\ref{tab:ptc}.
+The turbine and deaerator are the same for the two systems (SGSS and MELRS), so that the corresponding state points of water are the same. The main parameters are listed in \autoref{tab:ptc}.
 
-\noindent \begin{figure}[htbp]
-\begin{center}
+\begin{figure}[htbp]
+\centering
 	\includegraphics[width = 0.7\columnwidth]{fig/T3b}
 	\caption{$T_{3b}$ in the $T$-$Q$ diagram of the heat transfer processes}
 	\label{fig:T3b}
-\end{center}
 \end{figure}
 
-As discussed in Section~\ref{sec:melrs}, $T_{3b}$ is an undetermined value. Figure~\ref{fig:T3b} shows the minimum and maximum value of it. $T_{3b,min}$ means the limit situation of unlimited flow rate of oil in the evaporator, $T_{3b,min} = T_{3c}$. $T_{3b,max}$ has the traditional effect of temperature differences in the evaporator and superheater, $\dot{m}_{3,e} = \dot{m}_{3,s}$. In our research, $T_{3b}$ is set to be the average value of the two limitations, $T_{3b} = (T_{3b,min} + T_{3b,max}) / 2$.
+As discussed in \autoref{sec:melrs}, $T_{3b}$ is an undetermined value. \autoref{fig:T3b} shows the minimum and maximum value of it. $T_{3b,min}$ means the limit situation of unlimited flow rate of oil in the evaporator, $T_{3b,min} = T_{3c}$. $T_{3b,max}$ has the traditional effect of temperature differences in the evaporator and superheater, $\dot{m}_{3,e} = \dot{m}_{3,s}$. In our research, $T_{3b}$ is set to be the average value of the two limitations, $T_{3b} = (T_{3b,min} + T_{3b,max}) / 2$.
 \begin{equation}
   \dfrac{T_{3b,max}-T_{3c}}{T_{3a} - T_{3c}} = \dfrac{T'_{3b} - T_{3c}}{T'_{3a} - T_{3c}}
 \end{equation}
@@ -165,7 +157,7 @@ As discussed in Section~\ref{sec:melrs}, $T_{3b}$ is an undetermined value. Figu
 where $T'_{3a}$ and $T'_{3b}$ are the inlet oil temperature of superheater and evaporator in SGSS respectively.
 \begin{table}[htbp]
 	\caption{Simulation results of SGSS and MELRS}
-	\begin{center}
+	\centering
 	\begin{tabular}{ccccc}
 		\toprule
 		& \multirow{2}{*}{SGSS} & \multicolumn{3}{c}{MELRS}\\\cline{3-5}
@@ -196,14 +188,13 @@ where $T'_{3a}$ and $T'_{3b}$ are the inlet oil temperature of superheater and e
 		$\eta_{overall}$    &    0.670   &	0.676	&    0.686	&	0.695\\
 		\bottomrule
 	\end{tabular}
-	\end{center}
 	\label{tab:comparison}
 \end{table}
 %该表格的解释
 
-Simulation results of the four system models are listed in Table~\ref{tab:comparison}. It can be found that MELRS can effectively reduce the exergy loss of the steam generating process. The exergy loss can be reduced from 14.3\% up to 76.7\% for the three MELRS. The overall thermal efficiency of the solar fields can be improved from 0.9\% up to 3.6\%.
+Simulation results of the four system models are listed in \autoref{tab:comparison}. It can be found that MELRS can effectively reduce the exergy loss of the steam generating process. The exergy loss can be reduced from 14.3\% up to 76.7\% for the three MELRS. The overall thermal efficiency of the solar fields can be improved from 0.9\% up to 3.6\%.
 
-It is worthy pointing that, for the situation $T_{3b} = T_{3b,min}$, when $\dot{m}_{3e} = \infty$, the correlation~(\ref{eq:dot_I}) is not applicable. The new correlation listed below is applied for the isothermal heat transfer process
+It is worthy pointing that, for the situation $T_{3b} = T_{3b,min}$, when $\dot{m}_{3e} = \infty$, the \autoref{eq:dot_I} is not applicable. The new correlation listed below is applied for the isothermal heat transfer process
 
 \begin{equation}
   \dot{I} = T_{amb} (\frac{Q}{T_{2h}} - \frac{Q}{T_{3c}}) = \frac{QT_{amb}(T_{3c} - T_{2h})}{T_{2h}T_{3c}}

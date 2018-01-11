@@ -312,7 +312,7 @@ The results presented in \autoref{tab:importantResults} are issued using design 
 		\midrule
 		$\eta_{cs}$		&	0.1974	&	$\eta_{sea,s}$	&	0.3786	&	$P_{ge,s}$	&	$5.826\times10^6\,\mathrm{W}$\\
 		$\eta_{s}$	&	0.1962	&	$\eta_{rk}$	&	0.2660	&	$P_{sea}$		&	$3.552\times10^5\,\mathrm{W}$\\
-		$\eta_{diff}$		&	0.0062	&	$\eta_{rk,s}$	&	0.2678	&	$P_{sea,s}$	&	$4.909\times10^5\,\mathrm{W}$\\
+		$\eta_{dif}$		&	0.0062	&	$\eta_{rk,s}$	&	0.2678	&	$P_{sea,s}$	&	$4.909\times10^5\,\mathrm{W}$\\
 		$\eta_{sea}$	&	0.3407	&	$P_{ge}$		&	$6\times10^6\,\mathrm{W}$	&	$P_{diff}$		&	$3.830\times10^4\,\mathrm{W}$\\
 		\bottomrule
 	\end{tabular}
@@ -323,24 +323,24 @@ The results presented in \autoref{tab:importantResults} are issued using design 
 \subsection{Effects of $I_{r}$}
 \label{sec:I_r}
 
-It is found that $I_r$ can affect the efficiency difference of cascade system and stand-alone systems $\eta_{diff}$. \autoref{fig:I_r-eta_diff} shows curve fits of efficiency differences $\eta_{diff}$ versus $I_r$ with a series of different Stirling engine array power ratios. As it can be seen, for a high $I_r$ ($I_r > 550\,\mathrm{W/m^2}$), $\eta_{diff}>0$, the cascade system can achieve a higher efficiency than corresponding stand-alone systems. For a low $I_r$ ($I_r < 550\,$W/m$^2$), $\eta_{diff}$ may be negative. At this situation, the cascade system achieves a lower efficiency than corresponding stand-alone systems. This may be explained that instead of cooling water in the stand-alone dish-Stirling system, condensed water of Rankine cycle is used to cool the Stirling engines, which jeopardizes the heat dissipation and leads to a lower power of the Stirling engines. For a low $I_r$, the increased power of steam turbine due to absorbed heat by the condensed water is lower than the power loss of the Stirling engines. It can also be found that higher $I_r$ can achieve higher $\eta_{diff}$, which can be interpreted as the heat absorbed by the condensed water increases with $I_r$. So a higher $I_r$ location is always more suitable for cascade system. This means $I_r$ is a key factor to determine whether cascade system should be applied in a certain location.
+It is found that $I_r$ can affect the efficiency difference of cascade system and stand-alone systems $\eta_{dif}$. \autoref{fig:I_r-eta_diff} shows curve fits of efficiency differences $\eta_{dif}$ versus $I_r$ with a series of different Stirling engine array power ratios. As it can be seen, for a high $I_r$ ($I_r > 550\,\mathrm{W/m^2}$), $\eta_{dif}>0$, the cascade system can achieve a higher efficiency than corresponding stand-alone systems. For a low $I_r$ ($I_r < 550\,$W/m$^2$), $\eta_{dif}$ may be negative. At this situation, the cascade system achieves a lower efficiency than corresponding stand-alone systems. This may be explained that instead of cooling water in the stand-alone dish-Stirling system, condensed water of Rankine cycle is used to cool the Stirling engines, which jeopardizes the heat dissipation and leads to a lower power of the Stirling engines. For a low $I_r$, the increased power of steam turbine due to absorbed heat by the condensed water is lower than the power loss of the Stirling engines. It can also be found that higher $I_r$ can achieve higher $\eta_{dif}$, which can be interpreted as the heat absorbed by the condensed water increases with $I_r$. So a higher $I_r$ location is always more suitable for cascade system. This means $I_r$ is a key factor to determine whether cascade system should be applied in a certain location.
 
 \begin{figure}[htbp]
 \centering
 	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/I_r-eta_diff}
-	\caption{Curve fits of efficiency difference $\eta_{diff}$ versus $I_r$}
+	\caption{Curve fits of efficiency difference $\eta_{dif}$ versus $I_r$}
 	\label{fig:I_r-eta_diff}
 
 \end{figure}
 
 \subsection{Effects of $\beta$}
 
-As it can be seen in \autoref{tab:importantResults}, the $\eta_{diff}$ is very small with the design parameters given above. A reason $\eta_{diff}$ to be so small is that $\beta$, the ratio of power of Stirling engines to the total power, is very small, the heat released by the Stirling engine array is a small portion of the heat absorbed in the Rankine cycle. So increase $\beta$ may achieve higher $\eta_{diff}$. The relationship between $\eta_{diff}$ and $\beta$ under a series of $I_r$ is shown in \autoref{fig:beta-eta_diff}. It can be found that, for a high $I_r$, increase $\beta$ may achieve a higher $\eta_{diff}$, but there is a limit. For $I_r=900$W/m$^2$, the maximum $\eta_{diff}=0.0228$ appears at $\beta=0.23$. For a low $I_r$, $\eta_{diff}$ is negative, increase $\beta$ will reduce $\eta_{diff}$. This can be explained as the same reason in \autoref{sec:I_r}.
+As it can be seen in \autoref{tab:importantResults}, the $\eta_{dif}$ is very small with the design parameters given above. A reason $\eta_{dif}$ to be so small is that $\beta$, the ratio of power of Stirling engines to the total power, is very small, the heat released by the Stirling engine array is a small portion of the heat absorbed in the Rankine cycle. So increase $\beta$ may achieve higher $\eta_{dif}$. The relationship between $\eta_{dif}$ and $\beta$ under a series of $I_r$ is shown in \autoref{fig:beta-eta_diff}. It can be found that, for a high $I_r$, increase $\beta$ may achieve a higher $\eta_{dif}$, but there is a limit. For $I_r=900$W/m$^2$, the maximum $\eta_{dif}=0.0228$ appears at $\beta=0.23$. For a low $I_r$, $\eta_{dif}$ is negative, increase $\beta$ will reduce $\eta_{dif}$. This can be explained as the same reason in \autoref{sec:I_r}.
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width = 0.8\columnwidth, angle = 0]{fig/beta-eta_diff}
-	\caption{Curve fits of efficiency difference $\eta_{diff}$ versus $\beta$}
+	\caption{Curve fits of efficiency difference $\eta_{dif}$ versus $\beta$}
 	\label{fig:beta-eta_diff}
 
 \end{figure}
@@ -439,7 +439,7 @@ Results show that $I_r$ is the key factor to determine whether cascade system sh
 \nomenclature{$n$}{Number of collectors}
 \nomenclature[S]{$cs$}{Cascade system}
 \nomenclature[S]{$se$}{Stirling engine}
-\nomenclature[G]{$\eta_{diff}$}{Efficiency difference of cascade system and stand-alone systems, $\eta_{cs}-\eta_{s}$}
+\nomenclature[G]{$\eta_{dif}$}{Efficiency difference of cascade system and stand-alone systems, $\eta_{cs}-\eta_{s}$}
 \nomenclature[S]{$sea$}{Stirling engine array}
 %\nomenclature{$P_{sea,s}$}{Total power of Stirling engines in stand-alone dish system, W}
 \nomenclature[G]{$\beta$}{Ratio of power of Stirling engines to the total output power of cascade system}

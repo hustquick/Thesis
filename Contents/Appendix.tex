@@ -1,30 +1,30 @@
 \appendix
 
-\chapter{Heat transfer under constant temperature}
-Assuming $U$, $T_{c}$, $\dot{m}$,$c_{p}$ to be constant, for given $T_{i}$,
-\nomenclature[S]{$i$}{Inlet}
+\renewcommand{\theequation}{\Alph{chapter}-\arabic{equation}}
+\renewcommand{\thefigure}{\Alph{chapter}-\arabic{figure}}
 
-\noindent \begin{center}
+\chapter{Heat transfer under constant temperature}
+\label{cha:CTHX}
+Assuming $U$, $T_{c}$, $\dot{m}$,$c_{p}$ to be constant, for given $T_{i}$,
+
 \begin{figure}[h]
-\begin{centering}
+\centering
 \includegraphics[width=0.6\textwidth]{fig/ConstTempHX.pdf}
-\par\end{centering}
 \caption{Diagram of heat transfer under constant temperature}
 \label{fig:CTHX}
 \end{figure}
-\par\end{center}
-
-For $A(x)=Px$, $x$ from $0$ to $L$, while $T(x)$ from $T_{i}$ to $T_{o}$,
+ 
+Set $x$ as the area involved in the transfer heat process, when $x$ from $0$ to $A$, $T(x)$ from $T_{i}$ to $T_{o}$,
 \nomenclature[S]{$o$}{Outlet}
 
 \begin{equation}
-\dot{m}c_{p}dT(x)=(T_{c}-T(x))UPdx
+\dot{m}c_{p}dT(x)=(T_{c}-T(x))Udx
 \end{equation}
 
 so
 
 \begin{equation}
-\frac{dT(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}(T(x)-T_{c})
+\frac{dT(x)}{dx}=-\frac{U}{\dot{m}c_{p}}(T(x)-T_{c})
 \end{equation}
 
 \begin{equation}
@@ -35,7 +35,7 @@ where $T_{g}(x)$ is the general solution, $T_{p}(x)$ is the particular
 solution, $T_{h}(x)$ is the homogeneous solution.
 
 \begin{equation}
--\frac{UP}{\dot{m}c_{p}}(T_{p}(x)-T_{c})=0
+-\frac{U}{\dot{m}c_{p}}(T_{p}(x)-T_{c})=0
 \end{equation}
 
 \begin{equation}
@@ -43,20 +43,21 @@ T_{p}(x)=T_{c}
 \end{equation}
 
 \begin{equation}
-\frac{dT_{h}(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}T_{h}(x)\label{eq:T_h(x)}
+\frac{dT_{h}(x)}{dx}=-\frac{U}{\dot{m}c_{p}}T_{h}(x)
+\label{eq:T_h(x)}
 \end{equation}
 
 \begin{equation}
-\int_{T_{h}(x)=T_{h}(0)}^{T_{h}(x)=T_{h}(L)}\frac{dT_{h}(x)}{T_{h}(x)}=-\int_{x=0}^{x=L}\frac{UP}{\dot{m}c_{p}}dx
+\int_{T_{h}(x)=T_{h}(0)}^{T_{h}(x)=T_{h}(A)}\frac{dT_{h}(x)}{T_{h}(x)}=-\int_{x=0}^{x=A}\frac{U}{\dot{m}c_{p}}dx
 \end{equation}
 \begin{equation}
-\frac{T_{h}(L)}{T_{h}(0)}=\exp(-\frac{UPL}{\dot{m}c_{p}})
+\frac{T_{h}(A)}{T_{h}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
 
 that is
 
 \begin{equation}
-\frac{T_{g}(L)-T_{p}(L)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
+\frac{T_{g}(A)-T_{p}(A)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
 
 \begin{equation}
@@ -69,19 +70,16 @@ that is
 Assuming $U$, $T_{c}$, $\dot{m}$, $c_p$, $q''$ to be constant, for
 given $T_{i}$,
 
-\noindent \begin{center}
 \begin{figure}[h]
-\noindent \begin{centering}
+\centering
 \includegraphics[width=0.6\textwidth]{fig/CTCHFHX.pdf}\caption{Diagram of heat transfer with one constant temperature
 heat source and constant heat flux}
 \label{fig:CTCHFHX}
-\par\end{centering}
 \end{figure}
-\par\end{center}
 
-For $A(x)=Px$, $x$ from $0$ to $L$, while $T(x)$ from $T_{i}$ to $T_{o}$,
+Set $x$ as the area involved in the transfer heat process, when $x$ from $0$ to $A$, $T(x)$ from $T_{i}$ to $T_{o}$,
 \begin{equation}
-\dot{m}c_{p}dT(x)=(T_{c}-T(x))UPdx+q''Pdx
+\dot{m}c_{p}dT(x)=(T_{c}-T(x))Udx+q''dx
 \end{equation}
 
 so
@@ -89,31 +87,25 @@ so
 \begin{equation}
 \frac{dT(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}T(x)+\frac{q''P+UPT_{c}}{\dot{m}c_{p}}
 \end{equation}
-\nomenclature[S]{$g$}{General solution}
-%\nomenclature[S]{$p$}{Particular solution}
-%\nomenclature[S]{$h$}{Homogeneous solution}
 \begin{equation}
 T_{g}(x)=T_{p}(x)+T_{h}(x)
 \end{equation}
-
 where $T_{g}(x)$ is the general solution, $T_{p}(x)$ is the particular
 solution, $T_{h}(x)$ is the homogeneous solution.
 
 \begin{equation}
--\frac{UP}{\dot{m}c_{p}}T_{p}(x)+\frac{q''P+UPT_{c}}{\dot{m}c_{p}}=0
+-\frac{U}{\dot{m}c_{p}}T_{p}(x)+\frac{q''+UT_{c}}{\dot{m}c_{p}}=0
 \end{equation}
-
 \begin{equation}
 T_{p}(x)=T_{c}+\frac{q''}{U}
 \end{equation}
-
 \begin{equation}
-\frac{dT_{h}(x)}{dx}=-\frac{UP}{\dot{m}c_{p}}T_{h}(x)
+\frac{dT_{h}(x)}{dx}=-\frac{U}{\dot{m}c_{p}}T_{h}(x)
 \end{equation}
 
-the same as Equation~(\ref{eq:T_h(x)}), so we have
+the same as \autoref{eq:T_h(x)}, so we have
 \begin{equation}
-\frac{T_{g}(L)-T_{p}(L)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
+\frac{T_{g}(A)-T_{p}(A)}{T_{g}(0)-T_{p}(0)}=\exp(-\frac{UA}{\dot{m}c_{p}})
 \end{equation}
 
 \begin{equation}
@@ -218,42 +210,6 @@ classdef Stream < handle
     end
 end
 \end{lstlisting}
-%\chapter{Stirling engine model}\label{sec:Stirling-engine-model}
-%
-%A simple Stirling engine model is used for the system. The cycle efficiency is given by \cite{Stine1985}
-%
-%\begin{equation}
-%	\eta=\frac{T_{H}-T_{L}}{T_{H}+\text{\ensuremath{\dfrac{1-e}{k-1}}}\cdot\dfrac{T_{H}-T_{L}}{\ln\gamma}}\label{eq:eta_stirling}
-%\end{equation}
-%
-%
-%where \nomenclature{$e$}{Regeneration effectiveness of the Stirling engine}$e = (T_{R}-T_{L}) / (T_{H}-T_{L})$,\nomenclature{$T_R$}{Regenerator temperature, K}$T_{R}$ is the\emph{ }regenerator temperature, \nomenclature{$c_p$}{Heat capacity of Stirling engine working gas at constant pressure, J/(kg$\cdot$K)}\nomenclature{$c_v$}{Heat capacity of Stirling engine working gas at constant volume, J/(kg$\cdot$K)}$k=c_{p}/c_{v}$ for the working gas, $\gamma_{se}=V_{max}/V_{min}$ is the compression ratio.
-%
-%The heat transfer diagram is shown in Figure~\ref{fig:Heat-transfer-diagram}. Flow 1 is used for heating the hot chamber of Stirling engine, $T_{1i}$ is the inlet temperature, $T_{1o}$ is the outlet temperature. Flow 2 is used for cooling the cold chamber of Stirling engine, $T_{2i}$ is the inlet temperature, $T_{2o}$ is the outlet temperature. \nomenclature{$T_H$}{Highest temperature of expansion space, K}$T_{H}$ is the highest temperature of expansion space, \nomenclature{$T_L$}{Lowest temperature of compression space, K}$T_{L}$ is the lowest temperature of compression space.
-%
-%\noindent \begin{center}
-%\begin{figure}[h]
-%	\noindent \centering{}\includegraphics[width=0.4\columnwidth]{fig/StirilingHT}
-%	\protect\caption{\label{fig:Heat-transfer-diagram}Heat transfer diagram of Stirling
-%engine}
-%\end{figure}
-%
-%\par\end{center}
-%
-%According to Equation (\ref{eq:Eq}),
-%
-%\begin{equation}
-%	\dfrac{T_{1o}-T_{H}}{T_{1i}-T_{H}}=\exp(-\dfrac{U_{1}A_{1}}{\dot{m}_{1}c{}_{p1}})
-%\end{equation}
-%
-%and
-%
-%\begin{equation}
-%	\dfrac{T_{2o}-T_{L}}{T_{2i}-T_{L}}=\exp(-\dfrac{U_{2}A_{2}}{\dot{m}_{2}c_{p2}})
-%\end{equation}
-%
-%So known $T_{1o},T_{1i},U_{1},A_{1},\dot{m}_{1},c_{p1},T_{2o},T_{2i},U_{2},A_{2},\dot{m}_{2},c_{p2}$, $T_{H}$ and $T_{L}$ can be calculated, and then $\eta$ can be obtained by using Equation (\ref{eq:eta_stirling}).
-%\nomenclature{$A$}{Area, m$^2$}
   
 \begin{publications}
   \item Cheng Zhang, Yanping Zhang, Inmaculada Arauzo, Wei Gao, Chongzhe  Zou. Cascade system using both trough system and dish system for power generation. Energy Conversion and Management. 2017.06.15;142:494–503.
@@ -265,5 +221,9 @@ end
   
   \item A solar thermal cascade system, No. 201610806296.5
   \item A flow control method used in a multistage heating system, No. 201610805604.2
+  \item Software copyright registration: solar thermal power development system (registration number: 2017SR382378), authorization date: 2017.7.19
   
 \end{publications}
+
+\nomenclature[S]{$i$}{Inlet}
+\nomenclature[S]{$g$}{General solution}

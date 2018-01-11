@@ -598,7 +598,7 @@
   labelformat=HUST@caplabel,
   format=hang,
   labelsep=quad,
-  skip=12pt
+  skip=3pt
 }
 \renewcommand{\thetable}{\arabic{chapter}-\arabic{table}}
 \renewcommand{\thefigure}{\arabic{chapter}-\arabic{figure}}

@@ -211,7 +211,7 @@
   plainpages=false,
   pdfpagelabels=true,
   pdfstartview={XYZ null null 1},
-  pdfinfo={Template.Info={hustthesis.cls v1.2 2016/11/04, Copyright (C) 2015-2016 by hustquick 2016 by hust-latex, https://github.com/hust-latex/hustthesis}}
+  pdfinfo={Template.Info={hustthesis.cls v2.0 2017/11/04, Copyright (C) 2015-2018 by HUST 2016 by hustquick, https://github.com/hustquick/Thesis}}
 }
 \RequirePackage{amsmath,amssymb,amsfonts}
 \RequirePackage[amsmath,amsthm,thmmarks,hyperref,thref]{ntheorem}

@@ -214,7 +214,7 @@
   pdfinfo={Template.Info={hustthesis.cls v1.2 2016/11/04, Copyright (C) 2015-2016 by hustquick 2016 by hust-latex, https://github.com/hust-latex/hustthesis}}
 }
 \RequirePackage{amsmath,amssymb,amsfonts}
-\RequirePackage[amsmath,amsthm,thmmarks,hyperref,thref]{ntheorem}
+\RequirePackage[amsmath,amsthm,thmmarks,thref]{ntheorem}
 \RequirePackage{fancynum}
 \setfnumgsym{\,}
 \RequirePackage[lined,boxed,linesnumbered,ruled,vlined,algochapter]{algorithm2e}

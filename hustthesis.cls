@@ -450,12 +450,18 @@
 \long\def\HUST@authorizationtext{
   本学位论文作者完全了解学校有关保留、使用学位论文的规定，即：学校有权保留并向国家有关部门或机构送交论文的复印件和电子版，允许论文被查阅和借阅。本人授权华中科技大学可以将本学位论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存和汇编本学位论文。
 }
+%\long\def\HUST@authorizationaddon{
+% 本论文属于
+% \tabincell{l}{
+%  保密$\square$，在~\makebox[2em]{\hrulefill} 年解密后适用本授权书。\\
+%  不保密~$\square$。
+% }
+%}
 \long\def\HUST@authorizationaddon{
- 本论文属于
- \tabincell{l}{
-  保密$\square$，在~\makebox[2em]{\hrulefill} 年解密后适用本授权书。\\
-  不保密~$\square$。
- }
+ 本论文属于 \begin{tabular}{@{}l@{}}
+  \normalsize{保\phantom{空}密~$\square$~，在~\makebox[2em]{\hrulefill} 年解密后适用本授权书。}\\ 
+  \normalsize{不保密~$\square$~。}
+\end{tabular}
 }
 \def\HUST@authorizationcheck{（请在以上方框内打“$\surd$”）}
 \def\HUST@zhteachersig{指导教师签名：}

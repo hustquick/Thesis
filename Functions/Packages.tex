@@ -44,7 +44,7 @@
 %%  Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%  Right brace   \}     Tilde         \~}
 \documentclass[format=draft,language=english,degree=phd]{hustthesis}
-\usepackage{nomencl,epigraph,booktabs,amsmath,amssymb,ifthen,booktabs,color,float,nomencl,lineno,multirow,rotating}
+\usepackage{nomencl,epigraph,booktabs,amsmath,amssymb,ifthen,booktabs,color,float,nomencl,lineno,multirow,multicol,rotating}
 % Control the rotation direction of big tables%\usepackage[figuresright]{rotating}% Change the style of addedmarkup to underline wave to highlight the added text.\usepackage[final, ulem=normalem, addedmarkup=uwave]{changes}	\definechangesauthor[name={张成}, color=red]{ZC}	%\setauthormarkuptext{name} can be used to show the name of the author	\setauthormarkuptext{}% Set the paragraph indent within items\usepackage{enumitem}\setlist{	listparindent=\parindent,	parsep=0pt,	}% Set the space between table and its caption\usepackage{caption}\captionsetup[table]{skip=0pt}
 \renewcommand{\nomgroup}[1]{
 %\ifthenelse{\equal{#1}{A}}{\item[\textbf{Roman Symbols}]}{%
@@ -59,4 +59,4 @@
 }% matches Superscripts
 }% matches Subscripts
 }% matches Roman Symbols
-%\setlength{\belowcaptionskip}{0pt}
+%\setlength{\belowcaptionskip}{0pt}\renewcommand*{\nompreamble}{\begin{multicols}{2}}\renewcommand*{\nompostamble}{\end{multicols}}

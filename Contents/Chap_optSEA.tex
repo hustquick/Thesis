@@ -50,7 +50,6 @@
 为了得到斯特林机组的性能，需要构建各斯特林机的模型，并依据斯特林机的参数对斯特林机组进行分析。为了便于分析排列方式带来的影响，选定斯特林机组中的各斯特林机具有相同的设计参数，包括转速$s_{se}$。这对于用于发电的斯特林机是个合理的假设，因为各斯特林机的输出功的频率应该保持一致。斯特林机的速度可以通过速度控制系统进行校正\cite{Hooshang2016}。为了消除其它影响，不同排列方式的冷热流体的参数也选择相同值。为了更加清楚地表明排列方式对斯特林机组性能的影响，本文选用换热后温差变化较大的空气作为传热介质。使用空气代替传统的水来给斯特林机冷却，以避免冷却斯特林过程中仅仅产生很小的温升或是导致蒸发带来的一系列不利影响。各斯特林机的设计参数如\autoref{tab:GPU3parameters}所示，斯特林机的其它参数以及冷热流体的参数如\autoref{tab:parameters}所示。如\autoref{sec:modelValidation}中提到的，斯特林机的转速和平均有效压力分别设为25$\,\mathrm{Hz}$和5$\,\mathrm{MPa}$来使所建立的斯特林机模型获得最佳性能预测精度。
 
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{0pt}
 	\caption{斯特林机组模型中选用的参数}
 	\centering
 	\begin{tabular}{cccc}
@@ -108,7 +107,6 @@
 本文依据\autoref{tab:parameters}中的参数，建立了不同排列方式的斯特林机组的模型，并依据算法进行了计算分析。各斯特林机组的结果见\autoref{tab:result}，其中$\eta_1$，$\eta_2$，$\eta_3$，$\eta_4$，$\eta_5$分别表示第1种排列方式至第5种排列方式对应的斯特林机组的效率；$P_1$，$P_1$，$P_1$，$P_1$，$P_1$分别表示第1种排列方式至第5种排列方式对应的斯特林机组的输出功率。从表中可以发现，在给定的参数条件下，第3种排列方式的斯特林机组具有最高的输出功率和效率，第1种排列方式的斯特林机组中具有最低的输出功率和效率。
 
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{0pt}
 	\caption{给定参数条件下不同排列方式的斯特林机组的性能}
 	\centering
 	\begin{tabular}{p{2cm}<{\centering} p{2.5cm}<{\centering} p{2cm}<{\centering} p{2.5cm}<{\centering}}

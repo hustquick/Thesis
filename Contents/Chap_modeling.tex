@@ -113,7 +113,6 @@
 本文选用SES（Stirling Energy System）公司生产的碟式反射镜作为梯级集热系统的碟式反射镜，其主要参数见于\autoref{tab:dc}。碟式接收器为自行设计研制的接收器，\autoref{fig:dishReceiver}是其结构示意图。
 
 \begin{table}[htbp]
-\setlength{\abovecaptionskip}{0pt}
 	\caption{碟式集热器的主要参数}
 	\centering
 	\begin{tabular}{cccccc}
@@ -400,7 +399,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \begin{equation}
 	W_{fs} = \oint p(\pm\frac{au_p}{c}\pm\frac{\Delta p_f}{p})dV
 \end{equation}
-其中，加号（$+$）用于压缩过程，减号（$-$）用于膨胀过程。$p$是压缩腔和膨胀腔的平均压力，$u_p$是活塞的速度，$c$是气体分子的平均速度，$\Delta p_f$是由于机械摩导致的压力损失。$\Delta p_f$，$a$和$c$可以由下列各式得到\cite{Heywood1988}：
+其中，加号（$+$）用于压缩过程，减号（$-$）用于膨胀过程。$p$是压缩腔和膨胀腔的平均压力，$u_p$是活塞的速度，$c$是气体分子的平均速度，$\Delta p_f$是由于机械摩擦导致的压力损失。$\Delta p_f$，$a$和$c$可以由下列各式得到\cite{Heywood1988}：
 
 \begin{equation}
 	\Delta p_f = 0.97+0.009s_{se}
@@ -502,7 +501,6 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 通过选用GPU-3型斯特林机作为实例，对所建立的模型进行评估。GPU-3型斯特林机的设计参数见\autoref{tab:GPU3parameters}\cite{Babaelahi2015,Martini1983}。将建立的模型计算得到的斯特林机效率和功率同经典模型及实验结果进行比较，结果如\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}所示。
 
 \begin{table*}[t!]\footnotesize
-\setlength{\abovecaptionskip}{0pt}
 	\caption{GPU-3型斯特林机的设计参数}
 	\centering
 	\begin{tabular}{ll}
@@ -539,7 +537,6 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \end{table*}
 
 \begin{sidewaystable}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{0pt}
   \renewcommand\arraystretch{0.75}
 	\caption{模型及实验的热效率（$T_{hw}=$922$\,\mathrm{K}$，$T_{cw}=$288$\,\mathrm{K}$）}
 	\centering
@@ -579,7 +576,6 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \end{sidewaystable}
 
 \begin{sidewaystable}[htbp]\footnotesize
-\setlength{\abovecaptionskip}{0pt}\
   \renewcommand\arraystretch{0.75}
 	\caption{模型及实验的输出功率（$T_{hw}=$922$\,\mathrm{K}$，$T_{cw}=$288$\,\mathrm{K}$）}
 	\centering

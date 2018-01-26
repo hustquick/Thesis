@@ -52,6 +52,11 @@
 	\definechangesauthor[name={张成}, color=red]{ZC}
 	%\setauthormarkuptext{name} 显示修改者姓名
 	\setauthormarkuptext{}
+\usepackage{enumitem}
+\setlist{
+	listparindent=\parindent,
+	parsep=0pt,
+	}
 \renewcommand{\nomgroup}[1]{
 %\ifthenelse{\equal{#1}{A}}{\item[\textbf{Roman Symbols}]}{%
 \ifthenelse{\equal{#1}{G}}{\item[\textbf{希腊字母}]}{%

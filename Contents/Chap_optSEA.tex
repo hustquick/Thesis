@@ -1,4 +1,5 @@
 \chapter{Optimization of Stirling engine array}
+\label{cha:seao}
 
 \section{Connection types of SEA}
 \label{sec:connectionTypes}
@@ -60,6 +61,13 @@ In a parallel flow, each engine's mass flow is $\dot{m}/n_{se}$, for $2\leqslant
 
 According to the equations (\autoref{Eq:T_h}$\sim$\autoref{Eq:T_parallel})
 , there are $6n_{se} - 2$ equations for $6n_{se}$ parameters for $n_{se}$ engines. Other parameters of an SEA can be calculated by the given inlet temperature of the heating and cooling fluids. The efficiency and power of each engine can be obtained from \autoref{Eq:eta} and \autoref{Eq:P}. The total efficiency and power of SEA can be obtained from powers of engines and outlet properties of the fluids.
+
+\begin{equation}
+	P_{sea} = \sum_{x = 1}^{n_{se}}P_{se,x}
+\end{equation}
+\begin{equation}
+	\eta_{sea} = \dfrac{P_{sea}}{\dot{m}_1(h_{1o} - h_{1i})}
+\end{equation}                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 
 MATLAB is used as the programming tool to build the models of SEAs, and CoolProp is used to provide fluid properties for MATLAB program. Five basic SEA models composed of the aforementioned Stirling engines and fluids are built. To compare SEA connection types under various conditions, several parameters are investigated to find out their effects on SEA performance.
 

@@ -22,7 +22,7 @@ Compared to solar photovoltaic, solar thermal power is gaining more attention fo
 Concentrating solar power technologies use different mirror configurations to concentrate the sun's light energy onto a receiver and convert it into heat. The heat is collected for power generation or used as industrial process heat.
 There are three types of CSP technologies being commercially applied: parabolic trough, parabolic dish and power tower.
 \autoref{fig:collectors} shows examples of the three types of CSP technologies.
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=.8\textwidth]{fig/Collectors}
 \caption{Examples of the three types of CSP technologies}\label{fig:collectors}
@@ -129,7 +129,7 @@ Pavlovic et al.~\cite{Pavlovic2017} performed the experimental study of a solar 
 
 Some researchers focused on the dish concentrator, many proposed different shapes of concentrators. The perfect concentrator has a parabolic shape, but for some considerations (better production, safer transportation, lest cost and so on), some solar concentrators are composed of multiple spherically shaped mirrors.
 A large dish solar concentrator, SG3, which is about 400$\,\mathrm{m^2}$, was designed and demonstrated in Australian National University in 1994 as shown in \autoref{fig:LargeDish}.~\cite{Lovegrove2011} It successfully proved the technical viability of a concentrator that is approximately three times bigger than any other produced. 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=.8\textwidth]{fig/largeDish.jpg}
 \caption{The SG3 400$\,\mathrm{m^2}$ dish in Australian National University}\label{fig:LargeDish}
@@ -197,45 +197,22 @@ Some researchers have investigated the combination of different types of collect
 Suzuki~\cite{Suzuki1986} analyzed the solar thermal systems with two different types of collectors connected in series. A value of the collectors, the product of the collector efficiency factor and the optical efficiency,  was revealed to be the key factor to determine whether a cascade system is better than either one of the collectors alone. If the value of the lower concentration ratio collector is lager than that of the higher concentration ratio, the cascade system is more effective. Furthermore, it was found that to obtain the maximum energy gain, there exists the optimum operating conditions.
 
 Kribus et al.~\cite{Kribus1999} proposed an idea of using separate aperture stages for different irradiance distribution. The working fluid is gradually heated when it flow through the receiver elements with increasing irradiance levels. A two-stage system was set up to demonstrate this principle at the Weizmann Institute's Solar Tower. Air was used as the HTF to obtain 750$\mathrm{^\circ C}$ after the low-temperature stage and 1000$\mathrm{^\circ C}$ after the high-temperature stage. \autoref{fig:Kribus1999} shows the two-stage receiver system.
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=.8\textwidth]{fig/Kribus1999.jpg}
 \caption{Two-stage receiver system}
 \label{fig:Kribus1999}
 \end{figure}
 
-% 组合使用不同厂家的集热器
 Gordon and Saltiel~\cite{Gordon1986} presented an analytic method for predicting the long-term performance of solar energy systems with more than one collector brand (``multistage'' systems). This procedure enables the designer to determine the most cost-effective method of combining different collector brands for a given load. The analytic method is illustrated by a solved example which shows that significant savings can be realized by combining different collector brands for a given application (multi-staging).
 
-% Collado2016 and Guallar~\cite{Collado2016} proposed a method breaking the optimization process of solar power tower system down into two consecutive steps.
-%    In solar power tower (SPT) systems, selecting the optimum location of thousands of heliostats and the most profitable tower height and receiver size remains a challenge. Given the complexity of the problem, breaking the optimization process down into two consecutive steps is suggested here;
-%First, a primary, or energy, optimization, which is practically independent of the cost models, and then a main, or economic, optimization. The primary optimization seeks a heliostat layout supplying the maximum annual incident energy for all the explored combinations of receiver sizes and tower heights. The annual electric output is then calculated as the combination of the incident energy and the simplified (annual averaged) receiver thermal losses and power efficiencies. Finally, the figure of merit of the main optimization is the levelized cost of electric energy (LCOE) where the capital cost models used for the LCOE calculation are reported by the System Advisor Model (SAM)-NREL and Sandia. This structured optimization, splitting energy procedures from economic ones, enables the organization of a rather complex process, and it is not limited to any particular power tower code. Moreover, as the heliostat field layout is already fully optimized before the economic optimization, the profiles of the LCOE versus the receiver radius for the tower heights explored here are sharp enough to establish optima easily. As an example of the new procedure, we present a full thermo-economic optimization for the design of the collector field of an actual SPT system (Gemasolar, 20 MWe, radially staggered surrounding field with 2650 heliostats, 15 h of storage). The optimum design found for Gemasolar is reasonably consistent with the scarce open data. Finally, optimum designs are strongly dependent on the receiver cost, the electricity tariff and the assumed maximum receiver surface temperature.
-
-% 不同集热器型式的对比
-%Reddy~\cite{Reddy2009} carried out the numerical analysis of solar dish modified cavity receiver with cone, CPC and Trumpet reflectors is presented. Three-dimensional modeling to estimate the convective and radiative heat loss from the receiver for different angles of inclination and operating temperatures. Incorporating reflectors in the modified cavity receiver for second stage concentration, the natural convection heat losses are reduced by 29.23, 19.81 and 19.16\%, respectively. The receiver with the trumpet reflector has shown better performance as compared to other configurations.
-
-%Mills~\cite{Mills1995}
-%
-%Maximally concentrating collectors include the class of ideal concentrating collectors, but are a more general class offering many more practical possibilities. By evaluating such configurations using the concept of maximal flux concentration, based upon average radiation flux concentration over the acceptance angle, clear ray trace comparisons may be made between different collector configurations. These comparisons allow the most effective configuration to be selected for a given application. An example of a comparatively simple and practical two-stage concentrator having equal or better maximal performance than previous work for high rim angle primaries is given. This uses an unusual straight section of reflector and allows rays to cross from one reflector segment of the secondary to another. Versions which allow concentration up to 90\% of maximal are described, as are versions achieving 80\% with high collection efficiency. Use of the ~~~ geometrical concentration criterion based upon aperture ratios is suggested to be inappropriate for comparisons.
-
-%空气槽式集热器
-
-%Good et al.~\cite{Good2015} proposed an entirely novel solar receiver design for solar trough concentrators using air as heat transfer fluid at operating temperatures exceeding 600 °C. It consists of an array of helically coiled absorber tubes contained side-by-side within an insulated groove having a rectangular windowed opening. Secondary concentrating optics are incorporated to boost the geometric concentration ratio to 97×. The multiple absorber tubes are connected via two axial pipes serving as feeding and collecting manifolds. The steady-state energy conservation equation coupling radiation, convection, and conduction is formulated and solved numerically using the finite volume technique. The solar flux distribution incident at each absorber tube is determined by Monte Carlo ray-tracing using spectrally and directionally dependent optical properties. Thermal radiative heat exchange is analyzed using the gray-band approximated radiosity method for an enclosure with a selective window. Model validation is accomplished by comparison to on-sun experiments with a 1 m-long solar receiver prototype composed of 7 absorber tubes, mounted on a 4.85 m-aperture solar trough concentrator. Feeding rates in the range of 5–20 ln/min to each absorber tube led to air outlet temperatures of 621–449 °C and a peak receiver efficiency of 64\%.
-
-% 空气碟式系统
-% Barder et al.~\cite{Bader2015} developed a numerical model of a tubular cavity-receiver that uses air as the heat transfer fluid using a validated heat transfer model. The receiver is designed for use on a large-span (9 m net concentrator aperture width) solar parabolic trough concentrator. Through the combination of a parabolic primary concentrator with a nonimaging secondary concentrator, the collector reaches a solar concentration ratio of 97.5. Four different receiver configurations are considered, with smooth or V-corrugated absorber tube and single- or double-glazed aperture window. The collector's performance is characterized by its optical efficiency and heat loss. The optical efficiency is determined with the Monte Carlo ray-tracing method. Radiative heat exchange inside the receiver is calculated with the net radiation method. The 2D steady-state energy equation, which couples conductive, convective, and radiative heat transfer, is solved for the solid domains of the receiver cross-section, using finite-volume techniques. Simulations for Sevilla/Spain at the summer solstice at solar noon (direct normal solar irradiance: 847 W$\cdot$m$^{-2}$, solar incidence angle: 13.9$^\circ$) yield collector efficiencies between 60\% and 65\% at a heat transfer fluid temperature of 125$\mathrm{^\circ C}$ and between 37\% and 42\% at 500$\mathrm{^\circ C}$, depending on the receiver configuration. The optical losses amount to more than 30\% of the incident solar radiation and constitute the largest source of energy loss. For a 200 m long collector module operated between 300 and 500$\mathrm{^\circ C}$, the isentropic pumping power required to pump the HTF through the receiver is between 11 and 17 kW.
-
-%多种集热器的混合利用
-
-
-%Cau~\cite{Cau2014} reported a comparative performance analysis of CSP plants using both parabolic trough and linear Fresnel collectors. A two-tank direct thermal storage system are included and in the Rankine cycle, regenerator, $4\sim6$ steam extractions and air-cooler condenser are used.
 Oshida and Suzuki~\cite{Oshida1987} presented the idea of optical cascade heat collection of solar energy. Two absorbers, one warm and the other hot, are used in the cascade system. The warm absorber is heated by the Fresnel lenses and the hot absorber is heated by CPC. HTF flows into the warm absorber firstly and then flows into the hot absorber. The temperature of HTF can increase more effectively by the cascade heating design.
 
 Desai et al.~\cite{Desai2015} presented an integrated CSP plant configuration with the combination of both PTC and LFC. Thermo-economic comparisons between PTC-based, LFC-based and integrated CSP plant configurations, without hybridization and storage, were analyzed. \autoref{fig:Desai2015} shows a simplified schematic of a proposed integrated CSP plant configuration. It is demonstrated that the cost of energy of an integrated CSP plant is 9.6\% cheaper than PTC-based CSP plant and 13.5\% cheaper than LFC-based CSP plant.
 
 Coco et al.~\cite{Coco2015} developed four different line-focusing solar power plant configurations integrated both direct steam generation and Brayton power cycle. In these configurations, collectors are divided into different solar fields to supply different heat demands. This provides the ability to use different types of collectors (parabolic trough and linear Fresnel) in the systems.
 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=.7\textwidth]{fig/Desai2015.jpg}
 \caption{Simplified schematic of a proposed integrated CSP plant configuration}\label{fig:Desai2015}
@@ -250,7 +227,7 @@ Many researchers have done the work on the combination of different thermodynami
 Lots of the work focused on integrated solar combined cycle (ISCC) with parabolic trough, where Rankine cycle is used as the bottom cycle.
 
 Li and Yang~\cite{Li2014} proposed a novel two-stage ISCC system that could reach up to 30\% of the net solar-to-electricity efficiency as shown in \autoref{fig:Li2014}. In their research, the impact on the system overall efficiencies of how and where solar energy is input into ISCC system was investigated.
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=.8\textwidth]{fig/Li2014.jpg}
 \caption{The proposed ISCC scheme}\label{fig:Li2014}
@@ -259,7 +236,7 @@ Li and Yang~\cite{Li2014} proposed a novel two-stage ISCC system that could reac
 G\"{u}len~\cite{Gulen2015} used the exergy concept of the second law of thermodynamics to simplify the optimization process of ISCCS. After the exergy analysis, physics-based, user-friendly guidelines were provided for ISCC designs.
 
 Shaaban~\cite{Shaaban2016} introduced a novel ISCC with steam and organic Rankine cycles. The ORC was used in order to intercool the compressed air and produce a net power from the received thermal energy. The proposed cycle performance was studied and optimized with different ORC working fluids. \autoref{fig:Shaaban2016} shows the schematic of the proposed ISCC.
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=.8\textwidth]{fig/Shaaban2016.jpg}
 \caption{Schematic of the proposed ISCC with two bottoming cycles}\label{fig:Shaaban2016}
@@ -302,20 +279,36 @@ In view of the characteristics of existing CSP technologies and the deficiency o
 	
 	\item State of the art of solar thermal power technologies, corresponding to \autoref{cha:Introduction}.
 
-After briefly introducing the research background and significance of solar thermal power generation technology, this paper reviews in detail the predecessors' major research achievements in the fields of solar thermal power generation technology and energy cascade collection and utilization in solar thermal power generation technology. Research status quo, and briefly summarize the current status quo of research deficiencies.
+After briefly introducing the research background and significance of solar thermal power generation technology, this paper reviews in detail the major researches in the fields of solar thermal power generation technology, energy cascade collection and cascade utilization. The research deficiencies of current status quo are briefly summarized.
  
-	\item Selecting reasonable topologies for cascade solar thermal power generation systems. According to the thermodynamic characteristics and operating behaviors of components in thermal power generation systems, reasonable topologies are selected. These topologies should be able to embody the benefits of cascade systems and help to improve the performance of solar thermal power system. 
+	\item System topology design analysis, corresponding to \autoref{cha:SystemTopology}.
+	
+	In view of the importance of the cascade system topology and the diversity of structure selection, reasonable topologies for cascade solar thermal power generation systems are selected. According to the thermodynamic characteristics and operating behaviors of components in thermal power generation systems, reasonable topologies are selected. These topologies embody the benefits of cascade systems and help to improve the performance of solar thermal power system. 
 
-	\item Establishing the mechanical model of each component in solar thermal power generation system. Based on the governing equations and operating characteristics of each component, a mechanism model will be established. Object-oriented features will be applied to create component models easy to combine, extend, and replace.
+	\item Mechanism modeling method research, corresponding to \autoref{cha:Modeling}.
+	
+	In view of the physical mechanism and operating characteristics of the key components in the solar thermal power generation system, this thesis investigates the modeling methods of the key components. Mathematical calculation tool and system development tool are used for component and system development. Object-oriented features are applied to create component models easy to combine, extend, and replace. At last, a software to design solar thermal power generation system with computer software copyright is developed for the system investigation.
+	
+	\item Optimization research of Stirling engine array arrangement, corresponding to \autoref{cha:seao}.
+	
+	Considering the influence of different arrangements on the performance of Stirling engine array, five basic arrangements are proposed. The simulation models of Stirling engine arrays with different arrangement are established using the developed solar thermal design software. The performances of the models under different parameters are compared and the optimum arrangement is found.
 
-	\item System modeling for each proposed cascade system scheme. Based on the mechanism models of the components, a software that provides the functions of system topology arrangement, component connection, parameter setting and environment selection will be developed for the system investigation.
+	\item The steam generation system optimization research, corresponding to \autoref{cha:osgs}.
+	
+	Aiming at the large exergy loss of traditional steam generating system in the process of steam generating, a new staged heating system is proposed to reduce the heat exchange temperature difference. The solar field is divided into three independent parts. Each part supplies heat for its corresponding heat exchanger. Adjusting flow rate of HTF in each part can reduce the temperature difference and improve the thermal efficiency of the solar field.
+	
+	\item Cascade system evaluation analysis, corresponding to \autoref{cha:cspe}.
+	
+	The performance evaluation index, the overall solar-to-electric conversion efficiency, of the cascade system is given. Appropriate stand-alone systems are chosen for comparative analysis of the cascade systems. Analysis of the influences of various parameters on the efficiency difference between cascade system and its corresponding stand-alone systems is conducted.
 
-	\item Optimizing the subsystem of the cascade system. Specifically, a staged heating method will be analyzed for the optimization of the steam generating system. Different layouts of Stirling engines will be analyzed to find out best layouts of the Stirling engines in the cascade system.
-
-	\item Finding out the conditions conductive for cascade solar thermal power application.  Selecting appropriate stand-alone systems for comparative analysis of the cascade systems. Analysis of the influences of various parameters on the efficiency difference between cascade system and its corresponding stand-alone systems will be conducted.
-
-	\item Building a solar thermal power generation test platform to carry out experimental works for solar thermal power generation. Special experiment cases considering the features of solar irradiance need to be designed to investigate the impact of different factors on the system performance. Influences of different factors on the performance of components will be investigated. Thermal performances of trough collectors and dish collectors will be analyzed, and the simulation models will be validated.
+	\item Experimental research of solar thermal power generation system, corresponding to \autoref{cha:erostpp}. 
+	
+	A solar thermal power generation test platform is built to carry out experimental works for solar thermal power generation. Special experiment cases considering the features of solar irradiance need to be designed to investigate the impact of different factors on the system performance. Influences of different factors on the performance of components will be investigated. Thermal performances of trough collectors and dish collectors will be analyzed, and the simulation models will be validated.
 \end{enumerate}
+
+The structure of this thesis is shown in \autoref{fig:ThesisStructure}.
+
+\begin{figure}[htbp]\centering\includegraphics[width=0.9\textwidth]{fig/ThesisStructure}\caption{Structure of the thesis}\label{fig:ThesisStructure}\end{figure}
 
 \nomenclature[C]{CCHP}{Combined cooling, heating and power}
 \nomenclature[C]{HTF}{Heat Transfer Fluid}

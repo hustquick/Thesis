@@ -1,8 +1,5 @@
 \chapter{Cascade system performance evaluation}
-\section{System description}
-
-In \autoref{sec:sst}, two typical cascade system topologies (see \autoref{fig:CascadeSystems}) are selected for further investigation. It has to be pointed out that, in \autoref{cha:osgs}, multistage exergy loss reduction system (MELRS) is proposed and analyzed. It is obvious that MELRS has better energy and exergy performance than SGSS. However, the MELRS is not applied in this chapter for investigation. There are several reasons. First,
-in order to clearly find out the advantages of cascade collection and cascade utilization of the cascade systems, it is not applied in the cascade system in this chapter. Second, compared with traditional SGSS, MELRS only changes the solar field, which has no influence on the cascade utilization of the cascade system. It can be easily applied in the cascade system analyzed in this chapter in the future without influence of existing calculations. Third, the MELRS proposed in \autoref{cha:osgs} needs further research in the future. Different kinds of solar collector technologies can be applied in different solar fields. For example, linear Fresnel reflectors or flat collectors can be applied for preheating solar field to reduce costs; molten salt can be used as heat transfer fluid in the superheating solar field to increase the main steam temperature of the Rankine cycle.
+\label{cha:cspe}
 
 Two typical cascade system topologies are selected in \autoref{cha:SystemTopology}. 
 Both systems take advantage of the different types of heat collectors and different thermal cycles to achieve cascade collection of energy and cascade utilization.
@@ -15,7 +12,6 @@ In this system, dish collectors are used to provide heat for Stirling engines an
 	\includegraphics[width = 0.8\columnwidth]{fig/cascadeSystem}
 	\caption{Sketch of the cascade system}
 	\label{fig:System-1}
-
 \end{figure}
 
 \autoref{fig:T-s_Water2} shows the $T$-$s$ diagram of the water circuit in the cascade system. In this Rankine cycle, the heat provided in process $2e$-$2f$ comes from the Stirling engines, which increases the power of Rankine cycle. \autoref{fig:HeatTransfer_Water-SEs} shows the heat transfer diagram of this process.
@@ -31,32 +27,35 @@ In this system, dish collectors are used to provide heat for Stirling engines an
 	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Water-SEs}
 	\caption{Diagram of process $2e$-$2f$}\label{fig:HeatTransfer_Water-SEs}
 	\end{subfigure}
-	
 	\caption{Diagrams of water circuit and $2e$-$2f$ process}\label{fig:Diagrams$2e$-$2f$}
 \end{figure}
 
+It is obvious that MELRS has better energy and exergy performance than SGSS. However, the MELRS is not applied in this chapter for investigation. There are several reasons. First,
+in order to clearly find out the advantages of cascade collection and cascade utilization of the cascade systems, it is not applied in the cascade system in this chapter. Second, compared with traditional SGSS, MELRS only changes the solar field, which has no influence on the cascade utilization of the cascade system. It can be easily applied in the cascade system analyzed in this chapter in the future without influence of existing calculations. Third, the MELRS proposed in \autoref{cha:osgs} needs further research in the future. Different kinds of solar collector technologies can be applied in different solar fields. For example, linear Fresnel reflectors or flat collectors can be applied for preheating solar field to reduce costs; molten salt can be used as heat transfer fluid in the superheating solar field to increase the main steam temperature of the Rankine cycle.
 
-%\begin{figure}[htbp]
-%\centering
-%	\subfigure[$T$-$s$ diagram of the water circuit]{
-%	\includegraphics[width = 0.4\columnwidth]{fig/T-s_Water}
-%	\caption{$T-s$ diagram of the water circuit}
-%	\label{fig:T-s_Water}}
-%	~\subfigure[Heat transfer diagram of process $2e$-$2f$]{
-%	\includegraphics[width = 0.4\columnwidth]{fig/HeatTransfer_Water-SEs}
-%	\caption{Heat transfer diagram of process $2e$-$2f$}
-%	\label{fig:HeatTransfer_Water-SEs}}
-%	\caption{Diagrams of water circuit and $2e$-$2f$ process}
-%
-%\end{figure}
+\section{System evaluation method}
 
-%\begin{figure}[htbp]
-%\centering
-%	\includegraphics[width = 0.7\columnwidth]{fig/HeatTransfer_Water-SEs}
-%	\caption{Heat transfer diagram of process $2e$-$2f$}
-%	\label{fig:HeatTransfer_Water-SEs}
-%
-%\end{figure}
+An important aspect of the cascade system evaluation is to compare with existing solar thermal power technologies. Several comparison methods can be used.
+
+\begin{enumerate}[label=(\arabic*)]
+	\item Compare with parabolic trough. 
+
+	When compared with parabolic trough system, a higher efficiency of the cascade system may be explained as the usage of solar dish collector. It is difficult to tell if the higher efficiency is due to the usage of cascade system or the usage of dish collector.
+	\item Compare with parabolic dish.
+	
+	When compared with parabolic dish system, a lower cost of the cascade system may be explained as the usage of solar trough collector. It is difficult to tell if the lower cost is due to the usage of cascade system or the usage of trough collector.
+	\item Compare with stand-alone systems.
+	
+	It is important to choose good stand-alone systems. An intuitive idea is to use both parabolic trough and parabolic dish for comparison. To compare two systems, contrast conditions needs to be set. 
+	
+	If the same output power was selected as the contrast condition, different amount of trough collectors and dish collectors will be used in the cascade system and stand-alone systems.
+	It is complicated for cost comparison due to different prices of trough collectors and dish collectors.
+	
+	A better way is to select the same collectors as the contrast condition. Since the output is electricity, it is much more convenient for both efficiency comparison and cost comparison.
+	
+	This thesis chooses the third comparison method. 
+	Figure 6-3 shows the structure of the stand-alone systems. In order to complete the comparison and analysis of the cascade system, the system modeling method was used to model the two stand-alone systems separately.
+	
 
 To build the cascade system model, several simplifying assumptions are made:
 
@@ -104,21 +103,7 @@ As mentioned above, $\dfrac{P_{rk}}{I_rA_{tc}}$ does not indicate the efficiency
 
 The other one is to compare with existing solar thermal power technologies. This requires more consideration. 
 
-\begin{enumerate}[label=(\arabic*)]
-	\item Compare with parabolic trough. 
 
-	When compared with parabolic trough system, a higher efficiency of the cascade system may be explained as the usage of solar dish collector. It is difficult to tell if the higher efficiency is due to the usage of cascade system or the usage of dish collector.
-	\item Compare with parabolic dish.
-	
-	When compared with parabolic dish system, a lower cost of the cascade system may be explained as the usage of solar trough collector. It is difficult to tell if the lower cost is due to the usage of cascade system or the usage of trough collector.
-	\item Compare with stand-alone systems.
-	
-	It is important to choose good stand-alone systems. An intuitive idea is to use both parabolic trough and parabolic dish for comparison. To compare two systems, contrast conditions needs to be set. 
-	
-	If the same output power was selected as the contrast condition, different amount of trough collectors and dish collectors will be used in the cascade system and stand-alone systems.
-	It is complicated for cost comparison due to different prices of trough collectors and dish collectors.
-	
-	A better way is to select the same collectors as the contrast condition. Since the output is electricity, it is much more convenient for both efficiency comparison and cost comparison.
 	
 \end{enumerate}
 

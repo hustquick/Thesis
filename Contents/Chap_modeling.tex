@@ -672,12 +672,12 @@ Heat transferred from Stirling engine to cooling fluid in a cycle
 %\autoref{Eq:T_h}-\ref{Eq:q_c}
 %. Then $\eta$ and $P$ can be obtained by \autoref{Eq:eta} and~\ref{Eq:P}. This means the performance of a given Stirling engine can be inquired by the input/output parameters of heating/cooling fluids.
 
-\subsection{Rankine power generation system}
+\section{Rankine power generation subsystem}
 %The power generating system includes the turbine (steam turbine or ORC turbine) and generator.
 
 %The Rankine power generation system consists of turbine, condenser, deaerator, generator and pumps. 
 Based on different working fluids, there are two different kinds of Rankine power generation systems, steam Rankine power generation system and organic Rankine power generation.
-\subsubsection{Steam Rankine cycle}
+\subsection{Steam Rankine cycle}
   
   For steam Rankine cycle, a deaerator is used to remove the oxygen and other non-condensable gases in the feedwater of steam generating system. Dissolved oxygen in feedwater will cause serious corrosion damage in steam generating system by forming oxides (rust) of the metal pipes. Dissolved carbon dioxide combines with water to form carbonic acid will cause further corrosion. The accumulation of the non-condensable gases will increase the heat transfer resistance, which is harmful for the heat exchangers. The extraction of the steam turbine provides heat for the deaerator.
   
@@ -735,7 +735,7 @@ The efficiency of Rankine cycle can be expressed as
 	\eta_{rk}=(P_{tb}-P_{pu}/\eta_{ge})/Q_{2}
 \end{equation}
 
-\subsubsection{Organic Rankine cycle}
+\subsection{Organic Rankine cycle}
   
   Compared with steam Rankine cycle, ORC has the following features:
   \begin{enumerate}[label=(\arabic*)]
@@ -804,104 +804,6 @@ Heat injected in the circuit
 The efficiency of Rankine cycle can be expressed as
 \begin{equation}
 	\eta_{rk}=\dfrac{P_{tb}-P_{pu}/\eta_{ge}}{\dot{m}_4(h_{4a}-h_{4f})}
-\end{equation}
-
-\subsubsection{Generator}
-The generator is relatively independent of the cascade system and its efficiency is assumed to be a constant value, 0.975.
-
-%\subsubsection{Thermal storage system}
-
-%\section{Steam generating system}
-%\section{Steam extraction and regeneration system}
-\section{Stirling engine array modeling}
-
-\begin{figure}[htbp]
-\centering
-	\includegraphics[width = 0.6\columnwidth]{fig/stirlingEngineArray.pdf}
-	\caption{Layout of Stirling engines}
-	\label{fig:Layout of Stirling engines}
-\end{figure}
-Stirling engine array is used in the cascade system, \autoref{fig:Layout of Stirling engines} shows the layout of a Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,\mathrm{W/(m^2\cdot{}K)}$, $U_{se,2}=150\,\mathrm{W/(m^2\cdot{}K)}$, $A_{se,1}=6\,\mathrm{m^2}$, $A_{se,2}=6\,\mathrm{m^2}$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times10^{-2}\,\mathrm{mol}$, $s_{se}=10\,\mathrm{s^{-1}}$.
-
-Depending on the direction of heating and cooling flows, there are two possible flow types: parallel flow and counterflow. 
-\autoref{fig:twoFlowTypes} and 
-\autoref{fig:CounterFlow} show the heat transfer diagrams of the two flow types.
-$n_1$ is chosen to be 10 and can be optimized later.
-
-\begin{figure}[htbp]
-\centering
-	\begin{subfigure}[b]{0.45\columnwidth}
-	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Parallel.pdf}
-	\caption{Parallel flow}\label{fig:ParallelFlow}
-	\end{subfigure}
-	~
-\begin{subfigure}[b]{0.45\columnwidth}
-	\includegraphics[width = \columnwidth]{fig/HeatTransfer_Counter.pdf}
-	\caption{Counterflow}\label{fig:CounterFlow}
-	\end{subfigure}
-	\caption{Heat transfer diagrams of parallel flow and counterflow}
-	\label{fig:twoFlowTypes}
-\end{figure}
-
-In \autoref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},\dot{m}_{1,r}=\dot{m}_{1}/n_{2}$. For $x$ from $1$ to $n_1-1$, where $x$ is the column number of Stirling engines, $T_{1,i,x+1}=T_{1,o,x},T_{2,i,x+1}=T_{2,o,x}$.
-
-Assume that the positive flow direction is to the right, for parallel flow, $T_{2,i,1}=T_{2,i}$, $\dot{m}_{2,r}=\dot{m}_{2}/n_{2}$; for counterflow, $T_{2,o,n_1}=T_{2,i}$, $\dot{m}_{2,r}=-\dot{m}_{2}/n_{2}$.
-
-Assume linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$,~\cite{Der2007,Cavazzuti2012} and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$.~\cite{Formosa2010,Juhasz2010} 
-
-For a Stirling engine in column $x$, $x$ from $1$ to $n_1$, according to \autoref{eq:T_H} and \autoref{eq:T_L},
-\begin{equation}
-	T_{hw,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{se,1}A_{se,1}}{\dot{m}_{1,r}c_{p,1,x}})}\label{eq:T_H_x}
-\end{equation}
-
-
-\begin{equation}
-	T_{cw,x}=T_{2,i,x}-\dfrac{T_{2,i,x}-T_{2,o,x}}{1-\exp(-\dfrac{U_{se,2}A_{se,2}}{\dot{m}_{2,r}c_{p,2,x}})}\label{eq:T_L_x}
-\end{equation}
-
-The power of each Stirling engine in column $x$ can be written as 
-\begin{equation}
-  P_{se,x} = W_{th,x}-W_{pd,x}-W_{fs,x}
-\end{equation}
-
-The efficiency of each Stirling engine in column $x$ can be written as 
-\begin{equation}
-  \eta_{se,x} = \dfrac{W_{th,x}-W_{pd,x}-W_{fs,x}}{Q_{th,x}+Q_{id,x}+Q_{sc,x}}
-\end{equation}
-
-%$\eta_{se,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{se}}}\label{eq:eta_striling_x}$, where $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Stine1985,Juhasz2010} and $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}.
-
-%\begin{equation}
-%	\eta_{se,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{se}}}\label{eq:eta_striling_x}
-%\end{equation}
-
-For energy balance,
-\begin{equation}
-	\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})(1-\eta_{se,x})=\dot{m}_{2,r}(h_{2,o,x}-h_{2,i,x})
-\end{equation}
-
-%And in each Stirling cycle, the heat absorbed by the working gas is
-%\begin{equation}
-%\begin{split}
-%	n_gR(T_{H,x}\ln\gamma_{se}+\dfrac{1-e_{x}}{k-1}(T_{H,x}-T_{L,x}))=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})/s_{se}
-%\end{split}
-%\end{equation}
-
-Using equations in \autoref{sec:StirlingEngineModel} and the energy balance equations, key parameters of the Stirling engine array can be obtained. 
-
-The efficiency of the Stirling engine array 
-\begin{equation}
-  \eta_{sea}=1-\dfrac{\dot{m}_{2}(h_{2,o,n_1}-h_{2,i,1})}{\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})}
-\end{equation}
-
-The output power of each Stirling engine in column $x$
-\begin{equation}
-  P_{se,x}=\dot{m}_{1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}
-\end{equation}
-
-The total output power of the Stirling engine array
-\begin{equation}
-  P_{sea}=\eta_{sea}\dot{m}_{1}(h_{1,i,1}-h_{1,o,n_1})
 \end{equation}
 
 \section{Steam generating system modeling}

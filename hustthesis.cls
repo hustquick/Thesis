@@ -279,7 +279,8 @@
     \zhschoolname{#1}\enschoolname{#2}
   }
 }
-\schoolname{华中科技大学}{Huazhong University of Science~\char38~Technology}
+\schoolname{华中科技大学\\萨拉戈萨大学}{Huazhong University of Science~\char38~Technology
+	\\ Universidad Zaragoza}
 \def\zhaddress#1{\gdef\HUST@zhaddress{#1}}
 \def\enaddress#1{\gdef\HUST@enaddress{#1}}
 \DeclareDocumentCommand\address{m g}
@@ -290,7 +291,8 @@
     \zhaddress{#1}\enaddress{#2}
   }
 }
-\address{中国，武汉，430074}{Wuhan~430074, P.~R.~China}
+%\address{中国，武汉，430074\\ 西班牙，阿拉贡地区，萨拉戈萨市，50009}{Wuhan~430074, P.~R.~China\\ Pedro Cerbuna 12, Zaragoza, España}
+\address{中国，武汉，430074\\ 西班牙，阿拉贡地区，萨拉戈萨市，50009}{\ }
 \def\zhmajor#1{\gdef\HUST@zhmajor{#1}}
 \def\enmajor#1{\gdef\HUST@enmajor{#1}}
 \DeclareDocumentCommand\major{m g}
@@ -737,7 +739,8 @@
   \parbox[t][6cm][t]{\textwidth}{
     \vspace{1.0cm}
     \begin{center}
-    \includegraphics[scale=1.1]{fig/hust-title.pdf}\\[0.8cm]
+    \includegraphics[scale=1]{fig/hust-title.pdf}\\
+    \includegraphics[scale=1]{fig/UNIZAR.png}\\
     \ziju{10bp}{\fontsize{42pt}{54.6pt}\selectfont\HEI\HUST@zhapplyname}
     \end{center}
   }

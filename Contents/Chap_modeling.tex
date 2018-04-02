@@ -104,7 +104,7 @@
   \item 极轴跟踪，集热器围绕与地轴平行的轴旋转跟踪太阳。
 \end{itemize}
 
-在传统的碟式斯特林机系统中，斯特林机放置在碟式集热器的焦点上。斯特林机设有接收器来吸收会聚的阳光。接收器由设有开孔的腔体和置于其中的吸热器组成。斯特林接收器的开孔位于反射器的焦点处，以减少辐射和对流损失。吸热器吸收太阳辐射能并将产生的热能传递给斯特林机的工作气体，为斯特林循环提供热量，使斯特林机的曲轴连续往复运动。直接连接到斯特林机曲轴的发电机将机械能转化为电能。
+在传统的碟式斯特林热机系统中，斯特林热机放置在碟式集热器的焦点上。斯特林热机设有接收器来吸收会聚的阳光。接收器由设有开孔的腔体和置于其中的吸热器组成。斯特林接收器的开孔位于反射器的焦点处，以减少辐射和对流损失。吸热器吸收太阳辐射能并将产生的热能传递给斯特林热机的工作气体，为斯特林循环提供热量，使斯特林热机的曲轴连续往复运动。直接连接到斯特林热机曲轴的发电机将机械能转化为电能。
 
 本文提出的梯级系统中，碟式集热器的焦点处放置有腔体式接收器。 一个金属螺旋管（称为吸热管）作为吸热器位于接收器中以吸收集中的太阳能。空气（或氮气）被用作传热流体流经吸热管以传输被吸热管吸收的能量，空气流出吸热器作为高温热源为其它部件提供热量。
 
@@ -291,10 +291,10 @@ $q_{dr,1}$可以通过\autoref{eq:q_dr_1}计算得出。于是，碟式接收器
 
 基于以上简化假设和对碟式集热器的机理研究，本文建立了碟式集热器的模型，模型可以方便地求解碟式接收器热网络图中的各种损失，并由此得到碟式集热器的集热效率。
 
-\subsection{斯特林机}
+\subsection{斯特林热机}
 \label{sec:StirlingEngineModel}
 \subsubsection{斯特林循环}
-理想斯特林循环由同冷热热源进行的两个等温换热过程及同回热器进行的两个定容换热过程组成。斯特林循环的$T$-$s$图如\autoref{fig:StirlingCycle}所示，图中4-1过程中回热器吸收的热量在2-3过程中被重新利用。但是实际上，由于回热过程不完善，这部分能量往往不能被完全利用，这部分能量只能将斯特林机的工作气体从2状态点加热到3'状态点，所以需要定义回热率$e$来表征回热器的完善程度\cite{Formosa2010,Juhasz2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
+理想斯特林循环由同冷热热源进行的两个等温换热过程及同回热器进行的两个定容换热过程组成。斯特林循环的$T$-$s$图如\autoref{fig:StirlingCycle}所示，图中4-1过程中回热器吸收的热量在2-3过程中被重新利用。但是实际上，由于回热过程不完善，这部分能量往往不能被完全利用，这部分能量只能将斯特林热机的工作气体从2状态点加热到3'状态点，所以需要定义回热率$e$来表征回热器的完善程度\cite{Formosa2010,Juhasz2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
 
 \begin{figure}[htbp]
 \centering
@@ -303,11 +303,11 @@ $q_{dr,1}$可以通过\autoref{eq:q_dr_1}计算得出。于是，碟式接收器
 	\label{fig:StirlingCycle}
 \end{figure}
 
-为了得到简化的分析模型，针对斯特林机做了以下简化假设：
+为了得到简化的分析模型，针对斯特林热机做了以下简化假设：
 
 \begin{itemize}
-\item 斯特林机中的工质可以被看成理想气体。
-\item 斯特林机不与环境间交换热量。
+\item 斯特林热机中的工质可以被看成理想气体。
+\item 斯特林热机不与环境间交换热量。
 \item 冷热流体的平均换热系数为常数。
 \item 回热器具有对称性，这样有效回热温度可以简化计算为$T_{R}=\dfrac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$\cite{Formosa2010,Juhasz2010}。
 \end{itemize}
@@ -382,13 +382,13 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 
 \item \emph{压力损失带来的影响}
 
-压力损失使斯特林机的输出功率下降。压力损失可以表示为\cite{Urieli1984}：
+压力损失使斯特林热机的输出功率下降。压力损失可以表示为\cite{Urieli1984}：
 \begin{equation}
 	\Delta p = -\frac{2f_{Re}\mu u V}{d^2A}
 \end{equation}
 其中，$u$是工作气体的流速，$V$是流通体积，$A$是流动截面积。
 
-由压力损失带来的斯特林机的净输出损失可以由下式计算得到：
+由压力损失带来的斯特林热机的净输出损失可以由下式计算得到：
 \begin{equation}
 	W_{pd} = \oint\underset{i = E,C}{\sum}(\Delta p_{i}\frac{dV_i}{d\theta})d\theta
 \end{equation}
@@ -429,7 +429,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 
 \end{enumerate}
 
-于是，斯特林机在一个循环过程中的总吸热量可以表述为
+于是，斯特林热机在一个循环过程中的总吸热量可以表述为
 \begin{equation}
 	Q = Q_{th} + Q_{id} + Q_{sc}
 	\label{eq:heat}
@@ -441,26 +441,26 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\label{eq:work}
 \end{equation}
 
-斯特林机的输出功率为
+斯特林热机的输出功率为
 \begin{equation}
 	P = Ws_{se}
 	\label{eq:P}
 \end{equation}
 
-斯特林机的效率为
+斯特林热机的效率为
 \begin{equation}
 	\eta = W/Q
 	\label{eq:eta}
 \end{equation}
 
-\subsubsection{斯特林机与冷热流体间的传热}
+\subsubsection{斯特林热机与冷热流体间的传热}
 
-对于斯特林机的传热过程，加热器、冷却器和回热器的壁面温度被假定为均匀且恒定。于是可以利用\autoref{cha:CTHX}~中的流体与定温热源的传热计算公式，有
+对于斯特林热机的传热过程，加热器、冷却器和回热器的壁面温度被假定为均匀且恒定。于是可以利用\autoref{cha:CTHX}~中的流体与定温热源的传热计算公式，有
 \begin{equation}
 	\frac{T_o-T_w}{T_i-T_w}=\exp(-\frac{UA}{\dot{m}c_p})
 \end{equation}
 
-对于斯特林机，可以分别用$T_{hw}$和$T_{cw}$来替代$T_w$，用$T_{i,h}$、$T_{o,h}$及$T_{i,c}$、$T_{o,c}$来替代$T_{i}$与$T_{o}$。
+对于斯特林热机，可以分别用$T_{hw}$和$T_{cw}$来替代$T_w$，用$T_{i,h}$、$T_{o,h}$及$T_{i,c}$、$T_{o,c}$来替代$T_{i}$与$T_{o}$。
 \begin{equation}
 	\frac{T_{o,h}-T_{hw}}{T_{i,h}-T_{hw}}=\exp(-\frac{U_hA_h}{\dot{m}_hc_{p,h}})
 	\label{eq:T_h}
@@ -470,44 +470,44 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\label{eq:T_c}
 \end{equation}
 
-斯特林机的热流体的出口温度
+斯特林热机的热流体的出口温度
 \begin{equation}
 	T_{o,h}=(T_{i,h}-T_{hw})\exp(-\frac{U_hA_h}{\dot{m}_hc_{p,h}}) + T_{hw}
 	\label{eq:T_o_h}
 \end{equation}
 
-斯特林机的热流体的出口温度
+斯特林热机的热流体的出口温度
 \begin{equation}
 	T_{o,c}=(T_{i,c}-T_{cw})\exp(-\frac{U_cA_c}{\dot{m}_cc_{p,c}}) + T_{cw}
 	\label{eq:T_o_c}
 \end{equation}
 
-在一个循环周期中，热流体传递给斯特林机的热量为
+在一个循环周期中，热流体传递给斯特林热机的热量为
 \begin{equation}
 	Q = \dot{m}_hc_{p,h}(T_{i,h}-T_{o,h})/s_{se}
 	\label{eq:q_h}
 \end{equation}
 
-在一个循环周期中，斯特林机传递给冷流体的热量为
+在一个循环周期中，斯特林热机传递给冷流体的热量为
 \begin{equation}
 	 Q - W = \dot{m}_cc_{p,c}(T_{o,c}-T_{i,c})/s_{se}	\label{eq:q_c}
 \end{equation}
 
-基于以上简化假设和对斯特林机循环及其各种不可逆因素损失的分析，本文建立了斯特林机的模型。依据此模型可以求解给定斯特林机及其冷热流体条件下，斯特林机的输出功率和效率。并可以得到冷热流体流出斯特林机后的状态信息。
+基于以上简化假设和对斯特林热机循环及其各种不可逆因素损失的分析，本文建立了斯特林热机的模型。依据此模型可以求解给定斯特林热机及其冷热流体条件下，斯特林热机的输出功率和效率。并可以得到冷热流体流出斯特林热机后的状态信息。
 
 \subsubsection{模型验证}
 \label{sec:modelValidation}
 
-通过选用GPU-3型斯特林机作为实例，对所建立的模型进行评估。GPU-3型斯特林机的设计参数见\autoref{tab:GPU3parameters}\cite{Babaelahi2015,Martini1983}。将建立的模型计算得到的斯特林机效率和功率同经典模型及实验结果进行比较，结果如\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}所示。
+通过选用GPU-3型斯特林热机作为实例，对所建立的模型进行评估。GPU-3型斯特林热机的设计参数见\autoref{tab:GPU3parameters}\cite{Babaelahi2015,Martini1983}。将建立的模型计算得到的斯特林热机效率和功率同经典模型及实验结果进行比较，结果如\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}所示。
 
 \begin{table*}[t!]\footnotesize
-	\caption{GPU-3型斯特林机的设计参数}
+	\caption{GPU-3型斯特林热机的设计参数}
 	\centering
 	\begin{tabular}{ll}
 		\toprule
 		参数				&	值\\
 		\midrule
-		斯特林机类型					&	$\beta$型\\
+		斯特林热机类型					&	$\beta$型\\
 		工作气体			&	氦气\\
 		工作气体的质量	&	1.136\,g\\
 		\emph{加热器}			&\\
@@ -614,11 +614,11 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 	\label{tab:PowerComparison}
 \end{sidewaystable}
 
-从表中可以发现，与之前的斯特林机热力模型相比，本文建立的模型同实验在不同转速和不同平均有效压力的条件下得到的结果更加接近。需要指出的是，上述所有模型中，输入热量$Q$和输出功率$W$都由工作气体同壁面的换热得到。在本文建立的模型中，$Q$和$W$由\autoref{eq:heat}和\autoref{eq:work}得到。因此，$Q$，$W$和$\eta$都可以由热力模型和输入参数得到。这些输入参数包括加热器参数、冷却器参数、回热器参数、平均有效压力、工作气体的类型以及斯特林机的几何尺寸。
+从表中可以发现，与之前的斯特林热机热力模型相比，本文建立的模型同实验在不同转速和不同平均有效压力的条件下得到的结果更加接近。需要指出的是，上述所有模型中，输入热量$Q$和输出功率$W$都由工作气体同壁面的换热得到。在本文建立的模型中，$Q$和$W$由\autoref{eq:heat}和\autoref{eq:work}得到。因此，$Q$，$W$和$\eta$都可以由热力模型和输入参数得到。这些输入参数包括加热器参数、冷却器参数、回热器参数、平均有效压力、工作气体的类型以及斯特林热机的几何尺寸。
 
-\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}表明，当斯特林机的平均有效压力位于2.76$\,\mathrm{MPa}$到6.90$\,\mathrm{MPa}$之间时，本文建立的模型具有最佳性能预测准确性。当斯特林机的转速从16.67$\,\mathrm{Hz}$增加到58.33$\,\mathrm{Hz}$时，本文建立的模型的性能预测的误差也随之增大。所以本文所建立的模型在平均有效压力在2.76$\,\mathrm{MPa}$和6.90$\,\mathrm{MPa}$之间，转速较低时具有最佳性能预测准确性。
+\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}表明，当斯特林热机的平均有效压力位于2.76$\,\mathrm{MPa}$到6.90$\,\mathrm{MPa}$之间时，本文建立的模型具有最佳性能预测准确性。当斯特林热机的转速从16.67$\,\mathrm{Hz}$增加到58.33$\,\mathrm{Hz}$时，本文建立的模型的性能预测的误差也随之增大。所以本文所建立的模型在平均有效压力在2.76$\,\mathrm{MPa}$和6.90$\,\mathrm{MPa}$之间，转速较低时具有最佳性能预测准确性。
 
-然而，同实验结果相比，本文提出的模型仍然存在一些误差。未来的研究工作可能会考虑斯特林机的其它不可逆损失，如斯特林机向环境的散热，气弹滞后效应等等，从而建立更加精确的斯特林机模型。值得指出的是，其它文献也有提到更加精确的斯特林机模型。例如，多变过程模拟模型具有比本文提出的模型更高的性能预测精度\cite{Hosseinzade2015, Babaelahi2015}。然而，该模型需要假定斯特林循环中各过程的多变指数，该多变指数又与具体的斯特林机及具体的过程相关，而且多变过程模拟模型需要更多的计算量。
+然而，同实验结果相比，本文提出的模型仍然存在一些误差。未来的研究工作可能会考虑斯特林热机的其它不可逆损失，如斯特林热机向环境的散热，气弹滞后效应等等，从而建立更加精确的斯特林热机模型。值得指出的是，其它文献也有提到更加精确的斯特林热机模型。例如，多变过程模拟模型具有比本文提出的模型更高的性能预测精度\cite{Hosseinzade2015, Babaelahi2015}。然而，该模型需要假定斯特林循环中各过程的多变指数，该多变指数又与具体的斯特林热机及具体的过程相关，而且多变过程模拟模型需要更多的计算量。
 
 \section{朗肯循环发电子系统建模}
 %The power generating system includes the turbine (steam turbine or ORC 
@@ -652,12 +652,12 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \centering
 	\begin{subfigure}[b]{0.6\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/T-s_Water.pdf}
-	\caption{}\label{fig:Ts_Water1}
+	\caption{水循环的$T$-$s$图}\label{fig:Ts_Water1}
 	\end{subfigure}
 	~
-\begin{subfigure}[b]{0.28\columnwidth}
+	\begin{subfigure}[b]{0.28\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/SteamTurbine_hs.pdf}
-	\caption{}\label{fig:SteamTurbine_hs}
+	\caption{过程$2a$-$2c$-$2b$的$h$-$s$图}\label{fig:SteamTurbine_hs}
 	\end{subfigure}
 	\caption{水循环的$T$-$s$图及过程$2a$-$2c$-$2b$的$h$-$s$图}\label{fig:SteamTurbine_hs_p}
 \end{figure}
@@ -868,7 +868,7 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 
 本文还利用MATLAB的数学计算和建模分析等功能，以运行库文件和各模型基础模块为基础，编写设计软件的主程序，完成了具有软件著作权的太阳能光热发电系统设计软件的开发，为本文研究中的大量的建模仿真分析工作提供了坚实的基础。
 
-本文建立的关键部件模型可以通过实验或与经典模型比较等方式进行验证。斯特林机的验证工作表明，与传统的经典的斯特林机模型相比，本文所建立的模型在不同的转速和平均有效压力下，具有与实验数据更接近的性能结果。
+本文建立的关键部件模型可以通过实验或与经典模型比较等方式进行验证。斯特林热机的验证工作表明，与传统的经典的斯特林热机模型相比，本文所建立的模型在不同的转速和平均有效压力下，具有与实验数据更接近的性能结果。
 
 \nomenclature[S]{$pu$}{泵} 
 \nomenclature[S]{$h$}{加热流体; 齐次解}
@@ -885,7 +885,7 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 \nomenclature[S]{$cw$}{冷却器壁面}
 \nomenclature[S]{$hw$}{加热器壁面}
 \nomenclature{$P$}{功率, W}
-\nomenclature{$s_{se}$}{斯特林机转速, Hz}
+\nomenclature{$s_{se}$}{斯特林热机转速, Hz}
 \nomenclature{$x$}{干度}
 \nomenclature{$Q$}{吸热量, W}
 \nomenclature{$c_v$}{定容比热容, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
@@ -894,7 +894,7 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 \nomenclature[G]{$\gamma_L$}{过程34的容积率}
 \nomenclature{$V_E$}{膨胀体积, m$^3$}
 \nomenclature{$V_C$}{压缩体积, m$^3$}
-\nomenclature{$m_{se}$}{单台斯特林机中的工质的质量, kg}
+\nomenclature{$m_{se}$}{单台斯特林热机中的工质的质量, kg}
 \nomenclature{$R$}{气体常数, J$\cdot$kg$^{-1}\cdot$K$^{-1}$}
 \nomenclature{$V_D$}{死区容积, m$^3$}
 \nomenclature{$V_{DH}$}{热头死区容积, m$^3$}
@@ -919,7 +919,7 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 \nomenclature[G]{$\theta_{dc}$}{碟式集热器开口角度 (0$^{\circ}$表示水平, 90$^{\circ}$表示竖直向下)}
 \nomenclature[G]{$\gamma$}{拦截因子；压缩比}
 \nomenclature[G]{$\rho$}{反射率}
-\nomenclature{$n_g$}{单台斯特林机中的工质的物质的量, mol}
+\nomenclature{$n_g$}{单台斯特林热机中的工质的物质的量, mol}
 \nomenclature{$U$}{整体换热系数, W$\cdot$m$^{-2}\cdot$K$^{-1}$}
 \nomenclature{$q''$}{热流密度, W$\cdot$m$^{-2}$}
 \nomenclature{$e$}{回热率}

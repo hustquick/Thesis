@@ -32,14 +32,14 @@
 \centering
 	\begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/TypicalSteamRankineSolarSystem}
-	\caption{}\label{fig:TypicalSteamRankineSolarSystem}
+	\caption{基于SRC的槽式光热系统结构图}\label{fig:TypicalSteamRankineSolarSystem}
 	\end{subfigure}
 	~
 \begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/TypicalOrganicRankineSolarSystem}
-	\caption{}\label{fig:TypicalOrganicRankineSolarSystem}
+	\caption{基于ORC的槽式光热系统结构图}\label{fig:TypicalOrganicRankineSolarSystem}
 	\end{subfigure}
-	\caption{采用SRC和ORC的太阳能光热系统的典型结构示意图}
+	\caption{两种不同传热流体的太阳能光热系统的典型结构图}
 	\label{fig:TwoTypesOfRankineCycle}
 \end{figure}
 
@@ -175,7 +175,7 @@
 考虑到每种类型的集热器都有其适宜的工作温度范围，集成使用多种集热方式，采用多种集热器逐步加热传热流体是实现梯级集热的可行方案。
 槽式集热器和菲涅耳集热器更适合于低温集热，碟式集热器和塔式集热器更适合于高温集热。串联连接不同类型的集热器可以有效利用它们各自的优点。\autoref{fig:SeriesCollector}给出了一个采用集热器串联连接的梯级系统的方案。在这个系统中，空气作为传热介质在流入碟式集热器之前先被槽式集热器预热。槽式集热器用于收集低温热能，碟式集热器用于收集高温热能。
 
-在这种方案中，空气依次在槽式集热器和碟式集热器中被加热。为斯特林机提供热量后，热空气流入换热器为朗肯循环提供热量。在这种拓扑结构中，空气被用作太阳能槽的传热流体，这个想法目前只有少数研究人员进行了数值和实验研究，至今还没有商业应用\cite{Good2015,Good2016}。这种技术最大的技术难题在于，空气导热系数低，热容量低，导致系统效率非常低。由于该拓扑结构使用了尚不成熟的空气槽式集热技术，故不采用这种方案。
+在这种方案中，空气依次在槽式集热器和碟式集热器中被加热。为斯特林热机提供热量后，热空气流入换热器为朗肯循环提供热量。在这种拓扑结构中，空气被用作太阳能槽的传热流体，这个想法目前只有少数研究人员进行了数值和实验研究，至今还没有商业应用\cite{Good2015,Good2016}。这种技术最大的技术难题在于，空气导热系数低，热容量低，导致系统效率非常低。由于该拓扑结构使用了尚不成熟的空气槽式集热技术，故不采用这种方案。
 \begin{figure}[ht!]
 \centering 
 \includegraphics[width=0.6\textwidth]{fig/SeriesCollector}
@@ -194,9 +194,9 @@
 \subsection{回路间传热的系统结构}
 \label{sec:hebc}
 
-对于\autoref{fig:PTPD}中的太阳能碟式发电系统，热空气为斯特林机提供热量后还有很高的温度，可以通过设置换热器在回路间传热，实现能量的梯级利用。根据换热回路的不同，可以在太阳能梯级系统中设置两种类型的换热器。
+对于\autoref{fig:PTPD}中的太阳能碟式发电系统，热空气为斯特林热机提供热量后还有很高的温度，可以通过设置换热器在回路间传热，实现能量的梯级利用。根据换热回路的不同，可以在太阳能梯级系统中设置两种类型的换热器。
 
-第一种是在空气回路和导热油回路之间使用的空气-导热油换热器。\autoref{fig:air-oil}是使用了这种换热器的一个梯级系统方案。在这个系统中，热空气在为斯特林机组供热后，再流过空气-导热油换热器为导热油提供热量。
+第一种是在空气回路和导热油回路之间使用的空气-导热油换热器。\autoref{fig:air-oil}是使用了这种换热器的一个梯级系统方案。在这个系统中，热空气在为斯特林热机机组供热后，再流过空气-导热油换热器为导热油提供热量。
 
 在这种方案中，空气为导热油提供热量。从几个方面来看，这是不经济的。首先，此方案并不能进一步提高导热油的温度。导热油的极限温度受到本身物质属性的限制，而并非受限于槽式集热器，槽式集热器的集热温度可以超过这个值。在高温条件下，油品可能会变质，蒸发，分解，对系统的安全稳定运行产生不利影响。其次，使用碟式集热器为导热油提供热量是不经济的，因为碟式集热器是为了收集更高温度的热量而设计的，与槽式集热器相比，它在收集中低温热量时效益更低。
 
@@ -210,22 +210,22 @@
 \centering
 	\begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/air-water1}
-	\caption{}\label{fig:air-water_1}
+	\caption{热空气与主汽换热的系统结构图}\label{fig:air-water_1}
 	\end{subfigure}
 	~
 \begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/air-water2}
-	\caption{}
+	\caption{热空气与给水换热的系统结构图}
 	\label{fig:air-water_2}
 	\end{subfigure}
 	\caption{两种使用了空气-水换热器的梯级系统案例}
 	\label{fig:air-water}
 \end{figure}
 
-第二种是在空气回路和水回路之间使用的空气-水换热器。\autoref{fig:air-water_1}和\autoref{fig:air-water_2}是使用了这种换热器的两个梯级系统方案。\autoref{fig:air-water_1}中，热空气在为斯特林机组供热后，再流经空气-水换热器，为水的过热过程提供热量。\autoref{fig:air-water_2}中，热空气在为斯特林机组供热后，再流经空气-水换热器，为水的预热过程提供热量。
+第二种是在空气回路和水回路之间使用的空气-水换热器。\autoref{fig:air-water_1}和\autoref{fig:air-water_2}是使用了这种换热器的两个梯级系统方案。\autoref{fig:air-water_1}中，热空气在为斯特林热机机组供热后，再流经空气-水换热器，为水的过热过程提供热量。\autoref{fig:air-water_2}中，热空气在为斯特林热机机组供热后，再流经空气-水换热器，为水的预热过程提供热量。
 
-在这种方案中，空气为水提供热量。\autoref{fig:air-water}给出了两种使用空气-水换热器的太阳能梯级系统方案。其中，\autoref{fig:air-water_1}给出的是使用加热过斯特林机之后的热空气来继续为过热蒸汽提供热量的方案。这是可行的，因为热空气可以提升水的吸热过程的平均温度从而提高朗肯循环的效率。另一方面，在传统的太阳能槽式系统中，主蒸汽温度受到导热油极限温度的限制，这不利于提升朗肯循环的效率。在这个梯级系统中，朗肯循环的主蒸汽温度可以提高到高于400$\mathrm{^\circ C}$以消除导热油极限温度带来的负面影响。
-这一系统方案将作为主要研究方案在接下来的内容里详细讨论。\autoref{fig:air-water_2}给出的是使用加热过斯特林机后的热空气预热给水的方案。由于斯特林机出口的空气温度较高，而朗肯循环的给水温度较低，二者之间存在很大的温差。如果采用此方案，则换热过程产生的㶲损很大。此外，由于给水温度的提升导致太阳能场内的导热油的平均温度也会有所上升，这将降低太阳能场的集热效率，进而降低整个梯级系统的效率。
+在这种方案中，空气为水提供热量。\autoref{fig:air-water}给出了两种使用空气-水换热器的太阳能梯级系统方案。其中，\autoref{fig:air-water_1}给出的是使用加热过斯特林热机之后的热空气来继续为过热蒸汽提供热量的方案。这是可行的，因为热空气可以提升水的吸热过程的平均温度从而提高朗肯循环的效率。另一方面，在传统的太阳能槽式系统中，主蒸汽温度受到导热油极限温度的限制，这不利于提升朗肯循环的效率。在这个梯级系统中，朗肯循环的主蒸汽温度可以提高到高于400$\mathrm{^\circ C}$以消除导热油极限温度带来的负面影响。
+这一系统方案将作为主要研究方案在接下来的内容里详细讨论。\autoref{fig:air-water_2}给出的是使用加热过斯特林热机后的热空气预热给水的方案。由于斯特林热机出口的空气温度较高，而朗肯循环的给水温度较低，二者之间存在很大的温差。如果采用此方案，则换热过程产生的㶲损很大。此外，由于给水温度的提升导致太阳能场内的导热油的平均温度也会有所上升，这将降低太阳能场的集热效率，进而降低整个梯级系统的效率。
 
 \subsection{循环之间热量利用的系统结构}
 \label{sec:HRBC}
@@ -250,20 +250,20 @@
 \centering
 	\begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/Stirling-Rankine}
-	\caption{}\label{fig:Stirling-Rankine}
+	\caption{斯特林循环与朗肯循环之间热量回收的结构图}\label{fig:Stirling-Rankine}
 	\end{subfigure}
 	~
 \begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/SeriesRankine}
-	\caption{}\label{fig:Rankine-Rankine}
+	\caption{多级朗肯循环之间热量回收的结构图}\label{fig:Rankine-Rankine}
 	\end{subfigure}
 	\caption{采用多个热力循环之间热量回收利用的梯级系统结构图}
 	\label{fig:coupledCycles}
 \end{figure}
 
 \autoref{fig:coupledCycles}给出了热力循环之间热量回收利用的梯级系统的两种系统结构。
-传统的斯特林机为了提高性能，使用冷却水来吸收斯特林机释放的热量，吸收的热量往往被浪费掉而没有回收利用。
-在\autoref{fig:Stirling-Rankine}中，采用朗肯循环的凝结液来冷却斯特林机。斯特林循环排出的热量可以通过朗肯循环回收利用。
+传统的斯特林热机为了提高性能，使用冷却水来吸收斯特林热机释放的热量，吸收的热量往往被浪费掉而没有回收利用。
+在\autoref{fig:Stirling-Rankine}中，采用朗肯循环的凝结液来冷却斯特林热机。斯特林循环排出的热量可以通过朗肯循环回收利用。
 对于有机朗肯循环，不同的工作流体决定循环的工作温度区间。用一个有机朗肯循环重复利用另一个有机朗肯循环的凝结热是可行的。在\autoref{fig:Rankine-Rankine}中，两个有机朗肯循环耦合在一起用于发电。底部循环利用顶部循环的凝结热来实现预热，蒸发和过热，再利用朗肯循环发电。
 
 \section{选定的梯级系统拓扑结构}
@@ -276,12 +276,12 @@
 \centering
 	\begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/CascadeSystem1}
-	\caption{}\label{fig:CascadeSystem1}
+	\caption{基于水工质朗肯循环的梯级系统}\label{fig:CascadeSystem1}
 	\end{subfigure}
 	~
 \begin{subfigure}[b]{0.4\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/CascadeSystem2}
-	\caption{}\label{fig:CascadeSystem2}
+	\caption{基于有机工质朗肯循环的梯级系统}\label{fig:CascadeSystem2}
 	\end{subfigure}
 	\caption{两种选定的梯级系统拓扑结构图}
 	\label{fig:CascadeSystems}
@@ -296,7 +296,7 @@
 %  \item \emph{Air-water heat exchanger.} An extra air-water heat exchanger is applied to increase the temperature of the main steam, which helps to improve the efficiency of Rankine cycle. On the other hand, it can overcome the disadvantage of low limit temperature of heat transfer oil in conventional solar trough systems, which helps to achieve higher main steam parameters than traditional solar trough systems. 
   \item \emph{使用了空气-水换热器。} 使用空气-水换热器来提高主蒸汽的温度，这有助于提高朗肯循环的效率。 另一方面它克服了传统太阳能槽式系统中导热油极限温度较低的缺点，有助于实现比传统太阳能槽式系统更高的主蒸汽参数，进而提升朗肯循环的效率。 
 %  \item \emph{Condensate for Stirling engine cooling.} Condensate of the Rankine cycle is used to cool the Stirling engine. Rejected heat of the Stirling cycle can be reused by Rankine cycle, which helps to improve the overall system efficiency.
-  \item \emph{采用朗肯循环的凝结液来冷却斯特林机。} 采用朗肯循环的凝结液来冷却斯特林机。斯特林循环的废弃热量可以通过朗肯循环回收利用，这有助于提高系统的整体效率。
+  \item \emph{采用朗肯循环的凝结液来冷却斯特林热机。} 采用朗肯循环的凝结液来冷却斯特林热机。斯特林循环的废弃热量可以通过朗肯循环回收利用，这有助于提高系统的整体效率。
 \end{itemize}
 
 \autoref{fig:CascadeSystem2}中的梯级系统采用有机工质朗肯循环，它也具有上述特点。此外，它采用不同种类的有机工质作为工作流体，使太阳能光热系统具有更广泛的工作温度区间，可以适用于多种能量需求。它的一个计算案例如\autoref{fig:Ex_CascadeSystem2}所示。
@@ -323,7 +323,7 @@
 %  \item Air-water heat exchanger is applied to increase the Rankine cycle efficiency.
   \item 使用了空气-水换热器来提高朗肯循环的效率。
 %  \item Condensate for Stirling engine cooling to recover the heat rejected by the engine.
-  \item 使用朗肯循环的凝结液来冷却斯特林机。
+  \item 使用朗肯循环的凝结液来冷却斯特林热机。
 \end{itemize}
 
 值得注意的是，系统拓扑设计的一些考虑方案有待后续工作进一步研究。例如，塔式太阳能发电技术与槽式集热器和平板式集热器的集成方案，该方案的系统结构如\autoref{fig:seriesCollection}所示。该拓扑结构有效地利用了各种集热器的工作特性，有利于提升系统的效率并降低系统成本。

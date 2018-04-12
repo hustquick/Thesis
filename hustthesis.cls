@@ -180,11 +180,11 @@
 \linespread{1.3}\selectfont
 \RequirePackage{geometry}
 \geometry{
-  top=1.77in,
-  bottom=1.1in,
+  top=1.81in,
+  bottom=27mm,
   left=1.1in,
   right=1.1in,
-  includefoot
+  %includefoot
 }
 \ifthenelse{\isundefined{\pagewidth}}{
   \pdfpagewidth=\paperwidth
@@ -195,7 +195,7 @@
 }
 \RequirePackage{indentfirst}
 \setlength{\parindent}{2em}
-\setlength{\parskip}{0pt plus 2pt minus 1pt}
+\setlength{\parskip}{0pt plus 0.5pt minus 0.5pt}
 %\setlength{\parskip}{0.5\baselineskip}
 \RequirePackage{color}
 \RequirePackage[table]{xcolor}
@@ -279,8 +279,7 @@
     \zhschoolname{#1}\enschoolname{#2}
   }
 }
-\schoolname{华中科技大学\\萨拉戈萨大学}{Huazhong University of Science~\char38~Technology
-	\\ Universidad Zaragoza}
+\schoolname{华中科技大学}{Huazhong University of Science~\char38~Technology}
 \def\zhaddress#1{\gdef\HUST@zhaddress{#1}}
 \def\enaddress#1{\gdef\HUST@enaddress{#1}}
 \DeclareDocumentCommand\address{m g}
@@ -656,6 +655,9 @@
 \HUST@oldcftbeforechapskip=\cftbeforechapskip
 \newskip\HUST@oldcftbeforesecskip
 \HUST@oldcftbeforesecskip=\cftbeforesecskip
+\setlength{\cftsecindent}{0em}
+\setlength{\cftchapnumwidth}{2.3em}
+\renewcommand{\cftchapdotsep}{4.5}
 \let\HUST@oldl@chapter\l@chapter
 \let\HUST@oldl@section\l@section
 \let\HUST@oldl@subsection\l@subsection
@@ -676,7 +678,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
 
 \ifthenelse{\equal{\HUST@degree}{fyp}}{
   \fancyfoot[R]{\thepage}
@@ -687,10 +689,13 @@
 \ifthenelse{\equal{\HUST@language}{english-draft}}{}{
   \ifHUST@finalformat\else
     \fancyhead[C]{
-      \ziju{1em}{\kai{\fontsize{14pt}{18.2pt}\selectfont\HUST@zhschoolname\HUST@zhapplyname}}
-      \vskip -5pt
+      \vskip -14pt
+      \ziju{0.8em}{\kai{\fontsize{16pt}{18.2pt}\selectfont\HUST@zhschoolname\HUST@zhapplyname}}
+      \vskip -4pt
       \vbox{
-        \hrule width \textwidth height 2pt
+        \hrule width \textwidth height 1pt
+        \vskip 1pt
+        \hrule width \textwidth height 1pt
       }
     }
   \fi
@@ -893,7 +898,7 @@
   \begingroup
   \fontsize{12pt}{13.7pt}\selectfont
   \HUST@zhabstract \par
-  \vskip 1.2ex
+  \vskip 2ex
   \noindent\hei{\HUST@zhkeywordstitle}\hspace{.8em} \HUST@zhkeywords
   \endgroup
 }
@@ -902,7 +907,7 @@
   \begingroup
   \fontsize{12pt}{13.7pt}\selectfont
   \HUST@enabstract \par
-  \vskip 1.2ex
+  \vskip 2ex
   \noindent\textbf{\HUST@enkeywordstitle}\hspace{.8em} \HUST@enkeywords
   \endgroup
 }
@@ -918,6 +923,7 @@
     \clearpage
   }
   \HUST@enabstractpage
+  \addcontentsline{toc}{chapter}{\HUST@enabstractname}
   \clearpage
 }
 \let\HUST@tableofcontents\tableofcontents
@@ -936,7 +942,7 @@
   \addcontentsline{toc}{chapter}{\HUST@acknamenospace}
   \chapter*{\HUST@ackname}
   \begingroup
-  \fontsize{12pt}{13.7pt}\selectfont
+  \fontsize{12pt}{18pt}\selectfont
 }{
   \endgroup
 }
@@ -949,7 +955,7 @@
     \addcontentsline{toc}{chapter}{\HUST@publicationtitle}
     \chapter*{\HUST@publicationtitle}
   \fi
-  \begin{enumerate}[labelindent=0pt,label={[\arabic*]},itemsep=0.5ex]
+  \begin{enumerate}[labelindent=0pt,label={\arabic*.},itemsep=0.5ex]
   \fontsize{12pt}{12pt}\selectfont
 }{
   \end{enumerate}

@@ -195,7 +195,7 @@
 }
 \RequirePackage{indentfirst}
 \setlength{\parindent}{2em}
-\setlength{\parskip}{0pt plus 0.5pt minus 0.5pt}
+\setlength{\parskip}{0pt plus 0.3pt minus 0.3pt}
 %\setlength{\parskip}{0.5\baselineskip}
 \RequirePackage{color}
 \RequirePackage[table]{xcolor}
@@ -291,7 +291,7 @@
   }
 }
 %\address{中国，武汉，430074\\ 西班牙，阿拉贡地区，萨拉戈萨市，50009}{Wuhan~430074, P.~R.~China\\ Pedro Cerbuna 12, Zaragoza, España}
-\address{中国，武汉，430074\\ 西班牙，阿拉贡地区，萨拉戈萨市，50009}{\ }
+\address{中国，武汉，430074}{Wuhan~430074, P.~R.~China}
 \def\zhmajor#1{\gdef\HUST@zhmajor{#1}}
 \def\enmajor#1{\gdef\HUST@enmajor{#1}}
 \DeclareDocumentCommand\major{m g}
@@ -744,8 +744,8 @@
   \parbox[t][6cm][t]{\textwidth}{
     \vspace{1.0cm}
     \begin{center}
-    \includegraphics[scale=1]{fig/hust-title.pdf}\\
-    \includegraphics[scale=1]{fig/UNIZAR.png}\\
+    \includegraphics[scale=1.1]{fig/hust-title.pdf}\\[0.8cm]
+%    \includegraphics[scale=1.1]{fig/UNIZAR.png}\\
     \ziju{10bp}{\fontsize{42pt}{54.6pt}\selectfont\HEI\HUST@zhapplyname}
     \end{center}
   }
@@ -766,8 +766,8 @@
     \HUST@zhauthortitle       & {\HUST@zhauthor} \\
     \HUST@zhmajortitle      & {\HUST@zhmajor} \\
     \HUST@zhsupervisortitle & {\HUST@zhsupervisor} \\
-    & {Inmaculada Arauzo教授}\\
-    & {张燕平\hspace{0.2em}副教授}\\
+%    & {Inmaculada Arauzo教授}\\
+%    & {张燕平\hspace{0.2em}副教授}\\
     \ifthenelse{\equal{\HUST@zhasssupervisor}{}}{}{
       \HUST@zhasssupervisortitle & {\HUST@zhasssupervisor} \\
     }

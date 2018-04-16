@@ -63,7 +63,7 @@
 \caption{吸热管的传热分析示意图}\label{fig:Pipe}
 \end{figure}
 
-由于管道中的努塞尔数$Nu$非常大（大约为$1\times10^4$），吸热管和导热油之间的温差很小。所以平均流体温度$(T_{i}+T_{o})/2$可以用作吸热管温度$T_{abs}$的平均值，$U(T_{abs})$可以用Romero和Zarza给出的二阶多项式函数表示\cite{Romero2007}:
+由于管道中的努塞尔数$Nu$非常大（大约为$1\times10^4$），吸热管和导热油之间的温差很小。所以平均流体温度$(T_{i}+T_{o})/2$可以用作吸热管温度$T_{abs}$的平均值，$U(T_{abs})$可以用Romero和Zarza给出的二阶多项式函数表示\cite{Romero2012}:
 \begin{equation}
 	U(T_{abs}) = 0.687257 + 0.001941(T_{abs} - T_{amb}) + 0.000026(T_{abs} - T_{amb})^2
 \end{equation}
@@ -98,7 +98,7 @@
 
 碟式集热器由反射镜和接收器组成。反射镜通过跟踪太阳来反射太阳光并将其会聚到位于反射镜焦点处的接收器。碟式集热器需要采用双轴跟踪系统来不间断地追踪太阳的轨迹。
 
-碟式集热器的跟踪系统主要有两种型式\cite{Adkins1987}：
+碟式集热器的跟踪系统主要有两种型式\cite{Arbab2009}：
 \begin{itemize}
   \item 由方位传感器进行的方位高度角跟踪，或由计算得到的太阳坐标通过控制系统进行控制。
   \item 极轴跟踪，集热器围绕与地轴平行的轴旋转跟踪太阳。
@@ -240,7 +240,7 @@ $Nu_{free}由下式算得$\cite{Jilte2013b}：
 	q_{conv,forc} = h_{forc}A_{cav}(T_{cav}-T_{amb})
 \end{equation}
 
-    Wu等\cite{Wu2010}针对碟式集热器的对流损失编写了全面的综述，并进行了系统性的总结。本文应用Leibfried和Ortjohann\cite{Leibfried1995}提出的改进型公式来计算接收器开口处的强制对流损失。该公式基于Koenig和Marvin\cite{Koenig1981}提出的公式、Stine和Diver\cite{Stine1994}提出的公式，并对一些影响因素进行了分析，具有更好的计算结果。
+    Wu等\cite{Wu2010}针对碟式集热器的对流损失编写了全面的综述，并进行了系统性的总结。本文应用Leibfried和Ortjohann\cite{Leibfried1995}提出的改进型公式来计算接收器开口处的强制对流损失。该公式基于Koenig和Marvin\cite{Prakash2009}提出的公式、Stine和Diver\cite{Kongtragool2003}提出的公式，并对一些影响因素进行了分析，具有更好的计算结果。
 
 对于正面迎风，
 \begin{equation}
@@ -294,7 +294,7 @@ $q_{dr,1}$可以通过\autoref{eq:q_dr_1}计算得出。于是，碟式接收器
 \subsection{斯特林热机}
 \label{sec:StirlingEngineModel}
 \subsubsection{斯特林循环}
-理想斯特林循环由同冷热热源进行的两个等温换热过程及同回热器进行的两个定容换热过程组成。斯特林循环的$T$-$s$图如\autoref{fig:StirlingCycle}所示，图中4-1过程中回热器吸收的热量在2-3过程中被重新利用。但是实际上，由于回热过程不完善，这部分能量往往不能被完全利用，这部分能量只能将斯特林热机的工作气体从2状态点加热到3'状态点，所以需要定义回热率$e$来表征回热器的完善程度\cite{Formosa2010,Juhasz2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
+理想斯特林循环由同冷热热源进行的两个等温换热过程及同回热器进行的两个定容换热过程组成。斯特林循环的$T$-$s$图如\autoref{fig:StirlingCycle}所示，图中4-1过程中回热器吸收的热量在2-3过程中被重新利用。但是实际上，由于回热过程不完善，这部分能量往往不能被完全利用，这部分能量只能将斯特林热机的工作气体从2状态点加热到3'状态点，所以需要定义回热率$e$来表征回热器的完善程度\cite{Formosa2010}。$e=\dfrac{T_R-T_L}{T_H-T_L}$，其中$T_H$是热腔温度，$T_L$是冷腔温度，$T_R$是有效回热温度。
 
 \begin{figure}[htbp]
 \centering
@@ -309,7 +309,7 @@ $q_{dr,1}$可以通过\autoref{eq:q_dr_1}计算得出。于是，碟式接收器
 \item 斯特林热机中的工质可以被看成理想气体。
 \item 斯特林热机不与环境间交换热量。
 \item 冷热流体的平均换热系数为常数。
-\item 回热器具有对称性，这样有效回热温度可以简化计算为$T_{R}=\dfrac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$\cite{Formosa2010,Juhasz2010}。
+\item 回热器具有对称性，这样有效回热温度可以简化计算为$T_{R}=\dfrac{T_{H}-T_{L}}{\ln(T_{H}/T_{L})}$\cite{Formosa2010}。
 \end{itemize}
 
 为了考虑斯特林循环中由于存在死区容积带来的内部不可逆损失，将死区容积$V_D$划分成热头死区容积$V_{DH}$、回热器死区容积$V_{DR}$和冷头死区容积$V_{DC}$\cite{Duan2014}，并采用容积因子$K$来描述不同温度下的各死区容积。$K$同各过程的温度及回热效率有关。
@@ -498,7 +498,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \subsubsection{模型验证}
 \label{sec:modelValidation}
 
-通过选用GPU-3型斯特林热机作为实例，对所建立的模型进行评估。GPU-3型斯特林热机的设计参数见\autoref{tab:GPU3parameters}\cite{Babaelahi2015,Martini1983}。将建立的模型计算得到的斯特林热机效率和功率同经典模型及实验结果进行比较，结果如\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}所示。
+通过选用GPU-3型斯特林热机作为实例，对所建立的模型进行评估。GPU-3型斯特林热机的设计参数见\autoref{tab:GPU3parameters}\cite{Babaelahi2015,Thombare2008}。将建立的模型计算得到的斯特林热机效率和功率同经典模型及实验结果进行比较，结果如\autoref{tab:EfficiencyComparison}和\autoref{tab:PowerComparison}所示。
 
 \begin{table*}[t!]\footnotesize
 	\caption{GPU-3型斯特林热机的设计参数}
@@ -630,7 +630,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
   
 \begin{figure}[!ht]
 \centering
-	\includegraphics[width = 0.8\columnwidth]{fig/SRCinCS}
+	\includegraphics[width = 0.7\columnwidth]{fig/SRCinCS}
 	\caption{用于分析水工质朗肯循环的梯级系统结构示意图}
 	\label{fig:SRCinCS}
 \end{figure}
@@ -703,12 +703,12 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 
 \begin{figure}[htbp]
 \centering
-	\begin{subfigure}[b]{0.4\columnwidth}
+	\begin{subfigure}[b]{0.45\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/Ts_a.pdf}
 	\caption{SRC的$T$-$s$图}\label{fig:Ts_Water}
 	\end{subfigure}
 	~
-\begin{subfigure}[b]{0.4\columnwidth}
+\begin{subfigure}[b]{0.45\columnwidth}
 	\includegraphics[width = \columnwidth]{fig/Ts_b.pdf}
 	\caption{ORC的$T$-$s$图}\label{fig:Ts_organic}
 	\end{subfigure}
@@ -717,7 +717,7 @@ $Re_{h,c}$，$Pr_{h,c}$和$D_{h,c}$分别是加热器/冷却器的雷诺数，�
 \end{figure}
 \begin{figure}[htbp]
 \centering
-	\includegraphics[width = 0.4\columnwidth]{fig/ORCsystem2.pdf}
+	\includegraphics[width = 0.7\columnwidth]{fig/ORCsystem2.pdf}
 	\caption{具有回热器的ORC系统结构示意图}
 	\label{fig:ORCsystem2}
 \end{figure}
@@ -768,11 +768,9 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 
 为了更加清晰地理解这些换热器的机理建模理论，本文使用\autoref{fig:PES}中的蒸汽发生系统作为例子进行详细分析，其传热过程如\autoref{fig:PES_TQ}所示。
 
-蒸汽发生系统的机理建模过程从本质上来看，是求解各未知状态点的过程。需要再次提出的是，由于水和导热油在换热过程中都没有压降，对于饱和状态，由于其干度已知，其状态是确定的；对于不饱和状态，只要已知温度或焓值，那么其状态也可以确定。这意味着，已知温度可以求出焓值，反之亦然。
-
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width = 0.8\columnwidth]{fig/PES}
+	\includegraphics[width = 0.7\columnwidth]{fig/PES}
 	\caption{用于分析蒸汽发生系统的梯级系统结构图}
 	\label{fig:PES}
 \end{figure}
@@ -783,6 +781,8 @@ P_{pu}=\dot{m}_{4}(h_{4e}-h_{4d})
 	\caption{蒸汽发生过程的$T$-$Q$曲线图}
 	\label{fig:PES_TQ}
 \end{figure}
+
+蒸汽发生系统的机理建模过程从本质上来看，是求解各未知状态点的过程。需要再次提出的是，由于水和导热油在换热过程中都没有压降，对于饱和状态，由于其干度已知，其状态是确定的；对于不饱和状态，只要已知温度或焓值，那么其状态也可以确定。这意味着，已知温度可以求出焓值，反之亦然。
 
 对于如\autoref{fig:PES}所示的典型的蒸汽发生系统的建模过程，水工质质量流量$\dot{m}_2$，状态点$2h$和状态点$2k$都由汽轮机及朗肯循环的参数确定，可以看作已知量。状态点$3a$的状态由槽式镜场的设计参数确定，状态点$2i$和$2j$的状态可以由其干度确定。
 

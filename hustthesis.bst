@@ -307,7 +307,7 @@ FUNCTION {output.bibitem}
 }
 
 FUNCTION {fin.entry}
-{ add.period$
+{ %add.period$
   write$
   newline$
 }
@@ -927,7 +927,7 @@ FUNCTION {book} { output.bibitem
   format.address.publisher output
   format.date "year" output.check
   new.block
-  note output
+  pages output
   fin.entry
 }
 
@@ -940,9 +940,9 @@ FUNCTION {article}
   crossref missing$
     { %journal emphasize "journal" output.check
       journal "journal" output.check
-      %format.date "year" output.check
-      %new.block
-      year output
+      format.date "year" output.check
+      new.block
+%      year output
       format.vol.num.pages output
     }
     { format.article.crossref output.nonnull
